@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - تعلیق زبانه‌ها و صرفه‌جویی در حافظه"
+  },
+  "extDescription": {
+    "message": "زبانه‌های غیرفعال را به‌طور خودکار تعلیق می‌کند تا ۸۰٪ RAM صرفه‌جویی شود. سبک، خصوصی، بدون ردیابی. زبانه‌ها هرگز از دست نمی‌روند."
+  },
+  "commandSuspendCurrent": {
+    "message": "تعلیق زبانه فعلی"
+  },
+  "commandSuspendOthers": {
+    "message": "تعلیق سایر زبانه‌ها"
+  },
+  "commandWakeAll": {
+    "message": "بیدار کردن همه زبانه‌های تعلیق‌شده"
+  },
+
+  "statSleeping": { "message": "در خواب" },
+  "statProtected": { "message": "محافظت‌شده" },
+  "statSaved": { "message": "ذخیره‌شده" },
+
+  "suspendOthers": { "message": "تعلیق سایرین" },
+  "wakeAll": { "message": "بیدار کردن همه" },
+
+  "neverSuspendSite": { "message": "هرگز این سایت را تعلیق نکن" },
+  "siteWhitelisted": { "message": "سایت در لیست سفید است (برای حذف کلیک کنید)" },
+  "activeWontSuspend": { "message": "فعال – تعلیق نخواهد شد" },
+  "loading": { "message": "بارگذاری..." },
+
+  "tabsInWindow": { "message": "زبانه‌ها در این پنجره" },
+  "loadingTabs": { "message": "بارگذاری زبانه‌ها..." },
+  "noTabsFound": { "message": "زبانه‌ای یافت نشد" },
+  "failedToLoad": { "message": "بارگذاری ناموفق بود. پاپ‌آپ را دوباره باز کنید." },
+
+  "badgeActive": { "message": "فعال" },
+  "badgeSystem": { "message": "سیستم" },
+  "badgePinned": { "message": "سنجاق‌شده" },
+  "badgeAudio": { "message": "صدا" },
+  "badgeStarred": { "message": "ستاره‌دار" },
+  "badgeProtected": { "message": "محافظت‌شده" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "جلسات" },
+  "sessionNamePlaceholder": { "message": "نام جلسه (اختیاری)" },
+  "save": { "message": "ذخیره" },
+  "emptySessionState": { "message": "اولین جلسه خود را ذخیره کنید تا هر زمان بتوانید زبانه‌ها را بازیابی کنید" },
+  "open": { "message": "باز کردن" },
+  "openSessionTitle": { "message": "باز کردن زبانه‌های این جلسه" },
+  "deleteSessionTitle": { "message": "حذف جلسه" },
+  "sessionSaved": { "message": "جلسه ذخیره شد!" },
+  "failedToSave": { "message": "ذخیره ناموفق بود" },
+  "restoredTabs": {
+    "message": "$COUNT$ زبانه بازیابی شد",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "بازیابی ناموفق بود" },
+  "noSessionsToExport": { "message": "جلسه‌ای برای خروجی وجود ندارد" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ جلسه به صورت JSON کپی شد",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ زبانه",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "آمار" },
+  "statToday": { "message": "امروز" },
+  "statAllTime": { "message": "از ابتدا" },
+  "statRamSaved": { "message": "RAM ذخیره‌شده (تخمینی)" },
+  "statMemberSince": { "message": "عضو از" },
+
+  "settings": { "message": "تنظیمات" },
+  "autoSuspendAfter": { "message": "تعلیق خودکار بعد از" },
+  "timer5min": { "message": "۵ دقیقه" },
+  "timer10min": { "message": "۱۰ دقیقه" },
+  "timer15min": { "message": "۱۵ دقیقه" },
+  "timer30min": { "message": "۳۰ دقیقه" },
+  "timer1hour": { "message": "۱ ساعت" },
+  "timer2hours": { "message": "۲ ساعت" },
+  "timer4hours": { "message": "۴ ساعت" },
+  "timerNever": { "message": "هرگز" },
+  "protectPinned": { "message": "محافظت از زبانه‌های سنجاق‌شده" },
+  "protectAudio": { "message": "محافظت از زبانه‌های دارای صدا" },
+  "protectForms": { "message": "محافظت از زبانه‌های دارای فرم" },
+  "suspendOnStartup": { "message": "تعلیق زبانه‌ها هنگام راه‌اندازی" },
+  "enableAutoSuspend": { "message": "فعال کردن تعلیق خودکار" },
+  "markSuspended": { "message": "علامت‌گذاری زبانه‌های تعلیق‌شده" },
+  "whitelistedSites": { "message": "سایت‌های لیست سفید" },
+  "add": { "message": "افزودن" },
+  "noSitesWhitelisted": { "message": "سایتی در لیست سفید نیست" },
+
+  "suspending": { "message": "در حال تعلیق..." },
+  "done": { "message": "انجام شد!" },
+  "waking": { "message": "در حال بیدار کردن..." },
+  "copiedTabs": {
+    "message": "$COUNT$ زبانه در کلیپ‌بورد کپی شد",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "کپی ناموفق بود" },
+  "copyTabsTitle": { "message": "کپی لیست زبانه‌ها در کلیپ‌بورد" },
+  "copySessionsTitle": { "message": "کپی همه جلسات به صورت JSON" },
+  "remove": { "message": "حذف" },
+
+  "switchToLight": { "message": "تغییر به حالت روشن" },
+  "switchToDark": { "message": "تغییر به حالت تاریک" },
+
+  "ctxSuspendThis": { "message": "تعلیق این زبانه" },
+  "ctxSuspendOthers": { "message": "تعلیق سایر زبانه‌ها" },
+  "ctxNeverSuspend": { "message": "هرگز این سایت را تعلیق نکن" },
+
+  "maxSessionsReached": { "message": "حداکثر ۲۰ جلسه. یکی را حذف کنید تا بتوانید جلسه جدیدی ذخیره کنید." },
+  "noSaveableTabs": { "message": "زبانه قابل ذخیره‌ای در این پنجره نیست." },
+  "sessionNotFound": { "message": "جلسه یافت نشد." },
+  "noRestorableTabs": { "message": "زبانه قابل بازیابی‌ای در این جلسه نیست." },
+  "sessionDefaultName": {
+    "message": "جلسه – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "همین الان" },
+  "minutesAgo": {
+    "message": "$COUNT$ دقیقه پیش",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ ساعت پیش",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "دیروز" },
+  "daysAgo": {
+    "message": "$COUNT$ روز پیش",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "به Drowzy خوش آمدید" },
+  "onboardingIntro": { "message": "Drowzy با به خواب بردن زبانه‌های غیرفعال، حافظه را صرفه‌جویی می‌کند. زبانه‌های شما همیشه امن هستند – ما از API بومی حذف Chrome استفاده می‌کنیم، بنابراین حتی اگر Drowzy را حذف کنید، زبانه‌ها باقی می‌مانند." },
+  "howItWorks": { "message": "نحوه کار" },
+  "featureAutoSuspend": { "message": "<strong>زبانه‌هایی که ۳۰ دقیقه غیرفعال بوده‌اند</strong> به‌طور خودکار تعلیق می‌شوند" },
+  "featureZeroRam": { "message": "<strong>زبانه‌های تعلیق‌شده RAM مصرف نمی‌کنند</strong> اما در نوار زبانه‌ها باقی می‌مانند" },
+  "featureClickToWake": { "message": "<strong>روی هر زبانه تعلیق‌شده کلیک کنید</strong> تا فوراً بیدار شود" },
+  "featureProtected": { "message": "<strong>زبانه‌های فعال، سنجاق‌شده و دارای صدا</strong> هرگز تغییر نمی‌کنند" },
+  "quickActions": { "message": "دسترسی سریع" },
+  "actionClickIcon": { "message": "روی <strong>آیکون Drowzy</strong> در نوار ابزار کلیک کنید تا همه زبانه‌ها را ببینید" },
+  "actionAltS": { "message": "<kbd>Alt+S</kbd> را فشار دهید تا زبانه فعلی تعلیق شود" },
+  "actionAltShiftS": { "message": "<kbd>Alt+Shift+S</kbd> را فشار دهید تا سایر زبانه‌ها تعلیق شوند" },
+  "actionAltW": { "message": "<kbd>Alt+W</kbd> را فشار دهید تا همه زبانه‌های تعلیق‌شده بیدار شوند" },
+  "actionRightClick": { "message": "روی هر صفحه راست‌کلیک کنید برای گزینه‌های سریع تعلیق" },
+  "onboardingCta": { "message": "Drowzy در حال اجراست. چند زبانه باز کنید و امتحان کنید!" },
+  "onboardingBtn": { "message": "متوجه شدم، بزن بریم" },
+
+  "privacyTitle": { "message": "Drowzy – سیاست حفظ حریم خصوصی" },
+  "privacyUpdated": { "message": "آخرین به‌روزرسانی: فوریه ۲۰۲۶" },
+  "privacyShortTitle": { "message": "نسخه کوتاه" },
+  "privacyShortText": { "message": "Drowzy هیچ داده‌ای جمع‌آوری نمی‌کند. بدون تحلیل، بدون ردیابی، بدون سرورهای خارجی. همه چیز در مرورگر شما باقی می‌ماند." },
+  "privacyStoredTitle": { "message": "چه چیزی ذخیره می‌شود" },
+  "privacyStoredText": { "message": "تنظیمات شما (تایمر تعلیق، لیست سفید، ترجیحات) با استفاده از API‌های ذخیره‌سازی داخلی Chrome ذخیره می‌شوند: chrome.storage.sync برای تنظیماتی که پروفایل Chrome شما را دنبال می‌کنند، chrome.storage.local برای آمار و جلسات ذخیره‌شده، و chrome.storage.session برای داده‌های موقتی مانند برچسب‌های زمانی زبانه‌ها. هیچ‌کدام از این‌ها به سرور شخص ثالثی ارسال نمی‌شود." },
+  "privacyPermissionsTitle": { "message": "مجوزها" },
+  "privacyPermissionsIntro": { "message": "Drowzy از این مجوزهای Chrome استفاده می‌کند:" },
+  "privacyPermTabs": { "message": "tabs – فهرست‌بندی، تعلیق و بازیابی زبانه‌های مرورگر" },
+  "privacyPermStorage": { "message": "storage – ذخیره محلی تنظیمات شما" },
+  "privacyPermAlarms": { "message": "alarms – بررسی‌های دوره‌ای زبانه‌های غیرفعال" },
+  "privacyPermContextMenus": { "message": "contextMenus – گزینه‌های منوی راست‌کلیک" },
+  "privacyContactTitle": { "message": "تماس" },
+  "privacyContactText": { "message": "سؤالی دارید؟ با drowzyextension@gmail.com تماس بگیرید" }
+}

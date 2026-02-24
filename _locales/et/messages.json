@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Vahelehtede peataja ja mälusäästja"
+  },
+  "extDescription": {
+    "message": "Peata automaatselt mitteaktiivsed vahelehed, et säästa kuni 80% RAM-i. Kerge, privaatne, ilma jälgimiseta. Vahelehed ei lähe kunagi kaotsi."
+  },
+  "commandSuspendCurrent": {
+    "message": "Peata praegune vaheleht"
+  },
+  "commandSuspendOthers": {
+    "message": "Peata kõik teised vahelehed"
+  },
+  "commandWakeAll": {
+    "message": "Ärata kõik peatatud vahelehed"
+  },
+
+  "statSleeping": { "message": "magab" },
+  "statProtected": { "message": "kaitstud" },
+  "statSaved": { "message": "säästetud" },
+
+  "suspendOthers": { "message": "Peata teised" },
+  "wakeAll": { "message": "Ärata kõik" },
+
+  "neverSuspendSite": { "message": "Ära kunagi peata seda saiti" },
+  "siteWhitelisted": { "message": "Sait on lubatud nimekirjas (klõpsa eemaldamiseks)" },
+  "activeWontSuspend": { "message": "Aktiivne – ei peatata" },
+  "loading": { "message": "Laadimine..." },
+
+  "tabsInWindow": { "message": "Vahelehed selles aknas" },
+  "loadingTabs": { "message": "Vahelehtede laadimine..." },
+  "noTabsFound": { "message": "Vahelehti ei leitud" },
+  "failedToLoad": { "message": "Laadimine ebaõnnestus. Ava hüpikaken uuesti." },
+
+  "badgeActive": { "message": "Aktiivne" },
+  "badgeSystem": { "message": "Süsteem" },
+  "badgePinned": { "message": "Kinnitatud" },
+  "badgeAudio": { "message": "Heli" },
+  "badgeStarred": { "message": "Tärniga" },
+  "badgeProtected": { "message": "Kaitstud" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Seansid" },
+  "sessionNamePlaceholder": { "message": "Seansi nimi (valikuline)" },
+  "save": { "message": "Salvesta" },
+  "emptySessionState": { "message": "Salvesta oma esimene seanss, et saaksid vahelehti igal ajal taastada" },
+  "open": { "message": "Ava" },
+  "openSessionTitle": { "message": "Ava selle seansi vahelehed" },
+  "deleteSessionTitle": { "message": "Kustuta seanss" },
+  "sessionSaved": { "message": "Seanss salvestatud!" },
+  "failedToSave": { "message": "Salvestamine ebaõnnestus" },
+  "restoredTabs": {
+    "message": "$COUNT$ vahelehte taastatud",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Taastamine ebaõnnestus" },
+  "noSessionsToExport": { "message": "Pole seansse eksportimiseks" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ seanssi kopeeritud JSON-ina",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ vahelehte",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Statistika" },
+  "statToday": { "message": "Täna" },
+  "statAllTime": { "message": "Kogu aeg" },
+  "statRamSaved": { "message": "Säästetud RAM (hinnang)" },
+  "statMemberSince": { "message": "Liige alates" },
+
+  "settings": { "message": "Seaded" },
+  "autoSuspendAfter": { "message": "Automaatne peatamine pärast" },
+  "timer5min": { "message": "5 minutit" },
+  "timer10min": { "message": "10 minutit" },
+  "timer15min": { "message": "15 minutit" },
+  "timer30min": { "message": "30 minutit" },
+  "timer1hour": { "message": "1 tund" },
+  "timer2hours": { "message": "2 tundi" },
+  "timer4hours": { "message": "4 tundi" },
+  "timerNever": { "message": "Mitte kunagi" },
+  "protectPinned": { "message": "Kaitse kinnitatud vahelehti" },
+  "protectAudio": { "message": "Kaitse heliga vahelehti" },
+  "protectForms": { "message": "Kaitse vormidega vahelehti" },
+  "suspendOnStartup": { "message": "Peata vahelehed käivitamisel" },
+  "enableAutoSuspend": { "message": "Luba automaatne peatamine" },
+  "markSuspended": { "message": "Märgi peatatud vahelehed" },
+  "whitelistedSites": { "message": "Lubatud saidid" },
+  "add": { "message": "Lisa" },
+  "noSitesWhitelisted": { "message": "Lubatud saite pole" },
+
+  "suspending": { "message": "Peatamine..." },
+  "done": { "message": "Valmis!" },
+  "waking": { "message": "Äratamine..." },
+  "copiedTabs": {
+    "message": "$COUNT$ vahelehte kopeeritud lõikelauale",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Kopeerimine ebaõnnestus" },
+  "copyTabsTitle": { "message": "Kopeeri vahelehtede nimekiri lõikelauale" },
+  "copySessionsTitle": { "message": "Kopeeri kõik seansid JSON-ina" },
+  "remove": { "message": "Eemalda" },
+
+  "switchToLight": { "message": "Lülitu heledasse režiimi" },
+  "switchToDark": { "message": "Lülitu tumedasse režiimi" },
+
+  "ctxSuspendThis": { "message": "Peata see vaheleht" },
+  "ctxSuspendOthers": { "message": "Peata kõik teised vahelehed" },
+  "ctxNeverSuspend": { "message": "Ära kunagi peata seda saiti" },
+
+  "maxSessionsReached": { "message": "Maksimaalselt 20 seanssi saavutatud. Kustuta üks, et salvestada uus." },
+  "noSaveableTabs": { "message": "Selles aknas pole salvestatavaid vahelehti." },
+  "sessionNotFound": { "message": "Seanssi ei leitud." },
+  "noRestorableTabs": { "message": "Selles seansis pole taastatavaid vahelehti." },
+  "sessionDefaultName": {
+    "message": "Seanss – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "just praegu" },
+  "minutesAgo": {
+    "message": "$COUNT$ min tagasi",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ t tagasi",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Eile" },
+  "daysAgo": {
+    "message": "$COUNT$ p tagasi",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Tere tulemast Drowzy-sse" },
+  "onboardingIntro": { "message": "Drowzy säästab mälu, pannes mitteaktiivsed vahelehed magama. Sinu vahelehed on alati turvalised – me kasutame Chrome'i natiivset tühistamise API-t, nii et need jäävad alles isegi siis, kui Drowzy desinstallid." },
+  "howItWorks": { "message": "Kuidas see töötab" },
+  "featureAutoSuspend": { "message": "<strong>30 minutit jõude olnud vahelehed</strong> peatatakse automaatselt" },
+  "featureZeroRam": { "message": "<strong>Peatatud vahelehed ei kasuta RAM-i</strong>, kuid jäävad vahelehtede ribale" },
+  "featureClickToWake": { "message": "<strong>Klõpsa mis tahes peatatud vahelehel</strong>, et see kohe äratada" },
+  "featureProtected": { "message": "<strong>Aktiivseid, kinnitatud ja heliga vahelehti</strong> ei puututa kunagi" },
+  "quickActions": { "message": "Kiirtoimingud" },
+  "actionClickIcon": { "message": "Klõpsa tööriistariba <strong>Drowzy ikoonil</strong>, et näha kõiki oma vahelehti" },
+  "actionAltS": { "message": "Vajuta <kbd>Alt+S</kbd>, et peatada praegune vaheleht" },
+  "actionAltShiftS": { "message": "Vajuta <kbd>Alt+Shift+S</kbd>, et peatada kõik teised vahelehed" },
+  "actionAltW": { "message": "Vajuta <kbd>Alt+W</kbd>, et äratada kõik peatatud vahelehed" },
+  "actionRightClick": { "message": "Paremklõpsa mis tahes lehel kiirpeatamise valikute jaoks" },
+  "onboardingCta": { "message": "Drowzy juba töötab. Ava mõned vahelehed ja proovi järele!" },
+  "onboardingBtn": { "message": "Selge, alustame" },
+
+  "privacyTitle": { "message": "Drowzy – Privaatsuspoliitika" },
+  "privacyUpdated": { "message": "Viimati uuendatud: veebruar 2026" },
+  "privacyShortTitle": { "message": "Lühiversioon" },
+  "privacyShortText": { "message": "Drowzy ei kogu mingeid andmeid. Pole analüütikat, pole jälgimist, pole välisservereid. Kõik jääb sinu brauserisse." },
+  "privacyStoredTitle": { "message": "Mis salvestatakse" },
+  "privacyStoredText": { "message": "Sinu seaded (peatamise taimer, lubatud nimekiri, eelistused) salvestatakse Chrome'i sisseehitatud salvestamise API-de kaudu: chrome.storage.sync seadete jaoks, mis järgnevad sinu Chrome'i profiilile, chrome.storage.local statistika ja salvestatud seansside jaoks ning chrome.storage.session ajutiste andmete jaoks, nagu vahelehtede ajatemplid. Midagi sellest ei saadeta ühelegi kolmanda osapoole serverile." },
+  "privacyPermissionsTitle": { "message": "Õigused" },
+  "privacyPermissionsIntro": { "message": "Drowzy kasutab järgmisi Chrome'i õigusi:" },
+  "privacyPermTabs": { "message": "tabs – brauseri vahelehtede loetlemine, peatamine ja taastamine" },
+  "privacyPermStorage": { "message": "storage – seadete kohalik salvestamine" },
+  "privacyPermAlarms": { "message": "alarms – perioodilised kontrollid mitteaktiivsete vahelehtede jaoks" },
+  "privacyPermContextMenus": { "message": "contextMenus – paremklõpsu menüü valikud" },
+  "privacyContactTitle": { "message": "Kontakt" },
+  "privacyContactText": { "message": "Küsimusi? Kirjuta meile aadressil drowzyextension@gmail.com" }
+}

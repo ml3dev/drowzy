@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - ટેબ સસ્પેન્ડર અને મેમરી સેવર"
+  },
+  "extDescription": {
+    "message": "નિષ્ક્રિય ટેબને ઑટો-સસ્પેન્ડ કરીને 80% સુધી RAM બચાવો. હળવું, ખાનગી, કોઈ ટ્રેકિંગ નહીં. ટેબ ક્યારેય ખોવાતી નથી."
+  },
+  "commandSuspendCurrent": {
+    "message": "વર્તમાન ટેબ સસ્પેન્ડ કરો"
+  },
+  "commandSuspendOthers": {
+    "message": "બાકીની બધી ટેબ સસ્પેન્ડ કરો"
+  },
+  "commandWakeAll": {
+    "message": "બધી સસ્પેન્ડ થયેલી ટેબ જગાડો"
+  },
+
+  "statSleeping": { "message": "ઊંઘમાં" },
+  "statProtected": { "message": "સુરક્ષિત" },
+  "statSaved": { "message": "બચાવેલ" },
+
+  "suspendOthers": { "message": "બાકીની સસ્પેન્ડ કરો" },
+  "wakeAll": { "message": "બધી જગાડો" },
+
+  "neverSuspendSite": { "message": "આ સાઇટને ક્યારેય સસ્પેન્ડ ન કરો" },
+  "siteWhitelisted": { "message": "સાઇટ વ્હાઇટલિસ્ટમાં છે (દૂર કરવા ક્લિક કરો)" },
+  "activeWontSuspend": { "message": "સક્રિય – સસ્પેન્ડ નહીં થાય" },
+  "loading": { "message": "લોડ થઈ રહ્યું છે..." },
+
+  "tabsInWindow": { "message": "આ વિન્ડોમાં ટેબ" },
+  "loadingTabs": { "message": "ટેબ લોડ થઈ રહી છે..." },
+  "noTabsFound": { "message": "કોઈ ટેબ મળી નથી" },
+  "failedToLoad": { "message": "લોડ થવામાં નિષ્ફળ. ફરીથી પ્રયાસ કરવા પોપઅપ ફરી ખોલો." },
+
+  "badgeActive": { "message": "સક્રિય" },
+  "badgeSystem": { "message": "સિસ્ટમ" },
+  "badgePinned": { "message": "પિન કરેલ" },
+  "badgeAudio": { "message": "ઑડિયો" },
+  "badgeStarred": { "message": "તારાંકિત" },
+  "badgeProtected": { "message": "સુરક્ષિત" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "સેશન" },
+  "sessionNamePlaceholder": { "message": "સેશનનું નામ (વૈકલ્પિક)" },
+  "save": { "message": "સાચવો" },
+  "emptySessionState": { "message": "ગમે ત્યારે ટેબ રિસ્ટોર કરવા માટે તમારું પ્રથમ સેશન સાચવો" },
+  "open": { "message": "ખોલો" },
+  "openSessionTitle": { "message": "આ સેશનની ટેબ ખોલો" },
+  "deleteSessionTitle": { "message": "સેશન ડિલીટ કરો" },
+  "sessionSaved": { "message": "સેશન સાચવ્યું!" },
+  "failedToSave": { "message": "સાચવવામાં નિષ્ફળ" },
+  "restoredTabs": {
+    "message": "$COUNT$ ટેબ રિસ્ટોર થઈ",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "રિસ્ટોર કરવામાં નિષ્ફળ" },
+  "noSessionsToExport": { "message": "એક્સપોર્ટ કરવા માટે કોઈ સેશન નથી" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ સેશન JSON તરીકે કૉપિ થયા",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ ટેબ",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "આંકડા" },
+  "statToday": { "message": "આજે" },
+  "statAllTime": { "message": "કુલ" },
+  "statRamSaved": { "message": "બચાવેલ RAM (અંદાજિત)" },
+  "statMemberSince": { "message": "સભ્ય ત્યારથી" },
+
+  "settings": { "message": "સેટિંગ્સ" },
+  "autoSuspendAfter": { "message": "આટલા સમય પછી ઑટો-સસ્પેન્ડ" },
+  "timer5min": { "message": "5 મિનિટ" },
+  "timer10min": { "message": "10 મિનિટ" },
+  "timer15min": { "message": "15 મિનિટ" },
+  "timer30min": { "message": "30 મિનિટ" },
+  "timer1hour": { "message": "1 કલાક" },
+  "timer2hours": { "message": "2 કલાક" },
+  "timer4hours": { "message": "4 કલાક" },
+  "timerNever": { "message": "ક્યારેય નહીં" },
+  "protectPinned": { "message": "પિન કરેલી ટેબ સુરક્ષિત રાખો" },
+  "protectAudio": { "message": "ઑડિયો ટેબ સુરક્ષિત રાખો" },
+  "protectForms": { "message": "ફોર્મવાળી ટેબ સુરક્ષિત રાખો" },
+  "suspendOnStartup": { "message": "સ્ટાર્ટઅપ પર ટેબ સસ્પેન્ડ કરો" },
+  "enableAutoSuspend": { "message": "ઑટો-સસ્પેન્ડ ચાલુ કરો" },
+  "markSuspended": { "message": "સસ્પેન્ડ થયેલી ટેબ માર્ક કરો" },
+  "whitelistedSites": { "message": "વ્હાઇટલિસ્ટેડ સાઇટ્સ" },
+  "add": { "message": "ઉમેરો" },
+  "noSitesWhitelisted": { "message": "કોઈ સાઇટ વ્હાઇટલિસ્ટમાં નથી" },
+
+  "suspending": { "message": "સસ્પેન્ડ થઈ રહ્યું છે..." },
+  "done": { "message": "થઈ ગયું!" },
+  "waking": { "message": "જગાડી રહ્યા છીએ..." },
+  "copiedTabs": {
+    "message": "$COUNT$ ટેબ ક્લિપબોર્ડમાં કૉપિ થઈ",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "કૉપિ કરવામાં નિષ્ફળ" },
+  "copyTabsTitle": { "message": "ટેબ યાદી ક્લિપબોર્ડમાં કૉપિ કરો" },
+  "copySessionsTitle": { "message": "બધા સેશન JSON તરીકે કૉપિ કરો" },
+  "remove": { "message": "દૂર કરો" },
+
+  "switchToLight": { "message": "લાઇટ મોડમાં બદલો" },
+  "switchToDark": { "message": "ડાર્ક મોડમાં બદલો" },
+
+  "ctxSuspendThis": { "message": "આ ટેબ સસ્પેન્ડ કરો" },
+  "ctxSuspendOthers": { "message": "બાકીની બધી ટેબ સસ્પેન્ડ કરો" },
+  "ctxNeverSuspend": { "message": "આ સાઇટને ક્યારેય સસ્પેન્ડ ન કરો" },
+
+  "maxSessionsReached": { "message": "મહત્તમ 20 સેશન પૂર્ણ. નવું સાચવવા માટે એક ડિલીટ કરો." },
+  "noSaveableTabs": { "message": "આ વિન્ડોમાં સાચવી શકાય તેવી કોઈ ટેબ નથી." },
+  "sessionNotFound": { "message": "સેશન મળ્યું નથી." },
+  "noRestorableTabs": { "message": "આ સેશનમાં રિસ્ટોર કરી શકાય તેવી કોઈ ટેબ નથી." },
+  "sessionDefaultName": {
+    "message": "સેશન – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "હમણાં જ" },
+  "minutesAgo": {
+    "message": "$COUNT$ મિનિટ પહેલાં",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ કલાક પહેલાં",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "ગઈકાલે" },
+  "daysAgo": {
+    "message": "$COUNT$ દિવસ પહેલાં",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Drowzy માં આપનું સ્વાગત છે" },
+  "onboardingIntro": { "message": "Drowzy નિષ્ક્રિય ટેબને ઊંઘમાં મૂકીને મેમરી બચાવે છે. તમારી ટેબ હંમેશાં સુરક્ષિત છે – અમે Chrome ના નેટિવ ડિસ્કાર્ડ API નો ઉપયોગ કરીએ છીએ, તેથી Drowzy અનઇન્સ્ટૉલ કરો તો પણ ટેબ જળવાઈ રહે છે." },
+  "howItWorks": { "message": "આ કેવી રીતે કામ કરે છે" },
+  "featureAutoSuspend": { "message": "<strong>30 મિનિટ નિષ્ક્રિય ટેબ</strong> ઑટોમેટિકલી સસ્પેન્ડ થાય છે" },
+  "featureZeroRam": { "message": "<strong>સસ્પેન્ડ થયેલી ટેબ શૂન્ય RAM વાપરે છે</strong> પણ તમારી ટેબ બારમાં રહે છે" },
+  "featureClickToWake": { "message": "<strong>કોઈપણ સસ્પેન્ડ થયેલી ટેબ પર ક્લિક કરો</strong> તેને તરત જગાડવા" },
+  "featureProtected": { "message": "<strong>સક્રિય, પિન કરેલી અને ઑડિયો ટેબ</strong> ને ક્યારેય સ્પર્શ નથી થતો" },
+  "quickActions": { "message": "ઝડપી ક્રિયાઓ" },
+  "actionClickIcon": { "message": "તમારી બધી ટેબ જોવા ટૂલબારમાં <strong>Drowzy આઇકોન</strong> પર ક્લિક કરો" },
+  "actionAltS": { "message": "વર્તમાન ટેબ સસ્પેન્ડ કરવા <kbd>Alt+S</kbd> દબાવો" },
+  "actionAltShiftS": { "message": "બાકીની બધી ટેબ સસ્પેન્ડ કરવા <kbd>Alt+Shift+S</kbd> દબાવો" },
+  "actionAltW": { "message": "બધી સસ્પેન્ડ થયેલી ટેબ જગાડવા <kbd>Alt+W</kbd> દબાવો" },
+  "actionRightClick": { "message": "ઝડપી સસ્પેન્ડ વિકલ્પો માટે કોઈપણ પેજ પર જમણું-ક્લિક કરો" },
+  "onboardingCta": { "message": "Drowzy પહેલેથી ચાલી રહ્યું છે. થોડી ટેબ ખોલો અને અજમાવો!" },
+  "onboardingBtn": { "message": "સમજાયું, ચાલો" },
+
+  "privacyTitle": { "message": "Drowzy – ગોપનીયતા નીતિ" },
+  "privacyUpdated": { "message": "છેલ્લે અપડેટ: ફેબ્રુઆરી 2026" },
+  "privacyShortTitle": { "message": "ટૂંકું વર્ણન" },
+  "privacyShortText": { "message": "Drowzy કોઈ ડેટા એકત્ર કરતું નથી. કોઈ એનાલિટિક્સ નહીં, કોઈ ટ્રેકિંગ નહીં, કોઈ બાહ્ય સર્વર નહીં. બધું તમારા બ્રાઉઝરમાં જ રહે છે." },
+  "privacyStoredTitle": { "message": "શું સંગ્રહિત થાય છે" },
+  "privacyStoredText": { "message": "તમારી સેટિંગ્સ (સસ્પેન્ડ ટાઇમર, વ્હાઇટલિસ્ટ, પસંદગીઓ) Chrome ના બિલ્ટ-ઇન સ્ટોરેજ API દ્વારા સાચવવામાં આવે છે: chrome.storage.sync તમારા Chrome પ્રોફાઇલને અનુસરતી સેટિંગ્સ માટે, chrome.storage.local આંકડા અને સાચવેલા સેશન માટે, અને chrome.storage.session ટેબ ટાઇમસ્ટેમ્પ જેવા અસ્થાયી ડેટા માટે. આમાંથી કંઈ પણ કોઈ તૃતીય-પક્ષ સર્વરને મોકલવામાં આવતું નથી." },
+  "privacyPermissionsTitle": { "message": "પરવાનગીઓ" },
+  "privacyPermissionsIntro": { "message": "Drowzy આ Chrome પરવાનગીઓ વાપરે છે:" },
+  "privacyPermTabs": { "message": "tabs – બ્રાઉઝર ટેબ યાદી, સસ્પેન્ડ અને રિસ્ટોર કરવી" },
+  "privacyPermStorage": { "message": "storage – તમારી સેટિંગ્સ સ્થાનિક રીતે સાચવવી" },
+  "privacyPermAlarms": { "message": "alarms – નિષ્ક્રિય ટેબ માટે સમયાંતરે તપાસ" },
+  "privacyPermContextMenus": { "message": "contextMenus – જમણું-ક્લિક મેનૂ વિકલ્પો" },
+  "privacyContactTitle": { "message": "સંપર્ક" },
+  "privacyContactText": { "message": "પ્રશ્નો? drowzyextension@gmail.com પર સંપર્ક કરો" }
+}

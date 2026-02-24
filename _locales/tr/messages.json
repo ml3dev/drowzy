@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Sekme Askıya Alma ve Bellek Tasarrufu"
+  },
+  "extDescription": {
+    "message": "Etkin olmayan sekmeleri otomatik olarak askıya alarak %80'e kadar RAM tasarrufu sağlayın. Hafif, gizli, izleme yok. Sekmeler asla kaybolmaz."
+  },
+  "commandSuspendCurrent": {
+    "message": "Geçerli sekmeyi askıya al"
+  },
+  "commandSuspendOthers": {
+    "message": "Diğer tüm sekmeleri askıya al"
+  },
+  "commandWakeAll": {
+    "message": "Askıya alınan tüm sekmeleri uyandır"
+  },
+
+  "statSleeping": { "message": "uyuyor" },
+  "statProtected": { "message": "korumalı" },
+  "statSaved": { "message": "tasarruf edildi" },
+
+  "suspendOthers": { "message": "Diğerlerini Askıya Al" },
+  "wakeAll": { "message": "Tümünü Uyandır" },
+
+  "neverSuspendSite": { "message": "Bu siteyi asla askıya alma" },
+  "siteWhitelisted": { "message": "Site beyaz listede (kaldırmak için tıklayın)" },
+  "activeWontSuspend": { "message": "Etkin – askıya alınmayacak" },
+  "loading": { "message": "Yükleniyor..." },
+
+  "tabsInWindow": { "message": "Bu penceredeki sekmeler" },
+  "loadingTabs": { "message": "Sekmeler yükleniyor..." },
+  "noTabsFound": { "message": "Sekme bulunamadı" },
+  "failedToLoad": { "message": "Yüklenemedi. Tekrar denemek için açılır pencereyi yeniden açın." },
+
+  "badgeActive": { "message": "Etkin" },
+  "badgeSystem": { "message": "Sistem" },
+  "badgePinned": { "message": "Sabitlenmiş" },
+  "badgeAudio": { "message": "Ses" },
+  "badgeStarred": { "message": "Yıldızlı" },
+  "badgeProtected": { "message": "Korumalı" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Oturumlar" },
+  "sessionNamePlaceholder": { "message": "Oturum adı (isteğe bağlı)" },
+  "save": { "message": "Kaydet" },
+  "emptySessionState": { "message": "Sekmeleri istediğiniz zaman geri yüklemek için ilk oturumunuzu kaydedin" },
+  "open": { "message": "Aç" },
+  "openSessionTitle": { "message": "Bu oturumdaki sekmeleri aç" },
+  "deleteSessionTitle": { "message": "Oturumu sil" },
+  "sessionSaved": { "message": "Oturum kaydedildi!" },
+  "failedToSave": { "message": "Kaydedilemedi" },
+  "restoredTabs": {
+    "message": "$COUNT$ sekme geri yüklendi",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Geri yüklenemedi" },
+  "noSessionsToExport": { "message": "Dışa aktarılacak oturum yok" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ oturum JSON olarak kopyalandı",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ sekme",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "İstatistikler" },
+  "statToday": { "message": "Bugün" },
+  "statAllTime": { "message": "Tüm zamanlar" },
+  "statRamSaved": { "message": "Tasarruf edilen RAM (tahmini)" },
+  "statMemberSince": { "message": "Üyelik başlangıcı" },
+
+  "settings": { "message": "Ayarlar" },
+  "autoSuspendAfter": { "message": "Şu süre sonra otomatik askıya al" },
+  "timer5min": { "message": "5 dakika" },
+  "timer10min": { "message": "10 dakika" },
+  "timer15min": { "message": "15 dakika" },
+  "timer30min": { "message": "30 dakika" },
+  "timer1hour": { "message": "1 saat" },
+  "timer2hours": { "message": "2 saat" },
+  "timer4hours": { "message": "4 saat" },
+  "timerNever": { "message": "Asla" },
+  "protectPinned": { "message": "Sabitlenmiş sekmeleri koru" },
+  "protectAudio": { "message": "Sesli sekmeleri koru" },
+  "protectForms": { "message": "Formlu sekmeleri koru" },
+  "suspendOnStartup": { "message": "Başlangıçta sekmeleri askıya al" },
+  "enableAutoSuspend": { "message": "Otomatik askıya almayı etkinleştir" },
+  "markSuspended": { "message": "Askıya alınan sekmeleri işaretle" },
+  "whitelistedSites": { "message": "Beyaz listedeki siteler" },
+  "add": { "message": "Ekle" },
+  "noSitesWhitelisted": { "message": "Beyaz listede site yok" },
+
+  "suspending": { "message": "Askıya alınıyor..." },
+  "done": { "message": "Tamamlandı!" },
+  "waking": { "message": "Uyandırılıyor..." },
+  "copiedTabs": {
+    "message": "$COUNT$ sekme panoya kopyalandı",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Kopyalanamadı" },
+  "copyTabsTitle": { "message": "Sekme listesini panoya kopyala" },
+  "copySessionsTitle": { "message": "Tüm oturumları JSON olarak kopyala" },
+  "remove": { "message": "Kaldır" },
+
+  "switchToLight": { "message": "Açık temaya geç" },
+  "switchToDark": { "message": "Koyu temaya geç" },
+
+  "ctxSuspendThis": { "message": "Bu sekmeyi askıya al" },
+  "ctxSuspendOthers": { "message": "Diğer tüm sekmeleri askıya al" },
+  "ctxNeverSuspend": { "message": "Bu siteyi asla askıya alma" },
+
+  "maxSessionsReached": { "message": "Maksimum 20 oturuma ulaşıldı. Yeni bir tane kaydetmek için birini silin." },
+  "noSaveableTabs": { "message": "Bu pencerede kaydedilebilir sekme yok." },
+  "sessionNotFound": { "message": "Oturum bulunamadı." },
+  "noRestorableTabs": { "message": "Bu oturumda geri yüklenebilir sekme yok." },
+  "sessionDefaultName": {
+    "message": "Oturum – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "az önce" },
+  "minutesAgo": {
+    "message": "$COUNT$ dk önce",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ sa önce",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Dün" },
+  "daysAgo": {
+    "message": "$COUNT$ gün önce",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Drowzy'ye Hoş Geldiniz" },
+  "onboardingIntro": { "message": "Drowzy, etkin olmayan sekmeleri uyku moduna alarak bellek tasarrufu sağlar. Sekmeleriniz her zaman güvendedir – Chrome'un yerel discard API'sini kullanırız, böylece Drowzy'yi kaldırsanız bile sekmeler kaybolmaz." },
+  "howItWorks": { "message": "Nasıl çalışır" },
+  "featureAutoSuspend": { "message": "<strong>30 dakika boyunca etkin olmayan sekmeler</strong> otomatik olarak askıya alınır" },
+  "featureZeroRam": { "message": "<strong>Askıya alınan sekmeler sıfır RAM kullanır</strong> ancak sekme çubuğunuzda kalır" },
+  "featureClickToWake": { "message": "<strong>Askıya alınan herhangi bir sekmeye tıklayın</strong> anında uyandırmak için" },
+  "featureProtected": { "message": "<strong>Etkin, sabitlenmiş ve sesli sekmeler</strong> asla dokunulmaz" },
+  "quickActions": { "message": "Hızlı işlemler" },
+  "actionClickIcon": { "message": "Tüm sekmelerinizi görmek için araç çubuğundaki <strong>Drowzy simgesine</strong> tıklayın" },
+  "actionAltS": { "message": "Geçerli sekmeyi askıya almak için <kbd>Alt+S</kbd> tuşlarına basın" },
+  "actionAltShiftS": { "message": "Diğer tüm sekmeleri askıya almak için <kbd>Alt+Shift+S</kbd> tuşlarına basın" },
+  "actionAltW": { "message": "Askıya alınan tüm sekmeleri uyandırmak için <kbd>Alt+W</kbd> tuşlarına basın" },
+  "actionRightClick": { "message": "Hızlı askıya alma seçenekleri için herhangi bir sayfaya sağ tıklayın" },
+  "onboardingCta": { "message": "Drowzy zaten çalışıyor. Birkaç sekme açın ve deneyin!" },
+  "onboardingBtn": { "message": "Anladım, hadi başlayalım" },
+
+  "privacyTitle": { "message": "Drowzy – Gizlilik Politikası" },
+  "privacyUpdated": { "message": "Son güncelleme: Şubat 2026" },
+  "privacyShortTitle": { "message": "Kısa versiyon" },
+  "privacyShortText": { "message": "Drowzy hiçbir veri toplamaz. Analitik yok, izleme yok, harici sunucu yok. Her şey tarayıcınızda kalır." },
+  "privacyStoredTitle": { "message": "Nelerin depolandığı" },
+  "privacyStoredText": { "message": "Ayarlarınız (askıya alma zamanlayıcısı, beyaz liste, tercihler) Chrome'un yerleşik depolama API'leri kullanılarak kaydedilir: chrome.storage.sync Chrome profilinizi takip eden ayarlar için, chrome.storage.local istatistikler ve kaydedilmiş oturumlar için ve chrome.storage.session sekme zaman damgaları gibi geçici veriler için. Bunların hiçbiri üçüncü taraf bir sunucuya gönderilmez." },
+  "privacyPermissionsTitle": { "message": "İzinler" },
+  "privacyPermissionsIntro": { "message": "Drowzy şu Chrome izinlerini kullanır:" },
+  "privacyPermTabs": { "message": "tabs – tarayıcı sekmelerini listeleme, askıya alma ve geri yükleme" },
+  "privacyPermStorage": { "message": "storage – ayarlarınızı yerel olarak kaydetme" },
+  "privacyPermAlarms": { "message": "alarms – etkin olmayan sekmeler için periyodik kontroller" },
+  "privacyPermContextMenus": { "message": "contextMenus – sağ tıklama menüsü seçenekleri" },
+  "privacyContactTitle": { "message": "İletişim" },
+  "privacyContactText": { "message": "Sorularınız mı var? drowzyextension@gmail.com adresinden ulaşın" }
+}

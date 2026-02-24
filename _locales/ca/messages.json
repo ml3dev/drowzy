@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Suspensió de pestanyes i estalvi de memòria"
+  },
+  "extDescription": {
+    "message": "Suspèn automàticament les pestanyes inactives per estalviar fins al 80% de RAM. Lleuger, privat, sense seguiment. Les pestanyes no es perden mai."
+  },
+  "commandSuspendCurrent": {
+    "message": "Suspèn la pestanya actual"
+  },
+  "commandSuspendOthers": {
+    "message": "Suspèn totes les altres pestanyes"
+  },
+  "commandWakeAll": {
+    "message": "Desperta totes les pestanyes suspeses"
+  },
+
+  "statSleeping": { "message": "dormint" },
+  "statProtected": { "message": "protegida" },
+  "statSaved": { "message": "estalviat" },
+
+  "suspendOthers": { "message": "Suspèn les altres" },
+  "wakeAll": { "message": "Desperta totes" },
+
+  "neverSuspendSite": { "message": "No suspenguis mai aquest lloc" },
+  "siteWhitelisted": { "message": "El lloc és a la llista blanca (feu clic per eliminar)" },
+  "activeWontSuspend": { "message": "Activa – no se suspendrà" },
+  "loading": { "message": "Carregant..." },
+
+  "tabsInWindow": { "message": "Pestanyes en aquesta finestra" },
+  "loadingTabs": { "message": "Carregant pestanyes..." },
+  "noTabsFound": { "message": "No s'han trobat pestanyes" },
+  "failedToLoad": { "message": "Error en carregar. Torneu a obrir la finestra emergent per tornar-ho a provar." },
+
+  "badgeActive": { "message": "Activa" },
+  "badgeSystem": { "message": "Sistema" },
+  "badgePinned": { "message": "Fixada" },
+  "badgeAudio": { "message": "Àudio" },
+  "badgeStarred": { "message": "Destacada" },
+  "badgeProtected": { "message": "Protegida" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Sessions" },
+  "sessionNamePlaceholder": { "message": "Nom de la sessió (opcional)" },
+  "save": { "message": "Desa" },
+  "emptySessionState": { "message": "Deseu la primera sessió per restaurar les pestanyes en qualsevol moment" },
+  "open": { "message": "Obre" },
+  "openSessionTitle": { "message": "Obre les pestanyes d'aquesta sessió" },
+  "deleteSessionTitle": { "message": "Elimina la sessió" },
+  "sessionSaved": { "message": "Sessió desada!" },
+  "failedToSave": { "message": "Error en desar" },
+  "restoredTabs": {
+    "message": "S'han restaurat $COUNT$ pestanyes",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Error en restaurar" },
+  "noSessionsToExport": { "message": "No hi ha sessions per exportar" },
+  "copiedSessionsJson": {
+    "message": "S'han copiat $COUNT$ sessions com a JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ pestanyes",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Estadístiques" },
+  "statToday": { "message": "Avui" },
+  "statAllTime": { "message": "Tot el temps" },
+  "statRamSaved": { "message": "RAM estalviada (est.)" },
+  "statMemberSince": { "message": "Membre des de" },
+
+  "settings": { "message": "Configuració" },
+  "autoSuspendAfter": { "message": "Suspensió automàtica després de" },
+  "timer5min": { "message": "5 minuts" },
+  "timer10min": { "message": "10 minuts" },
+  "timer15min": { "message": "15 minuts" },
+  "timer30min": { "message": "30 minuts" },
+  "timer1hour": { "message": "1 hora" },
+  "timer2hours": { "message": "2 hores" },
+  "timer4hours": { "message": "4 hores" },
+  "timerNever": { "message": "Mai" },
+  "protectPinned": { "message": "Protegeix les pestanyes fixades" },
+  "protectAudio": { "message": "Protegeix les pestanyes amb àudio" },
+  "protectForms": { "message": "Protegeix les pestanyes amb formularis" },
+  "suspendOnStartup": { "message": "Suspèn les pestanyes en iniciar" },
+  "enableAutoSuspend": { "message": "Activa la suspensió automàtica" },
+  "markSuspended": { "message": "Marca les pestanyes suspeses" },
+  "whitelistedSites": { "message": "Llocs a la llista blanca" },
+  "add": { "message": "Afegeix" },
+  "noSitesWhitelisted": { "message": "Cap lloc a la llista blanca" },
+
+  "suspending": { "message": "Suspenent..." },
+  "done": { "message": "Fet!" },
+  "waking": { "message": "Despertant..." },
+  "copiedTabs": {
+    "message": "S'han copiat $COUNT$ pestanyes al porta-retalls",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Error en copiar" },
+  "copyTabsTitle": { "message": "Copia la llista de pestanyes al porta-retalls" },
+  "copySessionsTitle": { "message": "Copia totes les sessions com a JSON" },
+  "remove": { "message": "Elimina" },
+
+  "switchToLight": { "message": "Canvia al mode clar" },
+  "switchToDark": { "message": "Canvia al mode fosc" },
+
+  "ctxSuspendThis": { "message": "Suspèn aquesta pestanya" },
+  "ctxSuspendOthers": { "message": "Suspèn totes les altres pestanyes" },
+  "ctxNeverSuspend": { "message": "No suspenguis mai aquest lloc" },
+
+  "maxSessionsReached": { "message": "S'ha arribat al màxim de 20 sessions. Elimineu-ne una per desar-ne una de nova." },
+  "noSaveableTabs": { "message": "No hi ha pestanyes desables en aquesta finestra." },
+  "sessionNotFound": { "message": "Sessió no trobada." },
+  "noRestorableTabs": { "message": "No hi ha pestanyes restaurables en aquesta sessió." },
+  "sessionDefaultName": {
+    "message": "Sessió – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "ara mateix" },
+  "minutesAgo": {
+    "message": "fa $COUNT$ min",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "fa $COUNT$ h",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Ahir" },
+  "daysAgo": {
+    "message": "fa $COUNT$ dies",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Benvingut a Drowzy" },
+  "onboardingIntro": { "message": "Drowzy estalvia memòria posant les pestanyes inactives a dormir. Les teves pestanyes sempre estan segures – utilitzem l'API nativa de descart de Chrome, de manera que sobreviuen fins i tot si desinstal·leu Drowzy." },
+  "howItWorks": { "message": "Com funciona" },
+  "featureAutoSuspend": { "message": "<strong>Les pestanyes inactives durant 30 minuts</strong> se suspenen automàticament" },
+  "featureZeroRam": { "message": "<strong>Les pestanyes suspeses no utilitzen RAM</strong> però es mantenen a la barra de pestanyes" },
+  "featureClickToWake": { "message": "<strong>Feu clic en qualsevol pestanya suspesa</strong> per despertar-la a l'instant" },
+  "featureProtected": { "message": "<strong>Les pestanyes actives, fixades i amb àudio</strong> no es toquen mai" },
+  "quickActions": { "message": "Accions ràpides" },
+  "actionClickIcon": { "message": "Feu clic a la <strong>icona de Drowzy</strong> a la barra d'eines per veure totes les pestanyes" },
+  "actionAltS": { "message": "Premeu <kbd>Alt+S</kbd> per suspendre la pestanya actual" },
+  "actionAltShiftS": { "message": "Premeu <kbd>Alt+Shift+S</kbd> per suspendre totes les altres pestanyes" },
+  "actionAltW": { "message": "Premeu <kbd>Alt+W</kbd> per despertar totes les pestanyes suspeses" },
+  "actionRightClick": { "message": "Feu clic dret en qualsevol pàgina per a opcions ràpides de suspensió" },
+  "onboardingCta": { "message": "Drowzy ja s'està executant. Obriu unes quantes pestanyes i proveu-lo!" },
+  "onboardingBtn": { "message": "Entès, endavant" },
+
+  "privacyTitle": { "message": "Drowzy – Política de privacitat" },
+  "privacyUpdated": { "message": "Última actualització: febrer de 2026" },
+  "privacyShortTitle": { "message": "La versió curta" },
+  "privacyShortText": { "message": "Drowzy no recull cap dada. Sense analítiques, sense seguiment, sense servidors externs. Tot queda al vostre navegador." },
+  "privacyStoredTitle": { "message": "Què s'emmagatzema" },
+  "privacyStoredText": { "message": "La vostra configuració (temporitzador de suspensió, llista blanca, preferències) es desa utilitzant les API d'emmagatzematge integrades de Chrome: chrome.storage.sync per a la configuració que segueix el vostre perfil de Chrome, chrome.storage.local per a estadístiques i sessions desades, i chrome.storage.session per a dades temporals com les marques de temps de les pestanyes. Res d'això s'envia a cap servidor de tercers." },
+  "privacyPermissionsTitle": { "message": "Permisos" },
+  "privacyPermissionsIntro": { "message": "Drowzy utilitza aquests permisos de Chrome:" },
+  "privacyPermTabs": { "message": "tabs – llistar, suspendre i restaurar les pestanyes del navegador" },
+  "privacyPermStorage": { "message": "storage – desar la vostra configuració localment" },
+  "privacyPermAlarms": { "message": "alarms – comprovacions periòdiques de pestanyes inactives" },
+  "privacyPermContextMenus": { "message": "contextMenus – opcions del menú contextual" },
+  "privacyContactTitle": { "message": "Contacte" },
+  "privacyContactText": { "message": "Preguntes? Contacteu-nos a drowzyextension@gmail.com" }
+}

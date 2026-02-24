@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Penangguh Tab & Penghemat Memori"
+  },
+  "extDescription": {
+    "message": "Tangguhkan tab tidak aktif secara otomatis untuk menghemat hingga 80% RAM. Ringan, privat, tanpa pelacakan. Tab tidak pernah hilang."
+  },
+  "commandSuspendCurrent": {
+    "message": "Tangguhkan tab saat ini"
+  },
+  "commandSuspendOthers": {
+    "message": "Tangguhkan semua tab lainnya"
+  },
+  "commandWakeAll": {
+    "message": "Bangunkan semua tab yang ditangguhkan"
+  },
+
+  "statSleeping": { "message": "tertidur" },
+  "statProtected": { "message": "dilindungi" },
+  "statSaved": { "message": "dihemat" },
+
+  "suspendOthers": { "message": "Tangguhkan Lainnya" },
+  "wakeAll": { "message": "Bangunkan Semua" },
+
+  "neverSuspendSite": { "message": "Jangan pernah tangguhkan situs ini" },
+  "siteWhitelisted": { "message": "Situs ada di daftar putih (klik untuk menghapus)" },
+  "activeWontSuspend": { "message": "Aktif – tidak akan ditangguhkan" },
+  "loading": { "message": "Memuat..." },
+
+  "tabsInWindow": { "message": "Tab di jendela ini" },
+  "loadingTabs": { "message": "Memuat tab..." },
+  "noTabsFound": { "message": "Tidak ada tab ditemukan" },
+  "failedToLoad": { "message": "Gagal memuat. Buka ulang popup untuk mencoba lagi." },
+
+  "badgeActive": { "message": "Aktif" },
+  "badgeSystem": { "message": "Sistem" },
+  "badgePinned": { "message": "Disematkan" },
+  "badgeAudio": { "message": "Audio" },
+  "badgeStarred": { "message": "Berbintang" },
+  "badgeProtected": { "message": "Dilindungi" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Sesi" },
+  "sessionNamePlaceholder": { "message": "Nama sesi (opsional)" },
+  "save": { "message": "Simpan" },
+  "emptySessionState": { "message": "Simpan sesi pertama Anda untuk memulihkan tab kapan saja" },
+  "open": { "message": "Buka" },
+  "openSessionTitle": { "message": "Buka tab dari sesi ini" },
+  "deleteSessionTitle": { "message": "Hapus sesi" },
+  "sessionSaved": { "message": "Sesi tersimpan!" },
+  "failedToSave": { "message": "Gagal menyimpan" },
+  "restoredTabs": {
+    "message": "$COUNT$ tab dipulihkan",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Gagal memulihkan" },
+  "noSessionsToExport": { "message": "Tidak ada sesi untuk diekspor" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ sesi disalin sebagai JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ tab",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Statistik" },
+  "statToday": { "message": "Hari ini" },
+  "statAllTime": { "message": "Sepanjang waktu" },
+  "statRamSaved": { "message": "RAM dihemat (perkiraan)" },
+  "statMemberSince": { "message": "Anggota sejak" },
+
+  "settings": { "message": "Pengaturan" },
+  "autoSuspendAfter": { "message": "Tangguhkan otomatis setelah" },
+  "timer5min": { "message": "5 menit" },
+  "timer10min": { "message": "10 menit" },
+  "timer15min": { "message": "15 menit" },
+  "timer30min": { "message": "30 menit" },
+  "timer1hour": { "message": "1 jam" },
+  "timer2hours": { "message": "2 jam" },
+  "timer4hours": { "message": "4 jam" },
+  "timerNever": { "message": "Tidak pernah" },
+  "protectPinned": { "message": "Lindungi tab yang disematkan" },
+  "protectAudio": { "message": "Lindungi tab audio" },
+  "protectForms": { "message": "Lindungi tab dengan formulir" },
+  "suspendOnStartup": { "message": "Tangguhkan tab saat startup" },
+  "enableAutoSuspend": { "message": "Aktifkan penangguhan otomatis" },
+  "markSuspended": { "message": "Tandai tab yang ditangguhkan" },
+  "whitelistedSites": { "message": "Situs daftar putih" },
+  "add": { "message": "Tambah" },
+  "noSitesWhitelisted": { "message": "Tidak ada situs di daftar putih" },
+
+  "suspending": { "message": "Menangguhkan..." },
+  "done": { "message": "Selesai!" },
+  "waking": { "message": "Membangunkan..." },
+  "copiedTabs": {
+    "message": "$COUNT$ tab disalin ke papan klip",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Gagal menyalin" },
+  "copyTabsTitle": { "message": "Salin daftar tab ke papan klip" },
+  "copySessionsTitle": { "message": "Salin semua sesi sebagai JSON" },
+  "remove": { "message": "Hapus" },
+
+  "switchToLight": { "message": "Beralih ke mode terang" },
+  "switchToDark": { "message": "Beralih ke mode gelap" },
+
+  "ctxSuspendThis": { "message": "Tangguhkan tab ini" },
+  "ctxSuspendOthers": { "message": "Tangguhkan semua tab lainnya" },
+  "ctxNeverSuspend": { "message": "Jangan pernah tangguhkan situs ini" },
+
+  "maxSessionsReached": { "message": "Maksimum 20 sesi tercapai. Hapus satu untuk menyimpan yang baru." },
+  "noSaveableTabs": { "message": "Tidak ada tab yang bisa disimpan di jendela ini." },
+  "sessionNotFound": { "message": "Sesi tidak ditemukan." },
+  "noRestorableTabs": { "message": "Tidak ada tab yang bisa dipulihkan di sesi ini." },
+  "sessionDefaultName": {
+    "message": "Sesi – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "baru saja" },
+  "minutesAgo": {
+    "message": "$COUNT$ menit lalu",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ jam lalu",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Kemarin" },
+  "daysAgo": {
+    "message": "$COUNT$ hari lalu",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Selamat datang di Drowzy" },
+  "onboardingIntro": { "message": "Drowzy menghemat memori dengan menidurkan tab tidak aktif. Tab Anda selalu aman – kami menggunakan API discard bawaan Chrome, sehingga tab tetap ada meskipun Anda mencopot Drowzy." },
+  "howItWorks": { "message": "Cara kerjanya" },
+  "featureAutoSuspend": { "message": "<strong>Tab tidak aktif selama 30 menit</strong> secara otomatis ditangguhkan" },
+  "featureZeroRam": { "message": "<strong>Tab yang ditangguhkan menggunakan nol RAM</strong> tetapi tetap ada di bilah tab Anda" },
+  "featureClickToWake": { "message": "<strong>Klik tab yang ditangguhkan</strong> untuk langsung membangunkannya" },
+  "featureProtected": { "message": "<strong>Tab aktif, disematkan, dan audio</strong> tidak pernah disentuh" },
+  "quickActions": { "message": "Aksi cepat" },
+  "actionClickIcon": { "message": "Klik <strong>ikon Drowzy</strong> di bilah alat untuk melihat semua tab Anda" },
+  "actionAltS": { "message": "Tekan <kbd>Alt+S</kbd> untuk menangguhkan tab saat ini" },
+  "actionAltShiftS": { "message": "Tekan <kbd>Alt+Shift+S</kbd> untuk menangguhkan semua tab lainnya" },
+  "actionAltW": { "message": "Tekan <kbd>Alt+W</kbd> untuk membangunkan semua tab yang ditangguhkan" },
+  "actionRightClick": { "message": "Klik kanan di halaman mana saja untuk opsi penangguhan cepat" },
+  "onboardingCta": { "message": "Drowzy sudah berjalan. Buka beberapa tab dan cobalah!" },
+  "onboardingBtn": { "message": "Mengerti, ayo mulai" },
+
+  "privacyTitle": { "message": "Drowzy – Kebijakan Privasi" },
+  "privacyUpdated": { "message": "Terakhir diperbarui: Februari 2026" },
+  "privacyShortTitle": { "message": "Versi singkat" },
+  "privacyShortText": { "message": "Drowzy tidak mengumpulkan data apa pun. Tanpa analitik, tanpa pelacakan, tanpa server eksternal. Semuanya tetap di browser Anda." },
+  "privacyStoredTitle": { "message": "Apa yang disimpan" },
+  "privacyStoredText": { "message": "Pengaturan Anda (pengatur waktu penangguhan, daftar putih, preferensi) disimpan menggunakan API penyimpanan bawaan Chrome: chrome.storage.sync untuk pengaturan yang mengikuti profil Chrome Anda, chrome.storage.local untuk statistik dan sesi tersimpan, dan chrome.storage.session untuk data sementara seperti stempel waktu tab. Tidak ada yang dikirim ke server pihak ketiga mana pun." },
+  "privacyPermissionsTitle": { "message": "Izin" },
+  "privacyPermissionsIntro": { "message": "Drowzy menggunakan izin Chrome berikut:" },
+  "privacyPermTabs": { "message": "tabs – mendaftar, menangguhkan, dan memulihkan tab browser" },
+  "privacyPermStorage": { "message": "storage – menyimpan pengaturan Anda secara lokal" },
+  "privacyPermAlarms": { "message": "alarms – pemeriksaan berkala untuk tab tidak aktif" },
+  "privacyPermContextMenus": { "message": "contextMenus – opsi menu klik kanan" },
+  "privacyContactTitle": { "message": "Kontak" },
+  "privacyContactText": { "message": "Ada pertanyaan? Hubungi kami di drowzyextension@gmail.com" }
+}

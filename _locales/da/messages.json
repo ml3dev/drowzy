@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Faneblad-suspender og hukommelsesbesparelse"
+  },
+  "extDescription": {
+    "message": "Suspendér automatisk inaktive faner for at spare op til 80 % RAM. Letvægtig, privat, ingen sporing. Faner går aldrig tabt."
+  },
+  "commandSuspendCurrent": {
+    "message": "Suspendér det aktuelle faneblad"
+  },
+  "commandSuspendOthers": {
+    "message": "Suspendér alle andre faneblade"
+  },
+  "commandWakeAll": {
+    "message": "Væk alle suspenderede faneblade"
+  },
+
+  "statSleeping": { "message": "sover" },
+  "statProtected": { "message": "beskyttet" },
+  "statSaved": { "message": "sparet" },
+
+  "suspendOthers": { "message": "Suspendér andre" },
+  "wakeAll": { "message": "Væk alle" },
+
+  "neverSuspendSite": { "message": "Suspendér aldrig dette websted" },
+  "siteWhitelisted": { "message": "Webstedet er hvidlistet (klik for at fjerne)" },
+  "activeWontSuspend": { "message": "Aktivt – vil ikke blive suspenderet" },
+  "loading": { "message": "Indlæser..." },
+
+  "tabsInWindow": { "message": "Faneblade i dette vindue" },
+  "loadingTabs": { "message": "Indlæser faneblade..." },
+  "noTabsFound": { "message": "Ingen faneblade fundet" },
+  "failedToLoad": { "message": "Kunne ikke indlæse. Åbn pop op-vinduet igen for at prøve igen." },
+
+  "badgeActive": { "message": "Aktiv" },
+  "badgeSystem": { "message": "System" },
+  "badgePinned": { "message": "Fastgjort" },
+  "badgeAudio": { "message": "Lyd" },
+  "badgeStarred": { "message": "Stjernemarkeret" },
+  "badgeProtected": { "message": "Beskyttet" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Sessioner" },
+  "sessionNamePlaceholder": { "message": "Sessionsnavn (valgfrit)" },
+  "save": { "message": "Gem" },
+  "emptySessionState": { "message": "Gem din første session for at gendanne faneblade når som helst" },
+  "open": { "message": "Åbn" },
+  "openSessionTitle": { "message": "Åbn faneblade fra denne session" },
+  "deleteSessionTitle": { "message": "Slet session" },
+  "sessionSaved": { "message": "Session gemt!" },
+  "failedToSave": { "message": "Kunne ikke gemme" },
+  "restoredTabs": {
+    "message": "$COUNT$ faneblade gendannet",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Kunne ikke gendanne" },
+  "noSessionsToExport": { "message": "Ingen sessioner at eksportere" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ sessioner kopieret som JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ faneblade",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Statistik" },
+  "statToday": { "message": "I dag" },
+  "statAllTime": { "message": "Alt i alt" },
+  "statRamSaved": { "message": "RAM sparet (ca.)" },
+  "statMemberSince": { "message": "Medlem siden" },
+
+  "settings": { "message": "Indstillinger" },
+  "autoSuspendAfter": { "message": "Suspendér automatisk efter" },
+  "timer5min": { "message": "5 minutter" },
+  "timer10min": { "message": "10 minutter" },
+  "timer15min": { "message": "15 minutter" },
+  "timer30min": { "message": "30 minutter" },
+  "timer1hour": { "message": "1 time" },
+  "timer2hours": { "message": "2 timer" },
+  "timer4hours": { "message": "4 timer" },
+  "timerNever": { "message": "Aldrig" },
+  "protectPinned": { "message": "Beskyt fastgjorte faneblade" },
+  "protectAudio": { "message": "Beskyt faneblade med lyd" },
+  "protectForms": { "message": "Beskyt faneblade med formularer" },
+  "suspendOnStartup": { "message": "Suspendér faneblade ved opstart" },
+  "enableAutoSuspend": { "message": "Aktivér automatisk suspendering" },
+  "markSuspended": { "message": "Markér suspenderede faneblade" },
+  "whitelistedSites": { "message": "Hvidlistede websteder" },
+  "add": { "message": "Tilføj" },
+  "noSitesWhitelisted": { "message": "Ingen hvidlistede websteder" },
+
+  "suspending": { "message": "Suspenderer..." },
+  "done": { "message": "Færdig!" },
+  "waking": { "message": "Vækker..." },
+  "copiedTabs": {
+    "message": "$COUNT$ faneblade kopieret til udklipsholder",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Kunne ikke kopiere" },
+  "copyTabsTitle": { "message": "Kopiér fanebladsliste til udklipsholder" },
+  "copySessionsTitle": { "message": "Kopiér alle sessioner som JSON" },
+  "remove": { "message": "Fjern" },
+
+  "switchToLight": { "message": "Skift til lyst tema" },
+  "switchToDark": { "message": "Skift til mørkt tema" },
+
+  "ctxSuspendThis": { "message": "Suspendér dette faneblad" },
+  "ctxSuspendOthers": { "message": "Suspendér alle andre faneblade" },
+  "ctxNeverSuspend": { "message": "Suspendér aldrig dette websted" },
+
+  "maxSessionsReached": { "message": "Maksimalt 20 sessioner nået. Slet én for at gemme en ny." },
+  "noSaveableTabs": { "message": "Ingen faneblade at gemme i dette vindue." },
+  "sessionNotFound": { "message": "Session ikke fundet." },
+  "noRestorableTabs": { "message": "Ingen faneblade at gendanne i denne session." },
+  "sessionDefaultName": {
+    "message": "Session – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "lige nu" },
+  "minutesAgo": {
+    "message": "$COUNT$ min siden",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ t siden",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "I går" },
+  "daysAgo": {
+    "message": "$COUNT$ d siden",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Velkommen til Drowzy" },
+  "onboardingIntro": { "message": "Drowzy sparer hukommelse ved at sætte inaktive faneblade i dvale. Dine faneblade er altid sikre – vi bruger Chromes native discard-API, så de overlever selv hvis du afinstallerer Drowzy." },
+  "howItWorks": { "message": "Sådan fungerer det" },
+  "featureAutoSuspend": { "message": "<strong>Faneblade inaktive i 30 minutter</strong> suspenderes automatisk" },
+  "featureZeroRam": { "message": "<strong>Suspenderede faneblade bruger nul RAM</strong>, men forbliver i din fanebjælke" },
+  "featureClickToWake": { "message": "<strong>Klik på et suspenderet faneblad</strong> for at vække det øjeblikkeligt" },
+  "featureProtected": { "message": "<strong>Aktive, fastgjorte og lydfaneblade</strong> røres aldrig" },
+  "quickActions": { "message": "Hurtige handlinger" },
+  "actionClickIcon": { "message": "Klik på <strong>Drowzy-ikonet</strong> i værktøjslinjen for at se alle dine faneblade" },
+  "actionAltS": { "message": "Tryk <kbd>Alt+S</kbd> for at suspendere det aktuelle faneblad" },
+  "actionAltShiftS": { "message": "Tryk <kbd>Alt+Shift+S</kbd> for at suspendere alle andre faneblade" },
+  "actionAltW": { "message": "Tryk <kbd>Alt+W</kbd> for at vække alle suspenderede faneblade" },
+  "actionRightClick": { "message": "Højreklik på en side for hurtige suspenderingsmuligheder" },
+  "onboardingCta": { "message": "Drowzy kører allerede. Åbn et par faneblade og prøv det!" },
+  "onboardingBtn": { "message": "Forstået, lad os komme i gang" },
+
+  "privacyTitle": { "message": "Drowzy – Privatlivspolitik" },
+  "privacyUpdated": { "message": "Sidst opdateret: februar 2026" },
+  "privacyShortTitle": { "message": "Den korte version" },
+  "privacyShortText": { "message": "Drowzy indsamler ingen data. Ingen analyse, ingen sporing, ingen eksterne servere. Alt forbliver i din browser." },
+  "privacyStoredTitle": { "message": "Hvad der gemmes" },
+  "privacyStoredText": { "message": "Dine indstillinger (suspenderingstimer, hvidliste, præferencer) gemmes ved hjælp af Chromes indbyggede lagrings-API'er: chrome.storage.sync til indstillinger der følger din Chrome-profil, chrome.storage.local til statistik og gemte sessioner og chrome.storage.session til midlertidige data som faneblads-tidsstempler. Intet af dette sendes til nogen tredjepartsserver." },
+  "privacyPermissionsTitle": { "message": "Tilladelser" },
+  "privacyPermissionsIntro": { "message": "Drowzy bruger disse Chrome-tilladelser:" },
+  "privacyPermTabs": { "message": "tabs – oplistning, suspendering og gendannelse af browserfaneblade" },
+  "privacyPermStorage": { "message": "storage – lokal lagring af dine indstillinger" },
+  "privacyPermAlarms": { "message": "alarms – periodiske tjek for inaktive faneblade" },
+  "privacyPermContextMenus": { "message": "contextMenus – højreklik-menumuligheder" },
+  "privacyContactTitle": { "message": "Kontakt" },
+  "privacyContactText": { "message": "Spørgsmål? Skriv til drowzyextension@gmail.com" }
+}

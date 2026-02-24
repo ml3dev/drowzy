@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Pozastavenie kariet a úspora pamäte"
+  },
+  "extDescription": {
+    "message": "Automatické pozastavenie neaktívnych kariet pre úsporu až 80 % RAM. Ľahký, súkromný, bez sledovania. Karty sa nikdy nestratia."
+  },
+  "commandSuspendCurrent": {
+    "message": "Pozastaviť aktuálnu kartu"
+  },
+  "commandSuspendOthers": {
+    "message": "Pozastaviť všetky ostatné karty"
+  },
+  "commandWakeAll": {
+    "message": "Prebudiť všetky pozastavené karty"
+  },
+
+  "statSleeping": { "message": "spí" },
+  "statProtected": { "message": "chránené" },
+  "statSaved": { "message": "ušetrené" },
+
+  "suspendOthers": { "message": "Pozastaviť ostatné" },
+  "wakeAll": { "message": "Prebudiť všetky" },
+
+  "neverSuspendSite": { "message": "Nikdy nepozastavovať túto stránku" },
+  "siteWhitelisted": { "message": "Stránka je na bielom zozname (kliknite pre odstránenie)" },
+  "activeWontSuspend": { "message": "Aktívna – nebude pozastavená" },
+  "loading": { "message": "Načítava sa..." },
+
+  "tabsInWindow": { "message": "Karty v tomto okne" },
+  "loadingTabs": { "message": "Načítavajú sa karty..." },
+  "noTabsFound": { "message": "Žiadne karty sa nenašli" },
+  "failedToLoad": { "message": "Načítanie zlyhalo. Znovu otvorte popup pre opakovanie." },
+
+  "badgeActive": { "message": "Aktívna" },
+  "badgeSystem": { "message": "Systém" },
+  "badgePinned": { "message": "Pripnutá" },
+  "badgeAudio": { "message": "Audio" },
+  "badgeStarred": { "message": "Obľúbená" },
+  "badgeProtected": { "message": "Chránená" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Relácie" },
+  "sessionNamePlaceholder": { "message": "Názov relácie (voliteľné)" },
+  "save": { "message": "Uložiť" },
+  "emptySessionState": { "message": "Uložte prvú reláciu pre obnovenie kariet kedykoľvek" },
+  "open": { "message": "Otvoriť" },
+  "openSessionTitle": { "message": "Otvoriť karty z tejto relácie" },
+  "deleteSessionTitle": { "message": "Odstrániť reláciu" },
+  "sessionSaved": { "message": "Relácia uložená!" },
+  "failedToSave": { "message": "Uloženie zlyhalo" },
+  "restoredTabs": {
+    "message": "Obnovených kariet: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Obnovenie zlyhalo" },
+  "noSessionsToExport": { "message": "Žiadne relácie na export" },
+  "copiedSessionsJson": {
+    "message": "Skopírovaných relácií ako JSON: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ kariet",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Štatistiky" },
+  "statToday": { "message": "Dnes" },
+  "statAllTime": { "message": "Celkovo" },
+  "statRamSaved": { "message": "Ušetrená RAM (odhad)" },
+  "statMemberSince": { "message": "Členom od" },
+
+  "settings": { "message": "Nastavenia" },
+  "autoSuspendAfter": { "message": "Automatické pozastavenie po" },
+  "timer5min": { "message": "5 minút" },
+  "timer10min": { "message": "10 minút" },
+  "timer15min": { "message": "15 minút" },
+  "timer30min": { "message": "30 minút" },
+  "timer1hour": { "message": "1 hodina" },
+  "timer2hours": { "message": "2 hodiny" },
+  "timer4hours": { "message": "4 hodiny" },
+  "timerNever": { "message": "Nikdy" },
+  "protectPinned": { "message": "Chrániť pripnuté karty" },
+  "protectAudio": { "message": "Chrániť karty s audiom" },
+  "protectForms": { "message": "Chrániť karty s formulármi" },
+  "suspendOnStartup": { "message": "Pozastaviť karty pri spustení" },
+  "enableAutoSuspend": { "message": "Povoliť automatické pozastavenie" },
+  "markSuspended": { "message": "Označiť pozastavené karty" },
+  "whitelistedSites": { "message": "Stránky na bielom zozname" },
+  "add": { "message": "Pridať" },
+  "noSitesWhitelisted": { "message": "Žiadne stránky na bielom zozname" },
+
+  "suspending": { "message": "Pozastavuje sa..." },
+  "done": { "message": "Hotovo!" },
+  "waking": { "message": "Prebúdza sa..." },
+  "copiedTabs": {
+    "message": "Skopírovaných kariet do schránky: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Kopírovanie zlyhalo" },
+  "copyTabsTitle": { "message": "Skopírovať zoznam kariet do schránky" },
+  "copySessionsTitle": { "message": "Skopírovať všetky relácie ako JSON" },
+  "remove": { "message": "Odstrániť" },
+
+  "switchToLight": { "message": "Prepnúť na svetlý režim" },
+  "switchToDark": { "message": "Prepnúť na tmavý režim" },
+
+  "ctxSuspendThis": { "message": "Pozastaviť túto kartu" },
+  "ctxSuspendOthers": { "message": "Pozastaviť všetky ostatné karty" },
+  "ctxNeverSuspend": { "message": "Nikdy nepozastavovať túto stránku" },
+
+  "maxSessionsReached": { "message": "Dosiahnutý limit 20 relácií. Odstráňte jednu pre uloženie novej." },
+  "noSaveableTabs": { "message": "V tomto okne nie sú žiadne karty na uloženie." },
+  "sessionNotFound": { "message": "Relácia sa nenašla." },
+  "noRestorableTabs": { "message": "V tejto relácii nie sú žiadne karty na obnovenie." },
+  "sessionDefaultName": {
+    "message": "Relácia – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "práve teraz" },
+  "minutesAgo": {
+    "message": "pred $COUNT$ min",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "pred $COUNT$ h",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Včera" },
+  "daysAgo": {
+    "message": "pred $COUNT$ d",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Vitajte v Drowzy" },
+  "onboardingIntro": { "message": "Drowzy šetrí pamäť uspávaním neaktívnych kariet. Vaše karty sú vždy v bezpečí – používame natívne API na zahodenie od Chrome, takže prežijú aj keď Drowzy odinštalujete." },
+  "howItWorks": { "message": "Ako to funguje" },
+  "featureAutoSuspend": { "message": "<strong>Karty neaktívne 30 minút</strong> sú automaticky pozastavené" },
+  "featureZeroRam": { "message": "<strong>Pozastavené karty nepoužívajú RAM</strong>, ale zostávajú na lište kariet" },
+  "featureClickToWake": { "message": "<strong>Kliknite na akúkoľvek pozastavenú kartu</strong> pre okamžité prebudenie" },
+  "featureProtected": { "message": "<strong>Aktívne, pripnuté a karty s audiom</strong> nie sú nikdy ovplyvnené" },
+  "quickActions": { "message": "Rýchle akcie" },
+  "actionClickIcon": { "message": "Kliknite na <strong>ikonu Drowzy</strong> na paneli nástrojov pre zobrazenie všetkých kariet" },
+  "actionAltS": { "message": "Stlačte <kbd>Alt+S</kbd> pre pozastavenie aktuálnej karty" },
+  "actionAltShiftS": { "message": "Stlačte <kbd>Alt+Shift+S</kbd> pre pozastavenie všetkých ostatných kariet" },
+  "actionAltW": { "message": "Stlačte <kbd>Alt+W</kbd> pre prebudenie všetkých pozastavených kariet" },
+  "actionRightClick": { "message": "Kliknite pravým tlačidlom na ľubovoľnej stránke pre rýchle možnosti pozastavenia" },
+  "onboardingCta": { "message": "Drowzy už beží. Otvorte niekoľko kariet a vyskúšajte ho!" },
+  "onboardingBtn": { "message": "Rozumiem, poďme na to" },
+
+  "privacyTitle": { "message": "Drowzy – Zásady ochrany osobných údajov" },
+  "privacyUpdated": { "message": "Posledná aktualizácia: február 2026" },
+  "privacyShortTitle": { "message": "Stručne" },
+  "privacyShortText": { "message": "Drowzy nezhromažďuje žiadne údaje. Žiadna analytika, žiadne sledovanie, žiadne externé servery. Všetko zostáva vo vašom prehliadači." },
+  "privacyStoredTitle": { "message": "Čo sa ukladá" },
+  "privacyStoredText": { "message": "Vaše nastavenia (časovač pozastavenia, biely zoznam, predvoľby) sa ukladajú pomocou vstavaných úložných API prehliadača Chrome: chrome.storage.sync pre nastavenia viazané na váš profil Chrome, chrome.storage.local pre štatistiky a uložené relácie a chrome.storage.session pre dočasné údaje ako časové značky kariet. Nič z toho sa neodosiela na žiadny server tretej strany." },
+  "privacyPermissionsTitle": { "message": "Oprávnenia" },
+  "privacyPermissionsIntro": { "message": "Drowzy používa tieto oprávnenia Chrome:" },
+  "privacyPermTabs": { "message": "tabs – zobrazenie, pozastavenie a obnovenie kariet prehliadača" },
+  "privacyPermStorage": { "message": "storage – lokálne ukladanie nastavení" },
+  "privacyPermAlarms": { "message": "alarms – pravidelné kontroly neaktívnych kariet" },
+  "privacyPermContextMenus": { "message": "contextMenus – možnosti v kontextovej ponuke" },
+  "privacyContactTitle": { "message": "Kontakt" },
+  "privacyContactText": { "message": "Otázky? Napíšte na drowzyextension@gmail.com" }
+}

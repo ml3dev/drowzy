@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - ట్యాబ్ సస్పెండర్ & మెమరీ సేవర్"
+  },
+  "extDescription": {
+    "message": "నిష్క్రియ ట్యాబ్‌లను స్వయంచాలకంగా సస్పెండ్ చేసి 80% వరకు RAM ఆదా చేయండి. తేలికైనది, ప్రైవేట్, ట్రాకింగ్ లేదు. ట్యాబ్‌లు ఎప్పటికీ కోల్పోవు."
+  },
+  "commandSuspendCurrent": {
+    "message": "ప్రస్తుత ట్యాబ్‌ను సస్పెండ్ చేయి"
+  },
+  "commandSuspendOthers": {
+    "message": "మిగతా అన్ని ట్యాబ్‌లను సస్పెండ్ చేయి"
+  },
+  "commandWakeAll": {
+    "message": "సస్పెండ్ చేసిన అన్ని ట్యాబ్‌లను మేల్కొల్పు"
+  },
+
+  "statSleeping": { "message": "నిద్రపోతున్నాయి" },
+  "statProtected": { "message": "రక్షించబడ్డాయి" },
+  "statSaved": { "message": "ఆదా చేయబడింది" },
+
+  "suspendOthers": { "message": "మిగతావి సస్పెండ్ చేయి" },
+  "wakeAll": { "message": "అన్నీ మేల్కొల్పు" },
+
+  "neverSuspendSite": { "message": "ఈ సైట్‌ను ఎప్పటికీ సస్పెండ్ చేయకు" },
+  "siteWhitelisted": { "message": "సైట్ వైట్‌లిస్ట్‌లో ఉంది (తొలగించడానికి క్లిక్ చేయండి)" },
+  "activeWontSuspend": { "message": "యాక్టివ్ – సస్పెండ్ చేయబడదు" },
+  "loading": { "message": "లోడ్ అవుతోంది..." },
+
+  "tabsInWindow": { "message": "ఈ విండోలోని ట్యాబ్‌లు" },
+  "loadingTabs": { "message": "ట్యాబ్‌లు లోడ్ అవుతున్నాయి..." },
+  "noTabsFound": { "message": "ట్యాబ్‌లు కనుగొనబడలేదు" },
+  "failedToLoad": { "message": "లోడ్ చేయడం విఫలమైంది. మళ్ళీ ప్రయత్నించడానికి popup తెరవండి." },
+
+  "badgeActive": { "message": "యాక్టివ్" },
+  "badgeSystem": { "message": "సిస్టమ్" },
+  "badgePinned": { "message": "పిన్ చేయబడింది" },
+  "badgeAudio": { "message": "ఆడియో" },
+  "badgeStarred": { "message": "నక్షత్రం గుర్తు" },
+  "badgeProtected": { "message": "రక్షించబడింది" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "సెషన్‌లు" },
+  "sessionNamePlaceholder": { "message": "సెషన్ పేరు (ఐచ్ఛికం)" },
+  "save": { "message": "సేవ్ చేయి" },
+  "emptySessionState": { "message": "ట్యాబ్‌లను ఎప్పుడైనా పునరుద్ధరించడానికి మీ మొదటి సెషన్‌ను సేవ్ చేయండి" },
+  "open": { "message": "తెరువు" },
+  "openSessionTitle": { "message": "ఈ సెషన్ నుండి ట్యాబ్‌లను తెరువు" },
+  "deleteSessionTitle": { "message": "సెషన్ తొలగించు" },
+  "sessionSaved": { "message": "సెషన్ సేవ్ అయింది!" },
+  "failedToSave": { "message": "సేవ్ చేయడం విఫలమైంది" },
+  "restoredTabs": {
+    "message": "$COUNT$ ట్యాబ్‌లు పునరుద్ధరించబడ్డాయి",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "పునరుద్ధరించడం విఫలమైంది" },
+  "noSessionsToExport": { "message": "ఎగుమతి చేయడానికి సెషన్‌లు లేవు" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ సెషన్‌లు JSON గా కాపీ చేయబడ్డాయి",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ ట్యాబ్‌లు",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "గణాంకాలు" },
+  "statToday": { "message": "ఈ రోజు" },
+  "statAllTime": { "message": "మొత్తం" },
+  "statRamSaved": { "message": "ఆదా అయిన RAM (అంచనా)" },
+  "statMemberSince": { "message": "సభ్యుడు ఎప్పటి నుండి" },
+
+  "settings": { "message": "సెట్టింగ్‌లు" },
+  "autoSuspendAfter": { "message": "ఇంత సమయం తర్వాత స్వయంచాలకంగా సస్పెండ్ చేయి" },
+  "timer5min": { "message": "5 నిమిషాలు" },
+  "timer10min": { "message": "10 నిమిషాలు" },
+  "timer15min": { "message": "15 నిమిషాలు" },
+  "timer30min": { "message": "30 నిమిషాలు" },
+  "timer1hour": { "message": "1 గంట" },
+  "timer2hours": { "message": "2 గంటలు" },
+  "timer4hours": { "message": "4 గంటలు" },
+  "timerNever": { "message": "ఎప్పటికీ కాదు" },
+  "protectPinned": { "message": "పిన్ చేసిన ట్యాబ్‌లను రక్షించు" },
+  "protectAudio": { "message": "ఆడియో ట్యాబ్‌లను రక్షించు" },
+  "protectForms": { "message": "ఫారమ్‌లు ఉన్న ట్యాబ్‌లను రక్షించు" },
+  "suspendOnStartup": { "message": "ప్రారంభంలో ట్యాబ్‌లను సస్పెండ్ చేయి" },
+  "enableAutoSuspend": { "message": "స్వయంచాలక సస్పెండ్‌ను ఎనేబుల్ చేయి" },
+  "markSuspended": { "message": "సస్పెండ్ చేసిన ట్యాబ్‌లను గుర్తించు" },
+  "whitelistedSites": { "message": "వైట్‌లిస్ట్ చేసిన సైట్‌లు" },
+  "add": { "message": "జోడించు" },
+  "noSitesWhitelisted": { "message": "వైట్‌లిస్ట్ చేసిన సైట్‌లు లేవు" },
+
+  "suspending": { "message": "సస్పెండ్ చేస్తోంది..." },
+  "done": { "message": "పూర్తయింది!" },
+  "waking": { "message": "మేల్కొలుపుతోంది..." },
+  "copiedTabs": {
+    "message": "$COUNT$ ట్యాబ్‌లు క్లిప్‌బోర్డ్‌కు కాపీ చేయబడ్డాయి",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "కాపీ చేయడం విఫలమైంది" },
+  "copyTabsTitle": { "message": "ట్యాబ్ జాబితాను క్లిప్‌బోర్డ్‌కు కాపీ చేయి" },
+  "copySessionsTitle": { "message": "అన్ని సెషన్‌లను JSON గా కాపీ చేయి" },
+  "remove": { "message": "తొలగించు" },
+
+  "switchToLight": { "message": "లైట్ మోడ్‌కు మారు" },
+  "switchToDark": { "message": "డార్క్ మోడ్‌కు మారు" },
+
+  "ctxSuspendThis": { "message": "ఈ ట్యాబ్‌ను సస్పెండ్ చేయి" },
+  "ctxSuspendOthers": { "message": "మిగతా అన్ని ట్యాబ్‌లను సస్పెండ్ చేయి" },
+  "ctxNeverSuspend": { "message": "ఈ సైట్‌ను ఎప్పటికీ సస్పెండ్ చేయకు" },
+
+  "maxSessionsReached": { "message": "గరిష్టంగా 20 సెషన్‌లు చేరుకున్నారు. కొత్తది సేవ్ చేయడానికి ఒకటి తొలగించండి." },
+  "noSaveableTabs": { "message": "ఈ విండోలో సేవ్ చేయగల ట్యాబ్‌లు లేవు." },
+  "sessionNotFound": { "message": "సెషన్ కనుగొనబడలేదు." },
+  "noRestorableTabs": { "message": "ఈ సెషన్‌లో పునరుద్ధరించగల ట్యాబ్‌లు లేవు." },
+  "sessionDefaultName": {
+    "message": "సెషన్ – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "ఇప్పుడే" },
+  "minutesAgo": {
+    "message": "$COUNT$ నిమిషాల క్రితం",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ గంటల క్రితం",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "నిన్న" },
+  "daysAgo": {
+    "message": "$COUNT$ రోజుల క్రితం",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Drowzyకి స్వాగతం" },
+  "onboardingIntro": { "message": "Drowzy నిష్క్రియ ట్యాబ్‌లను నిద్రపుచ్చడం ద్వారా మెమరీని ఆదా చేస్తుంది. మీ ట్యాబ్‌లు ఎల్లప్పుడూ సురక్షితం – మేము Chrome యొక్క నేటివ్ discard APIని ఉపయోగిస్తాము, కాబట్టి మీరు Drowzyని అన్‌ఇన్‌స్టాల్ చేసినా అవి భద్రంగా ఉంటాయి." },
+  "howItWorks": { "message": "ఇది ఎలా పనిచేస్తుంది" },
+  "featureAutoSuspend": { "message": "<strong>30 నిమిషాలు నిష్క్రియంగా ఉన్న ట్యాబ్‌లు</strong> స్వయంచాలకంగా సస్పెండ్ చేయబడతాయి" },
+  "featureZeroRam": { "message": "<strong>సస్పెండ్ చేసిన ట్యాబ్‌లు RAM వాడవు</strong> కానీ మీ ట్యాబ్ బార్‌లో ఉంటాయి" },
+  "featureClickToWake": { "message": "<strong>సస్పెండ్ చేసిన ఏ ట్యాబ్‌నైనా క్లిక్ చేయండి</strong> వెంటనే మేల్కొల్పడానికి" },
+  "featureProtected": { "message": "<strong>యాక్టివ్, పిన్ చేసిన మరియు ఆడియో ట్యాబ్‌లు</strong> ఎప్పటికీ తాకబడవు" },
+  "quickActions": { "message": "త్వరిత చర్యలు" },
+  "actionClickIcon": { "message": "మీ అన్ని ట్యాబ్‌లను చూడటానికి టూల్‌బార్‌లో <strong>Drowzy చిహ్నాన్ని</strong> క్లిక్ చేయండి" },
+  "actionAltS": { "message": "ప్రస్తుత ట్యాబ్‌ను సస్పెండ్ చేయడానికి <kbd>Alt+S</kbd> నొక్కండి" },
+  "actionAltShiftS": { "message": "మిగతా అన్ని ట్యాబ్‌లను సస్పెండ్ చేయడానికి <kbd>Alt+Shift+S</kbd> నొక్కండి" },
+  "actionAltW": { "message": "సస్పెండ్ చేసిన అన్ని ట్యాబ్‌లను మేల్కొల్పడానికి <kbd>Alt+W</kbd> నొక్కండి" },
+  "actionRightClick": { "message": "త్వరిత సస్పెండ్ ఎంపికల కోసం ఏ పేజీపైనైనా కుడి క్లిక్ చేయండి" },
+  "onboardingCta": { "message": "Drowzy ఇప్పటికే నడుస్తోంది. కొన్ని ట్యాబ్‌లు తెరిచి ప్రయత్నించండి!" },
+  "onboardingBtn": { "message": "అర్థమైంది, మొదలు పెడదాం" },
+
+  "privacyTitle": { "message": "Drowzy – గోప్యతా విధానం" },
+  "privacyUpdated": { "message": "చివరిగా నవీకరించబడింది: ఫిబ్రవరి 2026" },
+  "privacyShortTitle": { "message": "సంక్షిప్త వెర్షన్" },
+  "privacyShortText": { "message": "Drowzy ఎటువంటి డేటాను సేకరించదు. విశ్లేషణలు లేవు, ట్రాకింగ్ లేదు, బాహ్య సర్వర్లు లేవు. అంతా మీ బ్రౌజర్‌లో ఉంటుంది." },
+  "privacyStoredTitle": { "message": "ఏమి నిల్వ చేయబడుతుంది" },
+  "privacyStoredText": { "message": "మీ సెట్టింగ్‌లు (సస్పెండ్ టైమర్, వైట్‌లిస్ట్, ప్రాధాన్యతలు) Chrome యొక్క అంతర్నిర్మిత స్టోరేజ్ APIలను ఉపయోగించి సేవ్ చేయబడతాయి: మీ Chrome ప్రొఫైల్‌ను అనుసరించే సెట్టింగ్‌లకు chrome.storage.sync, గణాంకాలు మరియు సేవ్ చేసిన సెషన్‌లకు chrome.storage.local, మరియు ట్యాబ్ టైమ్‌స్టాంప్‌ల వంటి తాత్కాలిక డేటాకు chrome.storage.session. వీటిలో ఏదీ మూడవ పక్ష సర్వర్‌కు పంపబడదు." },
+  "privacyPermissionsTitle": { "message": "అనుమతులు" },
+  "privacyPermissionsIntro": { "message": "Drowzy ఈ Chrome అనుమతులను ఉపయోగిస్తుంది:" },
+  "privacyPermTabs": { "message": "tabs – బ్రౌజర్ ట్యాబ్‌లను జాబితా చేయడం, సస్పెండ్ చేయడం మరియు పునరుద్ధరించడం" },
+  "privacyPermStorage": { "message": "storage – మీ సెట్టింగ్‌లను స్థానికంగా సేవ్ చేయడం" },
+  "privacyPermAlarms": { "message": "alarms – నిష్క్రియ ట్యాబ్‌ల కోసం ఆవర్తన తనిఖీలు" },
+  "privacyPermContextMenus": { "message": "contextMenus – కుడి క్లిక్ మెనూ ఎంపికలు" },
+  "privacyContactTitle": { "message": "సంప్రదింపు" },
+  "privacyContactText": { "message": "ప్రశ్నలు? drowzyextension@gmail.com వద్ద సంప్రదించండి" }
+}

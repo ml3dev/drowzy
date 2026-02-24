@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Suspensor de abas e economizador de memória"
+  },
+  "extDescription": {
+    "message": "Suspenda automaticamente abas inativas para economizar até 80% de RAM. Leve, privado, sem rastreamento. As abas nunca são perdidas."
+  },
+  "commandSuspendCurrent": {
+    "message": "Suspender aba atual"
+  },
+  "commandSuspendOthers": {
+    "message": "Suspender todas as outras abas"
+  },
+  "commandWakeAll": {
+    "message": "Despertar todas as abas suspensas"
+  },
+
+  "statSleeping": { "message": "dormindo" },
+  "statProtected": { "message": "protegidas" },
+  "statSaved": { "message": "economizado" },
+
+  "suspendOthers": { "message": "Suspender outras" },
+  "wakeAll": { "message": "Despertar todas" },
+
+  "neverSuspendSite": { "message": "Nunca suspender este site" },
+  "siteWhitelisted": { "message": "Site na lista de permissões (clique para remover)" },
+  "activeWontSuspend": { "message": "Ativa – não será suspensa" },
+  "loading": { "message": "Carregando..." },
+
+  "tabsInWindow": { "message": "Abas nesta janela" },
+  "loadingTabs": { "message": "Carregando abas..." },
+  "noTabsFound": { "message": "Nenhuma aba encontrada" },
+  "failedToLoad": { "message": "Falha ao carregar. Reabra o popup para tentar novamente." },
+
+  "badgeActive": { "message": "Ativa" },
+  "badgeSystem": { "message": "Sistema" },
+  "badgePinned": { "message": "Fixada" },
+  "badgeAudio": { "message": "Áudio" },
+  "badgeStarred": { "message": "Favorita" },
+  "badgeProtected": { "message": "Protegida" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Sessões" },
+  "sessionNamePlaceholder": { "message": "Nome da sessão (opcional)" },
+  "save": { "message": "Salvar" },
+  "emptySessionState": { "message": "Salve sua primeira sessão para restaurar abas a qualquer momento" },
+  "open": { "message": "Abrir" },
+  "openSessionTitle": { "message": "Abrir abas desta sessão" },
+  "deleteSessionTitle": { "message": "Excluir sessão" },
+  "sessionSaved": { "message": "Sessão salva!" },
+  "failedToSave": { "message": "Falha ao salvar" },
+  "restoredTabs": {
+    "message": "$COUNT$ abas restauradas",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Falha ao restaurar" },
+  "noSessionsToExport": { "message": "Nenhuma sessão para exportar" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ sessões copiadas como JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ abas",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Estatísticas" },
+  "statToday": { "message": "Hoje" },
+  "statAllTime": { "message": "Total" },
+  "statRamSaved": { "message": "RAM economizada (estimativa)" },
+  "statMemberSince": { "message": "Membro desde" },
+
+  "settings": { "message": "Configurações" },
+  "autoSuspendAfter": { "message": "Suspender automaticamente após" },
+  "timer5min": { "message": "5 minutos" },
+  "timer10min": { "message": "10 minutos" },
+  "timer15min": { "message": "15 minutos" },
+  "timer30min": { "message": "30 minutos" },
+  "timer1hour": { "message": "1 hora" },
+  "timer2hours": { "message": "2 horas" },
+  "timer4hours": { "message": "4 horas" },
+  "timerNever": { "message": "Nunca" },
+  "protectPinned": { "message": "Proteger abas fixadas" },
+  "protectAudio": { "message": "Proteger abas com áudio" },
+  "protectForms": { "message": "Proteger abas com formulários" },
+  "suspendOnStartup": { "message": "Suspender abas na inicialização" },
+  "enableAutoSuspend": { "message": "Ativar suspensão automática" },
+  "markSuspended": { "message": "Marcar abas suspensas" },
+  "whitelistedSites": { "message": "Sites na lista de permissões" },
+  "add": { "message": "Adicionar" },
+  "noSitesWhitelisted": { "message": "Nenhum site na lista de permissões" },
+
+  "suspending": { "message": "Suspendendo..." },
+  "done": { "message": "Pronto!" },
+  "waking": { "message": "Despertando..." },
+  "copiedTabs": {
+    "message": "$COUNT$ abas copiadas para a área de transferência",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Falha ao copiar" },
+  "copyTabsTitle": { "message": "Copiar lista de abas para a área de transferência" },
+  "copySessionsTitle": { "message": "Copiar todas as sessões como JSON" },
+  "remove": { "message": "Remover" },
+
+  "switchToLight": { "message": "Mudar para modo claro" },
+  "switchToDark": { "message": "Mudar para modo escuro" },
+
+  "ctxSuspendThis": { "message": "Suspender esta aba" },
+  "ctxSuspendOthers": { "message": "Suspender todas as outras abas" },
+  "ctxNeverSuspend": { "message": "Nunca suspender este site" },
+
+  "maxSessionsReached": { "message": "Máximo de 20 sessões atingido. Exclua uma para salvar uma nova." },
+  "noSaveableTabs": { "message": "Nenhuma aba salvável nesta janela." },
+  "sessionNotFound": { "message": "Sessão não encontrada." },
+  "noRestorableTabs": { "message": "Nenhuma aba restaurável nesta sessão." },
+  "sessionDefaultName": {
+    "message": "Sessão – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "agora mesmo" },
+  "minutesAgo": {
+    "message": "$COUNT$ min atrás",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$h atrás",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Ontem" },
+  "daysAgo": {
+    "message": "$COUNT$d atrás",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Bem-vindo ao Drowzy" },
+  "onboardingIntro": { "message": "O Drowzy economiza memória colocando abas inativas para dormir. Suas abas estão sempre seguras – usamos a API nativa de descarte do Chrome, então elas sobrevivem mesmo se você desinstalar o Drowzy." },
+  "howItWorks": { "message": "Como funciona" },
+  "featureAutoSuspend": { "message": "<strong>Abas inativas por 30 minutos</strong> são suspensas automaticamente" },
+  "featureZeroRam": { "message": "<strong>Abas suspensas usam zero RAM</strong>, mas permanecem na barra de abas" },
+  "featureClickToWake": { "message": "<strong>Clique em qualquer aba suspensa</strong> para despertá-la instantaneamente" },
+  "featureProtected": { "message": "<strong>Abas ativas, fixadas e com áudio</strong> nunca são tocadas" },
+  "quickActions": { "message": "Ações rápidas" },
+  "actionClickIcon": { "message": "Clique no <strong>ícone do Drowzy</strong> na barra de ferramentas para ver todas as suas abas" },
+  "actionAltS": { "message": "Pressione <kbd>Alt+S</kbd> para suspender a aba atual" },
+  "actionAltShiftS": { "message": "Pressione <kbd>Alt+Shift+S</kbd> para suspender todas as outras abas" },
+  "actionAltW": { "message": "Pressione <kbd>Alt+W</kbd> para despertar todas as abas suspensas" },
+  "actionRightClick": { "message": "Clique com o botão direito em qualquer página para opções rápidas de suspensão" },
+  "onboardingCta": { "message": "O Drowzy já está funcionando. Abra algumas abas e experimente!" },
+  "onboardingBtn": { "message": "Entendi, vamos lá" },
+
+  "privacyTitle": { "message": "Drowzy – Política de Privacidade" },
+  "privacyUpdated": { "message": "Última atualização: fevereiro de 2026" },
+  "privacyShortTitle": { "message": "A versão resumida" },
+  "privacyShortText": { "message": "O Drowzy não coleta nenhum dado. Sem analytics, sem rastreamento, sem servidores externos. Tudo permanece no seu navegador." },
+  "privacyStoredTitle": { "message": "O que é armazenado" },
+  "privacyStoredText": { "message": "Suas configurações (timer de suspensão, lista de permissões, preferências) são salvas usando as APIs de armazenamento integradas do Chrome: chrome.storage.sync para configurações que acompanham seu perfil do Chrome, chrome.storage.local para estatísticas e sessões salvas, e chrome.storage.session para dados temporários como timestamps de abas. Nada disso é enviado para servidores de terceiros." },
+  "privacyPermissionsTitle": { "message": "Permissões" },
+  "privacyPermissionsIntro": { "message": "O Drowzy usa estas permissões do Chrome:" },
+  "privacyPermTabs": { "message": "tabs – listar, suspender e restaurar abas do navegador" },
+  "privacyPermStorage": { "message": "storage – salvar suas configurações localmente" },
+  "privacyPermAlarms": { "message": "alarms – verificações periódicas de abas inativas" },
+  "privacyPermContextMenus": { "message": "contextMenus – opções do menu de contexto" },
+  "privacyContactTitle": { "message": "Contato" },
+  "privacyContactText": { "message": "Dúvidas? Entre em contato pelo drowzyextension@gmail.com" }
+}

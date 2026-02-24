@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Welcome to Drowzy</title>
+  <style>
+    :root {
+      --bg-base: #0f0b1a;
+      --bg-surface: #1a1528;
+      --bg-elevated: #241e35;
+      --color-text: #e8e2f4;
+      --color-text-secondary: #9b8fad;
+      --color-text-tertiary: #6b5f7e;
+      --color-accent: #a78bfa;
+      --color-accent-hover: #c4b5fd;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --transition-default: 200ms ease;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg-base);
+      color: var(--color-text);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 48px 20px;
+    }
+    .container {
+      max-width: 560px;
+      width: 100%;
+      animation: fadeUp 0.4s ease;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .logo svg { flex-shrink: 0; color: var(--color-accent); }
+    .logo-text {
+      font-size: 32px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h2 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-text-tertiary);
+      margin: 36px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-weight: 600;
+    }
+    .intro {
+      font-size: 16px;
+      color: var(--color-text-secondary);
+      margin-bottom: 8px;
+    }
+    .features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      color: var(--color-text-secondary);
+    }
+    .features .feat-icon {
+      flex-shrink: 0;
+      width: 28px;
+      display: flex;
+      justify-content: center;
+      color: var(--color-accent);
+      padding-top: 2px;
+    }
+    .features strong { color: var(--color-text); }
+    .shortcuts {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .shortcuts li {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .li-dot {
+      color: var(--color-accent);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    kbd {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1px 6px;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      color: var(--color-accent);
+    }
+    .cta-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .cta-section p {
+      color: var(--color-text-tertiary);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--color-accent);
+      color: var(--bg-base);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 32px;
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background var(--transition-default);
+    }
+    .cta-btn:hover { background: var(--color-accent-hover); }
+    .cta-btn:active { transform: scale(0.98); }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg-base: #f8f6fb;
+        --bg-surface: #ffffff;
+        --bg-elevated: #f0edf5;
+        --color-text: #1a1525;
+        --color-text-secondary: #5c5470;
+        --color-text-tertiary: #8a819c;
+        --color-accent: #7c3aed;
+        --color-accent-hover: #6d28d9;
+        --border-subtle: rgba(0, 0, 0, 0.08);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" fill="currentColor" opacity="0.9"/>
+      </svg>
+      <span class="logo-text">Drowzy</span>
+    </div>
+
+    <p class="intro" data-i18n-html="onboardingIntro">Drowzy saves memory by putting inactive tabs to sleep. Your tabs are always safe -- we use Chrome's native discard API, so they survive even if you uninstall Drowzy.</p>
+
+    <h2 data-i18n="howItWorks">How it works</h2>
+    <ul class="features">
+      <li>
+        <span class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </span>
+        <span data-i18n-html="featureAutoSuspend"><strong>Tabs idle for 30 minutes</strong> are automatically suspended</span>
+      </li>
+      <li>
+        <span class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </span>
+        <span data-i18n-html="featureZeroRam"><strong>Suspended tabs use zero RAM</strong> but stay in your tab bar</span>
+      </li>
+      <li>
+        <span class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        </span>
+        <span data-i18n-html="featureClickToWake"><strong>Click any suspended tab</strong> to instantly wake it up</span>
+      </li>
+      <li>
+        <span class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        </span>
+        <span data-i18n-html="featureProtected"><strong>Active, pinned, and audio tabs</strong> are never touched</span>
+      </li>
+    </ul>
+
+    <h2 data-i18n="quickActions">Quick actions</h2>
+    <ul class="shortcuts">
+      <li><span class="li-dot">&#x2022;</span><span data-i18n-html="actionClickIcon">Click the <strong>Drowzy icon</strong> in the toolbar to see all your tabs</span></li>
+      <li><span class="li-dot">&#x2022;</span><span data-i18n-html="actionAltS">Press <kbd>Alt+S</kbd> to suspend the current tab</span></li>
+      <li><span class="li-dot">&#x2022;</span><span data-i18n-html="actionAltShiftS">Press <kbd>Alt+Shift+S</kbd> to suspend all other tabs</span></li>
+      <li><span class="li-dot">&#x2022;</span><span data-i18n-html="actionAltW">Press <kbd>Alt+W</kbd> to wake all suspended tabs</span></li>
+      <li><span class="li-dot">&#x2022;</span><span data-i18n-html="actionRightClick">Right-click on any page for quick suspend options</span></li>
+    </ul>
+
+    <div class="cta-section">
+      <p data-i18n="onboardingCta">Drowzy is already running. Open a few tabs and try it out!</p>
+      <button class="cta-btn" id="btnClose" data-i18n="onboardingBtn">Got it, let's go</button>
+    </div>
+  </div>
+
+  <script src="onboarding.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Суспендовање картица и уштеда меморије"
+  },
+  "extDescription": {
+    "message": "Аутоматско суспендовање неактивних картица ради уштеде до 80% RAM. Лаган, приватан, без праћења. Картице се никада не губе."
+  },
+  "commandSuspendCurrent": {
+    "message": "Суспендуј тренутну картицу"
+  },
+  "commandSuspendOthers": {
+    "message": "Суспендуј све остале картице"
+  },
+  "commandWakeAll": {
+    "message": "Пробуди све суспендоване картице"
+  },
+
+  "statSleeping": { "message": "спавају" },
+  "statProtected": { "message": "заштићене" },
+  "statSaved": { "message": "уштеђено" },
+
+  "suspendOthers": { "message": "Суспендуј остале" },
+  "wakeAll": { "message": "Пробуди све" },
+
+  "neverSuspendSite": { "message": "Никад не суспендуј овај сајт" },
+  "siteWhitelisted": { "message": "Сајт је на белој листи (кликните за уклањање)" },
+  "activeWontSuspend": { "message": "Активна – неће бити суспендована" },
+  "loading": { "message": "Учитавање..." },
+
+  "tabsInWindow": { "message": "Картице у овом прозору" },
+  "loadingTabs": { "message": "Учитавање картица..." },
+  "noTabsFound": { "message": "Нису пронађене картице" },
+  "failedToLoad": { "message": "Учитавање није успело. Поново отворите popup за покушај." },
+
+  "badgeActive": { "message": "Активна" },
+  "badgeSystem": { "message": "Системска" },
+  "badgePinned": { "message": "Закачена" },
+  "badgeAudio": { "message": "Аудио" },
+  "badgeStarred": { "message": "Означена" },
+  "badgeProtected": { "message": "Заштићена" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Сесије" },
+  "sessionNamePlaceholder": { "message": "Назив сесије (опционо)" },
+  "save": { "message": "Сачувај" },
+  "emptySessionState": { "message": "Сачувајте прву сесију да бисте обновили картице било кад" },
+  "open": { "message": "Отвори" },
+  "openSessionTitle": { "message": "Отвори картице из ове сесије" },
+  "deleteSessionTitle": { "message": "Обриши сесију" },
+  "sessionSaved": { "message": "Сесија сачувана!" },
+  "failedToSave": { "message": "Чување није успело" },
+  "restoredTabs": {
+    "message": "Обновљено картица: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Обнављање није успело" },
+  "noSessionsToExport": { "message": "Нема сесија за извоз" },
+  "copiedSessionsJson": {
+    "message": "Копирано сесија као JSON: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ картица",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Статистика" },
+  "statToday": { "message": "Данас" },
+  "statAllTime": { "message": "Укупно" },
+  "statRamSaved": { "message": "Уштеђена RAM (процена)" },
+  "statMemberSince": { "message": "Члан од" },
+
+  "settings": { "message": "Подешавања" },
+  "autoSuspendAfter": { "message": "Аутоматско суспендовање после" },
+  "timer5min": { "message": "5 минута" },
+  "timer10min": { "message": "10 минута" },
+  "timer15min": { "message": "15 минута" },
+  "timer30min": { "message": "30 минута" },
+  "timer1hour": { "message": "1 сат" },
+  "timer2hours": { "message": "2 сата" },
+  "timer4hours": { "message": "4 сата" },
+  "timerNever": { "message": "Никад" },
+  "protectPinned": { "message": "Заштити закачене картице" },
+  "protectAudio": { "message": "Заштити картице са звуком" },
+  "protectForms": { "message": "Заштити картице са формуларима" },
+  "suspendOnStartup": { "message": "Суспендуј картице при покретању" },
+  "enableAutoSuspend": { "message": "Омогући аутоматско суспендовање" },
+  "markSuspended": { "message": "Означи суспендоване картице" },
+  "whitelistedSites": { "message": "Сајтови на белој листи" },
+  "add": { "message": "Додај" },
+  "noSitesWhitelisted": { "message": "Нема сајтова на белој листи" },
+
+  "suspending": { "message": "Суспендовање..." },
+  "done": { "message": "Готово!" },
+  "waking": { "message": "Буђење..." },
+  "copiedTabs": {
+    "message": "Копирано картица у clipboard: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Копирање није успело" },
+  "copyTabsTitle": { "message": "Копирај листу картица у clipboard" },
+  "copySessionsTitle": { "message": "Копирај све сесије као JSON" },
+  "remove": { "message": "Уклони" },
+
+  "switchToLight": { "message": "Пребаци на светли режим" },
+  "switchToDark": { "message": "Пребаци на тамни режим" },
+
+  "ctxSuspendThis": { "message": "Суспендуј ову картицу" },
+  "ctxSuspendOthers": { "message": "Суспендуј све остале картице" },
+  "ctxNeverSuspend": { "message": "Никад не суспендуј овај сајт" },
+
+  "maxSessionsReached": { "message": "Достигнут максимум од 20 сесија. Обришите једну да бисте сачували нову." },
+  "noSaveableTabs": { "message": "Нема картица за чување у овом прозору." },
+  "sessionNotFound": { "message": "Сесија није пронађена." },
+  "noRestorableTabs": { "message": "Нема картица за обнављање у овој сесији." },
+  "sessionDefaultName": {
+    "message": "Сесија – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "управо сад" },
+  "minutesAgo": {
+    "message": "пре $COUNT$ мин",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "пре $COUNT$ с",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Јуче" },
+  "daysAgo": {
+    "message": "пре $COUNT$ д",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Добродошли у Drowzy" },
+  "onboardingIntro": { "message": "Drowzy штеди меморију стављањем неактивних картица у стање спавања. Ваше картице су увек безбедне – користимо Chromov изворни API за одбацивање, тако да преживљавају чак и ако деинсталирате Drowzy." },
+  "howItWorks": { "message": "Како функционише" },
+  "featureAutoSuspend": { "message": "<strong>Картице неактивне 30 минута</strong> се аутоматски суспендују" },
+  "featureZeroRam": { "message": "<strong>Суспендоване картице не користе RAM</strong> али остају у траци картица" },
+  "featureClickToWake": { "message": "<strong>Кликните на било коју суспендовану картицу</strong> да је одмах пробудите" },
+  "featureProtected": { "message": "<strong>Активне, закачене и картице са звуком</strong> се никад не дирају" },
+  "quickActions": { "message": "Брзе радње" },
+  "actionClickIcon": { "message": "Кликните на <strong>иконицу Drowzy</strong> на траци са алаткама да видите све картице" },
+  "actionAltS": { "message": "Притисните <kbd>Alt+S</kbd> да суспендујете тренутну картицу" },
+  "actionAltShiftS": { "message": "Притисните <kbd>Alt+Shift+S</kbd> да суспендујете све остале картице" },
+  "actionAltW": { "message": "Притисните <kbd>Alt+W</kbd> да пробудите све суспендоване картице" },
+  "actionRightClick": { "message": "Десни клик на било коју страницу за брзе опције суспендовања" },
+  "onboardingCta": { "message": "Drowzy већ ради. Отворите неколико картица и испробајте!" },
+  "onboardingBtn": { "message": "Разумем, идемо" },
+
+  "privacyTitle": { "message": "Drowzy – Политика приватности" },
+  "privacyUpdated": { "message": "Последње ажурирање: фебруар 2026" },
+  "privacyShortTitle": { "message": "Укратко" },
+  "privacyShortText": { "message": "Drowzy не прикупља никакве податке. Без аналитике, без праћења, без спољних сервера. Све остаје у вашем прегледачу." },
+  "privacyStoredTitle": { "message": "Шта се чува" },
+  "privacyStoredText": { "message": "Ваша подешавања (тајмер суспендовања, бела листа, преференце) се чувају помоћу уграђених API-ја за складиштење Chrome-а: chrome.storage.sync за подешавања која прате ваш Chrome профил, chrome.storage.local за статистику и сачуване сесије и chrome.storage.session за привремене податке попут временских ознака картица. Ништа од тога се не шаље ни на један сервер треће стране." },
+  "privacyPermissionsTitle": { "message": "Дозволе" },
+  "privacyPermissionsIntro": { "message": "Drowzy користи ове Chrome дозволе:" },
+  "privacyPermTabs": { "message": "tabs – приказ, суспендовање и обнављање картица прегледача" },
+  "privacyPermStorage": { "message": "storage – локално чување подешавања" },
+  "privacyPermAlarms": { "message": "alarms – периодичне провере неактивних картица" },
+  "privacyPermContextMenus": { "message": "contextMenus – опције у контекстном менију" },
+  "privacyContactTitle": { "message": "Контакт" },
+  "privacyContactText": { "message": "Питања? Пишите на drowzyextension@gmail.com" }
+}

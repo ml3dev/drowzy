@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Välilehtien keskeyttäjä ja muistinsäästäjä"
+  },
+  "extDescription": {
+    "message": "Keskeytä käyttämättömät välilehdet automaattisesti ja säästä jopa 80 % RAM-muistia. Kevyt, yksityinen, ei seurantaa. Välilehdet eivät koskaan katoa."
+  },
+  "commandSuspendCurrent": {
+    "message": "Keskeytä nykyinen välilehti"
+  },
+  "commandSuspendOthers": {
+    "message": "Keskeytä kaikki muut välilehdet"
+  },
+  "commandWakeAll": {
+    "message": "Herätä kaikki keskeytetyt välilehdet"
+  },
+
+  "statSleeping": { "message": "nukkuu" },
+  "statProtected": { "message": "suojattu" },
+  "statSaved": { "message": "säästetty" },
+
+  "suspendOthers": { "message": "Keskeytä muut" },
+  "wakeAll": { "message": "Herätä kaikki" },
+
+  "neverSuspendSite": { "message": "Älä koskaan keskeytä tätä sivustoa" },
+  "siteWhitelisted": { "message": "Sivusto on sallittujen listalla (poista napsauttamalla)" },
+  "activeWontSuspend": { "message": "Aktiivinen – ei keskeytetä" },
+  "loading": { "message": "Ladataan..." },
+
+  "tabsInWindow": { "message": "Tämän ikkunan välilehdet" },
+  "loadingTabs": { "message": "Ladataan välilehtiä..." },
+  "noTabsFound": { "message": "Välilehtiä ei löytynyt" },
+  "failedToLoad": { "message": "Lataus epäonnistui. Avaa ponnahdusikkuna uudelleen." },
+
+  "badgeActive": { "message": "Aktiivinen" },
+  "badgeSystem": { "message": "Järjestelmä" },
+  "badgePinned": { "message": "Kiinnitetty" },
+  "badgeAudio": { "message": "Ääni" },
+  "badgeStarred": { "message": "Tähdellä" },
+  "badgeProtected": { "message": "Suojattu" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Istunnot" },
+  "sessionNamePlaceholder": { "message": "Istunnon nimi (valinnainen)" },
+  "save": { "message": "Tallenna" },
+  "emptySessionState": { "message": "Tallenna ensimmäinen istuntosi palauttaaksesi välilehdet milloin tahansa" },
+  "open": { "message": "Avaa" },
+  "openSessionTitle": { "message": "Avaa tämän istunnon välilehdet" },
+  "deleteSessionTitle": { "message": "Poista istunto" },
+  "sessionSaved": { "message": "Istunto tallennettu!" },
+  "failedToSave": { "message": "Tallennus epäonnistui" },
+  "restoredTabs": {
+    "message": "$COUNT$ välilehteä palautettu",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Palautus epäonnistui" },
+  "noSessionsToExport": { "message": "Ei istuntoja vietäväksi" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ istuntoa kopioitu JSON-muodossa",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ välilehteä",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Tilastot" },
+  "statToday": { "message": "Tänään" },
+  "statAllTime": { "message": "Kaikkien aikojen" },
+  "statRamSaved": { "message": "Säästetty RAM (arvio)" },
+  "statMemberSince": { "message": "Jäsen alkaen" },
+
+  "settings": { "message": "Asetukset" },
+  "autoSuspendAfter": { "message": "Automaattinen keskeytys jälkeen" },
+  "timer5min": { "message": "5 minuuttia" },
+  "timer10min": { "message": "10 minuuttia" },
+  "timer15min": { "message": "15 minuuttia" },
+  "timer30min": { "message": "30 minuuttia" },
+  "timer1hour": { "message": "1 tunti" },
+  "timer2hours": { "message": "2 tuntia" },
+  "timer4hours": { "message": "4 tuntia" },
+  "timerNever": { "message": "Ei koskaan" },
+  "protectPinned": { "message": "Suojaa kiinnitetyt välilehdet" },
+  "protectAudio": { "message": "Suojaa ääntä toistavat välilehdet" },
+  "protectForms": { "message": "Suojaa lomakkeita sisältävät välilehdet" },
+  "suspendOnStartup": { "message": "Keskeytä välilehdet käynnistyksen yhteydessä" },
+  "enableAutoSuspend": { "message": "Ota automaattinen keskeytys käyttöön" },
+  "markSuspended": { "message": "Merkitse keskeytetyt välilehdet" },
+  "whitelistedSites": { "message": "Sallitut sivustot" },
+  "add": { "message": "Lisää" },
+  "noSitesWhitelisted": { "message": "Ei sallittuja sivustoja" },
+
+  "suspending": { "message": "Keskeytetään..." },
+  "done": { "message": "Valmis!" },
+  "waking": { "message": "Herätetään..." },
+  "copiedTabs": {
+    "message": "$COUNT$ välilehteä kopioitu leikepöydälle",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Kopiointi epäonnistui" },
+  "copyTabsTitle": { "message": "Kopioi välilehtiluettelo leikepöydälle" },
+  "copySessionsTitle": { "message": "Kopioi kaikki istunnot JSON-muodossa" },
+  "remove": { "message": "Poista" },
+
+  "switchToLight": { "message": "Vaihda vaaleaan tilaan" },
+  "switchToDark": { "message": "Vaihda tummaan tilaan" },
+
+  "ctxSuspendThis": { "message": "Keskeytä tämä välilehti" },
+  "ctxSuspendOthers": { "message": "Keskeytä kaikki muut välilehdet" },
+  "ctxNeverSuspend": { "message": "Älä koskaan keskeytä tätä sivustoa" },
+
+  "maxSessionsReached": { "message": "Enintään 20 istuntoa saavutettu. Poista yksi tallentaaksesi uuden." },
+  "noSaveableTabs": { "message": "Tässä ikkunassa ei ole tallennettavia välilehtiä." },
+  "sessionNotFound": { "message": "Istuntoa ei löytynyt." },
+  "noRestorableTabs": { "message": "Tässä istunnossa ei ole palautettavia välilehtiä." },
+  "sessionDefaultName": {
+    "message": "Istunto – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "juuri nyt" },
+  "minutesAgo": {
+    "message": "$COUNT$ min sitten",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ t sitten",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Eilen" },
+  "daysAgo": {
+    "message": "$COUNT$ pv sitten",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Tervetuloa Drowzyyn" },
+  "onboardingIntro": { "message": "Drowzy säästää muistia laittamalla käyttämättömät välilehdet nukkumaan. Välilehtesi ovat aina turvassa – käytämme Chromen natiivihylkäys-API:a, joten ne säilyvät vaikka poistaisit Drowzyn." },
+  "howItWorks": { "message": "Miten se toimii" },
+  "featureAutoSuspend": { "message": "<strong>30 minuuttia käyttämättömät välilehdet</strong> keskeytetään automaattisesti" },
+  "featureZeroRam": { "message": "<strong>Keskeytetyt välilehdet eivät käytä RAM-muistia</strong> mutta pysyvät välilehtipalkissa" },
+  "featureClickToWake": { "message": "<strong>Napsauta mitä tahansa keskeytettyä välilehteä</strong> herättääksesi sen heti" },
+  "featureProtected": { "message": "<strong>Aktiivisia, kiinnitettyjä ja ääntä toistavia välilehtiä</strong> ei kosketa koskaan" },
+  "quickActions": { "message": "Pikatoiminnot" },
+  "actionClickIcon": { "message": "Napsauta työkalupalkin <strong>Drowzy-kuvaketta</strong> nähdäksesi kaikki välilehtesi" },
+  "actionAltS": { "message": "Paina <kbd>Alt+S</kbd> keskeyttääksesi nykyisen välilehden" },
+  "actionAltShiftS": { "message": "Paina <kbd>Alt+Shift+S</kbd> keskeyttääksesi kaikki muut välilehdet" },
+  "actionAltW": { "message": "Paina <kbd>Alt+W</kbd> herättääksesi kaikki keskeytetyt välilehdet" },
+  "actionRightClick": { "message": "Napsauta hiiren oikealla painikkeella mitä tahansa sivua pikavalintoja varten" },
+  "onboardingCta": { "message": "Drowzy on jo käynnissä. Avaa muutama välilehti ja kokeile!" },
+  "onboardingBtn": { "message": "Selvä, mennään" },
+
+  "privacyTitle": { "message": "Drowzy – Tietosuojakäytäntö" },
+  "privacyUpdated": { "message": "Viimeksi päivitetty: helmikuu 2026" },
+  "privacyShortTitle": { "message": "Lyhyt versio" },
+  "privacyShortText": { "message": "Drowzy ei kerää mitään tietoja. Ei analytiikkaa, ei seurantaa, ei ulkoisia palvelimia. Kaikki pysyy selaimessasi." },
+  "privacyStoredTitle": { "message": "Mitä tallennetaan" },
+  "privacyStoredText": { "message": "Asetuksesi (keskeytysajastin, sallittujen lista, asetukset) tallennetaan Chromen sisäänrakennetuilla tallennusrajapinnoilla: chrome.storage.sync Chrome-profiiliasi seuraavien asetusten osalta, chrome.storage.local tilastoille ja tallennetuille istunnoille sekä chrome.storage.session väliaikaisille tiedoille kuten välilehtien aikaleimoille. Mitään näistä ei lähetetä kolmannen osapuolen palvelimelle." },
+  "privacyPermissionsTitle": { "message": "Käyttöoikeudet" },
+  "privacyPermissionsIntro": { "message": "Drowzy käyttää näitä Chromen käyttöoikeuksia:" },
+  "privacyPermTabs": { "message": "tabs – selaimen välilehtien listaus, keskeytys ja palautus" },
+  "privacyPermStorage": { "message": "storage – asetusten paikallinen tallennus" },
+  "privacyPermAlarms": { "message": "alarms – säännölliset tarkistukset käyttämättömille välilehdille" },
+  "privacyPermContextMenus": { "message": "contextMenus – hiiren oikean painikkeen valikkovaihtoehdot" },
+  "privacyContactTitle": { "message": "Yhteystiedot" },
+  "privacyContactText": { "message": "Kysyttävää? Ota yhteyttä osoitteessa drowzyextension@gmail.com" }
+}

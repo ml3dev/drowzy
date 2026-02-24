@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Fane-suspenderer og minnesparer"
+  },
+  "extDescription": {
+    "message": "Suspender inaktive faner automatisk for å spare opptil 80% RAM. Lettvektig, privat, ingen sporing. Faner går aldri tapt."
+  },
+  "commandSuspendCurrent": {
+    "message": "Suspender gjeldende fane"
+  },
+  "commandSuspendOthers": {
+    "message": "Suspender alle andre faner"
+  },
+  "commandWakeAll": {
+    "message": "Vekk alle suspenderte faner"
+  },
+
+  "statSleeping": { "message": "sover" },
+  "statProtected": { "message": "beskyttet" },
+  "statSaved": { "message": "spart" },
+
+  "suspendOthers": { "message": "Suspender andre" },
+  "wakeAll": { "message": "Vekk alle" },
+
+  "neverSuspendSite": { "message": "Aldri suspender dette nettstedet" },
+  "siteWhitelisted": { "message": "Nettstedet er hvitelistet (klikk for å fjerne)" },
+  "activeWontSuspend": { "message": "Aktiv – vil ikke bli suspendert" },
+  "loading": { "message": "Laster..." },
+
+  "tabsInWindow": { "message": "Faner i dette vinduet" },
+  "loadingTabs": { "message": "Laster faner..." },
+  "noTabsFound": { "message": "Ingen faner funnet" },
+  "failedToLoad": { "message": "Kunne ikke laste. Åpne popup-en på nytt for å prøve igjen." },
+
+  "badgeActive": { "message": "Aktiv" },
+  "badgeSystem": { "message": "System" },
+  "badgePinned": { "message": "Festet" },
+  "badgeAudio": { "message": "Lyd" },
+  "badgeStarred": { "message": "Stjernemerket" },
+  "badgeProtected": { "message": "Beskyttet" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Økter" },
+  "sessionNamePlaceholder": { "message": "Øktnavn (valgfritt)" },
+  "save": { "message": "Lagre" },
+  "emptySessionState": { "message": "Lagre din første økt for å gjenopprette faner når som helst" },
+  "open": { "message": "Åpne" },
+  "openSessionTitle": { "message": "Åpne faner fra denne økten" },
+  "deleteSessionTitle": { "message": "Slett økt" },
+  "sessionSaved": { "message": "Økt lagret!" },
+  "failedToSave": { "message": "Kunne ikke lagre" },
+  "restoredTabs": {
+    "message": "$COUNT$ faner gjenopprettet",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Kunne ikke gjenopprette" },
+  "noSessionsToExport": { "message": "Ingen økter å eksportere" },
+  "copiedSessionsJson": {
+    "message": "Kopierte $COUNT$ økter som JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ faner",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Statistikk" },
+  "statToday": { "message": "I dag" },
+  "statAllTime": { "message": "Totalt" },
+  "statRamSaved": { "message": "RAM spart (estimat)" },
+  "statMemberSince": { "message": "Medlem siden" },
+
+  "settings": { "message": "Innstillinger" },
+  "autoSuspendAfter": { "message": "Auto-suspender etter" },
+  "timer5min": { "message": "5 minutter" },
+  "timer10min": { "message": "10 minutter" },
+  "timer15min": { "message": "15 minutter" },
+  "timer30min": { "message": "30 minutter" },
+  "timer1hour": { "message": "1 time" },
+  "timer2hours": { "message": "2 timer" },
+  "timer4hours": { "message": "4 timer" },
+  "timerNever": { "message": "Aldri" },
+  "protectPinned": { "message": "Beskytt festede faner" },
+  "protectAudio": { "message": "Beskytt lydfaner" },
+  "protectForms": { "message": "Beskytt faner med skjemaer" },
+  "suspendOnStartup": { "message": "Suspender faner ved oppstart" },
+  "enableAutoSuspend": { "message": "Aktiver auto-suspendering" },
+  "markSuspended": { "message": "Merk suspenderte faner" },
+  "whitelistedSites": { "message": "Hvitelistede nettsteder" },
+  "add": { "message": "Legg til" },
+  "noSitesWhitelisted": { "message": "Ingen nettsteder hvitelistet" },
+
+  "suspending": { "message": "Suspenderer..." },
+  "done": { "message": "Ferdig!" },
+  "waking": { "message": "Vekker..." },
+  "copiedTabs": {
+    "message": "Kopierte $COUNT$ faner til utklippstavlen",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Kunne ikke kopiere" },
+  "copyTabsTitle": { "message": "Kopier faneliste til utklippstavlen" },
+  "copySessionsTitle": { "message": "Kopier alle økter som JSON" },
+  "remove": { "message": "Fjern" },
+
+  "switchToLight": { "message": "Bytt til lyst modus" },
+  "switchToDark": { "message": "Bytt til mørkt modus" },
+
+  "ctxSuspendThis": { "message": "Suspender denne fanen" },
+  "ctxSuspendOthers": { "message": "Suspender alle andre faner" },
+  "ctxNeverSuspend": { "message": "Aldri suspender dette nettstedet" },
+
+  "maxSessionsReached": { "message": "Maksimalt 20 økter nådd. Slett en for å lagre en ny." },
+  "noSaveableTabs": { "message": "Ingen faner å lagre i dette vinduet." },
+  "sessionNotFound": { "message": "Økt ikke funnet." },
+  "noRestorableTabs": { "message": "Ingen gjenopprettbare faner i denne økten." },
+  "sessionDefaultName": {
+    "message": "Økt – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "akkurat nå" },
+  "minutesAgo": {
+    "message": "$COUNT$ min siden",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$t siden",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "I går" },
+  "daysAgo": {
+    "message": "$COUNT$d siden",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Velkommen til Drowzy" },
+  "onboardingIntro": { "message": "Drowzy sparer minne ved å sette inaktive faner i dvale. Fanene dine er alltid trygge – vi bruker Chrome sin innebygde forkastings-API, så de overlever selv om du avinstallerer Drowzy." },
+  "howItWorks": { "message": "Slik fungerer det" },
+  "featureAutoSuspend": { "message": "<strong>Faner som er inaktive i 30 minutter</strong> suspenderes automatisk" },
+  "featureZeroRam": { "message": "<strong>Suspenderte faner bruker null RAM</strong> men forblir i fanelinjen" },
+  "featureClickToWake": { "message": "<strong>Klikk på en suspendert fane</strong> for å vekke den umiddelbart" },
+  "featureProtected": { "message": "<strong>Aktive, festede og lydfaner</strong> blir aldri berørt" },
+  "quickActions": { "message": "Hurtighandlinger" },
+  "actionClickIcon": { "message": "Klikk på <strong>Drowzy-ikonet</strong> i verktøylinjen for å se alle fanene dine" },
+  "actionAltS": { "message": "Trykk <kbd>Alt+S</kbd> for å suspendere gjeldende fane" },
+  "actionAltShiftS": { "message": "Trykk <kbd>Alt+Shift+S</kbd> for å suspendere alle andre faner" },
+  "actionAltW": { "message": "Trykk <kbd>Alt+W</kbd> for å vekke alle suspenderte faner" },
+  "actionRightClick": { "message": "Høyreklikk på en side for raske suspenderingsvalg" },
+  "onboardingCta": { "message": "Drowzy kjører allerede. Åpne noen faner og prøv det ut!" },
+  "onboardingBtn": { "message": "Skjønner, la oss begynne" },
+
+  "privacyTitle": { "message": "Drowzy – Personvernerklæring" },
+  "privacyUpdated": { "message": "Sist oppdatert: februar 2026" },
+  "privacyShortTitle": { "message": "Kortversjonen" },
+  "privacyShortText": { "message": "Drowzy samler ikke inn noen data. Ingen analyse, ingen sporing, ingen eksterne servere. Alt forblir i nettleseren din." },
+  "privacyStoredTitle": { "message": "Hva som lagres" },
+  "privacyStoredText": { "message": "Innstillingene dine (suspenderingstimer, hviteliste, preferanser) lagres med Chrome sine innebygde lagrings-APIer: chrome.storage.sync for innstillinger som følger Chrome-profilen din, chrome.storage.local for statistikk og lagrede økter, og chrome.storage.session for midlertidige data som fanetidsstempler. Ingenting av dette sendes til noen tredjepartsserver." },
+  "privacyPermissionsTitle": { "message": "Tillatelser" },
+  "privacyPermissionsIntro": { "message": "Drowzy bruker disse Chrome-tillatelsene:" },
+  "privacyPermTabs": { "message": "tabs – liste opp, suspendere og gjenopprette nettleserfaner" },
+  "privacyPermStorage": { "message": "storage – lagre innstillingene dine lokalt" },
+  "privacyPermAlarms": { "message": "alarms – periodiske sjekker for inaktive faner" },
+  "privacyPermContextMenus": { "message": "contextMenus – høyreklikkmenyvalg" },
+  "privacyContactTitle": { "message": "Kontakt" },
+  "privacyContactText": { "message": "Spørsmål? Ta kontakt på drowzyextension@gmail.com" }
+}

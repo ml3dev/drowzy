@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Penggantung Tab & Penjimat Memori"
+  },
+  "extDescription": {
+    "message": "Gantung tab tidak aktif secara automatik untuk menjimatkan sehingga 80% RAM. Ringan, peribadi, tiada penjejakan. Tab tidak akan hilang."
+  },
+  "commandSuspendCurrent": {
+    "message": "Gantung tab semasa"
+  },
+  "commandSuspendOthers": {
+    "message": "Gantung semua tab lain"
+  },
+  "commandWakeAll": {
+    "message": "Bangunkan semua tab yang digantung"
+  },
+
+  "statSleeping": { "message": "tidur" },
+  "statProtected": { "message": "dilindungi" },
+  "statSaved": { "message": "dijimatkan" },
+
+  "suspendOthers": { "message": "Gantung Lain-lain" },
+  "wakeAll": { "message": "Bangunkan Semua" },
+
+  "neverSuspendSite": { "message": "Jangan sesekali gantung laman ini" },
+  "siteWhitelisted": { "message": "Laman dalam senarai putih (klik untuk membuang)" },
+  "activeWontSuspend": { "message": "Aktif – tidak akan digantung" },
+  "loading": { "message": "Memuatkan..." },
+
+  "tabsInWindow": { "message": "Tab dalam tetingkap ini" },
+  "loadingTabs": { "message": "Memuatkan tab..." },
+  "noTabsFound": { "message": "Tiada tab dijumpai" },
+  "failedToLoad": { "message": "Gagal memuatkan. Buka semula popup untuk mencuba lagi." },
+
+  "badgeActive": { "message": "Aktif" },
+  "badgeSystem": { "message": "Sistem" },
+  "badgePinned": { "message": "Disemat" },
+  "badgeAudio": { "message": "Audio" },
+  "badgeStarred": { "message": "Berbintang" },
+  "badgeProtected": { "message": "Dilindungi" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Sesi" },
+  "sessionNamePlaceholder": { "message": "Nama sesi (pilihan)" },
+  "save": { "message": "Simpan" },
+  "emptySessionState": { "message": "Simpan sesi pertama anda untuk memulihkan tab pada bila-bila masa" },
+  "open": { "message": "Buka" },
+  "openSessionTitle": { "message": "Buka tab dari sesi ini" },
+  "deleteSessionTitle": { "message": "Padam sesi" },
+  "sessionSaved": { "message": "Sesi disimpan!" },
+  "failedToSave": { "message": "Gagal menyimpan" },
+  "restoredTabs": {
+    "message": "$COUNT$ tab dipulihkan",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Gagal memulihkan" },
+  "noSessionsToExport": { "message": "Tiada sesi untuk dieksport" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ sesi disalin sebagai JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ tab",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Statistik" },
+  "statToday": { "message": "Hari ini" },
+  "statAllTime": { "message": "Sepanjang masa" },
+  "statRamSaved": { "message": "RAM dijimatkan (anggaran)" },
+  "statMemberSince": { "message": "Ahli sejak" },
+
+  "settings": { "message": "Tetapan" },
+  "autoSuspendAfter": { "message": "Gantung automatik selepas" },
+  "timer5min": { "message": "5 minit" },
+  "timer10min": { "message": "10 minit" },
+  "timer15min": { "message": "15 minit" },
+  "timer30min": { "message": "30 minit" },
+  "timer1hour": { "message": "1 jam" },
+  "timer2hours": { "message": "2 jam" },
+  "timer4hours": { "message": "4 jam" },
+  "timerNever": { "message": "Tidak pernah" },
+  "protectPinned": { "message": "Lindungi tab yang disemat" },
+  "protectAudio": { "message": "Lindungi tab audio" },
+  "protectForms": { "message": "Lindungi tab dengan borang" },
+  "suspendOnStartup": { "message": "Gantung tab semasa permulaan" },
+  "enableAutoSuspend": { "message": "Aktifkan gantung automatik" },
+  "markSuspended": { "message": "Tandakan tab yang digantung" },
+  "whitelistedSites": { "message": "Laman dalam senarai putih" },
+  "add": { "message": "Tambah" },
+  "noSitesWhitelisted": { "message": "Tiada laman dalam senarai putih" },
+
+  "suspending": { "message": "Menggantung..." },
+  "done": { "message": "Selesai!" },
+  "waking": { "message": "Membangunkan..." },
+  "copiedTabs": {
+    "message": "$COUNT$ tab disalin ke papan keratan",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Gagal menyalin" },
+  "copyTabsTitle": { "message": "Salin senarai tab ke papan keratan" },
+  "copySessionsTitle": { "message": "Salin semua sesi sebagai JSON" },
+  "remove": { "message": "Buang" },
+
+  "switchToLight": { "message": "Tukar ke mod cerah" },
+  "switchToDark": { "message": "Tukar ke mod gelap" },
+
+  "ctxSuspendThis": { "message": "Gantung tab ini" },
+  "ctxSuspendOthers": { "message": "Gantung semua tab lain" },
+  "ctxNeverSuspend": { "message": "Jangan sesekali gantung laman ini" },
+
+  "maxSessionsReached": { "message": "Maksimum 20 sesi dicapai. Padam satu untuk menyimpan yang baharu." },
+  "noSaveableTabs": { "message": "Tiada tab yang boleh disimpan dalam tetingkap ini." },
+  "sessionNotFound": { "message": "Sesi tidak dijumpai." },
+  "noRestorableTabs": { "message": "Tiada tab yang boleh dipulihkan dalam sesi ini." },
+  "sessionDefaultName": {
+    "message": "Sesi – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "baru sahaja" },
+  "minutesAgo": {
+    "message": "$COUNT$m lalu",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$j lalu",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Semalam" },
+  "daysAgo": {
+    "message": "$COUNT$h lalu",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Selamat datang ke Drowzy" },
+  "onboardingIntro": { "message": "Drowzy menjimatkan memori dengan menidurkan tab yang tidak aktif. Tab anda sentiasa selamat – kami menggunakan API buang asli Chrome, jadi ia kekal walaupun anda menyahpasang Drowzy." },
+  "howItWorks": { "message": "Cara ia berfungsi" },
+  "featureAutoSuspend": { "message": "<strong>Tab yang tidak aktif selama 30 minit</strong> digantung secara automatik" },
+  "featureZeroRam": { "message": "<strong>Tab yang digantung menggunakan sifar RAM</strong> tetapi kekal dalam bar tab anda" },
+  "featureClickToWake": { "message": "<strong>Klik mana-mana tab yang digantung</strong> untuk membangunkannya serta-merta" },
+  "featureProtected": { "message": "<strong>Tab aktif, disemat dan audio</strong> tidak akan disentuh" },
+  "quickActions": { "message": "Tindakan pantas" },
+  "actionClickIcon": { "message": "Klik <strong>ikon Drowzy</strong> di bar alat untuk melihat semua tab anda" },
+  "actionAltS": { "message": "Tekan <kbd>Alt+S</kbd> untuk menggantung tab semasa" },
+  "actionAltShiftS": { "message": "Tekan <kbd>Alt+Shift+S</kbd> untuk menggantung semua tab lain" },
+  "actionAltW": { "message": "Tekan <kbd>Alt+W</kbd> untuk membangunkan semua tab yang digantung" },
+  "actionRightClick": { "message": "Klik kanan pada mana-mana halaman untuk pilihan gantung pantas" },
+  "onboardingCta": { "message": "Drowzy sudah berjalan. Buka beberapa tab dan cuba!" },
+  "onboardingBtn": { "message": "Faham, jom" },
+
+  "privacyTitle": { "message": "Drowzy – Dasar Privasi" },
+  "privacyUpdated": { "message": "Kemas kini terakhir: Februari 2026" },
+  "privacyShortTitle": { "message": "Versi ringkas" },
+  "privacyShortText": { "message": "Drowzy tidak mengumpul sebarang data. Tiada analitik, tiada penjejakan, tiada pelayan luaran. Semuanya kekal dalam pelayar anda." },
+  "privacyStoredTitle": { "message": "Apa yang disimpan" },
+  "privacyStoredText": { "message": "Tetapan anda (pemasa gantung, senarai putih, keutamaan) disimpan menggunakan API storan terbina dalam Chrome: chrome.storage.sync untuk tetapan yang mengikuti profil Chrome anda, chrome.storage.local untuk statistik dan sesi yang disimpan, dan chrome.storage.session untuk data sementara seperti cap masa tab. Tiada satu pun dihantar ke pelayan pihak ketiga." },
+  "privacyPermissionsTitle": { "message": "Kebenaran" },
+  "privacyPermissionsIntro": { "message": "Drowzy menggunakan kebenaran Chrome ini:" },
+  "privacyPermTabs": { "message": "tabs – menyenarai, menggantung dan memulihkan tab pelayar" },
+  "privacyPermStorage": { "message": "storage – menyimpan tetapan anda secara setempat" },
+  "privacyPermAlarms": { "message": "alarms – pemeriksaan berkala untuk tab tidak aktif" },
+  "privacyPermContextMenus": { "message": "contextMenus – pilihan menu klik kanan" },
+  "privacyContactTitle": { "message": "Hubungi" },
+  "privacyContactText": { "message": "Soalan? Hubungi di drowzyextension@gmail.com" }
+}

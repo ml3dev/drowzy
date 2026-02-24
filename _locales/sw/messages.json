@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Kisimamishaji cha tabo na kiokoa kumbukumbu"
+  },
+  "extDescription": {
+    "message": "Simamisha tabo zisizotumika kiotomatiki ili kuokoa hadi 80% ya RAM. Nyepesi, binafsi, bila ufuatiliaji. Tabo hazipotei kamwe."
+  },
+  "commandSuspendCurrent": {
+    "message": "Simamisha tabo ya sasa"
+  },
+  "commandSuspendOthers": {
+    "message": "Simamisha tabo nyingine zote"
+  },
+  "commandWakeAll": {
+    "message": "Amsha tabo zote zilizosimamishwa"
+  },
+
+  "statSleeping": { "message": "zimelala" },
+  "statProtected": { "message": "zilizolindwa" },
+  "statSaved": { "message": "imeokolewa" },
+
+  "suspendOthers": { "message": "Simamisha nyingine" },
+  "wakeAll": { "message": "Amsha zote" },
+
+  "neverSuspendSite": { "message": "Usisimamishe tovuti hii kamwe" },
+  "siteWhitelisted": { "message": "Tovuti iko kwenye orodha nyeupe (bofya kuondoa)" },
+  "activeWontSuspend": { "message": "Inatumika – haitasimamishwa" },
+  "loading": { "message": "Inapakia..." },
+
+  "tabsInWindow": { "message": "Tabo katika dirisha hili" },
+  "loadingTabs": { "message": "Inapakia tabo..." },
+  "noTabsFound": { "message": "Hakuna tabo zilizopatikana" },
+  "failedToLoad": { "message": "Imeshindwa kupakia. Fungua popup tena kujaribu." },
+
+  "badgeActive": { "message": "Inatumika" },
+  "badgeSystem": { "message": "Mfumo" },
+  "badgePinned": { "message": "Imebandikwa" },
+  "badgeAudio": { "message": "Sauti" },
+  "badgeStarred": { "message": "Yenye nyota" },
+  "badgeProtected": { "message": "Imelindwa" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Vikao" },
+  "sessionNamePlaceholder": { "message": "Jina la kikao (si lazima)" },
+  "save": { "message": "Hifadhi" },
+  "emptySessionState": { "message": "Hifadhi kikao chako cha kwanza ili urejeshe tabo wakati wowote" },
+  "open": { "message": "Fungua" },
+  "openSessionTitle": { "message": "Fungua tabo kutoka kikao hiki" },
+  "deleteSessionTitle": { "message": "Futa kikao" },
+  "sessionSaved": { "message": "Kikao kimehifadhiwa!" },
+  "failedToSave": { "message": "Imeshindwa kuhifadhi" },
+  "restoredTabs": {
+    "message": "Tabo $COUNT$ zimerejeshwa",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Imeshindwa kurejesha" },
+  "noSessionsToExport": { "message": "Hakuna vikao vya kuhamisha" },
+  "copiedSessionsJson": {
+    "message": "Vimenakiliwa vikao $COUNT$ kama JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "Tabo $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Takwimu" },
+  "statToday": { "message": "Leo" },
+  "statAllTime": { "message": "Jumla" },
+  "statRamSaved": { "message": "RAM iliyookolewa (makadirio)" },
+  "statMemberSince": { "message": "Mwanachama tangu" },
+
+  "settings": { "message": "Mipangilio" },
+  "autoSuspendAfter": { "message": "Simamisha kiotomatiki baada ya" },
+  "timer5min": { "message": "Dakika 5" },
+  "timer10min": { "message": "Dakika 10" },
+  "timer15min": { "message": "Dakika 15" },
+  "timer30min": { "message": "Dakika 30" },
+  "timer1hour": { "message": "Saa 1" },
+  "timer2hours": { "message": "Masaa 2" },
+  "timer4hours": { "message": "Masaa 4" },
+  "timerNever": { "message": "Kamwe" },
+  "protectPinned": { "message": "Linda tabo zilizobandikwa" },
+  "protectAudio": { "message": "Linda tabo zenye sauti" },
+  "protectForms": { "message": "Linda tabo zenye fomu" },
+  "suspendOnStartup": { "message": "Simamisha tabo unapoanza" },
+  "enableAutoSuspend": { "message": "Wezesha kusimamisha kiotomatiki" },
+  "markSuspended": { "message": "Weka alama kwenye tabo zilizosimamishwa" },
+  "whitelistedSites": { "message": "Tovuti kwenye orodha nyeupe" },
+  "add": { "message": "Ongeza" },
+  "noSitesWhitelisted": { "message": "Hakuna tovuti kwenye orodha nyeupe" },
+
+  "suspending": { "message": "Inasimamisha..." },
+  "done": { "message": "Imekamilika!" },
+  "waking": { "message": "Inaamsha..." },
+  "copiedTabs": {
+    "message": "Tabo $COUNT$ zimenakiliwa kwenye clipboard",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Imeshindwa kunakili" },
+  "copyTabsTitle": { "message": "Nakili orodha ya tabo kwenye clipboard" },
+  "copySessionsTitle": { "message": "Nakili vikao vyote kama JSON" },
+  "remove": { "message": "Ondoa" },
+
+  "switchToLight": { "message": "Badilisha hadi hali ya mwanga" },
+  "switchToDark": { "message": "Badilisha hadi hali ya giza" },
+
+  "ctxSuspendThis": { "message": "Simamisha tabo hii" },
+  "ctxSuspendOthers": { "message": "Simamisha tabo nyingine zote" },
+  "ctxNeverSuspend": { "message": "Usisimamishe tovuti hii kamwe" },
+
+  "maxSessionsReached": { "message": "Kiwango cha juu cha vikao 20 kimefikiwa. Futa kimoja ili kuhifadhi kipya." },
+  "noSaveableTabs": { "message": "Hakuna tabo za kuhifadhi katika dirisha hili." },
+  "sessionNotFound": { "message": "Kikao hakijapatikana." },
+  "noRestorableTabs": { "message": "Hakuna tabo za kurejesha katika kikao hiki." },
+  "sessionDefaultName": {
+    "message": "Kikao – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "sasa hivi" },
+  "minutesAgo": {
+    "message": "dakika $COUNT$ zilizopita",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "masaa $COUNT$ yaliyopita",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Jana" },
+  "daysAgo": {
+    "message": "siku $COUNT$ zilizopita",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Karibu kwenye Drowzy" },
+  "onboardingIntro": { "message": "Drowzy inaokoa kumbukumbu kwa kulaza tabo zisizotumika. Tabo zako ni salama kila wakati – tunatumia API asilia ya Chrome ya kutupa, hivyo zinaendelea hata ukiondoa Drowzy." },
+  "howItWorks": { "message": "Jinsi inavyofanya kazi" },
+  "featureAutoSuspend": { "message": "<strong>Tabo zisizotumika kwa dakika 30</strong> zinasimamishwa kiotomatiki" },
+  "featureZeroRam": { "message": "<strong>Tabo zilizosimamishwa hazitumii RAM</strong> lakini zinabaki kwenye upau wa tabo" },
+  "featureClickToWake": { "message": "<strong>Bofya tabo yoyote iliyosimamishwa</strong> kuiamsha mara moja" },
+  "featureProtected": { "message": "<strong>Tabo zinazotumika, zilizobandikwa, na zenye sauti</strong> haziguswi kamwe" },
+  "quickActions": { "message": "Vitendo vya haraka" },
+  "actionClickIcon": { "message": "Bofya <strong>aikoni ya Drowzy</strong> kwenye upau wa zana kuona tabo zako zote" },
+  "actionAltS": { "message": "Bonyeza <kbd>Alt+S</kbd> kusimamisha tabo ya sasa" },
+  "actionAltShiftS": { "message": "Bonyeza <kbd>Alt+Shift+S</kbd> kusimamisha tabo nyingine zote" },
+  "actionAltW": { "message": "Bonyeza <kbd>Alt+W</kbd> kuamsha tabo zote zilizosimamishwa" },
+  "actionRightClick": { "message": "Bofya kulia kwenye ukurasa wowote kwa chaguo za haraka za kusimamisha" },
+  "onboardingCta": { "message": "Drowzy tayari inafanya kazi. Fungua tabo chache na ujaribu!" },
+  "onboardingBtn": { "message": "Nimeelewa, tuanze" },
+
+  "privacyTitle": { "message": "Drowzy – Sera ya Faragha" },
+  "privacyUpdated": { "message": "Ilisasishwa mwisho: Februari 2026" },
+  "privacyShortTitle": { "message": "Toleo fupi" },
+  "privacyShortText": { "message": "Drowzy haikusanyi data yoyote. Hakuna uchambuzi, hakuna ufuatiliaji, hakuna seva za nje. Kila kitu kinabaki kwenye kivinjari chako." },
+  "privacyStoredTitle": { "message": "Kinachohifadhiwa" },
+  "privacyStoredText": { "message": "Mipangilio yako (kipima muda cha kusimamisha, orodha nyeupe, mapendeleo) yanahifadhiwa kwa kutumia API za uhifadhi zilizojengwa ndani ya Chrome: chrome.storage.sync kwa mipangilio inayofuata wasifu wako wa Chrome, chrome.storage.local kwa takwimu na vikao vilivyohifadhiwa, na chrome.storage.session kwa data ya muda kama mihuri ya wakati ya tabo. Hakuna kitu kinachotumwa kwa seva yoyote ya wahusika wengine." },
+  "privacyPermissionsTitle": { "message": "Ruhusa" },
+  "privacyPermissionsIntro": { "message": "Drowzy inatumia ruhusa hizi za Chrome:" },
+  "privacyPermTabs": { "message": "tabs – kuorodhesha, kusimamisha, na kurejesha tabo za kivinjari" },
+  "privacyPermStorage": { "message": "storage – kuhifadhi mipangilio yako kimtaa" },
+  "privacyPermAlarms": { "message": "alarms – ukaguzi wa mara kwa mara wa tabo zisizotumika" },
+  "privacyPermContextMenus": { "message": "contextMenus – chaguo za menyu ya kubofya kulia" },
+  "privacyContactTitle": { "message": "Mawasiliano" },
+  "privacyContactText": { "message": "Maswali? Wasiliana nasi kupitia drowzyextension@gmail.com" }
+}

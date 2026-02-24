@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - タブサスペンダー＆メモリセーバー"
+  },
+  "extDescription": {
+    "message": "非アクティブなタブを自動サスペンドしてRAMを最大80%節約。軽量、プライベート、トラッキングなし。タブは決して失われません。"
+  },
+  "commandSuspendCurrent": {
+    "message": "現在のタブをサスペンド"
+  },
+  "commandSuspendOthers": {
+    "message": "他のすべてのタブをサスペンド"
+  },
+  "commandWakeAll": {
+    "message": "サスペンド中のすべてのタブを復帰"
+  },
+
+  "statSleeping": { "message": "スリープ中" },
+  "statProtected": { "message": "保護中" },
+  "statSaved": { "message": "節約済み" },
+
+  "suspendOthers": { "message": "他をサスペンド" },
+  "wakeAll": { "message": "すべて復帰" },
+
+  "neverSuspendSite": { "message": "このサイトをサスペンドしない" },
+  "siteWhitelisted": { "message": "サイトはホワイトリストに登録済み（クリックで解除）" },
+  "activeWontSuspend": { "message": "アクティブ – サスペンドされません" },
+  "loading": { "message": "読み込み中..." },
+
+  "tabsInWindow": { "message": "このウィンドウのタブ" },
+  "loadingTabs": { "message": "タブを読み込み中..." },
+  "noTabsFound": { "message": "タブが見つかりません" },
+  "failedToLoad": { "message": "読み込みに失敗しました。ポップアップを再度開いてください。" },
+
+  "badgeActive": { "message": "アクティブ" },
+  "badgeSystem": { "message": "システム" },
+  "badgePinned": { "message": "ピン留め" },
+  "badgeAudio": { "message": "オーディオ" },
+  "badgeStarred": { "message": "スター付き" },
+  "badgeProtected": { "message": "保護中" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "セッション" },
+  "sessionNamePlaceholder": { "message": "セッション名（任意）" },
+  "save": { "message": "保存" },
+  "emptySessionState": { "message": "最初のセッションを保存して、いつでもタブを復元しましょう" },
+  "open": { "message": "開く" },
+  "openSessionTitle": { "message": "このセッションのタブを開く" },
+  "deleteSessionTitle": { "message": "セッションを削除" },
+  "sessionSaved": { "message": "セッションを保存しました！" },
+  "failedToSave": { "message": "保存に失敗しました" },
+  "restoredTabs": {
+    "message": "$COUNT$個のタブを復元しました",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "復元に失敗しました" },
+  "noSessionsToExport": { "message": "エクスポートするセッションがありません" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$個のセッションをJSONとしてコピーしました",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$個のタブ",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "統計" },
+  "statToday": { "message": "今日" },
+  "statAllTime": { "message": "累計" },
+  "statRamSaved": { "message": "節約RAM（推定）" },
+  "statMemberSince": { "message": "利用開始日" },
+
+  "settings": { "message": "設定" },
+  "autoSuspendAfter": { "message": "自動サスペンドまでの時間" },
+  "timer5min": { "message": "5分" },
+  "timer10min": { "message": "10分" },
+  "timer15min": { "message": "15分" },
+  "timer30min": { "message": "30分" },
+  "timer1hour": { "message": "1時間" },
+  "timer2hours": { "message": "2時間" },
+  "timer4hours": { "message": "4時間" },
+  "timerNever": { "message": "しない" },
+  "protectPinned": { "message": "ピン留めタブを保護" },
+  "protectAudio": { "message": "オーディオタブを保護" },
+  "protectForms": { "message": "フォームのあるタブを保護" },
+  "suspendOnStartup": { "message": "起動時にタブをサスペンド" },
+  "enableAutoSuspend": { "message": "自動サスペンドを有効化" },
+  "markSuspended": { "message": "サスペンド中のタブにマークを付ける" },
+  "whitelistedSites": { "message": "ホワイトリスト登録サイト" },
+  "add": { "message": "追加" },
+  "noSitesWhitelisted": { "message": "ホワイトリストに登録されたサイトはありません" },
+
+  "suspending": { "message": "サスペンド中..." },
+  "done": { "message": "完了！" },
+  "waking": { "message": "復帰中..." },
+  "copiedTabs": {
+    "message": "$COUNT$個のタブをクリップボードにコピーしました",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "コピーに失敗しました" },
+  "copyTabsTitle": { "message": "タブ一覧をクリップボードにコピー" },
+  "copySessionsTitle": { "message": "すべてのセッションをJSONとしてコピー" },
+  "remove": { "message": "削除" },
+
+  "switchToLight": { "message": "ライトモードに切り替え" },
+  "switchToDark": { "message": "ダークモードに切り替え" },
+
+  "ctxSuspendThis": { "message": "このタブをサスペンド" },
+  "ctxSuspendOthers": { "message": "他のすべてのタブをサスペンド" },
+  "ctxNeverSuspend": { "message": "このサイトをサスペンドしない" },
+
+  "maxSessionsReached": { "message": "セッション数が上限の20に達しました。新しく保存するには1つ削除してください。" },
+  "noSaveableTabs": { "message": "このウィンドウに保存可能なタブがありません。" },
+  "sessionNotFound": { "message": "セッションが見つかりません。" },
+  "noRestorableTabs": { "message": "このセッションに復元可能なタブがありません。" },
+  "sessionDefaultName": {
+    "message": "セッション – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "たった今" },
+  "minutesAgo": {
+    "message": "$COUNT$分前",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$時間前",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "昨日" },
+  "daysAgo": {
+    "message": "$COUNT$日前",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Drowzyへようこそ" },
+  "onboardingIntro": { "message": "Drowzyは非アクティブなタブをスリープさせてメモリを節約します。タブは常に安全です。ChromeのネイティブなディスカードAPIを使用するため、Drowzyをアンインストールしてもタブは失われません。" },
+  "howItWorks": { "message": "仕組み" },
+  "featureAutoSuspend": { "message": "<strong>30分間非アクティブなタブ</strong>は自動的にサスペンドされます" },
+  "featureZeroRam": { "message": "<strong>サスペンド中のタブはRAMを使用しません</strong>が、タブバーに残ります" },
+  "featureClickToWake": { "message": "<strong>サスペンド中のタブをクリック</strong>すると即座に復帰します" },
+  "featureProtected": { "message": "<strong>アクティブ、ピン留め、オーディオ再生中のタブ</strong>には影響しません" },
+  "quickActions": { "message": "クイック操作" },
+  "actionClickIcon": { "message": "ツールバーの<strong>Drowzyアイコン</strong>をクリックしてすべてのタブを確認" },
+  "actionAltS": { "message": "<kbd>Alt+S</kbd>で現在のタブをサスペンド" },
+  "actionAltShiftS": { "message": "<kbd>Alt+Shift+S</kbd>で他のすべてのタブをサスペンド" },
+  "actionAltW": { "message": "<kbd>Alt+W</kbd>でサスペンド中のすべてのタブを復帰" },
+  "actionRightClick": { "message": "任意のページで右クリックしてサスペンドオプションにアクセス" },
+  "onboardingCta": { "message": "Drowzyはすでに動作しています。タブを開いて試してみましょう！" },
+  "onboardingBtn": { "message": "了解、始めましょう" },
+
+  "privacyTitle": { "message": "Drowzy – プライバシーポリシー" },
+  "privacyUpdated": { "message": "最終更新日：2026年2月" },
+  "privacyShortTitle": { "message": "要約" },
+  "privacyShortText": { "message": "Drowzyはいかなるデータも収集しません。分析なし、トラッキングなし、外部サーバーなし。すべてはブラウザ内に留まります。" },
+  "privacyStoredTitle": { "message": "保存される情報" },
+  "privacyStoredText": { "message": "設定（サスペンドタイマー、ホワイトリスト、各種設定）はChromeの組み込みストレージAPIを使用して保存されます。Chromeプロファイルに連動する設定にはchrome.storage.sync、統計と保存済みセッションにはchrome.storage.local、タブのタイムスタンプなどの一時データにはchrome.storage.sessionを使用します。これらのデータはサードパーティのサーバーに送信されることはありません。" },
+  "privacyPermissionsTitle": { "message": "権限" },
+  "privacyPermissionsIntro": { "message": "DrowzyはこれらのChrome権限を使用します：" },
+  "privacyPermTabs": { "message": "tabs – ブラウザタブの一覧表示、サスペンド、復元" },
+  "privacyPermStorage": { "message": "storage – 設定のローカル保存" },
+  "privacyPermAlarms": { "message": "alarms – 非アクティブタブの定期チェック" },
+  "privacyPermContextMenus": { "message": "contextMenus – 右クリックメニューオプション" },
+  "privacyContactTitle": { "message": "お問い合わせ" },
+  "privacyContactText": { "message": "ご質問は drowzyextension@gmail.com までお問い合わせください" }
+}

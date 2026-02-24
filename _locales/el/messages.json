@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Αναστολή καρτελών και εξοικονόμηση μνήμης"
+  },
+  "extDescription": {
+    "message": "Αυτόματη αναστολή ανενεργών καρτελών για εξοικονόμηση έως 80% RAM. Ελαφρύ, ιδιωτικό, χωρίς παρακολούθηση. Οι καρτέλες δεν χάνονται ποτέ."
+  },
+  "commandSuspendCurrent": {
+    "message": "Αναστολή τρέχουσας καρτέλας"
+  },
+  "commandSuspendOthers": {
+    "message": "Αναστολή όλων των άλλων καρτελών"
+  },
+  "commandWakeAll": {
+    "message": "Αφύπνιση όλων των ανεσταλμένων καρτελών"
+  },
+
+  "statSleeping": { "message": "σε αναμονή" },
+  "statProtected": { "message": "προστατευμένες" },
+  "statSaved": { "message": "εξοικονόμηση" },
+
+  "suspendOthers": { "message": "Αναστολή άλλων" },
+  "wakeAll": { "message": "Αφύπνιση όλων" },
+
+  "neverSuspendSite": { "message": "Να μην ανασταλεί ποτέ αυτός ο ιστότοπος" },
+  "siteWhitelisted": { "message": "Ο ιστότοπος είναι στη λευκή λίστα (κάντε κλικ για αφαίρεση)" },
+  "activeWontSuspend": { "message": "Ενεργή – δεν θα ανασταλεί" },
+  "loading": { "message": "Φόρτωση..." },
+
+  "tabsInWindow": { "message": "Καρτέλες σε αυτό το παράθυρο" },
+  "loadingTabs": { "message": "Φόρτωση καρτελών..." },
+  "noTabsFound": { "message": "Δεν βρέθηκαν καρτέλες" },
+  "failedToLoad": { "message": "Αποτυχία φόρτωσης. Ανοίξτε ξανά το αναδυόμενο παράθυρο για επανάληψη." },
+
+  "badgeActive": { "message": "Ενεργή" },
+  "badgeSystem": { "message": "Σύστημα" },
+  "badgePinned": { "message": "Καρφιτσωμένη" },
+  "badgeAudio": { "message": "Ήχος" },
+  "badgeStarred": { "message": "Αγαπημένη" },
+  "badgeProtected": { "message": "Προστατευμένη" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Συνεδρίες" },
+  "sessionNamePlaceholder": { "message": "Όνομα συνεδρίας (προαιρετικό)" },
+  "save": { "message": "Αποθήκευση" },
+  "emptySessionState": { "message": "Αποθηκεύστε την πρώτη σας συνεδρία για να επαναφέρετε καρτέλες ανά πάσα στιγμή" },
+  "open": { "message": "Άνοιγμα" },
+  "openSessionTitle": { "message": "Άνοιγμα καρτελών από αυτή τη συνεδρία" },
+  "deleteSessionTitle": { "message": "Διαγραφή συνεδρίας" },
+  "sessionSaved": { "message": "Η συνεδρία αποθηκεύτηκε!" },
+  "failedToSave": { "message": "Αποτυχία αποθήκευσης" },
+  "restoredTabs": {
+    "message": "Επαναφέρθηκαν $COUNT$ καρτέλες",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Αποτυχία επαναφοράς" },
+  "noSessionsToExport": { "message": "Δεν υπάρχουν συνεδρίες για εξαγωγή" },
+  "copiedSessionsJson": {
+    "message": "Αντιγράφηκαν $COUNT$ συνεδρίες ως JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ καρτέλες",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Στατιστικά" },
+  "statToday": { "message": "Σήμερα" },
+  "statAllTime": { "message": "Συνολικά" },
+  "statRamSaved": { "message": "RAM που εξοικονομήθηκε (εκτ.)" },
+  "statMemberSince": { "message": "Μέλος από" },
+
+  "settings": { "message": "Ρυθμίσεις" },
+  "autoSuspendAfter": { "message": "Αυτόματη αναστολή μετά από" },
+  "timer5min": { "message": "5 λεπτά" },
+  "timer10min": { "message": "10 λεπτά" },
+  "timer15min": { "message": "15 λεπτά" },
+  "timer30min": { "message": "30 λεπτά" },
+  "timer1hour": { "message": "1 ώρα" },
+  "timer2hours": { "message": "2 ώρες" },
+  "timer4hours": { "message": "4 ώρες" },
+  "timerNever": { "message": "Ποτέ" },
+  "protectPinned": { "message": "Προστασία καρφιτσωμένων καρτελών" },
+  "protectAudio": { "message": "Προστασία καρτελών με ήχο" },
+  "protectForms": { "message": "Προστασία καρτελών με φόρμες" },
+  "suspendOnStartup": { "message": "Αναστολή καρτελών κατά την εκκίνηση" },
+  "enableAutoSuspend": { "message": "Ενεργοποίηση αυτόματης αναστολής" },
+  "markSuspended": { "message": "Σήμανση ανεσταλμένων καρτελών" },
+  "whitelistedSites": { "message": "Ιστότοποι στη λευκή λίστα" },
+  "add": { "message": "Προσθήκη" },
+  "noSitesWhitelisted": { "message": "Κανένας ιστότοπος στη λευκή λίστα" },
+
+  "suspending": { "message": "Αναστολή..." },
+  "done": { "message": "Έγινε!" },
+  "waking": { "message": "Αφύπνιση..." },
+  "copiedTabs": {
+    "message": "Αντιγράφηκαν $COUNT$ καρτέλες στο πρόχειρο",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Αποτυχία αντιγραφής" },
+  "copyTabsTitle": { "message": "Αντιγραφή λίστας καρτελών στο πρόχειρο" },
+  "copySessionsTitle": { "message": "Αντιγραφή όλων των συνεδριών ως JSON" },
+  "remove": { "message": "Αφαίρεση" },
+
+  "switchToLight": { "message": "Εναλλαγή σε φωτεινή λειτουργία" },
+  "switchToDark": { "message": "Εναλλαγή σε σκοτεινή λειτουργία" },
+
+  "ctxSuspendThis": { "message": "Αναστολή αυτής της καρτέλας" },
+  "ctxSuspendOthers": { "message": "Αναστολή όλων των άλλων καρτελών" },
+  "ctxNeverSuspend": { "message": "Να μην ανασταλεί ποτέ αυτός ο ιστότοπος" },
+
+  "maxSessionsReached": { "message": "Φτάσατε το μέγιστο των 20 συνεδριών. Διαγράψτε μία για να αποθηκεύσετε νέα." },
+  "noSaveableTabs": { "message": "Δεν υπάρχουν αποθηκεύσιμες καρτέλες σε αυτό το παράθυρο." },
+  "sessionNotFound": { "message": "Η συνεδρία δεν βρέθηκε." },
+  "noRestorableTabs": { "message": "Δεν υπάρχουν επαναφέρσιμες καρτέλες σε αυτή τη συνεδρία." },
+  "sessionDefaultName": {
+    "message": "Συνεδρία – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "μόλις τώρα" },
+  "minutesAgo": {
+    "message": "πριν $COUNT$ λεπ.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "πριν $COUNT$ ώρ.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Χθες" },
+  "daysAgo": {
+    "message": "πριν $COUNT$ ημ.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Καλώς ήρθατε στο Drowzy" },
+  "onboardingIntro": { "message": "Το Drowzy εξοικονομεί μνήμη θέτοντας τις ανενεργές καρτέλες σε αναστολή. Οι καρτέλες σας είναι πάντα ασφαλείς – χρησιμοποιούμε το εγγενές API απόρριψης του Chrome, οπότε επιβιώνουν ακόμα κι αν απεγκαταστήσετε το Drowzy." },
+  "howItWorks": { "message": "Πώς λειτουργεί" },
+  "featureAutoSuspend": { "message": "<strong>Οι καρτέλες ανενεργές για 30 λεπτά</strong> αναστέλλονται αυτόματα" },
+  "featureZeroRam": { "message": "<strong>Οι ανεσταλμένες καρτέλες χρησιμοποιούν μηδέν RAM</strong> αλλά παραμένουν στη γραμμή καρτελών" },
+  "featureClickToWake": { "message": "<strong>Κάντε κλικ σε οποιαδήποτε ανεσταλμένη καρτέλα</strong> για να την αφυπνίσετε αμέσως" },
+  "featureProtected": { "message": "<strong>Οι ενεργές, καρφιτσωμένες και καρτέλες ήχου</strong> δεν θίγονται ποτέ" },
+  "quickActions": { "message": "Γρήγορες ενέργειες" },
+  "actionClickIcon": { "message": "Κάντε κλικ στο <strong>εικονίδιο του Drowzy</strong> στη γραμμή εργαλείων για να δείτε όλες τις καρτέλες σας" },
+  "actionAltS": { "message": "Πατήστε <kbd>Alt+S</kbd> για αναστολή της τρέχουσας καρτέλας" },
+  "actionAltShiftS": { "message": "Πατήστε <kbd>Alt+Shift+S</kbd> για αναστολή όλων των άλλων καρτελών" },
+  "actionAltW": { "message": "Πατήστε <kbd>Alt+W</kbd> για αφύπνιση όλων των ανεσταλμένων καρτελών" },
+  "actionRightClick": { "message": "Κάντε δεξί κλικ σε οποιαδήποτε σελίδα για γρήγορες επιλογές αναστολής" },
+  "onboardingCta": { "message": "Το Drowzy ήδη εκτελείται. Ανοίξτε μερικές καρτέλες και δοκιμάστε το!" },
+  "onboardingBtn": { "message": "Κατάλαβα, πάμε" },
+
+  "privacyTitle": { "message": "Drowzy – Πολιτική απορρήτου" },
+  "privacyUpdated": { "message": "Τελευταία ενημέρωση: Φεβρουάριος 2026" },
+  "privacyShortTitle": { "message": "Η σύντομη εκδοχή" },
+  "privacyShortText": { "message": "Το Drowzy δεν συλλέγει κανένα δεδομένο. Χωρίς αναλύσεις, χωρίς παρακολούθηση, χωρίς εξωτερικούς διακομιστές. Τα πάντα μένουν στον περιηγητή σας." },
+  "privacyStoredTitle": { "message": "Τι αποθηκεύεται" },
+  "privacyStoredText": { "message": "Οι ρυθμίσεις σας (χρονοδιακόπτης αναστολής, λευκή λίστα, προτιμήσεις) αποθηκεύονται μέσω των ενσωματωμένων API αποθήκευσης του Chrome: chrome.storage.sync για ρυθμίσεις που ακολουθούν το προφίλ σας Chrome, chrome.storage.local για στατιστικά και αποθηκευμένες συνεδρίες και chrome.storage.session για προσωρινά δεδομένα όπως χρονοσήμανσες καρτελών. Τίποτα από αυτά δεν αποστέλλεται σε κανέναν διακομιστή τρίτων." },
+  "privacyPermissionsTitle": { "message": "Δικαιώματα" },
+  "privacyPermissionsIntro": { "message": "Το Drowzy χρησιμοποιεί αυτά τα δικαιώματα Chrome:" },
+  "privacyPermTabs": { "message": "tabs – λίστα, αναστολή και επαναφορά καρτελών περιηγητή" },
+  "privacyPermStorage": { "message": "storage – τοπική αποθήκευση των ρυθμίσεών σας" },
+  "privacyPermAlarms": { "message": "alarms – περιοδικοί έλεγχοι για ανενεργές καρτέλες" },
+  "privacyPermContextMenus": { "message": "contextMenus – επιλογές μενού δεξιού κλικ" },
+  "privacyContactTitle": { "message": "Επικοινωνία" },
+  "privacyContactText": { "message": "Ερωτήσεις; Επικοινωνήστε στο drowzyextension@gmail.com" }
+}

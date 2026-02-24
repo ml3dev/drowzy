@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - 分頁休眠與記憶體節省"
+  },
+  "extDescription": {
+    "message": "自動休眠不活躍的分頁，最多可節省 80% RAM。輕量、隱私、無追蹤。分頁絕不會遺失。"
+  },
+  "commandSuspendCurrent": {
+    "message": "休眠目前分頁"
+  },
+  "commandSuspendOthers": {
+    "message": "休眠所有其他分頁"
+  },
+  "commandWakeAll": {
+    "message": "喚醒所有已休眠的分頁"
+  },
+
+  "statSleeping": { "message": "休眠中" },
+  "statProtected": { "message": "已保護" },
+  "statSaved": { "message": "已節省" },
+
+  "suspendOthers": { "message": "休眠其他分頁" },
+  "wakeAll": { "message": "全部喚醒" },
+
+  "neverSuspendSite": { "message": "永不休眠此網站" },
+  "siteWhitelisted": { "message": "網站已加入白名單（點擊移除）" },
+  "activeWontSuspend": { "message": "使用中 – 不會被休眠" },
+  "loading": { "message": "載入中..." },
+
+  "tabsInWindow": { "message": "此視窗中的分頁" },
+  "loadingTabs": { "message": "正在載入分頁..." },
+  "noTabsFound": { "message": "未找到分頁" },
+  "failedToLoad": { "message": "載入失敗。請重新開啟彈出視窗以重試。" },
+
+  "badgeActive": { "message": "使用中" },
+  "badgeSystem": { "message": "系統" },
+  "badgePinned": { "message": "已釘選" },
+  "badgeAudio": { "message": "音訊" },
+  "badgeStarred": { "message": "已加星" },
+  "badgeProtected": { "message": "已保護" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "工作階段" },
+  "sessionNamePlaceholder": { "message": "工作階段名稱（選填）" },
+  "save": { "message": "儲存" },
+  "emptySessionState": { "message": "儲存您的第一個工作階段，隨時恢復分頁" },
+  "open": { "message": "開啟" },
+  "openSessionTitle": { "message": "開啟此工作階段中的分頁" },
+  "deleteSessionTitle": { "message": "刪除工作階段" },
+  "sessionSaved": { "message": "工作階段已儲存！" },
+  "failedToSave": { "message": "儲存失敗" },
+  "restoredTabs": {
+    "message": "已恢復 $COUNT$ 個分頁",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "恢復失敗" },
+  "noSessionsToExport": { "message": "沒有可匯出的工作階段" },
+  "copiedSessionsJson": {
+    "message": "已複製 $COUNT$ 個工作階段為 JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ 個分頁",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "統計" },
+  "statToday": { "message": "今天" },
+  "statAllTime": { "message": "所有時間" },
+  "statRamSaved": { "message": "已節省 RAM（估計）" },
+  "statMemberSince": { "message": "使用起始日" },
+
+  "settings": { "message": "設定" },
+  "autoSuspendAfter": { "message": "自動休眠時間" },
+  "timer5min": { "message": "5 分鐘" },
+  "timer10min": { "message": "10 分鐘" },
+  "timer15min": { "message": "15 分鐘" },
+  "timer30min": { "message": "30 分鐘" },
+  "timer1hour": { "message": "1 小時" },
+  "timer2hours": { "message": "2 小時" },
+  "timer4hours": { "message": "4 小時" },
+  "timerNever": { "message": "從不" },
+  "protectPinned": { "message": "保護已釘選的分頁" },
+  "protectAudio": { "message": "保護有音訊的分頁" },
+  "protectForms": { "message": "保護含表單的分頁" },
+  "suspendOnStartup": { "message": "啟動時休眠分頁" },
+  "enableAutoSuspend": { "message": "啟用自動休眠" },
+  "markSuspended": { "message": "標記已休眠的分頁" },
+  "whitelistedSites": { "message": "白名單網站" },
+  "add": { "message": "新增" },
+  "noSitesWhitelisted": { "message": "沒有白名單網站" },
+
+  "suspending": { "message": "正在休眠..." },
+  "done": { "message": "完成！" },
+  "waking": { "message": "正在喚醒..." },
+  "copiedTabs": {
+    "message": "已複製 $COUNT$ 個分頁到剪貼簿",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "複製失敗" },
+  "copyTabsTitle": { "message": "複製分頁清單到剪貼簿" },
+  "copySessionsTitle": { "message": "複製所有工作階段為 JSON" },
+  "remove": { "message": "移除" },
+
+  "switchToLight": { "message": "切換至淺色模式" },
+  "switchToDark": { "message": "切換至深色模式" },
+
+  "ctxSuspendThis": { "message": "休眠此分頁" },
+  "ctxSuspendOthers": { "message": "休眠所有其他分頁" },
+  "ctxNeverSuspend": { "message": "永不休眠此網站" },
+
+  "maxSessionsReached": { "message": "已達到 20 個工作階段上限。請刪除一個工作階段以儲存新的。" },
+  "noSaveableTabs": { "message": "此視窗中沒有可儲存的分頁。" },
+  "sessionNotFound": { "message": "未找到工作階段。" },
+  "noRestorableTabs": { "message": "此工作階段中沒有可恢復的分頁。" },
+  "sessionDefaultName": {
+    "message": "工作階段 – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "剛剛" },
+  "minutesAgo": {
+    "message": "$COUNT$ 分鐘前",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ 小時前",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "昨天" },
+  "daysAgo": {
+    "message": "$COUNT$ 天前",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "歡迎使用 Drowzy" },
+  "onboardingIntro": { "message": "Drowzy 透過將不活躍的分頁置於休眠狀態來節省記憶體。您的分頁始終安全 – 我們使用 Chrome 的原生捨棄 API，因此即使您解除安裝 Drowzy，分頁也不會遺失。" },
+  "howItWorks": { "message": "運作方式" },
+  "featureAutoSuspend": { "message": "<strong>閒置 30 分鐘的分頁</strong>將自動被休眠" },
+  "featureZeroRam": { "message": "<strong>已休眠的分頁不佔用 RAM</strong>，但仍保留在分頁列中" },
+  "featureClickToWake": { "message": "<strong>點擊任何已休眠的分頁</strong>即可立即喚醒" },
+  "featureProtected": { "message": "<strong>使用中、已釘選和有音訊的分頁</strong>永遠不會被觸碰" },
+  "quickActions": { "message": "快捷操作" },
+  "actionClickIcon": { "message": "點擊工具列中的 <strong>Drowzy 圖示</strong>檢視所有分頁" },
+  "actionAltS": { "message": "按 <kbd>Alt+S</kbd> 休眠目前分頁" },
+  "actionAltShiftS": { "message": "按 <kbd>Alt+Shift+S</kbd> 休眠所有其他分頁" },
+  "actionAltW": { "message": "按 <kbd>Alt+W</kbd> 喚醒所有已休眠的分頁" },
+  "actionRightClick": { "message": "在任何頁面上按右鍵以快速休眠" },
+  "onboardingCta": { "message": "Drowzy 已在執行。開啟幾個分頁試試吧！" },
+  "onboardingBtn": { "message": "了解了，開始使用" },
+
+  "privacyTitle": { "message": "Drowzy – 隱私權政策" },
+  "privacyUpdated": { "message": "最後更新：2026 年 2 月" },
+  "privacyShortTitle": { "message": "簡短版本" },
+  "privacyShortText": { "message": "Drowzy 不收集任何資料。沒有分析、沒有追蹤、沒有外部伺服器。一切都保存在您的瀏覽器中。" },
+  "privacyStoredTitle": { "message": "儲存內容" },
+  "privacyStoredText": { "message": "您的設定（休眠計時器、白名單、偏好）使用 Chrome 內建儲存 API 儲存：chrome.storage.sync 用於跟隨 Chrome 設定檔的設定，chrome.storage.local 用於統計資料和已儲存的工作階段，chrome.storage.session 用於暫時性資料（如分頁時間戳記）。這些資料不會傳送到任何第三方伺服器。" },
+  "privacyPermissionsTitle": { "message": "權限" },
+  "privacyPermissionsIntro": { "message": "Drowzy 使用以下 Chrome 權限：" },
+  "privacyPermTabs": { "message": "tabs – 列出、休眠和恢復瀏覽器分頁" },
+  "privacyPermStorage": { "message": "storage – 在本機儲存您的設定" },
+  "privacyPermAlarms": { "message": "alarms – 定期檢查不活躍的分頁" },
+  "privacyPermContextMenus": { "message": "contextMenus – 右鍵選單選項" },
+  "privacyContactTitle": { "message": "聯絡方式" },
+  "privacyContactText": { "message": "有問題？請聯絡 drowzyextension@gmail.com" }
+}

@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - ଟ୍ୟାବ୍ ସସ୍ପେଣ୍ଡର ଏବଂ ମେମୋରୀ ସେଭର"
+  },
+  "extDescription": {
+    "message": "ନିଷ୍କ୍ରିୟ ଟ୍ୟାବ୍ ଗୁଡ଼ିକୁ ସ୍ୱୟଂଚାଳିତ ଭାବେ ସସ୍ପେଣ୍ଡ କରି 80% ପର୍ଯ୍ୟନ୍ତ RAM ସଞ୍ଚୟ କରନ୍ତୁ। ହାଲୁକା, ଗୋପନୀୟ, କୌଣସି ଟ୍ରାକିଂ ନାହିଁ। ଟ୍ୟାବ୍ କେବେ ହଜେ ନାହିଁ।"
+  },
+  "commandSuspendCurrent": {
+    "message": "ବର୍ତ୍ତମାନର ଟ୍ୟାବ୍ ସସ୍ପେଣ୍ଡ କରନ୍ତୁ"
+  },
+  "commandSuspendOthers": {
+    "message": "ଅନ୍ୟ ସମସ୍ତ ଟ୍ୟାବ୍ ସସ୍ପେଣ୍ଡ କରନ୍ତୁ"
+  },
+  "commandWakeAll": {
+    "message": "ସମସ୍ତ ସସ୍ପେଣ୍ଡ ଟ୍ୟାବ୍ ଜାଗ୍ରତ କରନ୍ତୁ"
+  },
+
+  "statSleeping": { "message": "ଶୋଇଥିବା" },
+  "statProtected": { "message": "ସୁରକ୍ଷିତ" },
+  "statSaved": { "message": "ସଞ୍ଚୟ" },
+
+  "suspendOthers": { "message": "ଅନ୍ୟଗୁଡ଼ିକୁ ସସ୍ପେଣ୍ଡ" },
+  "wakeAll": { "message": "ସମସ୍ତ ଜାଗ୍ରତ" },
+
+  "neverSuspendSite": { "message": "ଏହି ସାଇଟ୍ କେବେ ସସ୍ପେଣ୍ଡ କରନ୍ତୁ ନାହିଁ" },
+  "siteWhitelisted": { "message": "ସାଇଟ୍ ହ୍ୱାଇଟଲିଷ୍ଟ ହୋଇଛି (ହଟାଇବା ପାଇଁ କ୍ଲିକ୍ କରନ୍ତୁ)" },
+  "activeWontSuspend": { "message": "ସକ୍ରିୟ – ସସ୍ପେଣ୍ଡ ହେବ ନାହିଁ" },
+  "loading": { "message": "ଲୋଡ୍ ହେଉଛି..." },
+
+  "tabsInWindow": { "message": "ଏହି ୱିଣ୍ଡୋରେ ଟ୍ୟାବ୍" },
+  "loadingTabs": { "message": "ଟ୍ୟାବ୍ ଲୋଡ୍ ହେଉଛି..." },
+  "noTabsFound": { "message": "କୌଣସି ଟ୍ୟାବ୍ ମିଳିଲା ନାହିଁ" },
+  "failedToLoad": { "message": "ଲୋଡ୍ ବିଫଳ। ପୁନଃଚେଷ୍ଟା ପାଇଁ ପପଅପ୍ ପୁନଃଖୋଲନ୍ତୁ।" },
+
+  "badgeActive": { "message": "ସକ୍ରିୟ" },
+  "badgeSystem": { "message": "ସିଷ୍ଟମ" },
+  "badgePinned": { "message": "ପିନ୍" },
+  "badgeAudio": { "message": "ଅଡିଓ" },
+  "badgeStarred": { "message": "ତାରାଙ୍କିତ" },
+  "badgeProtected": { "message": "ସୁରକ୍ଷିତ" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "ସେସନ୍" },
+  "sessionNamePlaceholder": { "message": "ସେସନ୍ ନାମ (ଇଚ୍ଛାଧୀନ)" },
+  "save": { "message": "ସେଭ୍" },
+  "emptySessionState": { "message": "ଯେକୌଣସି ସମୟରେ ଟ୍ୟାବ୍ ପୁନଃସ୍ଥାପନ ପାଇଁ ଆପଣଙ୍କ ପ୍ରଥମ ସେସନ୍ ସେଭ୍ କରନ୍ତୁ" },
+  "open": { "message": "ଖୋଲନ୍ତୁ" },
+  "openSessionTitle": { "message": "ଏହି ସେସନ୍ ରୁ ଟ୍ୟାବ୍ ଖୋଲନ୍ତୁ" },
+  "deleteSessionTitle": { "message": "ସେସନ୍ ଡିଲିଟ୍ କରନ୍ତୁ" },
+  "sessionSaved": { "message": "ସେସନ୍ ସେଭ୍ ହୋଇଛି!" },
+  "failedToSave": { "message": "ସେଭ୍ ବିଫଳ" },
+  "restoredTabs": {
+    "message": "$COUNT$ ଟ୍ୟାବ୍ ପୁନଃସ୍ଥାପିତ",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "ପୁନଃସ୍ଥାପନ ବିଫଳ" },
+  "noSessionsToExport": { "message": "ଏକ୍ସପୋର୍ଟ କରିବାକୁ କୌଣସି ସେସନ୍ ନାହିଁ" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ ସେସନ୍ JSON ଭାବେ କପି ହୋଇଛି",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ ଟ୍ୟାବ୍",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "ପରିସଂଖ୍ୟାନ" },
+  "statToday": { "message": "ଆଜି" },
+  "statAllTime": { "message": "ସର୍ବକାଳୀନ" },
+  "statRamSaved": { "message": "RAM ସଞ୍ଚୟ (ଆନୁମାନିକ)" },
+  "statMemberSince": { "message": "ସଦସ୍ୟ ହୋଇଥିବା ଦିନ" },
+
+  "settings": { "message": "ସେଟିଂସ୍" },
+  "autoSuspendAfter": { "message": "ପରେ ସ୍ୱୟଂ-ସସ୍ପେଣ୍ଡ" },
+  "timer5min": { "message": "5 ମିନିଟ୍" },
+  "timer10min": { "message": "10 ମିନିଟ୍" },
+  "timer15min": { "message": "15 ମିନିଟ୍" },
+  "timer30min": { "message": "30 ମିନିଟ୍" },
+  "timer1hour": { "message": "1 ଘଣ୍ଟା" },
+  "timer2hours": { "message": "2 ଘଣ୍ଟା" },
+  "timer4hours": { "message": "4 ଘଣ୍ଟା" },
+  "timerNever": { "message": "କେବେ ନୁହେଁ" },
+  "protectPinned": { "message": "ପିନ୍ ଟ୍ୟାବ୍ ସୁରକ୍ଷା କରନ୍ତୁ" },
+  "protectAudio": { "message": "ଅଡିଓ ଟ୍ୟାବ୍ ସୁରକ୍ଷା କରନ୍ତୁ" },
+  "protectForms": { "message": "ଫର୍ମ ଥିବା ଟ୍ୟାବ୍ ସୁରକ୍ଷା କରନ୍ତୁ" },
+  "suspendOnStartup": { "message": "ଆରମ୍ଭରେ ଟ୍ୟାବ୍ ସସ୍ପେଣ୍ଡ କରନ୍ତୁ" },
+  "enableAutoSuspend": { "message": "ସ୍ୱୟଂ-ସସ୍ପେଣ୍ଡ ସକ୍ରିୟ କରନ୍ତୁ" },
+  "markSuspended": { "message": "ସସ୍ପେଣ୍ଡ ଟ୍ୟାବ୍ ଚିହ୍ନିତ କରନ୍ତୁ" },
+  "whitelistedSites": { "message": "ହ୍ୱାଇଟଲିଷ୍ଟ ସାଇଟ୍" },
+  "add": { "message": "ଯୋଡ଼ନ୍ତୁ" },
+  "noSitesWhitelisted": { "message": "କୌଣସି ସାଇଟ୍ ହ୍ୱାଇଟଲିଷ୍ଟ ହୋଇନାହିଁ" },
+
+  "suspending": { "message": "ସସ୍ପେଣ୍ଡ ହେଉଛି..." },
+  "done": { "message": "ସମ୍ପୂର୍ଣ୍ଣ!" },
+  "waking": { "message": "ଜାଗ୍ରତ ହେଉଛି..." },
+  "copiedTabs": {
+    "message": "$COUNT$ ଟ୍ୟାବ୍ କ୍ଲିପବୋର୍ଡରେ କପି ହୋଇଛି",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "କପି ବିଫଳ" },
+  "copyTabsTitle": { "message": "ଟ୍ୟାବ୍ ତାଲିକା କ୍ଲିପବୋର୍ଡରେ କପି କରନ୍ତୁ" },
+  "copySessionsTitle": { "message": "ସମସ୍ତ ସେସନ୍ JSON ଭାବେ କପି କରନ୍ତୁ" },
+  "remove": { "message": "ହଟାନ୍ତୁ" },
+
+  "switchToLight": { "message": "ହାଲୁକା ମୋଡ୍ କୁ ବଦଳାନ୍ତୁ" },
+  "switchToDark": { "message": "ଗାଢ଼ ମୋଡ୍ କୁ ବଦଳାନ୍ତୁ" },
+
+  "ctxSuspendThis": { "message": "ଏହି ଟ୍ୟାବ୍ ସସ୍ପେଣ୍ଡ କରନ୍ତୁ" },
+  "ctxSuspendOthers": { "message": "ଅନ୍ୟ ସମସ୍ତ ଟ୍ୟାବ୍ ସସ୍ପେଣ୍ଡ କରନ୍ତୁ" },
+  "ctxNeverSuspend": { "message": "ଏହି ସାଇଟ୍ କେବେ ସସ୍ପେଣ୍ଡ କରନ୍ତୁ ନାହିଁ" },
+
+  "maxSessionsReached": { "message": "ସର୍ବାଧିକ 20 ସେସନ୍ ସୀମା। ନୂଆ ସେଭ୍ କରିବାକୁ ଗୋଟିଏ ଡିଲିଟ୍ କରନ୍ତୁ।" },
+  "noSaveableTabs": { "message": "ଏହି ୱିଣ୍ଡୋରେ ସେଭ୍ କରିବାଯୋଗ୍ୟ ଟ୍ୟାବ୍ ନାହିଁ।" },
+  "sessionNotFound": { "message": "ସେସନ୍ ମିଳିଲା ନାହିଁ।" },
+  "noRestorableTabs": { "message": "ଏହି ସେସନ୍ ରେ ପୁନଃସ୍ଥାପନଯୋଗ୍ୟ ଟ୍ୟାବ୍ ନାହିଁ।" },
+  "sessionDefaultName": {
+    "message": "ସେସନ୍ – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "ଏଇ ମାତ୍ର" },
+  "minutesAgo": {
+    "message": "$COUNT$ ମିନିଟ୍ ପୂର୍ବେ",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ ଘଣ୍ଟା ପୂର୍ବେ",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "ଗତକାଲି" },
+  "daysAgo": {
+    "message": "$COUNT$ ଦିନ ପୂର୍ବେ",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Drowzy କୁ ସ୍ୱାଗତ" },
+  "onboardingIntro": { "message": "Drowzy ନିଷ୍କ୍ରିୟ ଟ୍ୟାବ୍ ଗୁଡ଼ିକୁ ଶୋଇବାରେ ପକାଇ ମେମୋରୀ ସଞ୍ଚୟ କରେ। ଆପଣଙ୍କ ଟ୍ୟାବ୍ ସର୍ବଦା ନିରାପଦ – ଆମେ Chrome ର ମୂଳ ଡିସ୍କାର୍ଡ API ବ୍ୟବହାର କରୁ, ତେଣୁ ଆପଣ Drowzy ଅନଇନଷ୍ଟଲ୍ କଲେ ମଧ୍ୟ ସେଗୁଡ଼ିକ ରହିଥାଏ।" },
+  "howItWorks": { "message": "ଏହା କିପରି କାମ କରେ" },
+  "featureAutoSuspend": { "message": "<strong>30 ମିନିଟ୍ ନିଷ୍କ୍ରିୟ ଟ୍ୟାବ୍</strong> ସ୍ୱୟଂଚାଳିତ ଭାବେ ସସ୍ପେଣ୍ଡ ହୁଏ" },
+  "featureZeroRam": { "message": "<strong>ସସ୍ପେଣ୍ଡ ଟ୍ୟାବ୍ ଶୂନ୍ୟ RAM ବ୍ୟବହାର କରେ</strong> କିନ୍ତୁ ଟ୍ୟାବ୍ ବାରରେ ରହେ" },
+  "featureClickToWake": { "message": "<strong>ଯେକୌଣସି ସସ୍ପେଣ୍ଡ ଟ୍ୟାବ୍ କ୍ଲିକ୍ କରନ୍ତୁ</strong> ତୁରନ୍ତ ଜାଗ୍ରତ କରିବାକୁ" },
+  "featureProtected": { "message": "<strong>ସକ୍ରିୟ, ପିନ୍ ଏବଂ ଅଡିଓ ଟ୍ୟାବ୍</strong> କେବେ ସ୍ପର୍ଶ ହୁଏ ନାହିଁ" },
+  "quickActions": { "message": "ଦ୍ରୁତ କାର୍ଯ୍ୟ" },
+  "actionClickIcon": { "message": "ଆପଣଙ୍କ ସମସ୍ତ ଟ୍ୟାବ୍ ଦେଖିବାକୁ ଟୁଲବାରରେ <strong>Drowzy ଆଇକନ୍</strong> କ୍ଲିକ୍ କରନ୍ତୁ" },
+  "actionAltS": { "message": "ବର୍ତ୍ତମାନର ଟ୍ୟାବ୍ ସସ୍ପେଣ୍ଡ କରିବାକୁ <kbd>Alt+S</kbd> ଦବାନ୍ତୁ" },
+  "actionAltShiftS": { "message": "ଅନ୍ୟ ସମସ୍ତ ଟ୍ୟାବ୍ ସସ୍ପେଣ୍ଡ କରିବାକୁ <kbd>Alt+Shift+S</kbd> ଦବାନ୍ତୁ" },
+  "actionAltW": { "message": "ସମସ୍ତ ସସ୍ପେଣ୍ଡ ଟ୍ୟାବ୍ ଜାଗ୍ରତ କରିବାକୁ <kbd>Alt+W</kbd> ଦବାନ୍ତୁ" },
+  "actionRightClick": { "message": "ଦ୍ରୁତ ସସ୍ପେଣ୍ଡ ବିକଳ୍ପ ପାଇଁ ଯେକୌଣସି ପୃଷ୍ଠାରେ ଡାହାଣ-କ୍ଲିକ୍ କରନ୍ତୁ" },
+  "onboardingCta": { "message": "Drowzy ପୂର୍ବରୁ ଚାଲୁଛି। କିଛି ଟ୍ୟାବ୍ ଖୋଲି ଚେଷ୍ଟା କରନ୍ତୁ!" },
+  "onboardingBtn": { "message": "ବୁଝିଲି, ଆରମ୍ଭ କରିବା" },
+
+  "privacyTitle": { "message": "Drowzy – ଗୋପନୀୟତା ନୀତି" },
+  "privacyUpdated": { "message": "ଶେଷ ଅପଡେଟ୍: ଫେବୃଆରୀ 2026" },
+  "privacyShortTitle": { "message": "ସଂକ୍ଷିପ୍ତ ସଂସ୍କରଣ" },
+  "privacyShortText": { "message": "Drowzy କୌଣସି ଡାଟା ସଂଗ୍ରହ କରେ ନାହିଁ। କୌଣସି ଆନାଲିଟିକ୍ସ ନାହିଁ, କୌଣସି ଟ୍ରାକିଂ ନାହିଁ, କୌଣସି ବାହ୍ୟ ସର୍ଭର ନାହିଁ। ସବୁକିଛି ଆପଣଙ୍କ ବ୍ରାଉଜରରେ ରହେ।" },
+  "privacyStoredTitle": { "message": "କ'ଣ ସଂରକ୍ଷିତ ହୁଏ" },
+  "privacyStoredText": { "message": "ଆପଣଙ୍କ ସେଟିଂସ୍ (ସସ୍ପେଣ୍ଡ ଟାଇମର, ହ୍ୱାଇଟଲିଷ୍ଟ, ପସନ୍ଦ) Chrome ର ନିର୍ମିତ ଷ୍ଟୋରେଜ୍ API ବ୍ୟବହାର କରି ସେଭ୍ ହୁଏ: chrome.storage.sync ଆପଣଙ୍କ Chrome ପ୍ରୋଫାଇଲ୍ ଅନୁସରଣ କରୁଥିବା ସେଟିଂସ୍ ପାଇଁ, chrome.storage.local ପରିସଂଖ୍ୟାନ ଏବଂ ସେଭ୍ ସେସନ୍ ପାଇଁ, ଏବଂ chrome.storage.session ଅସ୍ଥାୟୀ ଡାଟା ପାଇଁ। ଏଗୁଡ଼ିକ କୌଣସି ତୃତୀୟ-ପକ୍ଷ ସର୍ଭରକୁ ପଠାଯାଏ ନାହିଁ।" },
+  "privacyPermissionsTitle": { "message": "ଅନୁମତି" },
+  "privacyPermissionsIntro": { "message": "Drowzy ଏହି Chrome ଅନୁମତି ବ୍ୟବହାର କରେ:" },
+  "privacyPermTabs": { "message": "tabs – ବ୍ରାଉଜର ଟ୍ୟାବ୍ ତାଲିକା, ସସ୍ପେଣ୍ଡ ଏବଂ ପୁନଃସ୍ଥାପନ" },
+  "privacyPermStorage": { "message": "storage – ସ୍ଥାନୀୟ ଭାବେ ସେଟିଂସ୍ ସେଭ୍" },
+  "privacyPermAlarms": { "message": "alarms – ନିଷ୍କ୍ରିୟ ଟ୍ୟାବ୍ ପାଇଁ ନିୟମିତ ଯାଞ୍ଚ" },
+  "privacyPermContextMenus": { "message": "contextMenus – ଡାହାଣ-କ୍ଲିକ୍ ମେନୁ ବିକଳ୍ପ" },
+  "privacyContactTitle": { "message": "ଯୋଗାଯୋଗ" },
+  "privacyContactText": { "message": "ପ୍ରଶ୍ନ? drowzyextension@gmail.com ରେ ଯୋଗାଯୋଗ କରନ୍ତୁ" }
+}

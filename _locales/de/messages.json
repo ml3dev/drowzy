@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Tab-Suspender & Speichersparer"
+  },
+  "extDescription": {
+    "message": "Inaktive Tabs automatisch suspendieren und bis zu 80 % RAM sparen. Leichtgewichtig, privat, kein Tracking. Tabs gehen nie verloren."
+  },
+  "commandSuspendCurrent": {
+    "message": "Aktuellen Tab suspendieren"
+  },
+  "commandSuspendOthers": {
+    "message": "Alle anderen Tabs suspendieren"
+  },
+  "commandWakeAll": {
+    "message": "Alle suspendierten Tabs aufwecken"
+  },
+
+  "statSleeping": { "message": "schlafend" },
+  "statProtected": { "message": "geschützt" },
+  "statSaved": { "message": "gespart" },
+
+  "suspendOthers": { "message": "Andere suspendieren" },
+  "wakeAll": { "message": "Alle aufwecken" },
+
+  "neverSuspendSite": { "message": "Diese Website nie suspendieren" },
+  "siteWhitelisted": { "message": "Website ist auf der Whitelist (klicken zum Entfernen)" },
+  "activeWontSuspend": { "message": "Aktiv – wird nicht suspendiert" },
+  "loading": { "message": "Wird geladen..." },
+
+  "tabsInWindow": { "message": "Tabs in diesem Fenster" },
+  "loadingTabs": { "message": "Tabs werden geladen..." },
+  "noTabsFound": { "message": "Keine Tabs gefunden" },
+  "failedToLoad": { "message": "Laden fehlgeschlagen. Popup erneut öffnen, um es erneut zu versuchen." },
+
+  "badgeActive": { "message": "Aktiv" },
+  "badgeSystem": { "message": "System" },
+  "badgePinned": { "message": "Angepinnt" },
+  "badgeAudio": { "message": "Audio" },
+  "badgeStarred": { "message": "Markiert" },
+  "badgeProtected": { "message": "Geschützt" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Sitzungen" },
+  "sessionNamePlaceholder": { "message": "Sitzungsname (optional)" },
+  "save": { "message": "Speichern" },
+  "emptySessionState": { "message": "Speichern Sie Ihre erste Sitzung, um Tabs jederzeit wiederherstellen zu können" },
+  "open": { "message": "Öffnen" },
+  "openSessionTitle": { "message": "Tabs aus dieser Sitzung öffnen" },
+  "deleteSessionTitle": { "message": "Sitzung löschen" },
+  "sessionSaved": { "message": "Sitzung gespeichert!" },
+  "failedToSave": { "message": "Speichern fehlgeschlagen" },
+  "restoredTabs": {
+    "message": "$COUNT$ Tabs wiederhergestellt",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Wiederherstellen fehlgeschlagen" },
+  "noSessionsToExport": { "message": "Keine Sitzungen zum Exportieren" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ Sitzungen als JSON kopiert",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ Tabs",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Statistiken" },
+  "statToday": { "message": "Heute" },
+  "statAllTime": { "message": "Insgesamt" },
+  "statRamSaved": { "message": "RAM gespart (geschätzt)" },
+  "statMemberSince": { "message": "Mitglied seit" },
+
+  "settings": { "message": "Einstellungen" },
+  "autoSuspendAfter": { "message": "Automatisch suspendieren nach" },
+  "timer5min": { "message": "5 Minuten" },
+  "timer10min": { "message": "10 Minuten" },
+  "timer15min": { "message": "15 Minuten" },
+  "timer30min": { "message": "30 Minuten" },
+  "timer1hour": { "message": "1 Stunde" },
+  "timer2hours": { "message": "2 Stunden" },
+  "timer4hours": { "message": "4 Stunden" },
+  "timerNever": { "message": "Nie" },
+  "protectPinned": { "message": "Angepinnte Tabs schützen" },
+  "protectAudio": { "message": "Audio-Tabs schützen" },
+  "protectForms": { "message": "Tabs mit Formularen schützen" },
+  "suspendOnStartup": { "message": "Tabs beim Start suspendieren" },
+  "enableAutoSuspend": { "message": "Automatisches Suspendieren aktivieren" },
+  "markSuspended": { "message": "Suspendierte Tabs markieren" },
+  "whitelistedSites": { "message": "Websites auf der Whitelist" },
+  "add": { "message": "Hinzufügen" },
+  "noSitesWhitelisted": { "message": "Keine Websites auf der Whitelist" },
+
+  "suspending": { "message": "Wird suspendiert..." },
+  "done": { "message": "Fertig!" },
+  "waking": { "message": "Wird aufgeweckt..." },
+  "copiedTabs": {
+    "message": "$COUNT$ Tabs in die Zwischenablage kopiert",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Kopieren fehlgeschlagen" },
+  "copyTabsTitle": { "message": "Tab-Liste in die Zwischenablage kopieren" },
+  "copySessionsTitle": { "message": "Alle Sitzungen als JSON kopieren" },
+  "remove": { "message": "Entfernen" },
+
+  "switchToLight": { "message": "Zum hellen Modus wechseln" },
+  "switchToDark": { "message": "Zum dunklen Modus wechseln" },
+
+  "ctxSuspendThis": { "message": "Diesen Tab suspendieren" },
+  "ctxSuspendOthers": { "message": "Alle anderen Tabs suspendieren" },
+  "ctxNeverSuspend": { "message": "Diese Website nie suspendieren" },
+
+  "maxSessionsReached": { "message": "Maximum von 20 Sitzungen erreicht. Löschen Sie eine, um eine neue zu speichern." },
+  "noSaveableTabs": { "message": "Keine speicherbaren Tabs in diesem Fenster." },
+  "sessionNotFound": { "message": "Sitzung nicht gefunden." },
+  "noRestorableTabs": { "message": "Keine wiederherstellbaren Tabs in dieser Sitzung." },
+  "sessionDefaultName": {
+    "message": "Sitzung – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "gerade eben" },
+  "minutesAgo": {
+    "message": "vor $COUNT$ Min.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "vor $COUNT$ Std.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Gestern" },
+  "daysAgo": {
+    "message": "vor $COUNT$ Tagen",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Willkommen bei Drowzy" },
+  "onboardingIntro": { "message": "Drowzy spart Arbeitsspeicher, indem inaktive Tabs in den Schlafmodus versetzt werden. Ihre Tabs sind immer sicher – wir verwenden Chromes native Discard-API, sodass sie auch nach der Deinstallation von Drowzy erhalten bleiben." },
+  "howItWorks": { "message": "So funktioniert es" },
+  "featureAutoSuspend": { "message": "<strong>Tabs, die 30 Minuten inaktiv sind</strong>, werden automatisch suspendiert" },
+  "featureZeroRam": { "message": "<strong>Suspendierte Tabs verwenden null RAM</strong>, bleiben aber in Ihrer Tab-Leiste" },
+  "featureClickToWake": { "message": "<strong>Klicken Sie auf einen suspendierten Tab</strong>, um ihn sofort aufzuwecken" },
+  "featureProtected": { "message": "<strong>Aktive, angepinnte und Audio-Tabs</strong> werden nie angetastet" },
+  "quickActions": { "message": "Schnellaktionen" },
+  "actionClickIcon": { "message": "Klicken Sie auf das <strong>Drowzy-Symbol</strong> in der Symbolleiste, um alle Ihre Tabs zu sehen" },
+  "actionAltS": { "message": "Drücken Sie <kbd>Alt+S</kbd>, um den aktuellen Tab zu suspendieren" },
+  "actionAltShiftS": { "message": "Drücken Sie <kbd>Alt+Shift+S</kbd>, um alle anderen Tabs zu suspendieren" },
+  "actionAltW": { "message": "Drücken Sie <kbd>Alt+W</kbd>, um alle suspendierten Tabs aufzuwecken" },
+  "actionRightClick": { "message": "Rechtsklicken Sie auf eine beliebige Seite für schnelle Suspendierungsoptionen" },
+  "onboardingCta": { "message": "Drowzy läuft bereits. Öffnen Sie ein paar Tabs und probieren Sie es aus!" },
+  "onboardingBtn": { "message": "Verstanden, los geht's" },
+
+  "privacyTitle": { "message": "Drowzy – Datenschutzrichtlinie" },
+  "privacyUpdated": { "message": "Zuletzt aktualisiert: Februar 2026" },
+  "privacyShortTitle": { "message": "Die Kurzversion" },
+  "privacyShortText": { "message": "Drowzy sammelt keine Daten. Keine Analysen, kein Tracking, keine externen Server. Alles bleibt in Ihrem Browser." },
+  "privacyStoredTitle": { "message": "Was gespeichert wird" },
+  "privacyStoredText": { "message": "Ihre Einstellungen (Suspendierungs-Timer, Whitelist, Präferenzen) werden über Chromes integrierte Speicher-APIs gespeichert: chrome.storage.sync für Einstellungen, die Ihrem Chrome-Profil folgen, chrome.storage.local für Statistiken und gespeicherte Sitzungen und chrome.storage.session für temporäre Daten wie Tab-Zeitstempel. Nichts davon wird an einen Drittanbieter-Server gesendet." },
+  "privacyPermissionsTitle": { "message": "Berechtigungen" },
+  "privacyPermissionsIntro": { "message": "Drowzy verwendet diese Chrome-Berechtigungen:" },
+  "privacyPermTabs": { "message": "tabs – Auflisten, Suspendieren und Wiederherstellen von Browser-Tabs" },
+  "privacyPermStorage": { "message": "storage – Lokales Speichern Ihrer Einstellungen" },
+  "privacyPermAlarms": { "message": "alarms – Regelmäßige Überprüfung auf inaktive Tabs" },
+  "privacyPermContextMenus": { "message": "contextMenus – Rechtsklick-Menüoptionen" },
+  "privacyContactTitle": { "message": "Kontakt" },
+  "privacyContactText": { "message": "Fragen? Schreiben Sie an drowzyextension@gmail.com" }
+}

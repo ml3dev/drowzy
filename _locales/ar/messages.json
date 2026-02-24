@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - إيقاف التبويبات وتوفير الذاكرة"
+  },
+  "extDescription": {
+    "message": "إيقاف التبويبات غير النشطة تلقائيًا لتوفير حتى 80% من RAM. خفيف وخاص وبدون تتبع. لن تُفقد تبويباتك أبدًا."
+  },
+  "commandSuspendCurrent": {
+    "message": "تعليق التبويب الحالي"
+  },
+  "commandSuspendOthers": {
+    "message": "تعليق جميع التبويبات الأخرى"
+  },
+  "commandWakeAll": {
+    "message": "إيقاظ جميع التبويبات المعلّقة"
+  },
+
+  "statSleeping": { "message": "نائمة" },
+  "statProtected": { "message": "محمية" },
+  "statSaved": { "message": "تم التوفير" },
+
+  "suspendOthers": { "message": "تعليق الأخرى" },
+  "wakeAll": { "message": "إيقاظ الكل" },
+
+  "neverSuspendSite": { "message": "عدم تعليق هذا الموقع أبدًا" },
+  "siteWhitelisted": { "message": "الموقع في القائمة البيضاء (انقر للإزالة)" },
+  "activeWontSuspend": { "message": "نشط – لن يتم تعليقه" },
+  "loading": { "message": "جارٍ التحميل..." },
+
+  "tabsInWindow": { "message": "التبويبات في هذه النافذة" },
+  "loadingTabs": { "message": "جارٍ تحميل التبويبات..." },
+  "noTabsFound": { "message": "لم يتم العثور على تبويبات" },
+  "failedToLoad": { "message": "فشل التحميل. أعد فتح النافذة المنبثقة للمحاولة مرة أخرى." },
+
+  "badgeActive": { "message": "نشط" },
+  "badgeSystem": { "message": "نظام" },
+  "badgePinned": { "message": "مثبّت" },
+  "badgeAudio": { "message": "صوت" },
+  "badgeStarred": { "message": "مميّز بنجمة" },
+  "badgeProtected": { "message": "محمي" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "الجلسات" },
+  "sessionNamePlaceholder": { "message": "اسم الجلسة (اختياري)" },
+  "save": { "message": "حفظ" },
+  "emptySessionState": { "message": "احفظ أول جلسة لاستعادة التبويبات في أي وقت" },
+  "open": { "message": "فتح" },
+  "openSessionTitle": { "message": "فتح التبويبات من هذه الجلسة" },
+  "deleteSessionTitle": { "message": "حذف الجلسة" },
+  "sessionSaved": { "message": "تم حفظ الجلسة!" },
+  "failedToSave": { "message": "فشل الحفظ" },
+  "restoredTabs": {
+    "message": "تمت استعادة $COUNT$ تبويب",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "فشلت الاستعادة" },
+  "noSessionsToExport": { "message": "لا توجد جلسات للتصدير" },
+  "copiedSessionsJson": {
+    "message": "تم نسخ $COUNT$ جلسة بصيغة JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ تبويب",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "الإحصائيات" },
+  "statToday": { "message": "اليوم" },
+  "statAllTime": { "message": "كل الأوقات" },
+  "statRamSaved": { "message": "RAM الموفّرة (تقديري)" },
+  "statMemberSince": { "message": "عضو منذ" },
+
+  "settings": { "message": "الإعدادات" },
+  "autoSuspendAfter": { "message": "التعليق التلقائي بعد" },
+  "timer5min": { "message": "5 دقائق" },
+  "timer10min": { "message": "10 دقائق" },
+  "timer15min": { "message": "15 دقيقة" },
+  "timer30min": { "message": "30 دقيقة" },
+  "timer1hour": { "message": "ساعة واحدة" },
+  "timer2hours": { "message": "ساعتان" },
+  "timer4hours": { "message": "4 ساعات" },
+  "timerNever": { "message": "أبدًا" },
+  "protectPinned": { "message": "حماية التبويبات المثبّتة" },
+  "protectAudio": { "message": "حماية تبويبات الصوت" },
+  "protectForms": { "message": "حماية التبويبات التي تحتوي على نماذج" },
+  "suspendOnStartup": { "message": "تعليق التبويبات عند بدء التشغيل" },
+  "enableAutoSuspend": { "message": "تفعيل التعليق التلقائي" },
+  "markSuspended": { "message": "وسم التبويبات المعلّقة" },
+  "whitelistedSites": { "message": "المواقع في القائمة البيضاء" },
+  "add": { "message": "إضافة" },
+  "noSitesWhitelisted": { "message": "لا توجد مواقع في القائمة البيضاء" },
+
+  "suspending": { "message": "جارٍ التعليق..." },
+  "done": { "message": "تم!" },
+  "waking": { "message": "جارٍ الإيقاظ..." },
+  "copiedTabs": {
+    "message": "تم نسخ $COUNT$ تبويب إلى الحافظة",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "فشل النسخ" },
+  "copyTabsTitle": { "message": "نسخ قائمة التبويبات إلى الحافظة" },
+  "copySessionsTitle": { "message": "نسخ جميع الجلسات بصيغة JSON" },
+  "remove": { "message": "إزالة" },
+
+  "switchToLight": { "message": "التبديل إلى الوضع الفاتح" },
+  "switchToDark": { "message": "التبديل إلى الوضع الداكن" },
+
+  "ctxSuspendThis": { "message": "تعليق هذا التبويب" },
+  "ctxSuspendOthers": { "message": "تعليق جميع التبويبات الأخرى" },
+  "ctxNeverSuspend": { "message": "عدم تعليق هذا الموقع أبدًا" },
+
+  "maxSessionsReached": { "message": "تم الوصول إلى الحد الأقصى وهو 20 جلسة. احذف واحدة لحفظ جلسة جديدة." },
+  "noSaveableTabs": { "message": "لا توجد تبويبات قابلة للحفظ في هذه النافذة." },
+  "sessionNotFound": { "message": "لم يتم العثور على الجلسة." },
+  "noRestorableTabs": { "message": "لا توجد تبويبات قابلة للاستعادة في هذه الجلسة." },
+  "sessionDefaultName": {
+    "message": "جلسة – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "الآن" },
+  "minutesAgo": {
+    "message": "قبل $COUNT$ د",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "قبل $COUNT$ س",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "أمس" },
+  "daysAgo": {
+    "message": "قبل $COUNT$ ي",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "مرحبًا بك في Drowzy" },
+  "onboardingIntro": { "message": "يوفّر Drowzy الذاكرة عن طريق إخمال التبويبات غير النشطة. تبويباتك آمنة دائمًا – نستخدم واجهة Chrome الأصلية للإلغاء، لذا تبقى حتى لو أزلت Drowzy." },
+  "howItWorks": { "message": "كيف يعمل" },
+  "featureAutoSuspend": { "message": "<strong>التبويبات الخاملة لمدة 30 دقيقة</strong> يتم تعليقها تلقائيًا" },
+  "featureZeroRam": { "message": "<strong>التبويبات المعلّقة لا تستهلك RAM</strong> لكنها تبقى في شريط التبويبات" },
+  "featureClickToWake": { "message": "<strong>انقر على أي تبويب معلّق</strong> لإيقاظه فورًا" },
+  "featureProtected": { "message": "<strong>التبويبات النشطة والمثبّتة وتبويبات الصوت</strong> لا يتم المساس بها أبدًا" },
+  "quickActions": { "message": "إجراءات سريعة" },
+  "actionClickIcon": { "message": "انقر على <strong>أيقونة Drowzy</strong> في شريط الأدوات لرؤية جميع تبويباتك" },
+  "actionAltS": { "message": "اضغط <kbd>Alt+S</kbd> لتعليق التبويب الحالي" },
+  "actionAltShiftS": { "message": "اضغط <kbd>Alt+Shift+S</kbd> لتعليق جميع التبويبات الأخرى" },
+  "actionAltW": { "message": "اضغط <kbd>Alt+W</kbd> لإيقاظ جميع التبويبات المعلّقة" },
+  "actionRightClick": { "message": "انقر بزر الماوس الأيمن على أي صفحة للحصول على خيارات التعليق السريعة" },
+  "onboardingCta": { "message": "Drowzy يعمل بالفعل. افتح بعض التبويبات وجرّبه!" },
+  "onboardingBtn": { "message": "فهمت، هيا بنا" },
+
+  "privacyTitle": { "message": "Drowzy – سياسة الخصوصية" },
+  "privacyUpdated": { "message": "آخر تحديث: فبراير 2026" },
+  "privacyShortTitle": { "message": "النسخة المختصرة" },
+  "privacyShortText": { "message": "Drowzy لا يجمع أي بيانات. لا تحليلات، لا تتبع، لا خوادم خارجية. كل شيء يبقى في متصفحك." },
+  "privacyStoredTitle": { "message": "ما يتم تخزينه" },
+  "privacyStoredText": { "message": "يتم حفظ إعداداتك (مؤقت التعليق، القائمة البيضاء، التفضيلات) باستخدام واجهات التخزين المدمجة في Chrome: chrome.storage.sync للإعدادات التي تتبع ملفك الشخصي في Chrome، وchrome.storage.local للإحصائيات والجلسات المحفوظة، وchrome.storage.session للبيانات المؤقتة مثل طوابع وقت التبويبات. لا يتم إرسال أي من هذا إلى أي خادم تابع لجهة خارجية." },
+  "privacyPermissionsTitle": { "message": "الأذونات" },
+  "privacyPermissionsIntro": { "message": "يستخدم Drowzy أذونات Chrome التالية:" },
+  "privacyPermTabs": { "message": "tabs – عرض وتعليق واستعادة تبويبات المتصفح" },
+  "privacyPermStorage": { "message": "storage – حفظ إعداداتك محليًا" },
+  "privacyPermAlarms": { "message": "alarms – فحوصات دورية للتبويبات غير النشطة" },
+  "privacyPermContextMenus": { "message": "contextMenus – خيارات قائمة النقر بزر الماوس الأيمن" },
+  "privacyContactTitle": { "message": "التواصل" },
+  "privacyContactText": { "message": "أسئلة؟ تواصل معنا على drowzyextension@gmail.com" }
+}

@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - 标签页休眠与内存节省"
+  },
+  "extDescription": {
+    "message": "自动休眠不活跃的标签页，最多可节省 80% RAM。轻量、隐私、无追踪。标签页绝不会丢失。"
+  },
+  "commandSuspendCurrent": {
+    "message": "休眠当前标签页"
+  },
+  "commandSuspendOthers": {
+    "message": "休眠所有其他标签页"
+  },
+  "commandWakeAll": {
+    "message": "唤醒所有已休眠的标签页"
+  },
+
+  "statSleeping": { "message": "休眠中" },
+  "statProtected": { "message": "已保护" },
+  "statSaved": { "message": "已节省" },
+
+  "suspendOthers": { "message": "休眠其他标签页" },
+  "wakeAll": { "message": "全部唤醒" },
+
+  "neverSuspendSite": { "message": "永不休眠此网站" },
+  "siteWhitelisted": { "message": "网站已加入白名单（点击移除）" },
+  "activeWontSuspend": { "message": "活跃中 – 不会被休眠" },
+  "loading": { "message": "加载中..." },
+
+  "tabsInWindow": { "message": "此窗口中的标签页" },
+  "loadingTabs": { "message": "正在加载标签页..." },
+  "noTabsFound": { "message": "未找到标签页" },
+  "failedToLoad": { "message": "加载失败。请重新打开弹出窗口以重试。" },
+
+  "badgeActive": { "message": "活跃" },
+  "badgeSystem": { "message": "系统" },
+  "badgePinned": { "message": "已固定" },
+  "badgeAudio": { "message": "音频" },
+  "badgeStarred": { "message": "已加星" },
+  "badgeProtected": { "message": "已保护" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "会话" },
+  "sessionNamePlaceholder": { "message": "会话名称（可选）" },
+  "save": { "message": "保存" },
+  "emptySessionState": { "message": "保存您的第一个会话，随时恢复标签页" },
+  "open": { "message": "打开" },
+  "openSessionTitle": { "message": "打开此会话中的标签页" },
+  "deleteSessionTitle": { "message": "删除会话" },
+  "sessionSaved": { "message": "会话已保存！" },
+  "failedToSave": { "message": "保存失败" },
+  "restoredTabs": {
+    "message": "已恢复 $COUNT$ 个标签页",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "恢复失败" },
+  "noSessionsToExport": { "message": "没有可导出的会话" },
+  "copiedSessionsJson": {
+    "message": "已复制 $COUNT$ 个会话为 JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ 个标签页",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "统计" },
+  "statToday": { "message": "今天" },
+  "statAllTime": { "message": "全部时间" },
+  "statRamSaved": { "message": "已节省 RAM（估计）" },
+  "statMemberSince": { "message": "使用起始日" },
+
+  "settings": { "message": "设置" },
+  "autoSuspendAfter": { "message": "自动休眠时间" },
+  "timer5min": { "message": "5 分钟" },
+  "timer10min": { "message": "10 分钟" },
+  "timer15min": { "message": "15 分钟" },
+  "timer30min": { "message": "30 分钟" },
+  "timer1hour": { "message": "1 小时" },
+  "timer2hours": { "message": "2 小时" },
+  "timer4hours": { "message": "4 小时" },
+  "timerNever": { "message": "从不" },
+  "protectPinned": { "message": "保护已固定的标签页" },
+  "protectAudio": { "message": "保护有音频的标签页" },
+  "protectForms": { "message": "保护含表单的标签页" },
+  "suspendOnStartup": { "message": "启动时休眠标签页" },
+  "enableAutoSuspend": { "message": "启用自动休眠" },
+  "markSuspended": { "message": "标记已休眠的标签页" },
+  "whitelistedSites": { "message": "白名单网站" },
+  "add": { "message": "添加" },
+  "noSitesWhitelisted": { "message": "没有白名单网站" },
+
+  "suspending": { "message": "正在休眠..." },
+  "done": { "message": "完成！" },
+  "waking": { "message": "正在唤醒..." },
+  "copiedTabs": {
+    "message": "已复制 $COUNT$ 个标签页到剪贴板",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "复制失败" },
+  "copyTabsTitle": { "message": "复制标签页列表到剪贴板" },
+  "copySessionsTitle": { "message": "复制所有会话为 JSON" },
+  "remove": { "message": "移除" },
+
+  "switchToLight": { "message": "切换到浅色模式" },
+  "switchToDark": { "message": "切换到深色模式" },
+
+  "ctxSuspendThis": { "message": "休眠此标签页" },
+  "ctxSuspendOthers": { "message": "休眠所有其他标签页" },
+  "ctxNeverSuspend": { "message": "永不休眠此网站" },
+
+  "maxSessionsReached": { "message": "已达到 20 个会话上限。请删除一个会话以保存新会话。" },
+  "noSaveableTabs": { "message": "此窗口中没有可保存的标签页。" },
+  "sessionNotFound": { "message": "未找到会话。" },
+  "noRestorableTabs": { "message": "此会话中没有可恢复的标签页。" },
+  "sessionDefaultName": {
+    "message": "会话 – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "刚刚" },
+  "minutesAgo": {
+    "message": "$COUNT$ 分钟前",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "$COUNT$ 小时前",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "昨天" },
+  "daysAgo": {
+    "message": "$COUNT$ 天前",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "欢迎使用 Drowzy" },
+  "onboardingIntro": { "message": "Drowzy 通过将不活跃的标签页置于休眠状态来节省内存。您的标签页始终安全 – 我们使用 Chrome 的原生丢弃 API，因此即使您卸载 Drowzy，标签页也不会丢失。" },
+  "howItWorks": { "message": "工作原理" },
+  "featureAutoSuspend": { "message": "<strong>闲置 30 分钟的标签页</strong>将自动被休眠" },
+  "featureZeroRam": { "message": "<strong>已休眠的标签页不占用 RAM</strong>，但仍保留在标签栏中" },
+  "featureClickToWake": { "message": "<strong>点击任何已休眠的标签页</strong>即可立即唤醒" },
+  "featureProtected": { "message": "<strong>活跃、已固定和有音频的标签页</strong>永远不会被触碰" },
+  "quickActions": { "message": "快捷操作" },
+  "actionClickIcon": { "message": "点击工具栏中的 <strong>Drowzy 图标</strong>查看所有标签页" },
+  "actionAltS": { "message": "按 <kbd>Alt+S</kbd> 休眠当前标签页" },
+  "actionAltShiftS": { "message": "按 <kbd>Alt+Shift+S</kbd> 休眠所有其他标签页" },
+  "actionAltW": { "message": "按 <kbd>Alt+W</kbd> 唤醒所有已休眠的标签页" },
+  "actionRightClick": { "message": "在任何页面上右键点击以快速休眠" },
+  "onboardingCta": { "message": "Drowzy 已在运行。打开几个标签页试试吧！" },
+  "onboardingBtn": { "message": "知道了，开始使用" },
+
+  "privacyTitle": { "message": "Drowzy – 隐私政策" },
+  "privacyUpdated": { "message": "最后更新：2026 年 2 月" },
+  "privacyShortTitle": { "message": "简短版本" },
+  "privacyShortText": { "message": "Drowzy 不收集任何数据。没有分析、没有追踪、没有外部服务器。一切都保存在您的浏览器中。" },
+  "privacyStoredTitle": { "message": "存储内容" },
+  "privacyStoredText": { "message": "您的设置（休眠计时器、白名单、偏好）使用 Chrome 内置存储 API 保存：chrome.storage.sync 用于跟随 Chrome 配置文件的设置，chrome.storage.local 用于统计数据和已保存的会话，chrome.storage.session 用于临时数据（如标签页时间戳）。这些数据不会发送到任何第三方服务器。" },
+  "privacyPermissionsTitle": { "message": "权限" },
+  "privacyPermissionsIntro": { "message": "Drowzy 使用以下 Chrome 权限：" },
+  "privacyPermTabs": { "message": "tabs – 列出、休眠和恢复浏览器标签页" },
+  "privacyPermStorage": { "message": "storage – 在本地保存您的设置" },
+  "privacyPermAlarms": { "message": "alarms – 定期检查不活跃的标签页" },
+  "privacyPermContextMenus": { "message": "contextMenus – 右键菜单选项" },
+  "privacyContactTitle": { "message": "联系方式" },
+  "privacyContactText": { "message": "有问题？请联系 drowzyextension@gmail.com" }
+}

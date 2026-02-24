@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Suspensión de pestañas y ahorro de memoria"
+  },
+  "extDescription": {
+    "message": "Suspende automáticamente las pestañas inactivas para ahorrar hasta un 80% de RAM. Ligero, privado, sin rastreo. Las pestañas nunca se pierden."
+  },
+  "commandSuspendCurrent": {
+    "message": "Suspender la pestaña actual"
+  },
+  "commandSuspendOthers": {
+    "message": "Suspender todas las demás pestañas"
+  },
+  "commandWakeAll": {
+    "message": "Despertar todas las pestañas suspendidas"
+  },
+
+  "statSleeping": { "message": "durmiendo" },
+  "statProtected": { "message": "protegidas" },
+  "statSaved": { "message": "ahorrado" },
+
+  "suspendOthers": { "message": "Suspender otras" },
+  "wakeAll": { "message": "Despertar todas" },
+
+  "neverSuspendSite": { "message": "No suspender nunca este sitio" },
+  "siteWhitelisted": { "message": "Sitio en lista blanca (clic para eliminar)" },
+  "activeWontSuspend": { "message": "Activa – no se suspenderá" },
+  "loading": { "message": "Cargando..." },
+
+  "tabsInWindow": { "message": "Pestañas en esta ventana" },
+  "loadingTabs": { "message": "Cargando pestañas..." },
+  "noTabsFound": { "message": "No se encontraron pestañas" },
+  "failedToLoad": { "message": "Error al cargar. Vuelve a abrir el popup para reintentar." },
+
+  "badgeActive": { "message": "Activa" },
+  "badgeSystem": { "message": "Sistema" },
+  "badgePinned": { "message": "Fijada" },
+  "badgeAudio": { "message": "Audio" },
+  "badgeStarred": { "message": "Destacada" },
+  "badgeProtected": { "message": "Protegida" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Sesiones" },
+  "sessionNamePlaceholder": { "message": "Nombre de sesión (opcional)" },
+  "save": { "message": "Guardar" },
+  "emptySessionState": { "message": "Guarda tu primera sesión para restaurar pestañas en cualquier momento" },
+  "open": { "message": "Abrir" },
+  "openSessionTitle": { "message": "Abrir pestañas de esta sesión" },
+  "deleteSessionTitle": { "message": "Eliminar sesión" },
+  "sessionSaved": { "message": "¡Sesión guardada!" },
+  "failedToSave": { "message": "Error al guardar" },
+  "restoredTabs": {
+    "message": "$COUNT$ pestañas restauradas",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Error al restaurar" },
+  "noSessionsToExport": { "message": "No hay sesiones para exportar" },
+  "copiedSessionsJson": {
+    "message": "$COUNT$ sesiones copiadas como JSON",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ pestañas",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Estadísticas" },
+  "statToday": { "message": "Hoy" },
+  "statAllTime": { "message": "Desde siempre" },
+  "statRamSaved": { "message": "RAM ahorrada (est.)" },
+  "statMemberSince": { "message": "Miembro desde" },
+
+  "settings": { "message": "Ajustes" },
+  "autoSuspendAfter": { "message": "Suspender automáticamente después de" },
+  "timer5min": { "message": "5 minutos" },
+  "timer10min": { "message": "10 minutos" },
+  "timer15min": { "message": "15 minutos" },
+  "timer30min": { "message": "30 minutos" },
+  "timer1hour": { "message": "1 hora" },
+  "timer2hours": { "message": "2 horas" },
+  "timer4hours": { "message": "4 horas" },
+  "timerNever": { "message": "Nunca" },
+  "protectPinned": { "message": "Proteger pestañas fijadas" },
+  "protectAudio": { "message": "Proteger pestañas con audio" },
+  "protectForms": { "message": "Proteger pestañas con formularios" },
+  "suspendOnStartup": { "message": "Suspender pestañas al iniciar" },
+  "enableAutoSuspend": { "message": "Activar suspensión automática" },
+  "markSuspended": { "message": "Marcar pestañas suspendidas" },
+  "whitelistedSites": { "message": "Sitios en lista blanca" },
+  "add": { "message": "Añadir" },
+  "noSitesWhitelisted": { "message": "Ningún sitio en lista blanca" },
+
+  "suspending": { "message": "Suspendiendo..." },
+  "done": { "message": "¡Hecho!" },
+  "waking": { "message": "Despertando..." },
+  "copiedTabs": {
+    "message": "$COUNT$ pestañas copiadas al portapapeles",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Error al copiar" },
+  "copyTabsTitle": { "message": "Copiar lista de pestañas al portapapeles" },
+  "copySessionsTitle": { "message": "Copiar todas las sesiones como JSON" },
+  "remove": { "message": "Eliminar" },
+
+  "switchToLight": { "message": "Cambiar a modo claro" },
+  "switchToDark": { "message": "Cambiar a modo oscuro" },
+
+  "ctxSuspendThis": { "message": "Suspender esta pestaña" },
+  "ctxSuspendOthers": { "message": "Suspender todas las demás pestañas" },
+  "ctxNeverSuspend": { "message": "No suspender nunca este sitio" },
+
+  "maxSessionsReached": { "message": "Se ha alcanzado el máximo de 20 sesiones. Elimina una para guardar otra nueva." },
+  "noSaveableTabs": { "message": "No hay pestañas guardables en esta ventana." },
+  "sessionNotFound": { "message": "Sesión no encontrada." },
+  "noRestorableTabs": { "message": "No hay pestañas restaurables en esta sesión." },
+  "sessionDefaultName": {
+    "message": "Sesión – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "ahora mismo" },
+  "minutesAgo": {
+    "message": "hace $COUNT$ min",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "hace $COUNT$ h",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Ayer" },
+  "daysAgo": {
+    "message": "hace $COUNT$ d",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Bienvenido a Drowzy" },
+  "onboardingIntro": { "message": "Drowzy ahorra memoria poniendo a dormir las pestañas inactivas. Tus pestañas siempre están seguras: usamos la API nativa de descarte de Chrome, así que sobreviven aunque desinstales Drowzy." },
+  "howItWorks": { "message": "Cómo funciona" },
+  "featureAutoSuspend": { "message": "<strong>Las pestañas inactivas durante 30 minutos</strong> se suspenden automáticamente" },
+  "featureZeroRam": { "message": "<strong>Las pestañas suspendidas no usan RAM</strong> pero permanecen en la barra de pestañas" },
+  "featureClickToWake": { "message": "<strong>Haz clic en cualquier pestaña suspendida</strong> para despertarla al instante" },
+  "featureProtected": { "message": "<strong>Las pestañas activas, fijadas y con audio</strong> nunca se tocan" },
+  "quickActions": { "message": "Acciones rápidas" },
+  "actionClickIcon": { "message": "Haz clic en el <strong>icono de Drowzy</strong> en la barra de herramientas para ver todas tus pestañas" },
+  "actionAltS": { "message": "Pulsa <kbd>Alt+S</kbd> para suspender la pestaña actual" },
+  "actionAltShiftS": { "message": "Pulsa <kbd>Alt+Shift+S</kbd> para suspender todas las demás pestañas" },
+  "actionAltW": { "message": "Pulsa <kbd>Alt+W</kbd> para despertar todas las pestañas suspendidas" },
+  "actionRightClick": { "message": "Haz clic derecho en cualquier página para opciones rápidas de suspensión" },
+  "onboardingCta": { "message": "Drowzy ya está funcionando. ¡Abre algunas pestañas y pruébalo!" },
+  "onboardingBtn": { "message": "Entendido, vamos" },
+
+  "privacyTitle": { "message": "Drowzy – Política de privacidad" },
+  "privacyUpdated": { "message": "Última actualización: febrero de 2026" },
+  "privacyShortTitle": { "message": "La versión corta" },
+  "privacyShortText": { "message": "Drowzy no recopila ningún dato. Sin analíticas, sin rastreo, sin servidores externos. Todo permanece en tu navegador." },
+  "privacyStoredTitle": { "message": "Qué se almacena" },
+  "privacyStoredText": { "message": "Tus ajustes (temporizador de suspensión, lista blanca, preferencias) se guardan usando las API de almacenamiento integradas de Chrome: chrome.storage.sync para ajustes que siguen tu perfil de Chrome, chrome.storage.local para estadísticas y sesiones guardadas, y chrome.storage.session para datos temporales como las marcas de tiempo de las pestañas. Nada de esto se envía a ningún servidor de terceros." },
+  "privacyPermissionsTitle": { "message": "Permisos" },
+  "privacyPermissionsIntro": { "message": "Drowzy usa estos permisos de Chrome:" },
+  "privacyPermTabs": { "message": "tabs – listar, suspender y restaurar pestañas del navegador" },
+  "privacyPermStorage": { "message": "storage – guardar tus ajustes localmente" },
+  "privacyPermAlarms": { "message": "alarms – comprobaciones periódicas de pestañas inactivas" },
+  "privacyPermContextMenus": { "message": "contextMenus – opciones del menú del clic derecho" },
+  "privacyContactTitle": { "message": "Contacto" },
+  "privacyContactText": { "message": "¿Preguntas? Escríbenos a drowzyextension@gmail.com" }
+}

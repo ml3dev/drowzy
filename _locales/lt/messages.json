@@ -1,0 +1,167 @@
+{
+  "extName": {
+    "message": "Drowzy - Kortelių sustabdytojas ir atminties taupytojas"
+  },
+  "extDescription": {
+    "message": "Automatiškai sustabdykite neaktyvias korteles ir sutaupykite iki 80% RAM. Lengvas, privatus, be sekimo. Kortelės niekada neprarandamos."
+  },
+  "commandSuspendCurrent": {
+    "message": "Sustabdyti dabartinę kortelę"
+  },
+  "commandSuspendOthers": {
+    "message": "Sustabdyti visas kitas korteles"
+  },
+  "commandWakeAll": {
+    "message": "Pažadinti visas sustabdytas korteles"
+  },
+
+  "statSleeping": { "message": "miega" },
+  "statProtected": { "message": "apsaugota" },
+  "statSaved": { "message": "sutaupyta" },
+
+  "suspendOthers": { "message": "Sustabdyti kitas" },
+  "wakeAll": { "message": "Pažadinti visas" },
+
+  "neverSuspendSite": { "message": "Niekada nestabdyti šios svetainės" },
+  "siteWhitelisted": { "message": "Svetainė yra baltajame sąraše (spustelėkite, kad pašalintumėte)" },
+  "activeWontSuspend": { "message": "Aktyvi – nebus sustabdyta" },
+  "loading": { "message": "Kraunama..." },
+
+  "tabsInWindow": { "message": "Kortelės šiame lange" },
+  "loadingTabs": { "message": "Kraunamos kortelės..." },
+  "noTabsFound": { "message": "Kortelių nerasta" },
+  "failedToLoad": { "message": "Nepavyko įkelti. Iš naujo atidarykite iššokantį langą, kad bandytumėte dar kartą." },
+
+  "badgeActive": { "message": "Aktyvi" },
+  "badgeSystem": { "message": "Sistema" },
+  "badgePinned": { "message": "Prisegta" },
+  "badgeAudio": { "message": "Garsas" },
+  "badgeStarred": { "message": "Pažymėta" },
+  "badgeProtected": { "message": "Apsaugota" },
+  "badgeZzz": { "message": "zzz" },
+
+  "sessions": { "message": "Sesijos" },
+  "sessionNamePlaceholder": { "message": "Sesijos pavadinimas (neprivaloma)" },
+  "save": { "message": "Išsaugoti" },
+  "emptySessionState": { "message": "Išsaugokite pirmąją sesiją, kad galėtumėte bet kada atkurti korteles" },
+  "open": { "message": "Atidaryti" },
+  "openSessionTitle": { "message": "Atidaryti korteles iš šios sesijos" },
+  "deleteSessionTitle": { "message": "Ištrinti sesiją" },
+  "sessionSaved": { "message": "Sesija išsaugota!" },
+  "failedToSave": { "message": "Nepavyko išsaugoti" },
+  "restoredTabs": {
+    "message": "Atkurta kortelių: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToRestore": { "message": "Nepavyko atkurti" },
+  "noSessionsToExport": { "message": "Nėra sesijų eksportavimui" },
+  "copiedSessionsJson": {
+    "message": "Nukopijuota sesijų kaip JSON: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tabsCount": {
+    "message": "$COUNT$ kort.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "stats": { "message": "Statistika" },
+  "statToday": { "message": "Šiandien" },
+  "statAllTime": { "message": "Iš viso" },
+  "statRamSaved": { "message": "Sutaupyta RAM (apytiksliai)" },
+  "statMemberSince": { "message": "Narys nuo" },
+
+  "settings": { "message": "Nustatymai" },
+  "autoSuspendAfter": { "message": "Automatinis sustabdymas po" },
+  "timer5min": { "message": "5 minučių" },
+  "timer10min": { "message": "10 minučių" },
+  "timer15min": { "message": "15 minučių" },
+  "timer30min": { "message": "30 minučių" },
+  "timer1hour": { "message": "1 valandos" },
+  "timer2hours": { "message": "2 valandų" },
+  "timer4hours": { "message": "4 valandų" },
+  "timerNever": { "message": "Niekada" },
+  "protectPinned": { "message": "Apsaugoti prisegtinas korteles" },
+  "protectAudio": { "message": "Apsaugoti garso korteles" },
+  "protectForms": { "message": "Apsaugoti korteles su formomis" },
+  "suspendOnStartup": { "message": "Sustabdyti korteles paleidžiant" },
+  "enableAutoSuspend": { "message": "Įjungti automatinį sustabdymą" },
+  "markSuspended": { "message": "Žymėti sustabdytas korteles" },
+  "whitelistedSites": { "message": "Baltojo sąrašo svetainės" },
+  "add": { "message": "Pridėti" },
+  "noSitesWhitelisted": { "message": "Baltajame sąraše svetainių nėra" },
+
+  "suspending": { "message": "Sustabdoma..." },
+  "done": { "message": "Atlikta!" },
+  "waking": { "message": "Žadinama..." },
+  "copiedTabs": {
+    "message": "Nukopijuota kortelių į iškarpinę: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "failedToCopy": { "message": "Nepavyko nukopijuoti" },
+  "copyTabsTitle": { "message": "Kopijuoti kortelių sąrašą į iškarpinę" },
+  "copySessionsTitle": { "message": "Kopijuoti visas sesijas kaip JSON" },
+  "remove": { "message": "Pašalinti" },
+
+  "switchToLight": { "message": "Perjungti į šviesų režimą" },
+  "switchToDark": { "message": "Perjungti į tamsų režimą" },
+
+  "ctxSuspendThis": { "message": "Sustabdyti šią kortelę" },
+  "ctxSuspendOthers": { "message": "Sustabdyti visas kitas korteles" },
+  "ctxNeverSuspend": { "message": "Niekada nestabdyti šios svetainės" },
+
+  "maxSessionsReached": { "message": "Pasiektas 20 sesijų limitas. Ištrinkite vieną, kad išsaugotumėte naują." },
+  "noSaveableTabs": { "message": "Šiame lange nėra išsaugotinų kortelių." },
+  "sessionNotFound": { "message": "Sesija nerasta." },
+  "noRestorableTabs": { "message": "Šioje sesijoje nėra atkurtinų kortelių." },
+  "sessionDefaultName": {
+    "message": "Sesija – $DATE$",
+    "placeholders": { "date": { "content": "$1" } }
+  },
+  "markSuspendedPrefix": { "message": "[zzz] " },
+
+  "justNow": { "message": "ką tik" },
+  "minutesAgo": {
+    "message": "prieš $COUNT$ min.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "hoursAgo": {
+    "message": "prieš $COUNT$ val.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "yesterday": { "message": "Vakar" },
+  "daysAgo": {
+    "message": "prieš $COUNT$ d.",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+
+  "onboardingTitle": { "message": "Sveiki atvykę į Drowzy" },
+  "onboardingIntro": { "message": "Drowzy taupo atmintį užmigdydamas neaktyvias korteles. Jūsų kortelės visada saugios – naudojame Chrome integruotą atmetimo API, todėl jos išlieka net pašalinus Drowzy." },
+  "howItWorks": { "message": "Kaip tai veikia" },
+  "featureAutoSuspend": { "message": "<strong>30 minučių neaktyvios kortelės</strong> automatiškai sustabdomos" },
+  "featureZeroRam": { "message": "<strong>Sustabdytos kortelės nenaudoja RAM</strong>, bet lieka kortelių juostoje" },
+  "featureClickToWake": { "message": "<strong>Spustelėkite bet kurią sustabdytą kortelę</strong>, kad ją akimirksniu pažadintumėte" },
+  "featureProtected": { "message": "<strong>Aktyvios, prisegtos ir garso kortelės</strong> niekada neliečiamos" },
+  "quickActions": { "message": "Spartieji veiksmai" },
+  "actionClickIcon": { "message": "Spustelėkite <strong>Drowzy piktogramą</strong> įrankių juostoje, kad pamatytumėte visas savo korteles" },
+  "actionAltS": { "message": "Paspauskite <kbd>Alt+S</kbd>, kad sustabdytumėte dabartinę kortelę" },
+  "actionAltShiftS": { "message": "Paspauskite <kbd>Alt+Shift+S</kbd>, kad sustabdytumėte visas kitas korteles" },
+  "actionAltW": { "message": "Paspauskite <kbd>Alt+W</kbd>, kad pažadintumėte visas sustabdytas korteles" },
+  "actionRightClick": { "message": "Dešiniuoju pelės mygtuku spustelėkite bet kuriame puslapyje, kad pasiektumėte sparčiojo sustabdymo parinktis" },
+  "onboardingCta": { "message": "Drowzy jau veikia. Atidarykite kelias korteles ir išbandykite!" },
+  "onboardingBtn": { "message": "Supratau, pradėkime" },
+
+  "privacyTitle": { "message": "Drowzy – Privatumo politika" },
+  "privacyUpdated": { "message": "Paskutinį kartą atnaujinta: 2026 m. vasaris" },
+  "privacyShortTitle": { "message": "Trumpa versija" },
+  "privacyShortText": { "message": "Drowzy nerenka jokių duomenų. Jokios analitikos, jokio sekimo, jokių išorinių serverių. Viskas lieka jūsų naršyklėje." },
+  "privacyStoredTitle": { "message": "Kas saugoma" },
+  "privacyStoredText": { "message": "Jūsų nustatymai (sustabdymo laikmatis, baltasis sąrašas, nuostatos) saugomi naudojant Chrome integruotas saugojimo API: chrome.storage.sync nustatymams, kurie seka jūsų Chrome profilį, chrome.storage.local statistikai ir išsaugotoms sesijoms, ir chrome.storage.session laikiniems duomenims, pvz., kortelių laiko žymoms. Niekas iš to nesiunčiama jokiam trečiosios šalies serveriui." },
+  "privacyPermissionsTitle": { "message": "Leidimai" },
+  "privacyPermissionsIntro": { "message": "Drowzy naudoja šiuos Chrome leidimus:" },
+  "privacyPermTabs": { "message": "tabs – naršyklės kortelių sąrašas, sustabdymas ir atkūrimas" },
+  "privacyPermStorage": { "message": "storage – nustatymų saugojimas vietinėje atmintyje" },
+  "privacyPermAlarms": { "message": "alarms – periodiniai neaktyvių kortelių patikrinimai" },
+  "privacyPermContextMenus": { "message": "contextMenus – dešiniojo pelės mygtuko meniu parinktys" },
+  "privacyContactTitle": { "message": "Kontaktai" },
+  "privacyContactText": { "message": "Turite klausimų? Rašykite adresu drowzyextension@gmail.com" }
+}
