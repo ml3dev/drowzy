@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Összes felfüggesztett lap felébresztése"
   },
-
-  "statSleeping": { "message": "alszik" },
-  "statProtected": { "message": "védett" },
-  "statSaved": { "message": "megtakarítva" },
-
-  "suspendOthers": { "message": "Többi felfüggesztése" },
-  "wakeAll": { "message": "Összes felébresztése" },
-
-  "neverSuspendSite": { "message": "Soha ne függeszd fel ezt az oldalt" },
-  "siteWhitelisted": { "message": "Az oldal engedélyezőlistán van (kattints az eltávolításhoz)" },
-  "activeWontSuspend": { "message": "Aktív – nem lesz felfüggesztve" },
-  "loading": { "message": "Betöltés..." },
-
-  "tabsInWindow": { "message": "Lapok ebben az ablakban" },
-  "loadingTabs": { "message": "Lapok betöltése..." },
-  "noTabsFound": { "message": "Nem található lap" },
-  "failedToLoad": { "message": "Betöltés sikertelen. Nyisd meg újra a felugró ablakot az újrapróbálkozáshoz." },
-
-  "badgeActive": { "message": "Aktív" },
-  "badgeSystem": { "message": "Rendszer" },
-  "badgePinned": { "message": "Rögzített" },
-  "badgeAudio": { "message": "Hang" },
-  "badgeStarred": { "message": "Csillagozott" },
-  "badgeProtected": { "message": "Védett" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Munkamenetek" },
-  "sessionNamePlaceholder": { "message": "Munkamenet neve (nem kötelező)" },
-  "save": { "message": "Mentés" },
-  "emptySessionState": { "message": "Mentsd el az első munkameneted, hogy bármikor visszaállíthasd a lapjaidat" },
-  "open": { "message": "Megnyitás" },
-  "openSessionTitle": { "message": "Lapok megnyitása ebből a munkamenetből" },
-  "deleteSessionTitle": { "message": "Munkamenet törlése" },
-  "sessionSaved": { "message": "Munkamenet mentve!" },
-  "failedToSave": { "message": "Mentés sikertelen" },
+  "statSleeping": {
+    "message": "alszik"
+  },
+  "statProtected": {
+    "message": "védett"
+  },
+  "statSaved": {
+    "message": "megtakarítva"
+  },
+  "suspendOthers": {
+    "message": "Többi felfüggesztése"
+  },
+  "wakeAll": {
+    "message": "Összes felébresztése"
+  },
+  "neverSuspendSite": {
+    "message": "Soha ne függeszd fel ezt az oldalt"
+  },
+  "siteWhitelisted": {
+    "message": "Az oldal engedélyezőlistán van (kattints az eltávolításhoz)"
+  },
+  "activeWontSuspend": {
+    "message": "Aktív – nem lesz felfüggesztve"
+  },
+  "loading": {
+    "message": "Betöltés..."
+  },
+  "tabsInWindow": {
+    "message": "Lapok ebben az ablakban"
+  },
+  "loadingTabs": {
+    "message": "Lapok betöltése..."
+  },
+  "noTabsFound": {
+    "message": "Nem található lap"
+  },
+  "failedToLoad": {
+    "message": "Betöltés sikertelen. Nyisd meg újra a felugró ablakot az újrapróbálkozáshoz."
+  },
+  "badgeActive": {
+    "message": "Aktív"
+  },
+  "badgeSystem": {
+    "message": "Rendszer"
+  },
+  "badgePinned": {
+    "message": "Rögzített"
+  },
+  "badgeAudio": {
+    "message": "Hang"
+  },
+  "badgeStarred": {
+    "message": "Csillagozott"
+  },
+  "badgeProtected": {
+    "message": "Védett"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Munkamenetek"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Munkamenet neve (nem kötelező)"
+  },
+  "save": {
+    "message": "Mentés"
+  },
+  "emptySessionState": {
+    "message": "Mentsd el az első munkameneted, hogy bármikor visszaállíthasd a lapjaidat"
+  },
+  "open": {
+    "message": "Megnyitás"
+  },
+  "openSessionTitle": {
+    "message": "Lapok megnyitása ebből a munkamenetből"
+  },
+  "deleteSessionTitle": {
+    "message": "Munkamenet törlése"
+  },
+  "sessionSaved": {
+    "message": "Munkamenet mentve!"
+  },
+  "failedToSave": {
+    "message": "Mentés sikertelen"
+  },
   "restoredTabs": {
     "message": "$COUNT$ lap visszaállítva",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Visszaállítás sikertelen" },
-  "noSessionsToExport": { "message": "Nincs exportálható munkamenet" },
+  "failedToRestore": {
+    "message": "Visszaállítás sikertelen"
+  },
+  "noSessionsToExport": {
+    "message": "Nincs exportálható munkamenet"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ munkamenet másolva JSON-ként",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ lap",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statisztikák" },
-  "statToday": { "message": "Ma" },
-  "statAllTime": { "message": "Összesen" },
-  "statRamSaved": { "message": "Megtakarított RAM (becsült)" },
-  "statMemberSince": { "message": "Tag óta" },
-
-  "settings": { "message": "Beállítások" },
-  "autoSuspendAfter": { "message": "Automatikus felfüggesztés ennyi idő után" },
-  "timer5min": { "message": "5 perc" },
-  "timer10min": { "message": "10 perc" },
-  "timer15min": { "message": "15 perc" },
-  "timer30min": { "message": "30 perc" },
-  "timer1hour": { "message": "1 óra" },
-  "timer2hours": { "message": "2 óra" },
-  "timer4hours": { "message": "4 óra" },
-  "timerNever": { "message": "Soha" },
-  "protectPinned": { "message": "Rögzített lapok védelme" },
-  "protectAudio": { "message": "Hangot lejátszó lapok védelme" },
-  "protectForms": { "message": "Űrlapokat tartalmazó lapok védelme" },
-  "suspendOnStartup": { "message": "Lapok felfüggesztése indításkor" },
-  "enableAutoSuspend": { "message": "Automatikus felfüggesztés engedélyezése" },
-  "markSuspended": { "message": "Felfüggesztett lapok megjelölése" },
-  "whitelistedSites": { "message": "Engedélyezett oldalak" },
-  "add": { "message": "Hozzáadás" },
-  "noSitesWhitelisted": { "message": "Nincsenek engedélyezett oldalak" },
-
-  "suspending": { "message": "Felfüggesztés..." },
-  "done": { "message": "Kész!" },
-  "waking": { "message": "Ébresztés..." },
+  "stats": {
+    "message": "Statisztikák"
+  },
+  "statToday": {
+    "message": "Ma"
+  },
+  "statAllTime": {
+    "message": "Összesen"
+  },
+  "statRamSaved": {
+    "message": "Megtakarított RAM (becsült)"
+  },
+  "statMemberSince": {
+    "message": "Tag óta"
+  },
+  "settings": {
+    "message": "Beállítások"
+  },
+  "autoSuspendAfter": {
+    "message": "Automatikus felfüggesztés ennyi idő után"
+  },
+  "timer5min": {
+    "message": "5 perc"
+  },
+  "timer10min": {
+    "message": "10 perc"
+  },
+  "timer15min": {
+    "message": "15 perc"
+  },
+  "timer30min": {
+    "message": "30 perc"
+  },
+  "timer1hour": {
+    "message": "1 óra"
+  },
+  "timer2hours": {
+    "message": "2 óra"
+  },
+  "timer4hours": {
+    "message": "4 óra"
+  },
+  "timerNever": {
+    "message": "Soha"
+  },
+  "protectPinned": {
+    "message": "Rögzített lapok védelme"
+  },
+  "protectAudio": {
+    "message": "Hangot lejátszó lapok védelme"
+  },
+  "protectForms": {
+    "message": "Űrlapokat tartalmazó lapok védelme"
+  },
+  "suspendOnStartup": {
+    "message": "Lapok felfüggesztése indításkor"
+  },
+  "enableAutoSuspend": {
+    "message": "Automatikus felfüggesztés engedélyezése"
+  },
+  "markSuspended": {
+    "message": "Felfüggesztett lapok megjelölése"
+  },
+  "whitelistedSites": {
+    "message": "Engedélyezett oldalak"
+  },
+  "add": {
+    "message": "Hozzáadás"
+  },
+  "noSitesWhitelisted": {
+    "message": "Nincsenek engedélyezett oldalak"
+  },
+  "suspending": {
+    "message": "Felfüggesztés..."
+  },
+  "done": {
+    "message": "Kész!"
+  },
+  "waking": {
+    "message": "Ébresztés..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ lap másolva a vágólapra",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Másolás sikertelen" },
-  "copyTabsTitle": { "message": "Laplista másolása a vágólapra" },
-  "copySessionsTitle": { "message": "Összes munkamenet másolása JSON-ként" },
-  "remove": { "message": "Eltávolítás" },
-
-  "switchToLight": { "message": "Váltás világos módra" },
-  "switchToDark": { "message": "Váltás sötét módra" },
-
-  "ctxSuspendThis": { "message": "Lap felfüggesztése" },
-  "ctxSuspendOthers": { "message": "Összes többi lap felfüggesztése" },
-  "ctxNeverSuspend": { "message": "Soha ne függeszd fel ezt az oldalt" },
-
-  "maxSessionsReached": { "message": "Elérted a maximális 20 munkamenetet. Törölj egyet az új mentéshez." },
-  "noSaveableTabs": { "message": "Nincsenek menthető lapok ebben az ablakban." },
-  "sessionNotFound": { "message": "Munkamenet nem található." },
-  "noRestorableTabs": { "message": "Nincsenek visszaállítható lapok ebben a munkamenetben." },
+  "failedToCopy": {
+    "message": "Másolás sikertelen"
+  },
+  "copyTabsTitle": {
+    "message": "Laplista másolása a vágólapra"
+  },
+  "copySessionsTitle": {
+    "message": "Összes munkamenet másolása JSON-ként"
+  },
+  "remove": {
+    "message": "Eltávolítás"
+  },
+  "switchToLight": {
+    "message": "Váltás világos módra"
+  },
+  "switchToDark": {
+    "message": "Váltás sötét módra"
+  },
+  "ctxSuspendThis": {
+    "message": "Lap felfüggesztése"
+  },
+  "ctxSuspendOthers": {
+    "message": "Összes többi lap felfüggesztése"
+  },
+  "ctxNeverSuspend": {
+    "message": "Soha ne függeszd fel ezt az oldalt"
+  },
+  "maxSessionsReached": {
+    "message": "Elérted a maximális 20 munkamenetet. Törölj egyet az új mentéshez."
+  },
+  "noSaveableTabs": {
+    "message": "Nincsenek menthető lapok ebben az ablakban."
+  },
+  "sessionNotFound": {
+    "message": "Munkamenet nem található."
+  },
+  "noRestorableTabs": {
+    "message": "Nincsenek visszaállítható lapok ebben a munkamenetben."
+  },
   "sessionDefaultName": {
     "message": "Munkamenet – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "most" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "most"
+  },
   "minutesAgo": {
     "message": "$COUNT$ perce",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ órája",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Tegnap" },
+  "yesterday": {
+    "message": "Tegnap"
+  },
   "daysAgo": {
     "message": "$COUNT$ napja",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Üdvözöl a Drowzy" },
-  "onboardingIntro": { "message": "A Drowzy memóriát takarít meg az inaktív lapok elaltatásával. A lapjaid mindig biztonságban vannak – a Chrome natív discard API-ját használjuk, így még a Drowzy eltávolítása után is megmaradnak." },
-  "howItWorks": { "message": "Hogyan működik" },
-  "featureAutoSuspend": { "message": "<strong>A 30 perce inaktív lapok</strong> automatikusan felfüggesztésre kerülnek" },
-  "featureZeroRam": { "message": "<strong>A felfüggesztett lapok nulla RAM-ot használnak</strong>, de megmaradnak a lapsávban" },
-  "featureClickToWake": { "message": "<strong>Kattints bármelyik felfüggesztett lapra</strong> az azonnali felébresztéshez" },
-  "featureProtected": { "message": "<strong>Az aktív, rögzített és hangot lejátszó lapokat</strong> soha nem érinti" },
-  "quickActions": { "message": "Gyorsműveletek" },
-  "actionClickIcon": { "message": "Kattints a <strong>Drowzy ikonra</strong> az eszköztáron az összes lapod megtekintéséhez" },
-  "actionAltS": { "message": "Nyomd meg az <kbd>Alt+S</kbd> billentyűt a jelenlegi lap felfüggesztéséhez" },
-  "actionAltShiftS": { "message": "Nyomd meg az <kbd>Alt+Shift+S</kbd> billentyűt az összes többi lap felfüggesztéséhez" },
-  "actionAltW": { "message": "Nyomd meg az <kbd>Alt+W</kbd> billentyűt az összes felfüggesztett lap felébresztéséhez" },
-  "actionRightClick": { "message": "Kattints jobb gombbal bármelyik oldalon a gyors felfüggesztési lehetőségekhez" },
-  "onboardingCta": { "message": "A Drowzy már fut. Nyiss meg néhány lapot és próbáld ki!" },
-  "onboardingBtn": { "message": "Értem, kezdjük" },
-
-  "privacyTitle": { "message": "Drowzy – Adatvédelmi szabályzat" },
-  "privacyUpdated": { "message": "Utolsó frissítés: 2026. február" },
-  "privacyShortTitle": { "message": "Rövid változat" },
-  "privacyShortText": { "message": "A Drowzy semmilyen adatot nem gyűjt. Nincs analitika, nincs nyomkövetés, nincsenek külső szerverek. Minden a böngésződben marad." },
-  "privacyStoredTitle": { "message": "Mi kerül tárolásra" },
-  "privacyStoredText": { "message": "A beállításaid (felfüggesztési időzítő, engedélyezőlista, preferenciák) a Chrome beépített tárolási API-jaival kerülnek mentésre: chrome.storage.sync a Chrome profilodat követő beállításokhoz, chrome.storage.local a statisztikákhoz és mentett munkamenetekhez, és chrome.storage.session az ideiglenes adatokhoz, mint a lapok időbélyegei. Ezek közül semmi sem kerül harmadik fél szerverére." },
-  "privacyPermissionsTitle": { "message": "Engedélyek" },
-  "privacyPermissionsIntro": { "message": "A Drowzy a következő Chrome engedélyeket használja:" },
-  "privacyPermTabs": { "message": "tabs – böngészőlapok listázása, felfüggesztése és visszaállítása" },
-  "privacyPermStorage": { "message": "storage – beállítások helyi mentése" },
-  "privacyPermAlarms": { "message": "alarms – inaktív lapok időszakos ellenőrzése" },
-  "privacyPermContextMenus": { "message": "contextMenus – jobb kattintás menü opciók" },
-  "privacyContactTitle": { "message": "Kapcsolat" },
-  "privacyContactText": { "message": "Kérdésed van? Írj a drowzyextension@gmail.com címre" }
+  "onboardingTitle": {
+    "message": "Üdvözöl a Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "A Drowzy memóriát takarít meg az inaktív lapok elaltatásával. A lapjaid mindig biztonságban vannak – a Chrome natív discard API-ját használjuk, így még a Drowzy eltávolítása után is megmaradnak."
+  },
+  "howItWorks": {
+    "message": "Hogyan működik"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>A 30 perce inaktív lapok</strong> automatikusan felfüggesztésre kerülnek"
+  },
+  "featureZeroRam": {
+    "message": "<strong>A felfüggesztett lapok nulla RAM-ot használnak</strong>, de megmaradnak a lapsávban"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Kattints bármelyik felfüggesztett lapra</strong> az azonnali felébresztéshez"
+  },
+  "featureProtected": {
+    "message": "<strong>Az aktív, rögzített és hangot lejátszó lapokat</strong> soha nem érinti"
+  },
+  "quickActions": {
+    "message": "Gyorsműveletek"
+  },
+  "actionClickIcon": {
+    "message": "Kattints a <strong>Drowzy ikonra</strong> az eszköztáron az összes lapod megtekintéséhez"
+  },
+  "actionAltS": {
+    "message": "Nyomd meg az <kbd>Alt+S</kbd> billentyűt a jelenlegi lap felfüggesztéséhez"
+  },
+  "actionAltShiftS": {
+    "message": "Nyomd meg az <kbd>Alt+Shift+S</kbd> billentyűt az összes többi lap felfüggesztéséhez"
+  },
+  "actionAltW": {
+    "message": "Nyomd meg az <kbd>Alt+W</kbd> billentyűt az összes felfüggesztett lap felébresztéséhez"
+  },
+  "actionRightClick": {
+    "message": "Kattints jobb gombbal bármelyik oldalon a gyors felfüggesztési lehetőségekhez"
+  },
+  "onboardingCta": {
+    "message": "A Drowzy már fut. Nyiss meg néhány lapot és próbáld ki!"
+  },
+  "onboardingBtn": {
+    "message": "Értem, kezdjük"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Adatvédelmi szabályzat"
+  },
+  "privacyUpdated": {
+    "message": "Utolsó frissítés: 2026. február"
+  },
+  "privacyShortTitle": {
+    "message": "Rövid változat"
+  },
+  "privacyShortText": {
+    "message": "A Drowzy semmilyen adatot nem gyűjt. Nincs analitika, nincs nyomkövetés, nincsenek külső szerverek. Minden a böngésződben marad."
+  },
+  "privacyStoredTitle": {
+    "message": "Mi kerül tárolásra"
+  },
+  "privacyStoredText": {
+    "message": "A beállításaid (felfüggesztési időzítő, engedélyezőlista, preferenciák) a Chrome beépített tárolási API-jaival kerülnek mentésre: chrome.storage.sync a Chrome profilodat követő beállításokhoz, chrome.storage.local a statisztikákhoz és mentett munkamenetekhez, és chrome.storage.session az ideiglenes adatokhoz, mint a lapok időbélyegei. Ezek közül semmi sem kerül harmadik fél szerverére."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Engedélyek"
+  },
+  "privacyPermissionsIntro": {
+    "message": "A Drowzy a következő Chrome engedélyeket használja:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – böngészőlapok listázása, felfüggesztése és visszaállítása"
+  },
+  "privacyPermStorage": {
+    "message": "storage – beállítások helyi mentése"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – inaktív lapok időszakos ellenőrzése"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – jobb kattintás menü opciók"
+  },
+  "privacyContactTitle": {
+    "message": "Kapcsolat"
+  },
+  "privacyContactText": {
+    "message": "Kérdésed van? Írj a drowzyextension@gmail.com címre"
+  },
+  "replace": {
+    "message": "Csere"
+  },
+  "replaceSessionTitle": {
+    "message": "Cseréld le a jelenlegi lapokat erre a munkamenetre"
+  },
+  "invalidDomain": {
+    "message": "Adjon meg érvényes domaint (pl. example.com)"
+  },
+  "extensionPage": {
+    "message": "Bővítmény oldala"
+  },
+  "exportWhitelist": {
+    "message": "Exportálás"
+  },
+  "importWhitelist": {
+    "message": "Importálás"
+  },
+  "exportWhitelistTitle": {
+    "message": "Engedélyezési lista másolása"
+  },
+  "importWhitelistTitle": {
+    "message": "Engedélyezési lista importálása vágólapról"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ webhely másolva",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ új webhely importálva",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Nem találhatók érvényes domainek a vágólapon"
+  },
+  "clipboardReadFailed": {
+    "message": "Nem sikerült olvasni a vágólapot"
+  },
+  "enjoyingDrowzy": {
+    "message": "Tetszik a Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Igen!"
+  },
+  "reviewNo": {
+    "message": "Nem igazán"
+  },
+  "whatsNew": {
+    "message": "Újdonságok a v1.1.0-ban"
+  },
+  "changelogTitle": {
+    "message": "Újdonságok a Drowzy-ban"
+  },
+  "changelogWhatsNew": {
+    "message": "Újdonságok"
+  },
+  "changelogVersion": {
+    "message": "Verzió 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Új funkciók"
+  },
+  "changelogBugFixes": {
+    "message": "Hibajavítások"
+  },
+  "changelogImprovements": {
+    "message": "Fejlesztések"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Értékelés kérése"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Néhány lap felfüggesztése után a Drowzy megkérdezi, tetszik-e. Egy gyors felfelé mutató hüvelykujj sokat segít!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Változásnapló oldal"
+  },
+  "changelogChangelogDesc": {
+    "message": "Éppen ezt nézed! Automatikusan megnyílik frissítéskor. Bármikor elérhető a Beállításokból."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Munkamenet-visszaállítás időzítése"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "A visszaállított lapok már nem függesztődnek fel azonnal automatikusan. Most helyesen állítják vissza tétlenségi időzítőiket."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Űrlapellenőrzés időkorlátja"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Az űrlapellenőrzés most 500ms-os időkorláttal rendelkezik, így a nem reagáló lapok nem blokkolhatják a várakozási sort."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Engedélyezési lista duplikátumok"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Javítva a kis- és nagybetű-érzékenységi probléma, amely lehetővé tette az \"Example.com\" és az \"example.com\" egyidejű hozzáadását. Minden bejegyzés mostantól normalizálva van."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Élő statisztikák"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "A felugró ablak automatikusan frissül, amikor a lapok felfüggesztésre kerülnek vagy felébrednek."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Munkamenet-visszaállítási lehetőségek"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "A munkameneteknek most külön \"Megnyitás\" és \"Csere\" gombjai vannak."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Engedélyezési lista ellenőrzése és exportálás/importálás"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Az engedélyezési lista bevitele most érvényesíti a domaineket. Exportálhat és importálhat a vágólapon keresztül."
+  },
+  "changelogA11yTitle": {
+    "message": "Akadálymentesítés"
+  },
+  "changelogA11yDesc": {
+    "message": "A laplistaelemek most billentyűzettel navigálhatók ARIA-szerepekkel. Az értesítések képernyőolvasóknak kerülnek bejelentésre."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Simább animációk"
+  },
+  "changelogAnimationsDesc": {
+    "message": "A lépcsőzetes animációk most korlátozottak, hogy a sok lappal rendelkező ablakoknak ne legyen hosszú késleltetése."
+  },
+  "changelogCtaText": {
+    "message": "A Drowzy ingyenes és nyílt forráskódú. Ha memóriát takarít meg, hagyjon értékelést vagy csillagot a GitHubon."
+  },
+  "changelogReviewBtn": {
+    "message": "Értékelés írása"
+  },
+  "changelogStarBtn": {
+    "message": "Csillag a GitHubon"
+  }
 }

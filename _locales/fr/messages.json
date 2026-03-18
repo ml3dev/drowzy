@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Réveiller tous les onglets suspendus"
   },
-
-  "statSleeping": { "message": "en veille" },
-  "statProtected": { "message": "protégés" },
-  "statSaved": { "message": "économisé" },
-
-  "suspendOthers": { "message": "Suspendre les autres" },
-  "wakeAll": { "message": "Tout réveiller" },
-
-  "neverSuspendSite": { "message": "Ne jamais suspendre ce site" },
-  "siteWhitelisted": { "message": "Site en liste blanche (cliquer pour retirer)" },
-  "activeWontSuspend": { "message": "Actif – ne sera pas suspendu" },
-  "loading": { "message": "Chargement..." },
-
-  "tabsInWindow": { "message": "Onglets dans cette fenêtre" },
-  "loadingTabs": { "message": "Chargement des onglets..." },
-  "noTabsFound": { "message": "Aucun onglet trouvé" },
-  "failedToLoad": { "message": "Échec du chargement. Rouvrez le popup pour réessayer." },
-
-  "badgeActive": { "message": "Actif" },
-  "badgeSystem": { "message": "Système" },
-  "badgePinned": { "message": "Épinglé" },
-  "badgeAudio": { "message": "Audio" },
-  "badgeStarred": { "message": "Favoris" },
-  "badgeProtected": { "message": "Protégé" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Sessions" },
-  "sessionNamePlaceholder": { "message": "Nom de la session (facultatif)" },
-  "save": { "message": "Enregistrer" },
-  "emptySessionState": { "message": "Enregistrez votre première session pour restaurer vos onglets à tout moment" },
-  "open": { "message": "Ouvrir" },
-  "openSessionTitle": { "message": "Ouvrir les onglets de cette session" },
-  "deleteSessionTitle": { "message": "Supprimer la session" },
-  "sessionSaved": { "message": "Session enregistrée !" },
-  "failedToSave": { "message": "Échec de l'enregistrement" },
+  "statSleeping": {
+    "message": "en veille"
+  },
+  "statProtected": {
+    "message": "protégés"
+  },
+  "statSaved": {
+    "message": "économisé"
+  },
+  "suspendOthers": {
+    "message": "Suspendre les autres"
+  },
+  "wakeAll": {
+    "message": "Tout réveiller"
+  },
+  "neverSuspendSite": {
+    "message": "Ne jamais suspendre ce site"
+  },
+  "siteWhitelisted": {
+    "message": "Site en liste blanche (cliquer pour retirer)"
+  },
+  "activeWontSuspend": {
+    "message": "Actif – ne sera pas suspendu"
+  },
+  "loading": {
+    "message": "Chargement..."
+  },
+  "tabsInWindow": {
+    "message": "Onglets dans cette fenêtre"
+  },
+  "loadingTabs": {
+    "message": "Chargement des onglets..."
+  },
+  "noTabsFound": {
+    "message": "Aucun onglet trouvé"
+  },
+  "failedToLoad": {
+    "message": "Échec du chargement. Rouvrez le popup pour réessayer."
+  },
+  "badgeActive": {
+    "message": "Actif"
+  },
+  "badgeSystem": {
+    "message": "Système"
+  },
+  "badgePinned": {
+    "message": "Épinglé"
+  },
+  "badgeAudio": {
+    "message": "Audio"
+  },
+  "badgeStarred": {
+    "message": "Favoris"
+  },
+  "badgeProtected": {
+    "message": "Protégé"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Sessions"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Nom de la session (facultatif)"
+  },
+  "save": {
+    "message": "Enregistrer"
+  },
+  "emptySessionState": {
+    "message": "Enregistrez votre première session pour restaurer vos onglets à tout moment"
+  },
+  "open": {
+    "message": "Ouvrir"
+  },
+  "openSessionTitle": {
+    "message": "Ouvrir les onglets de cette session"
+  },
+  "deleteSessionTitle": {
+    "message": "Supprimer la session"
+  },
+  "sessionSaved": {
+    "message": "Session enregistrée !"
+  },
+  "failedToSave": {
+    "message": "Échec de l'enregistrement"
+  },
   "restoredTabs": {
     "message": "$COUNT$ onglets restaurés",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Échec de la restauration" },
-  "noSessionsToExport": { "message": "Aucune session à exporter" },
+  "failedToRestore": {
+    "message": "Échec de la restauration"
+  },
+  "noSessionsToExport": {
+    "message": "Aucune session à exporter"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ sessions copiées en JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ onglets",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statistiques" },
-  "statToday": { "message": "Aujourd'hui" },
-  "statAllTime": { "message": "Depuis le début" },
-  "statRamSaved": { "message": "RAM économisée (est.)" },
-  "statMemberSince": { "message": "Membre depuis" },
-
-  "settings": { "message": "Paramètres" },
-  "autoSuspendAfter": { "message": "Suspension automatique après" },
-  "timer5min": { "message": "5 minutes" },
-  "timer10min": { "message": "10 minutes" },
-  "timer15min": { "message": "15 minutes" },
-  "timer30min": { "message": "30 minutes" },
-  "timer1hour": { "message": "1 heure" },
-  "timer2hours": { "message": "2 heures" },
-  "timer4hours": { "message": "4 heures" },
-  "timerNever": { "message": "Jamais" },
-  "protectPinned": { "message": "Protéger les onglets épinglés" },
-  "protectAudio": { "message": "Protéger les onglets avec audio" },
-  "protectForms": { "message": "Protéger les onglets avec formulaires" },
-  "suspendOnStartup": { "message": "Suspendre les onglets au démarrage" },
-  "enableAutoSuspend": { "message": "Activer la suspension automatique" },
-  "markSuspended": { "message": "Marquer les onglets suspendus" },
-  "whitelistedSites": { "message": "Sites en liste blanche" },
-  "add": { "message": "Ajouter" },
-  "noSitesWhitelisted": { "message": "Aucun site en liste blanche" },
-
-  "suspending": { "message": "Suspension..." },
-  "done": { "message": "Terminé !" },
-  "waking": { "message": "Réveil..." },
+  "stats": {
+    "message": "Statistiques"
+  },
+  "statToday": {
+    "message": "Aujourd'hui"
+  },
+  "statAllTime": {
+    "message": "Depuis le début"
+  },
+  "statRamSaved": {
+    "message": "RAM économisée (est.)"
+  },
+  "statMemberSince": {
+    "message": "Membre depuis"
+  },
+  "settings": {
+    "message": "Paramètres"
+  },
+  "autoSuspendAfter": {
+    "message": "Suspension automatique après"
+  },
+  "timer5min": {
+    "message": "5 minutes"
+  },
+  "timer10min": {
+    "message": "10 minutes"
+  },
+  "timer15min": {
+    "message": "15 minutes"
+  },
+  "timer30min": {
+    "message": "30 minutes"
+  },
+  "timer1hour": {
+    "message": "1 heure"
+  },
+  "timer2hours": {
+    "message": "2 heures"
+  },
+  "timer4hours": {
+    "message": "4 heures"
+  },
+  "timerNever": {
+    "message": "Jamais"
+  },
+  "protectPinned": {
+    "message": "Protéger les onglets épinglés"
+  },
+  "protectAudio": {
+    "message": "Protéger les onglets avec audio"
+  },
+  "protectForms": {
+    "message": "Protéger les onglets avec formulaires"
+  },
+  "suspendOnStartup": {
+    "message": "Suspendre les onglets au démarrage"
+  },
+  "enableAutoSuspend": {
+    "message": "Activer la suspension automatique"
+  },
+  "markSuspended": {
+    "message": "Marquer les onglets suspendus"
+  },
+  "whitelistedSites": {
+    "message": "Sites en liste blanche"
+  },
+  "add": {
+    "message": "Ajouter"
+  },
+  "noSitesWhitelisted": {
+    "message": "Aucun site en liste blanche"
+  },
+  "suspending": {
+    "message": "Suspension..."
+  },
+  "done": {
+    "message": "Terminé !"
+  },
+  "waking": {
+    "message": "Réveil..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ onglets copiés dans le presse-papiers",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Échec de la copie" },
-  "copyTabsTitle": { "message": "Copier la liste des onglets dans le presse-papiers" },
-  "copySessionsTitle": { "message": "Copier toutes les sessions en JSON" },
-  "remove": { "message": "Supprimer" },
-
-  "switchToLight": { "message": "Passer en mode clair" },
-  "switchToDark": { "message": "Passer en mode sombre" },
-
-  "ctxSuspendThis": { "message": "Suspendre cet onglet" },
-  "ctxSuspendOthers": { "message": "Suspendre tous les autres onglets" },
-  "ctxNeverSuspend": { "message": "Ne jamais suspendre ce site" },
-
-  "maxSessionsReached": { "message": "Maximum de 20 sessions atteint. Supprimez-en une pour en enregistrer une nouvelle." },
-  "noSaveableTabs": { "message": "Aucun onglet enregistrable dans cette fenêtre." },
-  "sessionNotFound": { "message": "Session introuvable." },
-  "noRestorableTabs": { "message": "Aucun onglet restaurable dans cette session." },
+  "failedToCopy": {
+    "message": "Échec de la copie"
+  },
+  "copyTabsTitle": {
+    "message": "Copier la liste des onglets dans le presse-papiers"
+  },
+  "copySessionsTitle": {
+    "message": "Copier toutes les sessions en JSON"
+  },
+  "remove": {
+    "message": "Supprimer"
+  },
+  "switchToLight": {
+    "message": "Passer en mode clair"
+  },
+  "switchToDark": {
+    "message": "Passer en mode sombre"
+  },
+  "ctxSuspendThis": {
+    "message": "Suspendre cet onglet"
+  },
+  "ctxSuspendOthers": {
+    "message": "Suspendre tous les autres onglets"
+  },
+  "ctxNeverSuspend": {
+    "message": "Ne jamais suspendre ce site"
+  },
+  "maxSessionsReached": {
+    "message": "Maximum de 20 sessions atteint. Supprimez-en une pour en enregistrer une nouvelle."
+  },
+  "noSaveableTabs": {
+    "message": "Aucun onglet enregistrable dans cette fenêtre."
+  },
+  "sessionNotFound": {
+    "message": "Session introuvable."
+  },
+  "noRestorableTabs": {
+    "message": "Aucun onglet restaurable dans cette session."
+  },
   "sessionDefaultName": {
     "message": "Session – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "à l'instant" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "à l'instant"
+  },
   "minutesAgo": {
     "message": "il y a $COUNT$ min",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "il y a $COUNT$ h",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Hier" },
+  "yesterday": {
+    "message": "Hier"
+  },
   "daysAgo": {
     "message": "il y a $COUNT$ j",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Bienvenue sur Drowzy" },
-  "onboardingIntro": { "message": "Drowzy économise de la mémoire en mettant en veille les onglets inactifs. Vos onglets sont toujours en sécurité – nous utilisons l'API native de suppression de Chrome, ils survivent même si vous désinstallez Drowzy." },
-  "howItWorks": { "message": "Comment ça marche" },
-  "featureAutoSuspend": { "message": "<strong>Les onglets inactifs pendant 30 minutes</strong> sont automatiquement suspendus" },
-  "featureZeroRam": { "message": "<strong>Les onglets suspendus n'utilisent aucune RAM</strong> mais restent dans votre barre d'onglets" },
-  "featureClickToWake": { "message": "<strong>Cliquez sur n'importe quel onglet suspendu</strong> pour le réveiller instantanément" },
-  "featureProtected": { "message": "<strong>Les onglets actifs, épinglés et avec audio</strong> ne sont jamais touchés" },
-  "quickActions": { "message": "Actions rapides" },
-  "actionClickIcon": { "message": "Cliquez sur l'<strong>icône Drowzy</strong> dans la barre d'outils pour voir tous vos onglets" },
-  "actionAltS": { "message": "Appuyez sur <kbd>Alt+S</kbd> pour suspendre l'onglet actif" },
-  "actionAltShiftS": { "message": "Appuyez sur <kbd>Alt+Shift+S</kbd> pour suspendre tous les autres onglets" },
-  "actionAltW": { "message": "Appuyez sur <kbd>Alt+W</kbd> pour réveiller tous les onglets suspendus" },
-  "actionRightClick": { "message": "Faites un clic droit sur n'importe quelle page pour les options de suspension rapide" },
-  "onboardingCta": { "message": "Drowzy est déjà en marche. Ouvrez quelques onglets et essayez !" },
-  "onboardingBtn": { "message": "Compris, c'est parti" },
-
-  "privacyTitle": { "message": "Drowzy – Politique de confidentialité" },
-  "privacyUpdated": { "message": "Dernière mise à jour : février 2026" },
-  "privacyShortTitle": { "message": "En bref" },
-  "privacyShortText": { "message": "Drowzy ne collecte aucune donnée. Pas d'analytique, pas de pistage, pas de serveurs externes. Tout reste dans votre navigateur." },
-  "privacyStoredTitle": { "message": "Ce qui est stocké" },
-  "privacyStoredText": { "message": "Vos paramètres (minuterie de suspension, liste blanche, préférences) sont enregistrés via les API de stockage intégrées de Chrome : chrome.storage.sync pour les paramètres qui suivent votre profil Chrome, chrome.storage.local pour les statistiques et les sessions enregistrées, et chrome.storage.session pour les données temporaires comme les horodatages des onglets. Rien de tout cela n'est envoyé à un serveur tiers." },
-  "privacyPermissionsTitle": { "message": "Autorisations" },
-  "privacyPermissionsIntro": { "message": "Drowzy utilise ces autorisations Chrome :" },
-  "privacyPermTabs": { "message": "tabs – lister, suspendre et restaurer les onglets du navigateur" },
-  "privacyPermStorage": { "message": "storage – enregistrer vos paramètres localement" },
-  "privacyPermAlarms": { "message": "alarms – vérifications périodiques des onglets inactifs" },
-  "privacyPermContextMenus": { "message": "contextMenus – options du menu contextuel" },
-  "privacyContactTitle": { "message": "Contact" },
-  "privacyContactText": { "message": "Des questions ? Contactez-nous à drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Bienvenue sur Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy économise de la mémoire en mettant en veille les onglets inactifs. Vos onglets sont toujours en sécurité – nous utilisons l'API native de suppression de Chrome, ils survivent même si vous désinstallez Drowzy."
+  },
+  "howItWorks": {
+    "message": "Comment ça marche"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Les onglets inactifs pendant 30 minutes</strong> sont automatiquement suspendus"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Les onglets suspendus n'utilisent aucune RAM</strong> mais restent dans votre barre d'onglets"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Cliquez sur n'importe quel onglet suspendu</strong> pour le réveiller instantanément"
+  },
+  "featureProtected": {
+    "message": "<strong>Les onglets actifs, épinglés et avec audio</strong> ne sont jamais touchés"
+  },
+  "quickActions": {
+    "message": "Actions rapides"
+  },
+  "actionClickIcon": {
+    "message": "Cliquez sur l'<strong>icône Drowzy</strong> dans la barre d'outils pour voir tous vos onglets"
+  },
+  "actionAltS": {
+    "message": "Appuyez sur <kbd>Alt+S</kbd> pour suspendre l'onglet actif"
+  },
+  "actionAltShiftS": {
+    "message": "Appuyez sur <kbd>Alt+Shift+S</kbd> pour suspendre tous les autres onglets"
+  },
+  "actionAltW": {
+    "message": "Appuyez sur <kbd>Alt+W</kbd> pour réveiller tous les onglets suspendus"
+  },
+  "actionRightClick": {
+    "message": "Faites un clic droit sur n'importe quelle page pour les options de suspension rapide"
+  },
+  "onboardingCta": {
+    "message": "Drowzy est déjà en marche. Ouvrez quelques onglets et essayez !"
+  },
+  "onboardingBtn": {
+    "message": "Compris, c'est parti"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Politique de confidentialité"
+  },
+  "privacyUpdated": {
+    "message": "Dernière mise à jour : février 2026"
+  },
+  "privacyShortTitle": {
+    "message": "En bref"
+  },
+  "privacyShortText": {
+    "message": "Drowzy ne collecte aucune donnée. Pas d'analytique, pas de pistage, pas de serveurs externes. Tout reste dans votre navigateur."
+  },
+  "privacyStoredTitle": {
+    "message": "Ce qui est stocké"
+  },
+  "privacyStoredText": {
+    "message": "Vos paramètres (minuterie de suspension, liste blanche, préférences) sont enregistrés via les API de stockage intégrées de Chrome : chrome.storage.sync pour les paramètres qui suivent votre profil Chrome, chrome.storage.local pour les statistiques et les sessions enregistrées, et chrome.storage.session pour les données temporaires comme les horodatages des onglets. Rien de tout cela n'est envoyé à un serveur tiers."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Autorisations"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy utilise ces autorisations Chrome :"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – lister, suspendre et restaurer les onglets du navigateur"
+  },
+  "privacyPermStorage": {
+    "message": "storage – enregistrer vos paramètres localement"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – vérifications périodiques des onglets inactifs"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – options du menu contextuel"
+  },
+  "privacyContactTitle": {
+    "message": "Contact"
+  },
+  "privacyContactText": {
+    "message": "Des questions ? Contactez-nous à drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Remplacer"
+  },
+  "replaceSessionTitle": {
+    "message": "Remplacer les onglets actuels par cette session"
+  },
+  "invalidDomain": {
+    "message": "Entrez un domaine valide (ex. example.com)"
+  },
+  "extensionPage": {
+    "message": "Page de l'extension"
+  },
+  "exportWhitelist": {
+    "message": "Exporter"
+  },
+  "importWhitelist": {
+    "message": "Importer"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copier la liste blanche"
+  },
+  "importWhitelistTitle": {
+    "message": "Importer la liste blanche depuis le presse-papiers"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ site(s) copié(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ nouveau(x) site(s) importé(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Aucun domaine valide trouvé dans le presse-papiers"
+  },
+  "clipboardReadFailed": {
+    "message": "Impossible de lire le presse-papiers"
+  },
+  "enjoyingDrowzy": {
+    "message": "Vous aimez Drowzy ?"
+  },
+  "reviewYes": {
+    "message": "Oui !"
+  },
+  "reviewNo": {
+    "message": "Pas vraiment"
+  },
+  "whatsNew": {
+    "message": "Nouveautés de la v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Nouveautés de Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Nouveautés"
+  },
+  "changelogVersion": {
+    "message": "Version 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Nouvelles fonctionnalités"
+  },
+  "changelogBugFixes": {
+    "message": "Corrections de bugs"
+  },
+  "changelogImprovements": {
+    "message": "Améliorations"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Demande d'avis"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Après avoir suspendu quelques onglets, Drowzy vous demandera si vous l'appréciez. Un pouce en l'air nous aide beaucoup !"
+  },
+  "changelogChangelogTitle": {
+    "message": "Page des changements"
+  },
+  "changelogChangelogDesc": {
+    "message": "Vous la regardez ! S'ouvre automatiquement lors des mises à jour. Accessible à tout moment depuis les Paramètres."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Timing de restauration de session"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Les onglets restaurés ne sont plus suspendus immédiatement. Ils réinitialisent correctement leurs minuteries d'inactivité."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Délai de vérification des formulaires"
+  },
+  "changelogFormCheckDesc": {
+    "message": "La vérification des formulaires a maintenant un délai de 500ms pour que les onglets non réactifs ne bloquent pas la file."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Doublons de liste blanche"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Correction du problème de sensibilité à la casse. Toutes les entrées sont maintenant normalisées."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Statistiques en direct"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Le popup se rafraîchit automatiquement lorsque les onglets sont suspendus ou réveillés en arrière-plan."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Options de restauration de session"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Les sessions ont maintenant des boutons séparés « Ouvrir » et « Remplacer »."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Validation et export/import de la liste blanche"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "L'entrée de la liste blanche valide maintenant les domaines. Vous pouvez aussi exporter et importer votre liste via le presse-papiers."
+  },
+  "changelogA11yTitle": {
+    "message": "Accessibilité"
+  },
+  "changelogA11yDesc": {
+    "message": "Les éléments de la liste d'onglets sont maintenant navigables au clavier avec des rôles ARIA corrects. Les notifications sont annoncées aux lecteurs d'écran."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Animations plus fluides"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Les animations échelonnées sont maintenant plafonnées pour éviter de longs délais en cascade."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy est gratuit et open source. S'il vous fait économiser de la mémoire, pensez à laisser un avis ou une étoile sur GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Laisser un avis"
+  },
+  "changelogStarBtn": {
+    "message": "Étoile sur GitHub"
+  }
 }

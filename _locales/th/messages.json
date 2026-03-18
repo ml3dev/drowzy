@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "ปลุกแท็บที่ถูกระงับทั้งหมด"
   },
-
-  "statSleeping": { "message": "กำลังพัก" },
-  "statProtected": { "message": "ป้องกัน" },
-  "statSaved": { "message": "ประหยัดแล้ว" },
-
-  "suspendOthers": { "message": "ระงับแท็บอื่น" },
-  "wakeAll": { "message": "ปลุกทั้งหมด" },
-
-  "neverSuspendSite": { "message": "ไม่ระงับเว็บไซต์นี้" },
-  "siteWhitelisted": { "message": "เว็บไซต์อยู่ในรายการที่อนุญาต (คลิกเพื่อลบ)" },
-  "activeWontSuspend": { "message": "ใช้งานอยู่ – จะไม่ถูกระงับ" },
-  "loading": { "message": "กำลังโหลด..." },
-
-  "tabsInWindow": { "message": "แท็บในหน้าต่างนี้" },
-  "loadingTabs": { "message": "กำลังโหลดแท็บ..." },
-  "noTabsFound": { "message": "ไม่พบแท็บ" },
-  "failedToLoad": { "message": "โหลดไม่สำเร็จ เปิดป๊อปอัปอีกครั้งเพื่อลองใหม่" },
-
-  "badgeActive": { "message": "ใช้งานอยู่" },
-  "badgeSystem": { "message": "ระบบ" },
-  "badgePinned": { "message": "ปักหมุด" },
-  "badgeAudio": { "message": "เสียง" },
-  "badgeStarred": { "message": "ติดดาว" },
-  "badgeProtected": { "message": "ป้องกัน" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "เซสชัน" },
-  "sessionNamePlaceholder": { "message": "ชื่อเซสชัน (ไม่บังคับ)" },
-  "save": { "message": "บันทึก" },
-  "emptySessionState": { "message": "บันทึกเซสชันแรกของคุณเพื่อกู้คืนแท็บได้ทุกเมื่อ" },
-  "open": { "message": "เปิด" },
-  "openSessionTitle": { "message": "เปิดแท็บจากเซสชันนี้" },
-  "deleteSessionTitle": { "message": "ลบเซสชัน" },
-  "sessionSaved": { "message": "บันทึกเซสชันแล้ว!" },
-  "failedToSave": { "message": "บันทึกไม่สำเร็จ" },
+  "statSleeping": {
+    "message": "กำลังพัก"
+  },
+  "statProtected": {
+    "message": "ป้องกัน"
+  },
+  "statSaved": {
+    "message": "ประหยัดแล้ว"
+  },
+  "suspendOthers": {
+    "message": "ระงับแท็บอื่น"
+  },
+  "wakeAll": {
+    "message": "ปลุกทั้งหมด"
+  },
+  "neverSuspendSite": {
+    "message": "ไม่ระงับเว็บไซต์นี้"
+  },
+  "siteWhitelisted": {
+    "message": "เว็บไซต์อยู่ในรายการที่อนุญาต (คลิกเพื่อลบ)"
+  },
+  "activeWontSuspend": {
+    "message": "ใช้งานอยู่ – จะไม่ถูกระงับ"
+  },
+  "loading": {
+    "message": "กำลังโหลด..."
+  },
+  "tabsInWindow": {
+    "message": "แท็บในหน้าต่างนี้"
+  },
+  "loadingTabs": {
+    "message": "กำลังโหลดแท็บ..."
+  },
+  "noTabsFound": {
+    "message": "ไม่พบแท็บ"
+  },
+  "failedToLoad": {
+    "message": "โหลดไม่สำเร็จ เปิดป๊อปอัปอีกครั้งเพื่อลองใหม่"
+  },
+  "badgeActive": {
+    "message": "ใช้งานอยู่"
+  },
+  "badgeSystem": {
+    "message": "ระบบ"
+  },
+  "badgePinned": {
+    "message": "ปักหมุด"
+  },
+  "badgeAudio": {
+    "message": "เสียง"
+  },
+  "badgeStarred": {
+    "message": "ติดดาว"
+  },
+  "badgeProtected": {
+    "message": "ป้องกัน"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "เซสชัน"
+  },
+  "sessionNamePlaceholder": {
+    "message": "ชื่อเซสชัน (ไม่บังคับ)"
+  },
+  "save": {
+    "message": "บันทึก"
+  },
+  "emptySessionState": {
+    "message": "บันทึกเซสชันแรกของคุณเพื่อกู้คืนแท็บได้ทุกเมื่อ"
+  },
+  "open": {
+    "message": "เปิด"
+  },
+  "openSessionTitle": {
+    "message": "เปิดแท็บจากเซสชันนี้"
+  },
+  "deleteSessionTitle": {
+    "message": "ลบเซสชัน"
+  },
+  "sessionSaved": {
+    "message": "บันทึกเซสชันแล้ว!"
+  },
+  "failedToSave": {
+    "message": "บันทึกไม่สำเร็จ"
+  },
   "restoredTabs": {
     "message": "กู้คืนแล้ว $COUNT$ แท็บ",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "กู้คืนไม่สำเร็จ" },
-  "noSessionsToExport": { "message": "ไม่มีเซสชันที่จะส่งออก" },
+  "failedToRestore": {
+    "message": "กู้คืนไม่สำเร็จ"
+  },
+  "noSessionsToExport": {
+    "message": "ไม่มีเซสชันที่จะส่งออก"
+  },
   "copiedSessionsJson": {
     "message": "คัดลอก $COUNT$ เซสชันเป็น JSON แล้ว",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ แท็บ",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "สถิติ" },
-  "statToday": { "message": "วันนี้" },
-  "statAllTime": { "message": "ตลอดเวลา" },
-  "statRamSaved": { "message": "RAM ที่ประหยัดได้ (ประมาณ)" },
-  "statMemberSince": { "message": "เป็นสมาชิกตั้งแต่" },
-
-  "settings": { "message": "การตั้งค่า" },
-  "autoSuspendAfter": { "message": "ระงับอัตโนมัติหลังจาก" },
-  "timer5min": { "message": "5 นาที" },
-  "timer10min": { "message": "10 นาที" },
-  "timer15min": { "message": "15 นาที" },
-  "timer30min": { "message": "30 นาที" },
-  "timer1hour": { "message": "1 ชั่วโมง" },
-  "timer2hours": { "message": "2 ชั่วโมง" },
-  "timer4hours": { "message": "4 ชั่วโมง" },
-  "timerNever": { "message": "ไม่เลย" },
-  "protectPinned": { "message": "ป้องกันแท็บที่ปักหมุด" },
-  "protectAudio": { "message": "ป้องกันแท็บที่มีเสียง" },
-  "protectForms": { "message": "ป้องกันแท็บที่มีแบบฟอร์ม" },
-  "suspendOnStartup": { "message": "ระงับแท็บเมื่อเริ่มต้น" },
-  "enableAutoSuspend": { "message": "เปิดใช้การระงับอัตโนมัติ" },
-  "markSuspended": { "message": "ทำเครื่องหมายแท็บที่ถูกระงับ" },
-  "whitelistedSites": { "message": "เว็บไซต์ในรายการที่อนุญาต" },
-  "add": { "message": "เพิ่ม" },
-  "noSitesWhitelisted": { "message": "ไม่มีเว็บไซต์ในรายการที่อนุญาต" },
-
-  "suspending": { "message": "กำลังระงับ..." },
-  "done": { "message": "เสร็จแล้ว!" },
-  "waking": { "message": "กำลังปลุก..." },
+  "stats": {
+    "message": "สถิติ"
+  },
+  "statToday": {
+    "message": "วันนี้"
+  },
+  "statAllTime": {
+    "message": "ตลอดเวลา"
+  },
+  "statRamSaved": {
+    "message": "RAM ที่ประหยัดได้ (ประมาณ)"
+  },
+  "statMemberSince": {
+    "message": "เป็นสมาชิกตั้งแต่"
+  },
+  "settings": {
+    "message": "การตั้งค่า"
+  },
+  "autoSuspendAfter": {
+    "message": "ระงับอัตโนมัติหลังจาก"
+  },
+  "timer5min": {
+    "message": "5 นาที"
+  },
+  "timer10min": {
+    "message": "10 นาที"
+  },
+  "timer15min": {
+    "message": "15 นาที"
+  },
+  "timer30min": {
+    "message": "30 นาที"
+  },
+  "timer1hour": {
+    "message": "1 ชั่วโมง"
+  },
+  "timer2hours": {
+    "message": "2 ชั่วโมง"
+  },
+  "timer4hours": {
+    "message": "4 ชั่วโมง"
+  },
+  "timerNever": {
+    "message": "ไม่เลย"
+  },
+  "protectPinned": {
+    "message": "ป้องกันแท็บที่ปักหมุด"
+  },
+  "protectAudio": {
+    "message": "ป้องกันแท็บที่มีเสียง"
+  },
+  "protectForms": {
+    "message": "ป้องกันแท็บที่มีแบบฟอร์ม"
+  },
+  "suspendOnStartup": {
+    "message": "ระงับแท็บเมื่อเริ่มต้น"
+  },
+  "enableAutoSuspend": {
+    "message": "เปิดใช้การระงับอัตโนมัติ"
+  },
+  "markSuspended": {
+    "message": "ทำเครื่องหมายแท็บที่ถูกระงับ"
+  },
+  "whitelistedSites": {
+    "message": "เว็บไซต์ในรายการที่อนุญาต"
+  },
+  "add": {
+    "message": "เพิ่ม"
+  },
+  "noSitesWhitelisted": {
+    "message": "ไม่มีเว็บไซต์ในรายการที่อนุญาต"
+  },
+  "suspending": {
+    "message": "กำลังระงับ..."
+  },
+  "done": {
+    "message": "เสร็จแล้ว!"
+  },
+  "waking": {
+    "message": "กำลังปลุก..."
+  },
   "copiedTabs": {
     "message": "คัดลอก $COUNT$ แท็บไปยังคลิปบอร์ดแล้ว",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "คัดลอกไม่สำเร็จ" },
-  "copyTabsTitle": { "message": "คัดลอกรายการแท็บไปยังคลิปบอร์ด" },
-  "copySessionsTitle": { "message": "คัดลอกเซสชันทั้งหมดเป็น JSON" },
-  "remove": { "message": "ลบ" },
-
-  "switchToLight": { "message": "เปลี่ยนเป็นโหมดสว่าง" },
-  "switchToDark": { "message": "เปลี่ยนเป็นโหมดมืด" },
-
-  "ctxSuspendThis": { "message": "ระงับแท็บนี้" },
-  "ctxSuspendOthers": { "message": "ระงับแท็บอื่นทั้งหมด" },
-  "ctxNeverSuspend": { "message": "ไม่ระงับเว็บไซต์นี้" },
-
-  "maxSessionsReached": { "message": "ถึงจำนวนสูงสุด 20 เซสชันแล้ว ลบเซสชันหนึ่งเพื่อบันทึกเซสชันใหม่" },
-  "noSaveableTabs": { "message": "ไม่มีแท็บที่สามารถบันทึกได้ในหน้าต่างนี้" },
-  "sessionNotFound": { "message": "ไม่พบเซสชัน" },
-  "noRestorableTabs": { "message": "ไม่มีแท็บที่สามารถกู้คืนได้ในเซสชันนี้" },
+  "failedToCopy": {
+    "message": "คัดลอกไม่สำเร็จ"
+  },
+  "copyTabsTitle": {
+    "message": "คัดลอกรายการแท็บไปยังคลิปบอร์ด"
+  },
+  "copySessionsTitle": {
+    "message": "คัดลอกเซสชันทั้งหมดเป็น JSON"
+  },
+  "remove": {
+    "message": "ลบ"
+  },
+  "switchToLight": {
+    "message": "เปลี่ยนเป็นโหมดสว่าง"
+  },
+  "switchToDark": {
+    "message": "เปลี่ยนเป็นโหมดมืด"
+  },
+  "ctxSuspendThis": {
+    "message": "ระงับแท็บนี้"
+  },
+  "ctxSuspendOthers": {
+    "message": "ระงับแท็บอื่นทั้งหมด"
+  },
+  "ctxNeverSuspend": {
+    "message": "ไม่ระงับเว็บไซต์นี้"
+  },
+  "maxSessionsReached": {
+    "message": "ถึงจำนวนสูงสุด 20 เซสชันแล้ว ลบเซสชันหนึ่งเพื่อบันทึกเซสชันใหม่"
+  },
+  "noSaveableTabs": {
+    "message": "ไม่มีแท็บที่สามารถบันทึกได้ในหน้าต่างนี้"
+  },
+  "sessionNotFound": {
+    "message": "ไม่พบเซสชัน"
+  },
+  "noRestorableTabs": {
+    "message": "ไม่มีแท็บที่สามารถกู้คืนได้ในเซสชันนี้"
+  },
   "sessionDefaultName": {
     "message": "เซสชัน – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "เมื่อสักครู่" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "เมื่อสักครู่"
+  },
   "minutesAgo": {
     "message": "$COUNT$ นาทีที่แล้ว",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ ชั่วโมงที่แล้ว",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "เมื่อวาน" },
+  "yesterday": {
+    "message": "เมื่อวาน"
+  },
   "daysAgo": {
     "message": "$COUNT$ วันที่แล้ว",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "ยินดีต้อนรับสู่ Drowzy" },
-  "onboardingIntro": { "message": "Drowzy ประหยัดหน่วยความจำโดยการพักแท็บที่ไม่ได้ใช้งาน แท็บของคุณปลอดภัยเสมอ – เราใช้ API การยกเลิกแบบเนทีฟของ Chrome ดังนั้นแท็บจะยังคงอยู่แม้ว่าคุณจะถอนการติดตั้ง Drowzy" },
-  "howItWorks": { "message": "วิธีการทำงาน" },
-  "featureAutoSuspend": { "message": "<strong>แท็บที่ไม่ได้ใช้งาน 30 นาที</strong> จะถูกระงับโดยอัตโนมัติ" },
-  "featureZeroRam": { "message": "<strong>แท็บที่ถูกระงับไม่ใช้ RAM</strong> แต่ยังคงอยู่ในแถบแท็บ" },
-  "featureClickToWake": { "message": "<strong>คลิกแท็บที่ถูกระงับ</strong> เพื่อปลุกทันที" },
-  "featureProtected": { "message": "<strong>แท็บที่ใช้งานอยู่ ปักหมุด และมีเสียง</strong> จะไม่ถูกแตะต้อง" },
-  "quickActions": { "message": "การดำเนินการด่วน" },
-  "actionClickIcon": { "message": "คลิก<strong>ไอคอน Drowzy</strong> ในแถบเครื่องมือเพื่อดูแท็บทั้งหมด" },
-  "actionAltS": { "message": "กด <kbd>Alt+S</kbd> เพื่อระงับแท็บปัจจุบัน" },
-  "actionAltShiftS": { "message": "กด <kbd>Alt+Shift+S</kbd> เพื่อระงับแท็บอื่นทั้งหมด" },
-  "actionAltW": { "message": "กด <kbd>Alt+W</kbd> เพื่อปลุกแท็บที่ถูกระงับทั้งหมด" },
-  "actionRightClick": { "message": "คลิกขวาบนหน้าเว็บใดก็ได้เพื่อตัวเลือกการระงับด่วน" },
-  "onboardingCta": { "message": "Drowzy กำลังทำงานอยู่แล้ว เปิดแท็บสักสองสามแท็บแล้วลองใช้ดู!" },
-  "onboardingBtn": { "message": "เข้าใจแล้ว ไปกันเลย" },
-
-  "privacyTitle": { "message": "Drowzy – นโยบายความเป็นส่วนตัว" },
-  "privacyUpdated": { "message": "อัปเดตล่าสุด: กุมภาพันธ์ 2026" },
-  "privacyShortTitle": { "message": "เวอร์ชันสั้น" },
-  "privacyShortText": { "message": "Drowzy ไม่เก็บรวบรวมข้อมูลใดๆ ไม่มีการวิเคราะห์ ไม่มีการติดตาม ไม่มีเซิร์ฟเวอร์ภายนอก ทุกอย่างอยู่ในเบราว์เซอร์ของคุณ" },
-  "privacyStoredTitle": { "message": "สิ่งที่ถูกเก็บ" },
-  "privacyStoredText": { "message": "การตั้งค่าของคุณ (ตัวตั้งเวลาระงับ รายการที่อนุญาต ค่ากำหนด) ถูกบันทึกโดยใช้ API การจัดเก็บในตัวของ Chrome: chrome.storage.sync สำหรับการตั้งค่าที่ติดตามโปรไฟล์ Chrome ของคุณ, chrome.storage.local สำหรับสถิติและเซสชันที่บันทึกไว้ และ chrome.storage.session สำหรับข้อมูลชั่วคราวเช่นเวลาของแท็บ ข้อมูลเหล่านี้ไม่ถูกส่งไปยังเซิร์ฟเวอร์ภายนอก" },
-  "privacyPermissionsTitle": { "message": "สิทธิ์" },
-  "privacyPermissionsIntro": { "message": "Drowzy ใช้สิทธิ์เหล่านี้ของ Chrome:" },
-  "privacyPermTabs": { "message": "tabs – การแสดงรายการ ระงับ และกู้คืนแท็บเบราว์เซอร์" },
-  "privacyPermStorage": { "message": "storage – บันทึกการตั้งค่าของคุณในเครื่อง" },
-  "privacyPermAlarms": { "message": "alarms – ตรวจสอบแท็บที่ไม่ได้ใช้งานเป็นระยะ" },
-  "privacyPermContextMenus": { "message": "contextMenus – ตัวเลือกเมนูคลิกขวา" },
-  "privacyContactTitle": { "message": "ติดต่อ" },
-  "privacyContactText": { "message": "มีคำถาม? ติดต่อได้ที่ drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "ยินดีต้อนรับสู่ Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy ประหยัดหน่วยความจำโดยการพักแท็บที่ไม่ได้ใช้งาน แท็บของคุณปลอดภัยเสมอ – เราใช้ API การยกเลิกแบบเนทีฟของ Chrome ดังนั้นแท็บจะยังคงอยู่แม้ว่าคุณจะถอนการติดตั้ง Drowzy"
+  },
+  "howItWorks": {
+    "message": "วิธีการทำงาน"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>แท็บที่ไม่ได้ใช้งาน 30 นาที</strong> จะถูกระงับโดยอัตโนมัติ"
+  },
+  "featureZeroRam": {
+    "message": "<strong>แท็บที่ถูกระงับไม่ใช้ RAM</strong> แต่ยังคงอยู่ในแถบแท็บ"
+  },
+  "featureClickToWake": {
+    "message": "<strong>คลิกแท็บที่ถูกระงับ</strong> เพื่อปลุกทันที"
+  },
+  "featureProtected": {
+    "message": "<strong>แท็บที่ใช้งานอยู่ ปักหมุด และมีเสียง</strong> จะไม่ถูกแตะต้อง"
+  },
+  "quickActions": {
+    "message": "การดำเนินการด่วน"
+  },
+  "actionClickIcon": {
+    "message": "คลิก<strong>ไอคอน Drowzy</strong> ในแถบเครื่องมือเพื่อดูแท็บทั้งหมด"
+  },
+  "actionAltS": {
+    "message": "กด <kbd>Alt+S</kbd> เพื่อระงับแท็บปัจจุบัน"
+  },
+  "actionAltShiftS": {
+    "message": "กด <kbd>Alt+Shift+S</kbd> เพื่อระงับแท็บอื่นทั้งหมด"
+  },
+  "actionAltW": {
+    "message": "กด <kbd>Alt+W</kbd> เพื่อปลุกแท็บที่ถูกระงับทั้งหมด"
+  },
+  "actionRightClick": {
+    "message": "คลิกขวาบนหน้าเว็บใดก็ได้เพื่อตัวเลือกการระงับด่วน"
+  },
+  "onboardingCta": {
+    "message": "Drowzy กำลังทำงานอยู่แล้ว เปิดแท็บสักสองสามแท็บแล้วลองใช้ดู!"
+  },
+  "onboardingBtn": {
+    "message": "เข้าใจแล้ว ไปกันเลย"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – นโยบายความเป็นส่วนตัว"
+  },
+  "privacyUpdated": {
+    "message": "อัปเดตล่าสุด: กุมภาพันธ์ 2026"
+  },
+  "privacyShortTitle": {
+    "message": "เวอร์ชันสั้น"
+  },
+  "privacyShortText": {
+    "message": "Drowzy ไม่เก็บรวบรวมข้อมูลใดๆ ไม่มีการวิเคราะห์ ไม่มีการติดตาม ไม่มีเซิร์ฟเวอร์ภายนอก ทุกอย่างอยู่ในเบราว์เซอร์ของคุณ"
+  },
+  "privacyStoredTitle": {
+    "message": "สิ่งที่ถูกเก็บ"
+  },
+  "privacyStoredText": {
+    "message": "การตั้งค่าของคุณ (ตัวตั้งเวลาระงับ รายการที่อนุญาต ค่ากำหนด) ถูกบันทึกโดยใช้ API การจัดเก็บในตัวของ Chrome: chrome.storage.sync สำหรับการตั้งค่าที่ติดตามโปรไฟล์ Chrome ของคุณ, chrome.storage.local สำหรับสถิติและเซสชันที่บันทึกไว้ และ chrome.storage.session สำหรับข้อมูลชั่วคราวเช่นเวลาของแท็บ ข้อมูลเหล่านี้ไม่ถูกส่งไปยังเซิร์ฟเวอร์ภายนอก"
+  },
+  "privacyPermissionsTitle": {
+    "message": "สิทธิ์"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy ใช้สิทธิ์เหล่านี้ของ Chrome:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – การแสดงรายการ ระงับ และกู้คืนแท็บเบราว์เซอร์"
+  },
+  "privacyPermStorage": {
+    "message": "storage – บันทึกการตั้งค่าของคุณในเครื่อง"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – ตรวจสอบแท็บที่ไม่ได้ใช้งานเป็นระยะ"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – ตัวเลือกเมนูคลิกขวา"
+  },
+  "privacyContactTitle": {
+    "message": "ติดต่อ"
+  },
+  "privacyContactText": {
+    "message": "มีคำถาม? ติดต่อได้ที่ drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "แทนที่"
+  },
+  "replaceSessionTitle": {
+    "message": "แทนที่แท็บปัจจุบันด้วยเซสชันนี้"
+  },
+  "invalidDomain": {
+    "message": "กรุณาใส่โดเมนที่ถูกต้อง (เช่น example.com)"
+  },
+  "extensionPage": {
+    "message": "หน้าส่วนขยาย"
+  },
+  "exportWhitelist": {
+    "message": "ส่งออก"
+  },
+  "importWhitelist": {
+    "message": "นำเข้า"
+  },
+  "exportWhitelistTitle": {
+    "message": "คัดลอกรายการที่อนุญาต"
+  },
+  "importWhitelistTitle": {
+    "message": "นำเข้ารายการที่อนุญาตจากคลิปบอร์ด"
+  },
+  "copiedSites": {
+    "message": "คัดลอกแล้ว $COUNT$ เว็บไซต์",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "นำเข้าแล้ว $COUNT$ เว็บไซต์ใหม่",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "ไม่พบโดเมนที่ถูกต้องในคลิปบอร์ด"
+  },
+  "clipboardReadFailed": {
+    "message": "ไม่สามารถอ่านคลิปบอร์ดได้"
+  },
+  "enjoyingDrowzy": {
+    "message": "ชอบ Drowzy ไหม?"
+  },
+  "reviewYes": {
+    "message": "ใช่!"
+  },
+  "reviewNo": {
+    "message": "ไม่เชิง"
+  },
+  "whatsNew": {
+    "message": "มีอะไรใหม่ใน v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "มีอะไรใหม่ใน Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "มีอะไรใหม่"
+  },
+  "changelogVersion": {
+    "message": "เวอร์ชัน 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "ฟีเจอร์ใหม่"
+  },
+  "changelogBugFixes": {
+    "message": "แก้ไขข้อบกพร่อง"
+  },
+  "changelogImprovements": {
+    "message": "การปรับปรุง"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "ขอรีวิว"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "หลังจากระงับแท็บไม่กี่แท็บ Drowzy จะถามว่าคุณชอบหรือไม่ การกดถูกใจอย่างรวดเร็วช่วยเราได้มาก!"
+  },
+  "changelogChangelogTitle": {
+    "message": "หน้าบันทึกการเปลี่ยนแปลง"
+  },
+  "changelogChangelogDesc": {
+    "message": "คุณกำลังดูอยู่! เปิดอัตโนมัติเมื่ออัปเดต เข้าถึงได้ทุกเมื่อจากการตั้งค่า"
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "เวลาการคืนค่าเซสชัน"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "แท็บที่กู้คืนจะไม่ถูกระงับอัตโนมัติทันทีอีกต่อไป ตอนนี้จะรีเซ็ตตัวจับเวลาไม่ใช้งานอย่างถูกต้อง"
+  },
+  "changelogFormCheckTitle": {
+    "message": "หมดเวลาตรวจสอบฟอร์ม"
+  },
+  "changelogFormCheckDesc": {
+    "message": "การตรวจสอบฟอร์มมีการหมดเวลา 500ms แล้ว ดังนั้นแท็บที่ไม่ตอบสนองจะไม่สามารถบล็อกคิวได้"
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "รายการซ้ำในรายการที่อนุญาต"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "แก้ไขปัญหาตัวพิมพ์เล็ก-ใหญ่ที่ทำให้ \"Example.com\" และ \"example.com\" สามารถเพิ่มได้ทั้งคู่ ตอนนี้รายการทั้งหมดถูกทำให้เป็นมาตรฐานแล้ว"
+  },
+  "changelogLiveStatsTitle": {
+    "message": "สถิติสด"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "ป๊อปอัปรีเฟรชอัตโนมัติเมื่อแท็บถูกระงับหรือปลุก"
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "ตัวเลือกการคืนค่าเซสชัน"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "เซสชันมีปุ่ม \"เปิด\" และ \"แทนที่\" แยกกันแล้ว"
+  },
+  "changelogWhitelistValTitle": {
+    "message": "การตรวจสอบรายการที่อนุญาตและส่งออก/นำเข้า"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "อินพุตรายการที่อนุญาตตรวจสอบโดเมนแล้ว สามารถส่งออกและนำเข้าผ่านคลิปบอร์ดได้"
+  },
+  "changelogA11yTitle": {
+    "message": "การเข้าถึง"
+  },
+  "changelogA11yDesc": {
+    "message": "รายการแท็บสามารถนำทางด้วยแป้นพิมพ์ได้พร้อมบทบาท ARIA การแจ้งเตือนถูกประกาศให้โปรแกรมอ่านหน้าจอ"
+  },
+  "changelogAnimationsTitle": {
+    "message": "แอนิเมชันที่ลื่นขึ้น"
+  },
+  "changelogAnimationsDesc": {
+    "message": "แอนิเมชันแบบเรียงลำดับถูกจำกัดแล้ว หน้าต่างที่มีแท็บจำนวนมากจะไม่มีการหน่วงเวลานาน"
+  },
+  "changelogCtaText": {
+    "message": "Drowzy ฟรีและโอเพ่นซอร์ส หากประหยัดหน่วยความจำได้ ลองเขียนรีวิวหรือให้ดาวบน GitHub"
+  },
+  "changelogReviewBtn": {
+    "message": "เขียนรีวิว"
+  },
+  "changelogStarBtn": {
+    "message": "ให้ดาวบน GitHub"
+  }
 }

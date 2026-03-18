@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "സസ്‌പെൻഡ് ചെയ്ത എല്ലാ ടാബുകളും ഉണർത്തുക"
   },
-
-  "statSleeping": { "message": "ഉറങ്ങുന്നു" },
-  "statProtected": { "message": "സംരക്ഷിതം" },
-  "statSaved": { "message": "ലാഭിച്ചത്" },
-
-  "suspendOthers": { "message": "മറ്റുള്ളവ സസ്‌പെൻഡ് ചെയ്യുക" },
-  "wakeAll": { "message": "എല്ലാം ഉണർത്തുക" },
-
-  "neverSuspendSite": { "message": "ഈ സൈറ്റ് ഒരിക്കലും സസ്‌പെൻഡ് ചെയ്യരുത്" },
-  "siteWhitelisted": { "message": "സൈറ്റ് വൈറ്റ്‌ലിസ്റ്റിലാണ് (നീക്കം ചെയ്യാൻ ക്ലിക്ക് ചെയ്യുക)" },
-  "activeWontSuspend": { "message": "സജീവം – സസ്‌പെൻഡ് ചെയ്യില്ല" },
-  "loading": { "message": "ലോഡ് ചെയ്യുന്നു..." },
-
-  "tabsInWindow": { "message": "ഈ വിൻഡോയിലെ ടാബുകൾ" },
-  "loadingTabs": { "message": "ടാബുകൾ ലോഡ് ചെയ്യുന്നു..." },
-  "noTabsFound": { "message": "ടാബുകൾ കണ്ടെത്തിയില്ല" },
-  "failedToLoad": { "message": "ലോഡ് ചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കാൻ പോപ്പ്അപ്പ് വീണ്ടും തുറക്കുക." },
-
-  "badgeActive": { "message": "സജീവം" },
-  "badgeSystem": { "message": "സിസ്റ്റം" },
-  "badgePinned": { "message": "പിൻ ചെയ്തത്" },
-  "badgeAudio": { "message": "ഓഡിയോ" },
-  "badgeStarred": { "message": "നക്ഷത്രം ഇട്ടത്" },
-  "badgeProtected": { "message": "സംരക്ഷിതം" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "സെഷനുകൾ" },
-  "sessionNamePlaceholder": { "message": "സെഷൻ പേര് (ഐച്ഛികം)" },
-  "save": { "message": "സേവ് ചെയ്യുക" },
-  "emptySessionState": { "message": "ഏത് സമയത്തും ടാബുകൾ പുനഃസ്ഥാപിക്കാൻ നിങ്ങളുടെ ആദ്യ സെഷൻ സേവ് ചെയ്യുക" },
-  "open": { "message": "തുറക്കുക" },
-  "openSessionTitle": { "message": "ഈ സെഷനിൽ നിന്നുള്ള ടാബുകൾ തുറക്കുക" },
-  "deleteSessionTitle": { "message": "സെഷൻ ഇല്ലാതാക്കുക" },
-  "sessionSaved": { "message": "സെഷൻ സേവ് ചെയ്തു!" },
-  "failedToSave": { "message": "സേവ് ചെയ്യാനായില്ല" },
+  "statSleeping": {
+    "message": "ഉറങ്ങുന്നു"
+  },
+  "statProtected": {
+    "message": "സംരക്ഷിതം"
+  },
+  "statSaved": {
+    "message": "ലാഭിച്ചത്"
+  },
+  "suspendOthers": {
+    "message": "മറ്റുള്ളവ സസ്‌പെൻഡ് ചെയ്യുക"
+  },
+  "wakeAll": {
+    "message": "എല്ലാം ഉണർത്തുക"
+  },
+  "neverSuspendSite": {
+    "message": "ഈ സൈറ്റ് ഒരിക്കലും സസ്‌പെൻഡ് ചെയ്യരുത്"
+  },
+  "siteWhitelisted": {
+    "message": "സൈറ്റ് വൈറ്റ്‌ലിസ്റ്റിലാണ് (നീക്കം ചെയ്യാൻ ക്ലിക്ക് ചെയ്യുക)"
+  },
+  "activeWontSuspend": {
+    "message": "സജീവം – സസ്‌പെൻഡ് ചെയ്യില്ല"
+  },
+  "loading": {
+    "message": "ലോഡ് ചെയ്യുന്നു..."
+  },
+  "tabsInWindow": {
+    "message": "ഈ വിൻഡോയിലെ ടാബുകൾ"
+  },
+  "loadingTabs": {
+    "message": "ടാബുകൾ ലോഡ് ചെയ്യുന്നു..."
+  },
+  "noTabsFound": {
+    "message": "ടാബുകൾ കണ്ടെത്തിയില്ല"
+  },
+  "failedToLoad": {
+    "message": "ലോഡ് ചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കാൻ പോപ്പ്അപ്പ് വീണ്ടും തുറക്കുക."
+  },
+  "badgeActive": {
+    "message": "സജീവം"
+  },
+  "badgeSystem": {
+    "message": "സിസ്റ്റം"
+  },
+  "badgePinned": {
+    "message": "പിൻ ചെയ്തത്"
+  },
+  "badgeAudio": {
+    "message": "ഓഡിയോ"
+  },
+  "badgeStarred": {
+    "message": "നക്ഷത്രം ഇട്ടത്"
+  },
+  "badgeProtected": {
+    "message": "സംരക്ഷിതം"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "സെഷനുകൾ"
+  },
+  "sessionNamePlaceholder": {
+    "message": "സെഷൻ പേര് (ഐച്ഛികം)"
+  },
+  "save": {
+    "message": "സേവ് ചെയ്യുക"
+  },
+  "emptySessionState": {
+    "message": "ഏത് സമയത്തും ടാബുകൾ പുനഃസ്ഥാപിക്കാൻ നിങ്ങളുടെ ആദ്യ സെഷൻ സേവ് ചെയ്യുക"
+  },
+  "open": {
+    "message": "തുറക്കുക"
+  },
+  "openSessionTitle": {
+    "message": "ഈ സെഷനിൽ നിന്നുള്ള ടാബുകൾ തുറക്കുക"
+  },
+  "deleteSessionTitle": {
+    "message": "സെഷൻ ഇല്ലാതാക്കുക"
+  },
+  "sessionSaved": {
+    "message": "സെഷൻ സേവ് ചെയ്തു!"
+  },
+  "failedToSave": {
+    "message": "സേവ് ചെയ്യാനായില്ല"
+  },
   "restoredTabs": {
     "message": "$COUNT$ ടാബുകൾ പുനഃസ്ഥാപിച്ചു",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "പുനഃസ്ഥാപിക്കാനായില്ല" },
-  "noSessionsToExport": { "message": "എക്സ്‌പോർട്ട് ചെയ്യാൻ സെഷനുകൾ ഇല്ല" },
+  "failedToRestore": {
+    "message": "പുനഃസ്ഥാപിക്കാനായില്ല"
+  },
+  "noSessionsToExport": {
+    "message": "എക്സ്‌പോർട്ട് ചെയ്യാൻ സെഷനുകൾ ഇല്ല"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ സെഷനുകൾ JSON ആയി പകർത്തി",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ ടാബുകൾ",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "സ്ഥിതിവിവരക്കണക്കുകൾ" },
-  "statToday": { "message": "ഇന്ന്" },
-  "statAllTime": { "message": "മൊത്തം" },
-  "statRamSaved": { "message": "ലാഭിച്ച RAM (ഏകദേശം)" },
-  "statMemberSince": { "message": "അംഗത്വം മുതൽ" },
-
-  "settings": { "message": "ക്രമീകരണങ്ങൾ" },
-  "autoSuspendAfter": { "message": "ഇത്ര സമയത്തിന് ശേഷം സ്വയമേവ സസ്‌പെൻഡ് ചെയ്യുക" },
-  "timer5min": { "message": "5 മിനിറ്റ്" },
-  "timer10min": { "message": "10 മിനിറ്റ്" },
-  "timer15min": { "message": "15 മിനിറ്റ്" },
-  "timer30min": { "message": "30 മിനിറ്റ്" },
-  "timer1hour": { "message": "1 മണിക്കൂർ" },
-  "timer2hours": { "message": "2 മണിക്കൂർ" },
-  "timer4hours": { "message": "4 മണിക്കൂർ" },
-  "timerNever": { "message": "ഒരിക്കലും വേണ്ട" },
-  "protectPinned": { "message": "പിൻ ചെയ്ത ടാബുകൾ സംരക്ഷിക്കുക" },
-  "protectAudio": { "message": "ഓഡിയോ ടാബുകൾ സംരക്ഷിക്കുക" },
-  "protectForms": { "message": "ഫോമുകൾ ഉള്ള ടാബുകൾ സംരക്ഷിക്കുക" },
-  "suspendOnStartup": { "message": "സ്റ്റാർട്ടപ്പിൽ ടാബുകൾ സസ്‌പെൻഡ് ചെയ്യുക" },
-  "enableAutoSuspend": { "message": "ഓട്ടോ-സസ്‌പെൻഡ് പ്രവർത്തനക്ഷമമാക്കുക" },
-  "markSuspended": { "message": "സസ്‌പെൻഡ് ചെയ്ത ടാബുകൾ അടയാളപ്പെടുത്തുക" },
-  "whitelistedSites": { "message": "വൈറ്റ്‌ലിസ്റ്റ് ചെയ്ത സൈറ്റുകൾ" },
-  "add": { "message": "ചേർക്കുക" },
-  "noSitesWhitelisted": { "message": "വൈറ്റ്‌ലിസ്റ്റ് ചെയ്ത സൈറ്റുകൾ ഇല്ല" },
-
-  "suspending": { "message": "സസ്‌പെൻഡ് ചെയ്യുന്നു..." },
-  "done": { "message": "പൂർത്തിയായി!" },
-  "waking": { "message": "ഉണർത്തുന്നു..." },
+  "stats": {
+    "message": "സ്ഥിതിവിവരക്കണക്കുകൾ"
+  },
+  "statToday": {
+    "message": "ഇന്ന്"
+  },
+  "statAllTime": {
+    "message": "മൊത്തം"
+  },
+  "statRamSaved": {
+    "message": "ലാഭിച്ച RAM (ഏകദേശം)"
+  },
+  "statMemberSince": {
+    "message": "അംഗത്വം മുതൽ"
+  },
+  "settings": {
+    "message": "ക്രമീകരണങ്ങൾ"
+  },
+  "autoSuspendAfter": {
+    "message": "ഇത്ര സമയത്തിന് ശേഷം സ്വയമേവ സസ്‌പെൻഡ് ചെയ്യുക"
+  },
+  "timer5min": {
+    "message": "5 മിനിറ്റ്"
+  },
+  "timer10min": {
+    "message": "10 മിനിറ്റ്"
+  },
+  "timer15min": {
+    "message": "15 മിനിറ്റ്"
+  },
+  "timer30min": {
+    "message": "30 മിനിറ്റ്"
+  },
+  "timer1hour": {
+    "message": "1 മണിക്കൂർ"
+  },
+  "timer2hours": {
+    "message": "2 മണിക്കൂർ"
+  },
+  "timer4hours": {
+    "message": "4 മണിക്കൂർ"
+  },
+  "timerNever": {
+    "message": "ഒരിക്കലും വേണ്ട"
+  },
+  "protectPinned": {
+    "message": "പിൻ ചെയ്ത ടാബുകൾ സംരക്ഷിക്കുക"
+  },
+  "protectAudio": {
+    "message": "ഓഡിയോ ടാബുകൾ സംരക്ഷിക്കുക"
+  },
+  "protectForms": {
+    "message": "ഫോമുകൾ ഉള്ള ടാബുകൾ സംരക്ഷിക്കുക"
+  },
+  "suspendOnStartup": {
+    "message": "സ്റ്റാർട്ടപ്പിൽ ടാബുകൾ സസ്‌പെൻഡ് ചെയ്യുക"
+  },
+  "enableAutoSuspend": {
+    "message": "ഓട്ടോ-സസ്‌പെൻഡ് പ്രവർത്തനക്ഷമമാക്കുക"
+  },
+  "markSuspended": {
+    "message": "സസ്‌പെൻഡ് ചെയ്ത ടാബുകൾ അടയാളപ്പെടുത്തുക"
+  },
+  "whitelistedSites": {
+    "message": "വൈറ്റ്‌ലിസ്റ്റ് ചെയ്ത സൈറ്റുകൾ"
+  },
+  "add": {
+    "message": "ചേർക്കുക"
+  },
+  "noSitesWhitelisted": {
+    "message": "വൈറ്റ്‌ലിസ്റ്റ് ചെയ്ത സൈറ്റുകൾ ഇല്ല"
+  },
+  "suspending": {
+    "message": "സസ്‌പെൻഡ് ചെയ്യുന്നു..."
+  },
+  "done": {
+    "message": "പൂർത്തിയായി!"
+  },
+  "waking": {
+    "message": "ഉണർത്തുന്നു..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ ടാബുകൾ ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "പകർത്താനായില്ല" },
-  "copyTabsTitle": { "message": "ടാബ് ലിസ്റ്റ് ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തുക" },
-  "copySessionsTitle": { "message": "എല്ലാ സെഷനുകളും JSON ആയി പകർത്തുക" },
-  "remove": { "message": "നീക്കം ചെയ്യുക" },
-
-  "switchToLight": { "message": "ലൈറ്റ് മോഡിലേക്ക് മാറുക" },
-  "switchToDark": { "message": "ഡാർക്ക് മോഡിലേക്ക് മാറുക" },
-
-  "ctxSuspendThis": { "message": "ഈ ടാബ് സസ്‌പെൻഡ് ചെയ്യുക" },
-  "ctxSuspendOthers": { "message": "മറ്റെല്ലാ ടാബുകളും സസ്‌പെൻഡ് ചെയ്യുക" },
-  "ctxNeverSuspend": { "message": "ഈ സൈറ്റ് ഒരിക്കലും സസ്‌പെൻഡ് ചെയ്യരുത്" },
-
-  "maxSessionsReached": { "message": "പരമാവധി 20 സെഷനുകൾ എത്തി. പുതിയത് സേവ് ചെയ്യാൻ ഒന്ന് ഇല്ലാതാക്കുക." },
-  "noSaveableTabs": { "message": "ഈ വിൻഡോയിൽ സേവ് ചെയ്യാവുന്ന ടാബുകൾ ഇല്ല." },
-  "sessionNotFound": { "message": "സെഷൻ കണ്ടെത്തിയില്ല." },
-  "noRestorableTabs": { "message": "ഈ സെഷനിൽ പുനഃസ്ഥാപിക്കാവുന്ന ടാബുകൾ ഇല്ല." },
+  "failedToCopy": {
+    "message": "പകർത്താനായില്ല"
+  },
+  "copyTabsTitle": {
+    "message": "ടാബ് ലിസ്റ്റ് ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തുക"
+  },
+  "copySessionsTitle": {
+    "message": "എല്ലാ സെഷനുകളും JSON ആയി പകർത്തുക"
+  },
+  "remove": {
+    "message": "നീക്കം ചെയ്യുക"
+  },
+  "switchToLight": {
+    "message": "ലൈറ്റ് മോഡിലേക്ക് മാറുക"
+  },
+  "switchToDark": {
+    "message": "ഡാർക്ക് മോഡിലേക്ക് മാറുക"
+  },
+  "ctxSuspendThis": {
+    "message": "ഈ ടാബ് സസ്‌പെൻഡ് ചെയ്യുക"
+  },
+  "ctxSuspendOthers": {
+    "message": "മറ്റെല്ലാ ടാബുകളും സസ്‌പെൻഡ് ചെയ്യുക"
+  },
+  "ctxNeverSuspend": {
+    "message": "ഈ സൈറ്റ് ഒരിക്കലും സസ്‌പെൻഡ് ചെയ്യരുത്"
+  },
+  "maxSessionsReached": {
+    "message": "പരമാവധി 20 സെഷനുകൾ എത്തി. പുതിയത് സേവ് ചെയ്യാൻ ഒന്ന് ഇല്ലാതാക്കുക."
+  },
+  "noSaveableTabs": {
+    "message": "ഈ വിൻഡോയിൽ സേവ് ചെയ്യാവുന്ന ടാബുകൾ ഇല്ല."
+  },
+  "sessionNotFound": {
+    "message": "സെഷൻ കണ്ടെത്തിയില്ല."
+  },
+  "noRestorableTabs": {
+    "message": "ഈ സെഷനിൽ പുനഃസ്ഥാപിക്കാവുന്ന ടാബുകൾ ഇല്ല."
+  },
   "sessionDefaultName": {
     "message": "സെഷൻ – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "ഇപ്പോൾ" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "ഇപ്പോൾ"
+  },
   "minutesAgo": {
     "message": "$COUNT$ മിനിറ്റ് മുമ്പ്",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ മണിക്കൂർ മുമ്പ്",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "ഇന്നലെ" },
+  "yesterday": {
+    "message": "ഇന്നലെ"
+  },
   "daysAgo": {
     "message": "$COUNT$ ദിവസം മുമ്പ്",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Drowzy-ലേക്ക് സ്വാഗതം" },
-  "onboardingIntro": { "message": "നിഷ്‌ക്രിയ ടാബുകളെ ഉറക്കത്തിലാക്കി Drowzy മെമ്മറി ലാഭിക്കുന്നു. നിങ്ങളുടെ ടാബുകൾ എല്ലായ്‌പ്പോഴും സുരക്ഷിതമാണ് – ഞങ്ങൾ Chrome-ന്റെ നേറ്റീവ് ഡിസ്‌കാർഡ് API ഉപയോഗിക്കുന്നു, അതിനാൽ Drowzy അൺഇൻസ്റ്റാൾ ചെയ്താലും അവ നിലനിൽക്കും." },
-  "howItWorks": { "message": "ഇത് എങ്ങനെ പ്രവർത്തിക്കുന്നു" },
-  "featureAutoSuspend": { "message": "<strong>30 മിനിറ്റ് നിഷ്‌ക്രിയമായ ടാബുകൾ</strong> സ്വയമേവ സസ്‌പെൻഡ് ചെയ്യപ്പെടുന്നു" },
-  "featureZeroRam": { "message": "<strong>സസ്‌പെൻഡ് ചെയ്ത ടാബുകൾ RAM ഉപയോഗിക്കില്ല</strong> പക്ഷേ ടാബ് ബാറിൽ തുടരും" },
-  "featureClickToWake": { "message": "<strong>സസ്‌പെൻഡ് ചെയ്ത ഏതെങ്കിലും ടാബിൽ ക്ലിക്ക് ചെയ്യുക</strong> തൽക്ഷണം ഉണർത്താൻ" },
-  "featureProtected": { "message": "<strong>സജീവ, പിൻ ചെയ്ത, ഓഡിയോ ടാബുകൾ</strong> ഒരിക്കലും സ്പർശിക്കില്ല" },
-  "quickActions": { "message": "ദ്രുത പ്രവർത്തനങ്ങൾ" },
-  "actionClickIcon": { "message": "നിങ്ങളുടെ എല്ലാ ടാബുകളും കാണാൻ ടൂൾബാറിലെ <strong>Drowzy ഐക്കണിൽ</strong> ക്ലിക്ക് ചെയ്യുക" },
-  "actionAltS": { "message": "നിലവിലെ ടാബ് സസ്‌പെൻഡ് ചെയ്യാൻ <kbd>Alt+S</kbd> അമർത്തുക" },
-  "actionAltShiftS": { "message": "മറ്റെല്ലാ ടാബുകളും സസ്‌പെൻഡ് ചെയ്യാൻ <kbd>Alt+Shift+S</kbd> അമർത്തുക" },
-  "actionAltW": { "message": "സസ്‌പെൻഡ് ചെയ്ത എല്ലാ ടാബുകളും ഉണർത്താൻ <kbd>Alt+W</kbd> അമർത്തുക" },
-  "actionRightClick": { "message": "വേഗത്തിൽ സസ്‌പെൻഡ് ഓപ്ഷനുകൾക്കായി ഏതെങ്കിലും പേജിൽ റൈറ്റ്-ക്ലിക്ക് ചെയ്യുക" },
-  "onboardingCta": { "message": "Drowzy ഇതിനകം പ്രവർത്തിക്കുന്നു. കുറച്ച് ടാബുകൾ തുറന്ന് പരീക്ഷിക്കൂ!" },
-  "onboardingBtn": { "message": "മനസ്സിലായി, തുടങ്ങാം" },
-
-  "privacyTitle": { "message": "Drowzy – സ്വകാര്യതാ നയം" },
-  "privacyUpdated": { "message": "അവസാനം അപ്‌ഡേറ്റ് ചെയ്തത്: ഫെബ്രുവരി 2026" },
-  "privacyShortTitle": { "message": "ചുരുക്ക പതിപ്പ്" },
-  "privacyShortText": { "message": "Drowzy ഒരു ഡാറ്റയും ശേഖരിക്കുന്നില്ല. അനലിറ്റിക്‌സ് ഇല്ല, ട്രാക്കിംഗ് ഇല്ല, ബാഹ്യ സെർവറുകൾ ഇല്ല. എല്ലാം നിങ്ങളുടെ ബ്രൗസറിൽ തന്നെ തുടരും." },
-  "privacyStoredTitle": { "message": "എന്താണ് സംഭരിക്കുന്നത്" },
-  "privacyStoredText": { "message": "നിങ്ങളുടെ ക്രമീകരണങ്ങൾ (സസ്‌പെൻഡ് ടൈമർ, വൈറ്റ്‌ലിസ്റ്റ്, മുൻഗണനകൾ) Chrome-ന്റെ ബിൽറ്റ്-ഇൻ സ്റ്റോറേജ് API-കൾ ഉപയോഗിച്ച് സേവ് ചെയ്യുന്നു: നിങ്ങളുടെ Chrome പ്രൊഫൈൽ പിന്തുടരുന്ന ക്രമീകരണങ്ങൾക്ക് chrome.storage.sync, സ്ഥിതിവിവരക്കണക്കുകൾക്കും സേവ് ചെയ്ത സെഷനുകൾക്കും chrome.storage.local, ടാബ് ടൈംസ്റ്റാമ്പുകൾ പോലുള്ള താൽക്കാലിക ഡാറ്റയ്ക്ക് chrome.storage.session. ഇതൊന്നും ഒരു മൂന്നാം കക്ഷി സെർവറിലേക്കും അയയ്ക്കുന്നില്ല." },
-  "privacyPermissionsTitle": { "message": "അനുമതികൾ" },
-  "privacyPermissionsIntro": { "message": "Drowzy ഈ Chrome അനുമതികൾ ഉപയോഗിക്കുന്നു:" },
-  "privacyPermTabs": { "message": "tabs – ബ്രൗസർ ടാബുകൾ ലിസ്റ്റ് ചെയ്യൽ, സസ്‌പെൻഡ് ചെയ്യൽ, പുനഃസ്ഥാപിക്കൽ" },
-  "privacyPermStorage": { "message": "storage – നിങ്ങളുടെ ക്രമീകരണങ്ങൾ ലോക്കലായി സേവ് ചെയ്യൽ" },
-  "privacyPermAlarms": { "message": "alarms – നിഷ്‌ക്രിയ ടാബുകൾക്കായി ആനുകാലിക പരിശോധനകൾ" },
-  "privacyPermContextMenus": { "message": "contextMenus – റൈറ്റ്-ക്ലിക്ക് മെനു ഓപ്ഷനുകൾ" },
-  "privacyContactTitle": { "message": "ബന്ധപ്പെടുക" },
-  "privacyContactText": { "message": "ചോദ്യങ്ങളുണ്ടോ? drowzyextension@gmail.com എന്ന വിലാസത്തിൽ ബന്ധപ്പെടുക" }
+  "onboardingTitle": {
+    "message": "Drowzy-ലേക്ക് സ്വാഗതം"
+  },
+  "onboardingIntro": {
+    "message": "നിഷ്‌ക്രിയ ടാബുകളെ ഉറക്കത്തിലാക്കി Drowzy മെമ്മറി ലാഭിക്കുന്നു. നിങ്ങളുടെ ടാബുകൾ എല്ലായ്‌പ്പോഴും സുരക്ഷിതമാണ് – ഞങ്ങൾ Chrome-ന്റെ നേറ്റീവ് ഡിസ്‌കാർഡ് API ഉപയോഗിക്കുന്നു, അതിനാൽ Drowzy അൺഇൻസ്റ്റാൾ ചെയ്താലും അവ നിലനിൽക്കും."
+  },
+  "howItWorks": {
+    "message": "ഇത് എങ്ങനെ പ്രവർത്തിക്കുന്നു"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>30 മിനിറ്റ് നിഷ്‌ക്രിയമായ ടാബുകൾ</strong> സ്വയമേവ സസ്‌പെൻഡ് ചെയ്യപ്പെടുന്നു"
+  },
+  "featureZeroRam": {
+    "message": "<strong>സസ്‌പെൻഡ് ചെയ്ത ടാബുകൾ RAM ഉപയോഗിക്കില്ല</strong> പക്ഷേ ടാബ് ബാറിൽ തുടരും"
+  },
+  "featureClickToWake": {
+    "message": "<strong>സസ്‌പെൻഡ് ചെയ്ത ഏതെങ്കിലും ടാബിൽ ക്ലിക്ക് ചെയ്യുക</strong> തൽക്ഷണം ഉണർത്താൻ"
+  },
+  "featureProtected": {
+    "message": "<strong>സജീവ, പിൻ ചെയ്ത, ഓഡിയോ ടാബുകൾ</strong> ഒരിക്കലും സ്പർശിക്കില്ല"
+  },
+  "quickActions": {
+    "message": "ദ്രുത പ്രവർത്തനങ്ങൾ"
+  },
+  "actionClickIcon": {
+    "message": "നിങ്ങളുടെ എല്ലാ ടാബുകളും കാണാൻ ടൂൾബാറിലെ <strong>Drowzy ഐക്കണിൽ</strong> ക്ലിക്ക് ചെയ്യുക"
+  },
+  "actionAltS": {
+    "message": "നിലവിലെ ടാബ് സസ്‌പെൻഡ് ചെയ്യാൻ <kbd>Alt+S</kbd> അമർത്തുക"
+  },
+  "actionAltShiftS": {
+    "message": "മറ്റെല്ലാ ടാബുകളും സസ്‌പെൻഡ് ചെയ്യാൻ <kbd>Alt+Shift+S</kbd> അമർത്തുക"
+  },
+  "actionAltW": {
+    "message": "സസ്‌പെൻഡ് ചെയ്ത എല്ലാ ടാബുകളും ഉണർത്താൻ <kbd>Alt+W</kbd> അമർത്തുക"
+  },
+  "actionRightClick": {
+    "message": "വേഗത്തിൽ സസ്‌പെൻഡ് ഓപ്ഷനുകൾക്കായി ഏതെങ്കിലും പേജിൽ റൈറ്റ്-ക്ലിക്ക് ചെയ്യുക"
+  },
+  "onboardingCta": {
+    "message": "Drowzy ഇതിനകം പ്രവർത്തിക്കുന്നു. കുറച്ച് ടാബുകൾ തുറന്ന് പരീക്ഷിക്കൂ!"
+  },
+  "onboardingBtn": {
+    "message": "മനസ്സിലായി, തുടങ്ങാം"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – സ്വകാര്യതാ നയം"
+  },
+  "privacyUpdated": {
+    "message": "അവസാനം അപ്‌ഡേറ്റ് ചെയ്തത്: ഫെബ്രുവരി 2026"
+  },
+  "privacyShortTitle": {
+    "message": "ചുരുക്ക പതിപ്പ്"
+  },
+  "privacyShortText": {
+    "message": "Drowzy ഒരു ഡാറ്റയും ശേഖരിക്കുന്നില്ല. അനലിറ്റിക്‌സ് ഇല്ല, ട്രാക്കിംഗ് ഇല്ല, ബാഹ്യ സെർവറുകൾ ഇല്ല. എല്ലാം നിങ്ങളുടെ ബ്രൗസറിൽ തന്നെ തുടരും."
+  },
+  "privacyStoredTitle": {
+    "message": "എന്താണ് സംഭരിക്കുന്നത്"
+  },
+  "privacyStoredText": {
+    "message": "നിങ്ങളുടെ ക്രമീകരണങ്ങൾ (സസ്‌പെൻഡ് ടൈമർ, വൈറ്റ്‌ലിസ്റ്റ്, മുൻഗണനകൾ) Chrome-ന്റെ ബിൽറ്റ്-ഇൻ സ്റ്റോറേജ് API-കൾ ഉപയോഗിച്ച് സേവ് ചെയ്യുന്നു: നിങ്ങളുടെ Chrome പ്രൊഫൈൽ പിന്തുടരുന്ന ക്രമീകരണങ്ങൾക്ക് chrome.storage.sync, സ്ഥിതിവിവരക്കണക്കുകൾക്കും സേവ് ചെയ്ത സെഷനുകൾക്കും chrome.storage.local, ടാബ് ടൈംസ്റ്റാമ്പുകൾ പോലുള്ള താൽക്കാലിക ഡാറ്റയ്ക്ക് chrome.storage.session. ഇതൊന്നും ഒരു മൂന്നാം കക്ഷി സെർവറിലേക്കും അയയ്ക്കുന്നില്ല."
+  },
+  "privacyPermissionsTitle": {
+    "message": "അനുമതികൾ"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy ഈ Chrome അനുമതികൾ ഉപയോഗിക്കുന്നു:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – ബ്രൗസർ ടാബുകൾ ലിസ്റ്റ് ചെയ്യൽ, സസ്‌പെൻഡ് ചെയ്യൽ, പുനഃസ്ഥാപിക്കൽ"
+  },
+  "privacyPermStorage": {
+    "message": "storage – നിങ്ങളുടെ ക്രമീകരണങ്ങൾ ലോക്കലായി സേവ് ചെയ്യൽ"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – നിഷ്‌ക്രിയ ടാബുകൾക്കായി ആനുകാലിക പരിശോധനകൾ"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – റൈറ്റ്-ക്ലിക്ക് മെനു ഓപ്ഷനുകൾ"
+  },
+  "privacyContactTitle": {
+    "message": "ബന്ധപ്പെടുക"
+  },
+  "privacyContactText": {
+    "message": "ചോദ്യങ്ങളുണ്ടോ? drowzyextension@gmail.com എന്ന വിലാസത്തിൽ ബന്ധപ്പെടുക"
+  },
+  "replace": {
+    "message": "മാറ്റിസ്ഥാപിക്കുക"
+  },
+  "replaceSessionTitle": {
+    "message": "നിലവിലെ ടാബുകൾ ഈ സെഷനുമായി മാറ്റിസ്ഥാപിക്കുക"
+  },
+  "invalidDomain": {
+    "message": "സാധുവായ ഡൊമെയ്ൻ നൽകുക (ഉദാ. example.com)"
+  },
+  "extensionPage": {
+    "message": "എക്സ്റ്റൻഷൻ പേജ്"
+  },
+  "exportWhitelist": {
+    "message": "എക്സ്പോർട്ട്"
+  },
+  "importWhitelist": {
+    "message": "ഇംപോർട്ട്"
+  },
+  "exportWhitelistTitle": {
+    "message": "വൈറ്റ്‌ലിസ്റ്റ് പകർത്തുക"
+  },
+  "importWhitelistTitle": {
+    "message": "ക്ലിപ്പ്ബോർഡിൽ നിന്ന് വൈറ്റ്‌ലിസ്റ്റ് ഇംപോർട്ട് ചെയ്യുക"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ സൈറ്റ്(കൾ) പകർത്തി",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ പുതിയ സൈറ്റ്(കൾ) ഇംപോർട്ട് ചെയ്തു",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "ക്ലിപ്പ്ബോർഡിൽ സാധുവായ ഡൊമെയ്‌നുകൾ കണ്ടെത്തിയില്ല"
+  },
+  "clipboardReadFailed": {
+    "message": "ക്ലിപ്പ്ബോർഡ് വായിക്കാൻ കഴിഞ്ഞില്ല"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy ഇഷ്ടമാകുന്നുണ്ടോ?"
+  },
+  "reviewYes": {
+    "message": "അതെ!"
+  },
+  "reviewNo": {
+    "message": "അത്ര ഇല്ല"
+  },
+  "whatsNew": {
+    "message": "v1.1.0-ൽ പുതിയത്"
+  },
+  "changelogTitle": {
+    "message": "Drowzy-ൽ പുതിയത്"
+  },
+  "changelogWhatsNew": {
+    "message": "പുതിയത്"
+  },
+  "changelogVersion": {
+    "message": "പതിപ്പ് 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "പുതിയ ഫീച്ചറുകൾ"
+  },
+  "changelogBugFixes": {
+    "message": "ബഗ് പരിഹാരങ്ങൾ"
+  },
+  "changelogImprovements": {
+    "message": "മെച്ചപ്പെടുത്തലുകൾ"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "അവലോകന അഭ്യർത്ഥന"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "കുറച്ച് ടാബുകൾ സസ്പെൻഡ് ചെയ്ത ശേഷം, Drowzy ഇഷ്ടമാകുന്നുണ്ടോ എന്ന് ചോദിക്കും. ഒരു ദ്രുത തംബ്സ് അപ് ഞങ്ങളെ വളരെ സഹായിക്കും!"
+  },
+  "changelogChangelogTitle": {
+    "message": "മാറ്റ ലോഗ് പേജ്"
+  },
+  "changelogChangelogDesc": {
+    "message": "നിങ്ങൾ ഇത് കാണുകയാണ്! അപ്‌ഡേറ്റിൽ യാന്ത്രികമായി തുറക്കും. ക്രമീകരണങ്ങളിൽ നിന്ന് എപ്പോൾ വേണമെങ്കിലും ആക്‌സസ് ചെയ്യാം."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "സെഷൻ പുനഃസ്ഥാപന സമയം"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "പുനഃസ്ഥാപിച്ച ടാബുകൾ ഇനി ഉടനടി ഓട്ടോ-സസ്‌പെൻഡ് ചെയ്യില്ല. അവ ഇപ്പോൾ അവയുടെ നിഷ്‌ക്രിയ ടൈമറുകൾ ശരിയായി റീസെറ്റ് ചെയ്യുന്നു."
+  },
+  "changelogFormCheckTitle": {
+    "message": "ഫോം ചെക്ക് ടൈമൗട്ട്"
+  },
+  "changelogFormCheckDesc": {
+    "message": "ഫോം ഡാറ്റ പരിശോധനയ്ക്ക് ഇപ്പോൾ 500ms ടൈമൗട്ട് ഉണ്ട്, അതിനാൽ പ്രതികരിക്കാത്ത ടാബുകൾ ക്യൂ തടയില്ല."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "വൈറ്റ്‌ലിസ്റ്റ് ഡ്യൂപ്ലിക്കേറ്റുകൾ"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "\"Example.com\"-ഉം \"example.com\"-ഉം രണ്ടും ചേർക്കാൻ കഴിയുന്ന കേസ് സെൻസിറ്റിവിറ്റി പ്രശ്നം പരിഹരിച്ചു. എല്ലാ എൻട്രികളും ഇപ്പോൾ നോർമലൈസ് ചെയ്തിരിക്കുന്നു."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "തത്സമയ സ്ഥിതിവിവരക്കണക്കുകൾ"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "ടാബുകൾ സസ്പെൻഡ് ചെയ്യുമ്പോഴോ ഉണർത്തുമ്പോഴോ പോപ്പ്-അപ്പ് സ്വയം പുതുക്കുന്നു."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "സെഷൻ പുനഃസ്ഥാപന ഓപ്ഷനുകൾ"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "സെഷനുകൾക്ക് ഇപ്പോൾ \"തുറക്കുക\" എന്നും \"മാറ്റിസ്ഥാപിക്കുക\" എന്നും പ്രത്യേക ബട്ടണുകളുണ്ട്."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "വൈറ്റ്‌ലിസ്റ്റ് സാധൂകരണവും എക്സ്പോർട്ട്/ഇംപോർട്ടും"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "വൈറ്റ്‌ലിസ്റ്റ് ഇൻപുട്ട് ഇപ്പോൾ ഡൊമെയ്‌നുകൾ സാധൂകരിക്കുന്നു. ക്ലിപ്പ്ബോർഡ് വഴി എക്സ്‌പോർട്ടും ഇംപോർട്ടും ചെയ്യാം."
+  },
+  "changelogA11yTitle": {
+    "message": "പ്രാപ്യത"
+  },
+  "changelogA11yDesc": {
+    "message": "ടാബ് ലിസ്റ്റ് ഇനങ്ങൾ ഇപ്പോൾ ARIA റോളുകളോടെ കീബോർഡ്-നാവിഗേറ്റ് ചെയ്യാവുന്നതാണ്. ടോസ്റ്റ് അറിയിപ്പുകൾ സ്ക്രീൻ റീഡറുകൾക്ക് അറിയിക്കുന്നു."
+  },
+  "changelogAnimationsTitle": {
+    "message": "സുഗമമായ ആനിമേഷനുകൾ"
+  },
+  "changelogAnimationsDesc": {
+    "message": "ടാബ് ലിസ്റ്റ് സ്റ്റാഗർ ആനിമേഷനുകൾ ഇപ്പോൾ പരിമിതപ്പെടുത്തിയിരിക്കുന്നു, അതിനാൽ നിരവധി ടാബുകളുള്ള വിൻഡോകളിൽ ദീർഘ കാലതാമസം ഉണ്ടാകില്ല."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy സൗജന്യവും ഓപ്പൺ സോഴ്‌സും ആണ്. മെമ്മറി ലാഭിക്കുന്നുണ്ടെങ്കിൽ, അവലോകനം നൽകുക അല്ലെങ്കിൽ GitHub-ൽ നക്ഷത്രം നൽകുക."
+  },
+  "changelogReviewBtn": {
+    "message": "അവലോകനം നൽകുക"
+  },
+  "changelogStarBtn": {
+    "message": "GitHub-ൽ നക്ഷത്രം"
+  }
 }

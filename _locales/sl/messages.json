@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Zbudi vse zamrznjene zavihke"
   },
-
-  "statSleeping": { "message": "spi" },
-  "statProtected": { "message": "zaščiteni" },
-  "statSaved": { "message": "prihranjeno" },
-
-  "suspendOthers": { "message": "Zamrzni ostale" },
-  "wakeAll": { "message": "Zbudi vse" },
-
-  "neverSuspendSite": { "message": "Nikoli ne zamrzni te strani" },
-  "siteWhitelisted": { "message": "Stran je na belem seznamu (klikni za odstranitev)" },
-  "activeWontSuspend": { "message": "Aktiven – ne bo zamrznjen" },
-  "loading": { "message": "Nalaganje..." },
-
-  "tabsInWindow": { "message": "Zavihki v tem oknu" },
-  "loadingTabs": { "message": "Nalaganje zavihkov..." },
-  "noTabsFound": { "message": "Ni najdenih zavihkov" },
-  "failedToLoad": { "message": "Nalaganje ni uspelo. Znova odpri pojavno okno za ponovni poskus." },
-
-  "badgeActive": { "message": "Aktiven" },
-  "badgeSystem": { "message": "Sistem" },
-  "badgePinned": { "message": "Pripet" },
-  "badgeAudio": { "message": "Audio" },
-  "badgeStarred": { "message": "Z zvezdico" },
-  "badgeProtected": { "message": "Zaščiten" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Seje" },
-  "sessionNamePlaceholder": { "message": "Ime seje (neobvezno)" },
-  "save": { "message": "Shrani" },
-  "emptySessionState": { "message": "Shrani prvo sejo za obnovitev zavihkov kadarkoli" },
-  "open": { "message": "Odpri" },
-  "openSessionTitle": { "message": "Odpri zavihke iz te seje" },
-  "deleteSessionTitle": { "message": "Izbriši sejo" },
-  "sessionSaved": { "message": "Seja shranjena!" },
-  "failedToSave": { "message": "Shranjevanje ni uspelo" },
+  "statSleeping": {
+    "message": "spi"
+  },
+  "statProtected": {
+    "message": "zaščiteni"
+  },
+  "statSaved": {
+    "message": "prihranjeno"
+  },
+  "suspendOthers": {
+    "message": "Zamrzni ostale"
+  },
+  "wakeAll": {
+    "message": "Zbudi vse"
+  },
+  "neverSuspendSite": {
+    "message": "Nikoli ne zamrzni te strani"
+  },
+  "siteWhitelisted": {
+    "message": "Stran je na belem seznamu (klikni za odstranitev)"
+  },
+  "activeWontSuspend": {
+    "message": "Aktiven – ne bo zamrznjen"
+  },
+  "loading": {
+    "message": "Nalaganje..."
+  },
+  "tabsInWindow": {
+    "message": "Zavihki v tem oknu"
+  },
+  "loadingTabs": {
+    "message": "Nalaganje zavihkov..."
+  },
+  "noTabsFound": {
+    "message": "Ni najdenih zavihkov"
+  },
+  "failedToLoad": {
+    "message": "Nalaganje ni uspelo. Znova odpri pojavno okno za ponovni poskus."
+  },
+  "badgeActive": {
+    "message": "Aktiven"
+  },
+  "badgeSystem": {
+    "message": "Sistem"
+  },
+  "badgePinned": {
+    "message": "Pripet"
+  },
+  "badgeAudio": {
+    "message": "Audio"
+  },
+  "badgeStarred": {
+    "message": "Z zvezdico"
+  },
+  "badgeProtected": {
+    "message": "Zaščiten"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Seje"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Ime seje (neobvezno)"
+  },
+  "save": {
+    "message": "Shrani"
+  },
+  "emptySessionState": {
+    "message": "Shrani prvo sejo za obnovitev zavihkov kadarkoli"
+  },
+  "open": {
+    "message": "Odpri"
+  },
+  "openSessionTitle": {
+    "message": "Odpri zavihke iz te seje"
+  },
+  "deleteSessionTitle": {
+    "message": "Izbriši sejo"
+  },
+  "sessionSaved": {
+    "message": "Seja shranjena!"
+  },
+  "failedToSave": {
+    "message": "Shranjevanje ni uspelo"
+  },
   "restoredTabs": {
     "message": "Obnovljenih zavihkov: $COUNT$",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Obnovitev ni uspela" },
-  "noSessionsToExport": { "message": "Ni sej za izvoz" },
+  "failedToRestore": {
+    "message": "Obnovitev ni uspela"
+  },
+  "noSessionsToExport": {
+    "message": "Ni sej za izvoz"
+  },
   "copiedSessionsJson": {
     "message": "Kopiranih sej kot JSON: $COUNT$",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ zavihkov",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statistika" },
-  "statToday": { "message": "Danes" },
-  "statAllTime": { "message": "Skupaj" },
-  "statRamSaved": { "message": "Prihranjen RAM (ocena)" },
-  "statMemberSince": { "message": "Član od" },
-
-  "settings": { "message": "Nastavitve" },
-  "autoSuspendAfter": { "message": "Samodejno zamrzni po" },
-  "timer5min": { "message": "5 minutah" },
-  "timer10min": { "message": "10 minutah" },
-  "timer15min": { "message": "15 minutah" },
-  "timer30min": { "message": "30 minutah" },
-  "timer1hour": { "message": "1 uri" },
-  "timer2hours": { "message": "2 urah" },
-  "timer4hours": { "message": "4 urah" },
-  "timerNever": { "message": "Nikoli" },
-  "protectPinned": { "message": "Zaščiti pripete zavihke" },
-  "protectAudio": { "message": "Zaščiti zavihke z zvokom" },
-  "protectForms": { "message": "Zaščiti zavihke z obrazci" },
-  "suspendOnStartup": { "message": "Zamrzni zavihke ob zagonu" },
-  "enableAutoSuspend": { "message": "Omogoči samodejno zamrznitev" },
-  "markSuspended": { "message": "Označi zamrznjene zavihke" },
-  "whitelistedSites": { "message": "Strani na belem seznamu" },
-  "add": { "message": "Dodaj" },
-  "noSitesWhitelisted": { "message": "Ni strani na belem seznamu" },
-
-  "suspending": { "message": "Zamrzovanje..." },
-  "done": { "message": "Končano!" },
-  "waking": { "message": "Prebujanje..." },
+  "stats": {
+    "message": "Statistika"
+  },
+  "statToday": {
+    "message": "Danes"
+  },
+  "statAllTime": {
+    "message": "Skupaj"
+  },
+  "statRamSaved": {
+    "message": "Prihranjen RAM (ocena)"
+  },
+  "statMemberSince": {
+    "message": "Član od"
+  },
+  "settings": {
+    "message": "Nastavitve"
+  },
+  "autoSuspendAfter": {
+    "message": "Samodejno zamrzni po"
+  },
+  "timer5min": {
+    "message": "5 minutah"
+  },
+  "timer10min": {
+    "message": "10 minutah"
+  },
+  "timer15min": {
+    "message": "15 minutah"
+  },
+  "timer30min": {
+    "message": "30 minutah"
+  },
+  "timer1hour": {
+    "message": "1 uri"
+  },
+  "timer2hours": {
+    "message": "2 urah"
+  },
+  "timer4hours": {
+    "message": "4 urah"
+  },
+  "timerNever": {
+    "message": "Nikoli"
+  },
+  "protectPinned": {
+    "message": "Zaščiti pripete zavihke"
+  },
+  "protectAudio": {
+    "message": "Zaščiti zavihke z zvokom"
+  },
+  "protectForms": {
+    "message": "Zaščiti zavihke z obrazci"
+  },
+  "suspendOnStartup": {
+    "message": "Zamrzni zavihke ob zagonu"
+  },
+  "enableAutoSuspend": {
+    "message": "Omogoči samodejno zamrznitev"
+  },
+  "markSuspended": {
+    "message": "Označi zamrznjene zavihke"
+  },
+  "whitelistedSites": {
+    "message": "Strani na belem seznamu"
+  },
+  "add": {
+    "message": "Dodaj"
+  },
+  "noSitesWhitelisted": {
+    "message": "Ni strani na belem seznamu"
+  },
+  "suspending": {
+    "message": "Zamrzovanje..."
+  },
+  "done": {
+    "message": "Končano!"
+  },
+  "waking": {
+    "message": "Prebujanje..."
+  },
   "copiedTabs": {
     "message": "Kopiranih zavihkov v odložišče: $COUNT$",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Kopiranje ni uspelo" },
-  "copyTabsTitle": { "message": "Kopiraj seznam zavihkov v odložišče" },
-  "copySessionsTitle": { "message": "Kopiraj vse seje kot JSON" },
-  "remove": { "message": "Odstrani" },
-
-  "switchToLight": { "message": "Preklopi na svetli način" },
-  "switchToDark": { "message": "Preklopi na temni način" },
-
-  "ctxSuspendThis": { "message": "Zamrzni ta zavihek" },
-  "ctxSuspendOthers": { "message": "Zamrzni vse ostale zavihke" },
-  "ctxNeverSuspend": { "message": "Nikoli ne zamrzni te strani" },
-
-  "maxSessionsReached": { "message": "Doseženo največ 20 sej. Izbriši eno, da shraniš novo." },
-  "noSaveableTabs": { "message": "V tem oknu ni zavihkov za shranjevanje." },
-  "sessionNotFound": { "message": "Seja ni najdena." },
-  "noRestorableTabs": { "message": "V tej seji ni zavihkov za obnovitev." },
+  "failedToCopy": {
+    "message": "Kopiranje ni uspelo"
+  },
+  "copyTabsTitle": {
+    "message": "Kopiraj seznam zavihkov v odložišče"
+  },
+  "copySessionsTitle": {
+    "message": "Kopiraj vse seje kot JSON"
+  },
+  "remove": {
+    "message": "Odstrani"
+  },
+  "switchToLight": {
+    "message": "Preklopi na svetli način"
+  },
+  "switchToDark": {
+    "message": "Preklopi na temni način"
+  },
+  "ctxSuspendThis": {
+    "message": "Zamrzni ta zavihek"
+  },
+  "ctxSuspendOthers": {
+    "message": "Zamrzni vse ostale zavihke"
+  },
+  "ctxNeverSuspend": {
+    "message": "Nikoli ne zamrzni te strani"
+  },
+  "maxSessionsReached": {
+    "message": "Doseženo največ 20 sej. Izbriši eno, da shraniš novo."
+  },
+  "noSaveableTabs": {
+    "message": "V tem oknu ni zavihkov za shranjevanje."
+  },
+  "sessionNotFound": {
+    "message": "Seja ni najdena."
+  },
+  "noRestorableTabs": {
+    "message": "V tej seji ni zavihkov za obnovitev."
+  },
   "sessionDefaultName": {
     "message": "Seja – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "pravkar" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "pravkar"
+  },
   "minutesAgo": {
     "message": "pred $COUNT$ min",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "pred $COUNT$ h",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Včeraj" },
+  "yesterday": {
+    "message": "Včeraj"
+  },
   "daysAgo": {
     "message": "pred $COUNT$ d",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Dobrodošli v Drowzy" },
-  "onboardingIntro": { "message": "Drowzy varčuje s pomnilnikom tako, da neaktivne zavihke uspava. Vaši zavihki so vedno varni – uporabljamo Chromov izvorni API za zavrženje, zato preživijo tudi, če Drowzy odstranite." },
-  "howItWorks": { "message": "Kako deluje" },
-  "featureAutoSuspend": { "message": "<strong>Zavihki, neaktivni 30 minut</strong>, se samodejno zamrznejo" },
-  "featureZeroRam": { "message": "<strong>Zamrznjeni zavihki ne porabljajo RAM</strong>, a ostanejo v vrstici zavihkov" },
-  "featureClickToWake": { "message": "<strong>Klikni na katerikoli zamrznjen zavihek</strong> za takojšnje prebujanje" },
-  "featureProtected": { "message": "<strong>Aktivni, pripeti in zvočni zavihki</strong> se nikoli ne dotaknejo" },
-  "quickActions": { "message": "Hitre akcije" },
-  "actionClickIcon": { "message": "Klikni na <strong>ikono Drowzy</strong> v orodni vrstici za prikaz vseh zavihkov" },
-  "actionAltS": { "message": "Pritisni <kbd>Alt+S</kbd> za zamrznitev trenutnega zavihka" },
-  "actionAltShiftS": { "message": "Pritisni <kbd>Alt+Shift+S</kbd> za zamrznitev vseh ostalih zavihkov" },
-  "actionAltW": { "message": "Pritisni <kbd>Alt+W</kbd> za prebujanje vseh zamrznjenih zavihkov" },
-  "actionRightClick": { "message": "Desni klik na katerikoli strani za hitre možnosti zamrznitve" },
-  "onboardingCta": { "message": "Drowzy že deluje. Odpri nekaj zavihkov in ga preizkusi!" },
-  "onboardingBtn": { "message": "Razumem, gremo" },
-
-  "privacyTitle": { "message": "Drowzy – Pravilnik o zasebnosti" },
-  "privacyUpdated": { "message": "Zadnja posodobitev: februar 2026" },
-  "privacyShortTitle": { "message": "Na kratko" },
-  "privacyShortText": { "message": "Drowzy ne zbira nobenih podatkov. Brez analitike, brez sledenja, brez zunanjih strežnikov. Vse ostane v vašem brskalniku." },
-  "privacyStoredTitle": { "message": "Kaj se shranjuje" },
-  "privacyStoredText": { "message": "Vaše nastavitve (časovnik zamrznitve, beli seznam, preference) se shranjujejo z vgrajenimi API-ji za shranjevanje v Chrome: chrome.storage.sync za nastavitve, ki sledijo vašemu profilu Chrome, chrome.storage.local za statistiko in shranjene seje ter chrome.storage.session za začasne podatke, kot so časovni žigi zavihkov. Nič od tega se ne pošilja na nobene strežnike tretjih oseb." },
-  "privacyPermissionsTitle": { "message": "Dovoljenja" },
-  "privacyPermissionsIntro": { "message": "Drowzy uporablja ta dovoljenja za Chrome:" },
-  "privacyPermTabs": { "message": "tabs – prikaz, zamrznitev in obnovitev zavihkov brskalnika" },
-  "privacyPermStorage": { "message": "storage – lokalno shranjevanje nastavitev" },
-  "privacyPermAlarms": { "message": "alarms – občasno preverjanje neaktivnih zavihkov" },
-  "privacyPermContextMenus": { "message": "contextMenus – možnosti v kontekstnem meniju" },
-  "privacyContactTitle": { "message": "Kontakt" },
-  "privacyContactText": { "message": "Vprašanja? Pišite na drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Dobrodošli v Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy varčuje s pomnilnikom tako, da neaktivne zavihke uspava. Vaši zavihki so vedno varni – uporabljamo Chromov izvorni API za zavrženje, zato preživijo tudi, če Drowzy odstranite."
+  },
+  "howItWorks": {
+    "message": "Kako deluje"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Zavihki, neaktivni 30 minut</strong>, se samodejno zamrznejo"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Zamrznjeni zavihki ne porabljajo RAM</strong>, a ostanejo v vrstici zavihkov"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Klikni na katerikoli zamrznjen zavihek</strong> za takojšnje prebujanje"
+  },
+  "featureProtected": {
+    "message": "<strong>Aktivni, pripeti in zvočni zavihki</strong> se nikoli ne dotaknejo"
+  },
+  "quickActions": {
+    "message": "Hitre akcije"
+  },
+  "actionClickIcon": {
+    "message": "Klikni na <strong>ikono Drowzy</strong> v orodni vrstici za prikaz vseh zavihkov"
+  },
+  "actionAltS": {
+    "message": "Pritisni <kbd>Alt+S</kbd> za zamrznitev trenutnega zavihka"
+  },
+  "actionAltShiftS": {
+    "message": "Pritisni <kbd>Alt+Shift+S</kbd> za zamrznitev vseh ostalih zavihkov"
+  },
+  "actionAltW": {
+    "message": "Pritisni <kbd>Alt+W</kbd> za prebujanje vseh zamrznjenih zavihkov"
+  },
+  "actionRightClick": {
+    "message": "Desni klik na katerikoli strani za hitre možnosti zamrznitve"
+  },
+  "onboardingCta": {
+    "message": "Drowzy že deluje. Odpri nekaj zavihkov in ga preizkusi!"
+  },
+  "onboardingBtn": {
+    "message": "Razumem, gremo"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Pravilnik o zasebnosti"
+  },
+  "privacyUpdated": {
+    "message": "Zadnja posodobitev: februar 2026"
+  },
+  "privacyShortTitle": {
+    "message": "Na kratko"
+  },
+  "privacyShortText": {
+    "message": "Drowzy ne zbira nobenih podatkov. Brez analitike, brez sledenja, brez zunanjih strežnikov. Vse ostane v vašem brskalniku."
+  },
+  "privacyStoredTitle": {
+    "message": "Kaj se shranjuje"
+  },
+  "privacyStoredText": {
+    "message": "Vaše nastavitve (časovnik zamrznitve, beli seznam, preference) se shranjujejo z vgrajenimi API-ji za shranjevanje v Chrome: chrome.storage.sync za nastavitve, ki sledijo vašemu profilu Chrome, chrome.storage.local za statistiko in shranjene seje ter chrome.storage.session za začasne podatke, kot so časovni žigi zavihkov. Nič od tega se ne pošilja na nobene strežnike tretjih oseb."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Dovoljenja"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy uporablja ta dovoljenja za Chrome:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – prikaz, zamrznitev in obnovitev zavihkov brskalnika"
+  },
+  "privacyPermStorage": {
+    "message": "storage – lokalno shranjevanje nastavitev"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – občasno preverjanje neaktivnih zavihkov"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – možnosti v kontekstnem meniju"
+  },
+  "privacyContactTitle": {
+    "message": "Kontakt"
+  },
+  "privacyContactText": {
+    "message": "Vprašanja? Pišite na drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Zamenjaj"
+  },
+  "replaceSessionTitle": {
+    "message": "Zamenjaj trenutne zavihke s to sejo"
+  },
+  "invalidDomain": {
+    "message": "Vnesite veljavno domeno (npr. example.com)"
+  },
+  "extensionPage": {
+    "message": "Stran razširitve"
+  },
+  "exportWhitelist": {
+    "message": "Izvozi"
+  },
+  "importWhitelist": {
+    "message": "Uvozi"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopiraj beli seznam"
+  },
+  "importWhitelistTitle": {
+    "message": "Uvozi beli seznam iz odložišča"
+  },
+  "copiedSites": {
+    "message": "Kopiranih $COUNT$ strani",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Uvoženih $COUNT$ novih strani",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "V odložišču ni veljavnih domen"
+  },
+  "clipboardReadFailed": {
+    "message": "Odložišča ni bilo mogoče prebrati"
+  },
+  "enjoyingDrowzy": {
+    "message": "Vam je Drowzy všeč?"
+  },
+  "reviewYes": {
+    "message": "Da!"
+  },
+  "reviewNo": {
+    "message": "Ne ravno"
+  },
+  "whatsNew": {
+    "message": "Kaj je novega v v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Kaj je novega v Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Kaj je novega"
+  },
+  "changelogVersion": {
+    "message": "Različica 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Nove funkcije"
+  },
+  "changelogBugFixes": {
+    "message": "Popravki napak"
+  },
+  "changelogImprovements": {
+    "message": "Izboljšave"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Prošnja za oceno"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Po zaustavitvi nekaj zavihkov vas bo Drowzy vprašal, ali vam je všeč. Hiter palec gor nam zelo pomaga!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Stran sprememb"
+  },
+  "changelogChangelogDesc": {
+    "message": "Ravno jo gledate! Odpre se samodejno ob posodobitvi. Dostopna iz Nastavitev."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Čas obnovitve seje"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Obnovljeni zavihki se ne zaustavijo več takoj samodejno. Zdaj pravilno ponastavijo svoje časovnike nedejavnosti."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Časovna omejitev preverjanja obrazcev"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Preverjanje obrazcev ima zdaj 500ms časovno omejitev, da neodzivni zavihki ne morejo blokirati čakalne vrste."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Dvojniki belega seznama"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Odpravljena težava z občutljivostjo na velike in male črke, kjer sta se lahko dodala \"Example.com\" in \"example.com\". Vsi vnosi so zdaj normalizirani."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Statistike v živo"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Pojavno okno se zdaj samodejno osvežuje ob zaustavitvi ali prebuditvi zavihkov."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Možnosti obnovitve seje"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Seje imajo zdaj ločena gumba \"Odpri\" in \"Zamenjaj\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Preverjanje in izvoz/uvoz belega seznama"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Vnos belega seznama zdaj preverja domene. Izvažate in uvažate lahko prek odložišča."
+  },
+  "changelogA11yTitle": {
+    "message": "Dostopnost"
+  },
+  "changelogA11yDesc": {
+    "message": "Elementi seznama zavihkov so zdaj navigabilni s tipkovnico z vlogami ARIA. Obvestila se napovedujejo bralnikom zaslona."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Gladkejše animacije"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Stopničaste animacije seznama zavihkov so zdaj omejene, da okna z veliko zavihki nimajo dolgih zakasnitev."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy je brezplačen in odprtokoden. Če vam prihrani pomnilnik, pustite oceno ali zvezdico na GitHubu."
+  },
+  "changelogReviewBtn": {
+    "message": "Pustite oceno"
+  },
+  "changelogStarBtn": {
+    "message": "Zvezdica na GitHubu"
+  }
 }

@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Пробудити всі призупинені вкладки"
   },
-
-  "statSleeping": { "message": "сплять" },
-  "statProtected": { "message": "захищено" },
-  "statSaved": { "message": "заощаджено" },
-
-  "suspendOthers": { "message": "Призупинити інші" },
-  "wakeAll": { "message": "Пробудити всі" },
-
-  "neverSuspendSite": { "message": "Ніколи не призупиняти цей сайт" },
-  "siteWhitelisted": { "message": "Сайт у білому списку (натисніть, щоб видалити)" },
-  "activeWontSuspend": { "message": "Активна – не буде призупинена" },
-  "loading": { "message": "Завантаження..." },
-
-  "tabsInWindow": { "message": "Вкладки в цьому вікні" },
-  "loadingTabs": { "message": "Завантаження вкладок..." },
-  "noTabsFound": { "message": "Вкладок не знайдено" },
-  "failedToLoad": { "message": "Не вдалося завантажити. Відкрийте спливаюче вікно знову, щоб повторити." },
-
-  "badgeActive": { "message": "Активна" },
-  "badgeSystem": { "message": "Системна" },
-  "badgePinned": { "message": "Закріплена" },
-  "badgeAudio": { "message": "Аудіо" },
-  "badgeStarred": { "message": "Обрана" },
-  "badgeProtected": { "message": "Захищена" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Сеанси" },
-  "sessionNamePlaceholder": { "message": "Назва сеансу (необов'язково)" },
-  "save": { "message": "Зберегти" },
-  "emptySessionState": { "message": "Збережіть свій перший сеанс, щоб відновлювати вкладки будь-коли" },
-  "open": { "message": "Відкрити" },
-  "openSessionTitle": { "message": "Відкрити вкладки з цього сеансу" },
-  "deleteSessionTitle": { "message": "Видалити сеанс" },
-  "sessionSaved": { "message": "Сеанс збережено!" },
-  "failedToSave": { "message": "Не вдалося зберегти" },
+  "statSleeping": {
+    "message": "сплять"
+  },
+  "statProtected": {
+    "message": "захищено"
+  },
+  "statSaved": {
+    "message": "заощаджено"
+  },
+  "suspendOthers": {
+    "message": "Призупинити інші"
+  },
+  "wakeAll": {
+    "message": "Пробудити всі"
+  },
+  "neverSuspendSite": {
+    "message": "Ніколи не призупиняти цей сайт"
+  },
+  "siteWhitelisted": {
+    "message": "Сайт у білому списку (натисніть, щоб видалити)"
+  },
+  "activeWontSuspend": {
+    "message": "Активна – не буде призупинена"
+  },
+  "loading": {
+    "message": "Завантаження..."
+  },
+  "tabsInWindow": {
+    "message": "Вкладки в цьому вікні"
+  },
+  "loadingTabs": {
+    "message": "Завантаження вкладок..."
+  },
+  "noTabsFound": {
+    "message": "Вкладок не знайдено"
+  },
+  "failedToLoad": {
+    "message": "Не вдалося завантажити. Відкрийте спливаюче вікно знову, щоб повторити."
+  },
+  "badgeActive": {
+    "message": "Активна"
+  },
+  "badgeSystem": {
+    "message": "Системна"
+  },
+  "badgePinned": {
+    "message": "Закріплена"
+  },
+  "badgeAudio": {
+    "message": "Аудіо"
+  },
+  "badgeStarred": {
+    "message": "Обрана"
+  },
+  "badgeProtected": {
+    "message": "Захищена"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Сеанси"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Назва сеансу (необов'язково)"
+  },
+  "save": {
+    "message": "Зберегти"
+  },
+  "emptySessionState": {
+    "message": "Збережіть свій перший сеанс, щоб відновлювати вкладки будь-коли"
+  },
+  "open": {
+    "message": "Відкрити"
+  },
+  "openSessionTitle": {
+    "message": "Відкрити вкладки з цього сеансу"
+  },
+  "deleteSessionTitle": {
+    "message": "Видалити сеанс"
+  },
+  "sessionSaved": {
+    "message": "Сеанс збережено!"
+  },
+  "failedToSave": {
+    "message": "Не вдалося зберегти"
+  },
   "restoredTabs": {
     "message": "Відновлено $COUNT$ вкладок",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Не вдалося відновити" },
-  "noSessionsToExport": { "message": "Немає сеансів для експорту" },
+  "failedToRestore": {
+    "message": "Не вдалося відновити"
+  },
+  "noSessionsToExport": {
+    "message": "Немає сеансів для експорту"
+  },
   "copiedSessionsJson": {
     "message": "Скопійовано $COUNT$ сеансів як JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ вкладок",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Статистика" },
-  "statToday": { "message": "Сьогодні" },
-  "statAllTime": { "message": "За весь час" },
-  "statRamSaved": { "message": "RAM заощаджено (прибл.)" },
-  "statMemberSince": { "message": "Учасник з" },
-
-  "settings": { "message": "Налаштування" },
-  "autoSuspendAfter": { "message": "Автопризупинення після" },
-  "timer5min": { "message": "5 хвилин" },
-  "timer10min": { "message": "10 хвилин" },
-  "timer15min": { "message": "15 хвилин" },
-  "timer30min": { "message": "30 хвилин" },
-  "timer1hour": { "message": "1 година" },
-  "timer2hours": { "message": "2 години" },
-  "timer4hours": { "message": "4 години" },
-  "timerNever": { "message": "Ніколи" },
-  "protectPinned": { "message": "Захищати закріплені вкладки" },
-  "protectAudio": { "message": "Захищати вкладки з аудіо" },
-  "protectForms": { "message": "Захищати вкладки з формами" },
-  "suspendOnStartup": { "message": "Призупиняти вкладки при запуску" },
-  "enableAutoSuspend": { "message": "Увімкнути автопризупинення" },
-  "markSuspended": { "message": "Позначати призупинені вкладки" },
-  "whitelistedSites": { "message": "Сайти в білому списку" },
-  "add": { "message": "Додати" },
-  "noSitesWhitelisted": { "message": "Немає сайтів у білому списку" },
-
-  "suspending": { "message": "Призупинення..." },
-  "done": { "message": "Готово!" },
-  "waking": { "message": "Пробудження..." },
+  "stats": {
+    "message": "Статистика"
+  },
+  "statToday": {
+    "message": "Сьогодні"
+  },
+  "statAllTime": {
+    "message": "За весь час"
+  },
+  "statRamSaved": {
+    "message": "RAM заощаджено (прибл.)"
+  },
+  "statMemberSince": {
+    "message": "Учасник з"
+  },
+  "settings": {
+    "message": "Налаштування"
+  },
+  "autoSuspendAfter": {
+    "message": "Автопризупинення після"
+  },
+  "timer5min": {
+    "message": "5 хвилин"
+  },
+  "timer10min": {
+    "message": "10 хвилин"
+  },
+  "timer15min": {
+    "message": "15 хвилин"
+  },
+  "timer30min": {
+    "message": "30 хвилин"
+  },
+  "timer1hour": {
+    "message": "1 година"
+  },
+  "timer2hours": {
+    "message": "2 години"
+  },
+  "timer4hours": {
+    "message": "4 години"
+  },
+  "timerNever": {
+    "message": "Ніколи"
+  },
+  "protectPinned": {
+    "message": "Захищати закріплені вкладки"
+  },
+  "protectAudio": {
+    "message": "Захищати вкладки з аудіо"
+  },
+  "protectForms": {
+    "message": "Захищати вкладки з формами"
+  },
+  "suspendOnStartup": {
+    "message": "Призупиняти вкладки при запуску"
+  },
+  "enableAutoSuspend": {
+    "message": "Увімкнути автопризупинення"
+  },
+  "markSuspended": {
+    "message": "Позначати призупинені вкладки"
+  },
+  "whitelistedSites": {
+    "message": "Сайти в білому списку"
+  },
+  "add": {
+    "message": "Додати"
+  },
+  "noSitesWhitelisted": {
+    "message": "Немає сайтів у білому списку"
+  },
+  "suspending": {
+    "message": "Призупинення..."
+  },
+  "done": {
+    "message": "Готово!"
+  },
+  "waking": {
+    "message": "Пробудження..."
+  },
   "copiedTabs": {
     "message": "Скопійовано $COUNT$ вкладок до буфера обміну",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Не вдалося скопіювати" },
-  "copyTabsTitle": { "message": "Копіювати список вкладок до буфера обміну" },
-  "copySessionsTitle": { "message": "Копіювати всі сеанси як JSON" },
-  "remove": { "message": "Видалити" },
-
-  "switchToLight": { "message": "Перемкнути на світлу тему" },
-  "switchToDark": { "message": "Перемкнути на темну тему" },
-
-  "ctxSuspendThis": { "message": "Призупинити цю вкладку" },
-  "ctxSuspendOthers": { "message": "Призупинити всі інші вкладки" },
-  "ctxNeverSuspend": { "message": "Ніколи не призупиняти цей сайт" },
-
-  "maxSessionsReached": { "message": "Досягнуто максимум 20 сеансів. Видаліть один, щоб зберегти новий." },
-  "noSaveableTabs": { "message": "У цьому вікні немає вкладок для збереження." },
-  "sessionNotFound": { "message": "Сеанс не знайдено." },
-  "noRestorableTabs": { "message": "У цьому сеансі немає вкладок для відновлення." },
+  "failedToCopy": {
+    "message": "Не вдалося скопіювати"
+  },
+  "copyTabsTitle": {
+    "message": "Копіювати список вкладок до буфера обміну"
+  },
+  "copySessionsTitle": {
+    "message": "Копіювати всі сеанси як JSON"
+  },
+  "remove": {
+    "message": "Видалити"
+  },
+  "switchToLight": {
+    "message": "Перемкнути на світлу тему"
+  },
+  "switchToDark": {
+    "message": "Перемкнути на темну тему"
+  },
+  "ctxSuspendThis": {
+    "message": "Призупинити цю вкладку"
+  },
+  "ctxSuspendOthers": {
+    "message": "Призупинити всі інші вкладки"
+  },
+  "ctxNeverSuspend": {
+    "message": "Ніколи не призупиняти цей сайт"
+  },
+  "maxSessionsReached": {
+    "message": "Досягнуто максимум 20 сеансів. Видаліть один, щоб зберегти новий."
+  },
+  "noSaveableTabs": {
+    "message": "У цьому вікні немає вкладок для збереження."
+  },
+  "sessionNotFound": {
+    "message": "Сеанс не знайдено."
+  },
+  "noRestorableTabs": {
+    "message": "У цьому сеансі немає вкладок для відновлення."
+  },
   "sessionDefaultName": {
     "message": "Сеанс – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "щойно" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "щойно"
+  },
   "minutesAgo": {
     "message": "$COUNT$ хв тому",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ год тому",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Вчора" },
+  "yesterday": {
+    "message": "Вчора"
+  },
   "daysAgo": {
     "message": "$COUNT$ дн тому",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Ласкаво просимо до Drowzy" },
-  "onboardingIntro": { "message": "Drowzy заощаджує пам'ять, переводячи неактивні вкладки в режим сну. Ваші вкладки завжди в безпеці – ми використовуємо вбудований API Chrome для вивантаження, тому вони збережуться, навіть якщо ви видалите Drowzy." },
-  "howItWorks": { "message": "Як це працює" },
-  "featureAutoSuspend": { "message": "<strong>Вкладки, неактивні протягом 30 хвилин</strong>, автоматично призупиняються" },
-  "featureZeroRam": { "message": "<strong>Призупинені вкладки не використовують RAM</strong>, але залишаються на панелі вкладок" },
-  "featureClickToWake": { "message": "<strong>Натисніть на будь-яку призупинену вкладку</strong>, щоб миттєво її пробудити" },
-  "featureProtected": { "message": "<strong>Активні, закріплені та аудіо вкладки</strong> ніколи не зачіпаються" },
-  "quickActions": { "message": "Швидкі дії" },
-  "actionClickIcon": { "message": "Натисніть <strong>іконку Drowzy</strong> на панелі інструментів, щоб побачити всі вкладки" },
-  "actionAltS": { "message": "Натисніть <kbd>Alt+S</kbd>, щоб призупинити поточну вкладку" },
-  "actionAltShiftS": { "message": "Натисніть <kbd>Alt+Shift+S</kbd>, щоб призупинити всі інші вкладки" },
-  "actionAltW": { "message": "Натисніть <kbd>Alt+W</kbd>, щоб пробудити всі призупинені вкладки" },
-  "actionRightClick": { "message": "Клацніть правою кнопкою миші на будь-якій сторінці для швидкого призупинення" },
-  "onboardingCta": { "message": "Drowzy вже працює. Відкрийте кілька вкладок і спробуйте!" },
-  "onboardingBtn": { "message": "Зрозуміло, починаємо" },
-
-  "privacyTitle": { "message": "Drowzy – Політика конфіденційності" },
-  "privacyUpdated": { "message": "Останнє оновлення: лютий 2026" },
-  "privacyShortTitle": { "message": "Коротка версія" },
-  "privacyShortText": { "message": "Drowzy не збирає жодних даних. Без аналітики, без відстеження, без зовнішніх серверів. Все залишається у вашому браузері." },
-  "privacyStoredTitle": { "message": "Що зберігається" },
-  "privacyStoredText": { "message": "Ваші налаштування (таймер призупинення, білий список, вподобання) зберігаються за допомогою вбудованих API Chrome: chrome.storage.sync для налаштувань, що слідують за вашим профілем Chrome, chrome.storage.local для статистики та збережених сеансів, і chrome.storage.session для тимчасових даних, як-от мітки часу вкладок. Нічого з цього не надсилається на сторонній сервер." },
-  "privacyPermissionsTitle": { "message": "Дозволи" },
-  "privacyPermissionsIntro": { "message": "Drowzy використовує такі дозволи Chrome:" },
-  "privacyPermTabs": { "message": "tabs – перегляд, призупинення та відновлення вкладок браузера" },
-  "privacyPermStorage": { "message": "storage – збереження налаштувань локально" },
-  "privacyPermAlarms": { "message": "alarms – періодична перевірка неактивних вкладок" },
-  "privacyPermContextMenus": { "message": "contextMenus – параметри контекстного меню" },
-  "privacyContactTitle": { "message": "Контакти" },
-  "privacyContactText": { "message": "Маєте запитання? Напишіть на drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Ласкаво просимо до Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy заощаджує пам'ять, переводячи неактивні вкладки в режим сну. Ваші вкладки завжди в безпеці – ми використовуємо вбудований API Chrome для вивантаження, тому вони збережуться, навіть якщо ви видалите Drowzy."
+  },
+  "howItWorks": {
+    "message": "Як це працює"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Вкладки, неактивні протягом 30 хвилин</strong>, автоматично призупиняються"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Призупинені вкладки не використовують RAM</strong>, але залишаються на панелі вкладок"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Натисніть на будь-яку призупинену вкладку</strong>, щоб миттєво її пробудити"
+  },
+  "featureProtected": {
+    "message": "<strong>Активні, закріплені та аудіо вкладки</strong> ніколи не зачіпаються"
+  },
+  "quickActions": {
+    "message": "Швидкі дії"
+  },
+  "actionClickIcon": {
+    "message": "Натисніть <strong>іконку Drowzy</strong> на панелі інструментів, щоб побачити всі вкладки"
+  },
+  "actionAltS": {
+    "message": "Натисніть <kbd>Alt+S</kbd>, щоб призупинити поточну вкладку"
+  },
+  "actionAltShiftS": {
+    "message": "Натисніть <kbd>Alt+Shift+S</kbd>, щоб призупинити всі інші вкладки"
+  },
+  "actionAltW": {
+    "message": "Натисніть <kbd>Alt+W</kbd>, щоб пробудити всі призупинені вкладки"
+  },
+  "actionRightClick": {
+    "message": "Клацніть правою кнопкою миші на будь-якій сторінці для швидкого призупинення"
+  },
+  "onboardingCta": {
+    "message": "Drowzy вже працює. Відкрийте кілька вкладок і спробуйте!"
+  },
+  "onboardingBtn": {
+    "message": "Зрозуміло, починаємо"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Політика конфіденційності"
+  },
+  "privacyUpdated": {
+    "message": "Останнє оновлення: лютий 2026"
+  },
+  "privacyShortTitle": {
+    "message": "Коротка версія"
+  },
+  "privacyShortText": {
+    "message": "Drowzy не збирає жодних даних. Без аналітики, без відстеження, без зовнішніх серверів. Все залишається у вашому браузері."
+  },
+  "privacyStoredTitle": {
+    "message": "Що зберігається"
+  },
+  "privacyStoredText": {
+    "message": "Ваші налаштування (таймер призупинення, білий список, вподобання) зберігаються за допомогою вбудованих API Chrome: chrome.storage.sync для налаштувань, що слідують за вашим профілем Chrome, chrome.storage.local для статистики та збережених сеансів, і chrome.storage.session для тимчасових даних, як-от мітки часу вкладок. Нічого з цього не надсилається на сторонній сервер."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Дозволи"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy використовує такі дозволи Chrome:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – перегляд, призупинення та відновлення вкладок браузера"
+  },
+  "privacyPermStorage": {
+    "message": "storage – збереження налаштувань локально"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – періодична перевірка неактивних вкладок"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – параметри контекстного меню"
+  },
+  "privacyContactTitle": {
+    "message": "Контакти"
+  },
+  "privacyContactText": {
+    "message": "Маєте запитання? Напишіть на drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Замінити"
+  },
+  "replaceSessionTitle": {
+    "message": "Замінити поточні вкладки цим сеансом"
+  },
+  "invalidDomain": {
+    "message": "Введіть дійсний домен (наприклад, example.com)"
+  },
+  "extensionPage": {
+    "message": "Сторінка розширення"
+  },
+  "exportWhitelist": {
+    "message": "Експорт"
+  },
+  "importWhitelist": {
+    "message": "Імпорт"
+  },
+  "exportWhitelistTitle": {
+    "message": "Копіювати білий список"
+  },
+  "importWhitelistTitle": {
+    "message": "Імпортувати білий список з буфера обміну"
+  },
+  "copiedSites": {
+    "message": "Скопійовано $COUNT$ сайт(ів)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Імпортовано $COUNT$ новий(их) сайт(ів)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "У буфері обміну не знайдено дійсних доменів"
+  },
+  "clipboardReadFailed": {
+    "message": "Не вдалося прочитати буфер обміну"
+  },
+  "enjoyingDrowzy": {
+    "message": "Подобається Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Так!"
+  },
+  "reviewNo": {
+    "message": "Не дуже"
+  },
+  "whatsNew": {
+    "message": "Що нового у v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Що нового в Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Що нового"
+  },
+  "changelogVersion": {
+    "message": "Версія 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Нові функції"
+  },
+  "changelogBugFixes": {
+    "message": "Виправлення помилок"
+  },
+  "changelogImprovements": {
+    "message": "Покращення"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Запит на відгук"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Після призупинення кількох вкладок Drowzy запитає, чи вам подобається. Швидкий лайк дуже нам допомагає!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Сторінка змін"
+  },
+  "changelogChangelogDesc": {
+    "message": "Ви дивитесь на неї! Відкривається автоматично при оновленні. Доступна з Налаштувань."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Таймінг відновлення сеансу"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Відновлені вкладки більше не призупиняються автоматично одразу. Тепер вони правильно скидають свої таймери бездіяльності."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Тайм-аут перевірки форм"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Перевірка даних форм тепер має тайм-аут 500мс, тому вкладки, що не відповідають, не можуть блокувати чергу."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Дублікати білого списку"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Виправлено проблему чутливості до регістру, через яку \"Example.com\" і \"example.com\" могли бути додані одночасно. Тепер усі записи нормалізовані."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Статистика в реальному часі"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Спливаюче вікно тепер автоматично оновлюється, коли вкладки призупиняються або пробуджуються."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Параметри відновлення сеансу"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Сеанси тепер мають окремі кнопки \"Відкрити\" та \"Замінити\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Валідація та експорт/імпорт білого списку"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Введення білого списку тепер перевіряє домени. Ви можете експортувати та імпортувати через буфер обміну."
+  },
+  "changelogA11yTitle": {
+    "message": "Доступність"
+  },
+  "changelogA11yDesc": {
+    "message": "Елементи списку вкладок тепер доступні з клавіатури з ролями ARIA. Сповіщення оголошуються програмам зчитування з екрана."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Плавніші анімації"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Каскадні анімації списку вкладок тепер обмежені, тому вікна з багатьма вкладками не мають тривалої затримки."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy безкоштовний та з відкритим кодом. Якщо він економить пам'ять, залиште відгук або зірку на GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Залишити відгук"
+  },
+  "changelogStarBtn": {
+    "message": "Зірка на GitHub"
+  }
 }

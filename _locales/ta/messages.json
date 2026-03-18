@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "இடைநிறுத்தப்பட்ட அனைத்து தாவல்களையும் எழுப்பு"
   },
-
-  "statSleeping": { "message": "தூங்குகின்றன" },
-  "statProtected": { "message": "பாதுகாக்கப்பட்டவை" },
-  "statSaved": { "message": "சேமிக்கப்பட்டது" },
-
-  "suspendOthers": { "message": "மற்றவற்றை இடைநிறுத்து" },
-  "wakeAll": { "message": "அனைத்தையும் எழுப்பு" },
-
-  "neverSuspendSite": { "message": "இந்த தளத்தை ஒருபோதும் இடைநிறுத்தாதே" },
-  "siteWhitelisted": { "message": "தளம் அனுமதிப்பட்டியலில் உள்ளது (அகற்ற கிளிக் செய்யவும்)" },
-  "activeWontSuspend": { "message": "செயலில் – இடைநிறுத்தப்படாது" },
-  "loading": { "message": "ஏற்றுகிறது..." },
-
-  "tabsInWindow": { "message": "இந்த சாளரத்தில் உள்ள தாவல்கள்" },
-  "loadingTabs": { "message": "தாவல்களை ஏற்றுகிறது..." },
-  "noTabsFound": { "message": "தாவல்கள் எதுவும் கிடைக்கவில்லை" },
-  "failedToLoad": { "message": "ஏற்றுவதில் தோல்வி. மீண்டும் முயற்சிக்க popup-ஐ திறக்கவும்." },
-
-  "badgeActive": { "message": "செயலில்" },
-  "badgeSystem": { "message": "கணினி" },
-  "badgePinned": { "message": "பின் செய்யப்பட்டது" },
-  "badgeAudio": { "message": "ஒலி" },
-  "badgeStarred": { "message": "நட்சத்திரமிடப்பட்டது" },
-  "badgeProtected": { "message": "பாதுகாக்கப்பட்டது" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "அமர்வுகள்" },
-  "sessionNamePlaceholder": { "message": "அமர்வு பெயர் (விருப்பமானது)" },
-  "save": { "message": "சேமி" },
-  "emptySessionState": { "message": "தாவல்களை எப்போது வேண்டுமானாலும் மீட்டெடுக்க உங்கள் முதல் அமர்வைச் சேமியுங்கள்" },
-  "open": { "message": "திற" },
-  "openSessionTitle": { "message": "இந்த அமர்விலிருந்து தாவல்களைத் திற" },
-  "deleteSessionTitle": { "message": "அமர்வை நீக்கு" },
-  "sessionSaved": { "message": "அமர்வு சேமிக்கப்பட்டது!" },
-  "failedToSave": { "message": "சேமிப்பதில் தோல்வி" },
+  "statSleeping": {
+    "message": "தூங்குகின்றன"
+  },
+  "statProtected": {
+    "message": "பாதுகாக்கப்பட்டவை"
+  },
+  "statSaved": {
+    "message": "சேமிக்கப்பட்டது"
+  },
+  "suspendOthers": {
+    "message": "மற்றவற்றை இடைநிறுத்து"
+  },
+  "wakeAll": {
+    "message": "அனைத்தையும் எழுப்பு"
+  },
+  "neverSuspendSite": {
+    "message": "இந்த தளத்தை ஒருபோதும் இடைநிறுத்தாதே"
+  },
+  "siteWhitelisted": {
+    "message": "தளம் அனுமதிப்பட்டியலில் உள்ளது (அகற்ற கிளிக் செய்யவும்)"
+  },
+  "activeWontSuspend": {
+    "message": "செயலில் – இடைநிறுத்தப்படாது"
+  },
+  "loading": {
+    "message": "ஏற்றுகிறது..."
+  },
+  "tabsInWindow": {
+    "message": "இந்த சாளரத்தில் உள்ள தாவல்கள்"
+  },
+  "loadingTabs": {
+    "message": "தாவல்களை ஏற்றுகிறது..."
+  },
+  "noTabsFound": {
+    "message": "தாவல்கள் எதுவும் கிடைக்கவில்லை"
+  },
+  "failedToLoad": {
+    "message": "ஏற்றுவதில் தோல்வி. மீண்டும் முயற்சிக்க popup-ஐ திறக்கவும்."
+  },
+  "badgeActive": {
+    "message": "செயலில்"
+  },
+  "badgeSystem": {
+    "message": "கணினி"
+  },
+  "badgePinned": {
+    "message": "பின் செய்யப்பட்டது"
+  },
+  "badgeAudio": {
+    "message": "ஒலி"
+  },
+  "badgeStarred": {
+    "message": "நட்சத்திரமிடப்பட்டது"
+  },
+  "badgeProtected": {
+    "message": "பாதுகாக்கப்பட்டது"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "அமர்வுகள்"
+  },
+  "sessionNamePlaceholder": {
+    "message": "அமர்வு பெயர் (விருப்பமானது)"
+  },
+  "save": {
+    "message": "சேமி"
+  },
+  "emptySessionState": {
+    "message": "தாவல்களை எப்போது வேண்டுமானாலும் மீட்டெடுக்க உங்கள் முதல் அமர்வைச் சேமியுங்கள்"
+  },
+  "open": {
+    "message": "திற"
+  },
+  "openSessionTitle": {
+    "message": "இந்த அமர்விலிருந்து தாவல்களைத் திற"
+  },
+  "deleteSessionTitle": {
+    "message": "அமர்வை நீக்கு"
+  },
+  "sessionSaved": {
+    "message": "அமர்வு சேமிக்கப்பட்டது!"
+  },
+  "failedToSave": {
+    "message": "சேமிப்பதில் தோல்வி"
+  },
   "restoredTabs": {
     "message": "$COUNT$ தாவல்கள் மீட்டெடுக்கப்பட்டன",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "மீட்டெடுப்பதில் தோல்வி" },
-  "noSessionsToExport": { "message": "ஏற்றுமதி செய்ய அமர்வுகள் இல்லை" },
+  "failedToRestore": {
+    "message": "மீட்டெடுப்பதில் தோல்வி"
+  },
+  "noSessionsToExport": {
+    "message": "ஏற்றுமதி செய்ய அமர்வுகள் இல்லை"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ அமர்வுகள் JSON ஆக நகலெடுக்கப்பட்டன",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ தாவல்கள்",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "புள்ளிவிவரங்கள்" },
-  "statToday": { "message": "இன்று" },
-  "statAllTime": { "message": "மொத்தம்" },
-  "statRamSaved": { "message": "சேமிக்கப்பட்ட RAM (மதிப்பீடு)" },
-  "statMemberSince": { "message": "உறுப்பினர் ஆன நாள்" },
-
-  "settings": { "message": "அமைப்புகள்" },
-  "autoSuspendAfter": { "message": "இதற்குப் பிறகு தானாக இடைநிறுத்து" },
-  "timer5min": { "message": "5 நிமிடங்கள்" },
-  "timer10min": { "message": "10 நிமிடங்கள்" },
-  "timer15min": { "message": "15 நிமிடங்கள்" },
-  "timer30min": { "message": "30 நிமிடங்கள்" },
-  "timer1hour": { "message": "1 மணி நேரம்" },
-  "timer2hours": { "message": "2 மணி நேரம்" },
-  "timer4hours": { "message": "4 மணி நேரம்" },
-  "timerNever": { "message": "ஒருபோதும் இல்லை" },
-  "protectPinned": { "message": "பின் செய்யப்பட்ட தாவல்களைப் பாதுகா" },
-  "protectAudio": { "message": "ஒலி தாவல்களைப் பாதுகா" },
-  "protectForms": { "message": "படிவங்கள் உள்ள தாவல்களைப் பாதுகா" },
-  "suspendOnStartup": { "message": "தொடக்கத்தில் தாவல்களை இடைநிறுத்து" },
-  "enableAutoSuspend": { "message": "தானியங்கு இடைநிறுத்தத்தை இயக்கு" },
-  "markSuspended": { "message": "இடைநிறுத்தப்பட்ட தாவல்களை குறி" },
-  "whitelistedSites": { "message": "அனுமதிப்பட்டியல் தளங்கள்" },
-  "add": { "message": "சேர்" },
-  "noSitesWhitelisted": { "message": "அனுமதிப்பட்டியலில் தளங்கள் இல்லை" },
-
-  "suspending": { "message": "இடைநிறுத்துகிறது..." },
-  "done": { "message": "முடிந்தது!" },
-  "waking": { "message": "எழுப்புகிறது..." },
+  "stats": {
+    "message": "புள்ளிவிவரங்கள்"
+  },
+  "statToday": {
+    "message": "இன்று"
+  },
+  "statAllTime": {
+    "message": "மொத்தம்"
+  },
+  "statRamSaved": {
+    "message": "சேமிக்கப்பட்ட RAM (மதிப்பீடு)"
+  },
+  "statMemberSince": {
+    "message": "உறுப்பினர் ஆன நாள்"
+  },
+  "settings": {
+    "message": "அமைப்புகள்"
+  },
+  "autoSuspendAfter": {
+    "message": "இதற்குப் பிறகு தானாக இடைநிறுத்து"
+  },
+  "timer5min": {
+    "message": "5 நிமிடங்கள்"
+  },
+  "timer10min": {
+    "message": "10 நிமிடங்கள்"
+  },
+  "timer15min": {
+    "message": "15 நிமிடங்கள்"
+  },
+  "timer30min": {
+    "message": "30 நிமிடங்கள்"
+  },
+  "timer1hour": {
+    "message": "1 மணி நேரம்"
+  },
+  "timer2hours": {
+    "message": "2 மணி நேரம்"
+  },
+  "timer4hours": {
+    "message": "4 மணி நேரம்"
+  },
+  "timerNever": {
+    "message": "ஒருபோதும் இல்லை"
+  },
+  "protectPinned": {
+    "message": "பின் செய்யப்பட்ட தாவல்களைப் பாதுகா"
+  },
+  "protectAudio": {
+    "message": "ஒலி தாவல்களைப் பாதுகா"
+  },
+  "protectForms": {
+    "message": "படிவங்கள் உள்ள தாவல்களைப் பாதுகா"
+  },
+  "suspendOnStartup": {
+    "message": "தொடக்கத்தில் தாவல்களை இடைநிறுத்து"
+  },
+  "enableAutoSuspend": {
+    "message": "தானியங்கு இடைநிறுத்தத்தை இயக்கு"
+  },
+  "markSuspended": {
+    "message": "இடைநிறுத்தப்பட்ட தாவல்களை குறி"
+  },
+  "whitelistedSites": {
+    "message": "அனுமதிப்பட்டியல் தளங்கள்"
+  },
+  "add": {
+    "message": "சேர்"
+  },
+  "noSitesWhitelisted": {
+    "message": "அனுமதிப்பட்டியலில் தளங்கள் இல்லை"
+  },
+  "suspending": {
+    "message": "இடைநிறுத்துகிறது..."
+  },
+  "done": {
+    "message": "முடிந்தது!"
+  },
+  "waking": {
+    "message": "எழுப்புகிறது..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ தாவல்கள் கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டன",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "நகலெடுப்பதில் தோல்வி" },
-  "copyTabsTitle": { "message": "தாவல் பட்டியலை கிளிப்போர்டுக்கு நகலெடு" },
-  "copySessionsTitle": { "message": "அனைத்து அமர்வுகளையும் JSON ஆக நகலெடு" },
-  "remove": { "message": "அகற்று" },
-
-  "switchToLight": { "message": "ஒளி பயன்முறைக்கு மாறு" },
-  "switchToDark": { "message": "இருள் பயன்முறைக்கு மாறு" },
-
-  "ctxSuspendThis": { "message": "இந்த தாவலை இடைநிறுத்து" },
-  "ctxSuspendOthers": { "message": "மற்ற அனைத்து தாவல்களையும் இடைநிறுத்து" },
-  "ctxNeverSuspend": { "message": "இந்த தளத்தை ஒருபோதும் இடைநிறுத்தாதே" },
-
-  "maxSessionsReached": { "message": "அதிகபட்சம் 20 அமர்வுகள் எட்டப்பட்டது. புதியதைச் சேமிக்க ஒன்றை நீக்கவும்." },
-  "noSaveableTabs": { "message": "இந்த சாளரத்தில் சேமிக்கக்கூடிய தாவல்கள் இல்லை." },
-  "sessionNotFound": { "message": "அமர்வு கிடைக்கவில்லை." },
-  "noRestorableTabs": { "message": "இந்த அமர்வில் மீட்டெடுக்கக்கூடிய தாவல்கள் இல்லை." },
+  "failedToCopy": {
+    "message": "நகலெடுப்பதில் தோல்வி"
+  },
+  "copyTabsTitle": {
+    "message": "தாவல் பட்டியலை கிளிப்போர்டுக்கு நகலெடு"
+  },
+  "copySessionsTitle": {
+    "message": "அனைத்து அமர்வுகளையும் JSON ஆக நகலெடு"
+  },
+  "remove": {
+    "message": "அகற்று"
+  },
+  "switchToLight": {
+    "message": "ஒளி பயன்முறைக்கு மாறு"
+  },
+  "switchToDark": {
+    "message": "இருள் பயன்முறைக்கு மாறு"
+  },
+  "ctxSuspendThis": {
+    "message": "இந்த தாவலை இடைநிறுத்து"
+  },
+  "ctxSuspendOthers": {
+    "message": "மற்ற அனைத்து தாவல்களையும் இடைநிறுத்து"
+  },
+  "ctxNeverSuspend": {
+    "message": "இந்த தளத்தை ஒருபோதும் இடைநிறுத்தாதே"
+  },
+  "maxSessionsReached": {
+    "message": "அதிகபட்சம் 20 அமர்வுகள் எட்டப்பட்டது. புதியதைச் சேமிக்க ஒன்றை நீக்கவும்."
+  },
+  "noSaveableTabs": {
+    "message": "இந்த சாளரத்தில் சேமிக்கக்கூடிய தாவல்கள் இல்லை."
+  },
+  "sessionNotFound": {
+    "message": "அமர்வு கிடைக்கவில்லை."
+  },
+  "noRestorableTabs": {
+    "message": "இந்த அமர்வில் மீட்டெடுக்கக்கூடிய தாவல்கள் இல்லை."
+  },
   "sessionDefaultName": {
     "message": "அமர்வு – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "இப்போது தான்" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "இப்போது தான்"
+  },
   "minutesAgo": {
     "message": "$COUNT$ நிமிடங்களுக்கு முன்",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ மணி நேரத்திற்கு முன்",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "நேற்று" },
+  "yesterday": {
+    "message": "நேற்று"
+  },
   "daysAgo": {
     "message": "$COUNT$ நாட்களுக்கு முன்",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Drowzy-க்கு வரவேற்கிறோம்" },
-  "onboardingIntro": { "message": "Drowzy செயலற்ற தாவல்களைத் தூங்க வைப்பதன் மூலம் நினைவகத்தைச் சேமிக்கிறது. உங்கள் தாவல்கள் எப்போதும் பாதுகாப்பாக உள்ளன – Chrome-ன் நேட்டிவ் discard API-ஐ பயன்படுத்துகிறோம், எனவே Drowzy-ஐ நிறுவல் நீக்கினாலும் அவை பிழைக்கும்." },
-  "howItWorks": { "message": "இது எப்படி வேலை செய்கிறது" },
-  "featureAutoSuspend": { "message": "<strong>30 நிமிடங்கள் செயலற்ற தாவல்கள்</strong> தானாக இடைநிறுத்தப்படும்" },
-  "featureZeroRam": { "message": "<strong>இடைநிறுத்தப்பட்ட தாவல்கள் RAM பயன்படுத்தாது</strong> ஆனால் தாவல் பட்டியில் இருக்கும்" },
-  "featureClickToWake": { "message": "<strong>இடைநிறுத்தப்பட்ட எந்த தாவலையும் கிளிக் செய்யவும்</strong> உடனடியாக எழுப்ப" },
-  "featureProtected": { "message": "<strong>செயலில் உள்ள, பின் செய்யப்பட்ட மற்றும் ஒலி தாவல்கள்</strong> ஒருபோதும் தொடப்படாது" },
-  "quickActions": { "message": "விரைவு செயல்கள்" },
-  "actionClickIcon": { "message": "உங்கள் அனைத்து தாவல்களையும் பார்க்க கருவிப்பட்டியில் <strong>Drowzy சின்னத்தை</strong> கிளிக் செய்யவும்" },
-  "actionAltS": { "message": "தற்போதைய தாவலை இடைநிறுத்த <kbd>Alt+S</kbd> அழுத்தவும்" },
-  "actionAltShiftS": { "message": "மற்ற அனைத்து தாவல்களையும் இடைநிறுத்த <kbd>Alt+Shift+S</kbd> அழுத்தவும்" },
-  "actionAltW": { "message": "இடைநிறுத்தப்பட்ட அனைத்து தாவல்களையும் எழுப்ப <kbd>Alt+W</kbd> அழுத்தவும்" },
-  "actionRightClick": { "message": "விரைவு இடைநிறுத்த விருப்பங்களுக்கு எந்தப் பக்கத்திலும் வலது கிளிக் செய்யவும்" },
-  "onboardingCta": { "message": "Drowzy ஏற்கனவே இயங்குகிறது. சில தாவல்களைத் திறந்து முயற்சிக்கவும்!" },
-  "onboardingBtn": { "message": "புரிந்தது, தொடங்குவோம்" },
-
-  "privacyTitle": { "message": "Drowzy – தனியுரிமைக் கொள்கை" },
-  "privacyUpdated": { "message": "கடைசியாக புதுப்பிக்கப்பட்டது: பிப்ரவரி 2026" },
-  "privacyShortTitle": { "message": "சுருக்கமான பதிப்பு" },
-  "privacyShortText": { "message": "Drowzy எந்த தரவையும் சேகரிக்காது. பகுப்பாய்வு இல்லை, கண்காணிப்பு இல்லை, வெளிப்புற சேவையகங்கள் இல்லை. எல்லாம் உங்கள் உலாவியில் இருக்கும்." },
-  "privacyStoredTitle": { "message": "என்ன சேமிக்கப்படுகிறது" },
-  "privacyStoredText": { "message": "உங்கள் அமைப்புகள் (இடைநிறுத்த நேரமானி, அனுமதிப்பட்டியல், விருப்பத்தேர்வுகள்) Chrome-ன் உள்ளமைக்கப்பட்ட சேமிப்பக API-களைப் பயன்படுத்தி சேமிக்கப்படுகின்றன: உங்கள் Chrome சுயவிவரத்தைப் பின்பற்றும் அமைப்புகளுக்கு chrome.storage.sync, புள்ளிவிவரங்கள் மற்றும் சேமிக்கப்பட்ட அமர்வுகளுக்கு chrome.storage.local, மற்றும் தாவல் நேர முத்திரைகள் போன்ற தற்காலிக தரவுக்கு chrome.storage.session. இதில் எதுவும் மூன்றாம் தரப்பு சேவையகத்திற்கு அனுப்பப்படாது." },
-  "privacyPermissionsTitle": { "message": "அனுமதிகள்" },
-  "privacyPermissionsIntro": { "message": "Drowzy இந்த Chrome அனுமதிகளைப் பயன்படுத்துகிறது:" },
-  "privacyPermTabs": { "message": "tabs – உலாவி தாவல்களை பட்டியலிடுதல், இடைநிறுத்துதல் மற்றும் மீட்டெடுத்தல்" },
-  "privacyPermStorage": { "message": "storage – உங்கள் அமைப்புகளை உள்ளூரில் சேமித்தல்" },
-  "privacyPermAlarms": { "message": "alarms – செயலற்ற தாவல்களுக்கான கால இடைவெளி சோதனைகள்" },
-  "privacyPermContextMenus": { "message": "contextMenus – வலது கிளிக் மெனு விருப்பங்கள்" },
-  "privacyContactTitle": { "message": "தொடர்பு" },
-  "privacyContactText": { "message": "கேள்விகள்? drowzyextension@gmail.com இல் தொடர்பு கொள்ளவும்" }
+  "onboardingTitle": {
+    "message": "Drowzy-க்கு வரவேற்கிறோம்"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy செயலற்ற தாவல்களைத் தூங்க வைப்பதன் மூலம் நினைவகத்தைச் சேமிக்கிறது. உங்கள் தாவல்கள் எப்போதும் பாதுகாப்பாக உள்ளன – Chrome-ன் நேட்டிவ் discard API-ஐ பயன்படுத்துகிறோம், எனவே Drowzy-ஐ நிறுவல் நீக்கினாலும் அவை பிழைக்கும்."
+  },
+  "howItWorks": {
+    "message": "இது எப்படி வேலை செய்கிறது"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>30 நிமிடங்கள் செயலற்ற தாவல்கள்</strong> தானாக இடைநிறுத்தப்படும்"
+  },
+  "featureZeroRam": {
+    "message": "<strong>இடைநிறுத்தப்பட்ட தாவல்கள் RAM பயன்படுத்தாது</strong> ஆனால் தாவல் பட்டியில் இருக்கும்"
+  },
+  "featureClickToWake": {
+    "message": "<strong>இடைநிறுத்தப்பட்ட எந்த தாவலையும் கிளிக் செய்யவும்</strong> உடனடியாக எழுப்ப"
+  },
+  "featureProtected": {
+    "message": "<strong>செயலில் உள்ள, பின் செய்யப்பட்ட மற்றும் ஒலி தாவல்கள்</strong> ஒருபோதும் தொடப்படாது"
+  },
+  "quickActions": {
+    "message": "விரைவு செயல்கள்"
+  },
+  "actionClickIcon": {
+    "message": "உங்கள் அனைத்து தாவல்களையும் பார்க்க கருவிப்பட்டியில் <strong>Drowzy சின்னத்தை</strong> கிளிக் செய்யவும்"
+  },
+  "actionAltS": {
+    "message": "தற்போதைய தாவலை இடைநிறுத்த <kbd>Alt+S</kbd> அழுத்தவும்"
+  },
+  "actionAltShiftS": {
+    "message": "மற்ற அனைத்து தாவல்களையும் இடைநிறுத்த <kbd>Alt+Shift+S</kbd> அழுத்தவும்"
+  },
+  "actionAltW": {
+    "message": "இடைநிறுத்தப்பட்ட அனைத்து தாவல்களையும் எழுப்ப <kbd>Alt+W</kbd> அழுத்தவும்"
+  },
+  "actionRightClick": {
+    "message": "விரைவு இடைநிறுத்த விருப்பங்களுக்கு எந்தப் பக்கத்திலும் வலது கிளிக் செய்யவும்"
+  },
+  "onboardingCta": {
+    "message": "Drowzy ஏற்கனவே இயங்குகிறது. சில தாவல்களைத் திறந்து முயற்சிக்கவும்!"
+  },
+  "onboardingBtn": {
+    "message": "புரிந்தது, தொடங்குவோம்"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – தனியுரிமைக் கொள்கை"
+  },
+  "privacyUpdated": {
+    "message": "கடைசியாக புதுப்பிக்கப்பட்டது: பிப்ரவரி 2026"
+  },
+  "privacyShortTitle": {
+    "message": "சுருக்கமான பதிப்பு"
+  },
+  "privacyShortText": {
+    "message": "Drowzy எந்த தரவையும் சேகரிக்காது. பகுப்பாய்வு இல்லை, கண்காணிப்பு இல்லை, வெளிப்புற சேவையகங்கள் இல்லை. எல்லாம் உங்கள் உலாவியில் இருக்கும்."
+  },
+  "privacyStoredTitle": {
+    "message": "என்ன சேமிக்கப்படுகிறது"
+  },
+  "privacyStoredText": {
+    "message": "உங்கள் அமைப்புகள் (இடைநிறுத்த நேரமானி, அனுமதிப்பட்டியல், விருப்பத்தேர்வுகள்) Chrome-ன் உள்ளமைக்கப்பட்ட சேமிப்பக API-களைப் பயன்படுத்தி சேமிக்கப்படுகின்றன: உங்கள் Chrome சுயவிவரத்தைப் பின்பற்றும் அமைப்புகளுக்கு chrome.storage.sync, புள்ளிவிவரங்கள் மற்றும் சேமிக்கப்பட்ட அமர்வுகளுக்கு chrome.storage.local, மற்றும் தாவல் நேர முத்திரைகள் போன்ற தற்காலிக தரவுக்கு chrome.storage.session. இதில் எதுவும் மூன்றாம் தரப்பு சேவையகத்திற்கு அனுப்பப்படாது."
+  },
+  "privacyPermissionsTitle": {
+    "message": "அனுமதிகள்"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy இந்த Chrome அனுமதிகளைப் பயன்படுத்துகிறது:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – உலாவி தாவல்களை பட்டியலிடுதல், இடைநிறுத்துதல் மற்றும் மீட்டெடுத்தல்"
+  },
+  "privacyPermStorage": {
+    "message": "storage – உங்கள் அமைப்புகளை உள்ளூரில் சேமித்தல்"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – செயலற்ற தாவல்களுக்கான கால இடைவெளி சோதனைகள்"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – வலது கிளிக் மெனு விருப்பங்கள்"
+  },
+  "privacyContactTitle": {
+    "message": "தொடர்பு"
+  },
+  "privacyContactText": {
+    "message": "கேள்விகள்? drowzyextension@gmail.com இல் தொடர்பு கொள்ளவும்"
+  },
+  "replace": {
+    "message": "மாற்றவும்"
+  },
+  "replaceSessionTitle": {
+    "message": "தற்போதைய தாவல்களை இந்த அமர்வுடன் மாற்றவும்"
+  },
+  "invalidDomain": {
+    "message": "சரியான டொமைனை உள்ளிடவும் (எ.கா. example.com)"
+  },
+  "extensionPage": {
+    "message": "நீட்டிப்பு பக்கம்"
+  },
+  "exportWhitelist": {
+    "message": "ஏற்றுமதி"
+  },
+  "importWhitelist": {
+    "message": "இறக்குமதி"
+  },
+  "exportWhitelistTitle": {
+    "message": "அனுமதிப் பட்டியலை நகலெடு"
+  },
+  "importWhitelistTitle": {
+    "message": "கிளிப்போர்டிலிருந்து அனுமதிப் பட்டியலை இறக்குமதி செய்"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ தளம்(கள்) நகலெடுக்கப்பட்டன",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ புதிய தளம்(கள்) இறக்குமதி செய்யப்பட்டன",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "கிளிப்போர்டில் சரியான டொமைன்கள் கிடைக்கவில்லை"
+  },
+  "clipboardReadFailed": {
+    "message": "கிளிப்போர்டைப் படிக்க இயலவில்லை"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy பிடிக்கிறதா?"
+  },
+  "reviewYes": {
+    "message": "ஆமாம்!"
+  },
+  "reviewNo": {
+    "message": "அவ்வளவாக இல்லை"
+  },
+  "whatsNew": {
+    "message": "v1.1.0 இல் புதியவை"
+  },
+  "changelogTitle": {
+    "message": "Drowzy இல் புதியவை"
+  },
+  "changelogWhatsNew": {
+    "message": "புதியவை"
+  },
+  "changelogVersion": {
+    "message": "பதிப்பு 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "புதிய அம்சங்கள்"
+  },
+  "changelogBugFixes": {
+    "message": "பிழைத் திருத்தங்கள்"
+  },
+  "changelogImprovements": {
+    "message": "மேம்பாடுகள்"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "மதிப்பாய்வு கோரிக்கை"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "சில தாவல்களை இடைநிறுத்திய பிறகு, Drowzy உங்களிடம் கேட்கும். ஒரு விரைவான தம்ப்ஸ் அப் எங்களுக்கு மிகவும் உதவுகிறது!"
+  },
+  "changelogChangelogTitle": {
+    "message": "மாற்ற பதிவு பக்கம்"
+  },
+  "changelogChangelogDesc": {
+    "message": "நீங்கள் இப்போது பார்க்கிறீர்கள்! புதுப்பிக்கும்போது தானாக திறக்கும். அமைப்புகளிலிருந்து எப்போது வேண்டுமானாலும் அணுகலாம்."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "அமர்வு மீட்பு நேரம்"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "மீட்டெடுக்கப்பட்ட தாவல்கள் இனி உடனடியாக தானாக இடைநிறுத்தப்படாது. அவை இப்போது தங்கள் செயலற்ற நேர அளவைகளை சரியாக மீட்டமைக்கின்றன."
+  },
+  "changelogFormCheckTitle": {
+    "message": "படிவ சரிபார்ப்பு நேரமீறல்"
+  },
+  "changelogFormCheckDesc": {
+    "message": "படிவ தரவுச் சரிபார்ப்பு இப்போது 500ms நேரமீறலைக் கொண்டுள்ளது, எனவே பதிலளிக்காத தாவல்கள் வரிசையைத் தடுக்க முடியாது."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "அனுமதிப் பட்டியல் நகல்கள்"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "\"Example.com\" மற்றும் \"example.com\" இரண்டும் சேர்க்கக்கூடிய எழுத்து உணர்திறன் சிக்கல் சரி செய்யப்பட்டது. அனைத்து உள்ளீடுகளும் இப்போது இயல்பாக்கப்பட்டுள்ளன."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "நேரடி புள்ளிவிவரங்கள்"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "தாவல்கள் இடைநிறுத்தப்படும்போது அல்லது எழுப்பப்படும்போது பாப்அப் தானாக புதுப்பிக்கிறது."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "அமர்வு மீட்பு விருப்பங்கள்"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "அமர்வுகளில் இப்போது தனித்தனி \"திற\" மற்றும் \"மாற்று\" பொத்தான்கள் உள்ளன."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "அனுமதிப் பட்டியல் சரிபார்ப்பு மற்றும் ஏற்றுமதி/இறக்குமதி"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "அனுமதிப் பட்டியல் உள்ளீடு இப்போது டொமைன்களை சரிபார்க்கிறது. கிளிப்போர்டு வழியாக ஏற்றுமதி மற்றும் இறக்குமதி செய்யலாம்."
+  },
+  "changelogA11yTitle": {
+    "message": "அணுகல்தன்மை"
+  },
+  "changelogA11yDesc": {
+    "message": "தாவல் பட்டியல் உருப்படிகள் இப்போது ARIA பாத்திரங்களுடன் விசைப்பலகை-வழிசெலுத்தக்கூடியவை. டோஸ்ட் அறிவிப்புகள் திரை வாசகர்களுக்கு அறிவிக்கப்படுகின்றன."
+  },
+  "changelogAnimationsTitle": {
+    "message": "மென்மையான அனிமேஷன்கள்"
+  },
+  "changelogAnimationsDesc": {
+    "message": "தாவல் பட்டியல் படிநிலை அனிமேஷன்கள் இப்போது வரம்பிடப்பட்டுள்ளன, எனவே பல தாவல்கள் கொண்ட சாளரங்களில் நீண்ட தாமதம் இருக்காது."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy இலவசம் மற்றும் திறந்த மூலம். நினைவகம் சேமிக்கிறது என்றால், மதிப்பாய்வு அல்லது GitHub-இல் நட்சத்திரம் கொடுங்கள்."
+  },
+  "changelogReviewBtn": {
+    "message": "மதிப்பாய்வு கொடுங்கள்"
+  },
+  "changelogStarBtn": {
+    "message": "GitHub-இல் நட்சத்திரம்"
+  }
 }

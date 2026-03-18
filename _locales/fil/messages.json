@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Gisingin ang lahat ng naka-suspend na tab"
   },
-
-  "statSleeping": { "message": "natutulog" },
-  "statProtected": { "message": "protektado" },
-  "statSaved": { "message": "na-save" },
-
-  "suspendOthers": { "message": "I-suspend ang Iba" },
-  "wakeAll": { "message": "Gisingin Lahat" },
-
-  "neverSuspendSite": { "message": "Huwag kailanman i-suspend ang site na ito" },
-  "siteWhitelisted": { "message": "Naka-whitelist ang site (i-click para tanggalin)" },
-  "activeWontSuspend": { "message": "Aktibo – hindi i-su-suspend" },
-  "loading": { "message": "Naglo-load..." },
-
-  "tabsInWindow": { "message": "Mga tab sa window na ito" },
-  "loadingTabs": { "message": "Naglo-load ng mga tab..." },
-  "noTabsFound": { "message": "Walang nahanap na tab" },
-  "failedToLoad": { "message": "Hindi na-load. Buksan muli ang popup para subukan ulit." },
-
-  "badgeActive": { "message": "Aktibo" },
-  "badgeSystem": { "message": "System" },
-  "badgePinned": { "message": "Naka-pin" },
-  "badgeAudio": { "message": "Audio" },
-  "badgeStarred": { "message": "May bituin" },
-  "badgeProtected": { "message": "Protektado" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Mga Session" },
-  "sessionNamePlaceholder": { "message": "Pangalan ng session (opsyonal)" },
-  "save": { "message": "I-save" },
-  "emptySessionState": { "message": "I-save ang iyong unang session para ma-restore ang mga tab anumang oras" },
-  "open": { "message": "Buksan" },
-  "openSessionTitle": { "message": "Buksan ang mga tab mula sa session na ito" },
-  "deleteSessionTitle": { "message": "Burahin ang session" },
-  "sessionSaved": { "message": "Na-save ang session!" },
-  "failedToSave": { "message": "Hindi na-save" },
+  "statSleeping": {
+    "message": "natutulog"
+  },
+  "statProtected": {
+    "message": "protektado"
+  },
+  "statSaved": {
+    "message": "na-save"
+  },
+  "suspendOthers": {
+    "message": "I-suspend ang Iba"
+  },
+  "wakeAll": {
+    "message": "Gisingin Lahat"
+  },
+  "neverSuspendSite": {
+    "message": "Huwag kailanman i-suspend ang site na ito"
+  },
+  "siteWhitelisted": {
+    "message": "Naka-whitelist ang site (i-click para tanggalin)"
+  },
+  "activeWontSuspend": {
+    "message": "Aktibo – hindi i-su-suspend"
+  },
+  "loading": {
+    "message": "Naglo-load..."
+  },
+  "tabsInWindow": {
+    "message": "Mga tab sa window na ito"
+  },
+  "loadingTabs": {
+    "message": "Naglo-load ng mga tab..."
+  },
+  "noTabsFound": {
+    "message": "Walang nahanap na tab"
+  },
+  "failedToLoad": {
+    "message": "Hindi na-load. Buksan muli ang popup para subukan ulit."
+  },
+  "badgeActive": {
+    "message": "Aktibo"
+  },
+  "badgeSystem": {
+    "message": "System"
+  },
+  "badgePinned": {
+    "message": "Naka-pin"
+  },
+  "badgeAudio": {
+    "message": "Audio"
+  },
+  "badgeStarred": {
+    "message": "May bituin"
+  },
+  "badgeProtected": {
+    "message": "Protektado"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Mga Session"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Pangalan ng session (opsyonal)"
+  },
+  "save": {
+    "message": "I-save"
+  },
+  "emptySessionState": {
+    "message": "I-save ang iyong unang session para ma-restore ang mga tab anumang oras"
+  },
+  "open": {
+    "message": "Buksan"
+  },
+  "openSessionTitle": {
+    "message": "Buksan ang mga tab mula sa session na ito"
+  },
+  "deleteSessionTitle": {
+    "message": "Burahin ang session"
+  },
+  "sessionSaved": {
+    "message": "Na-save ang session!"
+  },
+  "failedToSave": {
+    "message": "Hindi na-save"
+  },
   "restoredTabs": {
     "message": "$COUNT$ tab ang na-restore",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Hindi na-restore" },
-  "noSessionsToExport": { "message": "Walang session na i-e-export" },
+  "failedToRestore": {
+    "message": "Hindi na-restore"
+  },
+  "noSessionsToExport": {
+    "message": "Walang session na i-e-export"
+  },
   "copiedSessionsJson": {
     "message": "Nakopya ang $COUNT$ session bilang JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ tab",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Mga Istatistika" },
-  "statToday": { "message": "Ngayon" },
-  "statAllTime": { "message": "Lahat ng panahon" },
-  "statRamSaved": { "message": "Na-save na RAM (tinatayang)" },
-  "statMemberSince": { "message": "Miyembro mula" },
-
-  "settings": { "message": "Mga Setting" },
-  "autoSuspendAfter": { "message": "Awtomatikong i-suspend pagkatapos ng" },
-  "timer5min": { "message": "5 minuto" },
-  "timer10min": { "message": "10 minuto" },
-  "timer15min": { "message": "15 minuto" },
-  "timer30min": { "message": "30 minuto" },
-  "timer1hour": { "message": "1 oras" },
-  "timer2hours": { "message": "2 oras" },
-  "timer4hours": { "message": "4 na oras" },
-  "timerNever": { "message": "Huwag kailanman" },
-  "protectPinned": { "message": "Protektahan ang mga naka-pin na tab" },
-  "protectAudio": { "message": "Protektahan ang mga tab na may audio" },
-  "protectForms": { "message": "Protektahan ang mga tab na may form" },
-  "suspendOnStartup": { "message": "I-suspend ang mga tab sa startup" },
-  "enableAutoSuspend": { "message": "I-enable ang auto-suspend" },
-  "markSuspended": { "message": "Markahan ang mga naka-suspend na tab" },
-  "whitelistedSites": { "message": "Mga naka-whitelist na site" },
-  "add": { "message": "Idagdag" },
-  "noSitesWhitelisted": { "message": "Walang naka-whitelist na site" },
-
-  "suspending": { "message": "Nag-su-suspend..." },
-  "done": { "message": "Tapos na!" },
-  "waking": { "message": "Ginigising..." },
+  "stats": {
+    "message": "Mga Istatistika"
+  },
+  "statToday": {
+    "message": "Ngayon"
+  },
+  "statAllTime": {
+    "message": "Lahat ng panahon"
+  },
+  "statRamSaved": {
+    "message": "Na-save na RAM (tinatayang)"
+  },
+  "statMemberSince": {
+    "message": "Miyembro mula"
+  },
+  "settings": {
+    "message": "Mga Setting"
+  },
+  "autoSuspendAfter": {
+    "message": "Awtomatikong i-suspend pagkatapos ng"
+  },
+  "timer5min": {
+    "message": "5 minuto"
+  },
+  "timer10min": {
+    "message": "10 minuto"
+  },
+  "timer15min": {
+    "message": "15 minuto"
+  },
+  "timer30min": {
+    "message": "30 minuto"
+  },
+  "timer1hour": {
+    "message": "1 oras"
+  },
+  "timer2hours": {
+    "message": "2 oras"
+  },
+  "timer4hours": {
+    "message": "4 na oras"
+  },
+  "timerNever": {
+    "message": "Huwag kailanman"
+  },
+  "protectPinned": {
+    "message": "Protektahan ang mga naka-pin na tab"
+  },
+  "protectAudio": {
+    "message": "Protektahan ang mga tab na may audio"
+  },
+  "protectForms": {
+    "message": "Protektahan ang mga tab na may form"
+  },
+  "suspendOnStartup": {
+    "message": "I-suspend ang mga tab sa startup"
+  },
+  "enableAutoSuspend": {
+    "message": "I-enable ang auto-suspend"
+  },
+  "markSuspended": {
+    "message": "Markahan ang mga naka-suspend na tab"
+  },
+  "whitelistedSites": {
+    "message": "Mga naka-whitelist na site"
+  },
+  "add": {
+    "message": "Idagdag"
+  },
+  "noSitesWhitelisted": {
+    "message": "Walang naka-whitelist na site"
+  },
+  "suspending": {
+    "message": "Nag-su-suspend..."
+  },
+  "done": {
+    "message": "Tapos na!"
+  },
+  "waking": {
+    "message": "Ginigising..."
+  },
   "copiedTabs": {
     "message": "Nakopya ang $COUNT$ tab sa clipboard",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Hindi nakopya" },
-  "copyTabsTitle": { "message": "Kopyahin ang listahan ng tab sa clipboard" },
-  "copySessionsTitle": { "message": "Kopyahin ang lahat ng session bilang JSON" },
-  "remove": { "message": "Tanggalin" },
-
-  "switchToLight": { "message": "Lumipat sa light mode" },
-  "switchToDark": { "message": "Lumipat sa dark mode" },
-
-  "ctxSuspendThis": { "message": "I-suspend ang tab na ito" },
-  "ctxSuspendOthers": { "message": "I-suspend ang lahat ng ibang tab" },
-  "ctxNeverSuspend": { "message": "Huwag kailanman i-suspend ang site na ito" },
-
-  "maxSessionsReached": { "message": "Umabot na sa maximum na 20 session. Magbura ng isa para makapag-save ng bago." },
-  "noSaveableTabs": { "message": "Walang ma-save na tab sa window na ito." },
-  "sessionNotFound": { "message": "Hindi nahanap ang session." },
-  "noRestorableTabs": { "message": "Walang ma-restore na tab sa session na ito." },
+  "failedToCopy": {
+    "message": "Hindi nakopya"
+  },
+  "copyTabsTitle": {
+    "message": "Kopyahin ang listahan ng tab sa clipboard"
+  },
+  "copySessionsTitle": {
+    "message": "Kopyahin ang lahat ng session bilang JSON"
+  },
+  "remove": {
+    "message": "Tanggalin"
+  },
+  "switchToLight": {
+    "message": "Lumipat sa light mode"
+  },
+  "switchToDark": {
+    "message": "Lumipat sa dark mode"
+  },
+  "ctxSuspendThis": {
+    "message": "I-suspend ang tab na ito"
+  },
+  "ctxSuspendOthers": {
+    "message": "I-suspend ang lahat ng ibang tab"
+  },
+  "ctxNeverSuspend": {
+    "message": "Huwag kailanman i-suspend ang site na ito"
+  },
+  "maxSessionsReached": {
+    "message": "Umabot na sa maximum na 20 session. Magbura ng isa para makapag-save ng bago."
+  },
+  "noSaveableTabs": {
+    "message": "Walang ma-save na tab sa window na ito."
+  },
+  "sessionNotFound": {
+    "message": "Hindi nahanap ang session."
+  },
+  "noRestorableTabs": {
+    "message": "Walang ma-restore na tab sa session na ito."
+  },
   "sessionDefaultName": {
     "message": "Session – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "ngayon lang" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "ngayon lang"
+  },
   "minutesAgo": {
     "message": "$COUNT$ min ang nakalipas",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ oras ang nakalipas",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Kahapon" },
+  "yesterday": {
+    "message": "Kahapon"
+  },
   "daysAgo": {
     "message": "$COUNT$ araw ang nakalipas",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Maligayang pagdating sa Drowzy" },
-  "onboardingIntro": { "message": "Nakakatipid ng memory ang Drowzy sa pamamagitan ng pagpapatulog ng mga hindi aktibong tab. Palaging ligtas ang iyong mga tab – ginagamit namin ang native na discard API ng Chrome, kaya mananatili ang mga ito kahit i-uninstall mo ang Drowzy." },
-  "howItWorks": { "message": "Paano ito gumagana" },
-  "featureAutoSuspend": { "message": "<strong>Mga tab na idle sa loob ng 30 minuto</strong> ay awtomatikong isu-suspend" },
-  "featureZeroRam": { "message": "<strong>Ang mga naka-suspend na tab ay walang ginagamit na RAM</strong> ngunit nananatili sa iyong tab bar" },
-  "featureClickToWake": { "message": "<strong>I-click ang anumang naka-suspend na tab</strong> para agad itong gisingin" },
-  "featureProtected": { "message": "<strong>Ang mga aktibo, naka-pin, at may audio na tab</strong> ay hindi kailanman ginagalaw" },
-  "quickActions": { "message": "Mga mabilisang aksyon" },
-  "actionClickIcon": { "message": "I-click ang <strong>Drowzy icon</strong> sa toolbar para makita ang lahat ng iyong tab" },
-  "actionAltS": { "message": "Pindutin ang <kbd>Alt+S</kbd> para i-suspend ang kasalukuyang tab" },
-  "actionAltShiftS": { "message": "Pindutin ang <kbd>Alt+Shift+S</kbd> para i-suspend ang lahat ng ibang tab" },
-  "actionAltW": { "message": "Pindutin ang <kbd>Alt+W</kbd> para gisingin ang lahat ng naka-suspend na tab" },
-  "actionRightClick": { "message": "Mag-right-click sa anumang pahina para sa mabilisang suspend options" },
-  "onboardingCta": { "message": "Tumatakbo na ang Drowzy. Magbukas ng ilang tab at subukan!" },
-  "onboardingBtn": { "message": "Sige, tara na" },
-
-  "privacyTitle": { "message": "Drowzy – Patakaran sa Privacy" },
-  "privacyUpdated": { "message": "Huling na-update: Pebrero 2026" },
-  "privacyShortTitle": { "message": "Ang maikling bersyon" },
-  "privacyShortText": { "message": "Hindi nagkokolekta ng anumang data ang Drowzy. Walang analytics, walang tracking, walang external na server. Lahat ay nananatili sa iyong browser." },
-  "privacyStoredTitle": { "message": "Ano ang naka-store" },
-  "privacyStoredText": { "message": "Ang iyong mga setting (suspend timer, whitelist, preferences) ay naka-save gamit ang built-in na storage API ng Chrome: chrome.storage.sync para sa mga setting na sumusunod sa iyong Chrome profile, chrome.storage.local para sa stats at naka-save na session, at chrome.storage.session para sa pansamantalang data tulad ng mga tab timestamp. Wala sa mga ito ang ipinapadala sa anumang third-party server." },
-  "privacyPermissionsTitle": { "message": "Mga Permiso" },
-  "privacyPermissionsIntro": { "message": "Ginagamit ng Drowzy ang mga Chrome permission na ito:" },
-  "privacyPermTabs": { "message": "tabs – paglilista, pag-suspend, at pag-restore ng mga browser tab" },
-  "privacyPermStorage": { "message": "storage – pag-save ng iyong mga setting nang lokal" },
-  "privacyPermAlarms": { "message": "alarms – pana-panahong pagsusuri ng mga hindi aktibong tab" },
-  "privacyPermContextMenus": { "message": "contextMenus – mga opsyon sa right-click menu" },
-  "privacyContactTitle": { "message": "Makipag-ugnayan" },
-  "privacyContactText": { "message": "May tanong? Mag-email sa drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Maligayang pagdating sa Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Nakakatipid ng memory ang Drowzy sa pamamagitan ng pagpapatulog ng mga hindi aktibong tab. Palaging ligtas ang iyong mga tab – ginagamit namin ang native na discard API ng Chrome, kaya mananatili ang mga ito kahit i-uninstall mo ang Drowzy."
+  },
+  "howItWorks": {
+    "message": "Paano ito gumagana"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Mga tab na idle sa loob ng 30 minuto</strong> ay awtomatikong isu-suspend"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Ang mga naka-suspend na tab ay walang ginagamit na RAM</strong> ngunit nananatili sa iyong tab bar"
+  },
+  "featureClickToWake": {
+    "message": "<strong>I-click ang anumang naka-suspend na tab</strong> para agad itong gisingin"
+  },
+  "featureProtected": {
+    "message": "<strong>Ang mga aktibo, naka-pin, at may audio na tab</strong> ay hindi kailanman ginagalaw"
+  },
+  "quickActions": {
+    "message": "Mga mabilisang aksyon"
+  },
+  "actionClickIcon": {
+    "message": "I-click ang <strong>Drowzy icon</strong> sa toolbar para makita ang lahat ng iyong tab"
+  },
+  "actionAltS": {
+    "message": "Pindutin ang <kbd>Alt+S</kbd> para i-suspend ang kasalukuyang tab"
+  },
+  "actionAltShiftS": {
+    "message": "Pindutin ang <kbd>Alt+Shift+S</kbd> para i-suspend ang lahat ng ibang tab"
+  },
+  "actionAltW": {
+    "message": "Pindutin ang <kbd>Alt+W</kbd> para gisingin ang lahat ng naka-suspend na tab"
+  },
+  "actionRightClick": {
+    "message": "Mag-right-click sa anumang pahina para sa mabilisang suspend options"
+  },
+  "onboardingCta": {
+    "message": "Tumatakbo na ang Drowzy. Magbukas ng ilang tab at subukan!"
+  },
+  "onboardingBtn": {
+    "message": "Sige, tara na"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Patakaran sa Privacy"
+  },
+  "privacyUpdated": {
+    "message": "Huling na-update: Pebrero 2026"
+  },
+  "privacyShortTitle": {
+    "message": "Ang maikling bersyon"
+  },
+  "privacyShortText": {
+    "message": "Hindi nagkokolekta ng anumang data ang Drowzy. Walang analytics, walang tracking, walang external na server. Lahat ay nananatili sa iyong browser."
+  },
+  "privacyStoredTitle": {
+    "message": "Ano ang naka-store"
+  },
+  "privacyStoredText": {
+    "message": "Ang iyong mga setting (suspend timer, whitelist, preferences) ay naka-save gamit ang built-in na storage API ng Chrome: chrome.storage.sync para sa mga setting na sumusunod sa iyong Chrome profile, chrome.storage.local para sa stats at naka-save na session, at chrome.storage.session para sa pansamantalang data tulad ng mga tab timestamp. Wala sa mga ito ang ipinapadala sa anumang third-party server."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Mga Permiso"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Ginagamit ng Drowzy ang mga Chrome permission na ito:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – paglilista, pag-suspend, at pag-restore ng mga browser tab"
+  },
+  "privacyPermStorage": {
+    "message": "storage – pag-save ng iyong mga setting nang lokal"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – pana-panahong pagsusuri ng mga hindi aktibong tab"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – mga opsyon sa right-click menu"
+  },
+  "privacyContactTitle": {
+    "message": "Makipag-ugnayan"
+  },
+  "privacyContactText": {
+    "message": "May tanong? Mag-email sa drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Palitan"
+  },
+  "replaceSessionTitle": {
+    "message": "Palitan ang kasalukuyang mga tab ng session na ito"
+  },
+  "invalidDomain": {
+    "message": "Maglagay ng valid na domain (hal. example.com)"
+  },
+  "extensionPage": {
+    "message": "Pahina ng extension"
+  },
+  "exportWhitelist": {
+    "message": "I-export"
+  },
+  "importWhitelist": {
+    "message": "I-import"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopyahin ang whitelist"
+  },
+  "importWhitelistTitle": {
+    "message": "I-import ang whitelist mula sa clipboard"
+  },
+  "copiedSites": {
+    "message": "Nakopya ang $COUNT$ site(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Na-import ang $COUNT$ bagong site(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Walang nahanap na valid na domain sa clipboard"
+  },
+  "clipboardReadFailed": {
+    "message": "Hindi mabasa ang clipboard"
+  },
+  "enjoyingDrowzy": {
+    "message": "Nae-enjoy mo ba ang Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Oo!"
+  },
+  "reviewNo": {
+    "message": "Hindi naman"
+  },
+  "whatsNew": {
+    "message": "Ano ang bago sa v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Ano ang Bago sa Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Ano ang Bago"
+  },
+  "changelogVersion": {
+    "message": "Bersyon 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Mga Bagong Feature"
+  },
+  "changelogBugFixes": {
+    "message": "Mga Pag-aayos ng Bug"
+  },
+  "changelogImprovements": {
+    "message": "Mga Pagpapabuti"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Paghingi ng Review"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Pagkatapos i-suspend ang ilang tab, magtatanong ang Drowzy kung gusto mo ito. Isang mabilis na thumbs up ay nakakatulong sa amin!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Pahina ng Changelog"
+  },
+  "changelogChangelogDesc": {
+    "message": "Tinitingnan mo na ito! Awtomatikong bubukas sa update. Ma-access mula sa Settings."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Timing ng Session Restore"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Ang mga na-restore na tab ay hindi na agad ina-auto-suspend. Nire-reset na nila nang tama ang kanilang idle timer."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Timeout ng Pagsusuri ng Form"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Ang form check ay may 500ms timeout na para hindi ma-block ng hindi tumutugon na mga tab ang queue."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Mga Duplicate sa Whitelist"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Naayos ang isyu sa case sensitivity kung saan ang \"Example.com\" at \"example.com\" ay parehong maaaring idagdag. Lahat ng entry ay na-normalize na."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Live na Estadistika"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Ang popup ay awtomatikong nagre-refresh kapag nag-suspend o naggising ang mga tab."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Mga Opsyon sa Session Restore"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Ang mga session ay may hiwalay na na \"Buksan\" at \"Palitan\" na mga button."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Whitelist Validation at Export/Import"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Ang whitelist input ay nagva-validate na ng mga domain. Maaari kang mag-export at import sa pamamagitan ng clipboard."
+  },
+  "changelogA11yTitle": {
+    "message": "Kakayahang Ma-access"
+  },
+  "changelogA11yDesc": {
+    "message": "Ang mga item sa tab list ay keyboard-navigable na ngayon na may ARIA roles. Ang mga toast notification ay ina-announce sa mga screen reader."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Mas Maayos na Animations"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Ang stagger animations ng tab list ay may cap na para hindi magkaroon ng mahabang delay ang mga window na may maraming tab."
+  },
+  "changelogCtaText": {
+    "message": "Ang Drowzy ay libre at open source. Kung nakakatipid ito ng memory, mag-iwan ng review o mag-star sa GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Mag-iwan ng Review"
+  },
+  "changelogStarBtn": {
+    "message": "Star sa GitHub"
+  }
 }

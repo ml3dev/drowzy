@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "सभी सस्पेंड किए गए टैब जगाएँ"
   },
-
-  "statSleeping": { "message": "सो रहा है" },
-  "statProtected": { "message": "सुरक्षित" },
-  "statSaved": { "message": "बचाया गया" },
-
-  "suspendOthers": { "message": "अन्य सस्पेंड करें" },
-  "wakeAll": { "message": "सभी जगाएँ" },
-
-  "neverSuspendSite": { "message": "इस साइट को कभी सस्पेंड न करें" },
-  "siteWhitelisted": { "message": "साइट श्वेतसूचीबद्ध है (हटाने के लिए क्लिक करें)" },
-  "activeWontSuspend": { "message": "सक्रिय – सस्पेंड नहीं होगा" },
-  "loading": { "message": "लोड हो रहा है..." },
-
-  "tabsInWindow": { "message": "इस विंडो में टैब" },
-  "loadingTabs": { "message": "टैब लोड हो रहे हैं..." },
-  "noTabsFound": { "message": "कोई टैब नहीं मिला" },
-  "failedToLoad": { "message": "लोड करने में विफल। पुनः प्रयास करने के लिए पॉपअप दोबारा खोलें।" },
-
-  "badgeActive": { "message": "सक्रिय" },
-  "badgeSystem": { "message": "सिस्टम" },
-  "badgePinned": { "message": "पिन किया गया" },
-  "badgeAudio": { "message": "ऑडियो" },
-  "badgeStarred": { "message": "तारांकित" },
-  "badgeProtected": { "message": "सुरक्षित" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "सत्र" },
-  "sessionNamePlaceholder": { "message": "सत्र का नाम (वैकल्पिक)" },
-  "save": { "message": "सहेजें" },
-  "emptySessionState": { "message": "कभी भी टैब पुनर्स्थापित करने के लिए अपना पहला सत्र सहेजें" },
-  "open": { "message": "खोलें" },
-  "openSessionTitle": { "message": "इस सत्र से टैब खोलें" },
-  "deleteSessionTitle": { "message": "सत्र हटाएँ" },
-  "sessionSaved": { "message": "सत्र सहेजा गया!" },
-  "failedToSave": { "message": "सहेजने में विफल" },
+  "statSleeping": {
+    "message": "सो रहा है"
+  },
+  "statProtected": {
+    "message": "सुरक्षित"
+  },
+  "statSaved": {
+    "message": "बचाया गया"
+  },
+  "suspendOthers": {
+    "message": "अन्य सस्पेंड करें"
+  },
+  "wakeAll": {
+    "message": "सभी जगाएँ"
+  },
+  "neverSuspendSite": {
+    "message": "इस साइट को कभी सस्पेंड न करें"
+  },
+  "siteWhitelisted": {
+    "message": "साइट श्वेतसूचीबद्ध है (हटाने के लिए क्लिक करें)"
+  },
+  "activeWontSuspend": {
+    "message": "सक्रिय – सस्पेंड नहीं होगा"
+  },
+  "loading": {
+    "message": "लोड हो रहा है..."
+  },
+  "tabsInWindow": {
+    "message": "इस विंडो में टैब"
+  },
+  "loadingTabs": {
+    "message": "टैब लोड हो रहे हैं..."
+  },
+  "noTabsFound": {
+    "message": "कोई टैब नहीं मिला"
+  },
+  "failedToLoad": {
+    "message": "लोड करने में विफल। पुनः प्रयास करने के लिए पॉपअप दोबारा खोलें।"
+  },
+  "badgeActive": {
+    "message": "सक्रिय"
+  },
+  "badgeSystem": {
+    "message": "सिस्टम"
+  },
+  "badgePinned": {
+    "message": "पिन किया गया"
+  },
+  "badgeAudio": {
+    "message": "ऑडियो"
+  },
+  "badgeStarred": {
+    "message": "तारांकित"
+  },
+  "badgeProtected": {
+    "message": "सुरक्षित"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "सत्र"
+  },
+  "sessionNamePlaceholder": {
+    "message": "सत्र का नाम (वैकल्पिक)"
+  },
+  "save": {
+    "message": "सहेजें"
+  },
+  "emptySessionState": {
+    "message": "कभी भी टैब पुनर्स्थापित करने के लिए अपना पहला सत्र सहेजें"
+  },
+  "open": {
+    "message": "खोलें"
+  },
+  "openSessionTitle": {
+    "message": "इस सत्र से टैब खोलें"
+  },
+  "deleteSessionTitle": {
+    "message": "सत्र हटाएँ"
+  },
+  "sessionSaved": {
+    "message": "सत्र सहेजा गया!"
+  },
+  "failedToSave": {
+    "message": "सहेजने में विफल"
+  },
   "restoredTabs": {
     "message": "$COUNT$ टैब पुनर्स्थापित किए गए",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "पुनर्स्थापित करने में विफल" },
-  "noSessionsToExport": { "message": "निर्यात करने के लिए कोई सत्र नहीं" },
+  "failedToRestore": {
+    "message": "पुनर्स्थापित करने में विफल"
+  },
+  "noSessionsToExport": {
+    "message": "निर्यात करने के लिए कोई सत्र नहीं"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ सत्र JSON के रूप में कॉपी किए गए",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ टैब",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "आँकड़े" },
-  "statToday": { "message": "आज" },
-  "statAllTime": { "message": "कुल" },
-  "statRamSaved": { "message": "RAM बचाई गई (अनुमानित)" },
-  "statMemberSince": { "message": "सदस्य तब से" },
-
-  "settings": { "message": "सेटिंग्स" },
-  "autoSuspendAfter": { "message": "इसके बाद स्वचालित सस्पेंड करें" },
-  "timer5min": { "message": "5 मिनट" },
-  "timer10min": { "message": "10 मिनट" },
-  "timer15min": { "message": "15 मिनट" },
-  "timer30min": { "message": "30 मिनट" },
-  "timer1hour": { "message": "1 घंटा" },
-  "timer2hours": { "message": "2 घंटे" },
-  "timer4hours": { "message": "4 घंटे" },
-  "timerNever": { "message": "कभी नहीं" },
-  "protectPinned": { "message": "पिन किए गए टैब की सुरक्षा करें" },
-  "protectAudio": { "message": "ऑडियो टैब की सुरक्षा करें" },
-  "protectForms": { "message": "फ़ॉर्म वाले टैब की सुरक्षा करें" },
-  "suspendOnStartup": { "message": "स्टार्टअप पर टैब सस्पेंड करें" },
-  "enableAutoSuspend": { "message": "स्वचालित सस्पेंड सक्षम करें" },
-  "markSuspended": { "message": "सस्पेंड किए गए टैब चिह्नित करें" },
-  "whitelistedSites": { "message": "श्वेतसूचीबद्ध साइटें" },
-  "add": { "message": "जोड़ें" },
-  "noSitesWhitelisted": { "message": "कोई साइट श्वेतसूचीबद्ध नहीं" },
-
-  "suspending": { "message": "सस्पेंड हो रहा है..." },
-  "done": { "message": "हो गया!" },
-  "waking": { "message": "जगा रहे हैं..." },
+  "stats": {
+    "message": "आँकड़े"
+  },
+  "statToday": {
+    "message": "आज"
+  },
+  "statAllTime": {
+    "message": "कुल"
+  },
+  "statRamSaved": {
+    "message": "RAM बचाई गई (अनुमानित)"
+  },
+  "statMemberSince": {
+    "message": "सदस्य तब से"
+  },
+  "settings": {
+    "message": "सेटिंग्स"
+  },
+  "autoSuspendAfter": {
+    "message": "इसके बाद स्वचालित सस्पेंड करें"
+  },
+  "timer5min": {
+    "message": "5 मिनट"
+  },
+  "timer10min": {
+    "message": "10 मिनट"
+  },
+  "timer15min": {
+    "message": "15 मिनट"
+  },
+  "timer30min": {
+    "message": "30 मिनट"
+  },
+  "timer1hour": {
+    "message": "1 घंटा"
+  },
+  "timer2hours": {
+    "message": "2 घंटे"
+  },
+  "timer4hours": {
+    "message": "4 घंटे"
+  },
+  "timerNever": {
+    "message": "कभी नहीं"
+  },
+  "protectPinned": {
+    "message": "पिन किए गए टैब की सुरक्षा करें"
+  },
+  "protectAudio": {
+    "message": "ऑडियो टैब की सुरक्षा करें"
+  },
+  "protectForms": {
+    "message": "फ़ॉर्म वाले टैब की सुरक्षा करें"
+  },
+  "suspendOnStartup": {
+    "message": "स्टार्टअप पर टैब सस्पेंड करें"
+  },
+  "enableAutoSuspend": {
+    "message": "स्वचालित सस्पेंड सक्षम करें"
+  },
+  "markSuspended": {
+    "message": "सस्पेंड किए गए टैब चिह्नित करें"
+  },
+  "whitelistedSites": {
+    "message": "श्वेतसूचीबद्ध साइटें"
+  },
+  "add": {
+    "message": "जोड़ें"
+  },
+  "noSitesWhitelisted": {
+    "message": "कोई साइट श्वेतसूचीबद्ध नहीं"
+  },
+  "suspending": {
+    "message": "सस्पेंड हो रहा है..."
+  },
+  "done": {
+    "message": "हो गया!"
+  },
+  "waking": {
+    "message": "जगा रहे हैं..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ टैब क्लिपबोर्ड पर कॉपी किए गए",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "कॉपी करने में विफल" },
-  "copyTabsTitle": { "message": "टैब सूची क्लिपबोर्ड पर कॉपी करें" },
-  "copySessionsTitle": { "message": "सभी सत्र JSON के रूप में कॉपी करें" },
-  "remove": { "message": "हटाएँ" },
-
-  "switchToLight": { "message": "लाइट मोड में बदलें" },
-  "switchToDark": { "message": "डार्क मोड में बदलें" },
-
-  "ctxSuspendThis": { "message": "इस टैब को सस्पेंड करें" },
-  "ctxSuspendOthers": { "message": "अन्य सभी टैब सस्पेंड करें" },
-  "ctxNeverSuspend": { "message": "इस साइट को कभी सस्पेंड न करें" },
-
-  "maxSessionsReached": { "message": "अधिकतम 20 सत्र हो गए हैं। नया सहेजने के लिए एक हटाएँ।" },
-  "noSaveableTabs": { "message": "इस विंडो में कोई सहेजने योग्य टैब नहीं।" },
-  "sessionNotFound": { "message": "सत्र नहीं मिला।" },
-  "noRestorableTabs": { "message": "इस सत्र में कोई पुनर्स्थापित करने योग्य टैब नहीं।" },
+  "failedToCopy": {
+    "message": "कॉपी करने में विफल"
+  },
+  "copyTabsTitle": {
+    "message": "टैब सूची क्लिपबोर्ड पर कॉपी करें"
+  },
+  "copySessionsTitle": {
+    "message": "सभी सत्र JSON के रूप में कॉपी करें"
+  },
+  "remove": {
+    "message": "हटाएँ"
+  },
+  "switchToLight": {
+    "message": "लाइट मोड में बदलें"
+  },
+  "switchToDark": {
+    "message": "डार्क मोड में बदलें"
+  },
+  "ctxSuspendThis": {
+    "message": "इस टैब को सस्पेंड करें"
+  },
+  "ctxSuspendOthers": {
+    "message": "अन्य सभी टैब सस्पेंड करें"
+  },
+  "ctxNeverSuspend": {
+    "message": "इस साइट को कभी सस्पेंड न करें"
+  },
+  "maxSessionsReached": {
+    "message": "अधिकतम 20 सत्र हो गए हैं। नया सहेजने के लिए एक हटाएँ।"
+  },
+  "noSaveableTabs": {
+    "message": "इस विंडो में कोई सहेजने योग्य टैब नहीं।"
+  },
+  "sessionNotFound": {
+    "message": "सत्र नहीं मिला।"
+  },
+  "noRestorableTabs": {
+    "message": "इस सत्र में कोई पुनर्स्थापित करने योग्य टैब नहीं।"
+  },
   "sessionDefaultName": {
     "message": "सत्र – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "अभी" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "अभी"
+  },
   "minutesAgo": {
     "message": "$COUNT$ मिनट पहले",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ घंटे पहले",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "कल" },
+  "yesterday": {
+    "message": "कल"
+  },
   "daysAgo": {
     "message": "$COUNT$ दिन पहले",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Drowzy में आपका स्वागत है" },
-  "onboardingIntro": { "message": "Drowzy निष्क्रिय टैब को सुलाकर मेमोरी बचाता है। आपके टैब हमेशा सुरक्षित रहते हैं – हम Chrome के नेटिव डिस्कार्ड API का उपयोग करते हैं, इसलिए Drowzy अनइंस्टॉल करने पर भी वे बने रहते हैं।" },
-  "howItWorks": { "message": "यह कैसे काम करता है" },
-  "featureAutoSuspend": { "message": "<strong>30 मिनट से निष्क्रिय टैब</strong> स्वचालित रूप से सस्पेंड हो जाते हैं" },
-  "featureZeroRam": { "message": "<strong>सस्पेंड किए गए टैब शून्य RAM उपयोग करते हैं</strong> लेकिन आपकी टैब बार में बने रहते हैं" },
-  "featureClickToWake": { "message": "<strong>किसी भी सस्पेंड किए गए टैब पर क्लिक करें</strong> उसे तुरंत जगाने के लिए" },
-  "featureProtected": { "message": "<strong>सक्रिय, पिन किए गए, और ऑडियो टैब</strong> को कभी छुआ नहीं जाता" },
-  "quickActions": { "message": "त्वरित कार्य" },
-  "actionClickIcon": { "message": "अपने सभी टैब देखने के लिए टूलबार में <strong>Drowzy आइकन</strong> पर क्लिक करें" },
-  "actionAltS": { "message": "वर्तमान टैब सस्पेंड करने के लिए <kbd>Alt+S</kbd> दबाएँ" },
-  "actionAltShiftS": { "message": "अन्य सभी टैब सस्पेंड करने के लिए <kbd>Alt+Shift+S</kbd> दबाएँ" },
-  "actionAltW": { "message": "सभी सस्पेंड किए गए टैब जगाने के लिए <kbd>Alt+W</kbd> दबाएँ" },
-  "actionRightClick": { "message": "त्वरित सस्पेंड विकल्पों के लिए किसी भी पेज पर राइट-क्लिक करें" },
-  "onboardingCta": { "message": "Drowzy पहले से चल रहा है। कुछ टैब खोलें और इसे आज़माएँ!" },
-  "onboardingBtn": { "message": "समझ गया, चलते हैं" },
-
-  "privacyTitle": { "message": "Drowzy – गोपनीयता नीति" },
-  "privacyUpdated": { "message": "अंतिम अपडेट: फ़रवरी 2026" },
-  "privacyShortTitle": { "message": "संक्षिप्त संस्करण" },
-  "privacyShortText": { "message": "Drowzy कोई डेटा एकत्र नहीं करता। कोई एनालिटिक्स नहीं, कोई ट्रैकिंग नहीं, कोई बाहरी सर्वर नहीं। सब कुछ आपके ब्राउज़र में रहता है।" },
-  "privacyStoredTitle": { "message": "क्या संग्रहीत होता है" },
-  "privacyStoredText": { "message": "आपकी सेटिंग्स (सस्पेंड टाइमर, श्वेतसूची, प्राथमिकताएँ) Chrome के अंतर्निहित स्टोरेज API का उपयोग करके सहेजी जाती हैं: आपकी Chrome प्रोफ़ाइल के साथ चलने वाली सेटिंग्स के लिए chrome.storage.sync, आँकड़ों और सहेजे गए सत्रों के लिए chrome.storage.local, और टैब टाइमस्टैम्प जैसे अस्थायी डेटा के लिए chrome.storage.session। इनमें से कुछ भी किसी तृतीय-पक्ष सर्वर को नहीं भेजा जाता।" },
-  "privacyPermissionsTitle": { "message": "अनुमतियाँ" },
-  "privacyPermissionsIntro": { "message": "Drowzy इन Chrome अनुमतियों का उपयोग करता है:" },
-  "privacyPermTabs": { "message": "tabs – ब्राउज़र टैब की सूची बनाना, सस्पेंड करना और पुनर्स्थापित करना" },
-  "privacyPermStorage": { "message": "storage – आपकी सेटिंग्स स्थानीय रूप से सहेजना" },
-  "privacyPermAlarms": { "message": "alarms – निष्क्रिय टैब की आवधिक जाँच" },
-  "privacyPermContextMenus": { "message": "contextMenus – राइट-क्लिक मेनू विकल्प" },
-  "privacyContactTitle": { "message": "संपर्क" },
-  "privacyContactText": { "message": "प्रश्न हैं? drowzyextension@gmail.com पर संपर्क करें" }
+  "onboardingTitle": {
+    "message": "Drowzy में आपका स्वागत है"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy निष्क्रिय टैब को सुलाकर मेमोरी बचाता है। आपके टैब हमेशा सुरक्षित रहते हैं – हम Chrome के नेटिव डिस्कार्ड API का उपयोग करते हैं, इसलिए Drowzy अनइंस्टॉल करने पर भी वे बने रहते हैं।"
+  },
+  "howItWorks": {
+    "message": "यह कैसे काम करता है"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>30 मिनट से निष्क्रिय टैब</strong> स्वचालित रूप से सस्पेंड हो जाते हैं"
+  },
+  "featureZeroRam": {
+    "message": "<strong>सस्पेंड किए गए टैब शून्य RAM उपयोग करते हैं</strong> लेकिन आपकी टैब बार में बने रहते हैं"
+  },
+  "featureClickToWake": {
+    "message": "<strong>किसी भी सस्पेंड किए गए टैब पर क्लिक करें</strong> उसे तुरंत जगाने के लिए"
+  },
+  "featureProtected": {
+    "message": "<strong>सक्रिय, पिन किए गए, और ऑडियो टैब</strong> को कभी छुआ नहीं जाता"
+  },
+  "quickActions": {
+    "message": "त्वरित कार्य"
+  },
+  "actionClickIcon": {
+    "message": "अपने सभी टैब देखने के लिए टूलबार में <strong>Drowzy आइकन</strong> पर क्लिक करें"
+  },
+  "actionAltS": {
+    "message": "वर्तमान टैब सस्पेंड करने के लिए <kbd>Alt+S</kbd> दबाएँ"
+  },
+  "actionAltShiftS": {
+    "message": "अन्य सभी टैब सस्पेंड करने के लिए <kbd>Alt+Shift+S</kbd> दबाएँ"
+  },
+  "actionAltW": {
+    "message": "सभी सस्पेंड किए गए टैब जगाने के लिए <kbd>Alt+W</kbd> दबाएँ"
+  },
+  "actionRightClick": {
+    "message": "त्वरित सस्पेंड विकल्पों के लिए किसी भी पेज पर राइट-क्लिक करें"
+  },
+  "onboardingCta": {
+    "message": "Drowzy पहले से चल रहा है। कुछ टैब खोलें और इसे आज़माएँ!"
+  },
+  "onboardingBtn": {
+    "message": "समझ गया, चलते हैं"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – गोपनीयता नीति"
+  },
+  "privacyUpdated": {
+    "message": "अंतिम अपडेट: फ़रवरी 2026"
+  },
+  "privacyShortTitle": {
+    "message": "संक्षिप्त संस्करण"
+  },
+  "privacyShortText": {
+    "message": "Drowzy कोई डेटा एकत्र नहीं करता। कोई एनालिटिक्स नहीं, कोई ट्रैकिंग नहीं, कोई बाहरी सर्वर नहीं। सब कुछ आपके ब्राउज़र में रहता है।"
+  },
+  "privacyStoredTitle": {
+    "message": "क्या संग्रहीत होता है"
+  },
+  "privacyStoredText": {
+    "message": "आपकी सेटिंग्स (सस्पेंड टाइमर, श्वेतसूची, प्राथमिकताएँ) Chrome के अंतर्निहित स्टोरेज API का उपयोग करके सहेजी जाती हैं: आपकी Chrome प्रोफ़ाइल के साथ चलने वाली सेटिंग्स के लिए chrome.storage.sync, आँकड़ों और सहेजे गए सत्रों के लिए chrome.storage.local, और टैब टाइमस्टैम्प जैसे अस्थायी डेटा के लिए chrome.storage.session। इनमें से कुछ भी किसी तृतीय-पक्ष सर्वर को नहीं भेजा जाता।"
+  },
+  "privacyPermissionsTitle": {
+    "message": "अनुमतियाँ"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy इन Chrome अनुमतियों का उपयोग करता है:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – ब्राउज़र टैब की सूची बनाना, सस्पेंड करना और पुनर्स्थापित करना"
+  },
+  "privacyPermStorage": {
+    "message": "storage – आपकी सेटिंग्स स्थानीय रूप से सहेजना"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – निष्क्रिय टैब की आवधिक जाँच"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – राइट-क्लिक मेनू विकल्प"
+  },
+  "privacyContactTitle": {
+    "message": "संपर्क"
+  },
+  "privacyContactText": {
+    "message": "प्रश्न हैं? drowzyextension@gmail.com पर संपर्क करें"
+  },
+  "replace": {
+    "message": "बदलें"
+  },
+  "replaceSessionTitle": {
+    "message": "वर्तमान टैब को इस सत्र से बदलें"
+  },
+  "invalidDomain": {
+    "message": "एक मान्य डोमेन दर्ज करें (उदा. example.com)"
+  },
+  "extensionPage": {
+    "message": "एक्सटेंशन पेज"
+  },
+  "exportWhitelist": {
+    "message": "निर्यात"
+  },
+  "importWhitelist": {
+    "message": "आयात"
+  },
+  "exportWhitelistTitle": {
+    "message": "श्वेतसूची कॉपी करें"
+  },
+  "importWhitelistTitle": {
+    "message": "क्लिपबोर्ड से श्वेतसूची आयात करें"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ साइट कॉपी की गई",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ नई साइट आयात की गई",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "क्लिपबोर्ड में कोई मान्य डोमेन नहीं मिला"
+  },
+  "clipboardReadFailed": {
+    "message": "क्लिपबोर्ड पढ़ नहीं सका"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy पसंद आ रहा है?"
+  },
+  "reviewYes": {
+    "message": "हाँ!"
+  },
+  "reviewNo": {
+    "message": "नहीं"
+  },
+  "whatsNew": {
+    "message": "v1.1.0 में नया"
+  },
+  "changelogTitle": {
+    "message": "Drowzy में नया"
+  },
+  "changelogWhatsNew": {
+    "message": "नया क्या है"
+  },
+  "changelogVersion": {
+    "message": "संस्करण 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "नई सुविधाएँ"
+  },
+  "changelogBugFixes": {
+    "message": "बग फिक्स"
+  },
+  "changelogImprovements": {
+    "message": "सुधार"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "समीक्षा अनुरोध"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "कुछ टैब सस्पेंड करने के बाद, Drowzy पूछेगा कि क्या आपको यह पसंद है। एक त्वरित थम्स अप बहुत मदद करता है!"
+  },
+  "changelogChangelogTitle": {
+    "message": "बदलाव लॉग पेज"
+  },
+  "changelogChangelogDesc": {
+    "message": "आप इसे देख रहे हैं! अपडेट पर स्वचालित रूप से खुलता है। सेटिंग्स से कभी भी एक्सेस करें।"
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "सत्र पुनर्स्थापना समय"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "पुनर्स्थापित टैब अब तुरंत सस्पेंड नहीं होते। वे निष्क्रिय टाइमर सही से रीसेट करते हैं।"
+  },
+  "changelogFormCheckTitle": {
+    "message": "फॉर्म जाँच टाइमआउट"
+  },
+  "changelogFormCheckDesc": {
+    "message": "फॉर्म जाँच में अब 500ms टाइमआउट है ताकि अनुत्तरदायी टैब कतार को ब्लॉक न कर सकें।"
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "श्वेतसूची डुप्लिकेट"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "केस सेंसिटिविटी समस्या ठीक की गई। सभी प्रविष्टियाँ सामान्यीकृत हैं।"
+  },
+  "changelogLiveStatsTitle": {
+    "message": "लाइव आँकड़े"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "पॉपअप स्वचालित रूप से रीफ्रेश होता है जब टैब बैकग्राउंड में सस्पेंड या जागते हैं।"
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "सत्र पुनर्स्थापना विकल्प"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "सत्रों में अलग \"खोलें\" और \"बदलें\" बटन हैं।"
+  },
+  "changelogWhitelistValTitle": {
+    "message": "श्वेतसूची सत्यापन और निर्यात/आयात"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "श्वेतसूची इनपुट अब डोमेन सत्यापित करता है। आप क्लिपबोर्ड से श्वेतसूची निर्यात और आयात भी कर सकते हैं।"
+  },
+  "changelogA11yTitle": {
+    "message": "सुगम्यता"
+  },
+  "changelogA11yDesc": {
+    "message": "टैब सूची आइटम अब ARIA भूमिकाओं के साथ कीबोर्ड-नेविगेशन योग्य हैं। टोस्ट नोटिफिकेशन स्क्रीन रीडर को सूचित किए जाते हैं।"
+  },
+  "changelogAnimationsTitle": {
+    "message": "सुचारू एनिमेशन"
+  },
+  "changelogAnimationsDesc": {
+    "message": "टैब सूची एनिमेशन अब सीमित हैं ताकि कई टैब वाली विंडो में लंबी देरी न हो।"
+  },
+  "changelogCtaText": {
+    "message": "Drowzy मुफ्त और ओपन सोर्स है। यदि यह मेमोरी बचा रहा है, तो समीक्षा छोड़ें या GitHub पर स्टार दें।"
+  },
+  "changelogReviewBtn": {
+    "message": "समीक्षा छोड़ें"
+  },
+  "changelogStarBtn": {
+    "message": "GitHub पर स्टार"
+  }
 }

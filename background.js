@@ -49,6 +49,13 @@ async function onInstalled(details) {
   if (details.reason === 'install') {
     await initStats();
     try { chrome.tabs.create({ url: 'onboarding.html' }); } catch {}
+  } else if (details.reason === 'update') {
+    let version = chrome.runtime.getManifest().version;
+    let data = await chrome.storage.local.get('drowzy_lastChangelogVersion');
+    if (data.drowzy_lastChangelogVersion !== version) {
+      await chrome.storage.local.set({ drowzy_lastChangelogVersion: version });
+      try { chrome.tabs.create({ url: 'changelog.html' }); } catch {}
+    }
   }
 }
 
@@ -108,6 +115,7 @@ async function getSettings() {
   if (!stored.settings) return { ...DEFAULT_SETTINGS };
   let merged = { ...DEFAULT_SETTINGS, ...stored.settings };
   if (!Array.isArray(merged.whitelist)) merged.whitelist = [];
+  merged.whitelist = merged.whitelist.map(w => w.toLowerCase().replace(/^www\./, ''));
   return merged;
 }
 
@@ -277,7 +285,10 @@ async function suspendTab(tabId) {
 
     if (settings.protectForms) {
       try {
-        let resp = await chrome.tabs.sendMessage(tabId, { action: 'checkFormData' });
+        let resp = await Promise.race([
+          chrome.tabs.sendMessage(tabId, { action: 'checkFormData' }),
+          new Promise(resolve => setTimeout(() => resolve(null), 500))
+        ]);
         if (resp && resp.hasFormData) return false;
       } catch {}
     }
@@ -478,17 +489,24 @@ async function restoreSession(id, mode) {
     try {
       let first = restorable[0];
       let newTab = await chrome.tabs.create({ url: first.url, pinned: first.pinned, active: true });
+      await touchTab(newTab.id);
       let oldIds = currentTabs.map(t => t.id).filter(id => id !== newTab.id);
       if (oldIds.length) await chrome.tabs.remove(oldIds);
       for (let i = 1; i < restorable.length; i++) {
-        try { await chrome.tabs.create({ url: restorable[i].url, pinned: restorable[i].pinned, active: false }); } catch {}
+        try {
+          let created = await chrome.tabs.create({ url: restorable[i].url, pinned: restorable[i].pinned, active: false });
+          await touchTab(created.id);
+        } catch {}
       }
     } catch (e) {
       return { success: false, error: e.message };
     }
   } else {
     for (let t of restorable) {
-      try { await chrome.tabs.create({ url: t.url, pinned: t.pinned, active: false }); } catch {}
+      try {
+        let created = await chrome.tabs.create({ url: t.url, pinned: t.pinned, active: false });
+        await touchTab(created.id);
+      } catch {}
     }
   }
   return { success: true, count: restorable.length };

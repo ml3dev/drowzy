@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Đánh thức tất cả tab đã tạm ngưng"
   },
-
-  "statSleeping": { "message": "đang ngủ" },
-  "statProtected": { "message": "được bảo vệ" },
-  "statSaved": { "message": "đã tiết kiệm" },
-
-  "suspendOthers": { "message": "Tạm ngưng tab khác" },
-  "wakeAll": { "message": "Đánh thức tất cả" },
-
-  "neverSuspendSite": { "message": "Không bao giờ tạm ngưng trang này" },
-  "siteWhitelisted": { "message": "Trang nằm trong danh sách trắng (nhấp để xóa)" },
-  "activeWontSuspend": { "message": "Đang hoạt động – sẽ không bị tạm ngưng" },
-  "loading": { "message": "Đang tải..." },
-
-  "tabsInWindow": { "message": "Các tab trong cửa sổ này" },
-  "loadingTabs": { "message": "Đang tải các tab..." },
-  "noTabsFound": { "message": "Không tìm thấy tab nào" },
-  "failedToLoad": { "message": "Tải thất bại. Mở lại cửa sổ bật lên để thử lại." },
-
-  "badgeActive": { "message": "Hoạt động" },
-  "badgeSystem": { "message": "Hệ thống" },
-  "badgePinned": { "message": "Đã ghim" },
-  "badgeAudio": { "message": "Âm thanh" },
-  "badgeStarred": { "message": "Đã gắn sao" },
-  "badgeProtected": { "message": "Được bảo vệ" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Phiên" },
-  "sessionNamePlaceholder": { "message": "Tên phiên (tùy chọn)" },
-  "save": { "message": "Lưu" },
-  "emptySessionState": { "message": "Lưu phiên đầu tiên của bạn để khôi phục tab bất cứ lúc nào" },
-  "open": { "message": "Mở" },
-  "openSessionTitle": { "message": "Mở các tab từ phiên này" },
-  "deleteSessionTitle": { "message": "Xóa phiên" },
-  "sessionSaved": { "message": "Đã lưu phiên!" },
-  "failedToSave": { "message": "Lưu thất bại" },
+  "statSleeping": {
+    "message": "đang ngủ"
+  },
+  "statProtected": {
+    "message": "được bảo vệ"
+  },
+  "statSaved": {
+    "message": "đã tiết kiệm"
+  },
+  "suspendOthers": {
+    "message": "Tạm ngưng tab khác"
+  },
+  "wakeAll": {
+    "message": "Đánh thức tất cả"
+  },
+  "neverSuspendSite": {
+    "message": "Không bao giờ tạm ngưng trang này"
+  },
+  "siteWhitelisted": {
+    "message": "Trang nằm trong danh sách trắng (nhấp để xóa)"
+  },
+  "activeWontSuspend": {
+    "message": "Đang hoạt động – sẽ không bị tạm ngưng"
+  },
+  "loading": {
+    "message": "Đang tải..."
+  },
+  "tabsInWindow": {
+    "message": "Các tab trong cửa sổ này"
+  },
+  "loadingTabs": {
+    "message": "Đang tải các tab..."
+  },
+  "noTabsFound": {
+    "message": "Không tìm thấy tab nào"
+  },
+  "failedToLoad": {
+    "message": "Tải thất bại. Mở lại cửa sổ bật lên để thử lại."
+  },
+  "badgeActive": {
+    "message": "Hoạt động"
+  },
+  "badgeSystem": {
+    "message": "Hệ thống"
+  },
+  "badgePinned": {
+    "message": "Đã ghim"
+  },
+  "badgeAudio": {
+    "message": "Âm thanh"
+  },
+  "badgeStarred": {
+    "message": "Đã gắn sao"
+  },
+  "badgeProtected": {
+    "message": "Được bảo vệ"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Phiên"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Tên phiên (tùy chọn)"
+  },
+  "save": {
+    "message": "Lưu"
+  },
+  "emptySessionState": {
+    "message": "Lưu phiên đầu tiên của bạn để khôi phục tab bất cứ lúc nào"
+  },
+  "open": {
+    "message": "Mở"
+  },
+  "openSessionTitle": {
+    "message": "Mở các tab từ phiên này"
+  },
+  "deleteSessionTitle": {
+    "message": "Xóa phiên"
+  },
+  "sessionSaved": {
+    "message": "Đã lưu phiên!"
+  },
+  "failedToSave": {
+    "message": "Lưu thất bại"
+  },
   "restoredTabs": {
     "message": "Đã khôi phục $COUNT$ tab",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Khôi phục thất bại" },
-  "noSessionsToExport": { "message": "Không có phiên nào để xuất" },
+  "failedToRestore": {
+    "message": "Khôi phục thất bại"
+  },
+  "noSessionsToExport": {
+    "message": "Không có phiên nào để xuất"
+  },
   "copiedSessionsJson": {
     "message": "Đã sao chép $COUNT$ phiên dưới dạng JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ tab",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Thống kê" },
-  "statToday": { "message": "Hôm nay" },
-  "statAllTime": { "message": "Tất cả thời gian" },
-  "statRamSaved": { "message": "RAM đã tiết kiệm (ước tính)" },
-  "statMemberSince": { "message": "Thành viên từ" },
-
-  "settings": { "message": "Cài đặt" },
-  "autoSuspendAfter": { "message": "Tự động tạm ngưng sau" },
-  "timer5min": { "message": "5 phút" },
-  "timer10min": { "message": "10 phút" },
-  "timer15min": { "message": "15 phút" },
-  "timer30min": { "message": "30 phút" },
-  "timer1hour": { "message": "1 giờ" },
-  "timer2hours": { "message": "2 giờ" },
-  "timer4hours": { "message": "4 giờ" },
-  "timerNever": { "message": "Không bao giờ" },
-  "protectPinned": { "message": "Bảo vệ tab đã ghim" },
-  "protectAudio": { "message": "Bảo vệ tab có âm thanh" },
-  "protectForms": { "message": "Bảo vệ tab có biểu mẫu" },
-  "suspendOnStartup": { "message": "Tạm ngưng tab khi khởi động" },
-  "enableAutoSuspend": { "message": "Bật tự động tạm ngưng" },
-  "markSuspended": { "message": "Đánh dấu tab đã tạm ngưng" },
-  "whitelistedSites": { "message": "Trang trong danh sách trắng" },
-  "add": { "message": "Thêm" },
-  "noSitesWhitelisted": { "message": "Không có trang nào trong danh sách trắng" },
-
-  "suspending": { "message": "Đang tạm ngưng..." },
-  "done": { "message": "Xong!" },
-  "waking": { "message": "Đang đánh thức..." },
+  "stats": {
+    "message": "Thống kê"
+  },
+  "statToday": {
+    "message": "Hôm nay"
+  },
+  "statAllTime": {
+    "message": "Tất cả thời gian"
+  },
+  "statRamSaved": {
+    "message": "RAM đã tiết kiệm (ước tính)"
+  },
+  "statMemberSince": {
+    "message": "Thành viên từ"
+  },
+  "settings": {
+    "message": "Cài đặt"
+  },
+  "autoSuspendAfter": {
+    "message": "Tự động tạm ngưng sau"
+  },
+  "timer5min": {
+    "message": "5 phút"
+  },
+  "timer10min": {
+    "message": "10 phút"
+  },
+  "timer15min": {
+    "message": "15 phút"
+  },
+  "timer30min": {
+    "message": "30 phút"
+  },
+  "timer1hour": {
+    "message": "1 giờ"
+  },
+  "timer2hours": {
+    "message": "2 giờ"
+  },
+  "timer4hours": {
+    "message": "4 giờ"
+  },
+  "timerNever": {
+    "message": "Không bao giờ"
+  },
+  "protectPinned": {
+    "message": "Bảo vệ tab đã ghim"
+  },
+  "protectAudio": {
+    "message": "Bảo vệ tab có âm thanh"
+  },
+  "protectForms": {
+    "message": "Bảo vệ tab có biểu mẫu"
+  },
+  "suspendOnStartup": {
+    "message": "Tạm ngưng tab khi khởi động"
+  },
+  "enableAutoSuspend": {
+    "message": "Bật tự động tạm ngưng"
+  },
+  "markSuspended": {
+    "message": "Đánh dấu tab đã tạm ngưng"
+  },
+  "whitelistedSites": {
+    "message": "Trang trong danh sách trắng"
+  },
+  "add": {
+    "message": "Thêm"
+  },
+  "noSitesWhitelisted": {
+    "message": "Không có trang nào trong danh sách trắng"
+  },
+  "suspending": {
+    "message": "Đang tạm ngưng..."
+  },
+  "done": {
+    "message": "Xong!"
+  },
+  "waking": {
+    "message": "Đang đánh thức..."
+  },
   "copiedTabs": {
     "message": "Đã sao chép $COUNT$ tab vào bộ nhớ tạm",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Sao chép thất bại" },
-  "copyTabsTitle": { "message": "Sao chép danh sách tab vào bộ nhớ tạm" },
-  "copySessionsTitle": { "message": "Sao chép tất cả phiên dưới dạng JSON" },
-  "remove": { "message": "Xóa" },
-
-  "switchToLight": { "message": "Chuyển sang chế độ sáng" },
-  "switchToDark": { "message": "Chuyển sang chế độ tối" },
-
-  "ctxSuspendThis": { "message": "Tạm ngưng tab này" },
-  "ctxSuspendOthers": { "message": "Tạm ngưng tất cả tab khác" },
-  "ctxNeverSuspend": { "message": "Không bao giờ tạm ngưng trang này" },
-
-  "maxSessionsReached": { "message": "Đã đạt tối đa 20 phiên. Xóa một phiên để lưu phiên mới." },
-  "noSaveableTabs": { "message": "Không có tab nào có thể lưu trong cửa sổ này." },
-  "sessionNotFound": { "message": "Không tìm thấy phiên." },
-  "noRestorableTabs": { "message": "Không có tab nào có thể khôi phục trong phiên này." },
+  "failedToCopy": {
+    "message": "Sao chép thất bại"
+  },
+  "copyTabsTitle": {
+    "message": "Sao chép danh sách tab vào bộ nhớ tạm"
+  },
+  "copySessionsTitle": {
+    "message": "Sao chép tất cả phiên dưới dạng JSON"
+  },
+  "remove": {
+    "message": "Xóa"
+  },
+  "switchToLight": {
+    "message": "Chuyển sang chế độ sáng"
+  },
+  "switchToDark": {
+    "message": "Chuyển sang chế độ tối"
+  },
+  "ctxSuspendThis": {
+    "message": "Tạm ngưng tab này"
+  },
+  "ctxSuspendOthers": {
+    "message": "Tạm ngưng tất cả tab khác"
+  },
+  "ctxNeverSuspend": {
+    "message": "Không bao giờ tạm ngưng trang này"
+  },
+  "maxSessionsReached": {
+    "message": "Đã đạt tối đa 20 phiên. Xóa một phiên để lưu phiên mới."
+  },
+  "noSaveableTabs": {
+    "message": "Không có tab nào có thể lưu trong cửa sổ này."
+  },
+  "sessionNotFound": {
+    "message": "Không tìm thấy phiên."
+  },
+  "noRestorableTabs": {
+    "message": "Không có tab nào có thể khôi phục trong phiên này."
+  },
   "sessionDefaultName": {
     "message": "Phiên – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "vừa xong" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "vừa xong"
+  },
   "minutesAgo": {
     "message": "$COUNT$ phút trước",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ giờ trước",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Hôm qua" },
+  "yesterday": {
+    "message": "Hôm qua"
+  },
   "daysAgo": {
     "message": "$COUNT$ ngày trước",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Chào mừng đến với Drowzy" },
-  "onboardingIntro": { "message": "Drowzy tiết kiệm bộ nhớ bằng cách đưa các tab không hoạt động vào chế độ ngủ. Tab của bạn luôn an toàn – chúng tôi sử dụng API loại bỏ gốc của Chrome, vì vậy chúng vẫn tồn tại ngay cả khi bạn gỡ cài đặt Drowzy." },
-  "howItWorks": { "message": "Cách hoạt động" },
-  "featureAutoSuspend": { "message": "<strong>Các tab không hoạt động trong 30 phút</strong> sẽ tự động bị tạm ngưng" },
-  "featureZeroRam": { "message": "<strong>Các tab đã tạm ngưng không sử dụng RAM</strong> nhưng vẫn hiển thị trên thanh tab" },
-  "featureClickToWake": { "message": "<strong>Nhấp vào bất kỳ tab đã tạm ngưng nào</strong> để đánh thức ngay lập tức" },
-  "featureProtected": { "message": "<strong>Tab đang hoạt động, đã ghim và có âm thanh</strong> không bao giờ bị ảnh hưởng" },
-  "quickActions": { "message": "Thao tác nhanh" },
-  "actionClickIcon": { "message": "Nhấp vào <strong>biểu tượng Drowzy</strong> trên thanh công cụ để xem tất cả tab" },
-  "actionAltS": { "message": "Nhấn <kbd>Alt+S</kbd> để tạm ngưng tab hiện tại" },
-  "actionAltShiftS": { "message": "Nhấn <kbd>Alt+Shift+S</kbd> để tạm ngưng tất cả tab khác" },
-  "actionAltW": { "message": "Nhấn <kbd>Alt+W</kbd> để đánh thức tất cả tab đã tạm ngưng" },
-  "actionRightClick": { "message": "Nhấp chuột phải vào bất kỳ trang nào để có tùy chọn tạm ngưng nhanh" },
-  "onboardingCta": { "message": "Drowzy đã đang chạy. Mở vài tab và thử ngay!" },
-  "onboardingBtn": { "message": "Đã hiểu, bắt đầu thôi" },
-
-  "privacyTitle": { "message": "Drowzy – Chính sách quyền riêng tư" },
-  "privacyUpdated": { "message": "Cập nhật lần cuối: Tháng 2 năm 2026" },
-  "privacyShortTitle": { "message": "Phiên bản ngắn gọn" },
-  "privacyShortText": { "message": "Drowzy không thu thập bất kỳ dữ liệu nào. Không phân tích, không theo dõi, không máy chủ bên ngoài. Mọi thứ đều ở trong trình duyệt của bạn." },
-  "privacyStoredTitle": { "message": "Những gì được lưu trữ" },
-  "privacyStoredText": { "message": "Cài đặt của bạn (bộ hẹn giờ tạm ngưng, danh sách trắng, tùy chọn) được lưu bằng các API lưu trữ tích hợp của Chrome: chrome.storage.sync cho cài đặt theo hồ sơ Chrome của bạn, chrome.storage.local cho thống kê và phiên đã lưu, và chrome.storage.session cho dữ liệu tạm thời như dấu thời gian tab. Không có dữ liệu nào được gửi đến máy chủ bên thứ ba." },
-  "privacyPermissionsTitle": { "message": "Quyền" },
-  "privacyPermissionsIntro": { "message": "Drowzy sử dụng các quyền Chrome sau:" },
-  "privacyPermTabs": { "message": "tabs – liệt kê, tạm ngưng và khôi phục các tab trình duyệt" },
-  "privacyPermStorage": { "message": "storage – lưu cài đặt của bạn cục bộ" },
-  "privacyPermAlarms": { "message": "alarms – kiểm tra định kỳ các tab không hoạt động" },
-  "privacyPermContextMenus": { "message": "contextMenus – tùy chọn menu chuột phải" },
-  "privacyContactTitle": { "message": "Liên hệ" },
-  "privacyContactText": { "message": "Có câu hỏi? Liên hệ tại drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Chào mừng đến với Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy tiết kiệm bộ nhớ bằng cách đưa các tab không hoạt động vào chế độ ngủ. Tab của bạn luôn an toàn – chúng tôi sử dụng API loại bỏ gốc của Chrome, vì vậy chúng vẫn tồn tại ngay cả khi bạn gỡ cài đặt Drowzy."
+  },
+  "howItWorks": {
+    "message": "Cách hoạt động"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Các tab không hoạt động trong 30 phút</strong> sẽ tự động bị tạm ngưng"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Các tab đã tạm ngưng không sử dụng RAM</strong> nhưng vẫn hiển thị trên thanh tab"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Nhấp vào bất kỳ tab đã tạm ngưng nào</strong> để đánh thức ngay lập tức"
+  },
+  "featureProtected": {
+    "message": "<strong>Tab đang hoạt động, đã ghim và có âm thanh</strong> không bao giờ bị ảnh hưởng"
+  },
+  "quickActions": {
+    "message": "Thao tác nhanh"
+  },
+  "actionClickIcon": {
+    "message": "Nhấp vào <strong>biểu tượng Drowzy</strong> trên thanh công cụ để xem tất cả tab"
+  },
+  "actionAltS": {
+    "message": "Nhấn <kbd>Alt+S</kbd> để tạm ngưng tab hiện tại"
+  },
+  "actionAltShiftS": {
+    "message": "Nhấn <kbd>Alt+Shift+S</kbd> để tạm ngưng tất cả tab khác"
+  },
+  "actionAltW": {
+    "message": "Nhấn <kbd>Alt+W</kbd> để đánh thức tất cả tab đã tạm ngưng"
+  },
+  "actionRightClick": {
+    "message": "Nhấp chuột phải vào bất kỳ trang nào để có tùy chọn tạm ngưng nhanh"
+  },
+  "onboardingCta": {
+    "message": "Drowzy đã đang chạy. Mở vài tab và thử ngay!"
+  },
+  "onboardingBtn": {
+    "message": "Đã hiểu, bắt đầu thôi"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Chính sách quyền riêng tư"
+  },
+  "privacyUpdated": {
+    "message": "Cập nhật lần cuối: Tháng 2 năm 2026"
+  },
+  "privacyShortTitle": {
+    "message": "Phiên bản ngắn gọn"
+  },
+  "privacyShortText": {
+    "message": "Drowzy không thu thập bất kỳ dữ liệu nào. Không phân tích, không theo dõi, không máy chủ bên ngoài. Mọi thứ đều ở trong trình duyệt của bạn."
+  },
+  "privacyStoredTitle": {
+    "message": "Những gì được lưu trữ"
+  },
+  "privacyStoredText": {
+    "message": "Cài đặt của bạn (bộ hẹn giờ tạm ngưng, danh sách trắng, tùy chọn) được lưu bằng các API lưu trữ tích hợp của Chrome: chrome.storage.sync cho cài đặt theo hồ sơ Chrome của bạn, chrome.storage.local cho thống kê và phiên đã lưu, và chrome.storage.session cho dữ liệu tạm thời như dấu thời gian tab. Không có dữ liệu nào được gửi đến máy chủ bên thứ ba."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Quyền"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy sử dụng các quyền Chrome sau:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – liệt kê, tạm ngưng và khôi phục các tab trình duyệt"
+  },
+  "privacyPermStorage": {
+    "message": "storage – lưu cài đặt của bạn cục bộ"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – kiểm tra định kỳ các tab không hoạt động"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – tùy chọn menu chuột phải"
+  },
+  "privacyContactTitle": {
+    "message": "Liên hệ"
+  },
+  "privacyContactText": {
+    "message": "Có câu hỏi? Liên hệ tại drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Thay thế"
+  },
+  "replaceSessionTitle": {
+    "message": "Thay thế các tab hiện tại bằng phiên này"
+  },
+  "invalidDomain": {
+    "message": "Nhập tên miền hợp lệ (ví dụ: example.com)"
+  },
+  "extensionPage": {
+    "message": "Trang tiện ích mở rộng"
+  },
+  "exportWhitelist": {
+    "message": "Xuất"
+  },
+  "importWhitelist": {
+    "message": "Nhập"
+  },
+  "exportWhitelistTitle": {
+    "message": "Sao chép danh sách trắng"
+  },
+  "importWhitelistTitle": {
+    "message": "Nhập danh sách trắng từ bộ nhớ tạm"
+  },
+  "copiedSites": {
+    "message": "Đã sao chép $COUNT$ trang web",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Đã nhập $COUNT$ trang web mới",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Không tìm thấy tên miền hợp lệ trong bộ nhớ tạm"
+  },
+  "clipboardReadFailed": {
+    "message": "Không thể đọc bộ nhớ tạm"
+  },
+  "enjoyingDrowzy": {
+    "message": "Bạn thích Drowzy không?"
+  },
+  "reviewYes": {
+    "message": "Có!"
+  },
+  "reviewNo": {
+    "message": "Không hẳn"
+  },
+  "whatsNew": {
+    "message": "Có gì mới trong v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Có gì mới trong Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Có gì mới"
+  },
+  "changelogVersion": {
+    "message": "Phiên bản 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Tính năng mới"
+  },
+  "changelogBugFixes": {
+    "message": "Sửa lỗi"
+  },
+  "changelogImprovements": {
+    "message": "Cải tiến"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Yêu cầu đánh giá"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Sau khi tạm ngưng một vài tab, Drowzy sẽ hỏi bạn có thích không. Một lượt thích nhanh giúp chúng tôi rất nhiều!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Trang nhật ký thay đổi"
+  },
+  "changelogChangelogDesc": {
+    "message": "Bạn đang xem nó đây! Mở tự động khi cập nhật. Truy cập bất cứ lúc nào từ Cài đặt."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Thời gian khôi phục phiên"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Các tab được khôi phục không còn bị tạm ngưng tự động ngay lập tức. Giờ đây chúng đặt lại bộ hẹn giờ nhàn rỗi đúng cách."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Hết thời gian kiểm tra biểu mẫu"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Kiểm tra biểu mẫu giờ có thời gian chờ 500ms để các tab không phản hồi không thể chặn hàng đợi."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Trùng lặp danh sách trắng"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Đã sửa lỗi phân biệt chữ hoa chữ thường khiến \"Example.com\" và \"example.com\" đều có thể được thêm vào. Tất cả mục nhập giờ đã được chuẩn hóa."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Thống kê trực tiếp"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Popup tự động làm mới khi tab được tạm ngưng hoặc đánh thức."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Tùy chọn khôi phục phiên"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Phiên giờ có các nút \"Mở\" và \"Thay thế\" riêng biệt."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Xác thực và xuất/nhập danh sách trắng"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Nhập danh sách trắng giờ xác thực tên miền. Bạn có thể xuất và nhập qua bộ nhớ tạm."
+  },
+  "changelogA11yTitle": {
+    "message": "Khả năng truy cập"
+  },
+  "changelogA11yDesc": {
+    "message": "Các mục danh sách tab giờ có thể điều hướng bằng bàn phím với vai trò ARIA. Thông báo được đọc cho trình đọc màn hình."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Hoạt ảnh mượt mà hơn"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Hoạt ảnh xen kẽ danh sách tab giờ được giới hạn để cửa sổ có nhiều tab không bị trễ lâu."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy miễn phí và mã nguồn mở. Nếu tiết kiệm bộ nhớ cho bạn, hãy để lại đánh giá hoặc gắn sao trên GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Để lại đánh giá"
+  },
+  "changelogStarBtn": {
+    "message": "Gắn sao trên GitHub"
+  }
 }

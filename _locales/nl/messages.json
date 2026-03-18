@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Alle opgeschorte tabbladen activeren"
   },
-
-  "statSleeping": { "message": "slapend" },
-  "statProtected": { "message": "beschermd" },
-  "statSaved": { "message": "bespaard" },
-
-  "suspendOthers": { "message": "Overige opschorten" },
-  "wakeAll": { "message": "Alles activeren" },
-
-  "neverSuspendSite": { "message": "Deze site nooit opschorten" },
-  "siteWhitelisted": { "message": "Site staat op de witte lijst (klik om te verwijderen)" },
-  "activeWontSuspend": { "message": "Actief – wordt niet opgeschort" },
-  "loading": { "message": "Laden..." },
-
-  "tabsInWindow": { "message": "Tabbladen in dit venster" },
-  "loadingTabs": { "message": "Tabbladen laden..." },
-  "noTabsFound": { "message": "Geen tabbladen gevonden" },
-  "failedToLoad": { "message": "Laden mislukt. Open de popup opnieuw om het te proberen." },
-
-  "badgeActive": { "message": "Actief" },
-  "badgeSystem": { "message": "Systeem" },
-  "badgePinned": { "message": "Vastgemaakt" },
-  "badgeAudio": { "message": "Audio" },
-  "badgeStarred": { "message": "Met ster" },
-  "badgeProtected": { "message": "Beschermd" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Sessies" },
-  "sessionNamePlaceholder": { "message": "Sessienaam (optioneel)" },
-  "save": { "message": "Opslaan" },
-  "emptySessionState": { "message": "Sla je eerste sessie op om tabbladen op elk moment te herstellen" },
-  "open": { "message": "Openen" },
-  "openSessionTitle": { "message": "Tabbladen van deze sessie openen" },
-  "deleteSessionTitle": { "message": "Sessie verwijderen" },
-  "sessionSaved": { "message": "Sessie opgeslagen!" },
-  "failedToSave": { "message": "Opslaan mislukt" },
+  "statSleeping": {
+    "message": "slapend"
+  },
+  "statProtected": {
+    "message": "beschermd"
+  },
+  "statSaved": {
+    "message": "bespaard"
+  },
+  "suspendOthers": {
+    "message": "Overige opschorten"
+  },
+  "wakeAll": {
+    "message": "Alles activeren"
+  },
+  "neverSuspendSite": {
+    "message": "Deze site nooit opschorten"
+  },
+  "siteWhitelisted": {
+    "message": "Site staat op de witte lijst (klik om te verwijderen)"
+  },
+  "activeWontSuspend": {
+    "message": "Actief – wordt niet opgeschort"
+  },
+  "loading": {
+    "message": "Laden..."
+  },
+  "tabsInWindow": {
+    "message": "Tabbladen in dit venster"
+  },
+  "loadingTabs": {
+    "message": "Tabbladen laden..."
+  },
+  "noTabsFound": {
+    "message": "Geen tabbladen gevonden"
+  },
+  "failedToLoad": {
+    "message": "Laden mislukt. Open de popup opnieuw om het te proberen."
+  },
+  "badgeActive": {
+    "message": "Actief"
+  },
+  "badgeSystem": {
+    "message": "Systeem"
+  },
+  "badgePinned": {
+    "message": "Vastgemaakt"
+  },
+  "badgeAudio": {
+    "message": "Audio"
+  },
+  "badgeStarred": {
+    "message": "Met ster"
+  },
+  "badgeProtected": {
+    "message": "Beschermd"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Sessies"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Sessienaam (optioneel)"
+  },
+  "save": {
+    "message": "Opslaan"
+  },
+  "emptySessionState": {
+    "message": "Sla je eerste sessie op om tabbladen op elk moment te herstellen"
+  },
+  "open": {
+    "message": "Openen"
+  },
+  "openSessionTitle": {
+    "message": "Tabbladen van deze sessie openen"
+  },
+  "deleteSessionTitle": {
+    "message": "Sessie verwijderen"
+  },
+  "sessionSaved": {
+    "message": "Sessie opgeslagen!"
+  },
+  "failedToSave": {
+    "message": "Opslaan mislukt"
+  },
   "restoredTabs": {
     "message": "$COUNT$ tabbladen hersteld",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Herstellen mislukt" },
-  "noSessionsToExport": { "message": "Geen sessies om te exporteren" },
+  "failedToRestore": {
+    "message": "Herstellen mislukt"
+  },
+  "noSessionsToExport": {
+    "message": "Geen sessies om te exporteren"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ sessies gekopieerd als JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ tabbladen",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statistieken" },
-  "statToday": { "message": "Vandaag" },
-  "statAllTime": { "message": "Totaal" },
-  "statRamSaved": { "message": "RAM bespaard (schatting)" },
-  "statMemberSince": { "message": "Lid sinds" },
-
-  "settings": { "message": "Instellingen" },
-  "autoSuspendAfter": { "message": "Automatisch opschorten na" },
-  "timer5min": { "message": "5 minuten" },
-  "timer10min": { "message": "10 minuten" },
-  "timer15min": { "message": "15 minuten" },
-  "timer30min": { "message": "30 minuten" },
-  "timer1hour": { "message": "1 uur" },
-  "timer2hours": { "message": "2 uur" },
-  "timer4hours": { "message": "4 uur" },
-  "timerNever": { "message": "Nooit" },
-  "protectPinned": { "message": "Vastgemaakte tabbladen beschermen" },
-  "protectAudio": { "message": "Audiotabbladen beschermen" },
-  "protectForms": { "message": "Tabbladen met formulieren beschermen" },
-  "suspendOnStartup": { "message": "Tabbladen opschorten bij opstarten" },
-  "enableAutoSuspend": { "message": "Automatisch opschorten inschakelen" },
-  "markSuspended": { "message": "Opgeschorte tabbladen markeren" },
-  "whitelistedSites": { "message": "Sites op de witte lijst" },
-  "add": { "message": "Toevoegen" },
-  "noSitesWhitelisted": { "message": "Geen sites op de witte lijst" },
-
-  "suspending": { "message": "Opschorten..." },
-  "done": { "message": "Klaar!" },
-  "waking": { "message": "Activeren..." },
+  "stats": {
+    "message": "Statistieken"
+  },
+  "statToday": {
+    "message": "Vandaag"
+  },
+  "statAllTime": {
+    "message": "Totaal"
+  },
+  "statRamSaved": {
+    "message": "RAM bespaard (schatting)"
+  },
+  "statMemberSince": {
+    "message": "Lid sinds"
+  },
+  "settings": {
+    "message": "Instellingen"
+  },
+  "autoSuspendAfter": {
+    "message": "Automatisch opschorten na"
+  },
+  "timer5min": {
+    "message": "5 minuten"
+  },
+  "timer10min": {
+    "message": "10 minuten"
+  },
+  "timer15min": {
+    "message": "15 minuten"
+  },
+  "timer30min": {
+    "message": "30 minuten"
+  },
+  "timer1hour": {
+    "message": "1 uur"
+  },
+  "timer2hours": {
+    "message": "2 uur"
+  },
+  "timer4hours": {
+    "message": "4 uur"
+  },
+  "timerNever": {
+    "message": "Nooit"
+  },
+  "protectPinned": {
+    "message": "Vastgemaakte tabbladen beschermen"
+  },
+  "protectAudio": {
+    "message": "Audiotabbladen beschermen"
+  },
+  "protectForms": {
+    "message": "Tabbladen met formulieren beschermen"
+  },
+  "suspendOnStartup": {
+    "message": "Tabbladen opschorten bij opstarten"
+  },
+  "enableAutoSuspend": {
+    "message": "Automatisch opschorten inschakelen"
+  },
+  "markSuspended": {
+    "message": "Opgeschorte tabbladen markeren"
+  },
+  "whitelistedSites": {
+    "message": "Sites op de witte lijst"
+  },
+  "add": {
+    "message": "Toevoegen"
+  },
+  "noSitesWhitelisted": {
+    "message": "Geen sites op de witte lijst"
+  },
+  "suspending": {
+    "message": "Opschorten..."
+  },
+  "done": {
+    "message": "Klaar!"
+  },
+  "waking": {
+    "message": "Activeren..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ tabbladen naar klembord gekopieerd",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Kopiëren mislukt" },
-  "copyTabsTitle": { "message": "Tabbladlijst naar klembord kopiëren" },
-  "copySessionsTitle": { "message": "Alle sessies als JSON kopiëren" },
-  "remove": { "message": "Verwijderen" },
-
-  "switchToLight": { "message": "Overschakelen naar lichte modus" },
-  "switchToDark": { "message": "Overschakelen naar donkere modus" },
-
-  "ctxSuspendThis": { "message": "Dit tabblad opschorten" },
-  "ctxSuspendOthers": { "message": "Alle andere tabbladen opschorten" },
-  "ctxNeverSuspend": { "message": "Deze site nooit opschorten" },
-
-  "maxSessionsReached": { "message": "Maximum van 20 sessies bereikt. Verwijder er een om een nieuwe op te slaan." },
-  "noSaveableTabs": { "message": "Geen op te slaan tabbladen in dit venster." },
-  "sessionNotFound": { "message": "Sessie niet gevonden." },
-  "noRestorableTabs": { "message": "Geen herstelbare tabbladen in deze sessie." },
+  "failedToCopy": {
+    "message": "Kopiëren mislukt"
+  },
+  "copyTabsTitle": {
+    "message": "Tabbladlijst naar klembord kopiëren"
+  },
+  "copySessionsTitle": {
+    "message": "Alle sessies als JSON kopiëren"
+  },
+  "remove": {
+    "message": "Verwijderen"
+  },
+  "switchToLight": {
+    "message": "Overschakelen naar lichte modus"
+  },
+  "switchToDark": {
+    "message": "Overschakelen naar donkere modus"
+  },
+  "ctxSuspendThis": {
+    "message": "Dit tabblad opschorten"
+  },
+  "ctxSuspendOthers": {
+    "message": "Alle andere tabbladen opschorten"
+  },
+  "ctxNeverSuspend": {
+    "message": "Deze site nooit opschorten"
+  },
+  "maxSessionsReached": {
+    "message": "Maximum van 20 sessies bereikt. Verwijder er een om een nieuwe op te slaan."
+  },
+  "noSaveableTabs": {
+    "message": "Geen op te slaan tabbladen in dit venster."
+  },
+  "sessionNotFound": {
+    "message": "Sessie niet gevonden."
+  },
+  "noRestorableTabs": {
+    "message": "Geen herstelbare tabbladen in deze sessie."
+  },
   "sessionDefaultName": {
     "message": "Sessie – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "zojuist" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "zojuist"
+  },
   "minutesAgo": {
     "message": "$COUNT$ min geleden",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ uur geleden",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Gisteren" },
+  "yesterday": {
+    "message": "Gisteren"
+  },
   "daysAgo": {
     "message": "$COUNT$ dagen geleden",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Welkom bij Drowzy" },
-  "onboardingIntro": { "message": "Drowzy bespaart geheugen door inactieve tabbladen in slaapstand te zetten. Je tabbladen zijn altijd veilig – we gebruiken Chrome's native discard-API, dus ze blijven behouden, zelfs als je Drowzy verwijdert." },
-  "howItWorks": { "message": "Hoe het werkt" },
-  "featureAutoSuspend": { "message": "<strong>Tabbladen die 30 minuten inactief zijn</strong> worden automatisch opgeschort" },
-  "featureZeroRam": { "message": "<strong>Opgeschorte tabbladen gebruiken geen RAM</strong> maar blijven in je tabbladbalk" },
-  "featureClickToWake": { "message": "<strong>Klik op een opgeschort tabblad</strong> om het direct te activeren" },
-  "featureProtected": { "message": "<strong>Actieve, vastgemaakte en audiotabbladen</strong> worden nooit aangeraakt" },
-  "quickActions": { "message": "Snelle acties" },
-  "actionClickIcon": { "message": "Klik op het <strong>Drowzy-pictogram</strong> in de werkbalk om al je tabbladen te zien" },
-  "actionAltS": { "message": "Druk op <kbd>Alt+S</kbd> om het huidige tabblad op te schorten" },
-  "actionAltShiftS": { "message": "Druk op <kbd>Alt+Shift+S</kbd> om alle andere tabbladen op te schorten" },
-  "actionAltW": { "message": "Druk op <kbd>Alt+W</kbd> om alle opgeschorte tabbladen te activeren" },
-  "actionRightClick": { "message": "Klik met de rechtermuisknop op een pagina voor snelle opschortopties" },
-  "onboardingCta": { "message": "Drowzy draait al. Open een paar tabbladen en probeer het uit!" },
-  "onboardingBtn": { "message": "Begrepen, aan de slag" },
-
-  "privacyTitle": { "message": "Drowzy – Privacybeleid" },
-  "privacyUpdated": { "message": "Laatst bijgewerkt: februari 2026" },
-  "privacyShortTitle": { "message": "De korte versie" },
-  "privacyShortText": { "message": "Drowzy verzamelt geen gegevens. Geen analytics, geen tracking, geen externe servers. Alles blijft in je browser." },
-  "privacyStoredTitle": { "message": "Wat wordt opgeslagen" },
-  "privacyStoredText": { "message": "Je instellingen (opschorttimer, witte lijst, voorkeuren) worden opgeslagen met Chrome's ingebouwde opslag-API's: chrome.storage.sync voor instellingen die je Chrome-profiel volgen, chrome.storage.local voor statistieken en opgeslagen sessies, en chrome.storage.session voor tijdelijke gegevens zoals tabblad-timestamps. Niets hiervan wordt naar een externe server gestuurd." },
-  "privacyPermissionsTitle": { "message": "Machtigingen" },
-  "privacyPermissionsIntro": { "message": "Drowzy gebruikt deze Chrome-machtigingen:" },
-  "privacyPermTabs": { "message": "tabs – browsertabbladen weergeven, opschorten en herstellen" },
-  "privacyPermStorage": { "message": "storage – je instellingen lokaal opslaan" },
-  "privacyPermAlarms": { "message": "alarms – periodieke controles op inactieve tabbladen" },
-  "privacyPermContextMenus": { "message": "contextMenus – rechtermuisknop-menuopties" },
-  "privacyContactTitle": { "message": "Contact" },
-  "privacyContactText": { "message": "Vragen? Neem contact op via drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Welkom bij Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy bespaart geheugen door inactieve tabbladen in slaapstand te zetten. Je tabbladen zijn altijd veilig – we gebruiken Chrome's native discard-API, dus ze blijven behouden, zelfs als je Drowzy verwijdert."
+  },
+  "howItWorks": {
+    "message": "Hoe het werkt"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Tabbladen die 30 minuten inactief zijn</strong> worden automatisch opgeschort"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Opgeschorte tabbladen gebruiken geen RAM</strong> maar blijven in je tabbladbalk"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Klik op een opgeschort tabblad</strong> om het direct te activeren"
+  },
+  "featureProtected": {
+    "message": "<strong>Actieve, vastgemaakte en audiotabbladen</strong> worden nooit aangeraakt"
+  },
+  "quickActions": {
+    "message": "Snelle acties"
+  },
+  "actionClickIcon": {
+    "message": "Klik op het <strong>Drowzy-pictogram</strong> in de werkbalk om al je tabbladen te zien"
+  },
+  "actionAltS": {
+    "message": "Druk op <kbd>Alt+S</kbd> om het huidige tabblad op te schorten"
+  },
+  "actionAltShiftS": {
+    "message": "Druk op <kbd>Alt+Shift+S</kbd> om alle andere tabbladen op te schorten"
+  },
+  "actionAltW": {
+    "message": "Druk op <kbd>Alt+W</kbd> om alle opgeschorte tabbladen te activeren"
+  },
+  "actionRightClick": {
+    "message": "Klik met de rechtermuisknop op een pagina voor snelle opschortopties"
+  },
+  "onboardingCta": {
+    "message": "Drowzy draait al. Open een paar tabbladen en probeer het uit!"
+  },
+  "onboardingBtn": {
+    "message": "Begrepen, aan de slag"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Privacybeleid"
+  },
+  "privacyUpdated": {
+    "message": "Laatst bijgewerkt: februari 2026"
+  },
+  "privacyShortTitle": {
+    "message": "De korte versie"
+  },
+  "privacyShortText": {
+    "message": "Drowzy verzamelt geen gegevens. Geen analytics, geen tracking, geen externe servers. Alles blijft in je browser."
+  },
+  "privacyStoredTitle": {
+    "message": "Wat wordt opgeslagen"
+  },
+  "privacyStoredText": {
+    "message": "Je instellingen (opschorttimer, witte lijst, voorkeuren) worden opgeslagen met Chrome's ingebouwde opslag-API's: chrome.storage.sync voor instellingen die je Chrome-profiel volgen, chrome.storage.local voor statistieken en opgeslagen sessies, en chrome.storage.session voor tijdelijke gegevens zoals tabblad-timestamps. Niets hiervan wordt naar een externe server gestuurd."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Machtigingen"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy gebruikt deze Chrome-machtigingen:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – browsertabbladen weergeven, opschorten en herstellen"
+  },
+  "privacyPermStorage": {
+    "message": "storage – je instellingen lokaal opslaan"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – periodieke controles op inactieve tabbladen"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – rechtermuisknop-menuopties"
+  },
+  "privacyContactTitle": {
+    "message": "Contact"
+  },
+  "privacyContactText": {
+    "message": "Vragen? Neem contact op via drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Vervangen"
+  },
+  "replaceSessionTitle": {
+    "message": "Huidige tabbladen vervangen door deze sessie"
+  },
+  "invalidDomain": {
+    "message": "Voer een geldig domein in (bijv. example.com)"
+  },
+  "extensionPage": {
+    "message": "Extensiepagina"
+  },
+  "exportWhitelist": {
+    "message": "Exporteren"
+  },
+  "importWhitelist": {
+    "message": "Importeren"
+  },
+  "exportWhitelistTitle": {
+    "message": "Witte lijst kopiëren"
+  },
+  "importWhitelistTitle": {
+    "message": "Witte lijst importeren van klembord"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ site(s) gekopieerd",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ nieuwe site(s) geïmporteerd",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Geen geldige domeinen gevonden op klembord"
+  },
+  "clipboardReadFailed": {
+    "message": "Klembord kon niet worden gelezen"
+  },
+  "enjoyingDrowzy": {
+    "message": "Bevalt Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ja!"
+  },
+  "reviewNo": {
+    "message": "Niet echt"
+  },
+  "whatsNew": {
+    "message": "Nieuw in v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Nieuw in Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Nieuw"
+  },
+  "changelogVersion": {
+    "message": "Versie 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Nieuwe functies"
+  },
+  "changelogBugFixes": {
+    "message": "Bugfixes"
+  },
+  "changelogImprovements": {
+    "message": "Verbeteringen"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Beoordelingsverzoek"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Nadat je een paar tabbladen hebt opgeschort, vraagt Drowzy of je het leuk vindt. Een snelle duim omhoog helpt ons enorm!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Wijzigingenpagina"
+  },
+  "changelogChangelogDesc": {
+    "message": "Je kijkt ernaar! Opent automatisch bij updates. Altijd bereikbaar via Instellingen."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Sessiehersteltiming"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Herstelde tabbladen worden niet meer onmiddellijk automatisch opgeschort. Ze resetten nu correct hun inactiviteitstimers."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Time-out formuliercontrole"
+  },
+  "changelogFormCheckDesc": {
+    "message": "De formuliercontrole heeft nu een timeout van 500ms zodat niet-reagerende tabbladen de wachtrij niet kunnen blokkeren."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Witte lijst-duplicaten"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Probleem met hoofdlettergevoeligheid opgelost waarbij \"Example.com\" en \"example.com\" beide konden worden toegevoegd. Alle vermeldingen worden nu genormaliseerd."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Live statistieken"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "De popup wordt nu automatisch vernieuwd wanneer tabbladen worden opgeschort of geactiveerd."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Sessieherstelopties"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Sessies hebben nu aparte knoppen \"Openen\" en \"Vervangen\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Witte lijst-validatie en exporteren/importeren"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Invoer van de witte lijst valideert nu domeinen. U kunt exporteren en importeren via het klembord."
+  },
+  "changelogA11yTitle": {
+    "message": "Toegankelijkheid"
+  },
+  "changelogA11yDesc": {
+    "message": "Tablijstitems zijn nu navigeerbaar met het toetsenbord met ARIA-rollen. Meldingen worden aangekondigd aan schermlezers."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Vloeiendere animaties"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Gespreide animaties zijn nu begrensd zodat vensters met veel tabbladen geen lange trapsgewijze vertraging hebben."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy is gratis en open source. Als het geheugen bespaart, laat dan een beoordeling achter of geef een ster op GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Laat een beoordeling achter"
+  },
+  "changelogStarBtn": {
+    "message": "Ster op GitHub"
+  }
 }

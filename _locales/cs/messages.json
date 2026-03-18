@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Probudit všechny uspané karty"
   },
-
-  "statSleeping": { "message": "spí" },
-  "statProtected": { "message": "chráněno" },
-  "statSaved": { "message": "ušetřeno" },
-
-  "suspendOthers": { "message": "Uspat ostatní" },
-  "wakeAll": { "message": "Probudit vše" },
-
-  "neverSuspendSite": { "message": "Nikdy neuspávat tento web" },
-  "siteWhitelisted": { "message": "Web je na seznamu povolených (klikněte pro odebrání)" },
-  "activeWontSuspend": { "message": "Aktivní – nebude uspána" },
-  "loading": { "message": "Načítání..." },
-
-  "tabsInWindow": { "message": "Karty v tomto okně" },
-  "loadingTabs": { "message": "Načítání karet..." },
-  "noTabsFound": { "message": "Žádné karty nenalezeny" },
-  "failedToLoad": { "message": "Načítání selhalo. Znovu otevřete vyskakovací okno a zkuste to znovu." },
-
-  "badgeActive": { "message": "Aktivní" },
-  "badgeSystem": { "message": "Systém" },
-  "badgePinned": { "message": "Připnutá" },
-  "badgeAudio": { "message": "Zvuk" },
-  "badgeStarred": { "message": "Oblíbená" },
-  "badgeProtected": { "message": "Chráněná" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Relace" },
-  "sessionNamePlaceholder": { "message": "Název relace (volitelné)" },
-  "save": { "message": "Uložit" },
-  "emptySessionState": { "message": "Uložte první relaci pro obnovení karet kdykoli" },
-  "open": { "message": "Otevřít" },
-  "openSessionTitle": { "message": "Otevřít karty z této relace" },
-  "deleteSessionTitle": { "message": "Smazat relaci" },
-  "sessionSaved": { "message": "Relace uložena!" },
-  "failedToSave": { "message": "Uložení selhalo" },
+  "statSleeping": {
+    "message": "spí"
+  },
+  "statProtected": {
+    "message": "chráněno"
+  },
+  "statSaved": {
+    "message": "ušetřeno"
+  },
+  "suspendOthers": {
+    "message": "Uspat ostatní"
+  },
+  "wakeAll": {
+    "message": "Probudit vše"
+  },
+  "neverSuspendSite": {
+    "message": "Nikdy neuspávat tento web"
+  },
+  "siteWhitelisted": {
+    "message": "Web je na seznamu povolených (klikněte pro odebrání)"
+  },
+  "activeWontSuspend": {
+    "message": "Aktivní – nebude uspána"
+  },
+  "loading": {
+    "message": "Načítání..."
+  },
+  "tabsInWindow": {
+    "message": "Karty v tomto okně"
+  },
+  "loadingTabs": {
+    "message": "Načítání karet..."
+  },
+  "noTabsFound": {
+    "message": "Žádné karty nenalezeny"
+  },
+  "failedToLoad": {
+    "message": "Načítání selhalo. Znovu otevřete vyskakovací okno a zkuste to znovu."
+  },
+  "badgeActive": {
+    "message": "Aktivní"
+  },
+  "badgeSystem": {
+    "message": "Systém"
+  },
+  "badgePinned": {
+    "message": "Připnutá"
+  },
+  "badgeAudio": {
+    "message": "Zvuk"
+  },
+  "badgeStarred": {
+    "message": "Oblíbená"
+  },
+  "badgeProtected": {
+    "message": "Chráněná"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Relace"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Název relace (volitelné)"
+  },
+  "save": {
+    "message": "Uložit"
+  },
+  "emptySessionState": {
+    "message": "Uložte první relaci pro obnovení karet kdykoli"
+  },
+  "open": {
+    "message": "Otevřít"
+  },
+  "openSessionTitle": {
+    "message": "Otevřít karty z této relace"
+  },
+  "deleteSessionTitle": {
+    "message": "Smazat relaci"
+  },
+  "sessionSaved": {
+    "message": "Relace uložena!"
+  },
+  "failedToSave": {
+    "message": "Uložení selhalo"
+  },
   "restoredTabs": {
     "message": "Obnoveno $COUNT$ karet",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Obnovení selhalo" },
-  "noSessionsToExport": { "message": "Žádné relace k exportu" },
+  "failedToRestore": {
+    "message": "Obnovení selhalo"
+  },
+  "noSessionsToExport": {
+    "message": "Žádné relace k exportu"
+  },
   "copiedSessionsJson": {
     "message": "Zkopírováno $COUNT$ relací jako JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ karet",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statistiky" },
-  "statToday": { "message": "Dnes" },
-  "statAllTime": { "message": "Celkem" },
-  "statRamSaved": { "message": "Ušetřená RAM (odhad)" },
-  "statMemberSince": { "message": "Členem od" },
-
-  "settings": { "message": "Nastavení" },
-  "autoSuspendAfter": { "message": "Automaticky uspat po" },
-  "timer5min": { "message": "5 minutách" },
-  "timer10min": { "message": "10 minutách" },
-  "timer15min": { "message": "15 minutách" },
-  "timer30min": { "message": "30 minutách" },
-  "timer1hour": { "message": "1 hodině" },
-  "timer2hours": { "message": "2 hodinách" },
-  "timer4hours": { "message": "4 hodinách" },
-  "timerNever": { "message": "Nikdy" },
-  "protectPinned": { "message": "Chránit připnuté karty" },
-  "protectAudio": { "message": "Chránit karty se zvukem" },
-  "protectForms": { "message": "Chránit karty s formuláři" },
-  "suspendOnStartup": { "message": "Uspat karty při spuštění" },
-  "enableAutoSuspend": { "message": "Povolit automatické uspávání" },
-  "markSuspended": { "message": "Označit uspané karty" },
-  "whitelistedSites": { "message": "Povolené weby" },
-  "add": { "message": "Přidat" },
-  "noSitesWhitelisted": { "message": "Žádné povolené weby" },
-
-  "suspending": { "message": "Uspávání..." },
-  "done": { "message": "Hotovo!" },
-  "waking": { "message": "Probouzení..." },
+  "stats": {
+    "message": "Statistiky"
+  },
+  "statToday": {
+    "message": "Dnes"
+  },
+  "statAllTime": {
+    "message": "Celkem"
+  },
+  "statRamSaved": {
+    "message": "Ušetřená RAM (odhad)"
+  },
+  "statMemberSince": {
+    "message": "Členem od"
+  },
+  "settings": {
+    "message": "Nastavení"
+  },
+  "autoSuspendAfter": {
+    "message": "Automaticky uspat po"
+  },
+  "timer5min": {
+    "message": "5 minutách"
+  },
+  "timer10min": {
+    "message": "10 minutách"
+  },
+  "timer15min": {
+    "message": "15 minutách"
+  },
+  "timer30min": {
+    "message": "30 minutách"
+  },
+  "timer1hour": {
+    "message": "1 hodině"
+  },
+  "timer2hours": {
+    "message": "2 hodinách"
+  },
+  "timer4hours": {
+    "message": "4 hodinách"
+  },
+  "timerNever": {
+    "message": "Nikdy"
+  },
+  "protectPinned": {
+    "message": "Chránit připnuté karty"
+  },
+  "protectAudio": {
+    "message": "Chránit karty se zvukem"
+  },
+  "protectForms": {
+    "message": "Chránit karty s formuláři"
+  },
+  "suspendOnStartup": {
+    "message": "Uspat karty při spuštění"
+  },
+  "enableAutoSuspend": {
+    "message": "Povolit automatické uspávání"
+  },
+  "markSuspended": {
+    "message": "Označit uspané karty"
+  },
+  "whitelistedSites": {
+    "message": "Povolené weby"
+  },
+  "add": {
+    "message": "Přidat"
+  },
+  "noSitesWhitelisted": {
+    "message": "Žádné povolené weby"
+  },
+  "suspending": {
+    "message": "Uspávání..."
+  },
+  "done": {
+    "message": "Hotovo!"
+  },
+  "waking": {
+    "message": "Probouzení..."
+  },
   "copiedTabs": {
     "message": "Zkopírováno $COUNT$ karet do schránky",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Kopírování selhalo" },
-  "copyTabsTitle": { "message": "Zkopírovat seznam karet do schránky" },
-  "copySessionsTitle": { "message": "Zkopírovat všechny relace jako JSON" },
-  "remove": { "message": "Odebrat" },
-
-  "switchToLight": { "message": "Přepnout na světlý režim" },
-  "switchToDark": { "message": "Přepnout na tmavý režim" },
-
-  "ctxSuspendThis": { "message": "Uspat tuto kartu" },
-  "ctxSuspendOthers": { "message": "Uspat všechny ostatní karty" },
-  "ctxNeverSuspend": { "message": "Nikdy neuspávat tento web" },
-
-  "maxSessionsReached": { "message": "Dosaženo maxima 20 relací. Smažte jednu, abyste mohli uložit novou." },
-  "noSaveableTabs": { "message": "V tomto okně nejsou žádné karty k uložení." },
-  "sessionNotFound": { "message": "Relace nenalezena." },
-  "noRestorableTabs": { "message": "V této relaci nejsou žádné karty k obnovení." },
+  "failedToCopy": {
+    "message": "Kopírování selhalo"
+  },
+  "copyTabsTitle": {
+    "message": "Zkopírovat seznam karet do schránky"
+  },
+  "copySessionsTitle": {
+    "message": "Zkopírovat všechny relace jako JSON"
+  },
+  "remove": {
+    "message": "Odebrat"
+  },
+  "switchToLight": {
+    "message": "Přepnout na světlý režim"
+  },
+  "switchToDark": {
+    "message": "Přepnout na tmavý režim"
+  },
+  "ctxSuspendThis": {
+    "message": "Uspat tuto kartu"
+  },
+  "ctxSuspendOthers": {
+    "message": "Uspat všechny ostatní karty"
+  },
+  "ctxNeverSuspend": {
+    "message": "Nikdy neuspávat tento web"
+  },
+  "maxSessionsReached": {
+    "message": "Dosaženo maxima 20 relací. Smažte jednu, abyste mohli uložit novou."
+  },
+  "noSaveableTabs": {
+    "message": "V tomto okně nejsou žádné karty k uložení."
+  },
+  "sessionNotFound": {
+    "message": "Relace nenalezena."
+  },
+  "noRestorableTabs": {
+    "message": "V této relaci nejsou žádné karty k obnovení."
+  },
   "sessionDefaultName": {
     "message": "Relace – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "právě teď" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "právě teď"
+  },
   "minutesAgo": {
     "message": "před $COUNT$ min",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "před $COUNT$ hod",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Včera" },
+  "yesterday": {
+    "message": "Včera"
+  },
   "daysAgo": {
     "message": "před $COUNT$ dny",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Vítejte v Drowzy" },
-  "onboardingIntro": { "message": "Drowzy šetří paměť uspáváním neaktivních karet. Vaše karty jsou vždy v bezpečí – používáme nativní API pro zahození karet v Chrome, takže přežijí i odinstalaci Drowzy." },
-  "howItWorks": { "message": "Jak to funguje" },
-  "featureAutoSuspend": { "message": "<strong>Karty neaktivní 30 minut</strong> jsou automaticky uspány" },
-  "featureZeroRam": { "message": "<strong>Uspané karty nepoužívají RAM</strong>, ale zůstávají na liště karet" },
-  "featureClickToWake": { "message": "<strong>Klikněte na jakoukoli uspanou kartu</strong> pro okamžité probuzení" },
-  "featureProtected": { "message": "<strong>Aktivní, připnuté a zvukové karty</strong> se nikdy neuspávají" },
-  "quickActions": { "message": "Rychlé akce" },
-  "actionClickIcon": { "message": "Klikněte na <strong>ikonu Drowzy</strong> na panelu nástrojů pro zobrazení všech karet" },
-  "actionAltS": { "message": "Stiskněte <kbd>Alt+S</kbd> pro uspání aktuální karty" },
-  "actionAltShiftS": { "message": "Stiskněte <kbd>Alt+Shift+S</kbd> pro uspání všech ostatních karet" },
-  "actionAltW": { "message": "Stiskněte <kbd>Alt+W</kbd> pro probuzení všech uspaných karet" },
-  "actionRightClick": { "message": "Klikněte pravým tlačítkem na jakékoli stránce pro rychlé možnosti uspání" },
-  "onboardingCta": { "message": "Drowzy už běží. Otevřete pár karet a vyzkoušejte to!" },
-  "onboardingBtn": { "message": "Rozumím, pojďme na to" },
-
-  "privacyTitle": { "message": "Drowzy – Zásady ochrany soukromí" },
-  "privacyUpdated": { "message": "Poslední aktualizace: únor 2026" },
-  "privacyShortTitle": { "message": "Krátká verze" },
-  "privacyShortText": { "message": "Drowzy neshromažďuje žádná data. Žádné analytiky, žádné sledování, žádné externí servery. Vše zůstává ve vašem prohlížeči." },
-  "privacyStoredTitle": { "message": "Co se ukládá" },
-  "privacyStoredText": { "message": "Vaše nastavení (časovač uspání, seznam povolených, předvolby) se ukládají pomocí vestavěných úložných API Chrome: chrome.storage.sync pro nastavení, která sledují váš profil Chrome, chrome.storage.local pro statistiky a uložené relace a chrome.storage.session pro dočasná data jako časové značky karet. Nic z toho se neodesílá na žádný server třetí strany." },
-  "privacyPermissionsTitle": { "message": "Oprávnění" },
-  "privacyPermissionsIntro": { "message": "Drowzy používá tato oprávnění Chrome:" },
-  "privacyPermTabs": { "message": "tabs – zobrazení, uspání a obnovení karet prohlížeče" },
-  "privacyPermStorage": { "message": "storage – lokální ukládání vašich nastavení" },
-  "privacyPermAlarms": { "message": "alarms – pravidelné kontroly neaktivních karet" },
-  "privacyPermContextMenus": { "message": "contextMenus – možnosti kontextové nabídky" },
-  "privacyContactTitle": { "message": "Kontakt" },
-  "privacyContactText": { "message": "Otázky? Napište nám na drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Vítejte v Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy šetří paměť uspáváním neaktivních karet. Vaše karty jsou vždy v bezpečí – používáme nativní API pro zahození karet v Chrome, takže přežijí i odinstalaci Drowzy."
+  },
+  "howItWorks": {
+    "message": "Jak to funguje"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Karty neaktivní 30 minut</strong> jsou automaticky uspány"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Uspané karty nepoužívají RAM</strong>, ale zůstávají na liště karet"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Klikněte na jakoukoli uspanou kartu</strong> pro okamžité probuzení"
+  },
+  "featureProtected": {
+    "message": "<strong>Aktivní, připnuté a zvukové karty</strong> se nikdy neuspávají"
+  },
+  "quickActions": {
+    "message": "Rychlé akce"
+  },
+  "actionClickIcon": {
+    "message": "Klikněte na <strong>ikonu Drowzy</strong> na panelu nástrojů pro zobrazení všech karet"
+  },
+  "actionAltS": {
+    "message": "Stiskněte <kbd>Alt+S</kbd> pro uspání aktuální karty"
+  },
+  "actionAltShiftS": {
+    "message": "Stiskněte <kbd>Alt+Shift+S</kbd> pro uspání všech ostatních karet"
+  },
+  "actionAltW": {
+    "message": "Stiskněte <kbd>Alt+W</kbd> pro probuzení všech uspaných karet"
+  },
+  "actionRightClick": {
+    "message": "Klikněte pravým tlačítkem na jakékoli stránce pro rychlé možnosti uspání"
+  },
+  "onboardingCta": {
+    "message": "Drowzy už běží. Otevřete pár karet a vyzkoušejte to!"
+  },
+  "onboardingBtn": {
+    "message": "Rozumím, pojďme na to"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Zásady ochrany soukromí"
+  },
+  "privacyUpdated": {
+    "message": "Poslední aktualizace: únor 2026"
+  },
+  "privacyShortTitle": {
+    "message": "Krátká verze"
+  },
+  "privacyShortText": {
+    "message": "Drowzy neshromažďuje žádná data. Žádné analytiky, žádné sledování, žádné externí servery. Vše zůstává ve vašem prohlížeči."
+  },
+  "privacyStoredTitle": {
+    "message": "Co se ukládá"
+  },
+  "privacyStoredText": {
+    "message": "Vaše nastavení (časovač uspání, seznam povolených, předvolby) se ukládají pomocí vestavěných úložných API Chrome: chrome.storage.sync pro nastavení, která sledují váš profil Chrome, chrome.storage.local pro statistiky a uložené relace a chrome.storage.session pro dočasná data jako časové značky karet. Nic z toho se neodesílá na žádný server třetí strany."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Oprávnění"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy používá tato oprávnění Chrome:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – zobrazení, uspání a obnovení karet prohlížeče"
+  },
+  "privacyPermStorage": {
+    "message": "storage – lokální ukládání vašich nastavení"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – pravidelné kontroly neaktivních karet"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – možnosti kontextové nabídky"
+  },
+  "privacyContactTitle": {
+    "message": "Kontakt"
+  },
+  "privacyContactText": {
+    "message": "Otázky? Napište nám na drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Nahradit"
+  },
+  "replaceSessionTitle": {
+    "message": "Nahradit aktuální karty touto relací"
+  },
+  "invalidDomain": {
+    "message": "Zadejte platnou doménu (např. example.com)"
+  },
+  "extensionPage": {
+    "message": "Stránka rozšíření"
+  },
+  "exportWhitelist": {
+    "message": "Exportovat"
+  },
+  "importWhitelist": {
+    "message": "Importovat"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopírovat seznam povolených"
+  },
+  "importWhitelistTitle": {
+    "message": "Importovat seznam povolených ze schránky"
+  },
+  "copiedSites": {
+    "message": "Zkopírováno $COUNT$ stránek",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Importováno $COUNT$ nových stránek",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Ve schránce nebyly nalezeny žádné platné domény"
+  },
+  "clipboardReadFailed": {
+    "message": "Nelze přečíst schránku"
+  },
+  "enjoyingDrowzy": {
+    "message": "Líbí se vám Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ano!"
+  },
+  "reviewNo": {
+    "message": "Ne moc"
+  },
+  "whatsNew": {
+    "message": "Co je nového ve v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Co je nového v Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Co je nového"
+  },
+  "changelogVersion": {
+    "message": "Verze 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Nové funkce"
+  },
+  "changelogBugFixes": {
+    "message": "Opravy chyb"
+  },
+  "changelogImprovements": {
+    "message": "Vylepšení"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Žádost o recenzi"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Po uspání několika karet se Drowzy zeptá, jestli se vám líbí. Rychlý palec nahoru nám hodně pomůže!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Stránka změn"
+  },
+  "changelogChangelogDesc": {
+    "message": "Právě se na ni díváte! Otevře se automaticky při aktualizaci. Přístupná z Nastavení."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Časování obnovy relací"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Obnovené karty se již neuspávají okamžitě. Nyní správně resetují své časovače nečinnosti."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Časový limit kontroly formulářů"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Kontrola formulářů má nyní 500ms časový limit, aby nereagující karty nemohly blokovat frontu."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Duplicity v seznamu povolených"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Opraven problém s rozlišováním velkých a malých písmen, kdy bylo možné přidat \"Example.com\" i \"example.com\". Všechny záznamy jsou nyní normalizovány."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Živé statistiky"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Popup se nyní automaticky aktualizuje, když jsou karty uspány nebo probuzeny."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Možnosti obnovy relací"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Relace nyní mají oddělená tlačítka \"Otevřít\" a \"Nahradit\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Validace a export/import seznamu povolených"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Vstup seznamu povolených nyní ověřuje domény. Můžete exportovat a importovat přes schránku."
+  },
+  "changelogA11yTitle": {
+    "message": "Přístupnost"
+  },
+  "changelogA11yDesc": {
+    "message": "Položky seznamu karet jsou nyní navigovatelné klávesnicí s rolemi ARIA. Oznámení jsou ohlašována čtečkám obrazovky."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Plynulejší animace"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Postupné animace seznamu karet jsou nyní omezeny, aby okna s mnoha kartami neměla dlouhé zpoždění."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy je zdarma a open source. Pokud vám šetří paměť, zanechte recenzi nebo hvězdičku na GitHubu."
+  },
+  "changelogReviewBtn": {
+    "message": "Zanechat recenzi"
+  },
+  "changelogStarBtn": {
+    "message": "Hvězdička na GitHubu"
+  }
 }

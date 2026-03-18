@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Riattiva tutte le schede sospese"
   },
-
-  "statSleeping": { "message": "in sospensione" },
-  "statProtected": { "message": "protetta" },
-  "statSaved": { "message": "risparmiata" },
-
-  "suspendOthers": { "message": "Sospendi altre" },
-  "wakeAll": { "message": "Riattiva tutte" },
-
-  "neverSuspendSite": { "message": "Non sospendere mai questo sito" },
-  "siteWhitelisted": { "message": "Sito nella lista bianca (clicca per rimuovere)" },
-  "activeWontSuspend": { "message": "Attiva – non verrà sospesa" },
-  "loading": { "message": "Caricamento..." },
-
-  "tabsInWindow": { "message": "Schede in questa finestra" },
-  "loadingTabs": { "message": "Caricamento schede..." },
-  "noTabsFound": { "message": "Nessuna scheda trovata" },
-  "failedToLoad": { "message": "Caricamento fallito. Riapri il popup per riprovare." },
-
-  "badgeActive": { "message": "Attiva" },
-  "badgeSystem": { "message": "Sistema" },
-  "badgePinned": { "message": "Fissata" },
-  "badgeAudio": { "message": "Audio" },
-  "badgeStarred": { "message": "Preferita" },
-  "badgeProtected": { "message": "Protetta" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Sessioni" },
-  "sessionNamePlaceholder": { "message": "Nome sessione (facoltativo)" },
-  "save": { "message": "Salva" },
-  "emptySessionState": { "message": "Salva la tua prima sessione per ripristinare le schede in qualsiasi momento" },
-  "open": { "message": "Apri" },
-  "openSessionTitle": { "message": "Apri le schede da questa sessione" },
-  "deleteSessionTitle": { "message": "Elimina sessione" },
-  "sessionSaved": { "message": "Sessione salvata!" },
-  "failedToSave": { "message": "Salvataggio fallito" },
+  "statSleeping": {
+    "message": "in sospensione"
+  },
+  "statProtected": {
+    "message": "protetta"
+  },
+  "statSaved": {
+    "message": "risparmiata"
+  },
+  "suspendOthers": {
+    "message": "Sospendi altre"
+  },
+  "wakeAll": {
+    "message": "Riattiva tutte"
+  },
+  "neverSuspendSite": {
+    "message": "Non sospendere mai questo sito"
+  },
+  "siteWhitelisted": {
+    "message": "Sito nella lista bianca (clicca per rimuovere)"
+  },
+  "activeWontSuspend": {
+    "message": "Attiva – non verrà sospesa"
+  },
+  "loading": {
+    "message": "Caricamento..."
+  },
+  "tabsInWindow": {
+    "message": "Schede in questa finestra"
+  },
+  "loadingTabs": {
+    "message": "Caricamento schede..."
+  },
+  "noTabsFound": {
+    "message": "Nessuna scheda trovata"
+  },
+  "failedToLoad": {
+    "message": "Caricamento fallito. Riapri il popup per riprovare."
+  },
+  "badgeActive": {
+    "message": "Attiva"
+  },
+  "badgeSystem": {
+    "message": "Sistema"
+  },
+  "badgePinned": {
+    "message": "Fissata"
+  },
+  "badgeAudio": {
+    "message": "Audio"
+  },
+  "badgeStarred": {
+    "message": "Preferita"
+  },
+  "badgeProtected": {
+    "message": "Protetta"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Sessioni"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Nome sessione (facoltativo)"
+  },
+  "save": {
+    "message": "Salva"
+  },
+  "emptySessionState": {
+    "message": "Salva la tua prima sessione per ripristinare le schede in qualsiasi momento"
+  },
+  "open": {
+    "message": "Apri"
+  },
+  "openSessionTitle": {
+    "message": "Apri le schede da questa sessione"
+  },
+  "deleteSessionTitle": {
+    "message": "Elimina sessione"
+  },
+  "sessionSaved": {
+    "message": "Sessione salvata!"
+  },
+  "failedToSave": {
+    "message": "Salvataggio fallito"
+  },
   "restoredTabs": {
     "message": "$COUNT$ schede ripristinate",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Ripristino fallito" },
-  "noSessionsToExport": { "message": "Nessuna sessione da esportare" },
+  "failedToRestore": {
+    "message": "Ripristino fallito"
+  },
+  "noSessionsToExport": {
+    "message": "Nessuna sessione da esportare"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ sessioni copiate come JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ schede",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statistiche" },
-  "statToday": { "message": "Oggi" },
-  "statAllTime": { "message": "Totale" },
-  "statRamSaved": { "message": "RAM risparmiata (stima)" },
-  "statMemberSince": { "message": "Membro dal" },
-
-  "settings": { "message": "Impostazioni" },
-  "autoSuspendAfter": { "message": "Sospensione automatica dopo" },
-  "timer5min": { "message": "5 minuti" },
-  "timer10min": { "message": "10 minuti" },
-  "timer15min": { "message": "15 minuti" },
-  "timer30min": { "message": "30 minuti" },
-  "timer1hour": { "message": "1 ora" },
-  "timer2hours": { "message": "2 ore" },
-  "timer4hours": { "message": "4 ore" },
-  "timerNever": { "message": "Mai" },
-  "protectPinned": { "message": "Proteggi le schede fissate" },
-  "protectAudio": { "message": "Proteggi le schede con audio" },
-  "protectForms": { "message": "Proteggi le schede con moduli" },
-  "suspendOnStartup": { "message": "Sospendi le schede all'avvio" },
-  "enableAutoSuspend": { "message": "Attiva sospensione automatica" },
-  "markSuspended": { "message": "Contrassegna schede sospese" },
-  "whitelistedSites": { "message": "Siti nella lista bianca" },
-  "add": { "message": "Aggiungi" },
-  "noSitesWhitelisted": { "message": "Nessun sito nella lista bianca" },
-
-  "suspending": { "message": "Sospensione..." },
-  "done": { "message": "Fatto!" },
-  "waking": { "message": "Riattivazione..." },
+  "stats": {
+    "message": "Statistiche"
+  },
+  "statToday": {
+    "message": "Oggi"
+  },
+  "statAllTime": {
+    "message": "Totale"
+  },
+  "statRamSaved": {
+    "message": "RAM risparmiata (stima)"
+  },
+  "statMemberSince": {
+    "message": "Membro dal"
+  },
+  "settings": {
+    "message": "Impostazioni"
+  },
+  "autoSuspendAfter": {
+    "message": "Sospensione automatica dopo"
+  },
+  "timer5min": {
+    "message": "5 minuti"
+  },
+  "timer10min": {
+    "message": "10 minuti"
+  },
+  "timer15min": {
+    "message": "15 minuti"
+  },
+  "timer30min": {
+    "message": "30 minuti"
+  },
+  "timer1hour": {
+    "message": "1 ora"
+  },
+  "timer2hours": {
+    "message": "2 ore"
+  },
+  "timer4hours": {
+    "message": "4 ore"
+  },
+  "timerNever": {
+    "message": "Mai"
+  },
+  "protectPinned": {
+    "message": "Proteggi le schede fissate"
+  },
+  "protectAudio": {
+    "message": "Proteggi le schede con audio"
+  },
+  "protectForms": {
+    "message": "Proteggi le schede con moduli"
+  },
+  "suspendOnStartup": {
+    "message": "Sospendi le schede all'avvio"
+  },
+  "enableAutoSuspend": {
+    "message": "Attiva sospensione automatica"
+  },
+  "markSuspended": {
+    "message": "Contrassegna schede sospese"
+  },
+  "whitelistedSites": {
+    "message": "Siti nella lista bianca"
+  },
+  "add": {
+    "message": "Aggiungi"
+  },
+  "noSitesWhitelisted": {
+    "message": "Nessun sito nella lista bianca"
+  },
+  "suspending": {
+    "message": "Sospensione..."
+  },
+  "done": {
+    "message": "Fatto!"
+  },
+  "waking": {
+    "message": "Riattivazione..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ schede copiate negli appunti",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Copia fallita" },
-  "copyTabsTitle": { "message": "Copia elenco schede negli appunti" },
-  "copySessionsTitle": { "message": "Copia tutte le sessioni come JSON" },
-  "remove": { "message": "Rimuovi" },
-
-  "switchToLight": { "message": "Passa alla modalità chiara" },
-  "switchToDark": { "message": "Passa alla modalità scura" },
-
-  "ctxSuspendThis": { "message": "Sospendi questa scheda" },
-  "ctxSuspendOthers": { "message": "Sospendi tutte le altre schede" },
-  "ctxNeverSuspend": { "message": "Non sospendere mai questo sito" },
-
-  "maxSessionsReached": { "message": "Raggiunte le 20 sessioni massime. Eliminane una per salvarne una nuova." },
-  "noSaveableTabs": { "message": "Nessuna scheda salvabile in questa finestra." },
-  "sessionNotFound": { "message": "Sessione non trovata." },
-  "noRestorableTabs": { "message": "Nessuna scheda ripristinabile in questa sessione." },
+  "failedToCopy": {
+    "message": "Copia fallita"
+  },
+  "copyTabsTitle": {
+    "message": "Copia elenco schede negli appunti"
+  },
+  "copySessionsTitle": {
+    "message": "Copia tutte le sessioni come JSON"
+  },
+  "remove": {
+    "message": "Rimuovi"
+  },
+  "switchToLight": {
+    "message": "Passa alla modalità chiara"
+  },
+  "switchToDark": {
+    "message": "Passa alla modalità scura"
+  },
+  "ctxSuspendThis": {
+    "message": "Sospendi questa scheda"
+  },
+  "ctxSuspendOthers": {
+    "message": "Sospendi tutte le altre schede"
+  },
+  "ctxNeverSuspend": {
+    "message": "Non sospendere mai questo sito"
+  },
+  "maxSessionsReached": {
+    "message": "Raggiunte le 20 sessioni massime. Eliminane una per salvarne una nuova."
+  },
+  "noSaveableTabs": {
+    "message": "Nessuna scheda salvabile in questa finestra."
+  },
+  "sessionNotFound": {
+    "message": "Sessione non trovata."
+  },
+  "noRestorableTabs": {
+    "message": "Nessuna scheda ripristinabile in questa sessione."
+  },
   "sessionDefaultName": {
     "message": "Sessione – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "adesso" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "adesso"
+  },
   "minutesAgo": {
     "message": "$COUNT$ min fa",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ ore fa",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Ieri" },
+  "yesterday": {
+    "message": "Ieri"
+  },
   "daysAgo": {
     "message": "$COUNT$ giorni fa",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Benvenuto in Drowzy" },
-  "onboardingIntro": { "message": "Drowzy risparmia memoria mettendo a riposo le schede inattive. Le tue schede sono sempre al sicuro – utilizziamo l'API discard nativa di Chrome, quindi sopravvivono anche se disinstalli Drowzy." },
-  "howItWorks": { "message": "Come funziona" },
-  "featureAutoSuspend": { "message": "<strong>Le schede inattive da 30 minuti</strong> vengono sospese automaticamente" },
-  "featureZeroRam": { "message": "<strong>Le schede sospese usano zero RAM</strong> ma restano nella barra delle schede" },
-  "featureClickToWake": { "message": "<strong>Clicca su qualsiasi scheda sospesa</strong> per riattivarla istantaneamente" },
-  "featureProtected": { "message": "<strong>Le schede attive, fissate e con audio</strong> non vengono mai toccate" },
-  "quickActions": { "message": "Azioni rapide" },
-  "actionClickIcon": { "message": "Clicca l'<strong>icona Drowzy</strong> nella barra degli strumenti per vedere tutte le tue schede" },
-  "actionAltS": { "message": "Premi <kbd>Alt+S</kbd> per sospendere la scheda corrente" },
-  "actionAltShiftS": { "message": "Premi <kbd>Alt+Shift+S</kbd> per sospendere tutte le altre schede" },
-  "actionAltW": { "message": "Premi <kbd>Alt+W</kbd> per riattivare tutte le schede sospese" },
-  "actionRightClick": { "message": "Fai clic destro su qualsiasi pagina per le opzioni rapide di sospensione" },
-  "onboardingCta": { "message": "Drowzy è già in esecuzione. Apri alcune schede e provalo!" },
-  "onboardingBtn": { "message": "Capito, andiamo" },
-
-  "privacyTitle": { "message": "Drowzy – Informativa sulla privacy" },
-  "privacyUpdated": { "message": "Ultimo aggiornamento: febbraio 2026" },
-  "privacyShortTitle": { "message": "Versione breve" },
-  "privacyShortText": { "message": "Drowzy non raccoglie alcun dato. Nessuna analisi, nessun tracciamento, nessun server esterno. Tutto resta nel tuo browser." },
-  "privacyStoredTitle": { "message": "Cosa viene memorizzato" },
-  "privacyStoredText": { "message": "Le tue impostazioni (timer di sospensione, lista bianca, preferenze) vengono salvate utilizzando le API di archiviazione integrate di Chrome: chrome.storage.sync per le impostazioni che seguono il tuo profilo Chrome, chrome.storage.local per statistiche e sessioni salvate, e chrome.storage.session per dati temporanei come i timestamp delle schede. Nulla viene inviato a server di terze parti." },
-  "privacyPermissionsTitle": { "message": "Autorizzazioni" },
-  "privacyPermissionsIntro": { "message": "Drowzy utilizza queste autorizzazioni di Chrome:" },
-  "privacyPermTabs": { "message": "tabs – elenco, sospensione e ripristino delle schede del browser" },
-  "privacyPermStorage": { "message": "storage – salvataggio locale delle impostazioni" },
-  "privacyPermAlarms": { "message": "alarms – controlli periodici delle schede inattive" },
-  "privacyPermContextMenus": { "message": "contextMenus – opzioni del menu contestuale" },
-  "privacyContactTitle": { "message": "Contatti" },
-  "privacyContactText": { "message": "Domande? Scrivici a drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Benvenuto in Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy risparmia memoria mettendo a riposo le schede inattive. Le tue schede sono sempre al sicuro – utilizziamo l'API discard nativa di Chrome, quindi sopravvivono anche se disinstalli Drowzy."
+  },
+  "howItWorks": {
+    "message": "Come funziona"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Le schede inattive da 30 minuti</strong> vengono sospese automaticamente"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Le schede sospese usano zero RAM</strong> ma restano nella barra delle schede"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Clicca su qualsiasi scheda sospesa</strong> per riattivarla istantaneamente"
+  },
+  "featureProtected": {
+    "message": "<strong>Le schede attive, fissate e con audio</strong> non vengono mai toccate"
+  },
+  "quickActions": {
+    "message": "Azioni rapide"
+  },
+  "actionClickIcon": {
+    "message": "Clicca l'<strong>icona Drowzy</strong> nella barra degli strumenti per vedere tutte le tue schede"
+  },
+  "actionAltS": {
+    "message": "Premi <kbd>Alt+S</kbd> per sospendere la scheda corrente"
+  },
+  "actionAltShiftS": {
+    "message": "Premi <kbd>Alt+Shift+S</kbd> per sospendere tutte le altre schede"
+  },
+  "actionAltW": {
+    "message": "Premi <kbd>Alt+W</kbd> per riattivare tutte le schede sospese"
+  },
+  "actionRightClick": {
+    "message": "Fai clic destro su qualsiasi pagina per le opzioni rapide di sospensione"
+  },
+  "onboardingCta": {
+    "message": "Drowzy è già in esecuzione. Apri alcune schede e provalo!"
+  },
+  "onboardingBtn": {
+    "message": "Capito, andiamo"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Informativa sulla privacy"
+  },
+  "privacyUpdated": {
+    "message": "Ultimo aggiornamento: febbraio 2026"
+  },
+  "privacyShortTitle": {
+    "message": "Versione breve"
+  },
+  "privacyShortText": {
+    "message": "Drowzy non raccoglie alcun dato. Nessuna analisi, nessun tracciamento, nessun server esterno. Tutto resta nel tuo browser."
+  },
+  "privacyStoredTitle": {
+    "message": "Cosa viene memorizzato"
+  },
+  "privacyStoredText": {
+    "message": "Le tue impostazioni (timer di sospensione, lista bianca, preferenze) vengono salvate utilizzando le API di archiviazione integrate di Chrome: chrome.storage.sync per le impostazioni che seguono il tuo profilo Chrome, chrome.storage.local per statistiche e sessioni salvate, e chrome.storage.session per dati temporanei come i timestamp delle schede. Nulla viene inviato a server di terze parti."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Autorizzazioni"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy utilizza queste autorizzazioni di Chrome:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – elenco, sospensione e ripristino delle schede del browser"
+  },
+  "privacyPermStorage": {
+    "message": "storage – salvataggio locale delle impostazioni"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – controlli periodici delle schede inattive"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – opzioni del menu contestuale"
+  },
+  "privacyContactTitle": {
+    "message": "Contatti"
+  },
+  "privacyContactText": {
+    "message": "Domande? Scrivici a drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Sostituisci"
+  },
+  "replaceSessionTitle": {
+    "message": "Sostituisci schede attuali con questa sessione"
+  },
+  "invalidDomain": {
+    "message": "Inserisci un dominio valido (es. example.com)"
+  },
+  "extensionPage": {
+    "message": "Pagina dell'estensione"
+  },
+  "exportWhitelist": {
+    "message": "Esporta"
+  },
+  "importWhitelist": {
+    "message": "Importa"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copia lista bianca"
+  },
+  "importWhitelistTitle": {
+    "message": "Importa lista bianca dagli appunti"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ sito/i copiato/i",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ nuovo/i sito/i importato/i",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Nessun dominio valido negli appunti"
+  },
+  "clipboardReadFailed": {
+    "message": "Impossibile leggere gli appunti"
+  },
+  "enjoyingDrowzy": {
+    "message": "Ti piace Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Sì!"
+  },
+  "reviewNo": {
+    "message": "Non molto"
+  },
+  "whatsNew": {
+    "message": "Novità nella v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Novità di Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Novità"
+  },
+  "changelogVersion": {
+    "message": "Versione 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Nuove funzionalità"
+  },
+  "changelogBugFixes": {
+    "message": "Correzioni"
+  },
+  "changelogImprovements": {
+    "message": "Miglioramenti"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Richiesta di recensione"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Dopo aver sospeso alcune schede, Drowzy ti chiederà se ti piace. Un pollice in su ci aiuta molto!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Pagina delle modifiche"
+  },
+  "changelogChangelogDesc": {
+    "message": "La stai guardando! Si apre automaticamente con gli aggiornamenti. Accessibile dalle Impostazioni."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Ripristino sessione"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Le schede ripristinate non vengono più sospese subito. I timer di inattività vengono resettati correttamente."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Timeout verifica moduli"
+  },
+  "changelogFormCheckDesc": {
+    "message": "La verifica dei moduli ha un timeout di 500ms così le schede non responsive non bloccano la coda."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Duplicati nella lista bianca"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Corretto il problema di sensibilità alle maiuscole. Tutte le voci sono normalizzate."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Statistiche in tempo reale"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Il popup si aggiorna automaticamente quando le schede vengono sospese o riattivate in background."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Opzioni di ripristino sessione"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Le sessioni hanno pulsanti separati \"Apri\" e \"Sostituisci\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Validazione e esportazione/importazione"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "L'input valida i domini. Puoi esportare e importare la lista bianca tramite appunti."
+  },
+  "changelogA11yTitle": {
+    "message": "Accessibilità"
+  },
+  "changelogA11yDesc": {
+    "message": "Elementi navigabili da tastiera con ruoli ARIA. Le notifiche sono annunciate agli screen reader."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Animazioni più fluide"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Le animazioni sfalsate sono limitate per evitare lunghi ritardi a cascata."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy è gratuito e open source. Se fa risparmiare memoria, lascia una recensione o una stella su GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Lascia una recensione"
+  },
+  "changelogStarBtn": {
+    "message": "Stella su GitHub"
+  }
 }

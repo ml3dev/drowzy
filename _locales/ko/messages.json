@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "일시중지된 모든 탭 깨우기"
   },
-
-  "statSleeping": { "message": "수면 중" },
-  "statProtected": { "message": "보호됨" },
-  "statSaved": { "message": "절약됨" },
-
-  "suspendOthers": { "message": "나머지 일시중지" },
-  "wakeAll": { "message": "모두 깨우기" },
-
-  "neverSuspendSite": { "message": "이 사이트를 일시중지하지 않음" },
-  "siteWhitelisted": { "message": "화이트리스트에 등록된 사이트 (클릭하여 제거)" },
-  "activeWontSuspend": { "message": "활성 – 일시중지되지 않음" },
-  "loading": { "message": "로딩 중..." },
-
-  "tabsInWindow": { "message": "이 창의 탭" },
-  "loadingTabs": { "message": "탭 로딩 중..." },
-  "noTabsFound": { "message": "탭을 찾을 수 없습니다" },
-  "failedToLoad": { "message": "로드 실패. 팝업을 다시 열어 재시도하세요." },
-
-  "badgeActive": { "message": "활성" },
-  "badgeSystem": { "message": "시스템" },
-  "badgePinned": { "message": "고정됨" },
-  "badgeAudio": { "message": "오디오" },
-  "badgeStarred": { "message": "별표" },
-  "badgeProtected": { "message": "보호됨" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "세션" },
-  "sessionNamePlaceholder": { "message": "세션 이름 (선택사항)" },
-  "save": { "message": "저장" },
-  "emptySessionState": { "message": "언제든 탭을 복원할 수 있도록 첫 번째 세션을 저장하세요" },
-  "open": { "message": "열기" },
-  "openSessionTitle": { "message": "이 세션의 탭 열기" },
-  "deleteSessionTitle": { "message": "세션 삭제" },
-  "sessionSaved": { "message": "세션이 저장되었습니다!" },
-  "failedToSave": { "message": "저장 실패" },
+  "statSleeping": {
+    "message": "수면 중"
+  },
+  "statProtected": {
+    "message": "보호됨"
+  },
+  "statSaved": {
+    "message": "절약됨"
+  },
+  "suspendOthers": {
+    "message": "나머지 일시중지"
+  },
+  "wakeAll": {
+    "message": "모두 깨우기"
+  },
+  "neverSuspendSite": {
+    "message": "이 사이트를 일시중지하지 않음"
+  },
+  "siteWhitelisted": {
+    "message": "화이트리스트에 등록된 사이트 (클릭하여 제거)"
+  },
+  "activeWontSuspend": {
+    "message": "활성 – 일시중지되지 않음"
+  },
+  "loading": {
+    "message": "로딩 중..."
+  },
+  "tabsInWindow": {
+    "message": "이 창의 탭"
+  },
+  "loadingTabs": {
+    "message": "탭 로딩 중..."
+  },
+  "noTabsFound": {
+    "message": "탭을 찾을 수 없습니다"
+  },
+  "failedToLoad": {
+    "message": "로드 실패. 팝업을 다시 열어 재시도하세요."
+  },
+  "badgeActive": {
+    "message": "활성"
+  },
+  "badgeSystem": {
+    "message": "시스템"
+  },
+  "badgePinned": {
+    "message": "고정됨"
+  },
+  "badgeAudio": {
+    "message": "오디오"
+  },
+  "badgeStarred": {
+    "message": "별표"
+  },
+  "badgeProtected": {
+    "message": "보호됨"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "세션"
+  },
+  "sessionNamePlaceholder": {
+    "message": "세션 이름 (선택사항)"
+  },
+  "save": {
+    "message": "저장"
+  },
+  "emptySessionState": {
+    "message": "언제든 탭을 복원할 수 있도록 첫 번째 세션을 저장하세요"
+  },
+  "open": {
+    "message": "열기"
+  },
+  "openSessionTitle": {
+    "message": "이 세션의 탭 열기"
+  },
+  "deleteSessionTitle": {
+    "message": "세션 삭제"
+  },
+  "sessionSaved": {
+    "message": "세션이 저장되었습니다!"
+  },
+  "failedToSave": {
+    "message": "저장 실패"
+  },
   "restoredTabs": {
     "message": "$COUNT$개 탭 복원됨",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "복원 실패" },
-  "noSessionsToExport": { "message": "내보낼 세션이 없습니다" },
+  "failedToRestore": {
+    "message": "복원 실패"
+  },
+  "noSessionsToExport": {
+    "message": "내보낼 세션이 없습니다"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$개 세션을 JSON으로 복사했습니다",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$개 탭",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "통계" },
-  "statToday": { "message": "오늘" },
-  "statAllTime": { "message": "전체" },
-  "statRamSaved": { "message": "절약된 RAM (추정)" },
-  "statMemberSince": { "message": "가입일" },
-
-  "settings": { "message": "설정" },
-  "autoSuspendAfter": { "message": "자동 일시중지 시간" },
-  "timer5min": { "message": "5분" },
-  "timer10min": { "message": "10분" },
-  "timer15min": { "message": "15분" },
-  "timer30min": { "message": "30분" },
-  "timer1hour": { "message": "1시간" },
-  "timer2hours": { "message": "2시간" },
-  "timer4hours": { "message": "4시간" },
-  "timerNever": { "message": "안 함" },
-  "protectPinned": { "message": "고정된 탭 보호" },
-  "protectAudio": { "message": "오디오 탭 보호" },
-  "protectForms": { "message": "양식이 있는 탭 보호" },
-  "suspendOnStartup": { "message": "시작 시 탭 일시중지" },
-  "enableAutoSuspend": { "message": "자동 일시중지 활성화" },
-  "markSuspended": { "message": "일시중지된 탭 표시" },
-  "whitelistedSites": { "message": "화이트리스트 사이트" },
-  "add": { "message": "추가" },
-  "noSitesWhitelisted": { "message": "화이트리스트에 등록된 사이트 없음" },
-
-  "suspending": { "message": "일시중지 중..." },
-  "done": { "message": "완료!" },
-  "waking": { "message": "깨우는 중..." },
+  "stats": {
+    "message": "통계"
+  },
+  "statToday": {
+    "message": "오늘"
+  },
+  "statAllTime": {
+    "message": "전체"
+  },
+  "statRamSaved": {
+    "message": "절약된 RAM (추정)"
+  },
+  "statMemberSince": {
+    "message": "가입일"
+  },
+  "settings": {
+    "message": "설정"
+  },
+  "autoSuspendAfter": {
+    "message": "자동 일시중지 시간"
+  },
+  "timer5min": {
+    "message": "5분"
+  },
+  "timer10min": {
+    "message": "10분"
+  },
+  "timer15min": {
+    "message": "15분"
+  },
+  "timer30min": {
+    "message": "30분"
+  },
+  "timer1hour": {
+    "message": "1시간"
+  },
+  "timer2hours": {
+    "message": "2시간"
+  },
+  "timer4hours": {
+    "message": "4시간"
+  },
+  "timerNever": {
+    "message": "안 함"
+  },
+  "protectPinned": {
+    "message": "고정된 탭 보호"
+  },
+  "protectAudio": {
+    "message": "오디오 탭 보호"
+  },
+  "protectForms": {
+    "message": "양식이 있는 탭 보호"
+  },
+  "suspendOnStartup": {
+    "message": "시작 시 탭 일시중지"
+  },
+  "enableAutoSuspend": {
+    "message": "자동 일시중지 활성화"
+  },
+  "markSuspended": {
+    "message": "일시중지된 탭 표시"
+  },
+  "whitelistedSites": {
+    "message": "화이트리스트 사이트"
+  },
+  "add": {
+    "message": "추가"
+  },
+  "noSitesWhitelisted": {
+    "message": "화이트리스트에 등록된 사이트 없음"
+  },
+  "suspending": {
+    "message": "일시중지 중..."
+  },
+  "done": {
+    "message": "완료!"
+  },
+  "waking": {
+    "message": "깨우는 중..."
+  },
   "copiedTabs": {
     "message": "$COUNT$개 탭을 클립보드에 복사했습니다",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "복사 실패" },
-  "copyTabsTitle": { "message": "탭 목록을 클립보드에 복사" },
-  "copySessionsTitle": { "message": "모든 세션을 JSON으로 복사" },
-  "remove": { "message": "제거" },
-
-  "switchToLight": { "message": "라이트 모드로 전환" },
-  "switchToDark": { "message": "다크 모드로 전환" },
-
-  "ctxSuspendThis": { "message": "이 탭 일시중지" },
-  "ctxSuspendOthers": { "message": "다른 모든 탭 일시중지" },
-  "ctxNeverSuspend": { "message": "이 사이트를 일시중지하지 않음" },
-
-  "maxSessionsReached": { "message": "최대 20개 세션에 도달했습니다. 새로 저장하려면 하나를 삭제하세요." },
-  "noSaveableTabs": { "message": "이 창에 저장 가능한 탭이 없습니다." },
-  "sessionNotFound": { "message": "세션을 찾을 수 없습니다." },
-  "noRestorableTabs": { "message": "이 세션에 복원 가능한 탭이 없습니다." },
+  "failedToCopy": {
+    "message": "복사 실패"
+  },
+  "copyTabsTitle": {
+    "message": "탭 목록을 클립보드에 복사"
+  },
+  "copySessionsTitle": {
+    "message": "모든 세션을 JSON으로 복사"
+  },
+  "remove": {
+    "message": "제거"
+  },
+  "switchToLight": {
+    "message": "라이트 모드로 전환"
+  },
+  "switchToDark": {
+    "message": "다크 모드로 전환"
+  },
+  "ctxSuspendThis": {
+    "message": "이 탭 일시중지"
+  },
+  "ctxSuspendOthers": {
+    "message": "다른 모든 탭 일시중지"
+  },
+  "ctxNeverSuspend": {
+    "message": "이 사이트를 일시중지하지 않음"
+  },
+  "maxSessionsReached": {
+    "message": "최대 20개 세션에 도달했습니다. 새로 저장하려면 하나를 삭제하세요."
+  },
+  "noSaveableTabs": {
+    "message": "이 창에 저장 가능한 탭이 없습니다."
+  },
+  "sessionNotFound": {
+    "message": "세션을 찾을 수 없습니다."
+  },
+  "noRestorableTabs": {
+    "message": "이 세션에 복원 가능한 탭이 없습니다."
+  },
   "sessionDefaultName": {
     "message": "세션 – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "방금" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "방금"
+  },
   "minutesAgo": {
     "message": "$COUNT$분 전",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$시간 전",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "어제" },
+  "yesterday": {
+    "message": "어제"
+  },
   "daysAgo": {
     "message": "$COUNT$일 전",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Drowzy에 오신 것을 환영합니다" },
-  "onboardingIntro": { "message": "Drowzy는 비활성 탭을 수면 상태로 전환하여 메모리를 절약합니다. 탭은 항상 안전합니다. Chrome의 기본 디스카드 API를 사용하므로 Drowzy를 제거해도 탭이 유지됩니다." },
-  "howItWorks": { "message": "작동 방식" },
-  "featureAutoSuspend": { "message": "<strong>30분 동안 비활성인 탭</strong>은 자동으로 일시중지됩니다" },
-  "featureZeroRam": { "message": "<strong>일시중지된 탭은 RAM을 사용하지 않지만</strong> 탭 바에 그대로 유지됩니다" },
-  "featureClickToWake": { "message": "<strong>일시중지된 탭을 클릭</strong>하면 즉시 깨어납니다" },
-  "featureProtected": { "message": "<strong>활성, 고정 및 오디오 탭</strong>은 절대 건드리지 않습니다" },
-  "quickActions": { "message": "빠른 실행" },
-  "actionClickIcon": { "message": "도구 모음의 <strong>Drowzy 아이콘</strong>을 클릭하여 모든 탭을 확인하세요" },
-  "actionAltS": { "message": "<kbd>Alt+S</kbd>를 눌러 현재 탭을 일시중지" },
-  "actionAltShiftS": { "message": "<kbd>Alt+Shift+S</kbd>를 눌러 다른 모든 탭을 일시중지" },
-  "actionAltW": { "message": "<kbd>Alt+W</kbd>를 눌러 일시중지된 모든 탭을 깨우기" },
-  "actionRightClick": { "message": "아무 페이지에서나 우클릭하여 빠른 일시중지 옵션 사용" },
-  "onboardingCta": { "message": "Drowzy가 이미 실행 중입니다. 탭을 몇 개 열고 사용해 보세요!" },
-  "onboardingBtn": { "message": "알겠습니다, 시작하겠습니다" },
-
-  "privacyTitle": { "message": "Drowzy – 개인정보 보호정책" },
-  "privacyUpdated": { "message": "최종 업데이트: 2026년 2월" },
-  "privacyShortTitle": { "message": "요약" },
-  "privacyShortText": { "message": "Drowzy는 어떠한 데이터도 수집하지 않습니다. 분석 없음, 추적 없음, 외부 서버 없음. 모든 것은 브라우저에 남습니다." },
-  "privacyStoredTitle": { "message": "저장되는 정보" },
-  "privacyStoredText": { "message": "설정(일시중지 타이머, 화이트리스트, 환경설정)은 Chrome의 내장 스토리지 API를 사용하여 저장됩니다: Chrome 프로필을 따르는 설정에는 chrome.storage.sync, 통계 및 저장된 세션에는 chrome.storage.local, 탭 타임스탬프와 같은 임시 데이터에는 chrome.storage.session을 사용합니다. 이 중 어떤 것도 제3자 서버로 전송되지 않습니다." },
-  "privacyPermissionsTitle": { "message": "권한" },
-  "privacyPermissionsIntro": { "message": "Drowzy는 다음 Chrome 권한을 사용합니다:" },
-  "privacyPermTabs": { "message": "tabs – 브라우저 탭 목록 조회, 일시중지 및 복원" },
-  "privacyPermStorage": { "message": "storage – 설정을 로컬에 저장" },
-  "privacyPermAlarms": { "message": "alarms – 비활성 탭의 주기적 확인" },
-  "privacyPermContextMenus": { "message": "contextMenus – 우클릭 메뉴 옵션" },
-  "privacyContactTitle": { "message": "문의" },
-  "privacyContactText": { "message": "질문이 있으신가요? drowzyextension@gmail.com으로 연락하세요" }
+  "onboardingTitle": {
+    "message": "Drowzy에 오신 것을 환영합니다"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy는 비활성 탭을 수면 상태로 전환하여 메모리를 절약합니다. 탭은 항상 안전합니다. Chrome의 기본 디스카드 API를 사용하므로 Drowzy를 제거해도 탭이 유지됩니다."
+  },
+  "howItWorks": {
+    "message": "작동 방식"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>30분 동안 비활성인 탭</strong>은 자동으로 일시중지됩니다"
+  },
+  "featureZeroRam": {
+    "message": "<strong>일시중지된 탭은 RAM을 사용하지 않지만</strong> 탭 바에 그대로 유지됩니다"
+  },
+  "featureClickToWake": {
+    "message": "<strong>일시중지된 탭을 클릭</strong>하면 즉시 깨어납니다"
+  },
+  "featureProtected": {
+    "message": "<strong>활성, 고정 및 오디오 탭</strong>은 절대 건드리지 않습니다"
+  },
+  "quickActions": {
+    "message": "빠른 실행"
+  },
+  "actionClickIcon": {
+    "message": "도구 모음의 <strong>Drowzy 아이콘</strong>을 클릭하여 모든 탭을 확인하세요"
+  },
+  "actionAltS": {
+    "message": "<kbd>Alt+S</kbd>를 눌러 현재 탭을 일시중지"
+  },
+  "actionAltShiftS": {
+    "message": "<kbd>Alt+Shift+S</kbd>를 눌러 다른 모든 탭을 일시중지"
+  },
+  "actionAltW": {
+    "message": "<kbd>Alt+W</kbd>를 눌러 일시중지된 모든 탭을 깨우기"
+  },
+  "actionRightClick": {
+    "message": "아무 페이지에서나 우클릭하여 빠른 일시중지 옵션 사용"
+  },
+  "onboardingCta": {
+    "message": "Drowzy가 이미 실행 중입니다. 탭을 몇 개 열고 사용해 보세요!"
+  },
+  "onboardingBtn": {
+    "message": "알겠습니다, 시작하겠습니다"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – 개인정보 보호정책"
+  },
+  "privacyUpdated": {
+    "message": "최종 업데이트: 2026년 2월"
+  },
+  "privacyShortTitle": {
+    "message": "요약"
+  },
+  "privacyShortText": {
+    "message": "Drowzy는 어떠한 데이터도 수집하지 않습니다. 분석 없음, 추적 없음, 외부 서버 없음. 모든 것은 브라우저에 남습니다."
+  },
+  "privacyStoredTitle": {
+    "message": "저장되는 정보"
+  },
+  "privacyStoredText": {
+    "message": "설정(일시중지 타이머, 화이트리스트, 환경설정)은 Chrome의 내장 스토리지 API를 사용하여 저장됩니다: Chrome 프로필을 따르는 설정에는 chrome.storage.sync, 통계 및 저장된 세션에는 chrome.storage.local, 탭 타임스탬프와 같은 임시 데이터에는 chrome.storage.session을 사용합니다. 이 중 어떤 것도 제3자 서버로 전송되지 않습니다."
+  },
+  "privacyPermissionsTitle": {
+    "message": "권한"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy는 다음 Chrome 권한을 사용합니다:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – 브라우저 탭 목록 조회, 일시중지 및 복원"
+  },
+  "privacyPermStorage": {
+    "message": "storage – 설정을 로컬에 저장"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – 비활성 탭의 주기적 확인"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – 우클릭 메뉴 옵션"
+  },
+  "privacyContactTitle": {
+    "message": "문의"
+  },
+  "privacyContactText": {
+    "message": "질문이 있으신가요? drowzyextension@gmail.com으로 연락하세요"
+  },
+  "replace": {
+    "message": "교체"
+  },
+  "replaceSessionTitle": {
+    "message": "현재 탭을 이 세션으로 교체"
+  },
+  "invalidDomain": {
+    "message": "유효한 도메인을 입력하세요 (예: example.com)"
+  },
+  "extensionPage": {
+    "message": "확장 프로그램 페이지"
+  },
+  "exportWhitelist": {
+    "message": "내보내기"
+  },
+  "importWhitelist": {
+    "message": "가져오기"
+  },
+  "exportWhitelistTitle": {
+    "message": "화이트리스트 복사"
+  },
+  "importWhitelistTitle": {
+    "message": "클립보드에서 화이트리스트 가져오기"
+  },
+  "copiedSites": {
+    "message": "$COUNT$개 사이트 복사됨",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$개 새 사이트 가져옴",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "클립보드에서 유효한 도메인을 찾을 수 없습니다"
+  },
+  "clipboardReadFailed": {
+    "message": "클립보드를 읽을 수 없습니다"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy가 마음에 드시나요?"
+  },
+  "reviewYes": {
+    "message": "네!"
+  },
+  "reviewNo": {
+    "message": "별로요"
+  },
+  "whatsNew": {
+    "message": "v1.1.0의 새로운 기능"
+  },
+  "changelogTitle": {
+    "message": "Drowzy의 새로운 기능"
+  },
+  "changelogWhatsNew": {
+    "message": "새로운 기능"
+  },
+  "changelogVersion": {
+    "message": "버전 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "새 기능"
+  },
+  "changelogBugFixes": {
+    "message": "버그 수정"
+  },
+  "changelogImprovements": {
+    "message": "개선사항"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "리뷰 요청"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "몇 개의 탭을 일시중지한 후, Drowzy가 만족스러운지 물어볼 것입니다. 빠른 좋아요가 큰 도움이 됩니다!"
+  },
+  "changelogChangelogTitle": {
+    "message": "변경 로그 페이지"
+  },
+  "changelogChangelogDesc": {
+    "message": "지금 보고 계신 페이지입니다! 업데이트 시 자동으로 열립니다. 설정에서 언제든 접근 가능합니다."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "세션 복원 타이밍"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "복원된 탭이 더 이상 즉시 자동 일시중지되지 않습니다. 생성 시 유휴 타이머가 올바르게 재설정됩니다."
+  },
+  "changelogFormCheckTitle": {
+    "message": "양식 확인 타임아웃"
+  },
+  "changelogFormCheckDesc": {
+    "message": "양식 데이터 확인에 500ms 타임아웃이 적용되어 응답하지 않는 탭이 전체 대기열을 차단할 수 없습니다."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "화이트리스트 중복"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "대소문자 구분 문제를 수정했습니다. 모든 항목이 이제 정규화됩니다."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "실시간 통계"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "탭이 백그라운드에서 일시중지되거나 깨어날 때 팝업이 자동으로 새로고침됩니다."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "세션 복원 옵션"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "세션에 \"열기\"(탭 추가)와 \"교체\"(현재 탭 교체) 버튼이 별도로 추가되었습니다."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "화이트리스트 검증 및 내보내기/가져오기"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "화이트리스트 입력 시 도메인이 검증됩니다. 클립보드를 통해 다른 기기에서 내보내기/가져오기도 가능합니다."
+  },
+  "changelogA11yTitle": {
+    "message": "접근성"
+  },
+  "changelogA11yDesc": {
+    "message": "탭 목록 항목이 적절한 ARIA 역할과 함께 키보드로 탐색 가능해졌습니다. 토스트 알림이 스크린 리더에 전달됩니다."
+  },
+  "changelogAnimationsTitle": {
+    "message": "부드러운 애니메이션"
+  },
+  "changelogAnimationsDesc": {
+    "message": "탭 목록 순차 애니메이션에 상한이 설정되어 탭이 많은 창에서 긴 캐스케이드 지연이 없어졌습니다."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy는 무료 오픈소스입니다. 메모리 절약에 도움이 되고 있다면 리뷰를 남기거나 GitHub에서 스타를 눌러주세요."
+  },
+  "changelogReviewBtn": {
+    "message": "리뷰 남기기"
+  },
+  "changelogStarBtn": {
+    "message": "GitHub에서 스타"
+  }
 }

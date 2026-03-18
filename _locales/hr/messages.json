@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Probudi sve suspendirane kartice"
   },
-
-  "statSleeping": { "message": "spava" },
-  "statProtected": { "message": "zaštićeno" },
-  "statSaved": { "message": "ušteđeno" },
-
-  "suspendOthers": { "message": "Suspendiraj ostale" },
-  "wakeAll": { "message": "Probudi sve" },
-
-  "neverSuspendSite": { "message": "Nikad ne suspendiraj ovu stranicu" },
-  "siteWhitelisted": { "message": "Stranica je na popisu dopuštenih (kliknite za uklanjanje)" },
-  "activeWontSuspend": { "message": "Aktivna – neće biti suspendirana" },
-  "loading": { "message": "Učitavanje..." },
-
-  "tabsInWindow": { "message": "Kartice u ovom prozoru" },
-  "loadingTabs": { "message": "Učitavanje kartica..." },
-  "noTabsFound": { "message": "Nema pronađenih kartica" },
-  "failedToLoad": { "message": "Učitavanje nije uspjelo. Ponovno otvorite skočni prozor za ponovni pokušaj." },
-
-  "badgeActive": { "message": "Aktivna" },
-  "badgeSystem": { "message": "Sustav" },
-  "badgePinned": { "message": "Prikvačena" },
-  "badgeAudio": { "message": "Zvuk" },
-  "badgeStarred": { "message": "Označena" },
-  "badgeProtected": { "message": "Zaštićena" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Sesije" },
-  "sessionNamePlaceholder": { "message": "Naziv sesije (neobavezno)" },
-  "save": { "message": "Spremi" },
-  "emptySessionState": { "message": "Spremite svoju prvu sesiju za vraćanje kartica u bilo kojem trenutku" },
-  "open": { "message": "Otvori" },
-  "openSessionTitle": { "message": "Otvori kartice iz ove sesije" },
-  "deleteSessionTitle": { "message": "Obriši sesiju" },
-  "sessionSaved": { "message": "Sesija spremljena!" },
-  "failedToSave": { "message": "Spremanje nije uspjelo" },
+  "statSleeping": {
+    "message": "spava"
+  },
+  "statProtected": {
+    "message": "zaštićeno"
+  },
+  "statSaved": {
+    "message": "ušteđeno"
+  },
+  "suspendOthers": {
+    "message": "Suspendiraj ostale"
+  },
+  "wakeAll": {
+    "message": "Probudi sve"
+  },
+  "neverSuspendSite": {
+    "message": "Nikad ne suspendiraj ovu stranicu"
+  },
+  "siteWhitelisted": {
+    "message": "Stranica je na popisu dopuštenih (kliknite za uklanjanje)"
+  },
+  "activeWontSuspend": {
+    "message": "Aktivna – neće biti suspendirana"
+  },
+  "loading": {
+    "message": "Učitavanje..."
+  },
+  "tabsInWindow": {
+    "message": "Kartice u ovom prozoru"
+  },
+  "loadingTabs": {
+    "message": "Učitavanje kartica..."
+  },
+  "noTabsFound": {
+    "message": "Nema pronađenih kartica"
+  },
+  "failedToLoad": {
+    "message": "Učitavanje nije uspjelo. Ponovno otvorite skočni prozor za ponovni pokušaj."
+  },
+  "badgeActive": {
+    "message": "Aktivna"
+  },
+  "badgeSystem": {
+    "message": "Sustav"
+  },
+  "badgePinned": {
+    "message": "Prikvačena"
+  },
+  "badgeAudio": {
+    "message": "Zvuk"
+  },
+  "badgeStarred": {
+    "message": "Označena"
+  },
+  "badgeProtected": {
+    "message": "Zaštićena"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Sesije"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Naziv sesije (neobavezno)"
+  },
+  "save": {
+    "message": "Spremi"
+  },
+  "emptySessionState": {
+    "message": "Spremite svoju prvu sesiju za vraćanje kartica u bilo kojem trenutku"
+  },
+  "open": {
+    "message": "Otvori"
+  },
+  "openSessionTitle": {
+    "message": "Otvori kartice iz ove sesije"
+  },
+  "deleteSessionTitle": {
+    "message": "Obriši sesiju"
+  },
+  "sessionSaved": {
+    "message": "Sesija spremljena!"
+  },
+  "failedToSave": {
+    "message": "Spremanje nije uspjelo"
+  },
   "restoredTabs": {
     "message": "Vraćeno $COUNT$ kartica",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Vraćanje nije uspjelo" },
-  "noSessionsToExport": { "message": "Nema sesija za izvoz" },
+  "failedToRestore": {
+    "message": "Vraćanje nije uspjelo"
+  },
+  "noSessionsToExport": {
+    "message": "Nema sesija za izvoz"
+  },
   "copiedSessionsJson": {
     "message": "Kopirano $COUNT$ sesija kao JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ kartica",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statistika" },
-  "statToday": { "message": "Danas" },
-  "statAllTime": { "message": "Ukupno" },
-  "statRamSaved": { "message": "Ušteđeni RAM (procjena)" },
-  "statMemberSince": { "message": "Član od" },
-
-  "settings": { "message": "Postavke" },
-  "autoSuspendAfter": { "message": "Automatska suspenzija nakon" },
-  "timer5min": { "message": "5 minuta" },
-  "timer10min": { "message": "10 minuta" },
-  "timer15min": { "message": "15 minuta" },
-  "timer30min": { "message": "30 minuta" },
-  "timer1hour": { "message": "1 sat" },
-  "timer2hours": { "message": "2 sata" },
-  "timer4hours": { "message": "4 sata" },
-  "timerNever": { "message": "Nikad" },
-  "protectPinned": { "message": "Zaštiti prikvačene kartice" },
-  "protectAudio": { "message": "Zaštiti kartice sa zvukom" },
-  "protectForms": { "message": "Zaštiti kartice s obrascima" },
-  "suspendOnStartup": { "message": "Suspendiraj kartice pri pokretanju" },
-  "enableAutoSuspend": { "message": "Omogući automatsku suspenziju" },
-  "markSuspended": { "message": "Označi suspendirane kartice" },
-  "whitelistedSites": { "message": "Dopuštene stranice" },
-  "add": { "message": "Dodaj" },
-  "noSitesWhitelisted": { "message": "Nema dopuštenih stranica" },
-
-  "suspending": { "message": "Suspendiranje..." },
-  "done": { "message": "Gotovo!" },
-  "waking": { "message": "Buđenje..." },
+  "stats": {
+    "message": "Statistika"
+  },
+  "statToday": {
+    "message": "Danas"
+  },
+  "statAllTime": {
+    "message": "Ukupno"
+  },
+  "statRamSaved": {
+    "message": "Ušteđeni RAM (procjena)"
+  },
+  "statMemberSince": {
+    "message": "Član od"
+  },
+  "settings": {
+    "message": "Postavke"
+  },
+  "autoSuspendAfter": {
+    "message": "Automatska suspenzija nakon"
+  },
+  "timer5min": {
+    "message": "5 minuta"
+  },
+  "timer10min": {
+    "message": "10 minuta"
+  },
+  "timer15min": {
+    "message": "15 minuta"
+  },
+  "timer30min": {
+    "message": "30 minuta"
+  },
+  "timer1hour": {
+    "message": "1 sat"
+  },
+  "timer2hours": {
+    "message": "2 sata"
+  },
+  "timer4hours": {
+    "message": "4 sata"
+  },
+  "timerNever": {
+    "message": "Nikad"
+  },
+  "protectPinned": {
+    "message": "Zaštiti prikvačene kartice"
+  },
+  "protectAudio": {
+    "message": "Zaštiti kartice sa zvukom"
+  },
+  "protectForms": {
+    "message": "Zaštiti kartice s obrascima"
+  },
+  "suspendOnStartup": {
+    "message": "Suspendiraj kartice pri pokretanju"
+  },
+  "enableAutoSuspend": {
+    "message": "Omogući automatsku suspenziju"
+  },
+  "markSuspended": {
+    "message": "Označi suspendirane kartice"
+  },
+  "whitelistedSites": {
+    "message": "Dopuštene stranice"
+  },
+  "add": {
+    "message": "Dodaj"
+  },
+  "noSitesWhitelisted": {
+    "message": "Nema dopuštenih stranica"
+  },
+  "suspending": {
+    "message": "Suspendiranje..."
+  },
+  "done": {
+    "message": "Gotovo!"
+  },
+  "waking": {
+    "message": "Buđenje..."
+  },
   "copiedTabs": {
     "message": "Kopirano $COUNT$ kartica u međuspremnik",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Kopiranje nije uspjelo" },
-  "copyTabsTitle": { "message": "Kopiraj popis kartica u međuspremnik" },
-  "copySessionsTitle": { "message": "Kopiraj sve sesije kao JSON" },
-  "remove": { "message": "Ukloni" },
-
-  "switchToLight": { "message": "Prebaci na svjetli način" },
-  "switchToDark": { "message": "Prebaci na tamni način" },
-
-  "ctxSuspendThis": { "message": "Suspendiraj ovu karticu" },
-  "ctxSuspendOthers": { "message": "Suspendiraj sve ostale kartice" },
-  "ctxNeverSuspend": { "message": "Nikad ne suspendiraj ovu stranicu" },
-
-  "maxSessionsReached": { "message": "Dosegnuto je maksimalno 20 sesija. Obrišite jednu da biste spremili novu." },
-  "noSaveableTabs": { "message": "Nema kartica za spremanje u ovom prozoru." },
-  "sessionNotFound": { "message": "Sesija nije pronađena." },
-  "noRestorableTabs": { "message": "Nema kartica za vraćanje u ovoj sesiji." },
+  "failedToCopy": {
+    "message": "Kopiranje nije uspjelo"
+  },
+  "copyTabsTitle": {
+    "message": "Kopiraj popis kartica u međuspremnik"
+  },
+  "copySessionsTitle": {
+    "message": "Kopiraj sve sesije kao JSON"
+  },
+  "remove": {
+    "message": "Ukloni"
+  },
+  "switchToLight": {
+    "message": "Prebaci na svjetli način"
+  },
+  "switchToDark": {
+    "message": "Prebaci na tamni način"
+  },
+  "ctxSuspendThis": {
+    "message": "Suspendiraj ovu karticu"
+  },
+  "ctxSuspendOthers": {
+    "message": "Suspendiraj sve ostale kartice"
+  },
+  "ctxNeverSuspend": {
+    "message": "Nikad ne suspendiraj ovu stranicu"
+  },
+  "maxSessionsReached": {
+    "message": "Dosegnuto je maksimalno 20 sesija. Obrišite jednu da biste spremili novu."
+  },
+  "noSaveableTabs": {
+    "message": "Nema kartica za spremanje u ovom prozoru."
+  },
+  "sessionNotFound": {
+    "message": "Sesija nije pronađena."
+  },
+  "noRestorableTabs": {
+    "message": "Nema kartica za vraćanje u ovoj sesiji."
+  },
   "sessionDefaultName": {
     "message": "Sesija – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "upravo sad" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "upravo sad"
+  },
   "minutesAgo": {
     "message": "prije $COUNT$ min",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "prije $COUNT$ h",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Jučer" },
+  "yesterday": {
+    "message": "Jučer"
+  },
   "daysAgo": {
     "message": "prije $COUNT$ d",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Dobrodošli u Drowzy" },
-  "onboardingIntro": { "message": "Drowzy štedi memoriju uspavljivanjem neaktivnih kartica. Vaše kartice su uvijek sigurne – koristimo Chromeov izvorni discard API, pa preživljavaju čak i ako deinstalirate Drowzy." },
-  "howItWorks": { "message": "Kako funkcionira" },
-  "featureAutoSuspend": { "message": "<strong>Kartice neaktivne 30 minuta</strong> automatski se suspendiraju" },
-  "featureZeroRam": { "message": "<strong>Suspendirane kartice koriste nula RAM-a</strong> ali ostaju na traci kartica" },
-  "featureClickToWake": { "message": "<strong>Kliknite na bilo koju suspendiranu karticu</strong> da je odmah probudite" },
-  "featureProtected": { "message": "<strong>Aktivne, prikvačene i kartice sa zvukom</strong> se nikad ne diraju" },
-  "quickActions": { "message": "Brze radnje" },
-  "actionClickIcon": { "message": "Kliknite <strong>Drowzy ikonu</strong> na alatnoj traci da vidite sve svoje kartice" },
-  "actionAltS": { "message": "Pritisnite <kbd>Alt+S</kbd> za suspenziju trenutne kartice" },
-  "actionAltShiftS": { "message": "Pritisnite <kbd>Alt+Shift+S</kbd> za suspenziju svih ostalih kartica" },
-  "actionAltW": { "message": "Pritisnite <kbd>Alt+W</kbd> za buđenje svih suspendiranih kartica" },
-  "actionRightClick": { "message": "Desnom tipkom kliknite na bilo koju stranicu za brze opcije suspenzije" },
-  "onboardingCta": { "message": "Drowzy već radi. Otvorite nekoliko kartica i isprobajte!" },
-  "onboardingBtn": { "message": "Razumijem, idemo" },
-
-  "privacyTitle": { "message": "Drowzy – Pravila privatnosti" },
-  "privacyUpdated": { "message": "Zadnje ažuriranje: veljača 2026." },
-  "privacyShortTitle": { "message": "Kratka verzija" },
-  "privacyShortText": { "message": "Drowzy ne prikuplja nikakve podatke. Bez analitike, bez praćenja, bez vanjskih poslužitelja. Sve ostaje u vašem pregledniku." },
-  "privacyStoredTitle": { "message": "Što se sprema" },
-  "privacyStoredText": { "message": "Vaše postavke (mjerač suspenzije, popis dopuštenih, preferencije) spremaju se pomoću Chromeovih ugrađenih API-ja za pohranu: chrome.storage.sync za postavke koje prate vaš Chrome profil, chrome.storage.local za statistiku i spremljene sesije, te chrome.storage.session za privremene podatke poput vremenskih oznaka kartica. Ništa od toga ne šalje se na vanjski poslužitelj." },
-  "privacyPermissionsTitle": { "message": "Dozvole" },
-  "privacyPermissionsIntro": { "message": "Drowzy koristi ove Chrome dozvole:" },
-  "privacyPermTabs": { "message": "tabs – popis, suspenzija i vraćanje kartica preglednika" },
-  "privacyPermStorage": { "message": "storage – lokalno spremanje vaših postavki" },
-  "privacyPermAlarms": { "message": "alarms – periodičke provjere neaktivnih kartica" },
-  "privacyPermContextMenus": { "message": "contextMenus – opcije kontekstnog izbornika" },
-  "privacyContactTitle": { "message": "Kontakt" },
-  "privacyContactText": { "message": "Imate pitanja? Obratite nam se na drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Dobrodošli u Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy štedi memoriju uspavljivanjem neaktivnih kartica. Vaše kartice su uvijek sigurne – koristimo Chromeov izvorni discard API, pa preživljavaju čak i ako deinstalirate Drowzy."
+  },
+  "howItWorks": {
+    "message": "Kako funkcionira"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Kartice neaktivne 30 minuta</strong> automatski se suspendiraju"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Suspendirane kartice koriste nula RAM-a</strong> ali ostaju na traci kartica"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Kliknite na bilo koju suspendiranu karticu</strong> da je odmah probudite"
+  },
+  "featureProtected": {
+    "message": "<strong>Aktivne, prikvačene i kartice sa zvukom</strong> se nikad ne diraju"
+  },
+  "quickActions": {
+    "message": "Brze radnje"
+  },
+  "actionClickIcon": {
+    "message": "Kliknite <strong>Drowzy ikonu</strong> na alatnoj traci da vidite sve svoje kartice"
+  },
+  "actionAltS": {
+    "message": "Pritisnite <kbd>Alt+S</kbd> za suspenziju trenutne kartice"
+  },
+  "actionAltShiftS": {
+    "message": "Pritisnite <kbd>Alt+Shift+S</kbd> za suspenziju svih ostalih kartica"
+  },
+  "actionAltW": {
+    "message": "Pritisnite <kbd>Alt+W</kbd> za buđenje svih suspendiranih kartica"
+  },
+  "actionRightClick": {
+    "message": "Desnom tipkom kliknite na bilo koju stranicu za brze opcije suspenzije"
+  },
+  "onboardingCta": {
+    "message": "Drowzy već radi. Otvorite nekoliko kartica i isprobajte!"
+  },
+  "onboardingBtn": {
+    "message": "Razumijem, idemo"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Pravila privatnosti"
+  },
+  "privacyUpdated": {
+    "message": "Zadnje ažuriranje: veljača 2026."
+  },
+  "privacyShortTitle": {
+    "message": "Kratka verzija"
+  },
+  "privacyShortText": {
+    "message": "Drowzy ne prikuplja nikakve podatke. Bez analitike, bez praćenja, bez vanjskih poslužitelja. Sve ostaje u vašem pregledniku."
+  },
+  "privacyStoredTitle": {
+    "message": "Što se sprema"
+  },
+  "privacyStoredText": {
+    "message": "Vaše postavke (mjerač suspenzije, popis dopuštenih, preferencije) spremaju se pomoću Chromeovih ugrađenih API-ja za pohranu: chrome.storage.sync za postavke koje prate vaš Chrome profil, chrome.storage.local za statistiku i spremljene sesije, te chrome.storage.session za privremene podatke poput vremenskih oznaka kartica. Ništa od toga ne šalje se na vanjski poslužitelj."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Dozvole"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy koristi ove Chrome dozvole:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – popis, suspenzija i vraćanje kartica preglednika"
+  },
+  "privacyPermStorage": {
+    "message": "storage – lokalno spremanje vaših postavki"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – periodičke provjere neaktivnih kartica"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – opcije kontekstnog izbornika"
+  },
+  "privacyContactTitle": {
+    "message": "Kontakt"
+  },
+  "privacyContactText": {
+    "message": "Imate pitanja? Obratite nam se na drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Zamijeni"
+  },
+  "replaceSessionTitle": {
+    "message": "Zamijeni trenutne kartice ovom sesijom"
+  },
+  "invalidDomain": {
+    "message": "Unesite valjanu domenu (npr. example.com)"
+  },
+  "extensionPage": {
+    "message": "Stranica proširenja"
+  },
+  "exportWhitelist": {
+    "message": "Izvezi"
+  },
+  "importWhitelist": {
+    "message": "Uvezi"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopiraj bijelu listu"
+  },
+  "importWhitelistTitle": {
+    "message": "Uvezi bijelu listu iz međuspremnika"
+  },
+  "copiedSites": {
+    "message": "Kopirano $COUNT$ stranica",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Uvezeno $COUNT$ novih stranica",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "U međuspremniku nisu pronađene valjane domene"
+  },
+  "clipboardReadFailed": {
+    "message": "Nije moguće pročitati međuspremnik"
+  },
+  "enjoyingDrowzy": {
+    "message": "Sviđa li vam se Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Da!"
+  },
+  "reviewNo": {
+    "message": "Ne baš"
+  },
+  "whatsNew": {
+    "message": "Što je novo u v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Što je novo u Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Što je novo"
+  },
+  "changelogVersion": {
+    "message": "Verzija 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Nove značajke"
+  },
+  "changelogBugFixes": {
+    "message": "Popravci grešaka"
+  },
+  "changelogImprovements": {
+    "message": "Poboljšanja"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Zahtjev za recenziju"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Nakon što suspendirate nekoliko kartica, Drowzy će pitati sviđa li vam se. Brzi palac gore nam puno pomaže!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Stranica izmjena"
+  },
+  "changelogChangelogDesc": {
+    "message": "Gledate je! Otvara se automatski pri ažuriranju. Dostupna iz Postavki."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Vrijeme obnove sesije"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Obnovljene kartice se više ne suspendiraju odmah automatski. Sada ispravno resetiraju svoje timere mirovanja."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Vremensko ograničenje provjere obrazaca"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Provjera obrazaca sada ima timeout od 500ms tako da nereagirajuće kartice ne mogu blokirati red."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Duplikati bijele liste"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Ispravljen problem s osjetljivošću na velika i mala slova gdje su se \"Example.com\" i \"example.com\" mogli dodati. Svi unosi su sada normalizirani."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Statistike uživo"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Popup se sada automatski osvježava kada se kartice suspendiraju ili bude."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Opcije obnove sesije"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Sesije sada imaju zasebne gumbe \"Otvori\" i \"Zamijeni\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Provjera i izvoz/uvoz bijele liste"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Unos bijele liste sada provjerava domene. Možete izvoziti i uvoziti putem međuspremnika."
+  },
+  "changelogA11yTitle": {
+    "message": "Pristupačnost"
+  },
+  "changelogA11yDesc": {
+    "message": "Stavke popisa kartica sada su navigabilne tipkovnicom s ARIA ulogama. Obavijesti se objavljuju čitačima zaslona."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Glatkije animacije"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Kaskadne animacije su sada ograničene tako da prozori s mnogo kartica nemaju dugo kašnjenje."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy je besplatan i otvorenog koda. Ako vam štedi memoriju, ostavite recenziju ili zvjezdicu na GitHubu."
+  },
+  "changelogReviewBtn": {
+    "message": "Ostavite recenziju"
+  },
+  "changelogStarBtn": {
+    "message": "Zvjezdica na GitHubu"
+  }
 }

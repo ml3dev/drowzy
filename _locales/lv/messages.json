@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Pamodināt visas apturētās cilnes"
   },
-
-  "statSleeping": { "message": "guļ" },
-  "statProtected": { "message": "aizsargātas" },
-  "statSaved": { "message": "saglabāts" },
-
-  "suspendOthers": { "message": "Apturēt pārējās" },
-  "wakeAll": { "message": "Pamodināt visas" },
-
-  "neverSuspendSite": { "message": "Nekad neapturēt šo vietni" },
-  "siteWhitelisted": { "message": "Vietne ir baltajā sarakstā (noklikšķiniet, lai noņemtu)" },
-  "activeWontSuspend": { "message": "Aktīva – netiks apturēta" },
-  "loading": { "message": "Ielādē..." },
-
-  "tabsInWindow": { "message": "Cilnes šajā logā" },
-  "loadingTabs": { "message": "Ielādē cilnes..." },
-  "noTabsFound": { "message": "Cilnes nav atrastas" },
-  "failedToLoad": { "message": "Neizdevās ielādēt. Atveriet uznirstošo logu vēlreiz." },
-
-  "badgeActive": { "message": "Aktīva" },
-  "badgeSystem": { "message": "Sistēmas" },
-  "badgePinned": { "message": "Piesprausts" },
-  "badgeAudio": { "message": "Audio" },
-  "badgeStarred": { "message": "Ar zvaigznīti" },
-  "badgeProtected": { "message": "Aizsargāta" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Sesijas" },
-  "sessionNamePlaceholder": { "message": "Sesijas nosaukums (neobligāts)" },
-  "save": { "message": "Saglabāt" },
-  "emptySessionState": { "message": "Saglabājiet savu pirmo sesiju, lai jebkurā laikā atjaunotu cilnes" },
-  "open": { "message": "Atvērt" },
-  "openSessionTitle": { "message": "Atvērt cilnes no šīs sesijas" },
-  "deleteSessionTitle": { "message": "Dzēst sesiju" },
-  "sessionSaved": { "message": "Sesija saglabāta!" },
-  "failedToSave": { "message": "Neizdevās saglabāt" },
+  "statSleeping": {
+    "message": "guļ"
+  },
+  "statProtected": {
+    "message": "aizsargātas"
+  },
+  "statSaved": {
+    "message": "saglabāts"
+  },
+  "suspendOthers": {
+    "message": "Apturēt pārējās"
+  },
+  "wakeAll": {
+    "message": "Pamodināt visas"
+  },
+  "neverSuspendSite": {
+    "message": "Nekad neapturēt šo vietni"
+  },
+  "siteWhitelisted": {
+    "message": "Vietne ir baltajā sarakstā (noklikšķiniet, lai noņemtu)"
+  },
+  "activeWontSuspend": {
+    "message": "Aktīva – netiks apturēta"
+  },
+  "loading": {
+    "message": "Ielādē..."
+  },
+  "tabsInWindow": {
+    "message": "Cilnes šajā logā"
+  },
+  "loadingTabs": {
+    "message": "Ielādē cilnes..."
+  },
+  "noTabsFound": {
+    "message": "Cilnes nav atrastas"
+  },
+  "failedToLoad": {
+    "message": "Neizdevās ielādēt. Atveriet uznirstošo logu vēlreiz."
+  },
+  "badgeActive": {
+    "message": "Aktīva"
+  },
+  "badgeSystem": {
+    "message": "Sistēmas"
+  },
+  "badgePinned": {
+    "message": "Piesprausts"
+  },
+  "badgeAudio": {
+    "message": "Audio"
+  },
+  "badgeStarred": {
+    "message": "Ar zvaigznīti"
+  },
+  "badgeProtected": {
+    "message": "Aizsargāta"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Sesijas"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Sesijas nosaukums (neobligāts)"
+  },
+  "save": {
+    "message": "Saglabāt"
+  },
+  "emptySessionState": {
+    "message": "Saglabājiet savu pirmo sesiju, lai jebkurā laikā atjaunotu cilnes"
+  },
+  "open": {
+    "message": "Atvērt"
+  },
+  "openSessionTitle": {
+    "message": "Atvērt cilnes no šīs sesijas"
+  },
+  "deleteSessionTitle": {
+    "message": "Dzēst sesiju"
+  },
+  "sessionSaved": {
+    "message": "Sesija saglabāta!"
+  },
+  "failedToSave": {
+    "message": "Neizdevās saglabāt"
+  },
   "restoredTabs": {
     "message": "Atjaunotas $COUNT$ cilnes",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Neizdevās atjaunot" },
-  "noSessionsToExport": { "message": "Nav sesiju eksportēšanai" },
+  "failedToRestore": {
+    "message": "Neizdevās atjaunot"
+  },
+  "noSessionsToExport": {
+    "message": "Nav sesiju eksportēšanai"
+  },
   "copiedSessionsJson": {
     "message": "Kopētas $COUNT$ sesijas kā JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ cilnes",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statistika" },
-  "statToday": { "message": "Šodien" },
-  "statAllTime": { "message": "Kopā" },
-  "statRamSaved": { "message": "Ietaupītā RAM (aptuveni)" },
-  "statMemberSince": { "message": "Lietotājs kopš" },
-
-  "settings": { "message": "Iestatījumi" },
-  "autoSuspendAfter": { "message": "Automātiski apturēt pēc" },
-  "timer5min": { "message": "5 minūtēm" },
-  "timer10min": { "message": "10 minūtēm" },
-  "timer15min": { "message": "15 minūtēm" },
-  "timer30min": { "message": "30 minūtēm" },
-  "timer1hour": { "message": "1 stundas" },
-  "timer2hours": { "message": "2 stundām" },
-  "timer4hours": { "message": "4 stundām" },
-  "timerNever": { "message": "Nekad" },
-  "protectPinned": { "message": "Aizsargāt piespraustās cilnes" },
-  "protectAudio": { "message": "Aizsargāt cilnes ar audio" },
-  "protectForms": { "message": "Aizsargāt cilnes ar veidlapām" },
-  "suspendOnStartup": { "message": "Apturēt cilnes palaišanas laikā" },
-  "enableAutoSuspend": { "message": "Iespējot automātisku apturēšanu" },
-  "markSuspended": { "message": "Atzīmēt apturētās cilnes" },
-  "whitelistedSites": { "message": "Baltajā sarakstā iekļautās vietnes" },
-  "add": { "message": "Pievienot" },
-  "noSitesWhitelisted": { "message": "Nav vietņu baltajā sarakstā" },
-
-  "suspending": { "message": "Aptur..." },
-  "done": { "message": "Gatavs!" },
-  "waking": { "message": "Modina..." },
+  "stats": {
+    "message": "Statistika"
+  },
+  "statToday": {
+    "message": "Šodien"
+  },
+  "statAllTime": {
+    "message": "Kopā"
+  },
+  "statRamSaved": {
+    "message": "Ietaupītā RAM (aptuveni)"
+  },
+  "statMemberSince": {
+    "message": "Lietotājs kopš"
+  },
+  "settings": {
+    "message": "Iestatījumi"
+  },
+  "autoSuspendAfter": {
+    "message": "Automātiski apturēt pēc"
+  },
+  "timer5min": {
+    "message": "5 minūtēm"
+  },
+  "timer10min": {
+    "message": "10 minūtēm"
+  },
+  "timer15min": {
+    "message": "15 minūtēm"
+  },
+  "timer30min": {
+    "message": "30 minūtēm"
+  },
+  "timer1hour": {
+    "message": "1 stundas"
+  },
+  "timer2hours": {
+    "message": "2 stundām"
+  },
+  "timer4hours": {
+    "message": "4 stundām"
+  },
+  "timerNever": {
+    "message": "Nekad"
+  },
+  "protectPinned": {
+    "message": "Aizsargāt piespraustās cilnes"
+  },
+  "protectAudio": {
+    "message": "Aizsargāt cilnes ar audio"
+  },
+  "protectForms": {
+    "message": "Aizsargāt cilnes ar veidlapām"
+  },
+  "suspendOnStartup": {
+    "message": "Apturēt cilnes palaišanas laikā"
+  },
+  "enableAutoSuspend": {
+    "message": "Iespējot automātisku apturēšanu"
+  },
+  "markSuspended": {
+    "message": "Atzīmēt apturētās cilnes"
+  },
+  "whitelistedSites": {
+    "message": "Baltajā sarakstā iekļautās vietnes"
+  },
+  "add": {
+    "message": "Pievienot"
+  },
+  "noSitesWhitelisted": {
+    "message": "Nav vietņu baltajā sarakstā"
+  },
+  "suspending": {
+    "message": "Aptur..."
+  },
+  "done": {
+    "message": "Gatavs!"
+  },
+  "waking": {
+    "message": "Modina..."
+  },
   "copiedTabs": {
     "message": "Kopētas $COUNT$ cilnes starpliktuvē",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Neizdevās kopēt" },
-  "copyTabsTitle": { "message": "Kopēt ciļņu sarakstu starpliktuvē" },
-  "copySessionsTitle": { "message": "Kopēt visas sesijas kā JSON" },
-  "remove": { "message": "Noņemt" },
-
-  "switchToLight": { "message": "Pārslēgt uz gaišo režīmu" },
-  "switchToDark": { "message": "Pārslēgt uz tumšo režīmu" },
-
-  "ctxSuspendThis": { "message": "Apturēt šo cilni" },
-  "ctxSuspendOthers": { "message": "Apturēt visas pārējās cilnes" },
-  "ctxNeverSuspend": { "message": "Nekad neapturēt šo vietni" },
-
-  "maxSessionsReached": { "message": "Sasniegts maksimums – 20 sesijas. Dzēsiet vienu, lai saglabātu jaunu." },
-  "noSaveableTabs": { "message": "Šajā logā nav saglabājamu ciļņu." },
-  "sessionNotFound": { "message": "Sesija nav atrasta." },
-  "noRestorableTabs": { "message": "Šajā sesijā nav atjaunojamu ciļņu." },
+  "failedToCopy": {
+    "message": "Neizdevās kopēt"
+  },
+  "copyTabsTitle": {
+    "message": "Kopēt ciļņu sarakstu starpliktuvē"
+  },
+  "copySessionsTitle": {
+    "message": "Kopēt visas sesijas kā JSON"
+  },
+  "remove": {
+    "message": "Noņemt"
+  },
+  "switchToLight": {
+    "message": "Pārslēgt uz gaišo režīmu"
+  },
+  "switchToDark": {
+    "message": "Pārslēgt uz tumšo režīmu"
+  },
+  "ctxSuspendThis": {
+    "message": "Apturēt šo cilni"
+  },
+  "ctxSuspendOthers": {
+    "message": "Apturēt visas pārējās cilnes"
+  },
+  "ctxNeverSuspend": {
+    "message": "Nekad neapturēt šo vietni"
+  },
+  "maxSessionsReached": {
+    "message": "Sasniegts maksimums – 20 sesijas. Dzēsiet vienu, lai saglabātu jaunu."
+  },
+  "noSaveableTabs": {
+    "message": "Šajā logā nav saglabājamu ciļņu."
+  },
+  "sessionNotFound": {
+    "message": "Sesija nav atrasta."
+  },
+  "noRestorableTabs": {
+    "message": "Šajā sesijā nav atjaunojamu ciļņu."
+  },
   "sessionDefaultName": {
     "message": "Sesija – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "tikko" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "tikko"
+  },
   "minutesAgo": {
     "message": "pirms $COUNT$ min",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "pirms $COUNT$ st",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Vakar" },
+  "yesterday": {
+    "message": "Vakar"
+  },
   "daysAgo": {
     "message": "pirms $COUNT$ d",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Laipni lūdzam Drowzy" },
-  "onboardingIntro": { "message": "Drowzy taupa atmiņu, iemidzinot neaktīvās cilnes. Jūsu cilnes vienmēr ir drošībā – mēs izmantojam Chrome iebūvēto atmetiena API, tāpēc tās saglabājas pat tad, ja atinstalējat Drowzy." },
-  "howItWorks": { "message": "Kā tas darbojas" },
-  "featureAutoSuspend": { "message": "<strong>Cilnes, kas ir neaktīvas 30 minūtes,</strong> tiek automātiski apturētas" },
-  "featureZeroRam": { "message": "<strong>Apturētās cilnes neizmanto RAM,</strong> bet paliek ciļņu joslā" },
-  "featureClickToWake": { "message": "<strong>Noklikšķiniet uz jebkuras apturētas cilnes,</strong> lai to uzreiz pamodinātu" },
-  "featureProtected": { "message": "<strong>Aktīvās, piespraustās un audio cilnes</strong> nekad netiek aizskartas" },
-  "quickActions": { "message": "Ātrās darbības" },
-  "actionClickIcon": { "message": "Noklikšķiniet uz <strong>Drowzy ikonas</strong> rīkjoslā, lai redzētu visas cilnes" },
-  "actionAltS": { "message": "Nospiediet <kbd>Alt+S</kbd>, lai apturētu pašreizējo cilni" },
-  "actionAltShiftS": { "message": "Nospiediet <kbd>Alt+Shift+S</kbd>, lai apturētu visas pārējās cilnes" },
-  "actionAltW": { "message": "Nospiediet <kbd>Alt+W</kbd>, lai pamodinātu visas apturētās cilnes" },
-  "actionRightClick": { "message": "Ar peles labo pogu noklikšķiniet uz jebkuras lapas, lai ātri apturētu" },
-  "onboardingCta": { "message": "Drowzy jau darbojas. Atveriet dažas cilnes un izmēģiniet!" },
-  "onboardingBtn": { "message": "Sapratu, sākam" },
-
-  "privacyTitle": { "message": "Drowzy – Privātuma politika" },
-  "privacyUpdated": { "message": "Pēdējoreiz atjaunināts: 2026. gada februāris" },
-  "privacyShortTitle": { "message": "Īsā versija" },
-  "privacyShortText": { "message": "Drowzy neapkopo nekādus datus. Nav analītikas, nav izsekošanas, nav ārējo serveru. Viss paliek jūsu pārlūkprogrammā." },
-  "privacyStoredTitle": { "message": "Kas tiek saglabāts" },
-  "privacyStoredText": { "message": "Jūsu iestatījumi (apturēšanas taimeris, baltais saraksts, preferences) tiek saglabāti, izmantojot Chrome iebūvētās glabāšanas API: chrome.storage.sync iestatījumiem, kas seko jūsu Chrome profilam, chrome.storage.local statistikai un saglabātajām sesijām, un chrome.storage.session pagaidu datiem, piemēram, ciļņu laikspiedoliem. Nekas no tā netiek nosūtīts uz trešo pušu serveriem." },
-  "privacyPermissionsTitle": { "message": "Atļaujas" },
-  "privacyPermissionsIntro": { "message": "Drowzy izmanto šādas Chrome atļaujas:" },
-  "privacyPermTabs": { "message": "tabs – pārlūka ciļņu uzskaitīšana, apturēšana un atjaunošana" },
-  "privacyPermStorage": { "message": "storage – jūsu iestatījumu lokālā saglabāšana" },
-  "privacyPermAlarms": { "message": "alarms – periodiskas neaktīvo ciļņu pārbaudes" },
-  "privacyPermContextMenus": { "message": "contextMenus – labā klikšķa izvēlnes opcijas" },
-  "privacyContactTitle": { "message": "Kontakti" },
-  "privacyContactText": { "message": "Jautājumi? Sazinieties ar mums: drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Laipni lūdzam Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy taupa atmiņu, iemidzinot neaktīvās cilnes. Jūsu cilnes vienmēr ir drošībā – mēs izmantojam Chrome iebūvēto atmetiena API, tāpēc tās saglabājas pat tad, ja atinstalējat Drowzy."
+  },
+  "howItWorks": {
+    "message": "Kā tas darbojas"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Cilnes, kas ir neaktīvas 30 minūtes,</strong> tiek automātiski apturētas"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Apturētās cilnes neizmanto RAM,</strong> bet paliek ciļņu joslā"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Noklikšķiniet uz jebkuras apturētas cilnes,</strong> lai to uzreiz pamodinātu"
+  },
+  "featureProtected": {
+    "message": "<strong>Aktīvās, piespraustās un audio cilnes</strong> nekad netiek aizskartas"
+  },
+  "quickActions": {
+    "message": "Ātrās darbības"
+  },
+  "actionClickIcon": {
+    "message": "Noklikšķiniet uz <strong>Drowzy ikonas</strong> rīkjoslā, lai redzētu visas cilnes"
+  },
+  "actionAltS": {
+    "message": "Nospiediet <kbd>Alt+S</kbd>, lai apturētu pašreizējo cilni"
+  },
+  "actionAltShiftS": {
+    "message": "Nospiediet <kbd>Alt+Shift+S</kbd>, lai apturētu visas pārējās cilnes"
+  },
+  "actionAltW": {
+    "message": "Nospiediet <kbd>Alt+W</kbd>, lai pamodinātu visas apturētās cilnes"
+  },
+  "actionRightClick": {
+    "message": "Ar peles labo pogu noklikšķiniet uz jebkuras lapas, lai ātri apturētu"
+  },
+  "onboardingCta": {
+    "message": "Drowzy jau darbojas. Atveriet dažas cilnes un izmēģiniet!"
+  },
+  "onboardingBtn": {
+    "message": "Sapratu, sākam"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Privātuma politika"
+  },
+  "privacyUpdated": {
+    "message": "Pēdējoreiz atjaunināts: 2026. gada februāris"
+  },
+  "privacyShortTitle": {
+    "message": "Īsā versija"
+  },
+  "privacyShortText": {
+    "message": "Drowzy neapkopo nekādus datus. Nav analītikas, nav izsekošanas, nav ārējo serveru. Viss paliek jūsu pārlūkprogrammā."
+  },
+  "privacyStoredTitle": {
+    "message": "Kas tiek saglabāts"
+  },
+  "privacyStoredText": {
+    "message": "Jūsu iestatījumi (apturēšanas taimeris, baltais saraksts, preferences) tiek saglabāti, izmantojot Chrome iebūvētās glabāšanas API: chrome.storage.sync iestatījumiem, kas seko jūsu Chrome profilam, chrome.storage.local statistikai un saglabātajām sesijām, un chrome.storage.session pagaidu datiem, piemēram, ciļņu laikspiedoliem. Nekas no tā netiek nosūtīts uz trešo pušu serveriem."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Atļaujas"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy izmanto šādas Chrome atļaujas:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – pārlūka ciļņu uzskaitīšana, apturēšana un atjaunošana"
+  },
+  "privacyPermStorage": {
+    "message": "storage – jūsu iestatījumu lokālā saglabāšana"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – periodiskas neaktīvo ciļņu pārbaudes"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – labā klikšķa izvēlnes opcijas"
+  },
+  "privacyContactTitle": {
+    "message": "Kontakti"
+  },
+  "privacyContactText": {
+    "message": "Jautājumi? Sazinieties ar mums: drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Aizvietot"
+  },
+  "replaceSessionTitle": {
+    "message": "Aizvietot pašreizējās cilnes ar šo sesiju"
+  },
+  "invalidDomain": {
+    "message": "Ievadiet derīgu domēnu (piem. example.com)"
+  },
+  "extensionPage": {
+    "message": "Paplašinājuma lapa"
+  },
+  "exportWhitelist": {
+    "message": "Eksportēt"
+  },
+  "importWhitelist": {
+    "message": "Importēt"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopēt balto sarakstu"
+  },
+  "importWhitelistTitle": {
+    "message": "Importēt balto sarakstu no starpliktuves"
+  },
+  "copiedSites": {
+    "message": "Nokopēts(-i) $COUNT$ vietne(-es)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Importēts(-i) $COUNT$ jauna(-as) vietne(-es)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Starpliktuvē nav atrasti derīgi domēni"
+  },
+  "clipboardReadFailed": {
+    "message": "Neizdevās nolasīt starpliktuvi"
+  },
+  "enjoyingDrowzy": {
+    "message": "Vai Drowzy patīk?"
+  },
+  "reviewYes": {
+    "message": "Jā!"
+  },
+  "reviewNo": {
+    "message": "Ne īsti"
+  },
+  "whatsNew": {
+    "message": "Kas jauns v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Kas jauns Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Kas jauns"
+  },
+  "changelogVersion": {
+    "message": "Versija 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Jaunas iespējas"
+  },
+  "changelogBugFixes": {
+    "message": "Kļūdu labojumi"
+  },
+  "changelogImprovements": {
+    "message": "Uzlabojumi"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Atsauksmes pieprasījums"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Pēc dažu ciļņu apturēšanas Drowzy pajautās, vai jums patīk. Ātrs īkšķis uz augšu mums ļoti palīdz!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Izmaiņu lapa"
+  },
+  "changelogChangelogDesc": {
+    "message": "Jūs to skatāt! Atveras automātiski, atjauninot. Pieejams no Iestatījumiem."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Sesijas atjaunošanas laiks"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Atjaunotās cilnes vairs netiek nekavējoties automātiski apturētas. Tagad tās pareizi atiestata savus dīkstāves taimerus."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Veidlapas pārbaudes noildze"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Veidlapas datu pārbaudei tagad ir 500ms noildze, tāpēc nereaģējošas cilnes nevar bloķēt rindu."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Baltā saraksta dublikāti"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Novērsta lielo un mazo burtu jutības problēma, kur \"Example.com\" un \"example.com\" varēja pievienot abus. Visi ieraksti tagad ir normalizēti."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Reāllaika statistika"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Uznirstošais logs tagad automātiski atjauninās, kad cilnes tiek apturētas vai pamodinātas."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Sesijas atjaunošanas opcijas"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Sesijām tagad ir atseviškas pogas \"Atvērt\" un \"Aizvietot\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Baltā saraksta validācija un eksports/imports"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Baltā saraksta ievade tagad validē domēnus. Jūs varat eksportēt un importēt caur starpliktuvi."
+  },
+  "changelogA11yTitle": {
+    "message": "Pieejamība"
+  },
+  "changelogA11yDesc": {
+    "message": "Ciļņu saraksta elementi tagad ir navigējami ar tastatūru ar ARIA lomām. Paziņojumi tiek paziņoti ekrāna lasītājiem."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Vienmērīgākas animācijas"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Ciļņu saraksta pakāpeniskās animācijas tagad ir ierobežotas, lai logi ar daudzām cilnēm neradītu ilgu aizkavi."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy ir bezmaksas un atvērtā koda. Ja tas ietaupa atmiņu, atstājiet atsauksmi vai zvaigznīti GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Atstāt atsauksmi"
+  },
+  "changelogStarBtn": {
+    "message": "Zvaigznīte GitHub"
+  }
 }

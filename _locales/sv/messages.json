@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Väck alla suspenderade flikar"
   },
-
-  "statSleeping": { "message": "sover" },
-  "statProtected": { "message": "skyddade" },
-  "statSaved": { "message": "sparat" },
-
-  "suspendOthers": { "message": "Suspendera andra" },
-  "wakeAll": { "message": "Väck alla" },
-
-  "neverSuspendSite": { "message": "Suspendera aldrig denna webbplats" },
-  "siteWhitelisted": { "message": "Webbplatsen är vitlistad (klicka för att ta bort)" },
-  "activeWontSuspend": { "message": "Aktiv – kommer inte att suspenderas" },
-  "loading": { "message": "Laddar..." },
-
-  "tabsInWindow": { "message": "Flikar i detta fönster" },
-  "loadingTabs": { "message": "Laddar flikar..." },
-  "noTabsFound": { "message": "Inga flikar hittades" },
-  "failedToLoad": { "message": "Kunde inte ladda. Öppna popup igen för att försöka igen." },
-
-  "badgeActive": { "message": "Aktiv" },
-  "badgeSystem": { "message": "System" },
-  "badgePinned": { "message": "Fäst" },
-  "badgeAudio": { "message": "Ljud" },
-  "badgeStarred": { "message": "Stjärnmärkt" },
-  "badgeProtected": { "message": "Skyddad" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Sessioner" },
-  "sessionNamePlaceholder": { "message": "Sessionsnamn (valfritt)" },
-  "save": { "message": "Spara" },
-  "emptySessionState": { "message": "Spara din första session för att återställa flikar när som helst" },
-  "open": { "message": "Öppna" },
-  "openSessionTitle": { "message": "Öppna flikar från denna session" },
-  "deleteSessionTitle": { "message": "Radera session" },
-  "sessionSaved": { "message": "Session sparad!" },
-  "failedToSave": { "message": "Kunde inte spara" },
+  "statSleeping": {
+    "message": "sover"
+  },
+  "statProtected": {
+    "message": "skyddade"
+  },
+  "statSaved": {
+    "message": "sparat"
+  },
+  "suspendOthers": {
+    "message": "Suspendera andra"
+  },
+  "wakeAll": {
+    "message": "Väck alla"
+  },
+  "neverSuspendSite": {
+    "message": "Suspendera aldrig denna webbplats"
+  },
+  "siteWhitelisted": {
+    "message": "Webbplatsen är vitlistad (klicka för att ta bort)"
+  },
+  "activeWontSuspend": {
+    "message": "Aktiv – kommer inte att suspenderas"
+  },
+  "loading": {
+    "message": "Laddar..."
+  },
+  "tabsInWindow": {
+    "message": "Flikar i detta fönster"
+  },
+  "loadingTabs": {
+    "message": "Laddar flikar..."
+  },
+  "noTabsFound": {
+    "message": "Inga flikar hittades"
+  },
+  "failedToLoad": {
+    "message": "Kunde inte ladda. Öppna popup igen för att försöka igen."
+  },
+  "badgeActive": {
+    "message": "Aktiv"
+  },
+  "badgeSystem": {
+    "message": "System"
+  },
+  "badgePinned": {
+    "message": "Fäst"
+  },
+  "badgeAudio": {
+    "message": "Ljud"
+  },
+  "badgeStarred": {
+    "message": "Stjärnmärkt"
+  },
+  "badgeProtected": {
+    "message": "Skyddad"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Sessioner"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Sessionsnamn (valfritt)"
+  },
+  "save": {
+    "message": "Spara"
+  },
+  "emptySessionState": {
+    "message": "Spara din första session för att återställa flikar när som helst"
+  },
+  "open": {
+    "message": "Öppna"
+  },
+  "openSessionTitle": {
+    "message": "Öppna flikar från denna session"
+  },
+  "deleteSessionTitle": {
+    "message": "Radera session"
+  },
+  "sessionSaved": {
+    "message": "Session sparad!"
+  },
+  "failedToSave": {
+    "message": "Kunde inte spara"
+  },
   "restoredTabs": {
     "message": "$COUNT$ flikar återställda",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Kunde inte återställa" },
-  "noSessionsToExport": { "message": "Inga sessioner att exportera" },
+  "failedToRestore": {
+    "message": "Kunde inte återställa"
+  },
+  "noSessionsToExport": {
+    "message": "Inga sessioner att exportera"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ sessioner kopierade som JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ flikar",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statistik" },
-  "statToday": { "message": "Idag" },
-  "statAllTime": { "message": "Totalt" },
-  "statRamSaved": { "message": "RAM sparat (uppsk.)" },
-  "statMemberSince": { "message": "Medlem sedan" },
-
-  "settings": { "message": "Inställningar" },
-  "autoSuspendAfter": { "message": "Suspendera automatiskt efter" },
-  "timer5min": { "message": "5 minuter" },
-  "timer10min": { "message": "10 minuter" },
-  "timer15min": { "message": "15 minuter" },
-  "timer30min": { "message": "30 minuter" },
-  "timer1hour": { "message": "1 timme" },
-  "timer2hours": { "message": "2 timmar" },
-  "timer4hours": { "message": "4 timmar" },
-  "timerNever": { "message": "Aldrig" },
-  "protectPinned": { "message": "Skydda fästa flikar" },
-  "protectAudio": { "message": "Skydda flikar med ljud" },
-  "protectForms": { "message": "Skydda flikar med formulär" },
-  "suspendOnStartup": { "message": "Suspendera flikar vid uppstart" },
-  "enableAutoSuspend": { "message": "Aktivera autosuspendering" },
-  "markSuspended": { "message": "Markera suspenderade flikar" },
-  "whitelistedSites": { "message": "Vitlistade webbplatser" },
-  "add": { "message": "Lägg till" },
-  "noSitesWhitelisted": { "message": "Inga webbplatser vitlistade" },
-
-  "suspending": { "message": "Suspenderar..." },
-  "done": { "message": "Klart!" },
-  "waking": { "message": "Väcker..." },
+  "stats": {
+    "message": "Statistik"
+  },
+  "statToday": {
+    "message": "Idag"
+  },
+  "statAllTime": {
+    "message": "Totalt"
+  },
+  "statRamSaved": {
+    "message": "RAM sparat (uppsk.)"
+  },
+  "statMemberSince": {
+    "message": "Medlem sedan"
+  },
+  "settings": {
+    "message": "Inställningar"
+  },
+  "autoSuspendAfter": {
+    "message": "Suspendera automatiskt efter"
+  },
+  "timer5min": {
+    "message": "5 minuter"
+  },
+  "timer10min": {
+    "message": "10 minuter"
+  },
+  "timer15min": {
+    "message": "15 minuter"
+  },
+  "timer30min": {
+    "message": "30 minuter"
+  },
+  "timer1hour": {
+    "message": "1 timme"
+  },
+  "timer2hours": {
+    "message": "2 timmar"
+  },
+  "timer4hours": {
+    "message": "4 timmar"
+  },
+  "timerNever": {
+    "message": "Aldrig"
+  },
+  "protectPinned": {
+    "message": "Skydda fästa flikar"
+  },
+  "protectAudio": {
+    "message": "Skydda flikar med ljud"
+  },
+  "protectForms": {
+    "message": "Skydda flikar med formulär"
+  },
+  "suspendOnStartup": {
+    "message": "Suspendera flikar vid uppstart"
+  },
+  "enableAutoSuspend": {
+    "message": "Aktivera autosuspendering"
+  },
+  "markSuspended": {
+    "message": "Markera suspenderade flikar"
+  },
+  "whitelistedSites": {
+    "message": "Vitlistade webbplatser"
+  },
+  "add": {
+    "message": "Lägg till"
+  },
+  "noSitesWhitelisted": {
+    "message": "Inga webbplatser vitlistade"
+  },
+  "suspending": {
+    "message": "Suspenderar..."
+  },
+  "done": {
+    "message": "Klart!"
+  },
+  "waking": {
+    "message": "Väcker..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ flikar kopierade till urklipp",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Kunde inte kopiera" },
-  "copyTabsTitle": { "message": "Kopiera fliklista till urklipp" },
-  "copySessionsTitle": { "message": "Kopiera alla sessioner som JSON" },
-  "remove": { "message": "Ta bort" },
-
-  "switchToLight": { "message": "Byt till ljust läge" },
-  "switchToDark": { "message": "Byt till mörkt läge" },
-
-  "ctxSuspendThis": { "message": "Suspendera denna flik" },
-  "ctxSuspendOthers": { "message": "Suspendera alla andra flikar" },
-  "ctxNeverSuspend": { "message": "Suspendera aldrig denna webbplats" },
-
-  "maxSessionsReached": { "message": "Max 20 sessioner uppnått. Radera en för att spara en ny." },
-  "noSaveableTabs": { "message": "Inga flikar att spara i detta fönster." },
-  "sessionNotFound": { "message": "Sessionen hittades inte." },
-  "noRestorableTabs": { "message": "Inga flikar att återställa i denna session." },
+  "failedToCopy": {
+    "message": "Kunde inte kopiera"
+  },
+  "copyTabsTitle": {
+    "message": "Kopiera fliklista till urklipp"
+  },
+  "copySessionsTitle": {
+    "message": "Kopiera alla sessioner som JSON"
+  },
+  "remove": {
+    "message": "Ta bort"
+  },
+  "switchToLight": {
+    "message": "Byt till ljust läge"
+  },
+  "switchToDark": {
+    "message": "Byt till mörkt läge"
+  },
+  "ctxSuspendThis": {
+    "message": "Suspendera denna flik"
+  },
+  "ctxSuspendOthers": {
+    "message": "Suspendera alla andra flikar"
+  },
+  "ctxNeverSuspend": {
+    "message": "Suspendera aldrig denna webbplats"
+  },
+  "maxSessionsReached": {
+    "message": "Max 20 sessioner uppnått. Radera en för att spara en ny."
+  },
+  "noSaveableTabs": {
+    "message": "Inga flikar att spara i detta fönster."
+  },
+  "sessionNotFound": {
+    "message": "Sessionen hittades inte."
+  },
+  "noRestorableTabs": {
+    "message": "Inga flikar att återställa i denna session."
+  },
   "sessionDefaultName": {
     "message": "Session – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "just nu" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "just nu"
+  },
   "minutesAgo": {
     "message": "$COUNT$ min sedan",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ tim sedan",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Igår" },
+  "yesterday": {
+    "message": "Igår"
+  },
   "daysAgo": {
     "message": "$COUNT$ d sedan",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Välkommen till Drowzy" },
-  "onboardingIntro": { "message": "Drowzy sparar minne genom att lägga inaktiva flikar i viloläge. Dina flikar är alltid säkra – vi använder Chromes inbyggda API för att kassera flikar, så de överlever även om du avinstallerar Drowzy." },
-  "howItWorks": { "message": "Så fungerar det" },
-  "featureAutoSuspend": { "message": "<strong>Flikar inaktiva i 30 minuter</strong> suspenderas automatiskt" },
-  "featureZeroRam": { "message": "<strong>Suspenderade flikar använder noll RAM</strong> men finns kvar i flikfältet" },
-  "featureClickToWake": { "message": "<strong>Klicka på valfri suspenderad flik</strong> för att omedelbart väcka den" },
-  "featureProtected": { "message": "<strong>Aktiva, fästa och flikar med ljud</strong> påverkas aldrig" },
-  "quickActions": { "message": "Snabbåtgärder" },
-  "actionClickIcon": { "message": "Klicka på <strong>Drowzy-ikonen</strong> i verktygsfältet för att se alla dina flikar" },
-  "actionAltS": { "message": "Tryck <kbd>Alt+S</kbd> för att suspendera aktuell flik" },
-  "actionAltShiftS": { "message": "Tryck <kbd>Alt+Shift+S</kbd> för att suspendera alla andra flikar" },
-  "actionAltW": { "message": "Tryck <kbd>Alt+W</kbd> för att väcka alla suspenderade flikar" },
-  "actionRightClick": { "message": "Högerklicka på valfri sida för snabba suspenderingsalternativ" },
-  "onboardingCta": { "message": "Drowzy körs redan. Öppna några flikar och testa!" },
-  "onboardingBtn": { "message": "Uppfattat, kör igång" },
-
-  "privacyTitle": { "message": "Drowzy – Integritetspolicy" },
-  "privacyUpdated": { "message": "Senast uppdaterad: februari 2026" },
-  "privacyShortTitle": { "message": "Kortversionen" },
-  "privacyShortText": { "message": "Drowzy samlar inte in någon data. Ingen analys, ingen spårning, inga externa servrar. Allt stannar i din webbläsare." },
-  "privacyStoredTitle": { "message": "Vad som lagras" },
-  "privacyStoredText": { "message": "Dina inställningar (suspenderingstimer, vitlista, preferenser) sparas med Chromes inbyggda lagrings-API:er: chrome.storage.sync för inställningar som följer din Chrome-profil, chrome.storage.local för statistik och sparade sessioner, och chrome.storage.session för tillfällig data som flikars tidsstämplar. Inget av detta skickas till någon tredjepartsserver." },
-  "privacyPermissionsTitle": { "message": "Behörigheter" },
-  "privacyPermissionsIntro": { "message": "Drowzy använder dessa Chrome-behörigheter:" },
-  "privacyPermTabs": { "message": "tabs – lista, suspendera och återställa webbläsarflikar" },
-  "privacyPermStorage": { "message": "storage – spara dina inställningar lokalt" },
-  "privacyPermAlarms": { "message": "alarms – periodiska kontroller av inaktiva flikar" },
-  "privacyPermContextMenus": { "message": "contextMenus – högerklicksalternativ" },
-  "privacyContactTitle": { "message": "Kontakt" },
-  "privacyContactText": { "message": "Frågor? Kontakta oss på drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Välkommen till Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy sparar minne genom att lägga inaktiva flikar i viloläge. Dina flikar är alltid säkra – vi använder Chromes inbyggda API för att kassera flikar, så de överlever även om du avinstallerar Drowzy."
+  },
+  "howItWorks": {
+    "message": "Så fungerar det"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Flikar inaktiva i 30 minuter</strong> suspenderas automatiskt"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Suspenderade flikar använder noll RAM</strong> men finns kvar i flikfältet"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Klicka på valfri suspenderad flik</strong> för att omedelbart väcka den"
+  },
+  "featureProtected": {
+    "message": "<strong>Aktiva, fästa och flikar med ljud</strong> påverkas aldrig"
+  },
+  "quickActions": {
+    "message": "Snabbåtgärder"
+  },
+  "actionClickIcon": {
+    "message": "Klicka på <strong>Drowzy-ikonen</strong> i verktygsfältet för att se alla dina flikar"
+  },
+  "actionAltS": {
+    "message": "Tryck <kbd>Alt+S</kbd> för att suspendera aktuell flik"
+  },
+  "actionAltShiftS": {
+    "message": "Tryck <kbd>Alt+Shift+S</kbd> för att suspendera alla andra flikar"
+  },
+  "actionAltW": {
+    "message": "Tryck <kbd>Alt+W</kbd> för att väcka alla suspenderade flikar"
+  },
+  "actionRightClick": {
+    "message": "Högerklicka på valfri sida för snabba suspenderingsalternativ"
+  },
+  "onboardingCta": {
+    "message": "Drowzy körs redan. Öppna några flikar och testa!"
+  },
+  "onboardingBtn": {
+    "message": "Uppfattat, kör igång"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Integritetspolicy"
+  },
+  "privacyUpdated": {
+    "message": "Senast uppdaterad: februari 2026"
+  },
+  "privacyShortTitle": {
+    "message": "Kortversionen"
+  },
+  "privacyShortText": {
+    "message": "Drowzy samlar inte in någon data. Ingen analys, ingen spårning, inga externa servrar. Allt stannar i din webbläsare."
+  },
+  "privacyStoredTitle": {
+    "message": "Vad som lagras"
+  },
+  "privacyStoredText": {
+    "message": "Dina inställningar (suspenderingstimer, vitlista, preferenser) sparas med Chromes inbyggda lagrings-API:er: chrome.storage.sync för inställningar som följer din Chrome-profil, chrome.storage.local för statistik och sparade sessioner, och chrome.storage.session för tillfällig data som flikars tidsstämplar. Inget av detta skickas till någon tredjepartsserver."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Behörigheter"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy använder dessa Chrome-behörigheter:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – lista, suspendera och återställa webbläsarflikar"
+  },
+  "privacyPermStorage": {
+    "message": "storage – spara dina inställningar lokalt"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – periodiska kontroller av inaktiva flikar"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – högerklicksalternativ"
+  },
+  "privacyContactTitle": {
+    "message": "Kontakt"
+  },
+  "privacyContactText": {
+    "message": "Frågor? Kontakta oss på drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Ersätt"
+  },
+  "replaceSessionTitle": {
+    "message": "Ersätt nuvarande flikar med denna session"
+  },
+  "invalidDomain": {
+    "message": "Ange en giltig domän (t.ex. example.com)"
+  },
+  "extensionPage": {
+    "message": "Tilläggssida"
+  },
+  "exportWhitelist": {
+    "message": "Exportera"
+  },
+  "importWhitelist": {
+    "message": "Importera"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopiera vitlista"
+  },
+  "importWhitelistTitle": {
+    "message": "Importera vitlista från urklipp"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ webbplats(er) kopierad(e)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ ny(a) webbplats(er) importerad(e)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Inga giltiga domäner hittades i urklipp"
+  },
+  "clipboardReadFailed": {
+    "message": "Kunde inte läsa urklipp"
+  },
+  "enjoyingDrowzy": {
+    "message": "Gillar du Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ja!"
+  },
+  "reviewNo": {
+    "message": "Inte riktigt"
+  },
+  "whatsNew": {
+    "message": "Nyheter i v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Nyheter i Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Nyheter"
+  },
+  "changelogVersion": {
+    "message": "Version 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Nya funktioner"
+  },
+  "changelogBugFixes": {
+    "message": "Buggfixar"
+  },
+  "changelogImprovements": {
+    "message": "Förbättringar"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Omdömesförfrågan"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Efter att du har pausat några flikar kommer Drowzy fråga om du gillar den. Ett snabbt tummen upp hjälper oss mycket!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Ändringsloggsida"
+  },
+  "changelogChangelogDesc": {
+    "message": "Du tittar på den nu! Öppnas automatiskt vid uppdatering. Tillgänglig från Inställningar."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Sessionsåterställningstiming"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Återställda flikar pausas inte längre automatiskt omedelbart. De återställer nu korrekt sina inaktivitetstimrar."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Timeout för formulärkontroll"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Formulärkontrollen har nu en 500ms timeout så att flikar som inte svarar inte kan blockera kön."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Vitlisteduplikat"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Fixade problem med skiftlägeskänslighet där \"Example.com\" och \"example.com\" båda kunde läggas till. Alla poster normaliseras nu."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Realtidsstatistik"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Popup uppdateras nu automatiskt när flikar pausas eller vaknar."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Alternativ för sessionsåterställning"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Sessioner har nu separata knappar \"Öppna\" och \"Ersätt\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Vitlistevalidering och export/import"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Vitlisteinmatningen validerar nu domäner. Du kan exportera och importera via urklipp."
+  },
+  "changelogA11yTitle": {
+    "message": "Tillgänglighet"
+  },
+  "changelogA11yDesc": {
+    "message": "Fliklisteobjekt kan nu navigeras med tangentbordet med ARIA-roller. Aviseringar meddelas till skärmläsare."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Jämnare animationer"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Stegade animationer är nu begränsade så att fönster med många flikar inte har en lång kaskadförsening."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy är gratis och öppen källkod. Om det sparar minne, överväg att lämna ett omdöme eller en stjärna på GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Lämna ett omdöme"
+  },
+  "changelogStarBtn": {
+    "message": "Stjärna på GitHub"
+  }
 }

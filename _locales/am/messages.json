@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "ሁሉንም የተቋረጡ ትሮች ቀስቅስ"
   },
-
-  "statSleeping": { "message": "እየተኛ" },
-  "statProtected": { "message": "የተጠበቀ" },
-  "statSaved": { "message": "የተቆጠበ" },
-
-  "suspendOthers": { "message": "ሌሎችን አቋርጥ" },
-  "wakeAll": { "message": "ሁሉንም ቀስቅስ" },
-
-  "neverSuspendSite": { "message": "ይህን ጣቢያ ፈጽሞ አታቋርጥ" },
-  "siteWhitelisted": { "message": "ጣቢያው በነጭ ዝርዝር ውስጥ ነው (ለማስወገድ ጠቅ ያድርጉ)" },
-  "activeWontSuspend": { "message": "ንቁ – አይቋረጥም" },
-  "loading": { "message": "በመጫን ላይ..." },
-
-  "tabsInWindow": { "message": "በዚህ መስኮት ውስጥ ያሉ ትሮች" },
-  "loadingTabs": { "message": "ትሮችን በመጫን ላይ..." },
-  "noTabsFound": { "message": "ምንም ትሮች አልተገኙም" },
-  "failedToLoad": { "message": "መጫን አልተሳካም። እንደገና ለመሞከር ብቅ-ባዩን እንደገና ይክፈቱ።" },
-
-  "badgeActive": { "message": "ንቁ" },
-  "badgeSystem": { "message": "ስርዓት" },
-  "badgePinned": { "message": "የተሰካ" },
-  "badgeAudio": { "message": "ድምጽ" },
-  "badgeStarred": { "message": "በኮከብ የተመለከተ" },
-  "badgeProtected": { "message": "የተጠበቀ" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "ክፍለ ጊዜዎች" },
-  "sessionNamePlaceholder": { "message": "የክፍለ ጊዜ ስም (አማራጭ)" },
-  "save": { "message": "አስቀምጥ" },
-  "emptySessionState": { "message": "ትሮችን በማንኛውም ጊዜ ለመመለስ የመጀመሪያ ክፍለ ጊዜዎን ያስቀምጡ" },
-  "open": { "message": "ክፈት" },
-  "openSessionTitle": { "message": "ከዚህ ክፍለ ጊዜ ትሮችን ክፈት" },
-  "deleteSessionTitle": { "message": "ክፍለ ጊዜን ሰርዝ" },
-  "sessionSaved": { "message": "ክፍለ ጊዜ ተቀምጧል!" },
-  "failedToSave": { "message": "ማስቀመጥ አልተሳካም" },
+  "statSleeping": {
+    "message": "እየተኛ"
+  },
+  "statProtected": {
+    "message": "የተጠበቀ"
+  },
+  "statSaved": {
+    "message": "የተቆጠበ"
+  },
+  "suspendOthers": {
+    "message": "ሌሎችን አቋርጥ"
+  },
+  "wakeAll": {
+    "message": "ሁሉንም ቀስቅስ"
+  },
+  "neverSuspendSite": {
+    "message": "ይህን ጣቢያ ፈጽሞ አታቋርጥ"
+  },
+  "siteWhitelisted": {
+    "message": "ጣቢያው በነጭ ዝርዝር ውስጥ ነው (ለማስወገድ ጠቅ ያድርጉ)"
+  },
+  "activeWontSuspend": {
+    "message": "ንቁ – አይቋረጥም"
+  },
+  "loading": {
+    "message": "በመጫን ላይ..."
+  },
+  "tabsInWindow": {
+    "message": "በዚህ መስኮት ውስጥ ያሉ ትሮች"
+  },
+  "loadingTabs": {
+    "message": "ትሮችን በመጫን ላይ..."
+  },
+  "noTabsFound": {
+    "message": "ምንም ትሮች አልተገኙም"
+  },
+  "failedToLoad": {
+    "message": "መጫን አልተሳካም። እንደገና ለመሞከር ብቅ-ባዩን እንደገና ይክፈቱ።"
+  },
+  "badgeActive": {
+    "message": "ንቁ"
+  },
+  "badgeSystem": {
+    "message": "ስርዓት"
+  },
+  "badgePinned": {
+    "message": "የተሰካ"
+  },
+  "badgeAudio": {
+    "message": "ድምጽ"
+  },
+  "badgeStarred": {
+    "message": "በኮከብ የተመለከተ"
+  },
+  "badgeProtected": {
+    "message": "የተጠበቀ"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "ክፍለ ጊዜዎች"
+  },
+  "sessionNamePlaceholder": {
+    "message": "የክፍለ ጊዜ ስም (አማራጭ)"
+  },
+  "save": {
+    "message": "አስቀምጥ"
+  },
+  "emptySessionState": {
+    "message": "ትሮችን በማንኛውም ጊዜ ለመመለስ የመጀመሪያ ክፍለ ጊዜዎን ያስቀምጡ"
+  },
+  "open": {
+    "message": "ክፈት"
+  },
+  "openSessionTitle": {
+    "message": "ከዚህ ክፍለ ጊዜ ትሮችን ክፈት"
+  },
+  "deleteSessionTitle": {
+    "message": "ክፍለ ጊዜን ሰርዝ"
+  },
+  "sessionSaved": {
+    "message": "ክፍለ ጊዜ ተቀምጧል!"
+  },
+  "failedToSave": {
+    "message": "ማስቀመጥ አልተሳካም"
+  },
   "restoredTabs": {
     "message": "$COUNT$ ትሮች ተመልሰዋል",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "መመለስ አልተሳካም" },
-  "noSessionsToExport": { "message": "ለመላክ ክፍለ ጊዜዎች የሉም" },
+  "failedToRestore": {
+    "message": "መመለስ አልተሳካም"
+  },
+  "noSessionsToExport": {
+    "message": "ለመላክ ክፍለ ጊዜዎች የሉም"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ ክፍለ ጊዜዎች በJSON ተቀድተዋል",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ ትሮች",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "ስታቲስቲክስ" },
-  "statToday": { "message": "ዛሬ" },
-  "statAllTime": { "message": "ሁል ጊዜ" },
-  "statRamSaved": { "message": "የተቆጠበ RAM (ግምት)" },
-  "statMemberSince": { "message": "አባል ከ" },
-
-  "settings": { "message": "ቅንብሮች" },
-  "autoSuspendAfter": { "message": "ከዚህ በኋላ በራስ-ሰር አቋርጥ" },
-  "timer5min": { "message": "5 ደቂቃዎች" },
-  "timer10min": { "message": "10 ደቂቃዎች" },
-  "timer15min": { "message": "15 ደቂቃዎች" },
-  "timer30min": { "message": "30 ደቂቃዎች" },
-  "timer1hour": { "message": "1 ሰዓት" },
-  "timer2hours": { "message": "2 ሰዓታት" },
-  "timer4hours": { "message": "4 ሰዓታት" },
-  "timerNever": { "message": "በጭራሽ" },
-  "protectPinned": { "message": "የተሰኩ ትሮችን ጠብቅ" },
-  "protectAudio": { "message": "የድምጽ ትሮችን ጠብቅ" },
-  "protectForms": { "message": "ቅጾች ያላቸውን ትሮች ጠብቅ" },
-  "suspendOnStartup": { "message": "በሚጀምርበት ጊዜ ትሮችን አቋርጥ" },
-  "enableAutoSuspend": { "message": "በራስ-ሰር ማቋረጥን አንቃ" },
-  "markSuspended": { "message": "የተቋረጡ ትሮችን ምልክት አድርግ" },
-  "whitelistedSites": { "message": "በነጭ ዝርዝር ውስጥ ያሉ ጣቢያዎች" },
-  "add": { "message": "ጨምር" },
-  "noSitesWhitelisted": { "message": "በነጭ ዝርዝር ውስጥ ያሉ ጣቢያዎች የሉም" },
-
-  "suspending": { "message": "በማቋረጥ ላይ..." },
-  "done": { "message": "ተከናውኗል!" },
-  "waking": { "message": "በመቀስቀስ ላይ..." },
+  "stats": {
+    "message": "ስታቲስቲክስ"
+  },
+  "statToday": {
+    "message": "ዛሬ"
+  },
+  "statAllTime": {
+    "message": "ሁል ጊዜ"
+  },
+  "statRamSaved": {
+    "message": "የተቆጠበ RAM (ግምት)"
+  },
+  "statMemberSince": {
+    "message": "አባል ከ"
+  },
+  "settings": {
+    "message": "ቅንብሮች"
+  },
+  "autoSuspendAfter": {
+    "message": "ከዚህ በኋላ በራስ-ሰር አቋርጥ"
+  },
+  "timer5min": {
+    "message": "5 ደቂቃዎች"
+  },
+  "timer10min": {
+    "message": "10 ደቂቃዎች"
+  },
+  "timer15min": {
+    "message": "15 ደቂቃዎች"
+  },
+  "timer30min": {
+    "message": "30 ደቂቃዎች"
+  },
+  "timer1hour": {
+    "message": "1 ሰዓት"
+  },
+  "timer2hours": {
+    "message": "2 ሰዓታት"
+  },
+  "timer4hours": {
+    "message": "4 ሰዓታት"
+  },
+  "timerNever": {
+    "message": "በጭራሽ"
+  },
+  "protectPinned": {
+    "message": "የተሰኩ ትሮችን ጠብቅ"
+  },
+  "protectAudio": {
+    "message": "የድምጽ ትሮችን ጠብቅ"
+  },
+  "protectForms": {
+    "message": "ቅጾች ያላቸውን ትሮች ጠብቅ"
+  },
+  "suspendOnStartup": {
+    "message": "በሚጀምርበት ጊዜ ትሮችን አቋርጥ"
+  },
+  "enableAutoSuspend": {
+    "message": "በራስ-ሰር ማቋረጥን አንቃ"
+  },
+  "markSuspended": {
+    "message": "የተቋረጡ ትሮችን ምልክት አድርግ"
+  },
+  "whitelistedSites": {
+    "message": "በነጭ ዝርዝር ውስጥ ያሉ ጣቢያዎች"
+  },
+  "add": {
+    "message": "ጨምር"
+  },
+  "noSitesWhitelisted": {
+    "message": "በነጭ ዝርዝር ውስጥ ያሉ ጣቢያዎች የሉም"
+  },
+  "suspending": {
+    "message": "በማቋረጥ ላይ..."
+  },
+  "done": {
+    "message": "ተከናውኗል!"
+  },
+  "waking": {
+    "message": "በመቀስቀስ ላይ..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ ትሮች ወደ ቅንጥብ ሰሌዳ ተቀድተዋል",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "መቅዳት አልተሳካም" },
-  "copyTabsTitle": { "message": "የትር ዝርዝር ወደ ቅንጥብ ሰሌዳ ቅዳ" },
-  "copySessionsTitle": { "message": "ሁሉንም ክፍለ ጊዜዎች በJSON ቅዳ" },
-  "remove": { "message": "አስወግድ" },
-
-  "switchToLight": { "message": "ወደ ብርሃን ሁነታ ቀይር" },
-  "switchToDark": { "message": "ወደ ጨለማ ሁነታ ቀይር" },
-
-  "ctxSuspendThis": { "message": "ይህን ትር አቋርጥ" },
-  "ctxSuspendOthers": { "message": "ሁሉንም ሌሎች ትሮች አቋርጥ" },
-  "ctxNeverSuspend": { "message": "ይህን ጣቢያ ፈጽሞ አታቋርጥ" },
-
-  "maxSessionsReached": { "message": "ከፍተኛው 20 ክፍለ ጊዜዎች ደርሰዋል። አዲስ ለማስቀመጥ አንዱን ይሰርዙ።" },
-  "noSaveableTabs": { "message": "በዚህ መስኮት ውስጥ ሊቀመጡ የሚችሉ ትሮች የሉም።" },
-  "sessionNotFound": { "message": "ክፍለ ጊዜ አልተገኘም።" },
-  "noRestorableTabs": { "message": "በዚህ ክፍለ ጊዜ ውስጥ ሊመለሱ የሚችሉ ትሮች የሉም።" },
+  "failedToCopy": {
+    "message": "መቅዳት አልተሳካም"
+  },
+  "copyTabsTitle": {
+    "message": "የትር ዝርዝር ወደ ቅንጥብ ሰሌዳ ቅዳ"
+  },
+  "copySessionsTitle": {
+    "message": "ሁሉንም ክፍለ ጊዜዎች በJSON ቅዳ"
+  },
+  "remove": {
+    "message": "አስወግድ"
+  },
+  "switchToLight": {
+    "message": "ወደ ብርሃን ሁነታ ቀይር"
+  },
+  "switchToDark": {
+    "message": "ወደ ጨለማ ሁነታ ቀይር"
+  },
+  "ctxSuspendThis": {
+    "message": "ይህን ትር አቋርጥ"
+  },
+  "ctxSuspendOthers": {
+    "message": "ሁሉንም ሌሎች ትሮች አቋርጥ"
+  },
+  "ctxNeverSuspend": {
+    "message": "ይህን ጣቢያ ፈጽሞ አታቋርጥ"
+  },
+  "maxSessionsReached": {
+    "message": "ከፍተኛው 20 ክፍለ ጊዜዎች ደርሰዋል። አዲስ ለማስቀመጥ አንዱን ይሰርዙ።"
+  },
+  "noSaveableTabs": {
+    "message": "በዚህ መስኮት ውስጥ ሊቀመጡ የሚችሉ ትሮች የሉም።"
+  },
+  "sessionNotFound": {
+    "message": "ክፍለ ጊዜ አልተገኘም።"
+  },
+  "noRestorableTabs": {
+    "message": "በዚህ ክፍለ ጊዜ ውስጥ ሊመለሱ የሚችሉ ትሮች የሉም።"
+  },
   "sessionDefaultName": {
     "message": "ክፍለ ጊዜ – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "አሁን" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "አሁን"
+  },
   "minutesAgo": {
     "message": "ከ$COUNT$ ደ በፊት",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "ከ$COUNT$ ሰ በፊት",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "ትናንት" },
+  "yesterday": {
+    "message": "ትናንት"
+  },
   "daysAgo": {
     "message": "ከ$COUNT$ ቀ በፊት",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "እንኳን ወደ Drowzy በደህና መጡ" },
-  "onboardingIntro": { "message": "Drowzy ንቁ ያልሆኑ ትሮችን በማስተኛት ማህደረ ትውስታ ይቆጥባል። ትሮችዎ ሁልጊዜ ደህና ናቸው – የChrome ቤተኛ የማቋረጥ API እንጠቀማለን፣ ስለዚህ Drowzyን ቢያስወግዱም እንኳ ይቆያሉ።" },
-  "howItWorks": { "message": "እንዴት እንደሚሰራ" },
-  "featureAutoSuspend": { "message": "<strong>ለ30 ደቂቃዎች ስራ-ፈት የሆኑ ትሮች</strong> በራስ-ሰር ይቋረጣሉ" },
-  "featureZeroRam": { "message": "<strong>የተቋረጡ ትሮች ዜሮ RAM ይጠቀማሉ</strong> ግን በትር አሞሌዎ ውስጥ ይቆያሉ" },
-  "featureClickToWake": { "message": "<strong>ማንኛውንም የተቋረጠ ትር ጠቅ ያድርጉ</strong> ወዲያውኑ ለመቀስቀስ" },
-  "featureProtected": { "message": "<strong>ንቁ፣ የተሰኩ እና የድምጽ ትሮች</strong> ፈጽሞ አይነኩም" },
-  "quickActions": { "message": "ፈጣን ድርጊቶች" },
-  "actionClickIcon": { "message": "ሁሉንም ትሮችዎን ለማየት በመሳሪያ አሞሌው ላይ <strong>Drowzy አዶን</strong> ጠቅ ያድርጉ" },
-  "actionAltS": { "message": "የአሁኑን ትር ለማቋረጥ <kbd>Alt+S</kbd> ይጫኑ" },
-  "actionAltShiftS": { "message": "ሁሉንም ሌሎች ትሮች ለማቋረጥ <kbd>Alt+Shift+S</kbd> ይጫኑ" },
-  "actionAltW": { "message": "ሁሉንም የተቋረጡ ትሮች ለመቀስቀስ <kbd>Alt+W</kbd> ይጫኑ" },
-  "actionRightClick": { "message": "ለፈጣን ማቋረጥ አማራጮች በማንኛውም ገጽ ላይ በቀኝ ጠቅ ያድርጉ" },
-  "onboardingCta": { "message": "Drowzy አስቀድሞ እየሰራ ነው። ጥቂት ትሮችን ከፍተው ይሞክሩት!" },
-  "onboardingBtn": { "message": "ገባኝ፣ እንሂድ" },
-
-  "privacyTitle": { "message": "Drowzy – የግላዊነት ፖሊሲ" },
-  "privacyUpdated": { "message": "የመጨረሻ ዝመና: ፌብሩዋሪ 2026" },
-  "privacyShortTitle": { "message": "አጭሩ ስሪት" },
-  "privacyShortText": { "message": "Drowzy ምንም ዳታ አይሰበስብም። ምንም ትንታኔ፣ ምንም ክትትል፣ ምንም ውጫዊ አገልጋዮች የሉም። ሁሉም ነገር በአሳሽዎ ውስጥ ይቆያል።" },
-  "privacyStoredTitle": { "message": "ምን ይከማቻል" },
-  "privacyStoredText": { "message": "ቅንብሮችዎ (የማቋረጥ ሰዓት ቆጣሪ፣ ነጭ ዝርዝር፣ ምርጫዎች) በChrome አብሮ-የተገነባ የማከማቻ APIs ይቀመጣሉ: chrome.storage.sync የChrome መገለጫዎን ለሚከተሉ ቅንብሮች፣ chrome.storage.local ለስታቲስቲክስ እና ለተቀመጡ ክፍለ ጊዜዎች፣ እና chrome.storage.session ለጊዜያዊ ዳታ እንደ የትር ጊዜ ማህተሞች። ከዚህ ውስጥ ምንም ወደ ሶስተኛ ወገን አገልጋይ አይላክም።" },
-  "privacyPermissionsTitle": { "message": "ፈቃዶች" },
-  "privacyPermissionsIntro": { "message": "Drowzy እነዚህን የChrome ፈቃዶች ይጠቀማል:" },
-  "privacyPermTabs": { "message": "tabs – የአሳሽ ትሮችን መዘርዘር፣ ማቋረጥ እና መመለስ" },
-  "privacyPermStorage": { "message": "storage – ቅንብሮችዎን በአካባቢው ማስቀመጥ" },
-  "privacyPermAlarms": { "message": "alarms – ንቁ ያልሆኑ ትሮችን ወቅታዊ ምርመራ" },
-  "privacyPermContextMenus": { "message": "contextMenus – የቀኝ ጠቅ ምናሌ አማራጮች" },
-  "privacyContactTitle": { "message": "ያግኙን" },
-  "privacyContactText": { "message": "ጥያቄዎች? drowzyextension@gmail.com ላይ ያግኙን" }
+  "onboardingTitle": {
+    "message": "እንኳን ወደ Drowzy በደህና መጡ"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy ንቁ ያልሆኑ ትሮችን በማስተኛት ማህደረ ትውስታ ይቆጥባል። ትሮችዎ ሁልጊዜ ደህና ናቸው – የChrome ቤተኛ የማቋረጥ API እንጠቀማለን፣ ስለዚህ Drowzyን ቢያስወግዱም እንኳ ይቆያሉ።"
+  },
+  "howItWorks": {
+    "message": "እንዴት እንደሚሰራ"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>ለ30 ደቂቃዎች ስራ-ፈት የሆኑ ትሮች</strong> በራስ-ሰር ይቋረጣሉ"
+  },
+  "featureZeroRam": {
+    "message": "<strong>የተቋረጡ ትሮች ዜሮ RAM ይጠቀማሉ</strong> ግን በትር አሞሌዎ ውስጥ ይቆያሉ"
+  },
+  "featureClickToWake": {
+    "message": "<strong>ማንኛውንም የተቋረጠ ትር ጠቅ ያድርጉ</strong> ወዲያውኑ ለመቀስቀስ"
+  },
+  "featureProtected": {
+    "message": "<strong>ንቁ፣ የተሰኩ እና የድምጽ ትሮች</strong> ፈጽሞ አይነኩም"
+  },
+  "quickActions": {
+    "message": "ፈጣን ድርጊቶች"
+  },
+  "actionClickIcon": {
+    "message": "ሁሉንም ትሮችዎን ለማየት በመሳሪያ አሞሌው ላይ <strong>Drowzy አዶን</strong> ጠቅ ያድርጉ"
+  },
+  "actionAltS": {
+    "message": "የአሁኑን ትር ለማቋረጥ <kbd>Alt+S</kbd> ይጫኑ"
+  },
+  "actionAltShiftS": {
+    "message": "ሁሉንም ሌሎች ትሮች ለማቋረጥ <kbd>Alt+Shift+S</kbd> ይጫኑ"
+  },
+  "actionAltW": {
+    "message": "ሁሉንም የተቋረጡ ትሮች ለመቀስቀስ <kbd>Alt+W</kbd> ይጫኑ"
+  },
+  "actionRightClick": {
+    "message": "ለፈጣን ማቋረጥ አማራጮች በማንኛውም ገጽ ላይ በቀኝ ጠቅ ያድርጉ"
+  },
+  "onboardingCta": {
+    "message": "Drowzy አስቀድሞ እየሰራ ነው። ጥቂት ትሮችን ከፍተው ይሞክሩት!"
+  },
+  "onboardingBtn": {
+    "message": "ገባኝ፣ እንሂድ"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – የግላዊነት ፖሊሲ"
+  },
+  "privacyUpdated": {
+    "message": "የመጨረሻ ዝመና: ፌብሩዋሪ 2026"
+  },
+  "privacyShortTitle": {
+    "message": "አጭሩ ስሪት"
+  },
+  "privacyShortText": {
+    "message": "Drowzy ምንም ዳታ አይሰበስብም። ምንም ትንታኔ፣ ምንም ክትትል፣ ምንም ውጫዊ አገልጋዮች የሉም። ሁሉም ነገር በአሳሽዎ ውስጥ ይቆያል።"
+  },
+  "privacyStoredTitle": {
+    "message": "ምን ይከማቻል"
+  },
+  "privacyStoredText": {
+    "message": "ቅንብሮችዎ (የማቋረጥ ሰዓት ቆጣሪ፣ ነጭ ዝርዝር፣ ምርጫዎች) በChrome አብሮ-የተገነባ የማከማቻ APIs ይቀመጣሉ: chrome.storage.sync የChrome መገለጫዎን ለሚከተሉ ቅንብሮች፣ chrome.storage.local ለስታቲስቲክስ እና ለተቀመጡ ክፍለ ጊዜዎች፣ እና chrome.storage.session ለጊዜያዊ ዳታ እንደ የትር ጊዜ ማህተሞች። ከዚህ ውስጥ ምንም ወደ ሶስተኛ ወገን አገልጋይ አይላክም።"
+  },
+  "privacyPermissionsTitle": {
+    "message": "ፈቃዶች"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy እነዚህን የChrome ፈቃዶች ይጠቀማል:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – የአሳሽ ትሮችን መዘርዘር፣ ማቋረጥ እና መመለስ"
+  },
+  "privacyPermStorage": {
+    "message": "storage – ቅንብሮችዎን በአካባቢው ማስቀመጥ"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – ንቁ ያልሆኑ ትሮችን ወቅታዊ ምርመራ"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – የቀኝ ጠቅ ምናሌ አማራጮች"
+  },
+  "privacyContactTitle": {
+    "message": "ያግኙን"
+  },
+  "privacyContactText": {
+    "message": "ጥያቄዎች? drowzyextension@gmail.com ላይ ያግኙን"
+  },
+  "replace": {
+    "message": "ተካ"
+  },
+  "replaceSessionTitle": {
+    "message": "አሁን ያሉ ትሮች በዚህ ክፍለ ጊዜ ተካ"
+  },
+  "invalidDomain": {
+    "message": "ትክክለኛ ጎራ ያስገቡ (ለምሳሌ example.com)"
+  },
+  "extensionPage": {
+    "message": "ማስፋፊያ ገጽ"
+  },
+  "exportWhitelist": {
+    "message": "ወደ ውጭ ላክ"
+  },
+  "importWhitelist": {
+    "message": "አስገባ"
+  },
+  "exportWhitelistTitle": {
+    "message": "ነጭ ዝርዝር ቅዳ"
+  },
+  "importWhitelistTitle": {
+    "message": "ከቅንጥብ ሰሌዳ ነጭ ዝርዝር አስገባ"
+  },
+  "copiedSites": {
+    "message": "ተቀዱ $COUNT$ ድረ-ገጽ(ዎች)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "ተመጡ $COUNT$ አዲስ ድረ-ገጽ(ዎች)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "በቅንጥብ ሰሌዳ ውስጥ ትክክለኛ ጎራ አልተገኘም"
+  },
+  "clipboardReadFailed": {
+    "message": "ቅንጥብ ሰሌዳውን ማንበብ አልተቻለም"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy ይወዳሉ?"
+  },
+  "reviewYes": {
+    "message": "አዎ!"
+  },
+  "reviewNo": {
+    "message": "ብዙም አይደለም"
+  },
+  "whatsNew": {
+    "message": "በ v1.1.0 ውስጥ አዲስ"
+  },
+  "changelogTitle": {
+    "message": "Drowzy ውስጥ አዲስ ነገር"
+  },
+  "changelogWhatsNew": {
+    "message": "አዲስ ነገር"
+  },
+  "changelogVersion": {
+    "message": "ስሪት 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "አዲስ ባህሪያት"
+  },
+  "changelogBugFixes": {
+    "message": "ስህተት ማስተካከያ"
+  },
+  "changelogImprovements": {
+    "message": "ማሻሻያዎች"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "ግምገማ ጥያቄ"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "ጥቂት ትሮችን ካገዱ በኋላ፣ Drowzy ይወዳሉ እንደሆነ ይጠይቃል። ፈጣን የአውራ ጣት ወደ ላይ ብዙ ይረዳናል!"
+  },
+  "changelogChangelogTitle": {
+    "message": "የለውጥ ዝርዝር ገጽ"
+  },
+  "changelogChangelogDesc": {
+    "message": "አሁን እያዩት ነው! ሲዘምን ራስ-ሰራ ይከፈታል። ከቅንብሮች ሁልጊዜ ይደረስበታል።"
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "ክፍለ ጊዜ ማስመለስ ጊዜ"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "የተመለሱ ትሮች ወዲያውኑ ራስ-ሰራ አይገደቡም። አሁን በፍጥረት ጊዜ ዘመናቸውን ያስተካክላሉ።"
+  },
+  "changelogFormCheckTitle": {
+    "message": "ቅጽ ማረጋገጫ ጊዜ ማለፍ"
+  },
+  "changelogFormCheckDesc": {
+    "message": "የቅጽ ውሂብ ማረጋገጫ አሁን 500ms ጊዜ ገደብ አለው ስለዚህ ምላሽ የማይሰጡ ትሮች ወረፋውን ማገድ አይችሉም።"
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "ነጭ ዝርዝር ድግግሞሽ"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "\"Example.com\" እና \"example.com\" ሁለቱም ሊታከሉ የሚችሉበት የፊደል መጠን ችግር ተስተካክሏል። ሁሉም ግቤቶች አሁን ተመሳስለዋል።"
+  },
+  "changelogLiveStatsTitle": {
+    "message": "ቀጥታ ስታቲስቲክስ"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "ትሮች ሲገደቡ ወይም ሲነቁ ፖፕአፕ ራስ-ሰራ ያድሳል።"
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "ክፍለ ጊዜ ማስመለስ አማራጮች"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "ክፍለ ጊዜዎች አሁን \"ክፈት\" (ትሮች ጨምር) እና \"ተካ\" (አሁን ያሉ ትሮችን ቀይር) ተለያዩ ቁልፎች አሏቸው።"
+  },
+  "changelogWhitelistValTitle": {
+    "message": "ነጭ ዝርዝር ማረጋገጫ እና ወደ ውጭ/ወደ ውስጥ"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "ነጭ ዝርዝር ግቤት ጎራዎችን ያረጋግጣል። ከቅንጥብ ሰሌዳ ማስመጣት እና መላክም ይችላሉ።"
+  },
+  "changelogA11yTitle": {
+    "message": "ተደራሽነት"
+  },
+  "changelogA11yDesc": {
+    "message": "የትሮች ዝርዝር ንጥሎች አሁን ከኪቦርድ ሊደረስባቸው ይችላሉ ከ ARIA ሚናዎች ጋር። የማሳወቂያዎች ለማንበቢያ ሰሌዳ ይታወቃሉ።"
+  },
+  "changelogAnimationsTitle": {
+    "message": "ለስላሳ አኒሜሽኖች"
+  },
+  "changelogAnimationsDesc": {
+    "message": "የትሮች ዝርዝር ቅደም ተከተል አኒሜሽኖች ከፍተኛ ገደብ ተቀምጧል ስለዚህ ብዙ ትሮች ያሉ መስኮቶች ረጅም መዘግየት አይኖራቸውም።"
+  },
+  "changelogCtaText": {
+    "message": "Drowzy ነፃ እና ክፍት ምንጭ ነው። ማህደረ ትውስታ እየቆጠበ ከሆነ ግምገማ ወይም በ GitHub ላይ ኮከብ ያስቀምጡ።"
+  },
+  "changelogReviewBtn": {
+    "message": "ግምገማ ይስጡ"
+  },
+  "changelogStarBtn": {
+    "message": "GitHub ላይ ኮከብ"
+  }
 }

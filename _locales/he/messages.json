@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "העיר את כל הכרטיסיות המושעות"
   },
-
-  "statSleeping": { "message": "ישנות" },
-  "statProtected": { "message": "מוגנות" },
-  "statSaved": { "message": "נחסך" },
-
-  "suspendOthers": { "message": "השעה אחרות" },
-  "wakeAll": { "message": "העיר הכול" },
-
-  "neverSuspendSite": { "message": "לעולם אל תשעה אתר זה" },
-  "siteWhitelisted": { "message": "האתר ברשימה הלבנה (לחץ להסרה)" },
-  "activeWontSuspend": { "message": "פעיל – לא יושעה" },
-  "loading": { "message": "טוען..." },
-
-  "tabsInWindow": { "message": "כרטיסיות בחלון זה" },
-  "loadingTabs": { "message": "טוען כרטיסיות..." },
-  "noTabsFound": { "message": "לא נמצאו כרטיסיות" },
-  "failedToLoad": { "message": "הטעינה נכשלה. פתח מחדש את החלון הקופץ כדי לנסות שוב." },
-
-  "badgeActive": { "message": "פעיל" },
-  "badgeSystem": { "message": "מערכת" },
-  "badgePinned": { "message": "מוצמד" },
-  "badgeAudio": { "message": "שמע" },
-  "badgeStarred": { "message": "מסומן בכוכב" },
-  "badgeProtected": { "message": "מוגן" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "הפעלות" },
-  "sessionNamePlaceholder": { "message": "שם ההפעלה (אופציונלי)" },
-  "save": { "message": "שמור" },
-  "emptySessionState": { "message": "שמור את ההפעלה הראשונה שלך כדי לשחזר כרטיסיות בכל עת" },
-  "open": { "message": "פתח" },
-  "openSessionTitle": { "message": "פתח כרטיסיות מהפעלה זו" },
-  "deleteSessionTitle": { "message": "מחק הפעלה" },
-  "sessionSaved": { "message": "ההפעלה נשמרה!" },
-  "failedToSave": { "message": "השמירה נכשלה" },
+  "statSleeping": {
+    "message": "ישנות"
+  },
+  "statProtected": {
+    "message": "מוגנות"
+  },
+  "statSaved": {
+    "message": "נחסך"
+  },
+  "suspendOthers": {
+    "message": "השעה אחרות"
+  },
+  "wakeAll": {
+    "message": "העיר הכול"
+  },
+  "neverSuspendSite": {
+    "message": "לעולם אל תשעה אתר זה"
+  },
+  "siteWhitelisted": {
+    "message": "האתר ברשימה הלבנה (לחץ להסרה)"
+  },
+  "activeWontSuspend": {
+    "message": "פעיל – לא יושעה"
+  },
+  "loading": {
+    "message": "טוען..."
+  },
+  "tabsInWindow": {
+    "message": "כרטיסיות בחלון זה"
+  },
+  "loadingTabs": {
+    "message": "טוען כרטיסיות..."
+  },
+  "noTabsFound": {
+    "message": "לא נמצאו כרטיסיות"
+  },
+  "failedToLoad": {
+    "message": "הטעינה נכשלה. פתח מחדש את החלון הקופץ כדי לנסות שוב."
+  },
+  "badgeActive": {
+    "message": "פעיל"
+  },
+  "badgeSystem": {
+    "message": "מערכת"
+  },
+  "badgePinned": {
+    "message": "מוצמד"
+  },
+  "badgeAudio": {
+    "message": "שמע"
+  },
+  "badgeStarred": {
+    "message": "מסומן בכוכב"
+  },
+  "badgeProtected": {
+    "message": "מוגן"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "הפעלות"
+  },
+  "sessionNamePlaceholder": {
+    "message": "שם ההפעלה (אופציונלי)"
+  },
+  "save": {
+    "message": "שמור"
+  },
+  "emptySessionState": {
+    "message": "שמור את ההפעלה הראשונה שלך כדי לשחזר כרטיסיות בכל עת"
+  },
+  "open": {
+    "message": "פתח"
+  },
+  "openSessionTitle": {
+    "message": "פתח כרטיסיות מהפעלה זו"
+  },
+  "deleteSessionTitle": {
+    "message": "מחק הפעלה"
+  },
+  "sessionSaved": {
+    "message": "ההפעלה נשמרה!"
+  },
+  "failedToSave": {
+    "message": "השמירה נכשלה"
+  },
   "restoredTabs": {
     "message": "$COUNT$ כרטיסיות שוחזרו",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "השחזור נכשל" },
-  "noSessionsToExport": { "message": "אין הפעלות לייצוא" },
+  "failedToRestore": {
+    "message": "השחזור נכשל"
+  },
+  "noSessionsToExport": {
+    "message": "אין הפעלות לייצוא"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ הפעלות הועתקו כ-JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ כרטיסיות",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "סטטיסטיקות" },
-  "statToday": { "message": "היום" },
-  "statAllTime": { "message": "מאז ומתמיד" },
-  "statRamSaved": { "message": "RAM שנחסך (הערכה)" },
-  "statMemberSince": { "message": "חבר מאז" },
-
-  "settings": { "message": "הגדרות" },
-  "autoSuspendAfter": { "message": "השעיה אוטומטית אחרי" },
-  "timer5min": { "message": "5 דקות" },
-  "timer10min": { "message": "10 דקות" },
-  "timer15min": { "message": "15 דקות" },
-  "timer30min": { "message": "30 דקות" },
-  "timer1hour": { "message": "שעה" },
-  "timer2hours": { "message": "שעתיים" },
-  "timer4hours": { "message": "4 שעות" },
-  "timerNever": { "message": "אף פעם" },
-  "protectPinned": { "message": "הגן על כרטיסיות מוצמדות" },
-  "protectAudio": { "message": "הגן על כרטיסיות עם שמע" },
-  "protectForms": { "message": "הגן על כרטיסיות עם טפסים" },
-  "suspendOnStartup": { "message": "השעה כרטיסיות בהפעלה" },
-  "enableAutoSuspend": { "message": "הפעל השעיה אוטומטית" },
-  "markSuspended": { "message": "סמן כרטיסיות מושעות" },
-  "whitelistedSites": { "message": "אתרים ברשימה הלבנה" },
-  "add": { "message": "הוסף" },
-  "noSitesWhitelisted": { "message": "אין אתרים ברשימה הלבנה" },
-
-  "suspending": { "message": "משעה..." },
-  "done": { "message": "בוצע!" },
-  "waking": { "message": "מעיר..." },
+  "stats": {
+    "message": "סטטיסטיקות"
+  },
+  "statToday": {
+    "message": "היום"
+  },
+  "statAllTime": {
+    "message": "מאז ומתמיד"
+  },
+  "statRamSaved": {
+    "message": "RAM שנחסך (הערכה)"
+  },
+  "statMemberSince": {
+    "message": "חבר מאז"
+  },
+  "settings": {
+    "message": "הגדרות"
+  },
+  "autoSuspendAfter": {
+    "message": "השעיה אוטומטית אחרי"
+  },
+  "timer5min": {
+    "message": "5 דקות"
+  },
+  "timer10min": {
+    "message": "10 דקות"
+  },
+  "timer15min": {
+    "message": "15 דקות"
+  },
+  "timer30min": {
+    "message": "30 דקות"
+  },
+  "timer1hour": {
+    "message": "שעה"
+  },
+  "timer2hours": {
+    "message": "שעתיים"
+  },
+  "timer4hours": {
+    "message": "4 שעות"
+  },
+  "timerNever": {
+    "message": "אף פעם"
+  },
+  "protectPinned": {
+    "message": "הגן על כרטיסיות מוצמדות"
+  },
+  "protectAudio": {
+    "message": "הגן על כרטיסיות עם שמע"
+  },
+  "protectForms": {
+    "message": "הגן על כרטיסיות עם טפסים"
+  },
+  "suspendOnStartup": {
+    "message": "השעה כרטיסיות בהפעלה"
+  },
+  "enableAutoSuspend": {
+    "message": "הפעל השעיה אוטומטית"
+  },
+  "markSuspended": {
+    "message": "סמן כרטיסיות מושעות"
+  },
+  "whitelistedSites": {
+    "message": "אתרים ברשימה הלבנה"
+  },
+  "add": {
+    "message": "הוסף"
+  },
+  "noSitesWhitelisted": {
+    "message": "אין אתרים ברשימה הלבנה"
+  },
+  "suspending": {
+    "message": "משעה..."
+  },
+  "done": {
+    "message": "בוצע!"
+  },
+  "waking": {
+    "message": "מעיר..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ כרטיסיות הועתקו ללוח",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "ההעתקה נכשלה" },
-  "copyTabsTitle": { "message": "העתק רשימת כרטיסיות ללוח" },
-  "copySessionsTitle": { "message": "העתק את כל ההפעלות כ-JSON" },
-  "remove": { "message": "הסר" },
-
-  "switchToLight": { "message": "עבור למצב בהיר" },
-  "switchToDark": { "message": "עבור למצב כהה" },
-
-  "ctxSuspendThis": { "message": "השעה כרטיסייה זו" },
-  "ctxSuspendOthers": { "message": "השעה את כל שאר הכרטיסיות" },
-  "ctxNeverSuspend": { "message": "לעולם אל תשעה אתר זה" },
-
-  "maxSessionsReached": { "message": "הגעת למקסימום של 20 הפעלות. מחק אחת כדי לשמור חדשה." },
-  "noSaveableTabs": { "message": "אין כרטיסיות הניתנות לשמירה בחלון זה." },
-  "sessionNotFound": { "message": "ההפעלה לא נמצאה." },
-  "noRestorableTabs": { "message": "אין כרטיסיות הניתנות לשחזור בהפעלה זו." },
+  "failedToCopy": {
+    "message": "ההעתקה נכשלה"
+  },
+  "copyTabsTitle": {
+    "message": "העתק רשימת כרטיסיות ללוח"
+  },
+  "copySessionsTitle": {
+    "message": "העתק את כל ההפעלות כ-JSON"
+  },
+  "remove": {
+    "message": "הסר"
+  },
+  "switchToLight": {
+    "message": "עבור למצב בהיר"
+  },
+  "switchToDark": {
+    "message": "עבור למצב כהה"
+  },
+  "ctxSuspendThis": {
+    "message": "השעה כרטיסייה זו"
+  },
+  "ctxSuspendOthers": {
+    "message": "השעה את כל שאר הכרטיסיות"
+  },
+  "ctxNeverSuspend": {
+    "message": "לעולם אל תשעה אתר זה"
+  },
+  "maxSessionsReached": {
+    "message": "הגעת למקסימום של 20 הפעלות. מחק אחת כדי לשמור חדשה."
+  },
+  "noSaveableTabs": {
+    "message": "אין כרטיסיות הניתנות לשמירה בחלון זה."
+  },
+  "sessionNotFound": {
+    "message": "ההפעלה לא נמצאה."
+  },
+  "noRestorableTabs": {
+    "message": "אין כרטיסיות הניתנות לשחזור בהפעלה זו."
+  },
   "sessionDefaultName": {
     "message": "הפעלה – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "הרגע" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "הרגע"
+  },
   "minutesAgo": {
     "message": "לפני $COUNT$ דק׳",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "לפני $COUNT$ שע׳",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "אתמול" },
+  "yesterday": {
+    "message": "אתמול"
+  },
   "daysAgo": {
     "message": "לפני $COUNT$ ימים",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "ברוכים הבאים ל-Drowzy" },
-  "onboardingIntro": { "message": "Drowzy חוסך זיכרון על ידי הרדמת כרטיסיות לא פעילות. הכרטיסיות שלך תמיד בטוחות – אנחנו משתמשים ב-API המקורי של Chrome לביטול כרטיסיות, כך שהן שורדות גם אם תסיר את Drowzy." },
-  "howItWorks": { "message": "איך זה עובד" },
-  "featureAutoSuspend": { "message": "<strong>כרטיסיות שלא היו פעילות 30 דקות</strong> מושעות אוטומטית" },
-  "featureZeroRam": { "message": "<strong>כרטיסיות מושעות לא צורכות RAM</strong> אך נשארות בסרגל הכרטיסיות" },
-  "featureClickToWake": { "message": "<strong>לחץ על כל כרטיסייה מושעה</strong> כדי להעיר אותה מיד" },
-  "featureProtected": { "message": "<strong>כרטיסיות פעילות, מוצמדות ועם שמע</strong> לעולם לא נפגעות" },
-  "quickActions": { "message": "פעולות מהירות" },
-  "actionClickIcon": { "message": "לחץ על <strong>סמל Drowzy</strong> בסרגל הכלים כדי לראות את כל הכרטיסיות שלך" },
-  "actionAltS": { "message": "לחץ <kbd>Alt+S</kbd> כדי להשעות את הכרטיסייה הנוכחית" },
-  "actionAltShiftS": { "message": "לחץ <kbd>Alt+Shift+S</kbd> כדי להשעות את כל שאר הכרטיסיות" },
-  "actionAltW": { "message": "לחץ <kbd>Alt+W</kbd> כדי להעיר את כל הכרטיסיות המושעות" },
-  "actionRightClick": { "message": "לחץ לחיצה ימנית על כל דף לאפשרויות השעיה מהירות" },
-  "onboardingCta": { "message": "Drowzy כבר פועל. פתח כמה כרטיסיות ונסה!" },
-  "onboardingBtn": { "message": "הבנתי, בוא נתחיל" },
-
-  "privacyTitle": { "message": "Drowzy – מדיניות פרטיות" },
-  "privacyUpdated": { "message": "עדכון אחרון: פברואר 2026" },
-  "privacyShortTitle": { "message": "הגרסה הקצרה" },
-  "privacyShortText": { "message": "Drowzy לא אוסף שום נתונים. ללא ניתוח, ללא מעקב, ללא שרתים חיצוניים. הכל נשאר בדפדפן שלך." },
-  "privacyStoredTitle": { "message": "מה נשמר" },
-  "privacyStoredText": { "message": "ההגדרות שלך (טיימר השעיה, רשימה לבנה, העדפות) נשמרות באמצעות ממשקי האחסון המובנים של Chrome: ‏chrome.storage.sync להגדרות שעוקבות אחרי פרופיל Chrome שלך, chrome.storage.local לסטטיסטיקות והפעלות שמורות, ו-chrome.storage.session לנתונים זמניים כמו חותמות זמן של כרטיסיות. שום דבר מזה לא נשלח לשרת צד שלישי." },
-  "privacyPermissionsTitle": { "message": "הרשאות" },
-  "privacyPermissionsIntro": { "message": "Drowzy משתמש בהרשאות Chrome הבאות:" },
-  "privacyPermTabs": { "message": "tabs – הצגה, השעיה ושחזור של כרטיסיות הדפדפן" },
-  "privacyPermStorage": { "message": "storage – שמירת ההגדרות שלך באופן מקומי" },
-  "privacyPermAlarms": { "message": "alarms – בדיקות תקופתיות של כרטיסיות לא פעילות" },
-  "privacyPermContextMenus": { "message": "contextMenus – אפשרויות בתפריט לחיצה ימנית" },
-  "privacyContactTitle": { "message": "יצירת קשר" },
-  "privacyContactText": { "message": "שאלות? פנו אלינו ב-drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "ברוכים הבאים ל-Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy חוסך זיכרון על ידי הרדמת כרטיסיות לא פעילות. הכרטיסיות שלך תמיד בטוחות – אנחנו משתמשים ב-API המקורי של Chrome לביטול כרטיסיות, כך שהן שורדות גם אם תסיר את Drowzy."
+  },
+  "howItWorks": {
+    "message": "איך זה עובד"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>כרטיסיות שלא היו פעילות 30 דקות</strong> מושעות אוטומטית"
+  },
+  "featureZeroRam": {
+    "message": "<strong>כרטיסיות מושעות לא צורכות RAM</strong> אך נשארות בסרגל הכרטיסיות"
+  },
+  "featureClickToWake": {
+    "message": "<strong>לחץ על כל כרטיסייה מושעה</strong> כדי להעיר אותה מיד"
+  },
+  "featureProtected": {
+    "message": "<strong>כרטיסיות פעילות, מוצמדות ועם שמע</strong> לעולם לא נפגעות"
+  },
+  "quickActions": {
+    "message": "פעולות מהירות"
+  },
+  "actionClickIcon": {
+    "message": "לחץ על <strong>סמל Drowzy</strong> בסרגל הכלים כדי לראות את כל הכרטיסיות שלך"
+  },
+  "actionAltS": {
+    "message": "לחץ <kbd>Alt+S</kbd> כדי להשעות את הכרטיסייה הנוכחית"
+  },
+  "actionAltShiftS": {
+    "message": "לחץ <kbd>Alt+Shift+S</kbd> כדי להשעות את כל שאר הכרטיסיות"
+  },
+  "actionAltW": {
+    "message": "לחץ <kbd>Alt+W</kbd> כדי להעיר את כל הכרטיסיות המושעות"
+  },
+  "actionRightClick": {
+    "message": "לחץ לחיצה ימנית על כל דף לאפשרויות השעיה מהירות"
+  },
+  "onboardingCta": {
+    "message": "Drowzy כבר פועל. פתח כמה כרטיסיות ונסה!"
+  },
+  "onboardingBtn": {
+    "message": "הבנתי, בוא נתחיל"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – מדיניות פרטיות"
+  },
+  "privacyUpdated": {
+    "message": "עדכון אחרון: פברואר 2026"
+  },
+  "privacyShortTitle": {
+    "message": "הגרסה הקצרה"
+  },
+  "privacyShortText": {
+    "message": "Drowzy לא אוסף שום נתונים. ללא ניתוח, ללא מעקב, ללא שרתים חיצוניים. הכל נשאר בדפדפן שלך."
+  },
+  "privacyStoredTitle": {
+    "message": "מה נשמר"
+  },
+  "privacyStoredText": {
+    "message": "ההגדרות שלך (טיימר השעיה, רשימה לבנה, העדפות) נשמרות באמצעות ממשקי האחסון המובנים של Chrome: ‏chrome.storage.sync להגדרות שעוקבות אחרי פרופיל Chrome שלך, chrome.storage.local לסטטיסטיקות והפעלות שמורות, ו-chrome.storage.session לנתונים זמניים כמו חותמות זמן של כרטיסיות. שום דבר מזה לא נשלח לשרת צד שלישי."
+  },
+  "privacyPermissionsTitle": {
+    "message": "הרשאות"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy משתמש בהרשאות Chrome הבאות:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – הצגה, השעיה ושחזור של כרטיסיות הדפדפן"
+  },
+  "privacyPermStorage": {
+    "message": "storage – שמירת ההגדרות שלך באופן מקומי"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – בדיקות תקופתיות של כרטיסיות לא פעילות"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – אפשרויות בתפריט לחיצה ימנית"
+  },
+  "privacyContactTitle": {
+    "message": "יצירת קשר"
+  },
+  "privacyContactText": {
+    "message": "שאלות? פנו אלינו ב-drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "החלף"
+  },
+  "replaceSessionTitle": {
+    "message": "החלף כרטיסיות נוכחיות בהפעלה זו"
+  },
+  "invalidDomain": {
+    "message": "הזן דומיין תקין (למשל example.com)"
+  },
+  "extensionPage": {
+    "message": "דף התוסף"
+  },
+  "exportWhitelist": {
+    "message": "ייצוא"
+  },
+  "importWhitelist": {
+    "message": "ייבוא"
+  },
+  "exportWhitelistTitle": {
+    "message": "העתק רשימת היתרים"
+  },
+  "importWhitelistTitle": {
+    "message": "ייבוא רשימת היתרים מהלוח"
+  },
+  "copiedSites": {
+    "message": "הועתקו $COUNT$ אתרים",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "יובאו $COUNT$ אתרים חדשים",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "לא נמצאו דומיינים תקינים בלוח"
+  },
+  "clipboardReadFailed": {
+    "message": "לא ניתן לקרוא את הלוח"
+  },
+  "enjoyingDrowzy": {
+    "message": "נהנים מ-Drowzy?"
+  },
+  "reviewYes": {
+    "message": "!כן"
+  },
+  "reviewNo": {
+    "message": "לא ממש"
+  },
+  "whatsNew": {
+    "message": "מה חדש ב-v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "מה חדש ב-Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "מה חדש"
+  },
+  "changelogVersion": {
+    "message": "גרסה 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "תכונות חדשות"
+  },
+  "changelogBugFixes": {
+    "message": "תיקוני באגים"
+  },
+  "changelogImprovements": {
+    "message": "שיפורים"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "בקשת ביקורת"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "אחרי שתשהו כמה כרטיסיות, Drowzy ישאל אם אתם נהנים. לייק מהיר עוזר לנו המון!"
+  },
+  "changelogChangelogTitle": {
+    "message": "דף שינויים"
+  },
+  "changelogChangelogDesc": {
+    "message": "אתם מסתכלים עליו! נפתח אוטומטית בעדכון. נגיש מההגדרות."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "תזמון שחזור הפעלה"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "כרטיסיות שחוזרות לא מושהות יותר מיד. הן מאפסות נכון את טיימרי הסרק."
+  },
+  "changelogFormCheckTitle": {
+    "message": "זמן קצוב לבדיקת טופס"
+  },
+  "changelogFormCheckDesc": {
+    "message": "בדיקת נתוני טופס כוללת עכשיו timeout של 500ms כדי שכרטיסיות שלא מגיבות לא יחסמו את התור."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "כפילויות ברשימת ההיתרים"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "תוקנה בעיית רגישות לאותיות גדולות וקטנות שבה ניתן היה להוסיף גם \"Example.com\" וגם \"example.com\". כל הרשומות מנורמלות כעת."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "סטטיסטיקות חיות"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "החלון הקופץ מתעדכן אוטומטית כשכרטיסיות מושהות או מתעוררות."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "אפשרויות שחזור הפעלה"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "להפעלות יש כעת כפתורי \"פתח\" ו\"החלף\" נפרדים."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "אימות ויצוא/ייבוא של רשימת היתרים"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "קלט רשימת ההיתרים מאמת כעת דומיינים. ניתן לייצא ולייבא דרך הלוח."
+  },
+  "changelogA11yTitle": {
+    "message": "נגישות"
+  },
+  "changelogA11yDesc": {
+    "message": "פריטי רשימת הכרטיסיות ניתנים כעת לניווט במקלדת עם תפקידי ARIA. התראות מוכרזות לקוראי מסך."
+  },
+  "changelogAnimationsTitle": {
+    "message": "אנימציות חלקות יותר"
+  },
+  "changelogAnimationsDesc": {
+    "message": "אנימציות מדורגות מוגבלות כעת כך שחלונות עם כרטיסיות רבות לא יחוו עיכוב ארוך."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy חינמי ובקוד פתוח. אם הוא חוסך לכם זיכרון, השאירו ביקורת או כוכב ב-GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "השאר ביקורת"
+  },
+  "changelogStarBtn": {
+    "message": "כוכב ב-GitHub"
+  }
 }

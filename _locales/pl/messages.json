@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Obudź wszystkie uśpione karty"
   },
-
-  "statSleeping": { "message": "uśpione" },
-  "statProtected": { "message": "chronione" },
-  "statSaved": { "message": "zaoszczędzone" },
-
-  "suspendOthers": { "message": "Uśpij pozostałe" },
-  "wakeAll": { "message": "Obudź wszystkie" },
-
-  "neverSuspendSite": { "message": "Nigdy nie usypiaj tej strony" },
-  "siteWhitelisted": { "message": "Strona jest na białej liście (kliknij, aby usunąć)" },
-  "activeWontSuspend": { "message": "Aktywna – nie zostanie uśpiona" },
-  "loading": { "message": "Ładowanie..." },
-
-  "tabsInWindow": { "message": "Karty w tym oknie" },
-  "loadingTabs": { "message": "Ładowanie kart..." },
-  "noTabsFound": { "message": "Nie znaleziono kart" },
-  "failedToLoad": { "message": "Nie udało się załadować. Otwórz ponownie popup, aby spróbować." },
-
-  "badgeActive": { "message": "Aktywna" },
-  "badgeSystem": { "message": "System" },
-  "badgePinned": { "message": "Przypięta" },
-  "badgeAudio": { "message": "Audio" },
-  "badgeStarred": { "message": "Oznaczona" },
-  "badgeProtected": { "message": "Chroniona" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Sesje" },
-  "sessionNamePlaceholder": { "message": "Nazwa sesji (opcjonalnie)" },
-  "save": { "message": "Zapisz" },
-  "emptySessionState": { "message": "Zapisz pierwszą sesję, aby w każdej chwili przywrócić karty" },
-  "open": { "message": "Otwórz" },
-  "openSessionTitle": { "message": "Otwórz karty z tej sesji" },
-  "deleteSessionTitle": { "message": "Usuń sesję" },
-  "sessionSaved": { "message": "Sesja zapisana!" },
-  "failedToSave": { "message": "Nie udało się zapisać" },
+  "statSleeping": {
+    "message": "uśpione"
+  },
+  "statProtected": {
+    "message": "chronione"
+  },
+  "statSaved": {
+    "message": "zaoszczędzone"
+  },
+  "suspendOthers": {
+    "message": "Uśpij pozostałe"
+  },
+  "wakeAll": {
+    "message": "Obudź wszystkie"
+  },
+  "neverSuspendSite": {
+    "message": "Nigdy nie usypiaj tej strony"
+  },
+  "siteWhitelisted": {
+    "message": "Strona jest na białej liście (kliknij, aby usunąć)"
+  },
+  "activeWontSuspend": {
+    "message": "Aktywna – nie zostanie uśpiona"
+  },
+  "loading": {
+    "message": "Ładowanie..."
+  },
+  "tabsInWindow": {
+    "message": "Karty w tym oknie"
+  },
+  "loadingTabs": {
+    "message": "Ładowanie kart..."
+  },
+  "noTabsFound": {
+    "message": "Nie znaleziono kart"
+  },
+  "failedToLoad": {
+    "message": "Nie udało się załadować. Otwórz ponownie popup, aby spróbować."
+  },
+  "badgeActive": {
+    "message": "Aktywna"
+  },
+  "badgeSystem": {
+    "message": "System"
+  },
+  "badgePinned": {
+    "message": "Przypięta"
+  },
+  "badgeAudio": {
+    "message": "Audio"
+  },
+  "badgeStarred": {
+    "message": "Oznaczona"
+  },
+  "badgeProtected": {
+    "message": "Chroniona"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Sesje"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Nazwa sesji (opcjonalnie)"
+  },
+  "save": {
+    "message": "Zapisz"
+  },
+  "emptySessionState": {
+    "message": "Zapisz pierwszą sesję, aby w każdej chwili przywrócić karty"
+  },
+  "open": {
+    "message": "Otwórz"
+  },
+  "openSessionTitle": {
+    "message": "Otwórz karty z tej sesji"
+  },
+  "deleteSessionTitle": {
+    "message": "Usuń sesję"
+  },
+  "sessionSaved": {
+    "message": "Sesja zapisana!"
+  },
+  "failedToSave": {
+    "message": "Nie udało się zapisać"
+  },
   "restoredTabs": {
     "message": "Przywrócono $COUNT$ kart",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Nie udało się przywrócić" },
-  "noSessionsToExport": { "message": "Brak sesji do wyeksportowania" },
+  "failedToRestore": {
+    "message": "Nie udało się przywrócić"
+  },
+  "noSessionsToExport": {
+    "message": "Brak sesji do wyeksportowania"
+  },
   "copiedSessionsJson": {
     "message": "Skopiowano $COUNT$ sesji jako JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ kart",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statystyki" },
-  "statToday": { "message": "Dzisiaj" },
-  "statAllTime": { "message": "Łącznie" },
-  "statRamSaved": { "message": "Zaoszczędzona RAM (szacunkowo)" },
-  "statMemberSince": { "message": "Użytkownik od" },
-
-  "settings": { "message": "Ustawienia" },
-  "autoSuspendAfter": { "message": "Automatyczne usypianie po" },
-  "timer5min": { "message": "5 minutach" },
-  "timer10min": { "message": "10 minutach" },
-  "timer15min": { "message": "15 minutach" },
-  "timer30min": { "message": "30 minutach" },
-  "timer1hour": { "message": "1 godzinie" },
-  "timer2hours": { "message": "2 godzinach" },
-  "timer4hours": { "message": "4 godzinach" },
-  "timerNever": { "message": "Nigdy" },
-  "protectPinned": { "message": "Chroń przypięte karty" },
-  "protectAudio": { "message": "Chroń karty z dźwiękiem" },
-  "protectForms": { "message": "Chroń karty z formularzami" },
-  "suspendOnStartup": { "message": "Usypiaj karty przy uruchomieniu" },
-  "enableAutoSuspend": { "message": "Włącz automatyczne usypianie" },
-  "markSuspended": { "message": "Oznaczaj uśpione karty" },
-  "whitelistedSites": { "message": "Strony na białej liście" },
-  "add": { "message": "Dodaj" },
-  "noSitesWhitelisted": { "message": "Brak stron na białej liście" },
-
-  "suspending": { "message": "Usypiam..." },
-  "done": { "message": "Gotowe!" },
-  "waking": { "message": "Budzę..." },
+  "stats": {
+    "message": "Statystyki"
+  },
+  "statToday": {
+    "message": "Dzisiaj"
+  },
+  "statAllTime": {
+    "message": "Łącznie"
+  },
+  "statRamSaved": {
+    "message": "Zaoszczędzona RAM (szacunkowo)"
+  },
+  "statMemberSince": {
+    "message": "Użytkownik od"
+  },
+  "settings": {
+    "message": "Ustawienia"
+  },
+  "autoSuspendAfter": {
+    "message": "Automatyczne usypianie po"
+  },
+  "timer5min": {
+    "message": "5 minutach"
+  },
+  "timer10min": {
+    "message": "10 minutach"
+  },
+  "timer15min": {
+    "message": "15 minutach"
+  },
+  "timer30min": {
+    "message": "30 minutach"
+  },
+  "timer1hour": {
+    "message": "1 godzinie"
+  },
+  "timer2hours": {
+    "message": "2 godzinach"
+  },
+  "timer4hours": {
+    "message": "4 godzinach"
+  },
+  "timerNever": {
+    "message": "Nigdy"
+  },
+  "protectPinned": {
+    "message": "Chroń przypięte karty"
+  },
+  "protectAudio": {
+    "message": "Chroń karty z dźwiękiem"
+  },
+  "protectForms": {
+    "message": "Chroń karty z formularzami"
+  },
+  "suspendOnStartup": {
+    "message": "Usypiaj karty przy uruchomieniu"
+  },
+  "enableAutoSuspend": {
+    "message": "Włącz automatyczne usypianie"
+  },
+  "markSuspended": {
+    "message": "Oznaczaj uśpione karty"
+  },
+  "whitelistedSites": {
+    "message": "Strony na białej liście"
+  },
+  "add": {
+    "message": "Dodaj"
+  },
+  "noSitesWhitelisted": {
+    "message": "Brak stron na białej liście"
+  },
+  "suspending": {
+    "message": "Usypiam..."
+  },
+  "done": {
+    "message": "Gotowe!"
+  },
+  "waking": {
+    "message": "Budzę..."
+  },
   "copiedTabs": {
     "message": "Skopiowano $COUNT$ kart do schowka",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Nie udało się skopiować" },
-  "copyTabsTitle": { "message": "Kopiuj listę kart do schowka" },
-  "copySessionsTitle": { "message": "Kopiuj wszystkie sesje jako JSON" },
-  "remove": { "message": "Usuń" },
-
-  "switchToLight": { "message": "Przełącz na jasny motyw" },
-  "switchToDark": { "message": "Przełącz na ciemny motyw" },
-
-  "ctxSuspendThis": { "message": "Uśpij tę kartę" },
-  "ctxSuspendOthers": { "message": "Uśpij wszystkie inne karty" },
-  "ctxNeverSuspend": { "message": "Nigdy nie usypiaj tej strony" },
-
-  "maxSessionsReached": { "message": "Osiągnięto maksymalnie 20 sesji. Usuń jedną, aby zapisać nową." },
-  "noSaveableTabs": { "message": "Brak kart do zapisania w tym oknie." },
-  "sessionNotFound": { "message": "Nie znaleziono sesji." },
-  "noRestorableTabs": { "message": "Brak kart do przywrócenia w tej sesji." },
+  "failedToCopy": {
+    "message": "Nie udało się skopiować"
+  },
+  "copyTabsTitle": {
+    "message": "Kopiuj listę kart do schowka"
+  },
+  "copySessionsTitle": {
+    "message": "Kopiuj wszystkie sesje jako JSON"
+  },
+  "remove": {
+    "message": "Usuń"
+  },
+  "switchToLight": {
+    "message": "Przełącz na jasny motyw"
+  },
+  "switchToDark": {
+    "message": "Przełącz na ciemny motyw"
+  },
+  "ctxSuspendThis": {
+    "message": "Uśpij tę kartę"
+  },
+  "ctxSuspendOthers": {
+    "message": "Uśpij wszystkie inne karty"
+  },
+  "ctxNeverSuspend": {
+    "message": "Nigdy nie usypiaj tej strony"
+  },
+  "maxSessionsReached": {
+    "message": "Osiągnięto maksymalnie 20 sesji. Usuń jedną, aby zapisać nową."
+  },
+  "noSaveableTabs": {
+    "message": "Brak kart do zapisania w tym oknie."
+  },
+  "sessionNotFound": {
+    "message": "Nie znaleziono sesji."
+  },
+  "noRestorableTabs": {
+    "message": "Brak kart do przywrócenia w tej sesji."
+  },
   "sessionDefaultName": {
     "message": "Sesja – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "właśnie teraz" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "właśnie teraz"
+  },
   "minutesAgo": {
     "message": "$COUNT$ min temu",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ godz. temu",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Wczoraj" },
+  "yesterday": {
+    "message": "Wczoraj"
+  },
   "daysAgo": {
     "message": "$COUNT$ dn. temu",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Witaj w Drowzy" },
-  "onboardingIntro": { "message": "Drowzy oszczędza pamięć, usypiając nieaktywne karty. Twoje karty są zawsze bezpieczne – używamy natywnego API odrzucania Chrome, więc przetrwają nawet po odinstalowaniu Drowzy." },
-  "howItWorks": { "message": "Jak to działa" },
-  "featureAutoSuspend": { "message": "<strong>Karty nieaktywne przez 30 minut</strong> są automatycznie usypiane" },
-  "featureZeroRam": { "message": "<strong>Uśpione karty nie zużywają RAM</strong>, ale pozostają na pasku kart" },
-  "featureClickToWake": { "message": "<strong>Kliknij dowolną uśpioną kartę</strong>, aby ją natychmiast obudzić" },
-  "featureProtected": { "message": "<strong>Aktywne, przypięte i karty z dźwiękiem</strong> nigdy nie są usypiane" },
-  "quickActions": { "message": "Szybkie akcje" },
-  "actionClickIcon": { "message": "Kliknij <strong>ikonę Drowzy</strong> na pasku narzędzi, aby zobaczyć wszystkie karty" },
-  "actionAltS": { "message": "Naciśnij <kbd>Alt+S</kbd>, aby uśpić bieżącą kartę" },
-  "actionAltShiftS": { "message": "Naciśnij <kbd>Alt+Shift+S</kbd>, aby uśpić wszystkie inne karty" },
-  "actionAltW": { "message": "Naciśnij <kbd>Alt+W</kbd>, aby obudzić wszystkie uśpione karty" },
-  "actionRightClick": { "message": "Kliknij prawym przyciskiem na dowolnej stronie, aby szybko uśpić" },
-  "onboardingCta": { "message": "Drowzy już działa. Otwórz kilka kart i wypróbuj!" },
-  "onboardingBtn": { "message": "Rozumiem, zaczynajmy" },
-
-  "privacyTitle": { "message": "Drowzy – Polityka prywatności" },
-  "privacyUpdated": { "message": "Ostatnia aktualizacja: luty 2026" },
-  "privacyShortTitle": { "message": "W skrócie" },
-  "privacyShortText": { "message": "Drowzy nie zbiera żadnych danych. Bez analityki, bez śledzenia, bez zewnętrznych serwerów. Wszystko pozostaje w Twojej przeglądarce." },
-  "privacyStoredTitle": { "message": "Co jest przechowywane" },
-  "privacyStoredText": { "message": "Twoje ustawienia (timer usypiania, biała lista, preferencje) są zapisywane przy użyciu wbudowanych API przechowywania Chrome: chrome.storage.sync dla ustawień powiązanych z profilem Chrome, chrome.storage.local dla statystyk i zapisanych sesji oraz chrome.storage.session dla danych tymczasowych, takich jak znaczniki czasu kart. Żadne z tych danych nie są wysyłane na serwery zewnętrzne." },
-  "privacyPermissionsTitle": { "message": "Uprawnienia" },
-  "privacyPermissionsIntro": { "message": "Drowzy używa następujących uprawnień Chrome:" },
-  "privacyPermTabs": { "message": "tabs – wyświetlanie, usypianie i przywracanie kart przeglądarki" },
-  "privacyPermStorage": { "message": "storage – lokalne zapisywanie ustawień" },
-  "privacyPermAlarms": { "message": "alarms – okresowe sprawdzanie nieaktywnych kart" },
-  "privacyPermContextMenus": { "message": "contextMenus – opcje menu kontekstowego" },
-  "privacyContactTitle": { "message": "Kontakt" },
-  "privacyContactText": { "message": "Pytania? Napisz na drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Witaj w Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy oszczędza pamięć, usypiając nieaktywne karty. Twoje karty są zawsze bezpieczne – używamy natywnego API odrzucania Chrome, więc przetrwają nawet po odinstalowaniu Drowzy."
+  },
+  "howItWorks": {
+    "message": "Jak to działa"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Karty nieaktywne przez 30 minut</strong> są automatycznie usypiane"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Uśpione karty nie zużywają RAM</strong>, ale pozostają na pasku kart"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Kliknij dowolną uśpioną kartę</strong>, aby ją natychmiast obudzić"
+  },
+  "featureProtected": {
+    "message": "<strong>Aktywne, przypięte i karty z dźwiękiem</strong> nigdy nie są usypiane"
+  },
+  "quickActions": {
+    "message": "Szybkie akcje"
+  },
+  "actionClickIcon": {
+    "message": "Kliknij <strong>ikonę Drowzy</strong> na pasku narzędzi, aby zobaczyć wszystkie karty"
+  },
+  "actionAltS": {
+    "message": "Naciśnij <kbd>Alt+S</kbd>, aby uśpić bieżącą kartę"
+  },
+  "actionAltShiftS": {
+    "message": "Naciśnij <kbd>Alt+Shift+S</kbd>, aby uśpić wszystkie inne karty"
+  },
+  "actionAltW": {
+    "message": "Naciśnij <kbd>Alt+W</kbd>, aby obudzić wszystkie uśpione karty"
+  },
+  "actionRightClick": {
+    "message": "Kliknij prawym przyciskiem na dowolnej stronie, aby szybko uśpić"
+  },
+  "onboardingCta": {
+    "message": "Drowzy już działa. Otwórz kilka kart i wypróbuj!"
+  },
+  "onboardingBtn": {
+    "message": "Rozumiem, zaczynajmy"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Polityka prywatności"
+  },
+  "privacyUpdated": {
+    "message": "Ostatnia aktualizacja: luty 2026"
+  },
+  "privacyShortTitle": {
+    "message": "W skrócie"
+  },
+  "privacyShortText": {
+    "message": "Drowzy nie zbiera żadnych danych. Bez analityki, bez śledzenia, bez zewnętrznych serwerów. Wszystko pozostaje w Twojej przeglądarce."
+  },
+  "privacyStoredTitle": {
+    "message": "Co jest przechowywane"
+  },
+  "privacyStoredText": {
+    "message": "Twoje ustawienia (timer usypiania, biała lista, preferencje) są zapisywane przy użyciu wbudowanych API przechowywania Chrome: chrome.storage.sync dla ustawień powiązanych z profilem Chrome, chrome.storage.local dla statystyk i zapisanych sesji oraz chrome.storage.session dla danych tymczasowych, takich jak znaczniki czasu kart. Żadne z tych danych nie są wysyłane na serwery zewnętrzne."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Uprawnienia"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy używa następujących uprawnień Chrome:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – wyświetlanie, usypianie i przywracanie kart przeglądarki"
+  },
+  "privacyPermStorage": {
+    "message": "storage – lokalne zapisywanie ustawień"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – okresowe sprawdzanie nieaktywnych kart"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – opcje menu kontekstowego"
+  },
+  "privacyContactTitle": {
+    "message": "Kontakt"
+  },
+  "privacyContactText": {
+    "message": "Pytania? Napisz na drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Zastąp"
+  },
+  "replaceSessionTitle": {
+    "message": "Zastąp obecne karty tą sesją"
+  },
+  "invalidDomain": {
+    "message": "Wpisz prawidłową domenę (np. example.com)"
+  },
+  "extensionPage": {
+    "message": "Strona rozszerzenia"
+  },
+  "exportWhitelist": {
+    "message": "Eksportuj"
+  },
+  "importWhitelist": {
+    "message": "Importuj"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopiuj białą listę"
+  },
+  "importWhitelistTitle": {
+    "message": "Importuj białą listę ze schowka"
+  },
+  "copiedSites": {
+    "message": "Skopiowano $COUNT$ stron",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Zaimportowano $COUNT$ nowych stron",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Nie znaleziono prawidłowych domen w schowku"
+  },
+  "clipboardReadFailed": {
+    "message": "Nie można odczytać schowka"
+  },
+  "enjoyingDrowzy": {
+    "message": "Podoba Ci się Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Tak!"
+  },
+  "reviewNo": {
+    "message": "Nie bardzo"
+  },
+  "whatsNew": {
+    "message": "Co nowego w v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Co nowego w Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Co nowego"
+  },
+  "changelogVersion": {
+    "message": "Wersja 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Nowe funkcje"
+  },
+  "changelogBugFixes": {
+    "message": "Poprawki błędów"
+  },
+  "changelogImprovements": {
+    "message": "Ulepszenia"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Prośba o opinię"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Po uśpieniu kilku kart Drowzy zapyta, czy Ci się podoba. Szybki kciuk w górę bardzo nam pomaga!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Strona zmian"
+  },
+  "changelogChangelogDesc": {
+    "message": "Właśnie na nią patrzysz! Otwiera się automatycznie przy aktualizacji. Dostępna z Ustawień."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Czas przywracania sesji"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Przywrócone karty nie są już natychmiast automatycznie usypiane. Teraz poprawnie resetują swoje timery bezczynności."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Limit czasu sprawdzania formularzy"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Sprawdzanie formularzy ma teraz 500ms limit czasu, więc niereagujące karty nie mogą blokować kolejki."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Duplikaty białej listy"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Naprawiono problem z rozróżnianiem wielkości liter, gdzie \"Example.com\" i \"example.com\" mogły być dodane jednocześnie. Wszystkie wpisy są teraz znormalizowane."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Statystyki na żywo"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Popup automatycznie się odświeża, gdy karty są usypiane lub budzone."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Opcje przywracania sesji"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Sesje mają teraz oddzielne przyciski \"Otwórz\" i \"Zastąp\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Walidacja i eksport/import białej listy"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Wprowadzanie białej listy teraz waliduje domeny. Możesz eksportować i importować przez schowek."
+  },
+  "changelogA11yTitle": {
+    "message": "Dostępność"
+  },
+  "changelogA11yDesc": {
+    "message": "Elementy listy kart są teraz nawigowalne klawiaturą z rolami ARIA. Powiadomienia są ogłaszane czytnikom ekranu."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Płynniejsze animacje"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Animacje kaskadowe listy kart są teraz ograniczone, więc okna z wieloma kartami nie mają długiego opóźnienia."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy jest darmowy i open source. Jeśli oszczędza pamięć, zostaw opinię lub gwiazdkę na GitHubie."
+  },
+  "changelogReviewBtn": {
+    "message": "Zostaw opinię"
+  },
+  "changelogStarBtn": {
+    "message": "Gwiazdka na GitHubie"
+  }
 }

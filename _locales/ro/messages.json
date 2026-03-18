@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Trezește toate filele suspendate"
   },
-
-  "statSleeping": { "message": "în repaus" },
-  "statProtected": { "message": "protejate" },
-  "statSaved": { "message": "economisit" },
-
-  "suspendOthers": { "message": "Suspendă celelalte" },
-  "wakeAll": { "message": "Trezește toate" },
-
-  "neverSuspendSite": { "message": "Nu suspenda niciodată acest site" },
-  "siteWhitelisted": { "message": "Site-ul este pe lista albă (click pentru a elimina)" },
-  "activeWontSuspend": { "message": "Activ – nu va fi suspendat" },
-  "loading": { "message": "Se încarcă..." },
-
-  "tabsInWindow": { "message": "File în această fereastră" },
-  "loadingTabs": { "message": "Se încarcă filele..." },
-  "noTabsFound": { "message": "Nu s-au găsit file" },
-  "failedToLoad": { "message": "Încărcare eșuată. Redeschide popup-ul pentru a reîncerca." },
-
-  "badgeActive": { "message": "Activ" },
-  "badgeSystem": { "message": "Sistem" },
-  "badgePinned": { "message": "Fixat" },
-  "badgeAudio": { "message": "Audio" },
-  "badgeStarred": { "message": "Marcat cu stea" },
-  "badgeProtected": { "message": "Protejat" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Sesiuni" },
-  "sessionNamePlaceholder": { "message": "Numele sesiunii (opțional)" },
-  "save": { "message": "Salvează" },
-  "emptySessionState": { "message": "Salvează prima sesiune pentru a restaura filele oricând" },
-  "open": { "message": "Deschide" },
-  "openSessionTitle": { "message": "Deschide filele din această sesiune" },
-  "deleteSessionTitle": { "message": "Șterge sesiunea" },
-  "sessionSaved": { "message": "Sesiune salvată!" },
-  "failedToSave": { "message": "Salvare eșuată" },
+  "statSleeping": {
+    "message": "în repaus"
+  },
+  "statProtected": {
+    "message": "protejate"
+  },
+  "statSaved": {
+    "message": "economisit"
+  },
+  "suspendOthers": {
+    "message": "Suspendă celelalte"
+  },
+  "wakeAll": {
+    "message": "Trezește toate"
+  },
+  "neverSuspendSite": {
+    "message": "Nu suspenda niciodată acest site"
+  },
+  "siteWhitelisted": {
+    "message": "Site-ul este pe lista albă (click pentru a elimina)"
+  },
+  "activeWontSuspend": {
+    "message": "Activ – nu va fi suspendat"
+  },
+  "loading": {
+    "message": "Se încarcă..."
+  },
+  "tabsInWindow": {
+    "message": "File în această fereastră"
+  },
+  "loadingTabs": {
+    "message": "Se încarcă filele..."
+  },
+  "noTabsFound": {
+    "message": "Nu s-au găsit file"
+  },
+  "failedToLoad": {
+    "message": "Încărcare eșuată. Redeschide popup-ul pentru a reîncerca."
+  },
+  "badgeActive": {
+    "message": "Activ"
+  },
+  "badgeSystem": {
+    "message": "Sistem"
+  },
+  "badgePinned": {
+    "message": "Fixat"
+  },
+  "badgeAudio": {
+    "message": "Audio"
+  },
+  "badgeStarred": {
+    "message": "Marcat cu stea"
+  },
+  "badgeProtected": {
+    "message": "Protejat"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Sesiuni"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Numele sesiunii (opțional)"
+  },
+  "save": {
+    "message": "Salvează"
+  },
+  "emptySessionState": {
+    "message": "Salvează prima sesiune pentru a restaura filele oricând"
+  },
+  "open": {
+    "message": "Deschide"
+  },
+  "openSessionTitle": {
+    "message": "Deschide filele din această sesiune"
+  },
+  "deleteSessionTitle": {
+    "message": "Șterge sesiunea"
+  },
+  "sessionSaved": {
+    "message": "Sesiune salvată!"
+  },
+  "failedToSave": {
+    "message": "Salvare eșuată"
+  },
   "restoredTabs": {
     "message": "$COUNT$ file restaurate",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Restaurare eșuată" },
-  "noSessionsToExport": { "message": "Nu există sesiuni de exportat" },
+  "failedToRestore": {
+    "message": "Restaurare eșuată"
+  },
+  "noSessionsToExport": {
+    "message": "Nu există sesiuni de exportat"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ sesiuni copiate ca JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ file",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Statistici" },
-  "statToday": { "message": "Astăzi" },
-  "statAllTime": { "message": "Din totdeauna" },
-  "statRamSaved": { "message": "RAM economisit (est.)" },
-  "statMemberSince": { "message": "Membru din" },
-
-  "settings": { "message": "Setări" },
-  "autoSuspendAfter": { "message": "Suspendare automată după" },
-  "timer5min": { "message": "5 minute" },
-  "timer10min": { "message": "10 minute" },
-  "timer15min": { "message": "15 minute" },
-  "timer30min": { "message": "30 minute" },
-  "timer1hour": { "message": "1 oră" },
-  "timer2hours": { "message": "2 ore" },
-  "timer4hours": { "message": "4 ore" },
-  "timerNever": { "message": "Niciodată" },
-  "protectPinned": { "message": "Protejează filele fixate" },
-  "protectAudio": { "message": "Protejează filele cu audio" },
-  "protectForms": { "message": "Protejează filele cu formulare" },
-  "suspendOnStartup": { "message": "Suspendă filele la pornire" },
-  "enableAutoSuspend": { "message": "Activează suspendarea automată" },
-  "markSuspended": { "message": "Marchează filele suspendate" },
-  "whitelistedSites": { "message": "Site-uri pe lista albă" },
-  "add": { "message": "Adaugă" },
-  "noSitesWhitelisted": { "message": "Niciun site pe lista albă" },
-
-  "suspending": { "message": "Se suspendă..." },
-  "done": { "message": "Gata!" },
-  "waking": { "message": "Se trezesc..." },
+  "stats": {
+    "message": "Statistici"
+  },
+  "statToday": {
+    "message": "Astăzi"
+  },
+  "statAllTime": {
+    "message": "Din totdeauna"
+  },
+  "statRamSaved": {
+    "message": "RAM economisit (est.)"
+  },
+  "statMemberSince": {
+    "message": "Membru din"
+  },
+  "settings": {
+    "message": "Setări"
+  },
+  "autoSuspendAfter": {
+    "message": "Suspendare automată după"
+  },
+  "timer5min": {
+    "message": "5 minute"
+  },
+  "timer10min": {
+    "message": "10 minute"
+  },
+  "timer15min": {
+    "message": "15 minute"
+  },
+  "timer30min": {
+    "message": "30 minute"
+  },
+  "timer1hour": {
+    "message": "1 oră"
+  },
+  "timer2hours": {
+    "message": "2 ore"
+  },
+  "timer4hours": {
+    "message": "4 ore"
+  },
+  "timerNever": {
+    "message": "Niciodată"
+  },
+  "protectPinned": {
+    "message": "Protejează filele fixate"
+  },
+  "protectAudio": {
+    "message": "Protejează filele cu audio"
+  },
+  "protectForms": {
+    "message": "Protejează filele cu formulare"
+  },
+  "suspendOnStartup": {
+    "message": "Suspendă filele la pornire"
+  },
+  "enableAutoSuspend": {
+    "message": "Activează suspendarea automată"
+  },
+  "markSuspended": {
+    "message": "Marchează filele suspendate"
+  },
+  "whitelistedSites": {
+    "message": "Site-uri pe lista albă"
+  },
+  "add": {
+    "message": "Adaugă"
+  },
+  "noSitesWhitelisted": {
+    "message": "Niciun site pe lista albă"
+  },
+  "suspending": {
+    "message": "Se suspendă..."
+  },
+  "done": {
+    "message": "Gata!"
+  },
+  "waking": {
+    "message": "Se trezesc..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ file copiate în clipboard",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Copiere eșuată" },
-  "copyTabsTitle": { "message": "Copiază lista de file în clipboard" },
-  "copySessionsTitle": { "message": "Copiază toate sesiunile ca JSON" },
-  "remove": { "message": "Elimină" },
-
-  "switchToLight": { "message": "Comută la modul luminos" },
-  "switchToDark": { "message": "Comută la modul întunecat" },
-
-  "ctxSuspendThis": { "message": "Suspendă această filă" },
-  "ctxSuspendOthers": { "message": "Suspendă toate celelalte file" },
-  "ctxNeverSuspend": { "message": "Nu suspenda niciodată acest site" },
-
-  "maxSessionsReached": { "message": "Maximum 20 de sesiuni atins. Șterge una pentru a salva una nouă." },
-  "noSaveableTabs": { "message": "Nu există file salvabile în această fereastră." },
-  "sessionNotFound": { "message": "Sesiunea nu a fost găsită." },
-  "noRestorableTabs": { "message": "Nu există file restaurabile în această sesiune." },
+  "failedToCopy": {
+    "message": "Copiere eșuată"
+  },
+  "copyTabsTitle": {
+    "message": "Copiază lista de file în clipboard"
+  },
+  "copySessionsTitle": {
+    "message": "Copiază toate sesiunile ca JSON"
+  },
+  "remove": {
+    "message": "Elimină"
+  },
+  "switchToLight": {
+    "message": "Comută la modul luminos"
+  },
+  "switchToDark": {
+    "message": "Comută la modul întunecat"
+  },
+  "ctxSuspendThis": {
+    "message": "Suspendă această filă"
+  },
+  "ctxSuspendOthers": {
+    "message": "Suspendă toate celelalte file"
+  },
+  "ctxNeverSuspend": {
+    "message": "Nu suspenda niciodată acest site"
+  },
+  "maxSessionsReached": {
+    "message": "Maximum 20 de sesiuni atins. Șterge una pentru a salva una nouă."
+  },
+  "noSaveableTabs": {
+    "message": "Nu există file salvabile în această fereastră."
+  },
+  "sessionNotFound": {
+    "message": "Sesiunea nu a fost găsită."
+  },
+  "noRestorableTabs": {
+    "message": "Nu există file restaurabile în această sesiune."
+  },
   "sessionDefaultName": {
     "message": "Sesiune – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "chiar acum" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "chiar acum"
+  },
   "minutesAgo": {
     "message": "acum $COUNT$ min",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "acum $COUNT$ h",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Ieri" },
+  "yesterday": {
+    "message": "Ieri"
+  },
   "daysAgo": {
     "message": "acum $COUNT$ z",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Bun venit la Drowzy" },
-  "onboardingIntro": { "message": "Drowzy economisește memorie punând filele inactive în repaus. Filele tale sunt mereu în siguranță – folosim API-ul nativ de renunțare al Chrome, astfel că supraviețuiesc chiar dacă dezinstalezi Drowzy." },
-  "howItWorks": { "message": "Cum funcționează" },
-  "featureAutoSuspend": { "message": "<strong>Filele inactive timp de 30 de minute</strong> sunt suspendate automat" },
-  "featureZeroRam": { "message": "<strong>Filele suspendate nu folosesc RAM</strong> dar rămân în bara de file" },
-  "featureClickToWake": { "message": "<strong>Click pe orice filă suspendată</strong> pentru a o trezi instant" },
-  "featureProtected": { "message": "<strong>Filele active, fixate și cu audio</strong> nu sunt niciodată atinse" },
-  "quickActions": { "message": "Acțiuni rapide" },
-  "actionClickIcon": { "message": "Click pe <strong>pictograma Drowzy</strong> din bara de instrumente pentru a vedea toate filele" },
-  "actionAltS": { "message": "Apasă <kbd>Alt+S</kbd> pentru a suspenda fila curentă" },
-  "actionAltShiftS": { "message": "Apasă <kbd>Alt+Shift+S</kbd> pentru a suspenda toate celelalte file" },
-  "actionAltW": { "message": "Apasă <kbd>Alt+W</kbd> pentru a trezi toate filele suspendate" },
-  "actionRightClick": { "message": "Click dreapta pe orice pagină pentru opțiuni rapide de suspendare" },
-  "onboardingCta": { "message": "Drowzy rulează deja. Deschide câteva file și încearcă!" },
-  "onboardingBtn": { "message": "Am înțeles, să începem" },
-
-  "privacyTitle": { "message": "Drowzy – Politica de confidențialitate" },
-  "privacyUpdated": { "message": "Ultima actualizare: februarie 2026" },
-  "privacyShortTitle": { "message": "Pe scurt" },
-  "privacyShortText": { "message": "Drowzy nu colectează niciun fel de date. Fără analize, fără urmărire, fără servere externe. Totul rămâne în browserul tău." },
-  "privacyStoredTitle": { "message": "Ce se stochează" },
-  "privacyStoredText": { "message": "Setările tale (cronometrul de suspendare, lista albă, preferințele) sunt salvate folosind API-urile de stocare integrate ale Chrome: chrome.storage.sync pentru setările care urmează profilul tău Chrome, chrome.storage.local pentru statistici și sesiuni salvate, și chrome.storage.session pentru date temporare precum marcajele de timp ale filelor. Nimic din acestea nu este trimis către vreun server terț." },
-  "privacyPermissionsTitle": { "message": "Permisiuni" },
-  "privacyPermissionsIntro": { "message": "Drowzy folosește aceste permisiuni Chrome:" },
-  "privacyPermTabs": { "message": "tabs – listarea, suspendarea și restaurarea filelor din browser" },
-  "privacyPermStorage": { "message": "storage – salvarea setărilor local" },
-  "privacyPermAlarms": { "message": "alarms – verificări periodice pentru file inactive" },
-  "privacyPermContextMenus": { "message": "contextMenus – opțiuni din meniul click dreapta" },
-  "privacyContactTitle": { "message": "Contact" },
-  "privacyContactText": { "message": "Întrebări? Contactează-ne la drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Bun venit la Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy economisește memorie punând filele inactive în repaus. Filele tale sunt mereu în siguranță – folosim API-ul nativ de renunțare al Chrome, astfel că supraviețuiesc chiar dacă dezinstalezi Drowzy."
+  },
+  "howItWorks": {
+    "message": "Cum funcționează"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Filele inactive timp de 30 de minute</strong> sunt suspendate automat"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Filele suspendate nu folosesc RAM</strong> dar rămân în bara de file"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Click pe orice filă suspendată</strong> pentru a o trezi instant"
+  },
+  "featureProtected": {
+    "message": "<strong>Filele active, fixate și cu audio</strong> nu sunt niciodată atinse"
+  },
+  "quickActions": {
+    "message": "Acțiuni rapide"
+  },
+  "actionClickIcon": {
+    "message": "Click pe <strong>pictograma Drowzy</strong> din bara de instrumente pentru a vedea toate filele"
+  },
+  "actionAltS": {
+    "message": "Apasă <kbd>Alt+S</kbd> pentru a suspenda fila curentă"
+  },
+  "actionAltShiftS": {
+    "message": "Apasă <kbd>Alt+Shift+S</kbd> pentru a suspenda toate celelalte file"
+  },
+  "actionAltW": {
+    "message": "Apasă <kbd>Alt+W</kbd> pentru a trezi toate filele suspendate"
+  },
+  "actionRightClick": {
+    "message": "Click dreapta pe orice pagină pentru opțiuni rapide de suspendare"
+  },
+  "onboardingCta": {
+    "message": "Drowzy rulează deja. Deschide câteva file și încearcă!"
+  },
+  "onboardingBtn": {
+    "message": "Am înțeles, să începem"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Politica de confidențialitate"
+  },
+  "privacyUpdated": {
+    "message": "Ultima actualizare: februarie 2026"
+  },
+  "privacyShortTitle": {
+    "message": "Pe scurt"
+  },
+  "privacyShortText": {
+    "message": "Drowzy nu colectează niciun fel de date. Fără analize, fără urmărire, fără servere externe. Totul rămâne în browserul tău."
+  },
+  "privacyStoredTitle": {
+    "message": "Ce se stochează"
+  },
+  "privacyStoredText": {
+    "message": "Setările tale (cronometrul de suspendare, lista albă, preferințele) sunt salvate folosind API-urile de stocare integrate ale Chrome: chrome.storage.sync pentru setările care urmează profilul tău Chrome, chrome.storage.local pentru statistici și sesiuni salvate, și chrome.storage.session pentru date temporare precum marcajele de timp ale filelor. Nimic din acestea nu este trimis către vreun server terț."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Permisiuni"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy folosește aceste permisiuni Chrome:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – listarea, suspendarea și restaurarea filelor din browser"
+  },
+  "privacyPermStorage": {
+    "message": "storage – salvarea setărilor local"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – verificări periodice pentru file inactive"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – opțiuni din meniul click dreapta"
+  },
+  "privacyContactTitle": {
+    "message": "Contact"
+  },
+  "privacyContactText": {
+    "message": "Întrebări? Contactează-ne la drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Înlocuiește"
+  },
+  "replaceSessionTitle": {
+    "message": "Înlocuiește filele curente cu această sesiune"
+  },
+  "invalidDomain": {
+    "message": "Introduceți un domeniu valid (de ex. example.com)"
+  },
+  "extensionPage": {
+    "message": "Pagina extensiei"
+  },
+  "exportWhitelist": {
+    "message": "Exportă"
+  },
+  "importWhitelist": {
+    "message": "Importă"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copiază lista albă"
+  },
+  "importWhitelistTitle": {
+    "message": "Importă lista albă din clipboard"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ site(-uri) copiat(e)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ site(-uri) noi importat(e)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Nu s-au găsit domenii valide în clipboard"
+  },
+  "clipboardReadFailed": {
+    "message": "Nu s-a putut citi clipboard-ul"
+  },
+  "enjoyingDrowzy": {
+    "message": "Îți place Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Da!"
+  },
+  "reviewNo": {
+    "message": "Nu prea"
+  },
+  "whatsNew": {
+    "message": "Ce e nou în v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Ce e nou în Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Ce e nou"
+  },
+  "changelogVersion": {
+    "message": "Versiunea 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Funcții noi"
+  },
+  "changelogBugFixes": {
+    "message": "Remedieri"
+  },
+  "changelogImprovements": {
+    "message": "Îmbunătățiri"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Solicitare de recenzie"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "După ce suspendați câteva file, Drowzy va întreba dacă vă place. Un like rapid ne ajută enorm!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Pagina de modificări"
+  },
+  "changelogChangelogDesc": {
+    "message": "Tocmai o vedeți! Se deschide automat la actualizare. Accesibilă din Setări."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Momentul restaurării sesiunii"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Filele restaurate nu mai sunt suspendate automat imediat. Acum resetează corect temporizatoarele de inactivitate."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Expirare verificare formular"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Verificarea formularelor are acum un timeout de 500ms, astfel încât filele care nu răspund nu pot bloca coada."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Duplicate în lista albă"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "S-a remediat problema de sensibilitate la majuscule unde \"Example.com\" și \"example.com\" puteau fi adăugate ambele. Toate intrările sunt acum normalizate."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Statistici în timp real"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "Popup-ul se actualizează automat când filele sunt suspendate sau trezite."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Opțiuni de restaurare a sesiunii"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Sesiunile au acum butoane separate \"Deschide\" și \"Înlocuiește\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Validare și export/import al listei albe"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Introducerea listei albe validează acum domeniile. Puteți exporta și importa prin clipboard."
+  },
+  "changelogA11yTitle": {
+    "message": "Accesibilitate"
+  },
+  "changelogA11yDesc": {
+    "message": "Elementele listei de file sunt acum navigabile cu tastatura cu roluri ARIA. Notificările sunt anunțate cititorelor de ecran."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Animații mai fluide"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Animațiile în cascadă sunt limitate pentru a evita întârzieri lungi în ferestrele cu multe file."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy este gratuit și open source. Dacă vă economisește memorie, lăsați o recenzie sau o stea pe GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Lăsați o recenzie"
+  },
+  "changelogStarBtn": {
+    "message": "Stea pe GitHub"
+  }
 }

@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Acordar todos os separadores suspensos"
   },
-
-  "statSleeping": { "message": "a dormir" },
-  "statProtected": { "message": "protegidos" },
-  "statSaved": { "message": "poupado" },
-
-  "suspendOthers": { "message": "Suspender outros" },
-  "wakeAll": { "message": "Acordar todos" },
-
-  "neverSuspendSite": { "message": "Nunca suspender este site" },
-  "siteWhitelisted": { "message": "Site na lista branca (clique para remover)" },
-  "activeWontSuspend": { "message": "Ativo – não será suspenso" },
-  "loading": { "message": "A carregar..." },
-
-  "tabsInWindow": { "message": "Separadores nesta janela" },
-  "loadingTabs": { "message": "A carregar separadores..." },
-  "noTabsFound": { "message": "Nenhum separador encontrado" },
-  "failedToLoad": { "message": "Falha ao carregar. Reabra o popup para tentar novamente." },
-
-  "badgeActive": { "message": "Ativo" },
-  "badgeSystem": { "message": "Sistema" },
-  "badgePinned": { "message": "Fixado" },
-  "badgeAudio": { "message": "Áudio" },
-  "badgeStarred": { "message": "Com estrela" },
-  "badgeProtected": { "message": "Protegido" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Sessões" },
-  "sessionNamePlaceholder": { "message": "Nome da sessão (opcional)" },
-  "save": { "message": "Guardar" },
-  "emptySessionState": { "message": "Guarde a sua primeira sessão para restaurar separadores a qualquer momento" },
-  "open": { "message": "Abrir" },
-  "openSessionTitle": { "message": "Abrir separadores desta sessão" },
-  "deleteSessionTitle": { "message": "Eliminar sessão" },
-  "sessionSaved": { "message": "Sessão guardada!" },
-  "failedToSave": { "message": "Falha ao guardar" },
+  "statSleeping": {
+    "message": "a dormir"
+  },
+  "statProtected": {
+    "message": "protegidos"
+  },
+  "statSaved": {
+    "message": "poupado"
+  },
+  "suspendOthers": {
+    "message": "Suspender outros"
+  },
+  "wakeAll": {
+    "message": "Acordar todos"
+  },
+  "neverSuspendSite": {
+    "message": "Nunca suspender este site"
+  },
+  "siteWhitelisted": {
+    "message": "Site na lista branca (clique para remover)"
+  },
+  "activeWontSuspend": {
+    "message": "Ativo – não será suspenso"
+  },
+  "loading": {
+    "message": "A carregar..."
+  },
+  "tabsInWindow": {
+    "message": "Separadores nesta janela"
+  },
+  "loadingTabs": {
+    "message": "A carregar separadores..."
+  },
+  "noTabsFound": {
+    "message": "Nenhum separador encontrado"
+  },
+  "failedToLoad": {
+    "message": "Falha ao carregar. Reabra o popup para tentar novamente."
+  },
+  "badgeActive": {
+    "message": "Ativo"
+  },
+  "badgeSystem": {
+    "message": "Sistema"
+  },
+  "badgePinned": {
+    "message": "Fixado"
+  },
+  "badgeAudio": {
+    "message": "Áudio"
+  },
+  "badgeStarred": {
+    "message": "Com estrela"
+  },
+  "badgeProtected": {
+    "message": "Protegido"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Sessões"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Nome da sessão (opcional)"
+  },
+  "save": {
+    "message": "Guardar"
+  },
+  "emptySessionState": {
+    "message": "Guarde a sua primeira sessão para restaurar separadores a qualquer momento"
+  },
+  "open": {
+    "message": "Abrir"
+  },
+  "openSessionTitle": {
+    "message": "Abrir separadores desta sessão"
+  },
+  "deleteSessionTitle": {
+    "message": "Eliminar sessão"
+  },
+  "sessionSaved": {
+    "message": "Sessão guardada!"
+  },
+  "failedToSave": {
+    "message": "Falha ao guardar"
+  },
   "restoredTabs": {
     "message": "$COUNT$ separadores restaurados",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Falha ao restaurar" },
-  "noSessionsToExport": { "message": "Nenhuma sessão para exportar" },
+  "failedToRestore": {
+    "message": "Falha ao restaurar"
+  },
+  "noSessionsToExport": {
+    "message": "Nenhuma sessão para exportar"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ sessões copiadas como JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ separadores",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Estatísticas" },
-  "statToday": { "message": "Hoje" },
-  "statAllTime": { "message": "Total" },
-  "statRamSaved": { "message": "RAM poupada (estimativa)" },
-  "statMemberSince": { "message": "Membro desde" },
-
-  "settings": { "message": "Definições" },
-  "autoSuspendAfter": { "message": "Suspender automaticamente após" },
-  "timer5min": { "message": "5 minutos" },
-  "timer10min": { "message": "10 minutos" },
-  "timer15min": { "message": "15 minutos" },
-  "timer30min": { "message": "30 minutos" },
-  "timer1hour": { "message": "1 hora" },
-  "timer2hours": { "message": "2 horas" },
-  "timer4hours": { "message": "4 horas" },
-  "timerNever": { "message": "Nunca" },
-  "protectPinned": { "message": "Proteger separadores fixados" },
-  "protectAudio": { "message": "Proteger separadores com áudio" },
-  "protectForms": { "message": "Proteger separadores com formulários" },
-  "suspendOnStartup": { "message": "Suspender separadores ao iniciar" },
-  "enableAutoSuspend": { "message": "Ativar suspensão automática" },
-  "markSuspended": { "message": "Marcar separadores suspensos" },
-  "whitelistedSites": { "message": "Sites na lista branca" },
-  "add": { "message": "Adicionar" },
-  "noSitesWhitelisted": { "message": "Nenhum site na lista branca" },
-
-  "suspending": { "message": "A suspender..." },
-  "done": { "message": "Concluído!" },
-  "waking": { "message": "A acordar..." },
+  "stats": {
+    "message": "Estatísticas"
+  },
+  "statToday": {
+    "message": "Hoje"
+  },
+  "statAllTime": {
+    "message": "Total"
+  },
+  "statRamSaved": {
+    "message": "RAM poupada (estimativa)"
+  },
+  "statMemberSince": {
+    "message": "Membro desde"
+  },
+  "settings": {
+    "message": "Definições"
+  },
+  "autoSuspendAfter": {
+    "message": "Suspender automaticamente após"
+  },
+  "timer5min": {
+    "message": "5 minutos"
+  },
+  "timer10min": {
+    "message": "10 minutos"
+  },
+  "timer15min": {
+    "message": "15 minutos"
+  },
+  "timer30min": {
+    "message": "30 minutos"
+  },
+  "timer1hour": {
+    "message": "1 hora"
+  },
+  "timer2hours": {
+    "message": "2 horas"
+  },
+  "timer4hours": {
+    "message": "4 horas"
+  },
+  "timerNever": {
+    "message": "Nunca"
+  },
+  "protectPinned": {
+    "message": "Proteger separadores fixados"
+  },
+  "protectAudio": {
+    "message": "Proteger separadores com áudio"
+  },
+  "protectForms": {
+    "message": "Proteger separadores com formulários"
+  },
+  "suspendOnStartup": {
+    "message": "Suspender separadores ao iniciar"
+  },
+  "enableAutoSuspend": {
+    "message": "Ativar suspensão automática"
+  },
+  "markSuspended": {
+    "message": "Marcar separadores suspensos"
+  },
+  "whitelistedSites": {
+    "message": "Sites na lista branca"
+  },
+  "add": {
+    "message": "Adicionar"
+  },
+  "noSitesWhitelisted": {
+    "message": "Nenhum site na lista branca"
+  },
+  "suspending": {
+    "message": "A suspender..."
+  },
+  "done": {
+    "message": "Concluído!"
+  },
+  "waking": {
+    "message": "A acordar..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ separadores copiados para a área de transferência",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Falha ao copiar" },
-  "copyTabsTitle": { "message": "Copiar lista de separadores para a área de transferência" },
-  "copySessionsTitle": { "message": "Copiar todas as sessões como JSON" },
-  "remove": { "message": "Remover" },
-
-  "switchToLight": { "message": "Mudar para modo claro" },
-  "switchToDark": { "message": "Mudar para modo escuro" },
-
-  "ctxSuspendThis": { "message": "Suspender este separador" },
-  "ctxSuspendOthers": { "message": "Suspender todos os outros separadores" },
-  "ctxNeverSuspend": { "message": "Nunca suspender este site" },
-
-  "maxSessionsReached": { "message": "Máximo de 20 sessões atingido. Elimine uma para guardar uma nova." },
-  "noSaveableTabs": { "message": "Nenhum separador guardável nesta janela." },
-  "sessionNotFound": { "message": "Sessão não encontrada." },
-  "noRestorableTabs": { "message": "Nenhum separador restaurável nesta sessão." },
+  "failedToCopy": {
+    "message": "Falha ao copiar"
+  },
+  "copyTabsTitle": {
+    "message": "Copiar lista de separadores para a área de transferência"
+  },
+  "copySessionsTitle": {
+    "message": "Copiar todas as sessões como JSON"
+  },
+  "remove": {
+    "message": "Remover"
+  },
+  "switchToLight": {
+    "message": "Mudar para modo claro"
+  },
+  "switchToDark": {
+    "message": "Mudar para modo escuro"
+  },
+  "ctxSuspendThis": {
+    "message": "Suspender este separador"
+  },
+  "ctxSuspendOthers": {
+    "message": "Suspender todos os outros separadores"
+  },
+  "ctxNeverSuspend": {
+    "message": "Nunca suspender este site"
+  },
+  "maxSessionsReached": {
+    "message": "Máximo de 20 sessões atingido. Elimine uma para guardar uma nova."
+  },
+  "noSaveableTabs": {
+    "message": "Nenhum separador guardável nesta janela."
+  },
+  "sessionNotFound": {
+    "message": "Sessão não encontrada."
+  },
+  "noRestorableTabs": {
+    "message": "Nenhum separador restaurável nesta sessão."
+  },
   "sessionDefaultName": {
     "message": "Sessão – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "agora mesmo" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "agora mesmo"
+  },
   "minutesAgo": {
     "message": "$COUNT$ min atrás",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$h atrás",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Ontem" },
+  "yesterday": {
+    "message": "Ontem"
+  },
   "daysAgo": {
     "message": "$COUNT$d atrás",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Bem-vindo ao Drowzy" },
-  "onboardingIntro": { "message": "O Drowzy poupa memória ao adormecer separadores inativos. Os seus separadores estão sempre seguros – utilizamos a API nativa de descarte do Chrome, pelo que sobrevivem mesmo que desinstale o Drowzy." },
-  "howItWorks": { "message": "Como funciona" },
-  "featureAutoSuspend": { "message": "<strong>Separadores inativos durante 30 minutos</strong> são automaticamente suspensos" },
-  "featureZeroRam": { "message": "<strong>Separadores suspensos usam zero RAM</strong>, mas permanecem na barra de separadores" },
-  "featureClickToWake": { "message": "<strong>Clique em qualquer separador suspenso</strong> para o acordar instantaneamente" },
-  "featureProtected": { "message": "<strong>Separadores ativos, fixados e com áudio</strong> nunca são tocados" },
-  "quickActions": { "message": "Ações rápidas" },
-  "actionClickIcon": { "message": "Clique no <strong>ícone do Drowzy</strong> na barra de ferramentas para ver todos os seus separadores" },
-  "actionAltS": { "message": "Prima <kbd>Alt+S</kbd> para suspender o separador atual" },
-  "actionAltShiftS": { "message": "Prima <kbd>Alt+Shift+S</kbd> para suspender todos os outros separadores" },
-  "actionAltW": { "message": "Prima <kbd>Alt+W</kbd> para acordar todos os separadores suspensos" },
-  "actionRightClick": { "message": "Clique com o botão direito em qualquer página para opções rápidas de suspensão" },
-  "onboardingCta": { "message": "O Drowzy já está a funcionar. Abra alguns separadores e experimente!" },
-  "onboardingBtn": { "message": "Percebi, vamos a isso" },
-
-  "privacyTitle": { "message": "Drowzy – Política de Privacidade" },
-  "privacyUpdated": { "message": "Última atualização: fevereiro de 2026" },
-  "privacyShortTitle": { "message": "A versão resumida" },
-  "privacyShortText": { "message": "O Drowzy não recolhe quaisquer dados. Sem analíticas, sem rastreio, sem servidores externos. Tudo permanece no seu navegador." },
-  "privacyStoredTitle": { "message": "O que é armazenado" },
-  "privacyStoredText": { "message": "As suas definições (temporizador de suspensão, lista branca, preferências) são guardadas utilizando as APIs de armazenamento integradas do Chrome: chrome.storage.sync para definições que acompanham o seu perfil do Chrome, chrome.storage.local para estatísticas e sessões guardadas, e chrome.storage.session para dados temporários como marcas temporais de separadores. Nada disto é enviado para servidores de terceiros." },
-  "privacyPermissionsTitle": { "message": "Permissões" },
-  "privacyPermissionsIntro": { "message": "O Drowzy utiliza estas permissões do Chrome:" },
-  "privacyPermTabs": { "message": "tabs – listar, suspender e restaurar separadores do navegador" },
-  "privacyPermStorage": { "message": "storage – guardar as suas definições localmente" },
-  "privacyPermAlarms": { "message": "alarms – verificações periódicas de separadores inativos" },
-  "privacyPermContextMenus": { "message": "contextMenus – opções do menu de contexto" },
-  "privacyContactTitle": { "message": "Contacto" },
-  "privacyContactText": { "message": "Questões? Contacte-nos em drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Bem-vindo ao Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "O Drowzy poupa memória ao adormecer separadores inativos. Os seus separadores estão sempre seguros – utilizamos a API nativa de descarte do Chrome, pelo que sobrevivem mesmo que desinstale o Drowzy."
+  },
+  "howItWorks": {
+    "message": "Como funciona"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Separadores inativos durante 30 minutos</strong> são automaticamente suspensos"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Separadores suspensos usam zero RAM</strong>, mas permanecem na barra de separadores"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Clique em qualquer separador suspenso</strong> para o acordar instantaneamente"
+  },
+  "featureProtected": {
+    "message": "<strong>Separadores ativos, fixados e com áudio</strong> nunca são tocados"
+  },
+  "quickActions": {
+    "message": "Ações rápidas"
+  },
+  "actionClickIcon": {
+    "message": "Clique no <strong>ícone do Drowzy</strong> na barra de ferramentas para ver todos os seus separadores"
+  },
+  "actionAltS": {
+    "message": "Prima <kbd>Alt+S</kbd> para suspender o separador atual"
+  },
+  "actionAltShiftS": {
+    "message": "Prima <kbd>Alt+Shift+S</kbd> para suspender todos os outros separadores"
+  },
+  "actionAltW": {
+    "message": "Prima <kbd>Alt+W</kbd> para acordar todos os separadores suspensos"
+  },
+  "actionRightClick": {
+    "message": "Clique com o botão direito em qualquer página para opções rápidas de suspensão"
+  },
+  "onboardingCta": {
+    "message": "O Drowzy já está a funcionar. Abra alguns separadores e experimente!"
+  },
+  "onboardingBtn": {
+    "message": "Percebi, vamos a isso"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Política de Privacidade"
+  },
+  "privacyUpdated": {
+    "message": "Última atualização: fevereiro de 2026"
+  },
+  "privacyShortTitle": {
+    "message": "A versão resumida"
+  },
+  "privacyShortText": {
+    "message": "O Drowzy não recolhe quaisquer dados. Sem analíticas, sem rastreio, sem servidores externos. Tudo permanece no seu navegador."
+  },
+  "privacyStoredTitle": {
+    "message": "O que é armazenado"
+  },
+  "privacyStoredText": {
+    "message": "As suas definições (temporizador de suspensão, lista branca, preferências) são guardadas utilizando as APIs de armazenamento integradas do Chrome: chrome.storage.sync para definições que acompanham o seu perfil do Chrome, chrome.storage.local para estatísticas e sessões guardadas, e chrome.storage.session para dados temporários como marcas temporais de separadores. Nada disto é enviado para servidores de terceiros."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Permissões"
+  },
+  "privacyPermissionsIntro": {
+    "message": "O Drowzy utiliza estas permissões do Chrome:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – listar, suspender e restaurar separadores do navegador"
+  },
+  "privacyPermStorage": {
+    "message": "storage – guardar as suas definições localmente"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – verificações periódicas de separadores inativos"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – opções do menu de contexto"
+  },
+  "privacyContactTitle": {
+    "message": "Contacto"
+  },
+  "privacyContactText": {
+    "message": "Questões? Contacte-nos em drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Substituir"
+  },
+  "replaceSessionTitle": {
+    "message": "Substituir separadores atuais por esta sessão"
+  },
+  "invalidDomain": {
+    "message": "Introduza um domínio válido (ex. example.com)"
+  },
+  "extensionPage": {
+    "message": "Página da extensão"
+  },
+  "exportWhitelist": {
+    "message": "Exportar"
+  },
+  "importWhitelist": {
+    "message": "Importar"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copiar lista branca"
+  },
+  "importWhitelistTitle": {
+    "message": "Importar lista branca da área de transferência"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ site(s) copiado(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ novo(s) site(s) importado(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Nenhum domínio válido encontrado"
+  },
+  "clipboardReadFailed": {
+    "message": "Não foi possível ler a área de transferência"
+  },
+  "enjoyingDrowzy": {
+    "message": "Está a gostar do Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Sim!"
+  },
+  "reviewNo": {
+    "message": "Não muito"
+  },
+  "whatsNew": {
+    "message": "Novidades na v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "Novidades no Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "Novidades"
+  },
+  "changelogVersion": {
+    "message": "Versão 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "Novas funcionalidades"
+  },
+  "changelogBugFixes": {
+    "message": "Correções"
+  },
+  "changelogImprovements": {
+    "message": "Melhorias"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Pedido de avaliação"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "Após suspender alguns separadores, o Drowzy perguntará se está a gostar. Um gosto rápido ajuda-nos muito!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Página de alterações"
+  },
+  "changelogChangelogDesc": {
+    "message": "Está a vê-la! Abre automaticamente na atualização. Acessível nas Definições."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Restauro de sessão"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Separadores restaurados já não são suspensos de imediato. Temporizadores reiniciam corretamente."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Timeout de formulários"
+  },
+  "changelogFormCheckDesc": {
+    "message": "Verificação de formulários tem timeout de 500ms para não bloquear a fila."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Duplicados na lista branca"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Corrigido problema de maiúsculas/minúsculas. Entradas normalizadas."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Estatísticas em tempo real"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "O popup atualiza-se quando separadores são suspensos ou acordados."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Opções de restauro"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Sessões têm botões separados \"Abrir\" e \"Substituir\"."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Validação e exportação/importação"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Entrada valida domínios. Exporte e importe via área de transferência."
+  },
+  "changelogA11yTitle": {
+    "message": "Acessibilidade"
+  },
+  "changelogA11yDesc": {
+    "message": "Itens navegáveis por teclado com ARIA. Notificações para leitores de ecrã."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Animações mais suaves"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Animações escalonadas limitadas para evitar atrasos longos."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy é gratuito e open source. Se poupa memória, deixe uma avaliação ou estrela no GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Deixar avaliação"
+  },
+  "changelogStarBtn": {
+    "message": "Estrela no GitHub"
+  }
 }

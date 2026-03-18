@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "Wake all suspended tabs"
   },
-
-  "statSleeping": { "message": "sleeping" },
-  "statProtected": { "message": "protected" },
-  "statSaved": { "message": "saved" },
-
-  "suspendOthers": { "message": "Suspend Others" },
-  "wakeAll": { "message": "Wake All" },
-
-  "neverSuspendSite": { "message": "Never suspend this site" },
-  "siteWhitelisted": { "message": "Site is whitelisted (click to remove)" },
-  "activeWontSuspend": { "message": "Active \u2013 won\u0027t be suspended" },
-  "loading": { "message": "Loading..." },
-
-  "tabsInWindow": { "message": "Tabs in this window" },
-  "loadingTabs": { "message": "Loading tabs..." },
-  "noTabsFound": { "message": "No tabs found" },
-  "failedToLoad": { "message": "Failed to load. Reopen popup to retry." },
-
-  "badgeActive": { "message": "Active" },
-  "badgeSystem": { "message": "System" },
-  "badgePinned": { "message": "Pinned" },
-  "badgeAudio": { "message": "Audio" },
-  "badgeStarred": { "message": "Starred" },
-  "badgeProtected": { "message": "Protected" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "Sessions" },
-  "sessionNamePlaceholder": { "message": "Session name (optional)" },
-  "save": { "message": "Save" },
-  "emptySessionState": { "message": "Save your first session to restore tabs anytime" },
-  "open": { "message": "Open" },
-  "openSessionTitle": { "message": "Open tabs from this session" },
-  "deleteSessionTitle": { "message": "Delete session" },
-  "sessionSaved": { "message": "Session saved!" },
-  "failedToSave": { "message": "Failed to save" },
+  "statSleeping": {
+    "message": "sleeping"
+  },
+  "statProtected": {
+    "message": "protected"
+  },
+  "statSaved": {
+    "message": "saved"
+  },
+  "suspendOthers": {
+    "message": "Suspend Others"
+  },
+  "wakeAll": {
+    "message": "Wake All"
+  },
+  "neverSuspendSite": {
+    "message": "Never suspend this site"
+  },
+  "siteWhitelisted": {
+    "message": "Site is whitelisted (click to remove)"
+  },
+  "activeWontSuspend": {
+    "message": "Active – won't be suspended"
+  },
+  "loading": {
+    "message": "Loading..."
+  },
+  "tabsInWindow": {
+    "message": "Tabs in this window"
+  },
+  "loadingTabs": {
+    "message": "Loading tabs..."
+  },
+  "noTabsFound": {
+    "message": "No tabs found"
+  },
+  "failedToLoad": {
+    "message": "Failed to load. Reopen popup to retry."
+  },
+  "badgeActive": {
+    "message": "Active"
+  },
+  "badgeSystem": {
+    "message": "System"
+  },
+  "badgePinned": {
+    "message": "Pinned"
+  },
+  "badgeAudio": {
+    "message": "Audio"
+  },
+  "badgeStarred": {
+    "message": "Starred"
+  },
+  "badgeProtected": {
+    "message": "Protected"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "Sessions"
+  },
+  "sessionNamePlaceholder": {
+    "message": "Session name (optional)"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "emptySessionState": {
+    "message": "Save your first session to restore tabs anytime"
+  },
+  "open": {
+    "message": "Open"
+  },
+  "openSessionTitle": {
+    "message": "Open tabs from this session"
+  },
+  "deleteSessionTitle": {
+    "message": "Delete session"
+  },
+  "sessionSaved": {
+    "message": "Session saved!"
+  },
+  "failedToSave": {
+    "message": "Failed to save"
+  },
   "restoredTabs": {
     "message": "Restored $COUNT$ tabs",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "Failed to restore" },
-  "noSessionsToExport": { "message": "No sessions to export" },
+  "failedToRestore": {
+    "message": "Failed to restore"
+  },
+  "noSessionsToExport": {
+    "message": "No sessions to export"
+  },
   "copiedSessionsJson": {
     "message": "Copied $COUNT$ sessions as JSON",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ tabs",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "Stats" },
-  "statToday": { "message": "Today" },
-  "statAllTime": { "message": "All time" },
-  "statRamSaved": { "message": "RAM saved (est.)" },
-  "statMemberSince": { "message": "Member since" },
-
-  "settings": { "message": "Settings" },
-  "autoSuspendAfter": { "message": "Auto-suspend after" },
-  "timer5min": { "message": "5 minutes" },
-  "timer10min": { "message": "10 minutes" },
-  "timer15min": { "message": "15 minutes" },
-  "timer30min": { "message": "30 minutes" },
-  "timer1hour": { "message": "1 hour" },
-  "timer2hours": { "message": "2 hours" },
-  "timer4hours": { "message": "4 hours" },
-  "timerNever": { "message": "Never" },
-  "protectPinned": { "message": "Protect pinned tabs" },
-  "protectAudio": { "message": "Protect audio tabs" },
-  "protectForms": { "message": "Protect tabs with forms" },
-  "suspendOnStartup": { "message": "Suspend tabs on startup" },
-  "enableAutoSuspend": { "message": "Enable auto-suspend" },
-  "markSuspended": { "message": "Mark suspended tabs" },
-  "whitelistedSites": { "message": "Whitelisted sites" },
-  "add": { "message": "Add" },
-  "noSitesWhitelisted": { "message": "No sites whitelisted" },
-
-  "suspending": { "message": "Suspending..." },
-  "done": { "message": "Done!" },
-  "waking": { "message": "Waking..." },
+  "stats": {
+    "message": "Stats"
+  },
+  "statToday": {
+    "message": "Today"
+  },
+  "statAllTime": {
+    "message": "All time"
+  },
+  "statRamSaved": {
+    "message": "RAM saved (est.)"
+  },
+  "statMemberSince": {
+    "message": "Member since"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "autoSuspendAfter": {
+    "message": "Auto-suspend after"
+  },
+  "timer5min": {
+    "message": "5 minutes"
+  },
+  "timer10min": {
+    "message": "10 minutes"
+  },
+  "timer15min": {
+    "message": "15 minutes"
+  },
+  "timer30min": {
+    "message": "30 minutes"
+  },
+  "timer1hour": {
+    "message": "1 hour"
+  },
+  "timer2hours": {
+    "message": "2 hours"
+  },
+  "timer4hours": {
+    "message": "4 hours"
+  },
+  "timerNever": {
+    "message": "Never"
+  },
+  "protectPinned": {
+    "message": "Protect pinned tabs"
+  },
+  "protectAudio": {
+    "message": "Protect audio tabs"
+  },
+  "protectForms": {
+    "message": "Protect tabs with forms"
+  },
+  "suspendOnStartup": {
+    "message": "Suspend tabs on startup"
+  },
+  "enableAutoSuspend": {
+    "message": "Enable auto-suspend"
+  },
+  "markSuspended": {
+    "message": "Mark suspended tabs"
+  },
+  "whitelistedSites": {
+    "message": "Whitelisted sites"
+  },
+  "add": {
+    "message": "Add"
+  },
+  "noSitesWhitelisted": {
+    "message": "No sites whitelisted"
+  },
+  "suspending": {
+    "message": "Suspending..."
+  },
+  "done": {
+    "message": "Done!"
+  },
+  "waking": {
+    "message": "Waking..."
+  },
   "copiedTabs": {
     "message": "Copied $COUNT$ tabs to clipboard",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "Failed to copy" },
-  "copyTabsTitle": { "message": "Copy tab list to clipboard" },
-  "copySessionsTitle": { "message": "Copy all sessions as JSON" },
-  "remove": { "message": "Remove" },
-
-  "switchToLight": { "message": "Switch to light mode" },
-  "switchToDark": { "message": "Switch to dark mode" },
-
-  "ctxSuspendThis": { "message": "Suspend this tab" },
-  "ctxSuspendOthers": { "message": "Suspend all other tabs" },
-  "ctxNeverSuspend": { "message": "Never suspend this site" },
-
-  "maxSessionsReached": { "message": "Maximum 20 sessions reached. Delete one to save a new one." },
-  "noSaveableTabs": { "message": "No saveable tabs in this window." },
-  "sessionNotFound": { "message": "Session not found." },
-  "noRestorableTabs": { "message": "No restorable tabs in this session." },
+  "failedToCopy": {
+    "message": "Failed to copy"
+  },
+  "copyTabsTitle": {
+    "message": "Copy tab list to clipboard"
+  },
+  "copySessionsTitle": {
+    "message": "Copy all sessions as JSON"
+  },
+  "remove": {
+    "message": "Remove"
+  },
+  "switchToLight": {
+    "message": "Switch to light mode"
+  },
+  "switchToDark": {
+    "message": "Switch to dark mode"
+  },
+  "ctxSuspendThis": {
+    "message": "Suspend this tab"
+  },
+  "ctxSuspendOthers": {
+    "message": "Suspend all other tabs"
+  },
+  "ctxNeverSuspend": {
+    "message": "Never suspend this site"
+  },
+  "maxSessionsReached": {
+    "message": "Maximum 20 sessions reached. Delete one to save a new one."
+  },
+  "noSaveableTabs": {
+    "message": "No saveable tabs in this window."
+  },
+  "sessionNotFound": {
+    "message": "Session not found."
+  },
+  "noRestorableTabs": {
+    "message": "No restorable tabs in this session."
+  },
   "sessionDefaultName": {
-    "message": "Session \u2013 $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "message": "Session – $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "just now" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "just now"
+  },
   "minutesAgo": {
     "message": "$COUNT$m ago",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$h ago",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "Yesterday" },
+  "yesterday": {
+    "message": "Yesterday"
+  },
   "daysAgo": {
     "message": "$COUNT$d ago",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Welcome to Drowzy" },
-  "onboardingIntro": { "message": "Drowzy saves memory by putting inactive tabs to sleep. Your tabs are always safe \u2013 we use Chrome\u0027s native discard API, so they survive even if you uninstall Drowzy." },
-  "howItWorks": { "message": "How it works" },
-  "featureAutoSuspend": { "message": "<strong>Tabs idle for 30 minutes</strong> are automatically suspended" },
-  "featureZeroRam": { "message": "<strong>Suspended tabs use zero RAM</strong> but stay in your tab bar" },
-  "featureClickToWake": { "message": "<strong>Click any suspended tab</strong> to instantly wake it up" },
-  "featureProtected": { "message": "<strong>Active, pinned, and audio tabs</strong> are never touched" },
-  "quickActions": { "message": "Quick actions" },
-  "actionClickIcon": { "message": "Click the <strong>Drowzy icon</strong> in the toolbar to see all your tabs" },
-  "actionAltS": { "message": "Press <kbd>Alt+S</kbd> to suspend the current tab" },
-  "actionAltShiftS": { "message": "Press <kbd>Alt+Shift+S</kbd> to suspend all other tabs" },
-  "actionAltW": { "message": "Press <kbd>Alt+W</kbd> to wake all suspended tabs" },
-  "actionRightClick": { "message": "Right-click on any page for quick suspend options" },
-  "onboardingCta": { "message": "Drowzy is already running. Open a few tabs and try it out!" },
-  "onboardingBtn": { "message": "Got it, let\u0027s go" },
-
-  "privacyTitle": { "message": "Drowzy \u2013 Privacy Policy" },
-  "privacyUpdated": { "message": "Last updated: February 2026" },
-  "privacyShortTitle": { "message": "The short version" },
-  "privacyShortText": { "message": "Drowzy doesn\u0027t collect any data. No analytics, no tracking, no external servers. Everything stays in your browser." },
-  "privacyStoredTitle": { "message": "What gets stored" },
-  "privacyStoredText": { "message": "Your settings (suspend timer, whitelist, preferences) are saved using Chrome\u0027s built-in storage APIs: chrome.storage.sync for settings that follow your Chrome profile, chrome.storage.local for stats and saved sessions, and chrome.storage.session for temporary data like tab timestamps. None of this is sent to any third-party server." },
-  "privacyPermissionsTitle": { "message": "Permissions" },
-  "privacyPermissionsIntro": { "message": "Drowzy uses these Chrome permissions:" },
-  "privacyPermTabs": { "message": "tabs \u2013 listing, suspending, and restoring browser tabs" },
-  "privacyPermStorage": { "message": "storage \u2013 saving your settings locally" },
-  "privacyPermAlarms": { "message": "alarms \u2013 periodic checks for inactive tabs" },
-  "privacyPermContextMenus": { "message": "contextMenus \u2013 right-click menu options" },
-  "privacyContactTitle": { "message": "Contact" },
-  "privacyContactText": { "message": "Questions? Reach out at drowzyextension@gmail.com" }
+  "onboardingTitle": {
+    "message": "Welcome to Drowzy"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy saves memory by putting inactive tabs to sleep. Your tabs are always safe – we use Chrome's native discard API, so they survive even if you uninstall Drowzy."
+  },
+  "howItWorks": {
+    "message": "How it works"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>Tabs idle for 30 minutes</strong> are automatically suspended"
+  },
+  "featureZeroRam": {
+    "message": "<strong>Suspended tabs use zero RAM</strong> but stay in your tab bar"
+  },
+  "featureClickToWake": {
+    "message": "<strong>Click any suspended tab</strong> to instantly wake it up"
+  },
+  "featureProtected": {
+    "message": "<strong>Active, pinned, and audio tabs</strong> are never touched"
+  },
+  "quickActions": {
+    "message": "Quick actions"
+  },
+  "actionClickIcon": {
+    "message": "Click the <strong>Drowzy icon</strong> in the toolbar to see all your tabs"
+  },
+  "actionAltS": {
+    "message": "Press <kbd>Alt+S</kbd> to suspend the current tab"
+  },
+  "actionAltShiftS": {
+    "message": "Press <kbd>Alt+Shift+S</kbd> to suspend all other tabs"
+  },
+  "actionAltW": {
+    "message": "Press <kbd>Alt+W</kbd> to wake all suspended tabs"
+  },
+  "actionRightClick": {
+    "message": "Right-click on any page for quick suspend options"
+  },
+  "onboardingCta": {
+    "message": "Drowzy is already running. Open a few tabs and try it out!"
+  },
+  "onboardingBtn": {
+    "message": "Got it, let's go"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – Privacy Policy"
+  },
+  "privacyUpdated": {
+    "message": "Last updated: February 2026"
+  },
+  "privacyShortTitle": {
+    "message": "The short version"
+  },
+  "privacyShortText": {
+    "message": "Drowzy doesn't collect any data. No analytics, no tracking, no external servers. Everything stays in your browser."
+  },
+  "privacyStoredTitle": {
+    "message": "What gets stored"
+  },
+  "privacyStoredText": {
+    "message": "Your settings (suspend timer, whitelist, preferences) are saved using Chrome's built-in storage APIs: chrome.storage.sync for settings that follow your Chrome profile, chrome.storage.local for stats and saved sessions, and chrome.storage.session for temporary data like tab timestamps. None of this is sent to any third-party server."
+  },
+  "privacyPermissionsTitle": {
+    "message": "Permissions"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy uses these Chrome permissions:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – listing, suspending, and restoring browser tabs"
+  },
+  "privacyPermStorage": {
+    "message": "storage – saving your settings locally"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – periodic checks for inactive tabs"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – right-click menu options"
+  },
+  "privacyContactTitle": {
+    "message": "Contact"
+  },
+  "privacyContactText": {
+    "message": "Questions? Reach out at drowzyextension@gmail.com"
+  },
+  "replace": {
+    "message": "Replace"
+  },
+  "replaceSessionTitle": {
+    "message": "Replace current tabs with this session"
+  },
+  "invalidDomain": {
+    "message": "Enter a valid domain (e.g. example.com)"
+  },
+  "extensionPage": {
+    "message": "Extension page"
+  },
+  "exportWhitelist": {
+    "message": "Export"
+  },
+  "importWhitelist": {
+    "message": "Import"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copy whitelist"
+  },
+  "importWhitelistTitle": {
+    "message": "Import whitelist from clipboard"
+  },
+  "copiedSites": {
+    "message": "Copied $COUNT$ site(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Imported $COUNT$ new site(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "No valid domains found in clipboard"
+  },
+  "clipboardReadFailed": {
+    "message": "Could not read clipboard"
+  },
+  "enjoyingDrowzy": {
+    "message": "Enjoying Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Yes!"
+  },
+  "reviewNo": {
+    "message": "Not really"
+  },
+  "whatsNew": {
+    "message": "What's new in v1.1.0"
+  },
+  "changelogTitle": {
+    "message": "What's New in Drowzy"
+  },
+  "changelogWhatsNew": {
+    "message": "What's New"
+  },
+  "changelogVersion": {
+    "message": "Version 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "New Features"
+  },
+  "changelogBugFixes": {
+    "message": "Bug Fixes"
+  },
+  "changelogImprovements": {
+    "message": "Improvements"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "Review Prompt"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "After you've suspended a few tabs, Drowzy will gently ask if you're enjoying it. A quick thumbs up helps us a lot!"
+  },
+  "changelogChangelogTitle": {
+    "message": "Changelog Page"
+  },
+  "changelogChangelogDesc": {
+    "message": "You're looking at it! Opens automatically on update so you always know what changed. Access it anytime from Settings."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "Session Restore Timing"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "Restored tabs no longer get auto-suspended immediately. They now properly reset their idle timers on creation."
+  },
+  "changelogFormCheckTitle": {
+    "message": "Form Check Timeout"
+  },
+  "changelogFormCheckDesc": {
+    "message": "The form data check now has a 500ms timeout so unresponsive tabs can't block the entire suspension queue."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "Whitelist Duplicates"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "Fixed case sensitivity issue where \"Example.com\" and \"example.com\" could both be added. All entries are now normalized."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "Live Stats"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "The popup now refreshes automatically when tabs are suspended or woken in the background. No more stale numbers."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "Session Restore Options"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "Sessions now have separate \"Open\" (add tabs) and \"Replace\" (swap current tabs) buttons so you know exactly what will happen."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "Whitelist Validation & Export/Import"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "Whitelist input now validates domains. You can also export your whitelist and import it on another device via clipboard."
+  },
+  "changelogA11yTitle": {
+    "message": "Accessibility"
+  },
+  "changelogA11yDesc": {
+    "message": "Tab list items are now keyboard-navigable with proper ARIA roles. Toast notifications are announced to screen readers."
+  },
+  "changelogAnimationsTitle": {
+    "message": "Smoother Animations"
+  },
+  "changelogAnimationsDesc": {
+    "message": "Tab list stagger animations are now capped so windows with many tabs don't have a long cascade delay."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy is free and open source. If it's saving you memory, consider leaving a quick review or starring us on GitHub."
+  },
+  "changelogReviewBtn": {
+    "message": "Leave a Review"
+  },
+  "changelogStarBtn": {
+    "message": "Star on GitHub"
+  }
 }

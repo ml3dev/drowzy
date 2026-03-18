@@ -14,154 +14,522 @@
   "commandWakeAll": {
     "message": "ಎಲ್ಲಾ ಸಸ್ಪೆಂಡ್ ಆದ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಎಚ್ಚರಿಸಿ"
   },
-
-  "statSleeping": { "message": "ನಿದ್ರೆಯಲ್ಲಿ" },
-  "statProtected": { "message": "ರಕ್ಷಿತ" },
-  "statSaved": { "message": "ಉಳಿಸಲಾಗಿದೆ" },
-
-  "suspendOthers": { "message": "ಇತರವನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಿ" },
-  "wakeAll": { "message": "ಎಲ್ಲವನ್ನೂ ಎಚ್ಚರಿಸಿ" },
-
-  "neverSuspendSite": { "message": "ಈ ಸೈಟ್ ಅನ್ನು ಎಂದಿಗೂ ಸಸ್ಪೆಂಡ್ ಮಾಡಬೇಡಿ" },
-  "siteWhitelisted": { "message": "ಸೈಟ್ ಶ್ವೇತಪಟ್ಟಿಯಲ್ಲಿದೆ (ತೆಗೆದುಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ)" },
-  "activeWontSuspend": { "message": "ಸಕ್ರಿಯ – ಸಸ್ಪೆಂಡ್ ಆಗುವುದಿಲ್ಲ" },
-  "loading": { "message": "ಲೋಡ್ ಆಗುತ್ತಿದೆ..." },
-
-  "tabsInWindow": { "message": "ಈ ವಿಂಡೋದಲ್ಲಿನ ಟ್ಯಾಬ್‌ಗಳು" },
-  "loadingTabs": { "message": "ಟ್ಯಾಬ್‌ಗಳನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ..." },
-  "noTabsFound": { "message": "ಯಾವುದೇ ಟ್ಯಾಬ್‌ಗಳು ಕಂಡುಬಂದಿಲ್ಲ" },
-  "failedToLoad": { "message": "ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ. ಮರುಪ್ರಯತ್ನಿಸಲು ಪಾಪ್‌ಅಪ್ ಅನ್ನು ಮತ್ತೆ ತೆರೆಯಿರಿ." },
-
-  "badgeActive": { "message": "ಸಕ್ರಿಯ" },
-  "badgeSystem": { "message": "ಸಿಸ್ಟಮ್" },
-  "badgePinned": { "message": "ಪಿನ್ ಮಾಡಲಾಗಿದೆ" },
-  "badgeAudio": { "message": "ಆಡಿಯೋ" },
-  "badgeStarred": { "message": "ನಕ್ಷತ್ರ ಗುರುತಿಸಲಾಗಿದೆ" },
-  "badgeProtected": { "message": "ರಕ್ಷಿತ" },
-  "badgeZzz": { "message": "zzz" },
-
-  "sessions": { "message": "ಸೆಷನ್‌ಗಳು" },
-  "sessionNamePlaceholder": { "message": "ಸೆಷನ್ ಹೆಸರು (ಐಚ್ಛಿಕ)" },
-  "save": { "message": "ಉಳಿಸಿ" },
-  "emptySessionState": { "message": "ಯಾವಾಗ ಬೇಕಾದರೂ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ನಿಮ್ಮ ಮೊದಲ ಸೆಷನ್ ಅನ್ನು ಉಳಿಸಿ" },
-  "open": { "message": "ತೆರೆಯಿರಿ" },
-  "openSessionTitle": { "message": "ಈ ಸೆಷನ್‌ನಿಂದ ಟ್ಯಾಬ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ" },
-  "deleteSessionTitle": { "message": "ಸೆಷನ್ ಅಳಿಸಿ" },
-  "sessionSaved": { "message": "ಸೆಷನ್ ಉಳಿಸಲಾಗಿದೆ!" },
-  "failedToSave": { "message": "ಉಳಿಸಲು ವಿಫಲವಾಗಿದೆ" },
+  "statSleeping": {
+    "message": "ನಿದ್ರೆಯಲ್ಲಿ"
+  },
+  "statProtected": {
+    "message": "ರಕ್ಷಿತ"
+  },
+  "statSaved": {
+    "message": "ಉಳಿಸಲಾಗಿದೆ"
+  },
+  "suspendOthers": {
+    "message": "ಇತರವನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಿ"
+  },
+  "wakeAll": {
+    "message": "ಎಲ್ಲವನ್ನೂ ಎಚ್ಚರಿಸಿ"
+  },
+  "neverSuspendSite": {
+    "message": "ಈ ಸೈಟ್ ಅನ್ನು ಎಂದಿಗೂ ಸಸ್ಪೆಂಡ್ ಮಾಡಬೇಡಿ"
+  },
+  "siteWhitelisted": {
+    "message": "ಸೈಟ್ ಶ್ವೇತಪಟ್ಟಿಯಲ್ಲಿದೆ (ತೆಗೆದುಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ)"
+  },
+  "activeWontSuspend": {
+    "message": "ಸಕ್ರಿಯ – ಸಸ್ಪೆಂಡ್ ಆಗುವುದಿಲ್ಲ"
+  },
+  "loading": {
+    "message": "ಲೋಡ್ ಆಗುತ್ತಿದೆ..."
+  },
+  "tabsInWindow": {
+    "message": "ಈ ವಿಂಡೋದಲ್ಲಿನ ಟ್ಯಾಬ್‌ಗಳು"
+  },
+  "loadingTabs": {
+    "message": "ಟ್ಯಾಬ್‌ಗಳನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."
+  },
+  "noTabsFound": {
+    "message": "ಯಾವುದೇ ಟ್ಯಾಬ್‌ಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
+  },
+  "failedToLoad": {
+    "message": "ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ. ಮರುಪ್ರಯತ್ನಿಸಲು ಪಾಪ್‌ಅಪ್ ಅನ್ನು ಮತ್ತೆ ತೆರೆಯಿರಿ."
+  },
+  "badgeActive": {
+    "message": "ಸಕ್ರಿಯ"
+  },
+  "badgeSystem": {
+    "message": "ಸಿಸ್ಟಮ್"
+  },
+  "badgePinned": {
+    "message": "ಪಿನ್ ಮಾಡಲಾಗಿದೆ"
+  },
+  "badgeAudio": {
+    "message": "ಆಡಿಯೋ"
+  },
+  "badgeStarred": {
+    "message": "ನಕ್ಷತ್ರ ಗುರುತಿಸಲಾಗಿದೆ"
+  },
+  "badgeProtected": {
+    "message": "ರಕ್ಷಿತ"
+  },
+  "badgeZzz": {
+    "message": "zzz"
+  },
+  "sessions": {
+    "message": "ಸೆಷನ್‌ಗಳು"
+  },
+  "sessionNamePlaceholder": {
+    "message": "ಸೆಷನ್ ಹೆಸರು (ಐಚ್ಛಿಕ)"
+  },
+  "save": {
+    "message": "ಉಳಿಸಿ"
+  },
+  "emptySessionState": {
+    "message": "ಯಾವಾಗ ಬೇಕಾದರೂ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ನಿಮ್ಮ ಮೊದಲ ಸೆಷನ್ ಅನ್ನು ಉಳಿಸಿ"
+  },
+  "open": {
+    "message": "ತೆರೆಯಿರಿ"
+  },
+  "openSessionTitle": {
+    "message": "ಈ ಸೆಷನ್‌ನಿಂದ ಟ್ಯಾಬ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ"
+  },
+  "deleteSessionTitle": {
+    "message": "ಸೆಷನ್ ಅಳಿಸಿ"
+  },
+  "sessionSaved": {
+    "message": "ಸೆಷನ್ ಉಳಿಸಲಾಗಿದೆ!"
+  },
+  "failedToSave": {
+    "message": "ಉಳಿಸಲು ವಿಫಲವಾಗಿದೆ"
+  },
   "restoredTabs": {
     "message": "$COUNT$ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗಿದೆ",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToRestore": { "message": "ಮರುಸ್ಥಾಪಿಸಲು ವಿಫಲವಾಗಿದೆ" },
-  "noSessionsToExport": { "message": "ರಫ್ತು ಮಾಡಲು ಯಾವುದೇ ಸೆಷನ್‌ಗಳಿಲ್ಲ" },
+  "failedToRestore": {
+    "message": "ಮರುಸ್ಥಾಪಿಸಲು ವಿಫಲವಾಗಿದೆ"
+  },
+  "noSessionsToExport": {
+    "message": "ರಫ್ತು ಮಾಡಲು ಯಾವುದೇ ಸೆಷನ್‌ಗಳಿಲ್ಲ"
+  },
   "copiedSessionsJson": {
     "message": "$COUNT$ ಸೆಷನ್‌ಗಳನ್ನು JSON ಆಗಿ ನಕಲಿಸಲಾಗಿದೆ",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "tabsCount": {
     "message": "$COUNT$ ಟ್ಯಾಬ್‌ಗಳು",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "stats": { "message": "ಅಂಕಿಅಂಶಗಳು" },
-  "statToday": { "message": "ಇಂದು" },
-  "statAllTime": { "message": "ಒಟ್ಟು" },
-  "statRamSaved": { "message": "ಉಳಿಸಿದ RAM (ಅಂದಾಜು)" },
-  "statMemberSince": { "message": "ಸದಸ್ಯರಾದ ದಿನಾಂಕ" },
-
-  "settings": { "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು" },
-  "autoSuspendAfter": { "message": "ಇಷ್ಟು ಸಮಯದ ನಂತರ ಸ್ವಯಂ-ಸಸ್ಪೆಂಡ್" },
-  "timer5min": { "message": "5 ನಿಮಿಷಗಳು" },
-  "timer10min": { "message": "10 ನಿಮಿಷಗಳು" },
-  "timer15min": { "message": "15 ನಿಮಿಷಗಳು" },
-  "timer30min": { "message": "30 ನಿಮಿಷಗಳು" },
-  "timer1hour": { "message": "1 ಗಂಟೆ" },
-  "timer2hours": { "message": "2 ಗಂಟೆಗಳು" },
-  "timer4hours": { "message": "4 ಗಂಟೆಗಳು" },
-  "timerNever": { "message": "ಎಂದಿಗೂ ಇಲ್ಲ" },
-  "protectPinned": { "message": "ಪಿನ್ ಮಾಡಿದ ಟ್ಯಾಬ್‌ಗಳನ್ನು ರಕ್ಷಿಸಿ" },
-  "protectAudio": { "message": "ಆಡಿಯೋ ಟ್ಯಾಬ್‌ಗಳನ್ನು ರಕ್ಷಿಸಿ" },
-  "protectForms": { "message": "ಫಾರ್ಮ್‌ಗಳಿರುವ ಟ್ಯಾಬ್‌ಗಳನ್ನು ರಕ್ಷಿಸಿ" },
-  "suspendOnStartup": { "message": "ಪ್ರಾರಂಭದಲ್ಲಿ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಿ" },
-  "enableAutoSuspend": { "message": "ಸ್ವಯಂ-ಸಸ್ಪೆಂಡ್ ಸಕ್ರಿಯಗೊಳಿಸಿ" },
-  "markSuspended": { "message": "ಸಸ್ಪೆಂಡ್ ಆದ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಗುರುತಿಸಿ" },
-  "whitelistedSites": { "message": "ಶ್ವೇತಪಟ್ಟಿಯ ಸೈಟ್‌ಗಳು" },
-  "add": { "message": "ಸೇರಿಸಿ" },
-  "noSitesWhitelisted": { "message": "ಯಾವುದೇ ಸೈಟ್‌ಗಳನ್ನು ಶ್ವೇತಪಟ್ಟಿಗೆ ಸೇರಿಸಿಲ್ಲ" },
-
-  "suspending": { "message": "ಸಸ್ಪೆಂಡ್ ಆಗುತ್ತಿದೆ..." },
-  "done": { "message": "ಆಯಿತು!" },
-  "waking": { "message": "ಎಚ್ಚರಿಸುತ್ತಿದೆ..." },
+  "stats": {
+    "message": "ಅಂಕಿಅಂಶಗಳು"
+  },
+  "statToday": {
+    "message": "ಇಂದು"
+  },
+  "statAllTime": {
+    "message": "ಒಟ್ಟು"
+  },
+  "statRamSaved": {
+    "message": "ಉಳಿಸಿದ RAM (ಅಂದಾಜು)"
+  },
+  "statMemberSince": {
+    "message": "ಸದಸ್ಯರಾದ ದಿನಾಂಕ"
+  },
+  "settings": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+  },
+  "autoSuspendAfter": {
+    "message": "ಇಷ್ಟು ಸಮಯದ ನಂತರ ಸ್ವಯಂ-ಸಸ್ಪೆಂಡ್"
+  },
+  "timer5min": {
+    "message": "5 ನಿಮಿಷಗಳು"
+  },
+  "timer10min": {
+    "message": "10 ನಿಮಿಷಗಳು"
+  },
+  "timer15min": {
+    "message": "15 ನಿಮಿಷಗಳು"
+  },
+  "timer30min": {
+    "message": "30 ನಿಮಿಷಗಳು"
+  },
+  "timer1hour": {
+    "message": "1 ಗಂಟೆ"
+  },
+  "timer2hours": {
+    "message": "2 ಗಂಟೆಗಳು"
+  },
+  "timer4hours": {
+    "message": "4 ಗಂಟೆಗಳು"
+  },
+  "timerNever": {
+    "message": "ಎಂದಿಗೂ ಇಲ್ಲ"
+  },
+  "protectPinned": {
+    "message": "ಪಿನ್ ಮಾಡಿದ ಟ್ಯಾಬ್‌ಗಳನ್ನು ರಕ್ಷಿಸಿ"
+  },
+  "protectAudio": {
+    "message": "ಆಡಿಯೋ ಟ್ಯಾಬ್‌ಗಳನ್ನು ರಕ್ಷಿಸಿ"
+  },
+  "protectForms": {
+    "message": "ಫಾರ್ಮ್‌ಗಳಿರುವ ಟ್ಯಾಬ್‌ಗಳನ್ನು ರಕ್ಷಿಸಿ"
+  },
+  "suspendOnStartup": {
+    "message": "ಪ್ರಾರಂಭದಲ್ಲಿ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಿ"
+  },
+  "enableAutoSuspend": {
+    "message": "ಸ್ವಯಂ-ಸಸ್ಪೆಂಡ್ ಸಕ್ರಿಯಗೊಳಿಸಿ"
+  },
+  "markSuspended": {
+    "message": "ಸಸ್ಪೆಂಡ್ ಆದ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಗುರುತಿಸಿ"
+  },
+  "whitelistedSites": {
+    "message": "ಶ್ವೇತಪಟ್ಟಿಯ ಸೈಟ್‌ಗಳು"
+  },
+  "add": {
+    "message": "ಸೇರಿಸಿ"
+  },
+  "noSitesWhitelisted": {
+    "message": "ಯಾವುದೇ ಸೈಟ್‌ಗಳನ್ನು ಶ್ವೇತಪಟ್ಟಿಗೆ ಸೇರಿಸಿಲ್ಲ"
+  },
+  "suspending": {
+    "message": "ಸಸ್ಪೆಂಡ್ ಆಗುತ್ತಿದೆ..."
+  },
+  "done": {
+    "message": "ಆಯಿತು!"
+  },
+  "waking": {
+    "message": "ಎಚ್ಚರಿಸುತ್ತಿದೆ..."
+  },
   "copiedTabs": {
     "message": "$COUNT$ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "failedToCopy": { "message": "ನಕಲಿಸಲು ವಿಫಲವಾಗಿದೆ" },
-  "copyTabsTitle": { "message": "ಟ್ಯಾಬ್ ಪಟ್ಟಿಯನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಿ" },
-  "copySessionsTitle": { "message": "ಎಲ್ಲಾ ಸೆಷನ್‌ಗಳನ್ನು JSON ಆಗಿ ನಕಲಿಸಿ" },
-  "remove": { "message": "ತೆಗೆದುಹಾಕಿ" },
-
-  "switchToLight": { "message": "ಬೆಳಕಿನ ಮೋಡ್‌ಗೆ ಬದಲಿಸಿ" },
-  "switchToDark": { "message": "ಕತ್ತಲೆ ಮೋಡ್‌ಗೆ ಬದಲಿಸಿ" },
-
-  "ctxSuspendThis": { "message": "ಈ ಟ್ಯಾಬ್ ಅನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಿ" },
-  "ctxSuspendOthers": { "message": "ಇತರ ಎಲ್ಲಾ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಿ" },
-  "ctxNeverSuspend": { "message": "ಈ ಸೈಟ್ ಅನ್ನು ಎಂದಿಗೂ ಸಸ್ಪೆಂಡ್ ಮಾಡಬೇಡಿ" },
-
-  "maxSessionsReached": { "message": "ಗರಿಷ್ಠ 20 ಸೆಷನ್‌ಗಳು ತಲುಪಿದೆ. ಹೊಸದನ್ನು ಉಳಿಸಲು ಒಂದನ್ನು ಅಳಿಸಿ." },
-  "noSaveableTabs": { "message": "ಈ ವಿಂಡೋದಲ್ಲಿ ಉಳಿಸಬಹುದಾದ ಟ್ಯಾಬ್‌ಗಳಿಲ್ಲ." },
-  "sessionNotFound": { "message": "ಸೆಷನ್ ಕಂಡುಬಂದಿಲ್ಲ." },
-  "noRestorableTabs": { "message": "ಈ ಸೆಷನ್‌ನಲ್ಲಿ ಮರುಸ್ಥಾಪಿಸಬಹುದಾದ ಟ್ಯಾಬ್‌ಗಳಿಲ್ಲ." },
+  "failedToCopy": {
+    "message": "ನಕಲಿಸಲು ವಿಫಲವಾಗಿದೆ"
+  },
+  "copyTabsTitle": {
+    "message": "ಟ್ಯಾಬ್ ಪಟ್ಟಿಯನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಿ"
+  },
+  "copySessionsTitle": {
+    "message": "ಎಲ್ಲಾ ಸೆಷನ್‌ಗಳನ್ನು JSON ಆಗಿ ನಕಲಿಸಿ"
+  },
+  "remove": {
+    "message": "ತೆಗೆದುಹಾಕಿ"
+  },
+  "switchToLight": {
+    "message": "ಬೆಳಕಿನ ಮೋಡ್‌ಗೆ ಬದಲಿಸಿ"
+  },
+  "switchToDark": {
+    "message": "ಕತ್ತಲೆ ಮೋಡ್‌ಗೆ ಬದಲಿಸಿ"
+  },
+  "ctxSuspendThis": {
+    "message": "ಈ ಟ್ಯಾಬ್ ಅನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಿ"
+  },
+  "ctxSuspendOthers": {
+    "message": "ಇತರ ಎಲ್ಲಾ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಿ"
+  },
+  "ctxNeverSuspend": {
+    "message": "ಈ ಸೈಟ್ ಅನ್ನು ಎಂದಿಗೂ ಸಸ್ಪೆಂಡ್ ಮಾಡಬೇಡಿ"
+  },
+  "maxSessionsReached": {
+    "message": "ಗರಿಷ್ಠ 20 ಸೆಷನ್‌ಗಳು ತಲುಪಿದೆ. ಹೊಸದನ್ನು ಉಳಿಸಲು ಒಂದನ್ನು ಅಳಿಸಿ."
+  },
+  "noSaveableTabs": {
+    "message": "ಈ ವಿಂಡೋದಲ್ಲಿ ಉಳಿಸಬಹುದಾದ ಟ್ಯಾಬ್‌ಗಳಿಲ್ಲ."
+  },
+  "sessionNotFound": {
+    "message": "ಸೆಷನ್ ಕಂಡುಬಂದಿಲ್ಲ."
+  },
+  "noRestorableTabs": {
+    "message": "ಈ ಸೆಷನ್‌ನಲ್ಲಿ ಮರುಸ್ಥಾಪಿಸಬಹುದಾದ ಟ್ಯಾಬ್‌ಗಳಿಲ್ಲ."
+  },
   "sessionDefaultName": {
     "message": "ಸೆಷನ್ – $DATE$",
-    "placeholders": { "date": { "content": "$1" } }
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
-  "markSuspendedPrefix": { "message": "[zzz] " },
-
-  "justNow": { "message": "ಈಗಷ್ಟೇ" },
+  "markSuspendedPrefix": {
+    "message": "[zzz] "
+  },
+  "justNow": {
+    "message": "ಈಗಷ್ಟೇ"
+  },
   "minutesAgo": {
     "message": "$COUNT$ ನಿಮಿಷಗಳ ಹಿಂದೆ",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
   "hoursAgo": {
     "message": "$COUNT$ ಗಂಟೆಗಳ ಹಿಂದೆ",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-  "yesterday": { "message": "ನಿನ್ನೆ" },
+  "yesterday": {
+    "message": "ನಿನ್ನೆ"
+  },
   "daysAgo": {
     "message": "$COUNT$ ದಿನಗಳ ಹಿಂದೆ",
-    "placeholders": { "count": { "content": "$1" } }
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
   },
-
-  "onboardingTitle": { "message": "Drowzy ಗೆ ಸ್ವಾಗತ" },
-  "onboardingIntro": { "message": "Drowzy ನಿಷ್ಕ್ರಿಯ ಟ್ಯಾಬ್‌ಗಳನ್ನು ನಿದ್ರೆಗೆ ಕಳುಹಿಸುವ ಮೂಲಕ ಮೆಮೊರಿಯನ್ನು ಉಳಿಸುತ್ತದೆ. ನಿಮ್ಮ ಟ್ಯಾಬ್‌ಗಳು ಯಾವಾಗಲೂ ಸುರಕ್ಷಿತ – ನಾವು Chrome ನ ಸ್ಥಳೀಯ ಡಿಸ್ಕಾರ್ಡ್ API ಬಳಸುತ್ತೇವೆ, ಹಾಗಾಗಿ Drowzy ಅನ್ನು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿದರೂ ಅವು ಉಳಿಯುತ್ತವೆ." },
-  "howItWorks": { "message": "ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ" },
-  "featureAutoSuspend": { "message": "<strong>30 ನಿಮಿಷಗಳ ಕಾಲ ನಿಷ್ಕ್ರಿಯವಾಗಿರುವ ಟ್ಯಾಬ್‌ಗಳು</strong> ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಸ್ಪೆಂಡ್ ಆಗುತ್ತವೆ" },
-  "featureZeroRam": { "message": "<strong>ಸಸ್ಪೆಂಡ್ ಆದ ಟ್ಯಾಬ್‌ಗಳು ಶೂನ್ಯ RAM ಬಳಸುತ್ತವೆ</strong> ಆದರೆ ನಿಮ್ಮ ಟ್ಯಾಬ್ ಬಾರ್‌ನಲ್ಲಿ ಉಳಿಯುತ್ತವೆ" },
-  "featureClickToWake": { "message": "<strong>ಯಾವುದೇ ಸಸ್ಪೆಂಡ್ ಆದ ಟ್ಯಾಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ</strong> ತಕ್ಷಣ ಎಚ್ಚರಿಸಲು" },
-  "featureProtected": { "message": "<strong>ಸಕ್ರಿಯ, ಪಿನ್ ಮಾಡಿದ ಮತ್ತು ಆಡಿಯೋ ಟ್ಯಾಬ್‌ಗಳನ್ನು</strong> ಎಂದಿಗೂ ಮುಟ್ಟಲಾಗುವುದಿಲ್ಲ" },
-  "quickActions": { "message": "ತ್ವರಿತ ಕ್ರಿಯೆಗಳು" },
-  "actionClickIcon": { "message": "ನಿಮ್ಮ ಎಲ್ಲಾ ಟ್ಯಾಬ್‌ಗಳನ್ನು ನೋಡಲು ಟೂಲ್‌ಬಾರ್‌ನಲ್ಲಿ <strong>Drowzy ಐಕಾನ್</strong> ಕ್ಲಿಕ್ ಮಾಡಿ" },
-  "actionAltS": { "message": "ಪ್ರಸ್ತುತ ಟ್ಯಾಬ್ ಅನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಲು <kbd>Alt+S</kbd> ಒತ್ತಿ" },
-  "actionAltShiftS": { "message": "ಇತರ ಎಲ್ಲಾ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಲು <kbd>Alt+Shift+S</kbd> ಒತ್ತಿ" },
-  "actionAltW": { "message": "ಎಲ್ಲಾ ಸಸ್ಪೆಂಡ್ ಆದ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಎಚ್ಚರಿಸಲು <kbd>Alt+W</kbd> ಒತ್ತಿ" },
-  "actionRightClick": { "message": "ತ್ವರಿತ ಸಸ್ಪೆಂಡ್ ಆಯ್ಕೆಗಳಿಗಾಗಿ ಯಾವುದೇ ಪುಟದ ಮೇಲೆ ರೈಟ್-ಕ್ಲಿಕ್ ಮಾಡಿ" },
-  "onboardingCta": { "message": "Drowzy ಈಗಾಗಲೇ ಚಾಲನೆಯಲ್ಲಿದೆ. ಕೆಲವು ಟ್ಯಾಬ್‌ಗಳನ್ನು ತೆರೆದು ಪ್ರಯತ್ನಿಸಿ!" },
-  "onboardingBtn": { "message": "ಅರ್ಥವಾಯಿತು, ಹೋಗೋಣ" },
-
-  "privacyTitle": { "message": "Drowzy – ಗೌಪ್ಯತಾ ನೀತಿ" },
-  "privacyUpdated": { "message": "ಕೊನೆಯ ನವೀಕರಣ: ಫೆಬ್ರವರಿ 2026" },
-  "privacyShortTitle": { "message": "ಸಂಕ್ಷಿಪ್ತ ಆವೃತ್ತಿ" },
-  "privacyShortText": { "message": "Drowzy ಯಾವುದೇ ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ಯಾವುದೇ ವಿಶ್ಲೇಷಣೆ ಇಲ್ಲ, ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ, ಬಾಹ್ಯ ಸರ್ವರ್‌ಗಳಿಲ್ಲ. ಎಲ್ಲವೂ ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಉಳಿಯುತ್ತದೆ." },
-  "privacyStoredTitle": { "message": "ಏನು ಸಂಗ್ರಹಿಸಲಾಗುತ್ತದೆ" },
-  "privacyStoredText": { "message": "ನಿಮ್ಮ ಸೆಟ್ಟಿಂಗ್‌ಗಳು (ಸಸ್ಪೆಂಡ್ ಟೈಮರ್, ಶ್ವೇತಪಟ್ಟಿ, ಆದ್ಯತೆಗಳು) Chrome ನ ಅಂತರ್ನಿರ್ಮಿತ ಸಂಗ್ರಹಣಾ API ಗಳನ್ನು ಬಳಸಿ ಉಳಿಸಲಾಗುತ್ತದೆ: ನಿಮ್ಮ Chrome ಪ್ರೊಫೈಲ್ ಅನುಸರಿಸುವ ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ chrome.storage.sync, ಅಂಕಿಅಂಶಗಳು ಮತ್ತು ಉಳಿಸಿದ ಸೆಷನ್‌ಗಳಿಗೆ chrome.storage.local, ಮತ್ತು ಟ್ಯಾಬ್ ಟೈಮ್‌ಸ್ಟ್ಯಾಂಪ್‌ಗಳಂತಹ ತಾತ್ಕಾಲಿಕ ಡೇಟಾಗಳಿಗೆ chrome.storage.session. ಇವುಗಳಲ್ಲಿ ಯಾವುದನ್ನೂ ಯಾವುದೇ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಸರ್ವರ್‌ಗೆ ಕಳುಹಿಸಲಾಗುವುದಿಲ್ಲ." },
-  "privacyPermissionsTitle": { "message": "ಅನುಮತಿಗಳು" },
-  "privacyPermissionsIntro": { "message": "Drowzy ಈ Chrome ಅನುಮತಿಗಳನ್ನು ಬಳಸುತ್ತದೆ:" },
-  "privacyPermTabs": { "message": "tabs – ಬ್ರೌಸರ್ ಟ್ಯಾಬ್‌ಗಳ ಪಟ್ಟಿ ಮಾಡುವುದು, ಸಸ್ಪೆಂಡ್ ಮಾಡುವುದು ಮತ್ತು ಮರುಸ್ಥಾಪಿಸುವುದು" },
-  "privacyPermStorage": { "message": "storage – ನಿಮ್ಮ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಸ್ಥಳೀಯವಾಗಿ ಉಳಿಸುವುದು" },
-  "privacyPermAlarms": { "message": "alarms – ನಿಷ್ಕ್ರಿಯ ಟ್ಯಾಬ್‌ಗಳ ಆವರ್ತಕ ಪರಿಶೀಲನೆಗಳು" },
-  "privacyPermContextMenus": { "message": "contextMenus – ರೈಟ್-ಕ್ಲಿಕ್ ಮೆನು ಆಯ್ಕೆಗಳು" },
-  "privacyContactTitle": { "message": "ಸಂಪರ್ಕ" },
-  "privacyContactText": { "message": "ಪ್ರಶ್ನೆಗಳಿವೆಯೇ? drowzyextension@gmail.com ನಲ್ಲಿ ಸಂಪರ್ಕಿಸಿ" }
+  "onboardingTitle": {
+    "message": "Drowzy ಗೆ ಸ್ವಾಗತ"
+  },
+  "onboardingIntro": {
+    "message": "Drowzy ನಿಷ್ಕ್ರಿಯ ಟ್ಯಾಬ್‌ಗಳನ್ನು ನಿದ್ರೆಗೆ ಕಳುಹಿಸುವ ಮೂಲಕ ಮೆಮೊರಿಯನ್ನು ಉಳಿಸುತ್ತದೆ. ನಿಮ್ಮ ಟ್ಯಾಬ್‌ಗಳು ಯಾವಾಗಲೂ ಸುರಕ್ಷಿತ – ನಾವು Chrome ನ ಸ್ಥಳೀಯ ಡಿಸ್ಕಾರ್ಡ್ API ಬಳಸುತ್ತೇವೆ, ಹಾಗಾಗಿ Drowzy ಅನ್ನು ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿದರೂ ಅವು ಉಳಿಯುತ್ತವೆ."
+  },
+  "howItWorks": {
+    "message": "ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ"
+  },
+  "featureAutoSuspend": {
+    "message": "<strong>30 ನಿಮಿಷಗಳ ಕಾಲ ನಿಷ್ಕ್ರಿಯವಾಗಿರುವ ಟ್ಯಾಬ್‌ಗಳು</strong> ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸಸ್ಪೆಂಡ್ ಆಗುತ್ತವೆ"
+  },
+  "featureZeroRam": {
+    "message": "<strong>ಸಸ್ಪೆಂಡ್ ಆದ ಟ್ಯಾಬ್‌ಗಳು ಶೂನ್ಯ RAM ಬಳಸುತ್ತವೆ</strong> ಆದರೆ ನಿಮ್ಮ ಟ್ಯಾಬ್ ಬಾರ್‌ನಲ್ಲಿ ಉಳಿಯುತ್ತವೆ"
+  },
+  "featureClickToWake": {
+    "message": "<strong>ಯಾವುದೇ ಸಸ್ಪೆಂಡ್ ಆದ ಟ್ಯಾಬ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ</strong> ತಕ್ಷಣ ಎಚ್ಚರಿಸಲು"
+  },
+  "featureProtected": {
+    "message": "<strong>ಸಕ್ರಿಯ, ಪಿನ್ ಮಾಡಿದ ಮತ್ತು ಆಡಿಯೋ ಟ್ಯಾಬ್‌ಗಳನ್ನು</strong> ಎಂದಿಗೂ ಮುಟ್ಟಲಾಗುವುದಿಲ್ಲ"
+  },
+  "quickActions": {
+    "message": "ತ್ವರಿತ ಕ್ರಿಯೆಗಳು"
+  },
+  "actionClickIcon": {
+    "message": "ನಿಮ್ಮ ಎಲ್ಲಾ ಟ್ಯಾಬ್‌ಗಳನ್ನು ನೋಡಲು ಟೂಲ್‌ಬಾರ್‌ನಲ್ಲಿ <strong>Drowzy ಐಕಾನ್</strong> ಕ್ಲಿಕ್ ಮಾಡಿ"
+  },
+  "actionAltS": {
+    "message": "ಪ್ರಸ್ತುತ ಟ್ಯಾಬ್ ಅನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಲು <kbd>Alt+S</kbd> ಒತ್ತಿ"
+  },
+  "actionAltShiftS": {
+    "message": "ಇತರ ಎಲ್ಲಾ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಲು <kbd>Alt+Shift+S</kbd> ಒತ್ತಿ"
+  },
+  "actionAltW": {
+    "message": "ಎಲ್ಲಾ ಸಸ್ಪೆಂಡ್ ಆದ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಎಚ್ಚರಿಸಲು <kbd>Alt+W</kbd> ಒತ್ತಿ"
+  },
+  "actionRightClick": {
+    "message": "ತ್ವರಿತ ಸಸ್ಪೆಂಡ್ ಆಯ್ಕೆಗಳಿಗಾಗಿ ಯಾವುದೇ ಪುಟದ ಮೇಲೆ ರೈಟ್-ಕ್ಲಿಕ್ ಮಾಡಿ"
+  },
+  "onboardingCta": {
+    "message": "Drowzy ಈಗಾಗಲೇ ಚಾಲನೆಯಲ್ಲಿದೆ. ಕೆಲವು ಟ್ಯಾಬ್‌ಗಳನ್ನು ತೆರೆದು ಪ್ರಯತ್ನಿಸಿ!"
+  },
+  "onboardingBtn": {
+    "message": "ಅರ್ಥವಾಯಿತು, ಹೋಗೋಣ"
+  },
+  "privacyTitle": {
+    "message": "Drowzy – ಗೌಪ್ಯತಾ ನೀತಿ"
+  },
+  "privacyUpdated": {
+    "message": "ಕೊನೆಯ ನವೀಕರಣ: ಫೆಬ್ರವರಿ 2026"
+  },
+  "privacyShortTitle": {
+    "message": "ಸಂಕ್ಷಿಪ್ತ ಆವೃತ್ತಿ"
+  },
+  "privacyShortText": {
+    "message": "Drowzy ಯಾವುದೇ ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ಯಾವುದೇ ವಿಶ್ಲೇಷಣೆ ಇಲ್ಲ, ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ, ಬಾಹ್ಯ ಸರ್ವರ್‌ಗಳಿಲ್ಲ. ಎಲ್ಲವೂ ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಉಳಿಯುತ್ತದೆ."
+  },
+  "privacyStoredTitle": {
+    "message": "ಏನು ಸಂಗ್ರಹಿಸಲಾಗುತ್ತದೆ"
+  },
+  "privacyStoredText": {
+    "message": "ನಿಮ್ಮ ಸೆಟ್ಟಿಂಗ್‌ಗಳು (ಸಸ್ಪೆಂಡ್ ಟೈಮರ್, ಶ್ವೇತಪಟ್ಟಿ, ಆದ್ಯತೆಗಳು) Chrome ನ ಅಂತರ್ನಿರ್ಮಿತ ಸಂಗ್ರಹಣಾ API ಗಳನ್ನು ಬಳಸಿ ಉಳಿಸಲಾಗುತ್ತದೆ: ನಿಮ್ಮ Chrome ಪ್ರೊಫೈಲ್ ಅನುಸರಿಸುವ ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಗೆ chrome.storage.sync, ಅಂಕಿಅಂಶಗಳು ಮತ್ತು ಉಳಿಸಿದ ಸೆಷನ್‌ಗಳಿಗೆ chrome.storage.local, ಮತ್ತು ಟ್ಯಾಬ್ ಟೈಮ್‌ಸ್ಟ್ಯಾಂಪ್‌ಗಳಂತಹ ತಾತ್ಕಾಲಿಕ ಡೇಟಾಗಳಿಗೆ chrome.storage.session. ಇವುಗಳಲ್ಲಿ ಯಾವುದನ್ನೂ ಯಾವುದೇ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಸರ್ವರ್‌ಗೆ ಕಳುಹಿಸಲಾಗುವುದಿಲ್ಲ."
+  },
+  "privacyPermissionsTitle": {
+    "message": "ಅನುಮತಿಗಳು"
+  },
+  "privacyPermissionsIntro": {
+    "message": "Drowzy ಈ Chrome ಅನುಮತಿಗಳನ್ನು ಬಳಸುತ್ತದೆ:"
+  },
+  "privacyPermTabs": {
+    "message": "tabs – ಬ್ರೌಸರ್ ಟ್ಯಾಬ್‌ಗಳ ಪಟ್ಟಿ ಮಾಡುವುದು, ಸಸ್ಪೆಂಡ್ ಮಾಡುವುದು ಮತ್ತು ಮರುಸ್ಥಾಪಿಸುವುದು"
+  },
+  "privacyPermStorage": {
+    "message": "storage – ನಿಮ್ಮ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಸ್ಥಳೀಯವಾಗಿ ಉಳಿಸುವುದು"
+  },
+  "privacyPermAlarms": {
+    "message": "alarms – ನಿಷ್ಕ್ರಿಯ ಟ್ಯಾಬ್‌ಗಳ ಆವರ್ತಕ ಪರಿಶೀಲನೆಗಳು"
+  },
+  "privacyPermContextMenus": {
+    "message": "contextMenus – ರೈಟ್-ಕ್ಲಿಕ್ ಮೆನು ಆಯ್ಕೆಗಳು"
+  },
+  "privacyContactTitle": {
+    "message": "ಸಂಪರ್ಕ"
+  },
+  "privacyContactText": {
+    "message": "ಪ್ರಶ್ನೆಗಳಿವೆಯೇ? drowzyextension@gmail.com ನಲ್ಲಿ ಸಂಪರ್ಕಿಸಿ"
+  },
+  "replace": {
+    "message": "ಬದಲಿಸಿ"
+  },
+  "replaceSessionTitle": {
+    "message": "ಈ ಅವಧಿಯೊಂದಿಗೆ ಪ್ರಸ್ತುತ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಬದಲಿಸಿ"
+  },
+  "invalidDomain": {
+    "message": "ಮಾನ್ಯ ಡೊಮೇನ್ ನಮೂದಿಸಿ (ಉದಾ. example.com)"
+  },
+  "extensionPage": {
+    "message": "ವಿಸ್ತರಣೆ ಪುಟ"
+  },
+  "exportWhitelist": {
+    "message": "ರಫ್ತು"
+  },
+  "importWhitelist": {
+    "message": "ಆಮದು"
+  },
+  "exportWhitelistTitle": {
+    "message": "ಶ್ವೇತಪಟ್ಟಿ ನಕಲಿಸಿ"
+  },
+  "importWhitelistTitle": {
+    "message": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ನಿಂದ ಶ್ವೇತಪಟ್ಟಿ ಆಮದಿಸಿ"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ ಸೈಟ್(ಗಳು) ನಕಲಿಸಲಾಗಿದೆ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ ಹೊಸ ಸೈಟ್(ಗಳು) ಆಮದಿಸಲಾಗಿದೆ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ನಲ್ಲಿ ಮಾನ್ಯ ಡೊಮೇನ್‌ಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
+  },
+  "clipboardReadFailed": {
+    "message": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್ ಓದಲಾಗಲಿಲ್ಲ"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy ಇಷ್ಟವಾಗುತ್ತಿದೆಯೇ?"
+  },
+  "reviewYes": {
+    "message": "ಹೌದು!"
+  },
+  "reviewNo": {
+    "message": "ಅಷ್ಟಾಗಿ ಇಲ್ಲ"
+  },
+  "whatsNew": {
+    "message": "v1.1.0 ರಲ್ಲಿ ಹೊಸದೇನು"
+  },
+  "changelogTitle": {
+    "message": "Drowzy ನಲ್ಲಿ ಹೊಸದೇನು"
+  },
+  "changelogWhatsNew": {
+    "message": "ಹೊಸದೇನು"
+  },
+  "changelogVersion": {
+    "message": "ಆವೃತ್ತಿ 1.1.0"
+  },
+  "changelogNewFeatures": {
+    "message": "ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳು"
+  },
+  "changelogBugFixes": {
+    "message": "ದೋಷ ಸರಿಪಡಿಸುವಿಕೆಗಳು"
+  },
+  "changelogImprovements": {
+    "message": "ಸುಧಾರಣೆಗಳು"
+  },
+  "changelogReviewPromptTitle": {
+    "message": "ವಿಮರ್ಶೆ ವಿನಂತಿ"
+  },
+  "changelogReviewPromptDesc": {
+    "message": "ಕೆಲವು ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸ್ಥಗಿತಗೊಳಿಸಿದ ನಂತರ, Drowzy ನಿಮಗೆ ಇಷ್ಟವಾಗುತ್ತಿದೆಯೇ ಎಂದು ಕೇಳುತ್ತದೆ. ತ್ವರಿತ ಥಂಬ್ಸ್ ಅಪ್ ನಮಗೆ ಬಹಳ ಸಹಾಯ ಮಾಡುತ್ತದೆ!"
+  },
+  "changelogChangelogTitle": {
+    "message": "ಬದಲಾವಣೆ ಲಾಗ್ ಪುಟ"
+  },
+  "changelogChangelogDesc": {
+    "message": "ನೀವು ಇದನ್ನು ನೋಡುತ್ತಿದ್ದೀರಿ! ಅಪ್‌ಡೇಟ್‌ನಲ್ಲಿ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ತೆರೆಯುತ್ತದೆ. ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಂದ ಯಾವಾಗಲೂ ಪ್ರವೇಶಿಸಿ."
+  },
+  "changelogSessionRestoreTitle": {
+    "message": "ಅವಧಿ ಮರುಸ್ಥಾಪನೆ ಸಮಯ"
+  },
+  "changelogSessionRestoreDesc": {
+    "message": "ಮರುಸ್ಥಾಪಿಸಿದ ಟ್ಯಾಬ್‌ಗಳು ಇನ್ನು ತಕ್ಷಣವೇ ಸ್ವಯಂ-ಸ್ಥಗಿತಗೊಳ್ಳುವುದಿಲ್ಲ. ಅವು ಈಗ ತಮ್ಮ ನಿಷ್ಕ್ರಿಯ ಟೈಮರ್‌ಗಳನ್ನು ಸರಿಯಾಗಿ ಮರುಹೊಂದಿಸುತ್ತವೆ."
+  },
+  "changelogFormCheckTitle": {
+    "message": "ಫಾರ್ಮ್ ಪರಿಶೀಲನೆ ಸಮಯಮೀರುವಿಕೆ"
+  },
+  "changelogFormCheckDesc": {
+    "message": "ಫಾರ್ಮ್ ಡೇಟಾ ಪರಿಶೀಲನೆಯು ಈಗ 500ms ಸಮಯಮೀರುವಿಕೆಯನ್ನು ಹೊಂದಿದೆ ಆದ್ದರಿಂದ ಪ್ರತಿಕ್ರಿಯಿಸದ ಟ್ಯಾಬ್‌ಗಳು ಸರತಿಯನ್ನು ತಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
+  },
+  "changelogWhitelistDupesTitle": {
+    "message": "ಶ್ವೇತಪಟ್ಟಿ ನಕಲುಗಳು"
+  },
+  "changelogWhitelistDupesDesc": {
+    "message": "\"Example.com\" ಮತ್ತು \"example.com\" ಎರಡನ್ನೂ ಸೇರಿಸಬಹುದಾದ ಕೇಸ್ ಸೆನ್ಸಿಟಿವಿಟಿ ಸಮಸ್ಯೆಯನ್ನು ಸರಿಪಡಿಸಲಾಗಿದೆ. ಎಲ್ಲಾ ನಮೂದುಗಳನ್ನು ಈಗ ಸಾಮಾನ್ಯೀಕರಿಸಲಾಗಿದೆ."
+  },
+  "changelogLiveStatsTitle": {
+    "message": "ನೇರ ಅಂಕಿಅಂಶಗಳು"
+  },
+  "changelogLiveStatsDesc": {
+    "message": "ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸ್ಥಗಿತಗೊಳಿಸಿದಾಗ ಅಥವಾ ಎಚ್ಚರಗೊಳಿಸಿದಾಗ ಪಾಪ್‌ಅಪ್ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಿಫ್ರೆಶ್ ಆಗುತ್ತದೆ."
+  },
+  "changelogSessionOptionsTitle": {
+    "message": "ಅವಧಿ ಮರುಸ್ಥಾಪನೆ ಆಯ್ಕೆಗಳು"
+  },
+  "changelogSessionOptionsDesc": {
+    "message": "ಅವಧಿಗಳಲ್ಲಿ ಈಗ ಪ್ರತ್ಯೇಕ \"ತೆರೆಯಿರಿ\" ಮತ್ತು \"ಬದಲಿಸಿ\" ಬಟನ್‌ಗಳಿವೆ."
+  },
+  "changelogWhitelistValTitle": {
+    "message": "ಶ್ವೇತಪಟ್ಟಿ ಊರ್ಜಿತಗೊಳಿಸುವಿಕೆ ಮತ್ತು ರಫ್ತು/ಆಮದು"
+  },
+  "changelogWhitelistValDesc": {
+    "message": "ಶ್ವೇತಪಟ್ಟಿ ಇನ್‌ಪುಟ್ ಈಗ ಡೊಮೇನ್‌ಗಳನ್ನು ಊರ್ಜಿತಗೊಳಿಸುತ್ತದೆ. ಕ್ಲಿಪ್‌ಬೋರ್ಡ್ ಮೂಲಕ ರಫ್ತು ಮತ್ತು ಆಮದು ಮಾಡಬಹುದು."
+  },
+  "changelogA11yTitle": {
+    "message": "ಪ್ರವೇಶಿಸುವಿಕೆ"
+  },
+  "changelogA11yDesc": {
+    "message": "ಟ್ಯಾಬ್ ಪಟ್ಟಿ ಐಟಂಗಳು ಈಗ ARIA ಪಾತ್ರಗಳೊಂದಿಗೆ ಕೀಬೋರ್ಡ್-ನ್ಯಾವಿಗೇಬಲ್ ಆಗಿವೆ. ಟೋಸ್ಟ್ ಅಧಿಸೂಚನೆಗಳು ಸ್ಕ್ರೀನ್ ರೀಡರ್‌ಗಳಿಗೆ ಘೋಷಿಸಲ್ಪಡುತ್ತವೆ."
+  },
+  "changelogAnimationsTitle": {
+    "message": "ಸುಗಮ ಅನಿಮೇಶನ್‌ಗಳು"
+  },
+  "changelogAnimationsDesc": {
+    "message": "ಟ್ಯಾಬ್ ಪಟ್ಟಿ ಸ್ಟ್ಯಾಗರ್ ಅನಿಮೇಶನ್‌ಗಳು ಈಗ ಮಿತಿಯಲ್ಲಿವೆ ಆದ್ದರಿಂದ ಅನೇಕ ಟ್ಯಾಬ್‌ಗಳಿರುವ ವಿಂಡೋಗಳಲ್ಲಿ ದೀರ್ಘ ವಿಳಂಬ ಇರುವುದಿಲ್ಲ."
+  },
+  "changelogCtaText": {
+    "message": "Drowzy ಉಚಿತ ಮತ್ತು ಮುಕ್ತ ಮೂಲವಾಗಿದೆ. ಇದು ಮೆಮೊರಿ ಉಳಿಸುತ್ತಿದ್ದರೆ, ವಿಮರ್ಶೆ ಅಥವಾ GitHub ನಲ್ಲಿ ನಕ್ಷತ್ರ ನೀಡಿ."
+  },
+  "changelogReviewBtn": {
+    "message": "ವಿಮರ್ಶೆ ನೀಡಿ"
+  },
+  "changelogStarBtn": {
+    "message": "GitHub ನಲ್ಲಿ ನಕ್ಷತ್ರ"
+  }
 }

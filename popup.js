@@ -22,7 +22,18 @@ async function init() {
   injectIcons();
   await loadAll();
   attachListeners();
+  await checkReviewPrompt();
   document.body.classList.add('popup-ready');
+
+  chrome.tabs.onUpdated.addListener(onTabChange);
+  chrome.tabs.onRemoved.addListener(onTabChange);
+  chrome.tabs.onCreated.addListener(onTabChange);
+}
+
+var _refreshTimer = null;
+function onTabChange() {
+  clearTimeout(_refreshTimer);
+  _refreshTimer = setTimeout(function() { loadAll(); }, 500);
 }
 
 function localizeHtml() {
@@ -137,7 +148,9 @@ function renderTabList(tabs) {
     var tab = tabs[i];
     var el = document.createElement('div');
     el.className = 'tab-item' + (tab.status === 'suspended' ? ' sleeping' : '');
-    el.style.setProperty('--i', Math.min(i, 15));
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.style.setProperty('--i', Math.min(i, 10));
 
     el.appendChild(buildFavicon(tab));
 
@@ -160,7 +173,7 @@ function renderTabList(tabs) {
     }
     el.appendChild(meta);
 
-    el.addEventListener('click', (function(t) {
+    var tabAction = (function(t) {
       return async function() {
         if (t.status === 'suspended') {
           await msg({ action: 'wakeTab', tabId: t.id });
@@ -169,7 +182,11 @@ function renderTabList(tabs) {
           try { await chrome.tabs.update(t.id, { active: true }); } catch {}
         }
       };
-    })(tab));
+    })(tab);
+    el.addEventListener('click', tabAction);
+    el.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tabAction(); }
+    });
 
     container.appendChild(el);
   }
@@ -209,7 +226,11 @@ function renderCurrentTab(tabList, settings) {
   var domain = '\u2014';
   var whitelisted = false;
   try {
-    domain = new URL(active.url).hostname;
+    var urlObj = new URL(active.url);
+    domain = urlObj.hostname;
+    if (urlObj.protocol === 'chrome-extension:') {
+      domain = active.title || t('extensionPage');
+    }
     var clean = domain.replace(/^www\./, '').toLowerCase();
     whitelisted = (settings.whitelist || []).some(function(w) {
       w = w.toLowerCase();
@@ -284,7 +305,12 @@ function renderSessions(sessions) {
     deleteBtn.innerHTML = icon('trash2', 13);
     deleteBtn.title = t('deleteSessionTitle');
 
-    (function(session, rBtn) {
+    var replaceBtn = document.createElement('button');
+    replaceBtn.className = 'btn btn-sm';
+    replaceBtn.innerHTML = icon('download', 12) + ' ' + esc(t('replace'));
+    replaceBtn.title = t('replaceSessionTitle');
+
+    (function(session, rBtn, rpBtn) {
       rBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
         rBtn.disabled = true;
@@ -295,7 +321,17 @@ function renderSessions(sessions) {
         rBtn.disabled = false;
         rBtn.innerHTML = icon('download', 12) + ' ' + esc(t('open'));
       });
-    })(s, restoreBtn);
+      rpBtn.addEventListener('click', async function(e) {
+        e.stopPropagation();
+        rpBtn.disabled = true;
+        rpBtn.textContent = '...';
+        var res = await msg({ action: 'restoreSession', id: session.id, mode: 'replace' });
+        if (res && res.success) showToast(t('restoredTabs', [String(res.count)]));
+        else showToast((res && res.error) || t('failedToRestore'));
+        rpBtn.disabled = false;
+        rpBtn.innerHTML = icon('download', 12) + ' ' + esc(t('replace'));
+      });
+    })(s, restoreBtn, replaceBtn);
 
     (function(session) {
       deleteBtn.addEventListener('click', async function(e) {
@@ -306,6 +342,7 @@ function renderSessions(sessions) {
     })(s);
 
     actions.appendChild(restoreBtn);
+    actions.appendChild(replaceBtn);
     actions.appendChild(deleteBtn);
     card.appendChild(stack);
     card.appendChild(info);
@@ -459,6 +496,47 @@ function attachListeners() {
   document.getElementById('whitelistInput').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') addFromInput();
   });
+
+  document.getElementById('btnExportWhitelist').addEventListener('click', async function() {
+    var settings = await msg({ action: 'getSettings' });
+    if (!settings || !settings.whitelist || !settings.whitelist.length) {
+      showToast(t('noSitesWhitelisted'));
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(settings.whitelist.join('\n'));
+      showToast(t('copiedSites', [String(settings.whitelist.length)]));
+    } catch { showToast(t('failedToCopy')); }
+  });
+
+  document.getElementById('btnImportWhitelist').addEventListener('click', async function() {
+    try {
+      var text = await navigator.clipboard.readText();
+      var domains = text.split(/[\n,;]+/).map(function(d) {
+        return d.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[/:?#].*$/, '');
+      }).filter(function(d) { return d && d.includes('.'); });
+      if (!domains.length) { showToast(t('noValidDomains')); return; }
+      var settings = await msg({ action: 'getSettings' });
+      if (!settings) return;
+      var added = 0;
+      for (var i = 0; i < domains.length; i++) {
+        if (!settings.whitelist.includes(domains[i])) {
+          settings.whitelist.push(domains[i]);
+          added++;
+        }
+      }
+      if (added) {
+        await msg({ action: 'updateSettings', settings: settings });
+        await loadAll();
+      }
+      showToast(t('importedSites', [String(added)]));
+    } catch { showToast(t('clipboardReadFailed')); }
+  });
+
+  document.getElementById('btnWhatsNew').addEventListener('click', function(e) {
+    e.preventDefault();
+    chrome.tabs.create({ url: 'changelog.html' });
+  });
 }
 
 function bindToggle(id, key) {
@@ -516,7 +594,12 @@ async function addFromInput() {
   var raw = input.value.trim();
   if (!raw) return;
   var domain = raw.toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[/:?#].*$/, '');
-  if (!domain) return;
+  if (!domain || !domain.includes('.') || domain.startsWith('.') || domain.endsWith('.')) {
+    showToast(t('invalidDomain'));
+    input.classList.add('input-error');
+    setTimeout(function() { input.classList.remove('input-error'); }, 1500);
+    return;
+  }
   await msg({ action: 'addWhitelist', domain: domain });
   input.value = '';
   await loadAll();
@@ -545,4 +628,60 @@ function relativeTime(ts) {
   if (days === 1) return t('yesterday');
   if (days < 7) return t('daysAgo', [String(days)]);
   return new Date(ts).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+}
+
+var REVIEW_URL = 'https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa/reviews';
+var ISSUES_URL = 'https://github.com/ml3dev/drowzy/issues';
+var SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
+
+async function checkReviewPrompt() {
+  try {
+    var data = await chrome.storage.local.get(['drowzy_stats', 'reviewPromptCompleted', 'reviewPromptDismissCount', 'reviewPromptLastDismissed']);
+    var stats = data.drowzy_stats;
+    if (!stats || (stats.totalTabsSuspended || 0) < 10) return;
+    if (data.reviewPromptCompleted) return;
+    if ((data.reviewPromptDismissCount || 0) >= 2) return;
+    if (data.reviewPromptLastDismissed && (Date.now() - data.reviewPromptLastDismissed < SEVEN_DAYS)) return;
+
+    var banner = document.getElementById('reviewPrompt');
+    banner.style.display = '';
+    banner.classList.add('entering');
+
+    function dismissBanner(cb) {
+      banner.classList.remove('entering');
+      banner.classList.add('dismissing');
+      banner.addEventListener('transitionend', function handler() {
+        banner.removeEventListener('transitionend', handler);
+        banner.style.display = 'none';
+        if (cb) cb();
+      });
+    }
+
+    function recordDismiss() {
+      var count = (data.reviewPromptDismissCount || 0) + 1;
+      chrome.storage.local.set({
+        reviewPromptDismissCount: count,
+        reviewPromptLastDismissed: Date.now()
+      });
+    }
+
+    document.getElementById('reviewThumbsUp').addEventListener('click', function() {
+      chrome.storage.local.set({ reviewPromptCompleted: true });
+      dismissBanner(function() {
+        chrome.tabs.create({ url: REVIEW_URL });
+      });
+    });
+
+    document.getElementById('reviewThumbsDown').addEventListener('click', function() {
+      recordDismiss();
+      dismissBanner(function() {
+        chrome.tabs.create({ url: ISSUES_URL });
+      });
+    });
+
+    document.getElementById('reviewDismiss').addEventListener('click', function() {
+      recordDismiss();
+      dismissBanner();
+    });
+  } catch {}
 }
