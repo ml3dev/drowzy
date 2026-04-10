@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub वर स्टार"
+  },
+  "suspendThis": {
+    "message": "टॅब स्थगित करा"
+  },
+  "failedToSuspend": {
+    "message": "हा टॅब स्थगित करता येत नाही"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ डुप्लिकेट टॅब बंद केले",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "डुप्लिकेट टॅब सापडले नाहीत"
+  },
+  "suspendWarningText": {
+    "message": "टॅब लवकरच स्थगित होईल..."
+  },
+  "searchTabs": {
+    "message": "टॅब शोधा"
+  },
+  "closeDuplicatesTitle": {
+    "message": "डुप्लिकेट टॅब बंद करा"
   }
 }

@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub-ൽ നക്ഷത്രം"
+  },
+  "suspendThis": {
+    "message": "ടാബ് സസ്‌പെന്ഡ് ചെയ്യുക"
+  },
+  "failedToSuspend": {
+    "message": "ഈ ടാബ് സസ്‌പെന്ഡ് ചെയ്യാന്‍ കഴിയില്ല"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ ഡ്യൂപ്ലിക്കേറ്റ് ടാബ്(കള്‍) അടച്ചു",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "ഡ്യൂപ്ലിക്കേറ്റ് ടാബുകള്‍ കണ്ടെത്തിയില്ല"
+  },
+  "suspendWarningText": {
+    "message": "ടാബ് ഉടന്‍ സസ്‌പെന്ഡ് ചെയ്യും..."
+  },
+  "searchTabs": {
+    "message": "ടാബുകള്‍ തിരയുക"
+  },
+  "closeDuplicatesTitle": {
+    "message": "ഡ്യൂപ്ലിക്കേറ്റ് ടാബുകള്‍ അടയ്ക്കുക"
   }
 }

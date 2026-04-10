@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Nyota kwenye GitHub"
+  },
+  "suspendThis": {
+    "message": "Simamisha kichupo"
+  },
+  "failedToSuspend": {
+    "message": "Haiwezi kusimamisha kichupo hiki"
+  },
+  "closedDuplicates": {
+    "message": "Imefunga vichupo $COUNT$ vya nakala",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Hakuna vichupo vya nakala vilivyopatikana"
+  },
+  "suspendWarningText": {
+    "message": "Kichupo kitasimamishwa hivi karibuni..."
+  },
+  "searchTabs": {
+    "message": "Tafuta vichupo"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Funga vichupo vya nakala"
   }
 }

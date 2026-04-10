@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Estrella a GitHub"
+  },
+  "suspendThis": {
+    "message": "Suspendre pestanya"
+  },
+  "failedToSuspend": {
+    "message": "No es pot suspendre aquesta pestanya"
+  },
+  "closedDuplicates": {
+    "message": "S'han tancat $COUNT$ pestanya(es) duplicada(es)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "No s'han trobat pestanyes duplicades"
+  },
+  "suspendWarningText": {
+    "message": "La pestanya es suspendrà aviat..."
+  },
+  "searchTabs": {
+    "message": "Cercar pestanyes"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Tancar pestanyes duplicades"
   }
 }

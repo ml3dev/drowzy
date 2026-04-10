@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Bintang di GitHub"
+  },
+  "suspendThis": {
+    "message": "Tangguhkan tab"
+  },
+  "failedToSuspend": {
+    "message": "Tidak dapat menangguhkan tab ini"
+  },
+  "closedDuplicates": {
+    "message": "Menutup $COUNT$ tab pendua",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Tiada tab pendua ditemui"
+  },
+  "suspendWarningText": {
+    "message": "Tab akan ditangguhkan tidak lama lagi..."
+  },
+  "searchTabs": {
+    "message": "Cari tab"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Tutup tab pendua"
   }
 }

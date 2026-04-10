@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 var _loaded = false;
 var _toastTimer = null;
+var _allTabs = null;
 
 function t(key, subs) {
   var val = chrome.i18n.getMessage(key, subs);
@@ -25,15 +26,28 @@ async function init() {
   await checkReviewPrompt();
   document.body.classList.add('popup-ready');
 
-  chrome.tabs.onUpdated.addListener(onTabChange);
-  chrome.tabs.onRemoved.addListener(onTabChange);
-  chrome.tabs.onCreated.addListener(onTabChange);
+  if (!_listenersAttached) {
+    _listenersAttached = true;
+    chrome.tabs.onUpdated.addListener(onTabChange);
+    chrome.tabs.onRemoved.addListener(onTabChange);
+    chrome.tabs.onCreated.addListener(onTabChange);
+  }
 }
 
+var _listenersAttached = false;
 var _refreshTimer = null;
 function onTabChange() {
   clearTimeout(_refreshTimer);
   _refreshTimer = setTimeout(function() { loadAll(); }, 500);
+}
+
+function filterTabs(tabs) {
+  var input = document.getElementById('tabSearchInput');
+  if (!input || !input.value.trim()) return tabs;
+  var q = input.value.trim().toLowerCase();
+  return tabs.filter(function(t) {
+    return (t.title && t.title.toLowerCase().includes(q)) || (t.url && t.url.toLowerCase().includes(q));
+  });
 }
 
 function localizeHtml() {
@@ -98,8 +112,9 @@ async function loadAll() {
       msg({ action: 'getSessions' }),
       msg({ action: 'getStats' })
     ]);
+    _allTabs = tabList;
     renderStatsStrip(status);
-    renderTabList(tabList);
+    renderTabList(filterTabs(tabList));
     renderCurrentTab(tabList, settings);
     renderSettings(settings);
     renderSessions(sessions);
@@ -171,6 +186,21 @@ function renderTabList(tabs) {
     } else if (tab.status === 'idle' && tab.timeLeft !== null) {
       meta.innerHTML = '<span class="badge badge-timer">' + icon('clock', 11) + ' ' + tab.timeLeft + 'm</span>';
     }
+    if (tab.status === 'idle') {
+      var suspendBtn = document.createElement('button');
+      suspendBtn.className = 'tab-suspend-btn';
+      suspendBtn.innerHTML = icon('pause', 11);
+      suspendBtn.title = t('ctxSuspendThis');
+      (function(tid) {
+        suspendBtn.addEventListener('click', async function(e) {
+          e.stopPropagation();
+          await msg({ action: 'suspendTab', tabId: tid });
+          await loadAll();
+        });
+      })(tab.id);
+      el.appendChild(suspendBtn);
+    }
+
     el.appendChild(meta);
 
     var tabAction = (function(t) {
@@ -310,28 +340,30 @@ function renderSessions(sessions) {
     replaceBtn.innerHTML = icon('download', 12) + ' ' + esc(t('replace'));
     replaceBtn.title = t('replaceSessionTitle');
 
-    (function(session, rBtn, rpBtn) {
+    (function(session, rBtn, rpBtn, dBtn) {
+      function disableAll() { rBtn.disabled = true; rpBtn.disabled = true; dBtn.disabled = true; }
+      function enableAll() { rBtn.disabled = false; rpBtn.disabled = false; dBtn.disabled = false; }
       rBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
-        rBtn.disabled = true;
+        disableAll();
         rBtn.textContent = '...';
         var res = await msg({ action: 'restoreSession', id: session.id, mode: 'open' });
         if (res && res.success) showToast(t('restoredTabs', [String(res.count)]));
         else showToast((res && res.error) || t('failedToRestore'));
-        rBtn.disabled = false;
+        enableAll();
         rBtn.innerHTML = icon('download', 12) + ' ' + esc(t('open'));
       });
       rpBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
-        rpBtn.disabled = true;
+        disableAll();
         rpBtn.textContent = '...';
         var res = await msg({ action: 'restoreSession', id: session.id, mode: 'replace' });
         if (res && res.success) showToast(t('restoredTabs', [String(res.count)]));
         else showToast((res && res.error) || t('failedToRestore'));
-        rpBtn.disabled = false;
+        enableAll();
         rpBtn.innerHTML = icon('download', 12) + ' ' + esc(t('replace'));
       });
-    })(s, restoreBtn, replaceBtn);
+    })(s, restoreBtn, replaceBtn, deleteBtn);
 
     (function(session) {
       deleteBtn.addEventListener('click', async function(e) {
@@ -422,6 +454,25 @@ function attachListeners() {
     }, 400);
   });
 
+  document.getElementById('btnSuspendThis').addEventListener('click', async function() {
+    var text = this.querySelector('.btn-text');
+    text.textContent = t('suspending');
+    this.disabled = true;
+    var res = await msg({ action: 'suspendCurrentTab' });
+    if (res && res.success) {
+      text.textContent = t('done');
+    } else {
+      text.textContent = t('suspendThis');
+      showToast(t('failedToSuspend'));
+    }
+    var btn = this;
+    setTimeout(async function() {
+      text.textContent = t('suspendThis');
+      btn.disabled = false;
+      await loadAll();
+    }, 400);
+  });
+
   document.getElementById('btnWakeAll').addEventListener('click', async function() {
     var text = this.querySelector('.btn-text');
     text.textContent = t('waking');
@@ -441,6 +492,33 @@ function attachListeners() {
     if (!d || d === '\u2014') return;
     await msg({ action: this.dataset.whitelisted === '1' ? 'removeWhitelist' : 'addWhitelist', domain: d });
     await loadAll();
+  });
+
+  document.getElementById('btnCloseDuplicates').addEventListener('click', async function() {
+    var res = await msg({ action: 'closeDuplicates' });
+    if (res && res.closed > 0) {
+      showToast(t('closedDuplicates', [String(res.closed)]));
+      await loadAll();
+    } else {
+      showToast(t('noDuplicates'));
+    }
+  });
+
+  document.getElementById('btnSearchToggle').addEventListener('click', function() {
+    var wrap = document.getElementById('tabSearchWrap');
+    var input = document.getElementById('tabSearchInput');
+    if (wrap.style.display === 'none') {
+      wrap.style.display = '';
+      input.focus();
+    } else {
+      wrap.style.display = 'none';
+      input.value = '';
+      if (_allTabs) renderTabList(_allTabs);
+    }
+  });
+
+  document.getElementById('tabSearchInput').addEventListener('input', function() {
+    if (_allTabs) renderTabList(filterTabs(_allTabs));
   });
 
   document.getElementById('btnExportTabs').addEventListener('click', async function() {
@@ -514,7 +592,7 @@ function attachListeners() {
       var text = await navigator.clipboard.readText();
       var domains = text.split(/[\n,;]+/).map(function(d) {
         return d.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[/:?#].*$/, '');
-      }).filter(function(d) { return d && d.includes('.'); });
+      }).filter(function(d) { return d && d.includes('.') && !d.startsWith('.') && !d.endsWith('.'); });
       if (!domains.length) { showToast(t('noValidDomains')); return; }
       var settings = await msg({ action: 'getSettings' });
       if (!settings) return;
@@ -593,8 +671,10 @@ async function addFromInput() {
   var input = document.getElementById('whitelistInput');
   var raw = input.value.trim();
   if (!raw) return;
-  var domain = raw.toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[/:?#].*$/, '');
-  if (!domain || !domain.includes('.') || domain.startsWith('.') || domain.endsWith('.')) {
+  var domain = raw.toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '');
+  if (!domain.includes('/')) domain = domain.replace(/[/:?#].*$/, '');
+  var domainPart = domain.split('/')[0];
+  if (!domainPart || !domainPart.includes('.') || domainPart.startsWith('.') || domainPart.endsWith('.')) {
     showToast(t('invalidDomain'));
     input.classList.add('input-error');
     setTimeout(function() { input.classList.remove('input-error'); }, 1500);

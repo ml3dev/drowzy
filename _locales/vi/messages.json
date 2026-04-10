@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Gắn sao trên GitHub"
+  },
+  "suspendThis": {
+    "message": "Tạm ngưng thẻ"
+  },
+  "failedToSuspend": {
+    "message": "Không thể tạm ngưng thẻ này"
+  },
+  "closedDuplicates": {
+    "message": "Đã đóng $COUNT$ thẻ trùng lặp",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Không tìm thấy thẻ trùng lặp"
+  },
+  "suspendWarningText": {
+    "message": "Thẻ sẽ sớm được tạm ngưng..."
+  },
+  "searchTabs": {
+    "message": "Tìm kiếm thẻ"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Đóng các thẻ trùng lặp"
   }
 }

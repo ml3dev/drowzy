@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Звезда в GitHub"
+  },
+  "suspendThis": {
+    "message": "Приспи раздела"
+  },
+  "failedToSuspend": {
+    "message": "Този раздел не може да бъде приспан"
+  },
+  "closedDuplicates": {
+    "message": "Затворени $COUNT$ дублиращи се раздел(а)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Не са намерени дублиращи се раздели"
+  },
+  "suspendWarningText": {
+    "message": "Разделът ще бъде приспан скоро..."
+  },
+  "searchTabs": {
+    "message": "Търсене на раздели"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Затваряне на дублиращи се раздели"
   }
 }

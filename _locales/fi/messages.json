@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Tähti GitHubissa"
+  },
+  "suspendThis": {
+    "message": "Pysäytä välilehti"
+  },
+  "failedToSuspend": {
+    "message": "Tätä välilehteä ei voi pysäyttää"
+  },
+  "closedDuplicates": {
+    "message": "Suljettiin $COUNT$ kaksoiskappale(tta)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Kaksoiskappaleita ei löytynyt"
+  },
+  "suspendWarningText": {
+    "message": "Välilehti pysäytetään pian..."
+  },
+  "searchTabs": {
+    "message": "Hae välilehtiä"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Sulje kaksoiskappaleet"
   }
 }

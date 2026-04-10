@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Stjärna på GitHub"
+  },
+  "suspendThis": {
+    "message": "Pausa flik"
+  },
+  "failedToSuspend": {
+    "message": "Kan inte pausa denna flik"
+  },
+  "closedDuplicates": {
+    "message": "Stängde $COUNT$ dubblettflik(ar)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Inga dubblettflikar hittades"
+  },
+  "suspendWarningText": {
+    "message": "Fliken pausas snart..."
+  },
+  "searchTabs": {
+    "message": "Sök flikar"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Stäng dubblettflikar"
   }
 }

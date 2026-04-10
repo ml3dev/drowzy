@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub'da Yıldız"
+  },
+  "suspendThis": {
+    "message": "Sekmeyi askıya al"
+  },
+  "failedToSuspend": {
+    "message": "Bu sekme askıya alınamıyor"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ yinelenen sekme kapatıldı",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Yinelenen sekme bulunamadı"
+  },
+  "suspendWarningText": {
+    "message": "Sekme yakında askıya alınacak..."
+  },
+  "searchTabs": {
+    "message": "Sekme ara"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Yinelenen sekmeleri kapat"
   }
 }

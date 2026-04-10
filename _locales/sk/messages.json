@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Hviezdička na GitHube"
+  },
+  "suspendThis": {
+    "message": "Uspať kartu"
+  },
+  "failedToSuspend": {
+    "message": "Túto kartu nie je možné uspať"
+  },
+  "closedDuplicates": {
+    "message": "Zatvorených $COUNT$ duplicitných kariet",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Nenašli sa žiadne duplicitné karty"
+  },
+  "suspendWarningText": {
+    "message": "Karta bude čoskoro uspatá..."
+  },
+  "searchTabs": {
+    "message": "Hľadať karty"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Zatvoriť duplicitné karty"
   }
 }

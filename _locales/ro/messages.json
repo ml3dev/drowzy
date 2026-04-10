@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Stea pe GitHub"
+  },
+  "suspendThis": {
+    "message": "Suspendă fila"
+  },
+  "failedToSuspend": {
+    "message": "Nu se poate suspenda această filă"
+  },
+  "closedDuplicates": {
+    "message": "S-au închis $COUNT$ file duplicate",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Nu s-au găsit file duplicate"
+  },
+  "suspendWarningText": {
+    "message": "Fila va fi suspendată în curând..."
+  },
+  "searchTabs": {
+    "message": "Caută file"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Închide filele duplicate"
   }
 }

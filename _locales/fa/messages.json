@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "ستاره در GitHub"
+  },
+  "suspendThis": {
+    "message": "تعلیق زبانه"
+  },
+  "failedToSuspend": {
+    "message": "امکان تعلیق این زبانه وجود ندارد"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ زبانه تکراری بسته شد",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "زبانه تکراری یافت نشد"
+  },
+  "suspendWarningText": {
+    "message": "زبانه به‌زودی تعلیق می‌شود..."
+  },
+  "searchTabs": {
+    "message": "جستجوی زبانه‌ها"
+  },
+  "closeDuplicatesTitle": {
+    "message": "بستن زبانه‌های تکراری"
   }
 }

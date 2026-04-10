@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub પર સ્ટાર"
+  },
+  "suspendThis": {
+    "message": "યેબ સસ્પેન્ડ કરો"
+  },
+  "failedToSuspend": {
+    "message": "આ યેબ સસ્પેન્ડ કરી શકાતું નથી"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ ડુપ્લિકેટ યેબ બંધ કરવામાં આવ્યા",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "કોઈ ડુપ્લિકેટ યેબ મળ્યા નથી"
+  },
+  "suspendWarningText": {
+    "message": "યેબ ટૂંક સમયમાં સસ્પેન્ડ થશે..."
+  },
+  "searchTabs": {
+    "message": "યેબ શોધો"
+  },
+  "closeDuplicatesTitle": {
+    "message": "ડુપ્લિકેટ યેબ બંધ કરો"
   }
 }

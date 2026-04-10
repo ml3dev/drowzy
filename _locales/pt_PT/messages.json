@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Estrela no GitHub"
+  },
+  "suspendThis": {
+    "message": "Suspender separador"
+  },
+  "failedToSuspend": {
+    "message": "Não é possível suspender este separador"
+  },
+  "closedDuplicates": {
+    "message": "Fechados $COUNT$ separador(es) duplicado(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Nenhum separador duplicado encontrado"
+  },
+  "suspendWarningText": {
+    "message": "O separador será suspenso em breve..."
+  },
+  "searchTabs": {
+    "message": "Pesquisar separadores"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Fechar separadores duplicados"
   }
 }

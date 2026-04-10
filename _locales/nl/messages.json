@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Ster op GitHub"
+  },
+  "suspendThis": {
+    "message": "Tabblad onderbreken"
+  },
+  "failedToSuspend": {
+    "message": "Dit tabblad kan niet onderbroken worden"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ dubbele tabblad(en) gesloten",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Geen dubbele tabbladen gevonden"
+  },
+  "suspendWarningText": {
+    "message": "Tabblad wordt binnenkort onderbroken..."
+  },
+  "searchTabs": {
+    "message": "Tabbladen zoeken"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Dubbele tabbladen sluiten"
   }
 }

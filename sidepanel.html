@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <style>
+    body {
+      width: 100%;
+      max-height: none;
+      overflow: auto;
+    }
+    .popup-container {
+      max-height: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="header-left">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" fill="currentColor" opacity="0.9"/>
+        </svg>
+        <span class="header-title">Drowzy</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn-icon-only" id="themeToggle"></button>
+      </div>
+    </header>
+
+    <div class="stats-strip">
+      <div class="strip-stat">
+        <span class="strip-stat-value" id="statSleepingValue">0</span>
+        <span class="strip-stat-label" data-i18n="statSleeping">sleeping</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat">
+        <span class="strip-stat-value" id="statProtectedValue">0</span>
+        <span class="strip-stat-label" data-i18n="statProtected">protected</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat">
+        <span class="strip-stat-value" id="statMemoryValue">&mdash;</span>
+        <span class="strip-stat-label" data-i18n="statSaved">saved</span>
+      </div>
+    </div>
+
+    <div class="quick-actions">
+      <button class="btn btn-primary" id="btnSuspendOthers">
+        <span class="btn-icon" data-icon="pauseCircle"></span>
+        <span class="btn-text" data-i18n="suspendOthers">Suspend Others</span>
+      </button>
+      <button class="btn" id="btnSuspendThis">
+        <span class="btn-icon" data-icon="pause"></span>
+        <span class="btn-text" data-i18n="suspendThis">Suspend Tab</span>
+      </button>
+      <button class="btn" id="btnWakeAll">
+        <span class="btn-icon" data-icon="playCircle"></span>
+        <span class="btn-text" data-i18n="wakeAll">Wake All</span>
+      </button>
+    </div>
+
+    <div class="main-content">
+      <div class="review-prompt" id="reviewPrompt" style="display:none;">
+        <span class="review-prompt-text" data-i18n="enjoyingDrowzy">Enjoying Drowzy?</span>
+        <div class="review-prompt-actions">
+          <button class="review-prompt-btn review-prompt-yes" id="reviewThumbsUp" title="Leave a quick review">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+            <span data-i18n="reviewYes">Yes!</span>
+          </button>
+          <button class="review-prompt-btn review-prompt-no" id="reviewThumbsDown" title="Report an issue">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 14V2"/><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22h0a3.13 3.13 0 0 1-3-3.88Z"/></svg>
+            <span data-i18n="reviewNo">Not really</span>
+          </button>
+        </div>
+        <button class="review-prompt-dismiss" id="reviewDismiss" title="Dismiss">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="current-tab" id="currentTabSection">
+        <div class="current-tab-info">
+          <img class="favicon" id="currentTabFavicon" src="" alt="">
+          <div class="current-tab-details">
+            <div class="current-tab-domain" id="currentTabDomain">&mdash;</div>
+            <div class="current-tab-status" id="currentTabStatus" data-i18n="loading">Loading...</div>
+          </div>
+        </div>
+        <button class="btn btn-whitelist" id="btnToggleWhitelist">
+          <span class="btn-icon" data-icon="shield"></span>
+          <span class="btn-text" data-i18n="neverSuspendSite">Never suspend this site</span>
+        </button>
+      </div>
+
+      <div class="tab-list-header">
+        <span class="section-label" data-i18n="tabsInWindow">Tabs in this window</span>
+        <div class="tab-list-header-actions">
+          <button class="btn-icon-only" id="btnCloseDuplicates" data-i18n-title="closeDuplicatesTitle" title="Close duplicate tabs">
+            <span data-icon="copy"></span>
+          </button>
+          <button class="btn-icon-only" id="btnSearchToggle" data-i18n-title="searchTabs" title="Search tabs">
+            <span data-icon="search"></span>
+          </button>
+          <button class="btn-icon-only" id="btnExportTabs" data-i18n-title="copyTabsTitle" title="Copy tab list to clipboard">
+            <span data-icon="clipboard"></span>
+          </button>
+        </div>
+      </div>
+      <div class="tab-search" id="tabSearchWrap" style="display:none;">
+        <input type="text" id="tabSearchInput" class="input" placeholder="Search tabs...">
+      </div>
+      <div class="tab-list" id="tabList">
+        <div class="tab-list-empty" data-i18n="loadingTabs">Loading tabs...</div>
+      </div>
+
+      <div class="sections-area">
+        <div class="collapsible-section">
+          <button class="section-toggle" id="sessionsToggle" aria-expanded="false">
+            <span class="section-toggle-left">
+              <span data-icon="folderOpen"></span>
+              <span data-i18n="sessions">Sessions</span>
+            </span>
+            <span class="section-chevron" data-icon="chevronRight"></span>
+          </button>
+          <div class="section-body" id="sessionsBody">
+            <div class="section-body-inner">
+              <div class="session-save-row">
+                <input type="text" id="sessionNameInput" class="input" data-i18n-placeholder="sessionNamePlaceholder" placeholder="Session name (optional)">
+                <button class="btn btn-sm" id="btnSaveSession">
+                  <span data-icon="save"></span>
+                  <span data-i18n="save">Save</span>
+                </button>
+                <button class="btn btn-sm" id="btnExportSessions" data-i18n-title="copySessionsTitle" title="Copy all sessions as JSON">
+                  <span data-icon="clipboard"></span>
+                </button>
+              </div>
+              <div class="session-feedback" id="sessionFeedback"></div>
+              <div class="session-list" id="sessionList">
+                <div class="empty-state" data-i18n="emptySessionState">Save your first session to restore tabs anytime</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapsible-section">
+          <button class="section-toggle" id="statsToggle" aria-expanded="false">
+            <span class="section-toggle-left">
+              <span data-icon="barChart3"></span>
+              <span data-i18n="stats">Stats</span>
+            </span>
+            <span class="section-chevron" data-icon="chevronRight"></span>
+          </button>
+          <div class="section-body" id="statsBody">
+            <div class="section-body-inner">
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <span class="stat-card-label" data-i18n="statToday">Today</span>
+                  <span class="stat-card-value" id="statToday">0</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-card-label" data-i18n="statAllTime">All time</span>
+                  <span class="stat-card-value" id="statAllTime">0</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-card-label" data-i18n="statRamSaved">RAM saved (est.)</span>
+                  <span class="stat-card-value" id="statRamAllTime">&mdash;</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-card-label" data-i18n="statMemberSince">Member since</span>
+                  <span class="stat-card-value" id="statMemberSince">&mdash;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapsible-section">
+          <button class="section-toggle" id="settingsToggle" aria-expanded="false">
+            <span class="section-toggle-left">
+              <span data-icon="settings"></span>
+              <span data-i18n="settings">Settings</span>
+            </span>
+            <span class="section-chevron" data-icon="chevronRight"></span>
+          </button>
+          <div class="section-body" id="settingsBody">
+            <div class="section-body-inner">
+              <div class="setting-row">
+                <label for="suspendTimer" data-i18n="autoSuspendAfter">Auto-suspend after</label>
+                <select id="suspendTimer" class="select">
+                  <option value="5" data-i18n="timer5min">5 minutes</option>
+                  <option value="10" data-i18n="timer10min">10 minutes</option>
+                  <option value="15" data-i18n="timer15min">15 minutes</option>
+                  <option value="30" data-i18n="timer30min">30 minutes</option>
+                  <option value="60" data-i18n="timer1hour">1 hour</option>
+                  <option value="120" data-i18n="timer2hours">2 hours</option>
+                  <option value="240" data-i18n="timer4hours">4 hours</option>
+                  <option value="0" data-i18n="timerNever">Never</option>
+                </select>
+              </div>
+              <div class="setting-row">
+                <label for="togglePinned" data-i18n="protectPinned">Protect pinned tabs</label>
+                <label class="switch"><input type="checkbox" id="togglePinned"><span class="slider"></span></label>
+              </div>
+              <div class="setting-row">
+                <label for="toggleAudio" data-i18n="protectAudio">Protect audio tabs</label>
+                <label class="switch"><input type="checkbox" id="toggleAudio"><span class="slider"></span></label>
+              </div>
+              <div class="setting-row">
+                <label for="toggleForms" data-i18n="protectForms">Protect tabs with forms</label>
+                <label class="switch"><input type="checkbox" id="toggleForms"><span class="slider"></span></label>
+              </div>
+              <div class="setting-row">
+                <label for="toggleStartup" data-i18n="suspendOnStartup">Suspend tabs on startup</label>
+                <label class="switch"><input type="checkbox" id="toggleStartup"><span class="slider"></span></label>
+              </div>
+              <div class="setting-row">
+                <label for="toggleAutoSuspend" data-i18n="enableAutoSuspend">Enable auto-suspend</label>
+                <label class="switch"><input type="checkbox" id="toggleAutoSuspend"><span class="slider"></span></label>
+              </div>
+              <div class="setting-row">
+                <label for="toggleMarkSuspended" data-i18n="markSuspended">Mark suspended tabs</label>
+                <label class="switch"><input type="checkbox" id="toggleMarkSuspended"><span class="slider"></span></label>
+              </div>
+              <div class="setting-row setting-row-block">
+                <label data-i18n="whitelistedSites">Whitelisted sites</label>
+                <div class="whitelist-add">
+                  <input type="text" id="whitelistInput" placeholder="example.com" class="input">
+                  <button class="btn btn-sm" id="btnAddWhitelist">
+                    <span data-icon="plus"></span>
+                    <span data-i18n="add">Add</span>
+                  </button>
+                </div>
+                <ul class="whitelist-list" id="whitelistList"></ul>
+                <div class="whitelist-io">
+                  <button class="btn btn-sm" id="btnExportWhitelist" data-i18n-title="exportWhitelistTitle" title="Copy whitelist">
+                    <span data-icon="clipboard"></span>
+                    <span data-i18n="exportWhitelist">Export</span>
+                  </button>
+                  <button class="btn btn-sm" id="btnImportWhitelist" data-i18n-title="importWhitelistTitle" title="Import whitelist from clipboard">
+                    <span data-icon="download"></span>
+                    <span data-i18n="importWhitelist">Import</span>
+                  </button>
+                </div>
+              </div>
+              <div class="setting-row">
+                <a class="settings-link" id="btnWhatsNew" href="#" data-i18n="whatsNew">What's new in v1.2.0</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-footer">
+        <span>Drowzy v1.2.0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="icons.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

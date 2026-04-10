@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHubでスター"
+  },
+  "suspendThis": {
+    "message": "タブをサスペンド"
+  },
+  "failedToSuspend": {
+    "message": "このタブはサスペンドできません"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$個の重複タブを閉じました",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "重複タブは見つかりませんでした"
+  },
+  "suspendWarningText": {
+    "message": "まもなくタブをサスペンドします..."
+  },
+  "searchTabs": {
+    "message": "タブを検索"
+  },
+  "closeDuplicatesTitle": {
+    "message": "重複タブを閉じる"
   }
 }

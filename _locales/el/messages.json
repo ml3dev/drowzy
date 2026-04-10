@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Αστέρι στο GitHub"
+  },
+  "suspendThis": {
+    "message": "Αναστολή καρτέλας"
+  },
+  "failedToSuspend": {
+    "message": "Δεν είναι δυνατή η αναστολή αυτής της καρτέλας"
+  },
+  "closedDuplicates": {
+    "message": "Κλείστηκαν $COUNT$ διπλότυπες καρτέλες",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Δεν βρέθηκαν διπλότυπες καρτέλες"
+  },
+  "suspendWarningText": {
+    "message": "Η καρτέλα θα ανασταλεί σύντομα..."
+  },
+  "searchTabs": {
+    "message": "Αναζήτηση καρτελών"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Κλείσιμο διπλότυπων καρτελών"
   }
 }

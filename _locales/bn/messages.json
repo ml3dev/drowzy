@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub-এ স্টার"
+  },
+  "suspendThis": {
+    "message": "ট্যাব স্থগিত করুন"
+  },
+  "failedToSuspend": {
+    "message": "এই ট্যাব স্থগিত করা যাচ্ছে না"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$টি ডুপ্লিকেট ট্যাব বন্ধ করা হয়েছে",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "কোনো ডুপ্লিকেট ট্যাব পাওয়া যায়নি"
+  },
+  "suspendWarningText": {
+    "message": "ট্যাব শীঘ্রই স্থগিত হবে..."
+  },
+  "searchTabs": {
+    "message": "ট্যাব অনুসন্ধান করুন"
+  },
+  "closeDuplicatesTitle": {
+    "message": "ডুপ্লিকেট ট্যাব বন্ধ করুন"
   }
 }

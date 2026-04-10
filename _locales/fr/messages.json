@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Étoile sur GitHub"
+  },
+  "suspendThis": {
+    "message": "Suspendre l'onglet"
+  },
+  "failedToSuspend": {
+    "message": "Impossible de suspendre cet onglet"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ onglet(s) en double fermé(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Aucun onglet en double trouvé"
+  },
+  "suspendWarningText": {
+    "message": "Suspension de l'onglet imminente..."
+  },
+  "searchTabs": {
+    "message": "Rechercher des onglets"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Fermer les onglets en double"
   }
 }

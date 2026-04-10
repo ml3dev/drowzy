@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Zvaigznīte GitHub"
+  },
+  "suspendThis": {
+    "message": "Apturēt cilni"
+  },
+  "failedToSuspend": {
+    "message": "Šo cilni nevar apturēt"
+  },
+  "closedDuplicates": {
+    "message": "Aizvērtas $COUNT$ ciļņu duplikāts(-i)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Nav atrasti ciļņu duplikāti"
+  },
+  "suspendWarningText": {
+    "message": "Cilne drīz tiks apturēta..."
+  },
+  "searchTabs": {
+    "message": "Meklēt cilnes"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Aizvērt ciļņu duplikātus"
   }
 }

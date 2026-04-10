@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Gwiazdka na GitHubie"
+  },
+  "suspendThis": {
+    "message": "Uśpij kartę"
+  },
+  "failedToSuspend": {
+    "message": "Nie można uśpić tej karty"
+  },
+  "closedDuplicates": {
+    "message": "Zamknięto $COUNT$ zduplikowanych kart",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Nie znaleziono zduplikowanych kart"
+  },
+  "suspendWarningText": {
+    "message": "Karta zostanie wkrótce uśpiona..."
+  },
+  "searchTabs": {
+    "message": "Szukaj kart"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Zamknij zduplikowane karty"
   }
 }

@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub ላይ ኮከብ"
+  },
+  "suspendThis": {
+    "message": "ታብን አግድ"
+  },
+  "failedToSuspend": {
+    "message": "ይህን ታብ ማገድ አይቻልም"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ ድግግሞሽ ታብ(ዎች) ተዘግተዋል",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "ድግግሞሽ ታቦች አልተገኙም"
+  },
+  "suspendWarningText": {
+    "message": "ታብ በቅርቡ ይገዳል..."
+  },
+  "searchTabs": {
+    "message": "ታቦችን ፈልግ"
+  },
+  "closeDuplicatesTitle": {
+    "message": "ድግግሞሽ ታቦችን ዝጋ"
   }
 }

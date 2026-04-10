@@ -563,6 +563,21 @@ body.popup-ready {
   opacity: 0.55;
 }
 
+.tab-list-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.tab-search {
+  padding: 0 10px 6px;
+}
+
+.tab-search .input {
+  width: 100%;
+  padding: 5px 8px;
+}
+
 .tab-list {
   padding: 0 6px 4px;
 }
@@ -617,6 +632,43 @@ body.popup-ready {
 
 .tab-item.sleeping .tab-title {
   color: var(--color-text-secondary);
+}
+
+.tab-suspend-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  opacity: 0;
+  transition: opacity var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+  outline: none;
+}
+
+.tab-item:hover .tab-suspend-btn {
+  opacity: 1;
+}
+
+.tab-suspend-btn:hover {
+  color: var(--color-accent);
+  background: var(--color-accent-dim);
+}
+
+.tab-suspend-btn:active {
+  transform: scale(0.9);
+}
+
+.tab-suspend-btn:focus-visible {
+  opacity: 1;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
 }
 
 .tab-meta {

@@ -12,6 +12,15 @@ const DEFAULT_SETTINGS = {
   markSuspendedTabs: false
 };
 
+async function injectFormCheck(tabId) {
+  try {
+    await chrome.scripting.executeScript({
+      target: { tabId },
+      files: ['formcheck.js']
+    });
+  } catch {}
+}
+
 const INTERNAL_PROTOCOLS = [
   'chrome:', 'chrome-extension:', 'chrome-search:',
   'about:', 'file:', 'devtools:', 'edge:'
@@ -241,6 +250,9 @@ async function checkAndSuspendTabs() {
       dirty = true;
     }
     if (shouldSuspend(tab, settings, timestamps, now, threshold)) {
+      await injectFormCheck(tab.id);
+      try { await chrome.tabs.sendMessage(tab.id, { action: 'suspendWarning' }); } catch {}
+      await new Promise(r => setTimeout(r, 2500));
       await suspendTab(tab.id);
     }
   }
@@ -267,9 +279,15 @@ function isInternalUrl(url) {
 function isWhitelisted(url, whitelist) {
   if (!url || !whitelist || !whitelist.length) return false;
   try {
-    let hostname = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
+    let parsed = new URL(url);
+    let hostname = parsed.hostname.toLowerCase().replace(/^www\./, '');
+    let fullUrl = (parsed.hostname + parsed.pathname).toLowerCase().replace(/^www\./, '');
     return whitelist.some(d => {
       d = d.toLowerCase().replace(/^www\./, '');
+      if (d.includes('/')) {
+        let pattern = d.replace(/\*/g, '');
+        return fullUrl.startsWith(pattern) || fullUrl === d.replace(/\/?\*?$/, '');
+      }
       return hostname === d || hostname.endsWith('.' + d);
     });
   } catch { return false; }
@@ -282,6 +300,10 @@ async function suspendTab(tabId) {
     if (isInternalUrl(tab.url)) return false;
 
     let settings = await getSettings();
+
+    if (settings.protectForms || settings.markSuspendedTabs) {
+      await injectFormCheck(tabId);
+    }
 
     if (settings.protectForms) {
       try {
@@ -444,16 +466,27 @@ async function saveSession(name) {
     return { success: false, error: t('noSaveableTabs') };
   }
 
+  let groupMap = {};
+  for (let tab of valid) {
+    if (tab.groupId != null && tab.groupId !== -1 && !groupMap[tab.groupId]) {
+      try {
+        let group = await chrome.tabGroups.get(tab.groupId);
+        groupMap[tab.groupId] = { title: group.title || '', color: group.color || 'grey' };
+      } catch { groupMap[tab.groupId] = { title: '', color: 'grey' }; }
+    }
+  }
+
   let session = {
     id: 'session_' + Date.now(),
     name: name || _formatSessionName(),
     createdAt: Date.now(),
+    groups: groupMap,
     tabs: valid.map(t => ({
       url: t.url,
       title: t.title || 'Untitled',
       favIconUrl: t.favIconUrl || '',
       pinned: t.pinned || false,
-      groupId: t.groupId ?? -1
+      groupId: t.groupId != null ? t.groupId : -1
     }))
   };
 
@@ -484,18 +517,21 @@ async function restoreSession(id, mode) {
     return { success: false, error: t('noRestorableTabs') };
   }
 
+  let createdTabs = [];
   if (mode === 'replace') {
     let currentTabs = await chrome.tabs.query({ currentWindow: true });
     try {
       let first = restorable[0];
       let newTab = await chrome.tabs.create({ url: first.url, pinned: first.pinned, active: true });
       await touchTab(newTab.id);
+      createdTabs.push({ tabId: newTab.id, groupId: first.groupId });
       let oldIds = currentTabs.map(t => t.id).filter(id => id !== newTab.id);
       if (oldIds.length) await chrome.tabs.remove(oldIds);
       for (let i = 1; i < restorable.length; i++) {
         try {
           let created = await chrome.tabs.create({ url: restorable[i].url, pinned: restorable[i].pinned, active: false });
           await touchTab(created.id);
+          createdTabs.push({ tabId: created.id, groupId: restorable[i].groupId });
         } catch {}
       }
     } catch (e) {
@@ -506,9 +542,29 @@ async function restoreSession(id, mode) {
       try {
         let created = await chrome.tabs.create({ url: t.url, pinned: t.pinned, active: false });
         await touchTab(created.id);
+        createdTabs.push({ tabId: created.id, groupId: t.groupId });
       } catch {}
     }
   }
+
+  // Reconstruct tab groups
+  if (session.groups) {
+    let oldToNew = {};
+    for (let ct of createdTabs) {
+      if (ct.groupId == null || ct.groupId === -1) continue;
+      try {
+        if (!oldToNew[ct.groupId]) {
+          let newGroupId = await chrome.tabs.group({ tabIds: [ct.tabId] });
+          let gInfo = session.groups[ct.groupId] || {};
+          await chrome.tabGroups.update(newGroupId, { title: gInfo.title || '', color: gInfo.color || 'grey' });
+          oldToNew[ct.groupId] = newGroupId;
+        } else {
+          await chrome.tabs.group({ tabIds: [ct.tabId], groupId: oldToNew[ct.groupId] });
+        }
+      } catch {}
+    }
+  }
+
   return { success: true, count: restorable.length };
 }
 
@@ -616,6 +672,36 @@ async function handleMessage(msg) {
     case 'deleteSession': return await deleteSession(msg.id);
     case 'restoreSession': return await restoreSession(msg.id, msg.mode);
     case 'getStats': return await getStats();
+
+    case 'closeDuplicates': {
+      let tabs = await chrome.tabs.query({ currentWindow: true });
+      let seen = {};
+      let closed = 0;
+      for (let tab of tabs) {
+        if (!tab.url || isInternalUrl(tab.url)) continue;
+        let url = tab.url.replace(/\/$/, '');
+        if (seen[url]) {
+          if (!tab.active) {
+            try { await chrome.tabs.remove(tab.id); closed++; } catch {}
+          }
+        } else {
+          seen[url] = true;
+        }
+      }
+      await updateBadgeNow();
+      return { success: true, closed };
+    }
+
+    case 'suspendCurrentTab': {
+      let [active] = await chrome.tabs.query({ active: true, currentWindow: true });
+      if (!active) return { success: false };
+      let allTabs = await chrome.tabs.query({ windowId: active.windowId });
+      let other = allTabs.find(t => t.id !== active.id && !t.discarded);
+      if (!other) return { success: false, error: 'No other tab to switch to' };
+      await chrome.tabs.update(other.id, { active: true });
+      let result = await suspendTab(active.id);
+      return { success: result };
+    }
 
     default: return { error: 'Unknown action: ' + msg.action };
   }

@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "在 GitHub 上加星"
+  },
+  "suspendThis": {
+    "message": "暫停分頁"
+  },
+  "failedToSuspend": {
+    "message": "無法暫停此分頁"
+  },
+  "closedDuplicates": {
+    "message": "已關閉 $COUNT$ 個重複分頁",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "未找到重複分頁"
+  },
+  "suspendWarningText": {
+    "message": "分頁即將暫停..."
+  },
+  "searchTabs": {
+    "message": "搜尋分頁"
+  },
+  "closeDuplicatesTitle": {
+    "message": "關閉重複分頁"
   }
 }

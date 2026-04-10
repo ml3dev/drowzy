@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "ให้ดาวบน GitHub"
+  },
+  "suspendThis": {
+    "message": "ระงับแท็บ"
+  },
+  "failedToSuspend": {
+    "message": "ไม่สามารถระงับแท็บนี้ได้"
+  },
+  "closedDuplicates": {
+    "message": "ปิดแท็บซ้ำ $COUNT$ แท็บแล้ว",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "ไม่พบแท็บซ้ำ"
+  },
+  "suspendWarningText": {
+    "message": "แท็บจะถูกระงับในไม่ช้า..."
+  },
+  "searchTabs": {
+    "message": "ค้นหาแท็บ"
+  },
+  "closeDuplicatesTitle": {
+    "message": "ปิดแท็บซ้ำ"
   }
 }

@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Stella su GitHub"
+  },
+  "suspendThis": {
+    "message": "Sospendi scheda"
+  },
+  "failedToSuspend": {
+    "message": "Impossibile sospendere questa scheda"
+  },
+  "closedDuplicates": {
+    "message": "Chiuse $COUNT$ schede duplicate",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Nessuna scheda duplicata trovata"
+  },
+  "suspendWarningText": {
+    "message": "La scheda verrà sospesa a breve..."
+  },
+  "searchTabs": {
+    "message": "Cerca schede"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Chiudi schede duplicate"
   }
 }

@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub ରେ ଷ୍ଟାର୍"
+  },
+  "suspendThis": {
+    "message": "ଟ୍ୟାବ୍ ସ୍ଥଗିତ କରନ୍ତୁ"
+  },
+  "failedToSuspend": {
+    "message": "ଏହି ଟ୍ୟାବ୍ ସ୍ଥଗିତ କରାଯାଇ ପାରିବ ନାହିଁ"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ ଡୁପ୍ଲିକେଟ ଟ୍ୟାବ୍ ବନ୍ଦ ହେଲା",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "କୌଣସି ଡୁପ୍ଲିକେଟ ଟ୍ୟାବ୍ ମିଳିଲା ନାହିଁ"
+  },
+  "suspendWarningText": {
+    "message": "ଟ୍ୟାବ୍ ଶୀଘ୍ର ସ୍ଥଗିତ ହେବ..."
+  },
+  "searchTabs": {
+    "message": "ଟ୍ୟାବ୍ ଖୋଜନ୍ତୁ"
+  },
+  "closeDuplicatesTitle": {
+    "message": "ଡୁପ୍ଲିକେଟ ଟ୍ୟାବ୍ ବନ୍ଦ କରନ୍ତୁ"
   }
 }

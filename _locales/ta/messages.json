@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub-இல் நட்சத்திரம்"
+  },
+  "suspendThis": {
+    "message": "தாவலை இடைநிறுத்து"
+  },
+  "failedToSuspend": {
+    "message": "இந்த தாவலை இடைநிறுத்த முடியவில்லை"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ நகல் தாவல்(கள்) மூடப்பட்டன",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "நகல் தாவல்கள் கிடைக்கவில்லை"
+  },
+  "suspendWarningText": {
+    "message": "தாவல் விரைவில் இடைநிறுத்தப்படும்..."
+  },
+  "searchTabs": {
+    "message": "தாவல்களைத் தேடு"
+  },
+  "closeDuplicatesTitle": {
+    "message": "நகல் தாவல்களை மூடு"
   }
 }

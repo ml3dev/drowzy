@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Stjerne på GitHub"
+  },
+  "suspendThis": {
+    "message": "Suspendér fane"
+  },
+  "failedToSuspend": {
+    "message": "Kan ikke suspendere denne fane"
+  },
+  "closedDuplicates": {
+    "message": "Lukkede $COUNT$ duplikerede fane(r)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Ingen duplikerede faner fundet"
+  },
+  "suspendWarningText": {
+    "message": "Fanen suspenderes snart..."
+  },
+  "searchTabs": {
+    "message": "Søg i faner"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Luk duplikerede faner"
   }
 }

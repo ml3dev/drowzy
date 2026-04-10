@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "在 GitHub 上加星"
+  },
+  "suspendThis": {
+    "message": "休眠标签页"
+  },
+  "failedToSuspend": {
+    "message": "无法休眠此标签页"
+  },
+  "closedDuplicates": {
+    "message": "已关闭 $COUNT$ 个重复标签页",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "未找到重复标签页"
+  },
+  "suspendWarningText": {
+    "message": "标签页即将休眠..."
+  },
+  "searchTabs": {
+    "message": "搜索标签页"
+  },
+  "closeDuplicatesTitle": {
+    "message": "关闭重复标签页"
   }
 }

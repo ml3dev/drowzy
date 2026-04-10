@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "نجمة على GitHub"
+  },
+  "suspendThis": {
+    "message": "تعليق علامة التبويب"
+  },
+  "failedToSuspend": {
+    "message": "لا يمكن تعليق علامة التبويب هذه"
+  },
+  "closedDuplicates": {
+    "message": "تم إغلاق $COUNT$ علامة(ات) تبويب مكررة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "لم يتم العثور على علامات تبويب مكررة"
+  },
+  "suspendWarningText": {
+    "message": "سيتم تعليق علامة التبويب قريبًا..."
+  },
+  "searchTabs": {
+    "message": "البحث في علامات التبويب"
+  },
+  "closeDuplicatesTitle": {
+    "message": "إغلاق علامات التبويب المكررة"
   }
 }

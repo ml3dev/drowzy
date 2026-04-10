@@ -41,6 +41,10 @@
         <span class="btn-icon" data-icon="pauseCircle"></span>
         <span class="btn-text" data-i18n="suspendOthers">Suspend Others</span>
       </button>
+      <button class="btn" id="btnSuspendThis">
+        <span class="btn-icon" data-icon="pause"></span>
+        <span class="btn-text" data-i18n="suspendThis">Suspend Tab</span>
+      </button>
       <button class="btn" id="btnWakeAll">
         <span class="btn-icon" data-icon="playCircle"></span>
         <span class="btn-text" data-i18n="wakeAll">Wake All</span>
@@ -81,9 +85,20 @@
 
       <div class="tab-list-header">
         <span class="section-label" data-i18n="tabsInWindow">Tabs in this window</span>
-        <button class="btn-icon-only" id="btnExportTabs" data-i18n-title="copyTabsTitle" title="Copy tab list to clipboard">
-          <span data-icon="clipboard"></span>
-        </button>
+        <div class="tab-list-header-actions">
+          <button class="btn-icon-only" id="btnCloseDuplicates" data-i18n-title="closeDuplicatesTitle" title="Close duplicate tabs">
+            <span data-icon="copy"></span>
+          </button>
+          <button class="btn-icon-only" id="btnSearchToggle" data-i18n-title="searchTabs" title="Search tabs">
+            <span data-icon="search"></span>
+          </button>
+          <button class="btn-icon-only" id="btnExportTabs" data-i18n-title="copyTabsTitle" title="Copy tab list to clipboard">
+            <span data-icon="clipboard"></span>
+          </button>
+        </div>
+      </div>
+      <div class="tab-search" id="tabSearchWrap" style="display:none;">
+        <input type="text" id="tabSearchInput" class="input" placeholder="Search tabs...">
       </div>
       <div class="tab-list" id="tabList">
         <div class="tab-list-empty" data-i18n="loadingTabs">Loading tabs...</div>
@@ -200,7 +215,7 @@
               <div class="setting-row setting-row-block">
                 <label data-i18n="whitelistedSites">Whitelisted sites</label>
                 <div class="whitelist-add">
-                  <input type="text" id="whitelistInput" placeholder="example.com" class="input">
+                  <input type="text" id="whitelistInput" placeholder="example.com or site.com/path/*" class="input">
                   <button class="btn btn-sm" id="btnAddWhitelist">
                     <span data-icon="plus"></span>
                     <span data-i18n="add">Add</span>
@@ -219,7 +234,7 @@
                 </div>
               </div>
               <div class="setting-row">
-                <a class="settings-link" id="btnWhatsNew" href="#" data-i18n="whatsNew">What's new in v1.1.0</a>
+                <a class="settings-link" id="btnWhatsNew" href="#" data-i18n="whatsNew">What's new in v1.2.0</a>
               </div>
 
             </div>
@@ -228,7 +243,7 @@
       </div>
 
       <div class="popup-footer">
-        <span>Drowzy v1.1.0</span>
+        <span>Drowzy v1.2.0</span>
       </div>
     </div>
   </div>

@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub ನಲ್ಲಿ ನಕ್ಷತ್ರ"
+  },
+  "suspendThis": {
+    "message": "ಟ್ಯಾಬ್ ಅಮಾನತುಗೊಳಿಸಿ"
+  },
+  "failedToSuspend": {
+    "message": "ಈ ಟ್ಯಾಬ್ ಅನ್ನು ಅಮಾನತುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ ನಕಲಿ ಟ್ಯಾಬ್(ಗಳನ್ನು) ಮುಚ್ಚಲಾಗಿದೆ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "ನಕಲಿ ಟ್ಯಾಬ್‌ಗಳು ಕಂಡುಬಂದಿಲ್ಲ"
+  },
+  "suspendWarningText": {
+    "message": "ಟ್ಯಾಬ್ ಶೀಘ್ರದಲ್ಲೇ ಅಮಾನತುಗೊಳ್ಳುತ್ತದೆ..."
+  },
+  "searchTabs": {
+    "message": "ಟ್ಯಾಬ್‌ಗಳನ್ನು ಹುಡುಕಿ"
+  },
+  "closeDuplicatesTitle": {
+    "message": "ನಕಲಿ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಮುಚ್ಚಿ"
   }
 }

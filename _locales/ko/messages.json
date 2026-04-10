@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub에서 스타"
+  },
+  "suspendThis": {
+    "message": "탭 일시중지"
+  },
+  "failedToSuspend": {
+    "message": "이 탭을 일시중지할 수 없습니다"
+  },
+  "closedDuplicates": {
+    "message": "중복 탭 $COUNT$개를 닫았습니다",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "중복 탭을 찾을 수 없습니다"
+  },
+  "suspendWarningText": {
+    "message": "곳 탭을 일시중지합니다..."
+  },
+  "searchTabs": {
+    "message": "탭 검색"
+  },
+  "closeDuplicatesTitle": {
+    "message": "중복 탭 닫기"
   }
 }

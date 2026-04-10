@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Зірка на GitHub"
+  },
+  "suspendThis": {
+    "message": "Призупинити вкладку"
+  },
+  "failedToSuspend": {
+    "message": "Неможливо призупинити цю вкладку"
+  },
+  "closedDuplicates": {
+    "message": "Закрито $COUNT$ дублікатів вкладок",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Дублікати вкладок не знайдено"
+  },
+  "suspendWarningText": {
+    "message": "Вкладку буде незабаром призупинено..."
+  },
+  "searchTabs": {
+    "message": "Пошук вкладок"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Закрити дублікати вкладок"
   }
 }

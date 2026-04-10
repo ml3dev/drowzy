@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "GitHub లో స్టార్"
+  },
+  "suspendThis": {
+    "message": "ట్యాబ్‌ని నిలిపివేయండి"
+  },
+  "failedToSuspend": {
+    "message": "ఈ ట్యాబ్‌ని నిలిపివేయలేరు"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ నకిలీ ట్యాబ్(లు) మూసివేయబడ్డాయి",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "నకిలీ ట్యాబ్‌లు కనుగొనబడలేదు"
+  },
+  "suspendWarningText": {
+    "message": "ట్యాబ్ త్వరలో నిలిపివేయబడుతుంది..."
+  },
+  "searchTabs": {
+    "message": "ట్యాబ్‌లను వెతకండి"
+  },
+  "closeDuplicatesTitle": {
+    "message": "నకిలీ ట్యాబ్‌లను మూసివేయండి"
   }
 }

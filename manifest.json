@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extName__",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "__MSG_extDescription__",
   "default_locale": "en",
-  "permissions": ["tabs", "storage", "alarms", "contextMenus"],
+  "permissions": ["tabs", "storage", "alarms", "contextMenus", "tabGroups", "scripting"],
   "background": {
     "service_worker": "background.js"
   },
@@ -36,10 +36,8 @@
       "description": "__MSG_commandWakeAll__"
     }
   },
-  "content_scripts": [{
-    "matches": ["http://*/*", "https://*/*"],
-    "js": ["formcheck.js"],
-    "run_at": "document_idle"
-  }],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
   "minimum_chrome_version": "120"
 }

@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Estrella en GitHub"
+  },
+  "suspendThis": {
+    "message": "Suspender pestaña"
+  },
+  "failedToSuspend": {
+    "message": "No se puede suspender esta pestaña"
+  },
+  "closedDuplicates": {
+    "message": "Se cerraron $COUNT$ pestaña(s) duplicada(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "No se encontraron pestañas duplicadas"
+  },
+  "suspendWarningText": {
+    "message": "La pestaña se suspenderá pronto..."
+  },
+  "searchTabs": {
+    "message": "Buscar pestañas"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Cerrar pestañas duplicadas"
   }
 }

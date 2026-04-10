@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Zvezdica na GitHubu"
+  },
+  "suspendThis": {
+    "message": "Ustavi zavihek"
+  },
+  "failedToSuspend": {
+    "message": "Tega zavihka ni mogoče ustaviti"
+  },
+  "closedDuplicates": {
+    "message": "Zaprtih $COUNT$ podvojenih zavihkov",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Podvojeni zavihki niso bili najdeni"
+  },
+  "suspendWarningText": {
+    "message": "Zavihek bo kmalu ustavljen..."
+  },
+  "searchTabs": {
+    "message": "Iskanje zavihkov"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Zapri podvojene zavihke"
   }
 }

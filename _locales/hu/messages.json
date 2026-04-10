@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Csillag a GitHubon"
+  },
+  "suspendThis": {
+    "message": "Lap fülfüggesztése"
+  },
+  "failedToSuspend": {
+    "message": "Ez a lap nem függesztőhető fel"
+  },
+  "closedDuplicates": {
+    "message": "$COUNT$ duplikált lap bezárva",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Nem találhatók duplikált lapok"
+  },
+  "suspendWarningText": {
+    "message": "A lap hamarosan fülfüggesztésre kerül..."
+  },
+  "searchTabs": {
+    "message": "Lapok keresése"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Duplikált lapok bezárása"
   }
 }

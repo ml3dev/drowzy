@@ -9,8 +9,22 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
       document.title = prefix + document.title;
     }
     sendResponse({ success: true });
+  } else if (msg.action === 'suspendWarning') {
+    showSuspendWarning();
+    sendResponse({ success: true });
   }
 });
+
+function showSuspendWarning() {
+  if (document.getElementById('drowzy-suspend-warning')) return;
+  var el = document.createElement('div');
+  el.id = 'drowzy-suspend-warning';
+  el.textContent = chrome.i18n.getMessage('suspendWarningText') || 'Suspending tab soon...';
+  el.style.cssText = 'position:fixed;top:0;left:0;right:0;padding:6px 12px;background:rgba(167,139,250,0.95);color:#fff;font:13px -apple-system,system-ui,sans-serif;text-align:center;z-index:2147483647;transition:opacity 0.3s;';
+  document.body.appendChild(el);
+  setTimeout(function() { el.style.opacity = '0'; }, 2000);
+  setTimeout(function() { if (el.parentNode) el.remove(); }, 2500);
+}
 
 function hasUnsavedFormData() {
   var fields = document.querySelectorAll(

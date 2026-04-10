@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Звездица на GitHub-у"
+  },
+  "suspendThis": {
+    "message": "Суспендуј картицу"
+  },
+  "failedToSuspend": {
+    "message": "Ова картица не може бити суспендована"
+  },
+  "closedDuplicates": {
+    "message": "Затворено $COUNT$ дупликат картица",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Нису пронађене дупликат картице"
+  },
+  "suspendWarningText": {
+    "message": "Картица ће ускоро бити суспендована..."
+  },
+  "searchTabs": {
+    "message": "Претражи картице"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Затвори дупликат картице"
   }
 }

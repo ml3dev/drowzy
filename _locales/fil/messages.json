@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Star sa GitHub"
+  },
+  "suspendThis": {
+    "message": "I-suspend ang tab"
+  },
+  "failedToSuspend": {
+    "message": "Hindi ma-suspend ang tab na ito"
+  },
+  "closedDuplicates": {
+    "message": "Isinara ang $COUNT$ duplicate na tab",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Walang nahanap na duplicate na tab"
+  },
+  "suspendWarningText": {
+    "message": "Malapit nang i-suspend ang tab..."
+  },
+  "searchTabs": {
+    "message": "Maghanap ng mga tab"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Isara ang mga duplicate na tab"
   }
 }

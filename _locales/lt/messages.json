@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Žvaigždutė GitHub"
+  },
+  "suspendThis": {
+    "message": "Sustabdyti skirtuką"
+  },
+  "failedToSuspend": {
+    "message": "Nepavyko sustabdyti šio skirtuko"
+  },
+  "closedDuplicates": {
+    "message": "Uždaryta $COUNT$ pasikartojančių skirtukų",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Pasikartojančių skirtukų nerasta"
+  },
+  "suspendWarningText": {
+    "message": "Skirtukas netrukus bus sustabdytas..."
+  },
+  "searchTabs": {
+    "message": "Ieškoti skirtukų"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Uždaryti pasikartojančius skirtukus"
   }
 }

@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Estrela no GitHub"
+  },
+  "suspendThis": {
+    "message": "Suspender aba"
+  },
+  "failedToSuspend": {
+    "message": "Não é possível suspender esta aba"
+  },
+  "closedDuplicates": {
+    "message": "Fechadas $COUNT$ aba(s) duplicada(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Nenhuma aba duplicada encontrada"
+  },
+  "suspendWarningText": {
+    "message": "Aba será suspensa em breve..."
+  },
+  "searchTabs": {
+    "message": "Pesquisar abas"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Fechar abas duplicadas"
   }
 }

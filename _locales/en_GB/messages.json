@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Star on GitHub"
+  },
+  "suspendThis": {
+    "message": "Suspend Tab"
+  },
+  "failedToSuspend": {
+    "message": "Cannot suspend this tab"
+  },
+  "closedDuplicates": {
+    "message": "Closed $COUNT$ duplicate tab(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "No duplicate tabs found"
+  },
+  "suspendWarningText": {
+    "message": "Suspending tab soon..."
+  },
+  "searchTabs": {
+    "message": "Search tabs"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Close duplicate tabs"
   }
 }

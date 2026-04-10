@@ -220,5 +220,16 @@
   "changelogAnimationsDesc": { "message": "Tab list stagger animations are now capped so windows with many tabs don\u0027t have a long cascade delay." },
   "changelogCtaText": { "message": "Drowzy is free and open source. If it\u0027s saving you memory, consider leaving a quick review or starring us on GitHub." },
   "changelogReviewBtn": { "message": "Leave a Review" },
-  "changelogStarBtn": { "message": "Star on GitHub" }
+  "changelogStarBtn": { "message": "Star on GitHub" },
+
+  "suspendThis": { "message": "Suspend Tab" },
+  "failedToSuspend": { "message": "Cannot suspend this tab" },
+  "closedDuplicates": {
+    "message": "Closed $COUNT$ duplicate tab(s)",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "noDuplicates": { "message": "No duplicate tabs found" },
+  "suspendWarningText": { "message": "Suspending tab soon..." },
+  "searchTabs": { "message": "Search tabs" },
+  "closeDuplicatesTitle": { "message": "Close duplicate tabs" }
 }

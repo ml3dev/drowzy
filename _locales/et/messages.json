@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Täht GitHubis"
+  },
+  "suspendThis": {
+    "message": "Peata vahekaart"
+  },
+  "failedToSuspend": {
+    "message": "Seda vahekaarti ei saa peatada"
+  },
+  "closedDuplicates": {
+    "message": "Suleti $COUNT$ duplikaat-vahekaarti",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Duplikaat-vahekaarte ei leitud"
+  },
+  "suspendWarningText": {
+    "message": "Vahekaart peatatakse varsti..."
+  },
+  "searchTabs": {
+    "message": "Otsi vahekaarte"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Sulge duplikaat-vahekaardid"
   }
 }

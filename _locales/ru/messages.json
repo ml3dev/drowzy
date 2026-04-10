@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "Звезда на GitHub"
+  },
+  "suspendThis": {
+    "message": "Приостановить вкладку"
+  },
+  "failedToSuspend": {
+    "message": "Невозможно приостановить эту вкладку"
+  },
+  "closedDuplicates": {
+    "message": "Закрыто $COUNT$ дублирующихся вкладок",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "Дублирующиеся вкладки не найдены"
+  },
+  "suspendWarningText": {
+    "message": "Вкладка скоро будет приостановлена..."
+  },
+  "searchTabs": {
+    "message": "Поиск вкладок"
+  },
+  "closeDuplicatesTitle": {
+    "message": "Закрыть дублирующиеся вкладки"
   }
 }

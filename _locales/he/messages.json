@@ -531,5 +531,31 @@
   },
   "changelogStarBtn": {
     "message": "כוכב ב-GitHub"
+  },
+  "suspendThis": {
+    "message": "השהה כרטיסייה"
+  },
+  "failedToSuspend": {
+    "message": "לא ניתן להשהות כרטיסייה זו"
+  },
+  "closedDuplicates": {
+    "message": "נסגרו $COUNT$ כרטיסיות כפולות",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noDuplicates": {
+    "message": "לא נמצאו כרטיסיות כפולות"
+  },
+  "suspendWarningText": {
+    "message": "הכרטיסייה תושהה בקרוב..."
+  },
+  "searchTabs": {
+    "message": "חיפוש כרטיסיות"
+  },
+  "closeDuplicatesTitle": {
+    "message": "סגירת כרטיסיות כפולות"
   }
 }
