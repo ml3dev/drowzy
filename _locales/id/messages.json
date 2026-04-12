@@ -443,16 +443,13 @@
     "message": "Tidak juga"
   },
   "whatsNew": {
-    "message": "Yang baru di v1.1.0"
+    "message": "Yang baru di v1.2.1"
   },
   "changelogTitle": {
     "message": "Yang Baru di Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Yang Baru"
-  },
-  "changelogVersion": {
-    "message": "Versi 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Fitur Baru"

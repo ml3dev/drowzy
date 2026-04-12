@@ -443,16 +443,13 @@
     "message": "Niet echt"
   },
   "whatsNew": {
-    "message": "Nieuw in v1.1.0"
+    "message": "Nieuw in v1.2.1"
   },
   "changelogTitle": {
     "message": "Nieuw in Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nieuw"
-  },
-  "changelogVersion": {
-    "message": "Versie 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Nieuwe functies"

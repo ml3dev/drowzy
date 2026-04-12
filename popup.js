@@ -454,25 +454,6 @@ function attachListeners() {
     }, 400);
   });
 
-  document.getElementById('btnSuspendThis').addEventListener('click', async function() {
-    var text = this.querySelector('.btn-text');
-    text.textContent = t('suspending');
-    this.disabled = true;
-    var res = await msg({ action: 'suspendCurrentTab' });
-    if (res && res.success) {
-      text.textContent = t('done');
-    } else {
-      text.textContent = t('suspendThis');
-      showToast(t('failedToSuspend'));
-    }
-    var btn = this;
-    setTimeout(async function() {
-      text.textContent = t('suspendThis');
-      btn.disabled = false;
-      await loadAll();
-    }, 400);
-  });
-
   document.getElementById('btnWakeAll').addEventListener('click', async function() {
     var text = this.querySelector('.btn-text');
     text.textContent = t('waking');

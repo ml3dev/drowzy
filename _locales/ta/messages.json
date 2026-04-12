@@ -443,16 +443,13 @@
     "message": "அவ்வளவாக இல்லை"
   },
   "whatsNew": {
-    "message": "v1.1.0 இல் புதியவை"
+    "message": "v1.2.1 இல் புதியவை"
   },
   "changelogTitle": {
     "message": "Drowzy இல் புதியவை"
   },
   "changelogWhatsNew": {
     "message": "புதியவை"
-  },
-  "changelogVersion": {
-    "message": "பதிப்பு 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "புதிய அம்சங்கள்"

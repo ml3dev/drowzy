@@ -443,16 +443,13 @@
     "message": "Ne ravno"
   },
   "whatsNew": {
-    "message": "Kaj je novega v v1.1.0"
+    "message": "Kaj je novega v v1.2.1"
   },
   "changelogTitle": {
     "message": "Kaj je novega v Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Kaj je novega"
-  },
-  "changelogVersion": {
-    "message": "Različica 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Nove funkcije"

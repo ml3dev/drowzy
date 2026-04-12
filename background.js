@@ -692,17 +692,6 @@ async function handleMessage(msg) {
       return { success: true, closed };
     }
 
-    case 'suspendCurrentTab': {
-      let [active] = await chrome.tabs.query({ active: true, currentWindow: true });
-      if (!active) return { success: false };
-      let allTabs = await chrome.tabs.query({ windowId: active.windowId });
-      let other = allTabs.find(t => t.id !== active.id && !t.discarded);
-      if (!other) return { success: false, error: 'No other tab to switch to' };
-      await chrome.tabs.update(other.id, { active: true });
-      let result = await suspendTab(active.id);
-      return { success: result };
-    }
-
     default: return { error: 'Unknown action: ' + msg.action };
   }
 }

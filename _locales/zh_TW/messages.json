@@ -443,16 +443,13 @@
     "message": "不太滿意"
   },
   "whatsNew": {
-    "message": "v1.1.0 新功能"
+    "message": "v1.2.1 新功能"
   },
   "changelogTitle": {
     "message": "Drowzy 新變化"
   },
   "changelogWhatsNew": {
     "message": "新變化"
-  },
-  "changelogVersion": {
-    "message": "版本 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "新功能"

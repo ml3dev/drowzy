@@ -443,16 +443,13 @@
     "message": "Không hẳn"
   },
   "whatsNew": {
-    "message": "Có gì mới trong v1.1.0"
+    "message": "Có gì mới trong v1.2.1"
   },
   "changelogTitle": {
     "message": "Có gì mới trong Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Có gì mới"
-  },
-  "changelogVersion": {
-    "message": "Phiên bản 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Tính năng mới"

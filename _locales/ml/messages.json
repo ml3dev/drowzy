@@ -443,16 +443,13 @@
     "message": "അത്ര ഇല്ല"
   },
   "whatsNew": {
-    "message": "v1.1.0-ൽ പുതിയത്"
+    "message": "v1.2.1-ൽ പുതിയത്"
   },
   "changelogTitle": {
     "message": "Drowzy-ൽ പുതിയത്"
   },
   "changelogWhatsNew": {
     "message": "പുതിയത്"
-  },
-  "changelogVersion": {
-    "message": "പതിപ്പ് 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "പുതിയ ഫീച്ചറുകൾ"

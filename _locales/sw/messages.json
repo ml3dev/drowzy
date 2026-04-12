@@ -443,16 +443,13 @@
     "message": "Si sana"
   },
   "whatsNew": {
-    "message": "Nini kipya katika v1.1.0"
+    "message": "Nini kipya katika v1.2.1"
   },
   "changelogTitle": {
     "message": "Nini Kipya katika Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nini Kipya"
-  },
-  "changelogVersion": {
-    "message": "Toleo 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Vipengele Vipya"

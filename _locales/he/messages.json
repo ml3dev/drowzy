@@ -443,16 +443,13 @@
     "message": "לא ממש"
   },
   "whatsNew": {
-    "message": "מה חדש ב-v1.1.0"
+    "message": "מה חדש ב-v1.2.1"
   },
   "changelogTitle": {
     "message": "מה חדש ב-Drowzy"
   },
   "changelogWhatsNew": {
     "message": "מה חדש"
-  },
-  "changelogVersion": {
-    "message": "גרסה 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "תכונות חדשות"

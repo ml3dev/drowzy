@@ -443,16 +443,13 @@
     "message": "Не очень"
   },
   "whatsNew": {
-    "message": "Что нового в v1.1.0"
+    "message": "Что нового в v1.2.1"
   },
   "changelogTitle": {
     "message": "Что нового в Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Что нового"
-  },
-  "changelogVersion": {
-    "message": "Версия 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Новые функции"

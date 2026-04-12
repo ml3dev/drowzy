@@ -443,16 +443,13 @@
     "message": "Hindi naman"
   },
   "whatsNew": {
-    "message": "Ano ang bago sa v1.1.0"
+    "message": "Ano ang bago sa v1.2.1"
   },
   "changelogTitle": {
     "message": "Ano ang Bago sa Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Ano ang Bago"
-  },
-  "changelogVersion": {
-    "message": "Bersyon 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Mga Bagong Feature"

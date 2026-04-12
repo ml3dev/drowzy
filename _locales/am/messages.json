@@ -443,16 +443,13 @@
     "message": "ብዙም አይደለም"
   },
   "whatsNew": {
-    "message": "በ v1.1.0 ውስጥ አዲስ"
+    "message": "በ v1.2.1 ውስጥ አዲስ"
   },
   "changelogTitle": {
     "message": "Drowzy ውስጥ አዲስ ነገር"
   },
   "changelogWhatsNew": {
     "message": "አዲስ ነገር"
-  },
-  "changelogVersion": {
-    "message": "ስሪት 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "አዲስ ባህሪያት"

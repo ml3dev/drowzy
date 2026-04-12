@@ -443,16 +443,13 @@
     "message": "Ne moc"
   },
   "whatsNew": {
-    "message": "Co je nového ve v1.1.0"
+    "message": "Co je nového ve v1.2.1"
   },
   "changelogTitle": {
     "message": "Co je nového v Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Co je nového"
-  },
-  "changelogVersion": {
-    "message": "Verze 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Nové funkce"

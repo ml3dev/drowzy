@@ -76,13 +76,6 @@
   <h2 data-i18n="privacyContactTitle">Contact</h2>
   <p data-i18n="privacyContactText">Questions? Reach out at drowzyextension@gmail.com</p>
 
-  <script>
-    document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      var msg = chrome.i18n.getMessage(el.getAttribute('data-i18n'));
-      if (msg) el.textContent = msg;
-    });
-    var title = chrome.i18n.getMessage('privacyTitle');
-    if (title) document.getElementById('pageTitle').textContent = title;
-  </script>
+  <script src="privacy-policy.js"></script>
 </body>
 </html>

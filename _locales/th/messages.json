@@ -443,16 +443,13 @@
     "message": "ไม่เชิง"
   },
   "whatsNew": {
-    "message": "มีอะไรใหม่ใน v1.1.0"
+    "message": "มีอะไรใหม่ใน v1.2.1"
   },
   "changelogTitle": {
     "message": "มีอะไรใหม่ใน Drowzy"
   },
   "changelogWhatsNew": {
     "message": "มีอะไรใหม่"
-  },
-  "changelogVersion": {
-    "message": "เวอร์ชัน 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "ฟีเจอร์ใหม่"

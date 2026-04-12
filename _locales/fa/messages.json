@@ -443,16 +443,13 @@
     "message": "نه واقعاً"
   },
   "whatsNew": {
-    "message": "تازه‌ها در v1.1.0"
+    "message": "تازه‌ها در v1.2.1"
   },
   "changelogTitle": {
     "message": "تازه‌های Drowzy"
   },
   "changelogWhatsNew": {
     "message": "تازه‌ها"
-  },
-  "changelogVersion": {
-    "message": "نسخه 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "ویژگی‌های جدید"

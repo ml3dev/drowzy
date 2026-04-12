@@ -443,16 +443,13 @@
     "message": "Όχι ιδιαίτερα"
   },
   "whatsNew": {
-    "message": "Τι νέο στη v1.1.0"
+    "message": "Τι νέο στη v1.2.1"
   },
   "changelogTitle": {
     "message": "Τι νέο στο Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Τι νέο"
-  },
-  "changelogVersion": {
-    "message": "Έκδοση 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Νέα χαρακτηριστικά"

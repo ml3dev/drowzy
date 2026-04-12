@@ -443,16 +443,13 @@
     "message": "No gaire"
   },
   "whatsNew": {
-    "message": "Novetats a la v1.1.0"
+    "message": "Novetats a la v1.2.1"
   },
   "changelogTitle": {
     "message": "Novetats de Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Novetats"
-  },
-  "changelogVersion": {
-    "message": "Versió 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Noves funcionalitats"

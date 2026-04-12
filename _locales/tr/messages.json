@@ -443,16 +443,13 @@
     "message": "Pek değil"
   },
   "whatsNew": {
-    "message": "v1.1.0'daki yenilikler"
+    "message": "v1.2.1'daki yenilikler"
   },
   "changelogTitle": {
     "message": "Drowzy'daki Yenilikler"
   },
   "changelogWhatsNew": {
     "message": "Yenilikler"
-  },
-  "changelogVersion": {
-    "message": "Sürüm 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Yeni Özellikler"

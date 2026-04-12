@@ -443,16 +443,13 @@
     "message": "नहीं"
   },
   "whatsNew": {
-    "message": "v1.1.0 में नया"
+    "message": "v1.2.1 में नया"
   },
   "changelogTitle": {
     "message": "Drowzy में नया"
   },
   "changelogWhatsNew": {
     "message": "नया क्या है"
-  },
-  "changelogVersion": {
-    "message": "संस्करण 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "नई सुविधाएँ"

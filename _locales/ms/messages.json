@@ -443,16 +443,13 @@
     "message": "Tidak juga"
   },
   "whatsNew": {
-    "message": "Apa yang baharu dalam v1.1.0"
+    "message": "Apa yang baharu dalam v1.2.1"
   },
   "changelogTitle": {
     "message": "Apa yang Baharu di Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Apa yang Baharu"
-  },
-  "changelogVersion": {
-    "message": "Versi 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Ciri Baharu"

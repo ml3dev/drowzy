@@ -443,16 +443,13 @@
     "message": "Ne visai"
   },
   "whatsNew": {
-    "message": "Kas naujo v1.1.0"
+    "message": "Kas naujo v1.2.1"
   },
   "changelogTitle": {
     "message": "Kas naujo Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Kas naujo"
-  },
-  "changelogVersion": {
-    "message": "Versija 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Naujos funkcijos"

@@ -443,16 +443,13 @@
     "message": "Nu prea"
   },
   "whatsNew": {
-    "message": "Ce e nou în v1.1.0"
+    "message": "Ce e nou în v1.2.1"
   },
   "changelogTitle": {
     "message": "Ce e nou în Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Ce e nou"
-  },
-  "changelogVersion": {
-    "message": "Versiunea 1.1.0"
   },
   "changelogNewFeatures": {
     "message": "Funcții noi"
