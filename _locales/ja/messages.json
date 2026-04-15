@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "オーディオ"
   },
-  "badgeStarred": {
-    "message": "スター付き"
-  },
   "badgeProtected": {
     "message": "保護中"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – プライバシーポリシー"
   },
   "privacyUpdated": {
-    "message": "最終更新日：2026年2月"
+    "message": "最終更新日：2026年4月"
   },
   "privacyShortTitle": {
     "message": "要約"
@@ -443,7 +440,7 @@
     "message": "いいえ"
   },
   "whatsNew": {
-    "message": "v1.2.1の新機能"
+    "message": "v1.3.0の新機能"
   },
   "changelogTitle": {
     "message": "Drowzyの新機能"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "重複タブを閉じる"
+  },
+  "tabUntitled": {
+    "message": "無題"
+  },
+  "badgeWhitelisted": {
+    "message": "ホワイトリスト"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "まもなく"
+  },
+  "confirm": {
+    "message": "本当に？"
   }
 }

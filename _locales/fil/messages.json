@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "Audio"
   },
-  "badgeStarred": {
-    "message": "May bituin"
-  },
   "badgeProtected": {
     "message": "Protektado"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – Patakaran sa Privacy"
   },
   "privacyUpdated": {
-    "message": "Huling na-update: Pebrero 2026"
+    "message": "Huling na-update: Abril 2026"
   },
   "privacyShortTitle": {
     "message": "Ang maikling bersyon"
@@ -443,7 +440,7 @@
     "message": "Hindi naman"
   },
   "whatsNew": {
-    "message": "Ano ang bago sa v1.2.1"
+    "message": "Ano ang bago sa v1.3.0"
   },
   "changelogTitle": {
     "message": "Ano ang Bago sa Drowzy"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "Isara ang mga duplicate na tab"
+  },
+  "tabUntitled": {
+    "message": "Walang pamagat"
+  },
+  "badgeWhitelisted": {
+    "message": "Nasa whitelist"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "malapit na"
+  },
+  "confirm": {
+    "message": "Sigurado?"
   }
 }

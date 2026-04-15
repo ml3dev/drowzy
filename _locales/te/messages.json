@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "ఆడియో"
   },
-  "badgeStarred": {
-    "message": "నక్షత్రం గుర్తు"
-  },
   "badgeProtected": {
     "message": "రక్షించబడింది"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – గోప్యతా విధానం"
   },
   "privacyUpdated": {
-    "message": "చివరిగా నవీకరించబడింది: ఫిబ్రవరి 2026"
+    "message": "చివరిగా నవీకరించబడింది: ఏప్రిల్ 2026"
   },
   "privacyShortTitle": {
     "message": "సంక్షిప్త వెర్షన్"
@@ -443,7 +440,7 @@
     "message": "అంతగా కాదు"
   },
   "whatsNew": {
-    "message": "v1.2.1 లో కొత్తవి"
+    "message": "v1.3.0 లో కొత్తవి"
   },
   "changelogTitle": {
     "message": "Drowzy లో కొత్తవి"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "నకిలీ ట్యాబ్‌లను మూసివేయండి"
+  },
+  "tabUntitled": {
+    "message": "శీర్షిక లేదు"
+  },
+  "badgeWhitelisted": {
+    "message": "అనుమతి జాబితాలో"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "త్వరలో"
+  },
+  "confirm": {
+    "message": "ఖచ్చితమా?"
   }
 }

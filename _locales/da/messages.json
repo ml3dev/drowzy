@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "Lyd"
   },
-  "badgeStarred": {
-    "message": "Stjernemarkeret"
-  },
   "badgeProtected": {
     "message": "Beskyttet"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – Privatlivspolitik"
   },
   "privacyUpdated": {
-    "message": "Sidst opdateret: februar 2026"
+    "message": "Sidst opdateret: april 2026"
   },
   "privacyShortTitle": {
     "message": "Den korte version"
@@ -443,7 +440,7 @@
     "message": "Ikke rigtig"
   },
   "whatsNew": {
-    "message": "Nyheder i v1.2.1"
+    "message": "Nyheder i v1.3.0"
   },
   "changelogTitle": {
     "message": "Nyheder i Drowzy"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "Luk duplikerede faner"
+  },
+  "tabUntitled": {
+    "message": "Unavngivet"
+  },
+  "badgeWhitelisted": {
+    "message": "Hvidlistet"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "snart"
+  },
+  "confirm": {
+    "message": "Sikker?"
   }
 }

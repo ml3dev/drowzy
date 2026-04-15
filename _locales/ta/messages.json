@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "ஒலி"
   },
-  "badgeStarred": {
-    "message": "நட்சத்திரமிடப்பட்டது"
-  },
   "badgeProtected": {
     "message": "பாதுகாக்கப்பட்டது"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – தனியுரிமைக் கொள்கை"
   },
   "privacyUpdated": {
-    "message": "கடைசியாக புதுப்பிக்கப்பட்டது: பிப்ரவரி 2026"
+    "message": "கடைசியாக புதுப்பிக்கப்பட்டது: ஏப்ரல் 2026"
   },
   "privacyShortTitle": {
     "message": "சுருக்கமான பதிப்பு"
@@ -443,7 +440,7 @@
     "message": "அவ்வளவாக இல்லை"
   },
   "whatsNew": {
-    "message": "v1.2.1 இல் புதியவை"
+    "message": "v1.3.0 இல் புதியவை"
   },
   "changelogTitle": {
     "message": "Drowzy இல் புதியவை"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "நகல் தாவல்களை மூடு"
+  },
+  "tabUntitled": {
+    "message": "தலைப்பில்லை"
+  },
+  "badgeWhitelisted": {
+    "message": "அனுமதிப்பட்டியலில்"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "விரைவில்"
+  },
+  "confirm": {
+    "message": "உறுதியா?"
   }
 }

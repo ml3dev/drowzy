@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "音频"
   },
-  "badgeStarred": {
-    "message": "已加星"
-  },
   "badgeProtected": {
     "message": "已保护"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – 隐私政策"
   },
   "privacyUpdated": {
-    "message": "最后更新：2026 年 2 月"
+    "message": "最后更新：2026 年 4 月"
   },
   "privacyShortTitle": {
     "message": "简短版本"
@@ -443,7 +440,7 @@
     "message": "不太满意"
   },
   "whatsNew": {
-    "message": "v1.2.1 新功能"
+    "message": "v1.3.0 新功能"
   },
   "changelogTitle": {
     "message": "Drowzy 新变化"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "关闭重复标签页"
+  },
+  "tabUntitled": {
+    "message": "无标题"
+  },
+  "badgeWhitelisted": {
+    "message": "已加白名单"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "即将"
+  },
+  "confirm": {
+    "message": "确定？"
   }
 }

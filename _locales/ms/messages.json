@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "Audio"
   },
-  "badgeStarred": {
-    "message": "Berbintang"
-  },
   "badgeProtected": {
     "message": "Dilindungi"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – Dasar Privasi"
   },
   "privacyUpdated": {
-    "message": "Kemas kini terakhir: Februari 2026"
+    "message": "Kemas kini terakhir: April 2026"
   },
   "privacyShortTitle": {
     "message": "Versi ringkas"
@@ -443,7 +440,7 @@
     "message": "Tidak juga"
   },
   "whatsNew": {
-    "message": "Apa yang baharu dalam v1.2.1"
+    "message": "Apa yang baharu dalam v1.3.0"
   },
   "changelogTitle": {
     "message": "Apa yang Baharu di Drowzy"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "Tutup tab pendua"
+  },
+  "tabUntitled": {
+    "message": "Tanpa tajuk"
+  },
+  "badgeWhitelisted": {
+    "message": "Dalam senarai putih"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "tidak lama lagi"
+  },
+  "confirm": {
+    "message": "Pasti?"
   }
 }

@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "Аудіо"
   },
-  "badgeStarred": {
-    "message": "Обрана"
-  },
   "badgeProtected": {
     "message": "Захищена"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – Політика конфіденційності"
   },
   "privacyUpdated": {
-    "message": "Останнє оновлення: лютий 2026"
+    "message": "Останнє оновлення: квітень 2026"
   },
   "privacyShortTitle": {
     "message": "Коротка версія"
@@ -443,7 +440,7 @@
     "message": "Не дуже"
   },
   "whatsNew": {
-    "message": "Що нового у v1.2.1"
+    "message": "Що нового у v1.3.0"
   },
   "changelogTitle": {
     "message": "Що нового в Drowzy"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "Закрити дублікати вкладок"
+  },
+  "tabUntitled": {
+    "message": "Без назви"
+  },
+  "badgeWhitelisted": {
+    "message": "У білому списку"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "незабаром"
+  },
+  "confirm": {
+    "message": "Впевнені?"
   }
 }

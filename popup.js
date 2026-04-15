@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', init);
 var _loaded = false;
 var _toastTimer = null;
 var _allTabs = null;
+var _tabListSig = '';
+var _sessionListSig = '';
 
 function t(key, subs) {
   var val = chrome.i18n.getMessage(key, subs);
@@ -14,39 +16,47 @@ var BADGES = {
   'System page': { icon: 'lock', type: 'system', labelKey: 'badgeSystem' },
   'Pinned': { icon: 'pin', type: 'pinned', labelKey: 'badgePinned' },
   'Audio': { icon: 'volume2', type: 'audio', labelKey: 'badgeAudio' },
-  'Whitelisted': { icon: 'star', type: 'starred', labelKey: 'badgeStarred' },
+  'Whitelisted': { icon: 'star', type: 'starred', labelKey: 'badgeWhitelisted' },
 };
 
 async function init() {
-  localizeHtml();
-  await initTheme();
-  injectIcons();
-  await loadAll();
-  attachListeners();
-  await checkReviewPrompt();
-  document.body.classList.add('popup-ready');
+  try {
+    localizeHtml();
+    await initTheme();
+    injectIcons();
+    await loadAll();
+    attachListeners();
+    await checkReviewPrompt();
 
-  if (!_listenersAttached) {
-    _listenersAttached = true;
-    chrome.tabs.onUpdated.addListener(onTabChange);
-    chrome.tabs.onRemoved.addListener(onTabChange);
-    chrome.tabs.onCreated.addListener(onTabChange);
+    // Poll for tab changes instead of registering persistent chrome.tabs listeners
+    // (popup context is short-lived; persistent listeners leak across reopens)
+    if (_pollTimer) clearInterval(_pollTimer);
+    _pollTimer = setInterval(function() { loadAll(); }, 5000);
+
+    // Pause polling when sidepanel is hidden, resume when visible
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        clearInterval(_pollTimer);
+        _pollTimer = null;
+      } else if (document.visibilityState === 'visible' && !_pollTimer) {
+        loadAll();
+        _pollTimer = setInterval(function() { loadAll(); }, 5000);
+      }
+    });
+  } finally {
+    document.body.classList.add('popup-ready');
   }
 }
 
-var _listenersAttached = false;
-var _refreshTimer = null;
-function onTabChange() {
-  clearTimeout(_refreshTimer);
-  _refreshTimer = setTimeout(function() { loadAll(); }, 500);
-}
+var _pollTimer = null;
 
 function filterTabs(tabs) {
+  if (!tabs) return tabs;
   var input = document.getElementById('tabSearchInput');
   if (!input || !input.value.trim()) return tabs;
   var q = input.value.trim().toLowerCase();
-  return tabs.filter(function(t) {
-    return (t.title && t.title.toLowerCase().includes(q)) || (t.url && t.url.toLowerCase().includes(q));
+  return tabs.filter(function(tab) {
+    return (tab.title && tab.title.toLowerCase().includes(q)) || (tab.url && tab.url.toLowerCase().includes(q));
   });
 }
 
@@ -63,6 +73,13 @@ function localizeHtml() {
     var msg = chrome.i18n.getMessage(el.getAttribute('data-i18n-title'));
     if (msg) el.title = msg;
   });
+
+  // Set version in footer dynamically
+  var footer = document.querySelector('.popup-footer span');
+  if (footer) footer.textContent = 'Drowzy v' + chrome.runtime.getManifest().version;
+
+  // Set lang attribute to match browser locale
+  document.documentElement.lang = chrome.i18n.getUILanguage();
 }
 
 async function initTheme() {
@@ -84,6 +101,7 @@ function toggleTheme() {
   updateThemeIcon();
 
   var btn = document.getElementById('themeToggle');
+  if (!btn) return;
   btn.classList.remove('theme-icon-enter');
   void btn.offsetWidth;
   btn.classList.add('theme-icon-enter');
@@ -113,12 +131,19 @@ async function loadAll() {
       msg({ action: 'getStats' })
     ]);
     _allTabs = tabList;
+    var scrollEl = document.querySelector('.main-content');
+    // In sidepanel, .main-content doesn't scroll (body does) — detect correct container
+    if (!scrollEl || scrollEl.scrollHeight <= scrollEl.clientHeight) {
+      scrollEl = document.documentElement;
+    }
+    var savedScroll = scrollEl.scrollTop;
     renderStatsStrip(status);
     renderTabList(filterTabs(tabList));
     renderCurrentTab(tabList, settings);
     renderSettings(settings);
     renderSessions(sessions);
     renderLifetimeStats(stats);
+    if (scrollEl) scrollEl.scrollTop = savedScroll;
     _loaded = true;
   } catch (e) {
     document.getElementById('tabList').innerHTML =
@@ -151,21 +176,39 @@ function renderStatsStrip(status) {
   animateStat(document.getElementById('statMemoryValue'), mem);
 }
 
+function tabListSignature(tabs) {
+  if (!tabs) return '';
+  var parts = [];
+  for (var i = 0; i < tabs.length; i++) {
+    var t = tabs[i];
+    parts.push(t.id + '|' + t.status + '|' + (t.title || '') + '|' + (t.timeLeft == null ? '' : t.timeLeft) + '|' + (t.protectReason || '') + '|' + (t.favIconUrl || ''));
+  }
+  return parts.join('\u0001');
+}
+
 function renderTabList(tabs) {
   var container = document.getElementById('tabList');
   if (!tabs || !tabs.length) {
+    var emptySig = '__empty__';
+    if (_tabListSig === emptySig) return;
+    _tabListSig = emptySig;
     container.innerHTML = '<div class="tab-list-empty">' + esc(t('noTabsFound')) + '</div>';
     return;
   }
+
+  var sig = tabListSignature(tabs);
+  if (sig === _tabListSig) return;
+  var firstRender = _tabListSig === '';
+  _tabListSig = sig;
 
   container.innerHTML = '';
   for (var i = 0; i < tabs.length; i++) {
     var tab = tabs[i];
     var el = document.createElement('div');
-    el.className = 'tab-item' + (tab.status === 'suspended' ? ' sleeping' : '');
+    el.className = 'tab-item' + (tab.status === 'suspended' ? ' sleeping' : '') + (firstRender ? '' : ' no-anim');
     el.setAttribute('role', 'button');
     el.setAttribute('tabindex', '0');
-    el.style.setProperty('--i', Math.min(i, 10));
+    if (firstRender) el.style.setProperty('--i', Math.min(i, 10));
 
     el.appendChild(buildFavicon(tab));
 
@@ -182,9 +225,10 @@ function renderTabList(tabs) {
       meta.innerHTML = '<span class="badge badge-sleeping">' + icon('moon', 11) + ' ' + esc(t('badgeZzz')) + '</span>';
     } else if (tab.status === 'protected' || tab.status === 'active') {
       var info = BADGES[tab.protectReason] || { icon: 'shield', type: 'system', labelKey: 'badgeProtected' };
-      meta.innerHTML = '<span class="badge badge-' + info.type + '" title="' + esc(tab.protectReason || t('badgeProtected')) + '">' + icon(info.icon, 11) + ' ' + esc(t(info.labelKey)) + '</span>';
+      meta.innerHTML = '<span class="badge badge-' + info.type + '" title="' + esc(t(info.labelKey)) + '">' + icon(info.icon, 11) + ' ' + esc(t(info.labelKey)) + '</span>';
     } else if (tab.status === 'idle' && tab.timeLeft !== null) {
-      meta.innerHTML = '<span class="badge badge-timer">' + icon('clock', 11) + ' ' + tab.timeLeft + 'm</span>';
+      var timeText = tab.timeLeft > 0 ? esc(String(tab.timeLeft)) + 'm' : esc(t('suspendingSoon'));
+      meta.innerHTML = '<span class="badge badge-timer">' + icon('clock', 11) + ' ' + timeText + '</span>';
     }
     if (tab.status === 'idle') {
       var suspendBtn = document.createElement('button');
@@ -198,18 +242,20 @@ function renderTabList(tabs) {
           await loadAll();
         });
       })(tab.id);
+      el.appendChild(meta);
       el.appendChild(suspendBtn);
+    } else {
+      el.appendChild(meta);
     }
 
-    el.appendChild(meta);
-
-    var tabAction = (function(t) {
+    var tabAction = (function(tabData) {
       return async function() {
-        if (t.status === 'suspended') {
-          await msg({ action: 'wakeTab', tabId: t.id });
+        if (tabData.status === 'suspended') {
+          await msg({ action: 'wakeTab', tabId: tabData.id });
+          try { await chrome.tabs.update(tabData.id, { active: true }); } catch {}
           await loadAll();
         } else {
-          try { await chrome.tabs.update(t.id, { active: true }); } catch {}
+          try { await chrome.tabs.update(tabData.id, { active: true }); } catch {}
         }
       };
     })(tab);
@@ -244,13 +290,13 @@ function faviconFallback(url) {
 }
 
 function esc(str) {
-  return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
 function renderCurrentTab(tabList, settings) {
   if (!tabList || !tabList.length || !settings) return;
 
-  var active = tabList.find(function(t) { return t.status === 'active'; });
+  var active = tabList.find(function(tab) { return tab.status === 'active'; });
   if (!active) return;
 
   var domain = '\u2014';
@@ -262,8 +308,13 @@ function renderCurrentTab(tabList, settings) {
       domain = active.title || t('extensionPage');
     }
     var clean = domain.replace(/^www\./, '').toLowerCase();
+    var fullUrl = (urlObj.hostname + urlObj.pathname).toLowerCase().replace(/^www\./, '');
     whitelisted = (settings.whitelist || []).some(function(w) {
       w = w.toLowerCase();
+      if (w.includes('/')) {
+        var escaped = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\\\*/g, '.*');
+        try { return new RegExp('^' + escaped + '(/.*)?$').test(fullUrl); } catch { return false; }
+      }
       return clean === w || clean.endsWith('.' + w);
     });
   } catch {}
@@ -271,12 +322,16 @@ function renderCurrentTab(tabList, settings) {
   document.getElementById('currentTabDomain').textContent = domain;
 
   var fav = document.getElementById('currentTabFavicon');
+  fav.style.display = '';
   fav.src = active.favIconUrl || '';
   fav.onerror = function() { fav.style.display = 'none'; };
 
   document.getElementById('currentTabStatus').textContent = t('activeWontSuspend');
 
   var btn = document.getElementById('btnToggleWhitelist');
+  var isInternal = false;
+  try { isInternal = new URL(active.url).protocol !== 'http:' && new URL(active.url).protocol !== 'https:'; } catch {}
+  btn.style.display = isInternal ? 'none' : '';
   if (whitelisted) {
     btn.querySelector('.btn-text').textContent = t('siteWhitelisted');
     btn.querySelector('.btn-icon').innerHTML = icon('shieldCheck', 14);
@@ -312,6 +367,8 @@ function renderSessions(sessions) {
         var fi = document.createElement('img');
         fi.src = icons[j].favIconUrl;
         fi.alt = '';
+        fi.width = 16;
+        fi.height = 16;
         fi.onerror = function() { this.style.display = 'none'; };
         stack.appendChild(fi);
       }
@@ -346,7 +403,7 @@ function renderSessions(sessions) {
       rBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
         disableAll();
-        rBtn.textContent = '...';
+        rBtn.textContent = t('loading');
         var res = await msg({ action: 'restoreSession', id: session.id, mode: 'open' });
         if (res && res.success) showToast(t('restoredTabs', [String(res.count)]));
         else showToast((res && res.error) || t('failedToRestore'));
@@ -356,7 +413,7 @@ function renderSessions(sessions) {
       rpBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
         disableAll();
-        rpBtn.textContent = '...';
+        rpBtn.textContent = t('loading');
         var res = await msg({ action: 'restoreSession', id: session.id, mode: 'replace' });
         if (res && res.success) showToast(t('restoredTabs', [String(res.count)]));
         else showToast((res && res.error) || t('failedToRestore'));
@@ -365,13 +422,25 @@ function renderSessions(sessions) {
       });
     })(s, restoreBtn, replaceBtn, deleteBtn);
 
-    (function(session) {
-      deleteBtn.addEventListener('click', async function(e) {
+    (function(session, dBtn) {
+      var confirmTimer = null;
+      dBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
-        await msg({ action: 'deleteSession', id: session.id });
-        await loadAll();
+        if (dBtn.dataset.confirming) {
+          clearTimeout(confirmTimer);
+          dBtn.dataset.confirming = '';
+          await msg({ action: 'deleteSession', id: session.id });
+          await loadAll();
+        } else {
+          dBtn.dataset.confirming = '1';
+          dBtn.innerHTML = '<span style="font-size:11px">' + esc(t('confirm') || '?') + '</span>';
+          confirmTimer = setTimeout(function() {
+            dBtn.dataset.confirming = '';
+            dBtn.innerHTML = icon('trash2', 13);
+          }, 3000);
+        }
       });
-    })(s);
+    })(s, deleteBtn);
 
     actions.appendChild(restoreBtn);
     actions.appendChild(replaceBtn);
@@ -399,13 +468,21 @@ function renderLifetimeStats(stats) {
 
 function renderSettings(settings) {
   if (!settings) return;
-  document.getElementById('suspendTimer').value = settings.enableAutoSuspend ? String(settings.suspendAfterMinutes) : '0';
-  document.getElementById('togglePinned').checked = settings.protectPinned;
-  document.getElementById('toggleAudio').checked = settings.protectAudio;
-  document.getElementById('toggleForms').checked = settings.protectForms;
-  document.getElementById('toggleStartup').checked = settings.suspendOnStartup;
-  document.getElementById('toggleAutoSuspend').checked = settings.enableAutoSuspend;
-  document.getElementById('toggleMarkSuspended').checked = settings.markSuspendedTabs;
+  // Skip updating form controls when the user is actively interacting with settings
+  var active = document.activeElement;
+  var timer = document.getElementById('suspendTimer');
+  if (active !== timer) {
+    timer.value = settings.enableAutoSuspend ? String(settings.suspendAfterMinutes) : '0';
+  }
+  var toggles = [
+    ['togglePinned', 'protectPinned'], ['toggleAudio', 'protectAudio'],
+    ['toggleForms', 'protectForms'], ['toggleStartup', 'suspendOnStartup'],
+    ['toggleAutoSuspend', 'enableAutoSuspend'], ['toggleMarkSuspended', 'markSuspendedTabs']
+  ];
+  for (var i = 0; i < toggles.length; i++) {
+    var el = document.getElementById(toggles[i][0]);
+    if (active !== el) el.checked = settings[toggles[i][1]];
+  }
   renderWhitelist(settings.whitelist);
 }
 
@@ -470,7 +547,7 @@ function attachListeners() {
 
   document.getElementById('btnToggleWhitelist').addEventListener('click', async function() {
     var d = this.dataset.domain;
-    if (!d || d === '\u2014') return;
+    if (!d || d === '\u2014' || !d.includes('.')) return;
     await msg({ action: this.dataset.whitelisted === '1' ? 'removeWhitelist' : 'addWhitelist', domain: d });
     await loadAll();
   });
@@ -503,16 +580,24 @@ function attachListeners() {
   });
 
   document.getElementById('btnExportTabs').addEventListener('click', async function() {
+    if (this.disabled) return;
+    this.disabled = true;
+    var btn = this;
     var tabs = await msg({ action: 'getTabList' });
-    if (!tabs || !tabs.length) return;
-    var text = tabs.map(function(t) { return t.title + '\n' + t.url; }).join('\n\n');
+    if (!tabs || !tabs.length) { btn.disabled = false; return; }
+    var text = tabs.map(function(tab) { return tab.title + '\n' + tab.url; }).join('\n\n');
     try {
       await navigator.clipboard.writeText(text);
-      this.querySelector('[data-icon]').innerHTML = icon('clipboardCheck', 14);
+      btn.querySelector('[data-icon]').innerHTML = icon('clipboardCheck', 14);
       showToast(t('copiedTabs', [String(tabs.length)]));
-      var iconEl = this.querySelector('[data-icon]');
-      setTimeout(function() { iconEl.innerHTML = icon('clipboard', 14); }, 2000);
-    } catch { showToast(t('failedToCopy')); }
+      setTimeout(function() {
+        btn.querySelector('[data-icon]').innerHTML = icon('clipboard', 14);
+        btn.disabled = false;
+      }, 2000);
+    } catch {
+      showToast(t('failedToCopy'));
+      btn.disabled = false;
+    }
   });
 
   setupCollapsible('sessionsToggle', 'sessionsBody');
@@ -546,10 +631,10 @@ function attachListeners() {
 
   bindToggle('togglePinned', 'protectPinned');
   bindToggle('toggleAudio', 'protectAudio');
-  bindToggle('toggleForms', 'protectForms');
+  bindHostToggle('toggleForms', 'protectForms');
   bindToggle('toggleStartup', 'suspendOnStartup');
   bindToggle('toggleAutoSuspend', 'enableAutoSuspend');
-  bindToggle('toggleMarkSuspended', 'markSuspendedTabs');
+  bindHostToggle('toggleMarkSuspended', 'markSuspendedTabs');
 
   document.getElementById('btnAddWhitelist').addEventListener('click', addFromInput);
   document.getElementById('whitelistInput').addEventListener('keydown', function(e) {
@@ -572,27 +657,28 @@ function attachListeners() {
     try {
       var text = await navigator.clipboard.readText();
       var domains = text.split(/[\n,;]+/).map(function(d) {
-        return d.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/[/:?#].*$/, '');
-      }).filter(function(d) { return d && d.includes('.') && !d.startsWith('.') && !d.endsWith('.'); });
+        var clean = d.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '');
+        if (!clean.includes('/')) clean = clean.replace(/[/:?#].*$/, '');
+        return clean;
+      }).filter(function(d) { return d && d.split('/')[0].includes('.') && !d.startsWith('.') && !d.split('/')[0].endsWith('.'); });
       if (!domains.length) { showToast(t('noValidDomains')); return; }
       var settings = await msg({ action: 'getSettings' });
       if (!settings) return;
       var added = 0;
       for (var i = 0; i < domains.length; i++) {
         if (!settings.whitelist.includes(domains[i])) {
-          settings.whitelist.push(domains[i]);
+          await msg({ action: 'addWhitelist', domain: domains[i] });
           added++;
         }
       }
-      if (added) {
-        await msg({ action: 'updateSettings', settings: settings });
-        await loadAll();
-      }
+      if (added) await loadAll();
       showToast(t('importedSites', [String(added)]));
     } catch { showToast(t('clipboardReadFailed')); }
   });
 
-  document.getElementById('btnWhatsNew').addEventListener('click', function(e) {
+  var whatsNewBtn = document.getElementById('btnWhatsNew');
+  whatsNewBtn.textContent = t('changelogWhatsNew') + ' v' + chrome.runtime.getManifest().version;
+  whatsNewBtn.addEventListener('click', function(e) {
     e.preventDefault();
     chrome.tabs.create({ url: 'changelog.html' });
   });
@@ -608,22 +694,33 @@ function bindToggle(id, key) {
   });
 }
 
+function bindHostToggle(id, key) {
+  var el = document.getElementById(id);
+  el.addEventListener('change', async function() {
+    if (this.checked) {
+      var granted = false;
+      try {
+        granted = await chrome.permissions.request({ origins: ['<all_urls>'] });
+      } catch { granted = false; }
+      if (!granted) {
+        this.checked = false;
+        return;
+      }
+    }
+    var s = await msg({ action: 'getSettings' });
+    if (!s) return;
+    s[key] = this.checked;
+    await msg({ action: 'updateSettings', settings: s });
+    await loadAll();
+  });
+}
+
 function setupCollapsible(toggleId, bodyId) {
   var toggle = document.getElementById(toggleId);
   var body = document.getElementById(bodyId);
   toggle.addEventListener('click', function() {
-    if (body.classList.contains('closing')) return;
-    if (body.classList.contains('open')) {
-      body.classList.add('closing');
-      toggle.setAttribute('aria-expanded', false);
-      body.addEventListener('animationend', function handler() {
-        body.removeEventListener('animationend', handler);
-        body.classList.remove('open', 'closing');
-      });
-    } else {
-      body.classList.add('open');
-      toggle.setAttribute('aria-expanded', true);
-    }
+    var isOpen = body.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
   });
 }
 
@@ -661,7 +758,13 @@ async function addFromInput() {
     setTimeout(function() { input.classList.remove('input-error'); }, 1500);
     return;
   }
-  await msg({ action: 'addWhitelist', domain: domain });
+  var res = await msg({ action: 'addWhitelist', domain: domain });
+  if (res && res.error) {
+    showToast(res.error);
+    input.classList.add('input-error');
+    setTimeout(function() { input.classList.remove('input-error'); }, 1500);
+    return;
+  }
   input.value = '';
   await loadAll();
 }
@@ -699,7 +802,7 @@ async function checkReviewPrompt() {
   try {
     var data = await chrome.storage.local.get(['drowzy_stats', 'reviewPromptCompleted', 'reviewPromptDismissCount', 'reviewPromptLastDismissed']);
     var stats = data.drowzy_stats;
-    if (!stats || (stats.totalTabsSuspended || 0) < 10) return;
+    if (!stats || (stats.totalTabsSuspended || 0) < 50) return;
     if (data.reviewPromptCompleted) return;
     if ((data.reviewPromptDismissCount || 0) >= 2) return;
     if (data.reviewPromptLastDismissed && (Date.now() - data.reviewPromptLastDismissed < SEVEN_DAYS)) return;
@@ -711,11 +814,15 @@ async function checkReviewPrompt() {
     function dismissBanner(cb) {
       banner.classList.remove('entering');
       banner.classList.add('dismissing');
-      banner.addEventListener('transitionend', function handler() {
-        banner.removeEventListener('transitionend', handler);
+      var done = false;
+      function finish() {
+        if (done) return;
+        done = true;
         banner.style.display = 'none';
         if (cb) cb();
-      });
+      }
+      banner.addEventListener('transitionend', finish, { once: true });
+      setTimeout(finish, 500);
     }
 
     function recordDismiss() {
@@ -731,18 +838,18 @@ async function checkReviewPrompt() {
       dismissBanner(function() {
         chrome.tabs.create({ url: REVIEW_URL });
       });
-    });
+    }, { once: true });
 
     document.getElementById('reviewThumbsDown').addEventListener('click', function() {
       recordDismiss();
       dismissBanner(function() {
         chrome.tabs.create({ url: ISSUES_URL });
       });
-    });
+    }, { once: true });
 
     document.getElementById('reviewDismiss').addEventListener('click', function() {
       recordDismiss();
       dismissBanner();
-    });
+    }, { once: true });
   } catch {}
 }

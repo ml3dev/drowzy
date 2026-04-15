@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "Аудио"
   },
-  "badgeStarred": {
-    "message": "Означена"
-  },
   "badgeProtected": {
     "message": "Заштићена"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – Политика приватности"
   },
   "privacyUpdated": {
-    "message": "Последње ажурирање: фебруар 2026"
+    "message": "Последње ажурирање: април 2026"
   },
   "privacyShortTitle": {
     "message": "Укратко"
@@ -443,7 +440,7 @@
     "message": "Не баш"
   },
   "whatsNew": {
-    "message": "Шта је ново у v1.2.1"
+    "message": "Шта је ново у v1.3.0"
   },
   "changelogTitle": {
     "message": "Шта је ново у Drowzy"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "Затвори дупликат картице"
+  },
+  "tabUntitled": {
+    "message": "Без наслова"
+  },
+  "badgeWhitelisted": {
+    "message": "На белој листи"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "ускоро"
+  },
+  "confirm": {
+    "message": "Сигурни?"
   }
 }

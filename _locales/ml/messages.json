@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "ഓഡിയോ"
   },
-  "badgeStarred": {
-    "message": "നക്ഷത്രം ഇട്ടത്"
-  },
   "badgeProtected": {
     "message": "സംരക്ഷിതം"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – സ്വകാര്യതാ നയം"
   },
   "privacyUpdated": {
-    "message": "അവസാനം അപ്‌ഡേറ്റ് ചെയ്തത്: ഫെബ്രുവരി 2026"
+    "message": "അവസാനം അപ്‌ഡേറ്റ് ചെയ്തത്: ഏപ്രിൽ 2026"
   },
   "privacyShortTitle": {
     "message": "ചുരുക്ക പതിപ്പ്"
@@ -443,7 +440,7 @@
     "message": "അത്ര ഇല്ല"
   },
   "whatsNew": {
-    "message": "v1.2.1-ൽ പുതിയത്"
+    "message": "v1.3.0-ൽ പുതിയത്"
   },
   "changelogTitle": {
     "message": "Drowzy-ൽ പുതിയത്"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "ഡ്യൂപ്ലിക്കേറ്റ് ടാബുകള്‍ അടയ്ക്കുക"
+  },
+  "tabUntitled": {
+    "message": "തലക്കെട്ടില്ല"
+  },
+  "badgeWhitelisted": {
+    "message": "അനുമതിപ്പട്ടികയിൽ"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "ഉടൻ"
+  },
+  "confirm": {
+    "message": "ഉറപ്പാണോ?"
   }
 }

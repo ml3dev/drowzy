@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "صوت"
   },
-  "badgeStarred": {
-    "message": "مميّز بنجمة"
-  },
   "badgeProtected": {
     "message": "محمي"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – سياسة الخصوصية"
   },
   "privacyUpdated": {
-    "message": "آخر تحديث: فبراير 2026"
+    "message": "آخر تحديث: أبريل 2026"
   },
   "privacyShortTitle": {
     "message": "النسخة المختصرة"
@@ -443,7 +440,7 @@
     "message": "ليس حقًا"
   },
   "whatsNew": {
-    "message": "الجديد في v1.2.1"
+    "message": "الجديد في v1.3.0"
   },
   "changelogTitle": {
     "message": "الجديد في Drowzy"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "إغلاق علامات التبويب المكررة"
+  },
+  "tabUntitled": {
+    "message": "بدون عنوان"
+  },
+  "badgeWhitelisted": {
+    "message": "في القائمة البيضاء"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "قريبًا"
+  },
+  "confirm": {
+    "message": "متأكد؟"
   }
 }

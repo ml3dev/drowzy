@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "ऑडिओ"
   },
-  "badgeStarred": {
-    "message": "तारांकित"
-  },
   "badgeProtected": {
     "message": "संरक्षित"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – गोपनीयता धोरण"
   },
   "privacyUpdated": {
-    "message": "शेवटचे अद्यतन: फेब्रुवारी 2026"
+    "message": "शेवटचे अद्यतन: एप्रिल 2026"
   },
   "privacyShortTitle": {
     "message": "थोडक्यात"
@@ -443,7 +440,7 @@
     "message": "फार नाही"
   },
   "whatsNew": {
-    "message": "v1.2.1 मधील नवीन"
+    "message": "v1.3.0 मधील नवीन"
   },
   "changelogTitle": {
     "message": "Drowzy मधील नवीन"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "डुप्लिकेट टॅब बंद करा"
+  },
+  "tabUntitled": {
+    "message": "शीर्षकरहित"
+  },
+  "badgeWhitelisted": {
+    "message": "परवानगी यादीत"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "लवकरच"
+  },
+  "confirm": {
+    "message": "खात्री?"
   }
 }

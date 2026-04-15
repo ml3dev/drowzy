@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "ಆಡಿಯೋ"
   },
-  "badgeStarred": {
-    "message": "ನಕ್ಷತ್ರ ಗುರುತಿಸಲಾಗಿದೆ"
-  },
   "badgeProtected": {
     "message": "ರಕ್ಷಿತ"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – ಗೌಪ್ಯತಾ ನೀತಿ"
   },
   "privacyUpdated": {
-    "message": "ಕೊನೆಯ ನವೀಕರಣ: ಫೆಬ್ರವರಿ 2026"
+    "message": "ಕೊನೆಯ ನವೀಕರಣ: ಏಪ್ರಿಲ್ 2026"
   },
   "privacyShortTitle": {
     "message": "ಸಂಕ್ಷಿಪ್ತ ಆವೃತ್ತಿ"
@@ -443,7 +440,7 @@
     "message": "ಅಷ್ಟಾಗಿ ಇಲ್ಲ"
   },
   "whatsNew": {
-    "message": "v1.2.1 ರಲ್ಲಿ ಹೊಸದೇನು"
+    "message": "v1.3.0 ರಲ್ಲಿ ಹೊಸದೇನು"
   },
   "changelogTitle": {
     "message": "Drowzy ನಲ್ಲಿ ಹೊಸದೇನು"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "ನಕಲಿ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಮುಚ್ಚಿ"
+  },
+  "tabUntitled": {
+    "message": "ಶೀರ್ಷಿಕೆಯಿಲ್ಲ"
+  },
+  "badgeWhitelisted": {
+    "message": "ಅನುಮತಿ ಪಟ್ಟಿಯಲ್ಲಿ"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "ಶೀಘ್ರದಲ್ಲಿ"
+  },
+  "confirm": {
+    "message": "ಖಚಿತವೇ?"
   }
 }

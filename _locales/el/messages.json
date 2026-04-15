@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "Ήχος"
   },
-  "badgeStarred": {
-    "message": "Αγαπημένη"
-  },
   "badgeProtected": {
     "message": "Προστατευμένη"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – Πολιτική απορρήτου"
   },
   "privacyUpdated": {
-    "message": "Τελευταία ενημέρωση: Φεβρουάριος 2026"
+    "message": "Τελευταία ενημέρωση: Απρίλιος 2026"
   },
   "privacyShortTitle": {
     "message": "Η σύντομη εκδοχή"
@@ -443,7 +440,7 @@
     "message": "Όχι ιδιαίτερα"
   },
   "whatsNew": {
-    "message": "Τι νέο στη v1.2.1"
+    "message": "Τι νέο στη v1.3.0"
   },
   "changelogTitle": {
     "message": "Τι νέο στο Drowzy"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "Κλείσιμο διπλότυπων καρτελών"
+  },
+  "tabUntitled": {
+    "message": "Χωρίς τίτλο"
+  },
+  "badgeWhitelisted": {
+    "message": "Στη λίστα επιτρεπομένων"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "σύντομα"
+  },
+  "confirm": {
+    "message": "Σίγουρα;"
   }
 }

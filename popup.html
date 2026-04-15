@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drowzy</title>
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
         <span class="header-title">Drowzy</span>
       </div>
       <div class="header-actions">
-        <button class="btn-icon-only" id="themeToggle"></button>
+        <button class="btn-icon-only" id="themeToggle" data-i18n-title="switchToLight" title="Switch to light mode"></button>
       </div>
     </header>
 
@@ -94,7 +95,7 @@
         </div>
       </div>
       <div class="tab-search" id="tabSearchWrap" style="display:none;">
-        <input type="text" id="tabSearchInput" class="input" placeholder="Search tabs...">
+        <input type="text" id="tabSearchInput" class="input" data-i18n-placeholder="searchTabs" placeholder="Search tabs...">
       </div>
       <div class="tab-list" id="tabList">
         <div class="tab-list-empty" data-i18n="loadingTabs">Loading tabs...</div>
@@ -102,7 +103,7 @@
 
       <div class="sections-area">
         <div class="collapsible-section">
-          <button class="section-toggle" id="sessionsToggle" aria-expanded="false">
+          <button class="section-toggle" id="sessionsToggle" aria-expanded="false" aria-controls="sessionsBody">
             <span class="section-toggle-left">
               <span data-icon="folderOpen"></span>
               <span data-i18n="sessions">Sessions</span>
@@ -130,7 +131,7 @@
         </div>
 
         <div class="collapsible-section">
-          <button class="section-toggle" id="statsToggle" aria-expanded="false">
+          <button class="section-toggle" id="statsToggle" aria-expanded="false" aria-controls="statsBody">
             <span class="section-toggle-left">
               <span data-icon="barChart3"></span>
               <span data-i18n="stats">Stats</span>
@@ -162,7 +163,7 @@
         </div>
 
         <div class="collapsible-section">
-          <button class="section-toggle" id="settingsToggle" aria-expanded="false">
+          <button class="section-toggle" id="settingsToggle" aria-expanded="false" aria-controls="settingsBody">
             <span class="section-toggle-left">
               <span data-icon="settings"></span>
               <span data-i18n="settings">Settings</span>
@@ -211,7 +212,7 @@
               <div class="setting-row setting-row-block">
                 <label data-i18n="whitelistedSites">Whitelisted sites</label>
                 <div class="whitelist-add">
-                  <input type="text" id="whitelistInput" placeholder="example.com or site.com/path/*" class="input">
+                  <input type="text" id="whitelistInput" data-i18n-placeholder="whitelistPlaceholder" placeholder="example.com or site.com/path/*" class="input">
                   <button class="btn btn-sm" id="btnAddWhitelist">
                     <span data-icon="plus"></span>
                     <span data-i18n="add">Add</span>
@@ -230,7 +231,7 @@
                 </div>
               </div>
               <div class="setting-row">
-                <a class="settings-link" id="btnWhatsNew" href="#" data-i18n="whatsNew">What's new in v1.2.1</a>
+                <a class="settings-link" id="btnWhatsNew" href="#" data-i18n="whatsNew">What's new in v1.3.0</a>
               </div>
 
             </div>
@@ -239,7 +240,7 @@
       </div>
 
       <div class="popup-footer">
-        <span>Drowzy v1.2.1</span>
+        <span>Drowzy v1.3.0</span>
       </div>
     </div>
   </div>

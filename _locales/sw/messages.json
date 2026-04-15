@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "Sauti"
   },
-  "badgeStarred": {
-    "message": "Yenye nyota"
-  },
   "badgeProtected": {
     "message": "Imelindwa"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – Sera ya Faragha"
   },
   "privacyUpdated": {
-    "message": "Ilisasishwa mwisho: Februari 2026"
+    "message": "Ilisasishwa mwisho: Aprili 2026"
   },
   "privacyShortTitle": {
     "message": "Toleo fupi"
@@ -443,7 +440,7 @@
     "message": "Si sana"
   },
   "whatsNew": {
-    "message": "Nini kipya katika v1.2.1"
+    "message": "Nini kipya katika v1.3.0"
   },
   "changelogTitle": {
     "message": "Nini Kipya katika Drowzy"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "Funga vichupo vya nakala"
+  },
+  "tabUntitled": {
+    "message": "Bila kichwa"
+  },
+  "badgeWhitelisted": {
+    "message": "Kwenye orodha nyeupe"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "hivi karibuni"
+  },
+  "confirm": {
+    "message": "Una uhakika?"
   }
 }

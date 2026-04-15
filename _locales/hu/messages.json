@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "Hang"
   },
-  "badgeStarred": {
-    "message": "Csillagozott"
-  },
   "badgeProtected": {
     "message": "Védett"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – Adatvédelmi szabályzat"
   },
   "privacyUpdated": {
-    "message": "Utolsó frissítés: 2026. február"
+    "message": "Utolsó frissítés: 2026. április"
   },
   "privacyShortTitle": {
     "message": "Rövid változat"
@@ -443,7 +440,7 @@
     "message": "Nem igazán"
   },
   "whatsNew": {
-    "message": "Újdonságok a v1.2.1-ban"
+    "message": "Újdonságok a v1.3.0-ban"
   },
   "changelogTitle": {
     "message": "Újdonságok a Drowzy-ban"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "Duplikált lapok bezárása"
+  },
+  "tabUntitled": {
+    "message": "Névtelen"
+  },
+  "badgeWhitelisted": {
+    "message": "Engedélyezett"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "hamarosan"
+  },
+  "confirm": {
+    "message": "Biztos?"
   }
 }

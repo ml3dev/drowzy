@@ -66,7 +66,7 @@
 
   --color-text: #1a1025;
   --color-text-secondary: #544968;
-  --color-text-tertiary: #877c9a;
+  --color-text-tertiary: #6d6180;
 
   --color-accent: #7c3aed;
   --color-accent-hover: #6d28d9;
@@ -274,7 +274,7 @@ body.popup-ready {
 }
 
 .input:focus { border-color: var(--color-accent); box-shadow: var(--shadow-ring-focus); }
-.input:focus-visible { outline: none; }
+.input:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
 .input::placeholder { color: var(--color-text-tertiary); }
 
 .select {
@@ -291,7 +291,7 @@ body.popup-ready {
 }
 
 .select:focus { border-color: var(--color-accent); box-shadow: var(--shadow-ring-focus); }
-.select:focus-visible { outline: none; }
+.select:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
 
 .switch {
   position: relative;
@@ -602,6 +602,10 @@ body.popup-ready {
   animation-delay: calc(var(--i, 0) * 25ms);
 }
 
+.tab-item.no-anim {
+  animation: none;
+}
+
 .tab-item:hover {
   background: var(--bg-hover-accent);
 }
@@ -732,23 +736,26 @@ body.popup-ready {
 }
 
 .section-body {
-  display: none;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 220ms ease-out;
 }
 
 .section-body.open {
-  display: block;
+  grid-template-rows: 1fr;
 }
 
-.section-body-inner {
+.section-body > .section-body-inner {
+  overflow: hidden;
+  min-height: 0;
+  padding: 0 14px;
+  opacity: 0;
+  transition: opacity 160ms ease-out, padding 220ms ease-out;
+}
+
+.section-body.open > .section-body-inner {
   padding: 4px 14px 10px;
-}
-
-.section-body.open .section-body-inner {
-  animation: sectionOpen 200ms ease-out;
-}
-
-.section-body.closing .section-body-inner {
-  animation: sectionClose 180ms ease-out forwards;
+  opacity: 1;
 }
 
 .session-save-row {
@@ -1094,8 +1101,8 @@ body.popup-ready {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
+  width: 28px;
+  height: 28px;
   border: none;
   border-radius: 3px;
   background: transparent;
@@ -1181,16 +1188,6 @@ body.popup-ready {
 @keyframes themeIconSpin {
   from { transform: rotate(-90deg); opacity: 0; }
   to { transform: rotate(0deg); opacity: 1; }
-}
-
-@keyframes sectionOpen {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes sectionClose {
-  from { opacity: 1; transform: translateY(0); }
-  to { opacity: 0; transform: translateY(-6px); }
 }
 
 .main-content::-webkit-scrollbar { width: 6px; }

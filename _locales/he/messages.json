@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "שמע"
   },
-  "badgeStarred": {
-    "message": "מסומן בכוכב"
-  },
   "badgeProtected": {
     "message": "מוגן"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – מדיניות פרטיות"
   },
   "privacyUpdated": {
-    "message": "עדכון אחרון: פברואר 2026"
+    "message": "עדכון אחרון: אפריל 2026"
   },
   "privacyShortTitle": {
     "message": "הגרסה הקצרה"
@@ -443,7 +440,7 @@
     "message": "לא ממש"
   },
   "whatsNew": {
-    "message": "מה חדש ב-v1.2.1"
+    "message": "מה חדש ב-v1.3.0"
   },
   "changelogTitle": {
     "message": "מה חדש ב-Drowzy"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "סגירת כרטיסיות כפולות"
+  },
+  "tabUntitled": {
+    "message": "ללא כותרת"
+  },
+  "badgeWhitelisted": {
+    "message": "ברשימה הלבנה"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "בקרוב"
+  },
+  "confirm": {
+    "message": "?בטוח"
   }
 }

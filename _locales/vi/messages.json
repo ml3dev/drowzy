@@ -65,9 +65,6 @@
   "badgeAudio": {
     "message": "Âm thanh"
   },
-  "badgeStarred": {
-    "message": "Đã gắn sao"
-  },
   "badgeProtected": {
     "message": "Được bảo vệ"
   },
@@ -349,7 +346,7 @@
     "message": "Drowzy – Chính sách quyền riêng tư"
   },
   "privacyUpdated": {
-    "message": "Cập nhật lần cuối: Tháng 2 năm 2026"
+    "message": "Cập nhật lần cuối: Tháng 4 năm 2026"
   },
   "privacyShortTitle": {
     "message": "Phiên bản ngắn gọn"
@@ -443,7 +440,7 @@
     "message": "Không hẳn"
   },
   "whatsNew": {
-    "message": "Có gì mới trong v1.2.1"
+    "message": "Có gì mới trong v1.3.0"
   },
   "changelogTitle": {
     "message": "Có gì mới trong Drowzy"
@@ -554,5 +551,20 @@
   },
   "closeDuplicatesTitle": {
     "message": "Đóng các thẻ trùng lặp"
+  },
+  "tabUntitled": {
+    "message": "Không có tiêu đề"
+  },
+  "badgeWhitelisted": {
+    "message": "Trong danh sách trắng"
+  },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
+  "suspendingSoon": {
+    "message": "sắp"
+  },
+  "confirm": {
+    "message": "Chắc chưa?"
   }
 }
