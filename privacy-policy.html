@@ -2,82 +2,283 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="pageTitle">Drowzy - Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <title id="pageTitle">Drowzy · Privacy Policy</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a78bfa'%3E%3Cpath d='M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z'/%3E%3C/svg%3E">
   <style>
     :root {
-      --bg-base: #0f0b1a;
+      --bg: #0f0b1a;
       --bg-surface: #1a1528;
-      --color-text: #e8e2f4;
-      --color-text-secondary: #9b8fad;
-      --color-text-tertiary: #6b5f7e;
-      --color-accent: #a78bfa;
-      --border-subtle: rgba(255, 255, 255, 0.06);
-      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --bg-elevated: #241e35;
+      --text: #e8e2f4;
+      --text-dim: #9b8fad;
+      --text-subtle: #6b5f7e;
+      --accent: #a78bfa;
+      --accent-hover: #c4b5fd;
+      --accent-dim: rgba(167, 139, 250, 0.15);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.14);
+      --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      --radius: 14px;
+      --radius-sm: 8px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: var(--font-sans);
-      max-width: 640px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: var(--bg-base);
-      color: var(--color-text);
-      line-height: 1.7;
-    }
-    h1 { font-size: 24px; margin-bottom: 8px; color: var(--color-text); }
-    h2 { font-size: 18px; margin-top: 28px; color: var(--color-text); }
-    p { margin: 12px 0; color: var(--color-text-secondary); }
-    strong { color: var(--color-text); }
-    ul { margin: 12px 0; padding-left: 24px; color: var(--color-text-secondary); }
-    li { margin: 6px 0; }
-    code {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: 4px;
-      padding: 1px 5px;
-      font-size: 13px;
-      color: var(--color-accent);
-    }
-    .updated { color: var(--color-text-tertiary); font-size: 14px; }
 
     @media (prefers-color-scheme: light) {
       :root {
-        --bg-base: #f8f6fb;
+        --bg: #f8f6fb;
         --bg-surface: #ffffff;
-        --color-text: #1a1525;
-        --color-text-secondary: #5c5470;
-        --color-text-tertiary: #8a819c;
-        --color-accent: #7c3aed;
-        --border-subtle: rgba(0, 0, 0, 0.08);
+        --bg-elevated: #faf8fc;
+        --text: #1a1525;
+        --text-dim: #5c5470;
+        --text-subtle: #8a819c;
+        --accent: #7c3aed;
+        --accent-hover: #6d28d9;
+        --accent-dim: rgba(124, 58, 237, 0.08);
+        --border: rgba(0, 0, 0, 0.08);
+        --border-strong: rgba(0, 0, 0, 0.16);
+        --shadow: 0 8px 32px rgba(124, 58, 237, 0.07);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--bg);
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(124, 58, 237, 0.12), transparent 55%),
+        radial-gradient(circle at 85% 90%, rgba(167, 139, 250, 0.07), transparent 50%);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      padding: 44px 20px 60px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      animation: fadeUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .hero-logo {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      color: var(--accent);
+      filter: drop-shadow(0 0 16px rgba(167, 139, 250, 0.25));
+    }
+
+    h1 {
+      font-size: clamp(24px, 5vw, 30px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.3;
+      padding-bottom: 0.08em;
+    }
+
+    .updated {
+      font-size: 13px;
+      color: var(--text-subtle);
+      margin-bottom: 32px;
+    }
+
+    .tldr {
+      padding: 18px 22px;
+      margin-bottom: 28px;
+      background: var(--accent-dim);
+      border: 1px solid var(--border-strong);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+    }
+
+    .tldr strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    section.card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.005em;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    p {
+      color: var(--text-dim);
+      font-size: 14.5px;
+      margin: 10px 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    ul.perms {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    ul.perms li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: baseline;
+      padding: 10px 14px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      color: var(--text-dim);
+    }
+
+    ul.perms code {
+      font-family: "SF Mono", Monaco, Consolas, monospace;
+      font-size: 12.5px;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    code:not(ul.perms code) {
+      font-family: "SF Mono", Monaco, Consolas, monospace;
+      font-size: 13px;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--accent);
+      transition: color 150ms ease, border-color 150ms ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      border-bottom-color: var(--accent-hover);
+    }
+
+    .footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--text-subtle);
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 28px 14px 48px;
+      }
+      .hero { gap: 12px; }
+      .hero-logo { width: 38px; height: 38px; }
+      section.card { padding: 20px; }
+      ul.perms li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 1ms !important;
+        transition-duration: 1ms !important;
       }
     }
   </style>
 </head>
 <body>
-  <h1 data-i18n="privacyTitle">Drowzy - Privacy Policy</h1>
-  <p class="updated" data-i18n="privacyUpdated">Last updated: April 2026</p>
+  <main class="container">
+    <div class="hero">
+      <svg class="hero-logo" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" fill="currentColor"/>
+      </svg>
+      <h1 data-i18n="privacyTitle">Privacy Policy</h1>
+    </div>
+    <p class="updated" data-i18n="privacyUpdated">Last updated: April 2026</p>
 
-  <h2 data-i18n="privacyShortTitle">The short version</h2>
-  <p data-i18n="privacyShortText">Drowzy doesn't collect any data. No analytics, no tracking, no external servers. Everything stays in your browser.</p>
+    <div class="tldr">
+      <span data-i18n="privacyShortText"><strong>Drowzy doesn't collect any data.</strong> No analytics, no tracking, no external servers. Everything stays in your browser.</span>
+    </div>
 
-  <h2 data-i18n="privacyStoredTitle">What gets stored</h2>
-  <p data-i18n="privacyStoredText">Your settings (suspend timer, whitelist, preferences) are saved using Chrome's built-in storage APIs: chrome.storage.sync for settings that follow your Chrome profile, chrome.storage.local for stats and saved sessions, and chrome.storage.session for temporary data like tab timestamps. None of this is sent to any third-party server.</p>
+    <section class="card">
+      <h2 data-i18n="privacyStoredTitle">What gets stored</h2>
+      <p data-i18n="privacyStoredText">Your settings (suspend timer, whitelist, preferences) are saved using Chrome's built-in storage APIs. Settings go to <code>chrome.storage.sync</code> so they follow your Chrome profile across devices. Stats and saved sessions use <code>chrome.storage.local</code>. Tab timestamps use <code>chrome.storage.session</code>, which Chrome wipes when the browser closes. None of this is ever sent to a third-party server.</p>
+    </section>
 
-  <h2 data-i18n="privacyPermissionsTitle">Permissions</h2>
-  <p data-i18n="privacyPermissionsIntro">Drowzy uses these Chrome permissions:</p>
-  <ul>
-    <li><strong>tabs</strong> &ndash; <span data-i18n="privacyPermTabs">listing, suspending, and restoring browser tabs</span></li>
-    <li><strong>storage</strong> &ndash; <span data-i18n="privacyPermStorage">saving your settings locally</span></li>
-    <li><strong>alarms</strong> &ndash; <span data-i18n="privacyPermAlarms">periodic checks for inactive tabs</span></li>
-    <li><strong>contextMenus</strong> &ndash; <span data-i18n="privacyPermContextMenus">right-click menu options</span></li>
-    <li><strong>scripting</strong> &ndash; <span data-i18n="privacyPermScripting">injecting a small script to detect unsaved form data before suspending a tab</span></li>
-    <li><strong>sidePanel</strong> &ndash; <span data-i18n="privacyPermSidePanel">displaying Drowzy in Chrome's side panel</span></li>
-    <li><strong>optional host access</strong> &ndash; <span data-i18n="privacyPermHost">only granted if you enable form protection or tab marking, to detect unsaved form data on pages you're about to suspend</span></li>
-  </ul>
+    <section class="card">
+      <h2 data-i18n="privacyPermissionsTitle">Permissions</h2>
+      <p data-i18n="privacyPermissionsIntro">Drowzy requests only the permissions it needs to do its one job:</p>
+      <ul class="perms">
+        <li><code>tabs</code><span data-i18n="privacyPermTabs">Listing, suspending, and restoring browser tabs.</span></li>
+        <li><code>storage</code><span data-i18n="privacyPermStorage">Saving your settings and sessions locally.</span></li>
+        <li><code>alarms</code><span data-i18n="privacyPermAlarms">Periodic checks for inactive tabs (every 60 seconds).</span></li>
+        <li><code>contextMenus</code><span data-i18n="privacyPermContextMenus">Right-click menu options for suspend and whitelist.</span></li>
+        <li><code>scripting</code><span data-i18n="privacyPermScripting">Injecting a small script to detect unsaved form data before suspending a tab. Opt-in only.</span></li>
+        <li><code>sidePanel</code><span data-i18n="privacyPermSidePanel">Displaying Drowzy in Chrome's side panel.</span></li>
+        <li><code>&lt;all_urls&gt;</code><span data-i18n="privacyPermHost">Optional host access, requested on-demand only when you enable Form Protection or Suspended-Tab Marking. Never requested at install. Revocable anytime.</span></li>
+      </ul>
+    </section>
 
-  <h2 data-i18n="privacyContactTitle">Contact</h2>
-  <p data-i18n="privacyContactText">Questions? Reach out at drowzyextension@gmail.com</p>
+    <section class="card">
+      <h2>Your data</h2>
+      <p>Because nothing leaves your browser, there's no dashboard, no account, and no way for us to see what you've done with Drowzy. If you uninstall Drowzy, Chrome offers you a chance to send optional feedback (reason for uninstalling, browser, OS) through a separate web page; that submission is explicit and goes to an anonymous form. You can skip it by closing the tab.</p>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="privacyContactTitle">Contact</h2>
+      <p data-i18n="privacyContactText">Questions, concerns, or data requests? Email <a href="mailto:drowzyextension@gmail.com">drowzyextension@gmail.com</a>.</p>
+    </section>
+
+    <div class="footer">
+      Drowzy is open source. <a href="https://github.com/ml3dev/drowzy" target="_blank" rel="noopener">Browse the code on GitHub</a>.
+    </div>
+  </main>
 
   <script src="privacy-policy.js"></script>
 </body>

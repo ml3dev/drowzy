@@ -14,6 +14,6 @@ try {
   var ver = chrome.runtime.getManifest().version;
   var footer = document.querySelector('.footer');
   if (footer) footer.textContent = 'Drowzy v' + ver;
-  var badge = document.querySelector('.version-badge [data-i18n="changelogVersion130"]');
-  if (badge) badge.textContent = 'Version ' + ver;
+  var badge = document.querySelector('.version-badge .version-label');
+  if (badge) badge.textContent = (chrome.i18n.getMessage('changelogVersionLabel') || 'Version') + ' ' + ver;
 } catch(e) {}

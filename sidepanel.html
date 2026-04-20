@@ -20,13 +20,13 @@
   <div class="popup-container">
     <header class="popup-header">
       <div class="header-left">
-        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" fill="currentColor" opacity="0.9"/>
         </svg>
         <span class="header-title">Drowzy</span>
       </div>
       <div class="header-actions">
-        <button class="btn-icon-only" id="themeToggle" data-i18n-title="switchToLight" title="Switch to light mode"></button>
+        <button class="btn-icon-only" id="themeToggle" aria-label="Toggle theme"></button>
       </div>
     </header>
 
@@ -41,7 +41,7 @@
         <span class="strip-stat-label" data-i18n="statProtected">protected</span>
       </div>
       <div class="strip-divider"></div>
-      <div class="strip-stat">
+      <div class="strip-stat" data-i18n-title="ramEstimateTooltip" title="Estimated using ~150 MB per suspended tab. Actual savings vary by page.">
         <span class="strip-stat-value" id="statMemoryValue">&mdash;</span>
         <span class="strip-stat-label" data-i18n="statSaved">saved</span>
       </div>
@@ -52,7 +52,7 @@
         <span class="btn-icon" data-icon="pauseCircle"></span>
         <span class="btn-text" data-i18n="suspendOthers">Suspend Others</span>
       </button>
-<button class="btn" id="btnWakeAll">
+      <button class="btn" id="btnWakeAll">
         <span class="btn-icon" data-icon="playCircle"></span>
         <span class="btn-text" data-i18n="wakeAll">Wake All</span>
       </button>
@@ -78,7 +78,7 @@
 
       <div class="current-tab" id="currentTabSection">
         <div class="current-tab-info">
-          <img class="favicon" id="currentTabFavicon" src="" alt="">
+          <img class="favicon" id="currentTabFavicon" alt="">
           <div class="current-tab-details">
             <div class="current-tab-domain" id="currentTabDomain">&mdash;</div>
             <div class="current-tab-status" id="currentTabStatus" data-i18n="loading">Loading...</div>
@@ -108,7 +108,10 @@
         <input type="text" id="tabSearchInput" class="input" data-i18n-placeholder="searchTabs" placeholder="Search tabs...">
       </div>
       <div class="tab-list" id="tabList">
-        <div class="tab-list-empty" data-i18n="loadingTabs">Loading tabs...</div>
+        <div class="tab-list-empty is-loading">
+          <span class="empty-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+          <span data-i18n="loadingTabs">Loading tabs...</span>
+        </div>
       </div>
 
       <div class="sections-area">
@@ -134,7 +137,10 @@
               </div>
               <div class="session-feedback" id="sessionFeedback"></div>
               <div class="session-list" id="sessionList">
-                <div class="empty-state" data-i18n="emptySessionState">Save your first session to restore tabs anytime</div>
+                <div class="empty-state">
+                  <span class="empty-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg></span>
+                  <span data-i18n="emptySessionState">Save your first session to restore tabs anytime</span>
+                </div>
               </div>
             </div>
           </div>
@@ -150,23 +156,35 @@
           </button>
           <div class="section-body" id="statsBody">
             <div class="section-body-inner">
+              <div class="stat-hero" data-i18n-title="ramEstimateTooltip" title="Estimated using ~150 MB per suspended tab. Actual savings vary by page.">
+                <span class="stat-hero-icon" data-icon="zap"></span>
+                <div class="stat-hero-content">
+                  <span class="stat-hero-value" id="statRamAllTime">&mdash;</span>
+                  <span class="stat-hero-label" data-i18n="statLifetimeRam">Lifetime RAM saved</span>
+                </div>
+              </div>
               <div class="stats-grid">
                 <div class="stat-card">
-                  <span class="stat-card-label" data-i18n="statToday">Today</span>
-                  <span class="stat-card-value" id="statToday">0</span>
+                  <span class="stat-card-icon" data-icon="moon" data-icon-size="12"></span>
+                  <div class="stat-card-content">
+                    <span class="stat-card-value" id="statToday">0</span>
+                    <span class="stat-card-label" data-i18n="statToday">Today</span>
+                  </div>
                 </div>
                 <div class="stat-card">
-                  <span class="stat-card-label" data-i18n="statAllTime">All time</span>
-                  <span class="stat-card-value" id="statAllTime">0</span>
+                  <span class="stat-card-icon" data-icon="barChart3" data-icon-size="12"></span>
+                  <div class="stat-card-content">
+                    <span class="stat-card-value" id="statAllTime">0</span>
+                    <span class="stat-card-label" data-i18n="statAllTime">All time</span>
+                  </div>
                 </div>
-                <div class="stat-card">
-                  <span class="stat-card-label" data-i18n="statRamSaved">RAM saved (est.)</span>
-                  <span class="stat-card-value" id="statRamAllTime">&mdash;</span>
-                </div>
-                <div class="stat-card">
-                  <span class="stat-card-label" data-i18n="statMemberSince">Member since</span>
-                  <span class="stat-card-value" id="statMemberSince">&mdash;</span>
-                </div>
+              </div>
+              <div class="stats-footer">
+                <span class="stat-member" id="statMemberSince">&mdash;</span>
+                <button class="btn btn-sm" id="btnShareStats">
+                  <span data-icon="clipboard" data-icon-size="11"></span>
+                  <span data-i18n="shareStats">Share</span>
+                </button>
               </div>
             </div>
           </div>
@@ -241,7 +259,7 @@
                 </div>
               </div>
               <div class="setting-row">
-                <a class="settings-link" id="btnWhatsNew" href="#" data-i18n="whatsNew">What's new in v1.3.0</a>
+                <a class="settings-link" id="btnWhatsNew" href="#" data-i18n="whatsNew">What's new</a>
               </div>
             </div>
           </div>
@@ -249,7 +267,7 @@
       </div>
 
       <div class="popup-footer">
-        <span>Drowzy v1.3.0</span>
+        <span class="footer-version"></span>
       </div>
     </div>
   </div>

@@ -5,7 +5,6 @@ if (!window._drowzyFormcheckLoaded) {
 window._drowzyFormcheckLoaded = true;
 
 chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
-  if (sender.id !== chrome.runtime.id) return;
   if (msg.action === 'checkFormData') {
     sendResponse({ hasFormData: hasUnsavedFormData() });
   } else if (msg.action === 'markSuspended') {
@@ -30,6 +29,7 @@ function showSuspendWarning() {
   if (!document.body || document.getElementById('drowzy-suspend-warning')) return;
   var el = document.createElement('div');
   el.id = 'drowzy-suspend-warning';
+  el.setAttribute('role', 'alert');
   el.textContent = chrome.i18n.getMessage('suspendWarningText') || 'Suspending tab soon...';
   el.style.cssText = 'position:fixed;top:0;left:0;right:0;padding:6px 12px;background:rgba(167,139,250,0.95);color:#fff;font:13px -apple-system,system-ui,sans-serif;text-align:center;z-index:2147483647;transition:opacity 0.3s;cursor:pointer;';
   el.title = 'Click to dismiss';

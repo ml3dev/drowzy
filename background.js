@@ -13,6 +13,7 @@ const DEFAULT_SETTINGS = {
 };
 
 let _injectedTabs = new Set();
+let _suspending = false;
 
 async function hasHostPermission() {
   try {
@@ -23,19 +24,23 @@ async function hasHostPermission() {
 async function injectFormCheck(tabId) {
   if (_injectedTabs.has(tabId)) return;
   if (!(await hasHostPermission())) return;
+  // Add optimistically before await to prevent concurrent callers from double-injecting
+  _injectedTabs.add(tabId);
   try {
     await chrome.scripting.executeScript({
       target: { tabId },
       files: ['formcheck.js']
     });
-    _injectedTabs.add(tabId);
-  } catch {}
+  } catch {
+    _injectedTabs.delete(tabId);
+  }
 }
 
 const ALARM_NAME = 'check-tabs';
 const BADGE_COLOR = '#6C63FF';
 const MB_PER_TAB = 150;
 const MAX_SESSIONS = 20;
+const UNINSTALL_URL = 'https://ml3dev.github.io/drowzy/uninstall.html';
 
 let badgeTimer = null;
 
@@ -55,12 +60,35 @@ chrome.contextMenus.onClicked.addListener(onContextMenuClicked);
 chrome.commands.onCommand.addListener(onCommand);
 chrome.runtime.onMessage.addListener(onMessage);
 
+// Refresh the badge when the user switches between Chrome windows, so the
+// window-scoped count reflects the focused window. WINDOW_ID_NONE means focus
+// moved out of Chrome entirely — let updateBadgeNow clear the badge.
+try {
+  if (chrome.windows && chrome.windows.onFocusChanged) {
+    chrome.windows.onFocusChanged.addListener(function() {
+      debouncedBadgeUpdate();
+    });
+  }
+} catch {}
+
+// Reset host-gated settings when user revokes optional host permission
+chrome.permissions.onRemoved.addListener(async (permissions) => {
+  if (permissions.origins && permissions.origins.includes('<all_urls>')) {
+    let settings = await getSettings();
+    let changed = false;
+    if (settings.protectForms) { settings.protectForms = false; changed = true; }
+    if (settings.markSuspendedTabs) { settings.markSuspendedTabs = false; changed = true; }
+    if (changed) await chrome.storage.sync.set({ settings });
+  }
+});
+
 async function onInstalled(details) {
   await initSettings();
   await createAlarm();
   createContextMenus();
   await initTimestamps();
   await updateBadgeNow();
+  try { await chrome.runtime.setUninstallURL(UNINSTALL_URL); } catch {}
 
   // Sync host-gated settings with actual permission state
   try {
@@ -76,6 +104,7 @@ async function onInstalled(details) {
 
   if (details.reason === 'install') {
     await initStats();
+    await chrome.storage.local.set({ drowzy_lastChangelogVersion: chrome.runtime.getManifest().version });
     try { chrome.tabs.create({ url: 'onboarding.html' }); } catch {}
   } else if (details.reason === 'update') {
     let version = chrome.runtime.getManifest().version;
@@ -97,6 +126,8 @@ async function onStartup() {
   await createAlarm();
   await initTimestamps();
   await updateBadgeNow();
+  // Re-affirm in case it was cleared or we updated the URL since install
+  try { await chrome.runtime.setUninstallURL(UNINSTALL_URL); } catch {}
 
   let settings = await getSettings();
   if (settings.suspendOnStartup) {
@@ -113,14 +144,8 @@ async function suspendAllOnStartup(settings) {
       if (settings.protectPinned && tab.pinned) continue;
       if (settings.protectAudio && tab.audible) continue;
       if (isWhitelisted(tab.url, settings.whitelist)) continue;
-      // Use discard directly at startup for speed (avoids per-tab getSettings + form injection)
-      // Form check is skipped at startup since content scripts aren't reliably loaded yet
-      if (settings.markSuspendedTabs) {
-        try {
-          await injectFormCheck(tab.id);
-          await chrome.tabs.sendMessage(tab.id, { action: 'markSuspended' });
-        } catch {}
-      }
+      // Skip form check and title marking at startup — content scripts aren't reliably loaded
+      // and the tab is about to be discarded anyway (title resets on reload)
       try {
         let result = await chrome.tabs.discard(tab.id);
         if (result) await recordSuspension();
@@ -281,7 +306,19 @@ async function onTabActivated(activeInfo) {
 async function onTabUpdated(tabId, changeInfo) {
   if (changeInfo.status === 'complete' || changeInfo.url) {
     await touchTab(tabId);
-    if (changeInfo.url) _injectedTabs.delete(tabId);
+  }
+  // Audio going quiet (pause, mute, call ending) counts as activity so the
+  // tab gets the full suspend threshold before becoming eligible. Prevents
+  // paused-Spotify / ended-meeting tabs from being suspended immediately
+  // after their audible flag drops, which would force a full page reload.
+  if (changeInfo.audible === false) {
+    await touchTab(tabId);
+  }
+  // Content scripts are torn down on navigation AND reload. Drop the
+  // _injectedTabs marker on either a URL change or when the page starts
+  // loading again (covers manual reload / browser restore where URL stays).
+  if (changeInfo.url || changeInfo.status === 'loading') {
+    _injectedTabs.delete(tabId);
   }
   if (changeInfo.discarded !== undefined) debouncedBadgeUpdate();
 }
@@ -289,10 +326,15 @@ async function onTabUpdated(tabId, changeInfo) {
 async function onTabCreated(tab) { await touchTab(tab.id); }
 
 async function onTabRemoved(tabId) {
-  delete _timestamps[tabId];
   _injectedTabs.delete(tabId);
-  _tsDirty = true;
-  scheduleFlush();
+  // Only mark dirty if we actually removed a tracked timestamp — avoids
+  // flushing session storage when the tab wasn't being tracked.
+  if (tabId in _timestamps) {
+    delete _timestamps[tabId];
+    _tsDirty = true;
+    // Flush immediately — worker may be killed before a scheduled flush runs
+    await flushTimestamps();
+  }
   debouncedBadgeUpdate();
 }
 
@@ -310,39 +352,49 @@ async function touchTab(tabId) {
 }
 
 async function checkAndSuspendTabs() {
-  let settings = await getSettings();
-  if (!settings.enableAutoSuspend) return;
-
-  let minutes = Number(settings.suspendAfterMinutes);
-  if (!minutes || minutes <= 0) return;
-
-  let tabs = await chrome.tabs.query({});
-  let now = Date.now();
-  let threshold = minutes * 60 * 1000;
-
-  let toSuspend = [];
-  for (let tab of tabs) {
-    if (!(tab.id in _timestamps)) {
-      _timestamps[tab.id] = now;
-      _tsDirty = true;
+  // Guard against concurrent alarm firings (2.5s warning delay can overlap)
+  if (_suspending) return;
+  _suspending = true;
+  try {
+    // Lazy-reload timestamps if service worker restarted mid-session
+    if (Object.keys(_timestamps).length === 0) {
+      await initTimestamps();
     }
-    if (shouldSuspend(tab, settings, _timestamps, now, threshold)) {
-      toSuspend.push(tab.id);
-    }
-  }
 
-  if (_tsDirty) scheduleFlush();
+    let settings = await getSettings();
+    if (!settings.enableAutoSuspend) return;
 
-  if (toSuspend.length) {
-    for (let tabId of toSuspend) {
-      await injectFormCheck(tabId);
-      try { await chrome.tabs.sendMessage(tabId, { action: 'suspendWarning' }); } catch {}
+    let minutes = Number(settings.suspendAfterMinutes);
+    if (!minutes || minutes <= 0) return;
+
+    let tabs = await chrome.tabs.query({});
+    let now = Date.now();
+    let threshold = minutes * 60 * 1000;
+
+    let toSuspend = [];
+    for (let tab of tabs) {
+      if (!(tab.id in _timestamps)) {
+        _timestamps[tab.id] = now;
+        _tsDirty = true;
+      }
+      if (shouldSuspend(tab, settings, _timestamps, now, threshold)) {
+        toSuspend.push(tab.id);
+      }
     }
-    await new Promise(r => setTimeout(r, 2500));
-    for (let tabId of toSuspend) {
-      await suspendTab(tabId);
+
+    if (_tsDirty) scheduleFlush();
+
+    if (toSuspend.length) {
+      for (let tabId of toSuspend) {
+        await injectFormCheck(tabId);
+        try { await chrome.tabs.sendMessage(tabId, { action: 'suspendWarning' }); } catch {}
+      }
+      await new Promise(r => setTimeout(r, 2500));
+      for (let tabId of toSuspend) {
+        await suspendTab(tabId);
+      }
     }
-  }
+  } finally { _suspending = false; }
 }
 
 function shouldSuspend(tab, settings, timestamps, now, threshold) {
@@ -381,13 +433,13 @@ function isWhitelisted(url, whitelist) {
   } catch { return false; }
 }
 
-async function suspendTab(tabId) {
+async function suspendTab(tabId, cachedSettings) {
   try {
     let tab = await chrome.tabs.get(tabId);
     if (tab.active || tab.discarded) return false;
     if (isInternalUrl(tab.url)) return false;
 
-    let settings = await getSettings();
+    let settings = cachedSettings || await getSettings();
     if (settings.protectPinned && tab.pinned) return false;
     if (settings.protectAudio && tab.audible) return false;
     if (isWhitelisted(tab.url, settings.whitelist)) return false;
@@ -415,7 +467,7 @@ async function suspendTab(tabId) {
     // Discarding an active tab forces a visible reload when the user looks at it.
     try {
       let fresh = await chrome.tabs.get(tabId);
-      if (fresh.active || fresh.discarded || fresh.audible) return false;
+      if (fresh.active || fresh.discarded || fresh.audible || fresh.status === 'loading') return false;
     } catch { return false; }
 
     let result = await chrome.tabs.discard(tabId);
@@ -436,9 +488,14 @@ function debouncedBadgeUpdate() {
 async function updateBadgeNow() {
   try {
     let [active] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
-    let query = { discarded: true };
-    if (active) query.windowId = active.windowId;
-    let discarded = await chrome.tabs.query(query);
+    // If no window is focused (e.g., Chrome minimized or focus in another app),
+    // clear the badge rather than counting discarded tabs across every window —
+    // a cross-window count is misleading in a window-scoped badge.
+    if (!active) {
+      await chrome.action.setBadgeText({ text: '' });
+      return;
+    }
+    let discarded = await chrome.tabs.query({ discarded: true, windowId: active.windowId });
     let n = discarded.length;
     await chrome.action.setBadgeText({ text: n > 0 ? String(n) : '' });
     await chrome.action.setBadgeBackgroundColor({ color: BADGE_COLOR });
@@ -503,7 +560,10 @@ async function handleSuspendCurrent(activeTab) {
   if (isWhitelisted(activeTab.url, settings.whitelist)) return;
 
   let allTabs = await chrome.tabs.query({ windowId: activeTab.windowId });
-  let other = allTabs.find(tab => tab.id !== activeTab.id && !tab.discarded && !isInternalUrl(tab.url));
+  // Prefer the next tab by browser position, then previous, then any non-discarded tab
+  let candidates = allTabs.filter(tab => tab.id !== activeTab.id && !tab.discarded && !isInternalUrl(tab.url));
+  if (!candidates.length) return;
+  let other = candidates.find(tab => tab.index > activeTab.index) || candidates[candidates.length - 1];
   if (!other) return;
 
   try {
@@ -521,7 +581,7 @@ async function suspendAllOthers(windowId) {
     if (settings.protectPinned && tab.pinned) continue;
     if (settings.protectAudio && tab.audible) continue;
     if (isWhitelisted(tab.url, settings.whitelist)) continue;
-    await suspendTab(tab.id);
+    await suspendTab(tab.id, settings);
   }
 }
 
@@ -541,7 +601,8 @@ async function addWhitelist(domain) {
   if (!d) return { added: false, error: t('invalidDomain') };
   // Strip port from domain part before validation
   let domainPart = d.split('/')[0].replace(/:\d+$/, '');
-  if (!domainPart.includes('.') || domainPart.startsWith('.') || domainPart.endsWith('.')) {
+  let isLocal = domainPart === 'localhost' || /^\d{1,3}(\.\d{1,3}){3}$/.test(domainPart) || domainPart === '::1';
+  if (!isLocal && (!domainPart.includes('.') || domainPart.startsWith('.') || domainPart.endsWith('.'))) {
     return { added: false, error: t('invalidDomain') };
   }
   // Also strip port from stored value so it matches hostname-based lookups
@@ -686,10 +747,12 @@ async function restoreSession(id, mode) {
     }
   }
 
-  return { success: true, count: restorable.length };
+  return { success: true, count: createdTabs.length };
 }
 
 async function getTabList(windowId) {
+  // Lazy-reload timestamps if service worker restarted
+  if (Object.keys(_timestamps).length === 0) await initTimestamps();
   let settings = await getSettings();
   let tabs = await chrome.tabs.query(windowId ? { windowId } : {});
   let now = Date.now();
@@ -808,11 +871,8 @@ async function handleMessage(msg) {
     }
     case 'wakeTab':
       try {
-        // Remove [zzz] prefix before reloading if markSuspendedTabs was used
-        try {
-          await injectFormCheck(msg.tabId);
-          await chrome.tabs.sendMessage(msg.tabId, { action: 'unmarkSuspended' });
-        } catch {}
+        // Tab is discarded — can't inject scripts or send messages.
+        // Just reload; the page title resets naturally (no [zzz] prefix).
         await chrome.tabs.reload(msg.tabId);
         _injectedTabs.delete(msg.tabId);
         await updateBadgeNow();
@@ -831,15 +891,20 @@ async function handleMessage(msg) {
       let closed = 0;
       for (let tab of tabs) {
         if (!tab.url || isInternalUrl(tab.url)) continue;
-        let url = tab.url.replace(/#.*$/, '').replace(/\/$/, '');
+        // Normalize: lowercase, strip fragment, strip trailing slash before query or end
+        let url = tab.url.toLowerCase().replace(/#.*$/, '').replace(/\/(\?|$)/, '$1');
         if (!groups[url]) groups[url] = [];
         groups[url].push(tab);
       }
       for (let url in groups) {
         if (groups[url].length < 2) continue;
-        let keep = groups[url].find(tab => tab.active) || groups[url][0];
+        // Prefer keeping pinned tabs, then the active tab, then the first occurrence
+        let keep = groups[url].find(tab => tab.pinned)
+          || groups[url].find(tab => tab.active)
+          || groups[url][0];
         for (let tab of groups[url]) {
-          if (tab.id !== keep.id) {
+          // Never close pinned tabs (even if not the chosen "keep")
+          if (tab.id !== keep.id && !tab.pinned) {
             try { await chrome.tabs.remove(tab.id); closed++; } catch {}
           }
         }

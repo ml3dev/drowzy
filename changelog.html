@@ -289,7 +289,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" fill="currentColor" opacity="0.9"/>
       </svg>
       <span class="header-text" data-i18n="changelogWhatsNew">What's New</span>
@@ -297,54 +297,63 @@
 
     <div class="version-badge">
       <span class="dot"></span>
-      <span data-i18n="changelogVersion130">Version 1.3.0</span>
+      <span class="version-label"></span>
     </div>
 
     <div class="section-label" data-i18n="changelogNewFeatures">New Features</div>
     <ul class="change-list">
       <li class="change-item">
         <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 14h6"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog120CloseDuplicatesTitle">Close Duplicate Tabs</div>
-          <div class="change-desc" data-i18n="changelog120CloseDuplicatesDesc">One-click button to find and close duplicate tabs in the current window. Keeps the first occurrence and closes the rest.</div>
+          <div class="change-title">Polished Empty States</div>
+          <div class="change-desc">The tab list and session list now show a centered icon and softer copy instead of bare gray text. The "Loading tabs..." state has a gentle pulsing moon while data arrives.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog120TabSearchTitle">Tab Search</div>
-          <div class="change-desc" data-i18n="changelog120TabSearchDesc">Search and filter your tab list by title or URL. Great for quickly finding a specific tab in a crowded window.</div>
+          <div class="change-title">Rock-Steady Current Tab</div>
+          <div class="change-desc">The current-tab card no longer jitters between polls. The favicon and domain now stay perfectly still instead of briefly shifting every few seconds.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16V8"/><path d="M12 16v-5"/><path d="M17 16v-3"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog120ThemeToggleTitle">Dark / Light Theme</div>
-          <div class="change-desc" data-i18n="changelog120ThemeToggleDesc">Toggle between dark and light mode with the new theme button in the header. Your preference is saved across sessions.</div>
+          <div class="change-title">Refined Stats Section</div>
+          <div class="change-desc">The lifetime RAM hero card is toned down, each stat card has a subtle colored accent, and the numbers feel more earned without shouting.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog120SidePanelTitle">Side Panel</div>
-          <div class="change-desc" data-i18n="changelog120SidePanelDesc">Open Drowzy in Chrome's side panel for a full-height view that stays open while you browse. Same interface, more room.</div>
+          <div class="change-title">Smoother Section Animations</div>
+          <div class="change-desc">Sessions, Stats, and Settings now expand and collapse with a smooth grid-based animation, so the popup no longer snap-scrolls when you open a section.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog120MarkSuspendedTitle">Mark Suspended Tabs</div>
-          <div class="change-desc" data-i18n="changelog120MarkSuspendedDesc">Optional setting to prefix suspended tab titles with [zzz], making them easy to spot in your tab bar at a glance.</div>
+          <div class="change-title">Sections Remember Their State</div>
+          <div class="change-desc">Sessions, Stats, and Settings now remember whether you had them open or closed, so every popup opens in exactly the shape you left it.</div>
+        </div>
+      </li>
+      <li class="change-item">
+        <div class="change-icon feature">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title">Memory Estimate Tooltip</div>
+          <div class="change-desc">Hover over the "saved" counter or the lifetime RAM hero card to see how the number is calculated (estimated ~150 MB per suspended tab; real savings vary by page).</div>
         </div>
       </li>
     </ul>
@@ -353,38 +362,56 @@
     <ul class="change-list">
       <li class="change-item">
         <div class="change-icon a11y">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog120I18nTitle">57 Languages</div>
-          <div class="change-desc" data-i18n="changelog120I18nDesc">Drowzy is now fully translated into 57 languages. The UI automatically matches your browser's language setting.</div>
+          <div class="change-title">Smaller Permission Surface</div>
+          <div class="change-desc">Dropped the <code>tabGroups</code> permission entirely, and moved host access to on-demand so it's only requested when you turn on form protection or suspended-tab marking.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon a11y">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog120ExportTabsTitle">Export Tab List</div>
-          <div class="change-desc" data-i18n="changelog120ExportTabsDesc">Copy your full tab list (titles and URLs) to the clipboard with one click. Handy for sharing or saving a snapshot.</div>
+          <div class="change-title">22-Fix Reliability Pass</div>
+          <div class="change-desc">A broad polish sweep across background logic and popup handlers: whitelist now accepts <code>localhost</code> and IPs, double-submit is guarded, timestamps persist across service-worker restarts, and a fresh install no longer pops the changelog on first open.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon a11y">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="10" x2="10" y1="15" y2="9"/><line x1="14" x2="14" y1="15" y2="9"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog120ExportSessionsTitle">Export Sessions as JSON</div>
-          <div class="change-desc" data-i18n="changelog120ExportSessionsDesc">Copy all saved sessions to your clipboard as JSON for backup or transfer to another machine.</div>
+          <div class="change-title">Smarter Suspension</div>
+          <div class="change-desc">Tabs are re-checked right before being suspended, so changes you make during the warning window (pinning, starting audio, whitelisting) are respected instead of ignored.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon a11y">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog120SuspendWarningTitle">Suspend Warning</div>
-          <div class="change-desc" data-i18n="changelog120SuspendWarningDesc">Tabs now show a brief "Suspending tab soon..." notice before being auto-suspended, so you're never caught off guard.</div>
+          <div class="change-title">Safer Session Restore</div>
+          <div class="change-desc">If a session restore fails partway through, Drowzy now rolls back cleanly instead of leaving behind a half-restored window.</div>
+        </div>
+      </li>
+      <li class="change-item">
+        <div class="change-icon a11y">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title">Smarter Audio Handling</div>
+          <div class="change-desc">When a tab's audio stops (pause Spotify, mute a Meet, end a call), Drowzy now treats that as activity and resets the idle timer. Previously, pausing for a meeting would make the tab immediately eligible for suspension and force a full reload on resume.</div>
+        </div>
+      </li>
+      <li class="change-item">
+        <div class="change-icon a11y">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title">Per-Window Badge Count</div>
+          <div class="change-desc">The badge on Drowzy's toolbar icon now updates when you switch between Chrome windows, so the count always reflects the window you're actually looking at.</div>
         </div>
       </li>
     </ul>
@@ -403,9 +430,7 @@
       </div>
     </div>
 
-    <div class="footer">
-      Drowzy v1.3.0
-    </div>
+    <div class="footer"></div>
   </div>
 
 <script src="changelog.js"></script>
