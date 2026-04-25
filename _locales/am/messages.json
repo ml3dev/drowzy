@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "የተቆጠበ"
   },
+  "statForecast": {
+    "message": "ይገኛል"
+  },
   "suspendOthers": {
     "message": "ሌሎችን አቋርጥ"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "ምንም ትሮች አልተገኙም"
   },
+  "tabUntitled": {
+    "message": "ክዕስ የሌለው"
+  },
   "failedToLoad": {
     "message": "መጫን አልተሳካም። እንደገና ለመሞከር ብቅ-ባዩን እንደገና ይክፈቱ።"
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "ድምጽ"
+  },
+  "badgeWhitelisted": {
+    "message": "በነጭ ዝርዝር"
   },
   "badgeProtected": {
     "message": "የተጠበቀ"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "ሁል ጊዜ"
   },
+  "statLifetimeRam": {
+    "message": "የእድሜ ልክ RAM ቁጠባ"
+  },
+  "ramEstimateTooltip": {
+    "message": "በግምት 150 ሜባ በታገደ ትር በመጠቀም የተሰላ። ትክክለኛ ቁጠባ በገጽ ይለያያል።"
+  },
+  "ramForecastTooltip": {
+    "message": "ስራ ላይ ያልሆኑ ትሮችዎ ሲተኙ የሚያድነው የተገመተ ማህደረ ትውስታ፣ በ ~150 ሜባ በአንድ ትር።"
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ ትር(ሮች) ታግደዋል · ~$RAM$ ነፃ ሆነ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ ትር(ሮች) ተቀስቅሰዋል",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "ለማገድ ሌሎች ትሮች የሉም"
+  },
+  "noSuspendedToWake": {
+    "message": "ለመቀስቀስ የታገዱ ትሮች የሉም"
+  },
+  "pinnedWontSuspend": {
+    "message": "ተሰክቷል — አይታገድም"
+  },
+  "audioWontSuspend": {
+    "message": "ድምጽ እየተጫወተ — አይታገድም"
+  },
+  "whitelistedWontSuspend": {
+    "message": "በነጭ ዝርዝር ላይ — አይታገድም"
+  },
+  "systemPageCantSuspend": {
+    "message": "የስርዓት ገጽ — ሊታገድ አይችልም"
+  },
+  "clickToDismiss": {
+    "message": "ለማጥፋት ጠቅ ያድርጉ"
+  },
+  "keepAwakeBtn": {
+    "message": "ንቁ አድርግ"
+  },
+  "suspendTimerHint": {
+    "message": "የተቀየሩ ትሮች ከዚህ በኋላ ይታገዳሉ። ከረጅም ክፍተት በኋላ ወደ ትሮች ብትመለሱ ጊዜውን ጨምሩ።"
+  },
+  "onboardingPinTip": {
+    "message": "<strong>ጠቃሚ ምክር:</strong> Drowzy ን በአንድ ጠቅታ ለመድረስ በ Chrome መሣሪያ አሞሌዎ ላይ ያለውን የእንቆቅልሽ አዶ ይጫኑ።"
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>አሁንም የምትፈልገውን ትር እያቆመ ነው?</strong> Drowzy → ቅንብሮች ይክፈቱ የ30 ደቂቃ ሰዓቱን ለማሳደግ፣ ወይም ጣቢያውን በአንድ ጠቅታ ወደ ነጭ ዝርዝርዎ ያክሉ።"
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>ቅጽ እየሞላህ ነው?</strong> ያልተቀመጡ ግቤቶች ያላቸውን ትሮች ከመታገድ ለመጠበቅ \"ቅጾች ያላቸውን ትሮች ጠብቅ\" ን በቅንብሮች ውስጥ ያንቁ።"
+  },
+  "onboardingRemapHint": {
+    "message": "ሌሎች የቁልፍ ሰሌዳ አቋራጮች ይፈልጋሉ? እዚህ ያብጇቸው →"
+  },
+  "reviewLeaveTitle": {
+    "message": "ፈጣን ግምገማ ይተዉ"
+  },
+  "reviewReportTitle": {
+    "message": "ችግር ሪፖርት ያድርጉ"
+  },
+  "reviewDismissTitle": {
+    "message": "አስወግድ"
+  },
   "statMemberSince": {
     "message": "አባል ከ"
+  },
+  "shareStats": {
+    "message": "አጋራ"
+  },
+  "copiedStats": {
+    "message": "ስታቲስቲክስ ተቀድቷል!"
   },
   "settings": {
     "message": "ቅንብሮች"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "በነጭ ዝርዝር ውስጥ ያሉ ጣቢያዎች የሉም"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "በማቋረጥ ላይ..."
   },
-  "done": {
-    "message": "ተከናውኗል!"
+  "suspendingSoon": {
+    "message": "በቅርቡ"
   },
   "waking": {
     "message": "በመቀስቀስ ላይ..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "አስወግድ"
+  },
+  "replace": {
+    "message": "ተካ"
+  },
+  "replaceSessionTitle": {
+    "message": "አሁን ያሉ ትሮች በዚህ ክፍለ ጊዜ ተካ"
+  },
+  "invalidDomain": {
+    "message": "ትክክለኛ ጎራ ያስገቡ (ለምሳሌ example.com)"
+  },
+  "extensionPage": {
+    "message": "ማስፋፊያ ገጽ"
+  },
+  "exportWhitelist": {
+    "message": "ወደ ውጭ ላክ"
+  },
+  "importWhitelist": {
+    "message": "አስገባ"
+  },
+  "exportWhitelistTitle": {
+    "message": "ነጭ ዝርዝር ቅዳ"
+  },
+  "importWhitelistTitle": {
+    "message": "ከቅንጥብ ሰሌዳ ነጭ ዝርዝር አስገባ"
+  },
+  "copiedSites": {
+    "message": "ተቀዱ $COUNT$ ድረ-ገጽ(ዎች)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "ተመጡ $COUNT$ አዲስ ድረ-ገጽ(ዎች)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "በቅንጥብ ሰሌዳ ውስጥ ትክክለኛ ጎራ አልተገኘም"
+  },
+  "clipboardReadFailed": {
+    "message": "ቅንጥብ ሰሌዳውን ማንበብ አልተቻለም"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy ይወዳሉ?"
+  },
+  "reviewYes": {
+    "message": "አዎ!"
+  },
+  "reviewNo": {
+    "message": "ብዙም አይደለም"
+  },
+  "whatsNew": {
+    "message": "በ v$VERSION$ ውስጥ አዲስ",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "ወደ ብርሃን ሁነታ ቀይር"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "ለማገድ እና ለነጭ ዝርዝር በቀኝ-ጠቅ ዝርዝር አማራጮች።"
   },
+  "privacyPermScripting": {
+    "message": "ትር ከመታገድ በፊት ያልተቀመጡ የቅጽ ውሂብ ለመፈለግ ትንሽ ስክሪፕት መጨመር። በውዴታ ብቻ።"
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzy ን በChrome የጎን ፓነል ውስጥ ማሳየት።"
+  },
+  "privacyPermHost": {
+    "message": "የቅጽ ጥበቃ ወይም የትር ምልክት ሲያንቁ ብቻ የሚሰጥ አማራጭ የአስተናጋጅ መዳረሻ። በመጫን ላይ በፍጹም አይጠየቅም። በማንኛውም ጊዜ መሰረዝ ይቻላል።"
+  },
   "privacyContactTitle": {
     "message": "ያግኙን"
   },
   "privacyContactText": {
     "message": "ጥያቄዎች? drowzyextension@gmail.com ላይ ያግኙን"
   },
-  "replace": {
-    "message": "ተካ"
+  "privacyYourDataTitle": {
+    "message": "የእርስዎ ውሂብ"
   },
-  "replaceSessionTitle": {
-    "message": "አሁን ያሉ ትሮች በዚህ ክፍለ ጊዜ ተካ"
+  "privacyYourDataText": {
+    "message": "ምንም ነገር ከአሳሽዎ ስለማይወጣ፣ ምንም ዳሽቦርድ፣ ምንም መለያ የለም፣ እና በDrowzy ምን እንዳደረጉ ለማየት ምንም መንገድ የለም። Drowzy ን ካራቆሉ፣ Chrome አማራጭ ግብረመልስ (የማራቆት ምክንያት፣ አሳሽ፣ OS) በተለየ የድር ገጽ በኩል የመላክ እድል ይሰጥዎታል፤ ያ ማስረከብ ግልጽ ነው እና ወደ ስም-አልባ ቅጽ ይሄዳል። ትሩን በመዝጋት መዝለል ይችላሉ።"
   },
-  "invalidDomain": {
-    "message": "ትክክለኛ ጎራ ያስገቡ (ለምሳሌ example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy ክፍት ምንጭ ነው።"
   },
-  "extensionPage": {
-    "message": "ማስፋፊያ ገጽ"
-  },
-  "exportWhitelist": {
-    "message": "ወደ ውጭ ላክ"
-  },
-  "importWhitelist": {
-    "message": "አስገባ"
-  },
-  "exportWhitelistTitle": {
-    "message": "ነጭ ዝርዝር ቅዳ"
-  },
-  "importWhitelistTitle": {
-    "message": "ከቅንጥብ ሰሌዳ ነጭ ዝርዝር አስገባ"
-  },
-  "copiedSites": {
-    "message": "ተቀዱ $COUNT$ ድረ-ገጽ(ዎች)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "ተመጡ $COUNT$ አዲስ ድረ-ገጽ(ዎች)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "በቅንጥብ ሰሌዳ ውስጥ ትክክለኛ ጎራ አልተገኘም"
-  },
-  "clipboardReadFailed": {
-    "message": "ቅንጥብ ሰሌዳውን ማንበብ አልተቻለም"
-  },
-  "enjoyingDrowzy": {
-    "message": "Drowzy ይወዳሉ?"
-  },
-  "reviewYes": {
-    "message": "አዎ!"
-  },
-  "reviewNo": {
-    "message": "ብዙም አይደለም"
-  },
-  "whatsNew": {
-    "message": "በ v$VERSION$ ውስጥ አዲስ",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "ኮዱን በGitHub ይመልከቱ"
   },
   "changelogTitle": {
     "message": "Drowzy ውስጥ አዲስ ነገር"
   },
   "changelogWhatsNew": {
     "message": "አዲስ ነገር"
+  },
+  "changelogVersionLabel": {
+    "message": "ስሪት"
   },
   "changelogCtaText": {
     "message": "Drowzy ነፃ እና ክፍት ምንጭ ነው። ማህደረ ትውስታ እየቆጠበ ከሆነ ግምገማ ወይም በ GitHub ላይ ኮከብ ያስቀምጡ።"
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "ድግግሞሽ ታቦችን ዝጋ"
-  },
-  "tabUntitled": {
-    "message": "ክዕስ የሌለው"
-  },
-  "badgeWhitelisted": {
-    "message": "በነጭ ዝርዝር"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "በቅርቡ"
-  },
-  "changelogVersionLabel": {
-    "message": "ስሪት"
-  },
-  "copiedStats": {
-    "message": "ስታቲስቲክስ ተቀድቷል!"
-  },
-  "privacyFooterLink": {
-    "message": "ኮዱን በGitHub ይመልከቱ"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy ክፍት ምንጭ ነው።"
-  },
-  "privacyPermHost": {
-    "message": "የቅጽ ጥበቃ ወይም የትር ምልክት ሲያንቁ ብቻ የሚሰጥ አማራጭ የአስተናጋጅ መዳረሻ። በመጫን ላይ በፍጹም አይጠየቅም። በማንኛውም ጊዜ መሰረዝ ይቻላል።"
-  },
-  "privacyPermScripting": {
-    "message": "ትር ከመታገድ በፊት ያልተቀመጡ የቅጽ ውሂብ ለመፈለግ ትንሽ ስክሪፕት መጨመር። በውዴታ ብቻ።"
-  },
-  "privacyPermSidePanel": {
-    "message": "Drowzy ን በChrome የጎን ፓነል ውስጥ ማሳየት።"
-  },
-  "privacyYourDataText": {
-    "message": "ምንም ነገር ከአሳሽዎ ስለማይወጣ፣ ምንም ዳሽቦርድ፣ ምንም መለያ የለም፣ እና በDrowzy ምን እንዳደረጉ ለማየት ምንም መንገድ የለም። Drowzy ን ካራቆሉ፣ Chrome አማራጭ ግብረመልስ (የማራቆት ምክንያት፣ አሳሽ፣ OS) በተለየ የድር ገጽ በኩል የመላክ እድል ይሰጥዎታል፤ ያ ማስረከብ ግልጽ ነው እና ወደ ስም-አልባ ቅጽ ይሄዳል። ትሩን በመዝጋት መዝለል ይችላሉ።"
-  },
-  "privacyYourDataTitle": {
-    "message": "የእርስዎ ውሂብ"
-  },
-  "ramEstimateTooltip": {
-    "message": "በግምት 150 ሜባ በታገደ ትር በመጠቀም የተሰላ። ትክክለኛ ቁጠባ በገጽ ይለያያል።"
-  },
-  "shareStats": {
-    "message": "አጋራ"
-  },
-  "statLifetimeRam": {
-    "message": "የእድሜ ልክ RAM ቁጠባ"
   },
   "confirmDeleteTitle": {
     "message": "እንደገና ጠቅ ያድርጉ ለማረጋገጥ መሰረዝ"

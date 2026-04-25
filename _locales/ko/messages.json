@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "절약됨"
   },
+  "statForecast": {
+    "message": "사용 가능"
+  },
   "suspendOthers": {
     "message": "나머지 일시중지"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "탭을 찾을 수 없습니다"
   },
+  "tabUntitled": {
+    "message": "제목 없음"
+  },
   "failedToLoad": {
     "message": "로드 실패. 팝업을 다시 열어 재시도하세요."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "오디오"
+  },
+  "badgeWhitelisted": {
+    "message": "허용 목록"
   },
   "badgeProtected": {
     "message": "보호됨"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "전체"
   },
+  "statLifetimeRam": {
+    "message": "누적 RAM 절약"
+  },
+  "ramEstimateTooltip": {
+    "message": "일시 중단된 탭당 ~150MB 사용으로 추정됩니다. 실제 절약량은 페이지에 따라 다릅니다."
+  },
+  "ramForecastTooltip": {
+    "message": "유휴 탭이 절전 모드로 전환될 때 절약될 예상 메모리, 탭당 약 150 MB."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$개 탭 일시 중단됨 · ~$RAM$ 해제됨",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$개 탭 깨어남",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "일시 중단할 다른 탭이 없습니다"
+  },
+  "noSuspendedToWake": {
+    "message": "깨울 일시 중단된 탭이 없습니다"
+  },
+  "pinnedWontSuspend": {
+    "message": "고정됨 — 일시 중단되지 않음"
+  },
+  "audioWontSuspend": {
+    "message": "오디오 재생 중 — 일시 중단되지 않음"
+  },
+  "whitelistedWontSuspend": {
+    "message": "허용 목록에 있음 — 일시 중단되지 않음"
+  },
+  "systemPageCantSuspend": {
+    "message": "시스템 페이지 — 일시 중단할 수 없음"
+  },
+  "clickToDismiss": {
+    "message": "클릭하여 닫기"
+  },
+  "keepAwakeBtn": {
+    "message": "활성 유지"
+  },
+  "suspendTimerHint": {
+    "message": "전환한 탭은 이 시간이 지나면 일시 중지됩니다. 긴 간격 후 탭으로 돌아오는 경우 시간을 늘리세요."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>팁:</strong> Chrome 도구 모음의 퍼즐 아이콘을 클릭하여 Drowzy를 고정하면 한 번의 클릭으로 액세스할 수 있습니다."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>아직 사용 중인 탭이 중지되나요?</strong> 30분 타이머를 늘리거나 사이트를 한 번의 클릭으로 화이트리스트에 추가하려면 Drowzy → 설정을 여세요."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>양식을 작성 중이신가요?</strong> 저장되지 않은 입력이 있는 탭이 중지되지 않도록 설정에서 \"양식이 있는 탭 보호\"를 활성화하세요."
+  },
+  "onboardingRemapHint": {
+    "message": "다른 키보드 단축키를 원하시나요? 여기에서 사용자 지정하세요 →"
+  },
+  "reviewLeaveTitle": {
+    "message": "빠른 리뷰 남기기"
+  },
+  "reviewReportTitle": {
+    "message": "문제 신고"
+  },
+  "reviewDismissTitle": {
+    "message": "닫기"
+  },
   "statMemberSince": {
     "message": "가입일"
+  },
+  "shareStats": {
+    "message": "공유"
+  },
+  "copiedStats": {
+    "message": "통계가 복사되었습니다!"
   },
   "settings": {
     "message": "설정"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "화이트리스트에 등록된 사이트 없음"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "일시중지 중..."
   },
-  "done": {
-    "message": "완료!"
+  "suspendingSoon": {
+    "message": "곧"
   },
   "waking": {
     "message": "깨우는 중..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "제거"
+  },
+  "replace": {
+    "message": "교체"
+  },
+  "replaceSessionTitle": {
+    "message": "현재 탭을 이 세션으로 교체"
+  },
+  "invalidDomain": {
+    "message": "유효한 도메인을 입력하세요 (예: example.com)"
+  },
+  "extensionPage": {
+    "message": "확장 프로그램 페이지"
+  },
+  "exportWhitelist": {
+    "message": "내보내기"
+  },
+  "importWhitelist": {
+    "message": "가져오기"
+  },
+  "exportWhitelistTitle": {
+    "message": "화이트리스트 복사"
+  },
+  "importWhitelistTitle": {
+    "message": "클립보드에서 화이트리스트 가져오기"
+  },
+  "copiedSites": {
+    "message": "$COUNT$개 사이트 복사됨",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$개 새 사이트 가져옴",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "클립보드에서 유효한 도메인을 찾을 수 없습니다"
+  },
+  "clipboardReadFailed": {
+    "message": "클립보드를 읽을 수 없습니다"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy가 마음에 드시나요?"
+  },
+  "reviewYes": {
+    "message": "네!"
+  },
+  "reviewNo": {
+    "message": "별로요"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$의 새로운 기능",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "라이트 모드로 전환"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "일시 중단 및 화이트리스트를 위한 우클릭 메뉴 옵션."
   },
+  "privacyPermScripting": {
+    "message": "탭을 일시 중단하기 전에 저장되지 않은 양식 데이터를 감지하기 위해 작은 스크립트를 삽입합니다. 옵트인 전용."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome 사이드 패널에 Drowzy 표시."
+  },
+  "privacyPermHost": {
+    "message": "선택적 호스트 액세스. 양식 보호 또는 일시 중단된 탭 표시를 활성화할 때만 요청됩니다. 설치 시에는 절대 요청되지 않습니다. 언제든지 취소 가능합니다."
+  },
   "privacyContactTitle": {
     "message": "문의"
   },
   "privacyContactText": {
     "message": "질문이 있으신가요? drowzyextension@gmail.com으로 연락하세요"
   },
-  "replace": {
-    "message": "교체"
+  "privacyYourDataTitle": {
+    "message": "귀하의 데이터"
   },
-  "replaceSessionTitle": {
-    "message": "현재 탭을 이 세션으로 교체"
+  "privacyYourDataText": {
+    "message": "아무것도 브라우저를 벗어나지 않기 때문에 대시보드도, 계정도 없고, Drowzy로 무엇을 했는지 우리가 볼 방법이 없습니다. Drowzy를 제거하면 Chrome에서 별도의 웹 페이지를 통해 선택적 피드백(제거 이유, 브라우저, OS)을 보낼 기회를 제공합니다. 해당 제출은 명시적이며 익명 양식으로 전송됩니다. 탭을 닫아 건너뛸 수 있습니다."
   },
-  "invalidDomain": {
-    "message": "유효한 도메인을 입력하세요 (예: example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy는 오픈소스입니다."
   },
-  "extensionPage": {
-    "message": "확장 프로그램 페이지"
-  },
-  "exportWhitelist": {
-    "message": "내보내기"
-  },
-  "importWhitelist": {
-    "message": "가져오기"
-  },
-  "exportWhitelistTitle": {
-    "message": "화이트리스트 복사"
-  },
-  "importWhitelistTitle": {
-    "message": "클립보드에서 화이트리스트 가져오기"
-  },
-  "copiedSites": {
-    "message": "$COUNT$개 사이트 복사됨",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$개 새 사이트 가져옴",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "클립보드에서 유효한 도메인을 찾을 수 없습니다"
-  },
-  "clipboardReadFailed": {
-    "message": "클립보드를 읽을 수 없습니다"
-  },
-  "enjoyingDrowzy": {
-    "message": "Drowzy가 마음에 드시나요?"
-  },
-  "reviewYes": {
-    "message": "네!"
-  },
-  "reviewNo": {
-    "message": "별로요"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$의 새로운 기능",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "GitHub에서 코드 보기"
   },
   "changelogTitle": {
     "message": "Drowzy의 새로운 기능"
   },
   "changelogWhatsNew": {
     "message": "새로운 기능"
+  },
+  "changelogVersionLabel": {
+    "message": "버전"
   },
   "changelogCtaText": {
     "message": "Drowzy는 무료 오픈소스입니다. 메모리 절약에 도움이 되고 있다면 리뷰를 남기거나 GitHub에서 스타를 눌러주세요."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "중복 탭 닫기"
-  },
-  "tabUntitled": {
-    "message": "제목 없음"
-  },
-  "badgeWhitelisted": {
-    "message": "허용 목록"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "곧"
-  },
-  "changelogVersionLabel": {
-    "message": "버전"
-  },
-  "copiedStats": {
-    "message": "통계가 복사되었습니다!"
-  },
-  "privacyFooterLink": {
-    "message": "GitHub에서 코드 보기"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy는 오픈소스입니다."
-  },
-  "privacyPermHost": {
-    "message": "선택적 호스트 액세스. 양식 보호 또는 일시 중단된 탭 표시를 활성화할 때만 요청됩니다. 설치 시에는 절대 요청되지 않습니다. 언제든지 취소 가능합니다."
-  },
-  "privacyPermScripting": {
-    "message": "탭을 일시 중단하기 전에 저장되지 않은 양식 데이터를 감지하기 위해 작은 스크립트를 삽입합니다. 옵트인 전용."
-  },
-  "privacyPermSidePanel": {
-    "message": "Chrome 사이드 패널에 Drowzy 표시."
-  },
-  "privacyYourDataText": {
-    "message": "아무것도 브라우저를 벗어나지 않기 때문에 대시보드도, 계정도 없고, Drowzy로 무엇을 했는지 우리가 볼 방법이 없습니다. Drowzy를 제거하면 Chrome에서 별도의 웹 페이지를 통해 선택적 피드백(제거 이유, 브라우저, OS)을 보낼 기회를 제공합니다. 해당 제출은 명시적이며 익명 양식으로 전송됩니다. 탭을 닫아 건너뛸 수 있습니다."
-  },
-  "privacyYourDataTitle": {
-    "message": "귀하의 데이터"
-  },
-  "ramEstimateTooltip": {
-    "message": "일시 중단된 탭당 ~150MB 사용으로 추정됩니다. 실제 절약량은 페이지에 따라 다릅니다."
-  },
-  "shareStats": {
-    "message": "공유"
-  },
-  "statLifetimeRam": {
-    "message": "누적 RAM 절약"
   },
   "confirmDeleteTitle": {
     "message": "삭제를 확인하려면 다시 클릭하세요"

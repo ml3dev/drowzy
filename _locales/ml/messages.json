@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "ലാഭിച്ചത്"
   },
+  "statForecast": {
+    "message": "ലഭ്യമാണ്"
+  },
   "suspendOthers": {
     "message": "മറ്റുള്ളവ സസ്‌പെൻഡ് ചെയ്യുക"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "ടാബുകൾ കണ്ടെത്തിയില്ല"
   },
+  "tabUntitled": {
+    "message": "തലക്കെട്ടില്ല"
+  },
   "failedToLoad": {
     "message": "ലോഡ് ചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കാൻ പോപ്പ്അപ്പ് വീണ്ടും തുറക്കുക."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "ഓഡിയോ"
+  },
+  "badgeWhitelisted": {
+    "message": "അനുമതിപ്പട്ടികയിൽ"
   },
   "badgeProtected": {
     "message": "സംരക്ഷിതം"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "മൊത്തം"
   },
+  "statLifetimeRam": {
+    "message": "മൊത്തം RAM സമ്പാദ്യം"
+  },
+  "ramEstimateTooltip": {
+    "message": "സസ്പെൻഡ് ചെയ്ത ടാബിന് ~150 MB ഉപയോഗിച്ച് കണക്കാക്കിയത്. യഥാർത്ഥ സമ്പാദ്യം പേജ് അനുസരിച്ച് വ്യത്യാസപ്പെടും."
+  },
+  "ramForecastTooltip": {
+    "message": "നിങ്ങളുടെ നിഷ്ക്രിയ ടാബുകൾ ഉറങ്ങുമ്പോൾ ലാഭിക്കാൻ ലഭ്യമായ ഏകദേശ മെമ്മറി, ഓരോ ടാബിനും ~150 MB."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ ടാബ് സസ്പെൻഡ് ചെയ്തു · ~$RAM$ സ്വതന്ത്രമാക്കി",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ ടാബ് ഉണർത്തി",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "സസ്പെൻഡ് ചെയ്യാൻ മറ്റ് ടാബുകൾ ഇല്ല"
+  },
+  "noSuspendedToWake": {
+    "message": "ഉണർത്താൻ സസ്പെൻഡ് ചെയ്ത ടാബുകൾ ഇല്ല"
+  },
+  "pinnedWontSuspend": {
+    "message": "പിൻ ചെയ്തു — സസ്പെൻഡ് ചെയ്യപ്പെടില്ല"
+  },
+  "audioWontSuspend": {
+    "message": "ഓഡിയോ പ്ലേ ചെയ്യുന്നു — സസ്പെൻഡ് ചെയ്യപ്പെടില്ല"
+  },
+  "whitelistedWontSuspend": {
+    "message": "ഹ്വൈറ്റ്ലിസ്റ്റ് ചെയ്തു — സസ്പെൻഡ് ചെയ്യപ്പെടില്ല"
+  },
+  "systemPageCantSuspend": {
+    "message": "സിസ്റ്റം പേജ് — സസ്പെൻഡ് ചെയ്യാൻ കഴിയില്ല"
+  },
+  "clickToDismiss": {
+    "message": "അടയ്ക്കാൻ ക്ലിക്ക് ചെയ്യുക"
+  },
+  "keepAwakeBtn": {
+    "message": "ഉണർന്നിരിക്കട്ടെ"
+  },
+  "suspendTimerHint": {
+    "message": "നിങ്ങൾ വിട്ടുപോയ ടാബുകൾ ഈ സമയത്തിന് ശേഷം നിർത്തിവയ്ക്കും. ദീർഘമായ ഇടവേളകൾക്ക് ശേഷം ടാബുകളിലേക്ക് മടങ്ങുകയാണെങ്കിൽ ഇത് വർദ്ധിപ്പിക്കുക."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>നുറുങ്ങ്:</strong> ഒറ്റ-ക്ലിക്ക് ആക്സസിനായി Drowzy പിൻ ചെയ്യാൻ Chrome ടൂൾബാറിലെ പസിൽ ഐക്കൺ ക്ലിക്ക് ചെയ്യുക."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>ഇപ്പോഴും ഉപയോഗിക്കുന്ന ടാബുകൾ നിർത്തിവയ്ക്കുന്നുണ്ടോ?</strong> 30 മിനിറ്റ് ടൈമർ കൂട്ടാനോ ഒറ്റ ക്ലിക്കിൽ സൈറ്റ് നിങ്ങളുടെ വൈറ്റ്ലിസ്റ്റിൽ ചേർക്കാനോ Drowzy → ക്രമീകരണങ്ങൾ തുറക്കുക."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>ഫോം പൂരിപ്പിക്കുകയാണോ?</strong> സംരക്ഷിക്കാത്ത ഇൻപുട്ട് ഉള്ള ടാബുകൾ നിർത്തിവയ്ക്കാതിരിക്കാൻ ക്രമീകരണങ്ങളിൽ \"ഫോമുകളുള്ള ടാബുകൾ സംരക്ഷിക്കുക\" പ്രവർത്തനക്ഷമമാക്കുക."
+  },
+  "onboardingRemapHint": {
+    "message": "വ്യത്യസ്ത കീബോർഡ് കുറുക്കുവഴികൾ വേണോ? ഇവിടെ ഇഷ്ടാനുസൃതമാക്കുക →"
+  },
+  "reviewLeaveTitle": {
+    "message": "ഒരു പെട്ടെന്നുള്ള അവലോകനം നൽകുക"
+  },
+  "reviewReportTitle": {
+    "message": "ഒരു പ്രശ്നം റിപ്പോർട്ട് ചെയ്യുക"
+  },
+  "reviewDismissTitle": {
+    "message": "നിരസിക്കുക"
+  },
   "statMemberSince": {
     "message": "അംഗത്വം മുതൽ"
+  },
+  "shareStats": {
+    "message": "പങ്കിടുക"
+  },
+  "copiedStats": {
+    "message": "സ്ഥിതിവിവരക്കണക്കുകൾ പകർത്തി!"
   },
   "settings": {
     "message": "ക്രമീകരണങ്ങൾ"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "വൈറ്റ്‌ലിസ്റ്റ് ചെയ്ത സൈറ്റുകൾ ഇല്ല"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "സസ്‌പെൻഡ് ചെയ്യുന്നു..."
   },
-  "done": {
-    "message": "പൂർത്തിയായി!"
+  "suspendingSoon": {
+    "message": "ഉടൻ"
   },
   "waking": {
     "message": "ഉണർത്തുന്നു..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "നീക്കം ചെയ്യുക"
+  },
+  "replace": {
+    "message": "മാറ്റിസ്ഥാപിക്കുക"
+  },
+  "replaceSessionTitle": {
+    "message": "നിലവിലെ ടാബുകൾ ഈ സെഷനുമായി മാറ്റിസ്ഥാപിക്കുക"
+  },
+  "invalidDomain": {
+    "message": "സാധുവായ ഡൊമെയ്ൻ നൽകുക (ഉദാ. example.com)"
+  },
+  "extensionPage": {
+    "message": "എക്സ്റ്റൻഷൻ പേജ്"
+  },
+  "exportWhitelist": {
+    "message": "എക്സ്പോർട്ട്"
+  },
+  "importWhitelist": {
+    "message": "ഇംപോർട്ട്"
+  },
+  "exportWhitelistTitle": {
+    "message": "വൈറ്റ്‌ലിസ്റ്റ് പകർത്തുക"
+  },
+  "importWhitelistTitle": {
+    "message": "ക്ലിപ്പ്ബോർഡിൽ നിന്ന് വൈറ്റ്‌ലിസ്റ്റ് ഇംപോർട്ട് ചെയ്യുക"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ സൈറ്റ്(കൾ) പകർത്തി",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ പുതിയ സൈറ്റ്(കൾ) ഇംപോർട്ട് ചെയ്തു",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "ക്ലിപ്പ്ബോർഡിൽ സാധുവായ ഡൊമെയ്‌നുകൾ കണ്ടെത്തിയില്ല"
+  },
+  "clipboardReadFailed": {
+    "message": "ക്ലിപ്പ്ബോർഡ് വായിക്കാൻ കഴിഞ്ഞില്ല"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy ഇഷ്ടമാകുന്നുണ്ടോ?"
+  },
+  "reviewYes": {
+    "message": "അതെ!"
+  },
+  "reviewNo": {
+    "message": "അത്ര ഇല്ല"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$-ൽ പുതിയത്",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "ലൈറ്റ് മോഡിലേക്ക് മാറുക"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "സസ്പെൻഡ്, വൈറ്റ്‌ലിസ്റ്റ് എന്നിവയ്‌ക്കായുള്ള റൈറ്റ്-ക്ലിക്ക് മെനു ഓപ്ഷനുകൾ."
   },
+  "privacyPermScripting": {
+    "message": "ഒരു ടാബ് സസ്പെൻഡ് ചെയ്യുന്നതിന് മുമ്പ് സംരക്ഷിക്കാത്ത ഫോം ഡാറ്റ കണ്ടെത്താൻ ഒരു ചെറിയ സ്ക്രിപ്റ്റ് കുത്തിവയ്ക്കുന്നു. ഓപ്റ്റ്-ഇൻ മാത്രം."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome-ന്റെ സൈഡ് പാനലിൽ Drowzy പ്രദർശിപ്പിക്കുന്നു."
+  },
+  "privacyPermHost": {
+    "message": "ഓപ്ഷണൽ ഹോസ്റ്റ് ആക്സസ്, ഫോം പരിരക്ഷണം അല്ലെങ്കിൽ സസ്പെൻഡ് ടാബ് അടയാളപ്പെടുത്തൽ പ്രവർത്തനക്ഷമമാക്കുമ്പോൾ മാത്രമേ ഡിമാൻഡിൽ അഭ്യർത്ഥിക്കുകയുള്ളൂ. ഇൻസ്റ്റാളിൽ ഒരിക്കലും അഭ്യർത്ഥിക്കില്ല. എപ്പോൾ വേണമെങ്കിലും റദ്ദാക്കാം."
+  },
   "privacyContactTitle": {
     "message": "ബന്ധപ്പെടുക"
   },
   "privacyContactText": {
     "message": "ചോദ്യങ്ങളുണ്ടോ? drowzyextension@gmail.com എന്ന വിലാസത്തിൽ ബന്ധപ്പെടുക"
   },
-  "replace": {
-    "message": "മാറ്റിസ്ഥാപിക്കുക"
+  "privacyYourDataTitle": {
+    "message": "നിങ്ങളുടെ ഡാറ്റ"
   },
-  "replaceSessionTitle": {
-    "message": "നിലവിലെ ടാബുകൾ ഈ സെഷനുമായി മാറ്റിസ്ഥാപിക്കുക"
+  "privacyYourDataText": {
+    "message": "ഒന്നും നിങ്ങളുടെ ബ്രൗസർ വിടാത്തതിനാൽ, ഡാഷ്ബോർഡില്ല, അക്കൗണ്ടില്ല, Drowzy ഉപയോഗിച്ച് നിങ്ങൾ എന്താണ് ചെയ്തതെന്ന് ഞങ്ങൾക്ക് കാണാൻ ഒരു മാർഗവുമില്ല. നിങ്ങൾ Drowzy അൺഇൻസ്റ്റാൾ ചെയ്താൽ, ഒരു പ്രത്യേക വെബ് പേജിലൂടെ ഓപ്ഷണൽ ഫീഡ്ബാക്ക് (അൺഇൻസ്റ്റാൾ ചെയ്യാനുള്ള കാരണം, ബ്രൗസർ, OS) അയയ്ക്കാനുള്ള അവസരം Chrome നിങ്ങൾക്ക് നൽകുന്നു; ആ സമർപ്പണം വ്യക്തമാണ് കൂടാതെ ഒരു അജ്ഞാത ഫോമിലേക്ക് പോകുന്നു. ടാബ് അടച്ച് നിങ്ങൾക്ക് ഇത് ഒഴിവാക്കാം."
   },
-  "invalidDomain": {
-    "message": "സാധുവായ ഡൊമെയ്ൻ നൽകുക (ഉദാ. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy ഓപ്പൺ സോഴ്‌സാണ്."
   },
-  "extensionPage": {
-    "message": "എക്സ്റ്റൻഷൻ പേജ്"
-  },
-  "exportWhitelist": {
-    "message": "എക്സ്പോർട്ട്"
-  },
-  "importWhitelist": {
-    "message": "ഇംപോർട്ട്"
-  },
-  "exportWhitelistTitle": {
-    "message": "വൈറ്റ്‌ലിസ്റ്റ് പകർത്തുക"
-  },
-  "importWhitelistTitle": {
-    "message": "ക്ലിപ്പ്ബോർഡിൽ നിന്ന് വൈറ്റ്‌ലിസ്റ്റ് ഇംപോർട്ട് ചെയ്യുക"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ സൈറ്റ്(കൾ) പകർത്തി",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ പുതിയ സൈറ്റ്(കൾ) ഇംപോർട്ട് ചെയ്തു",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "ക്ലിപ്പ്ബോർഡിൽ സാധുവായ ഡൊമെയ്‌നുകൾ കണ്ടെത്തിയില്ല"
-  },
-  "clipboardReadFailed": {
-    "message": "ക്ലിപ്പ്ബോർഡ് വായിക്കാൻ കഴിഞ്ഞില്ല"
-  },
-  "enjoyingDrowzy": {
-    "message": "Drowzy ഇഷ്ടമാകുന്നുണ്ടോ?"
-  },
-  "reviewYes": {
-    "message": "അതെ!"
-  },
-  "reviewNo": {
-    "message": "അത്ര ഇല്ല"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$-ൽ പുതിയത്",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "GitHub-ൽ കോഡ് ബ്രൗസ് ചെയ്യുക"
   },
   "changelogTitle": {
     "message": "Drowzy-ൽ പുതിയത്"
   },
   "changelogWhatsNew": {
     "message": "പുതിയത്"
+  },
+  "changelogVersionLabel": {
+    "message": "പതിപ്പ്"
   },
   "changelogCtaText": {
     "message": "Drowzy സൗജന്യവും ഓപ്പൺ സോഴ്‌സും ആണ്. മെമ്മറി ലാഭിക്കുന്നുണ്ടെങ്കിൽ, അവലോകനം നൽകുക അല്ലെങ്കിൽ GitHub-ൽ നക്ഷത്രം നൽകുക."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "ഡ്യൂപ്ലിക്കേറ്റ് ടാബുകള്‍ അടയ്ക്കുക"
-  },
-  "tabUntitled": {
-    "message": "തലക്കെട്ടില്ല"
-  },
-  "badgeWhitelisted": {
-    "message": "അനുമതിപ്പട്ടികയിൽ"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "ഉടൻ"
-  },
-  "changelogVersionLabel": {
-    "message": "പതിപ്പ്"
-  },
-  "copiedStats": {
-    "message": "സ്ഥിതിവിവരക്കണക്കുകൾ പകർത്തി!"
-  },
-  "privacyFooterLink": {
-    "message": "GitHub-ൽ കോഡ് ബ്രൗസ് ചെയ്യുക"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy ഓപ്പൺ സോഴ്‌സാണ്."
-  },
-  "privacyPermHost": {
-    "message": "ഓപ്ഷണൽ ഹോസ്റ്റ് ആക്സസ്, ഫോം പരിരക്ഷണം അല്ലെങ്കിൽ സസ്പെൻഡ് ടാബ് അടയാളപ്പെടുത്തൽ പ്രവർത്തനക്ഷമമാക്കുമ്പോൾ മാത്രമേ ഡിമാൻഡിൽ അഭ്യർത്ഥിക്കുകയുള്ളൂ. ഇൻസ്റ്റാളിൽ ഒരിക്കലും അഭ്യർത്ഥിക്കില്ല. എപ്പോൾ വേണമെങ്കിലും റദ്ദാക്കാം."
-  },
-  "privacyPermScripting": {
-    "message": "ഒരു ടാബ് സസ്പെൻഡ് ചെയ്യുന്നതിന് മുമ്പ് സംരക്ഷിക്കാത്ത ഫോം ഡാറ്റ കണ്ടെത്താൻ ഒരു ചെറിയ സ്ക്രിപ്റ്റ് കുത്തിവയ്ക്കുന്നു. ഓപ്റ്റ്-ഇൻ മാത്രം."
-  },
-  "privacyPermSidePanel": {
-    "message": "Chrome-ന്റെ സൈഡ് പാനലിൽ Drowzy പ്രദർശിപ്പിക്കുന്നു."
-  },
-  "privacyYourDataText": {
-    "message": "ഒന്നും നിങ്ങളുടെ ബ്രൗസർ വിടാത്തതിനാൽ, ഡാഷ്ബോർഡില്ല, അക്കൗണ്ടില്ല, Drowzy ഉപയോഗിച്ച് നിങ്ങൾ എന്താണ് ചെയ്തതെന്ന് ഞങ്ങൾക്ക് കാണാൻ ഒരു മാർഗവുമില്ല. നിങ്ങൾ Drowzy അൺഇൻസ്റ്റാൾ ചെയ്താൽ, ഒരു പ്രത്യേക വെബ് പേജിലൂടെ ഓപ്ഷണൽ ഫീഡ്ബാക്ക് (അൺഇൻസ്റ്റാൾ ചെയ്യാനുള്ള കാരണം, ബ്രൗസർ, OS) അയയ്ക്കാനുള്ള അവസരം Chrome നിങ്ങൾക്ക് നൽകുന്നു; ആ സമർപ്പണം വ്യക്തമാണ് കൂടാതെ ഒരു അജ്ഞാത ഫോമിലേക്ക് പോകുന്നു. ടാബ് അടച്ച് നിങ്ങൾക്ക് ഇത് ഒഴിവാക്കാം."
-  },
-  "privacyYourDataTitle": {
-    "message": "നിങ്ങളുടെ ഡാറ്റ"
-  },
-  "ramEstimateTooltip": {
-    "message": "സസ്പെൻഡ് ചെയ്ത ടാബിന് ~150 MB ഉപയോഗിച്ച് കണക്കാക്കിയത്. യഥാർത്ഥ സമ്പാദ്യം പേജ് അനുസരിച്ച് വ്യത്യാസപ്പെടും."
-  },
-  "shareStats": {
-    "message": "പങ്കിടുക"
-  },
-  "statLifetimeRam": {
-    "message": "മൊത്തം RAM സമ്പാദ്യം"
   },
   "confirmDeleteTitle": {
     "message": "ഇല്ലാതാക്കൽ സ്ഥിരീകരിക്കാൻ വീണ്ടും ക്ലിക്കുചെയ്യുക"

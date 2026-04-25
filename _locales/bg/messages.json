@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "спестени"
   },
+  "statForecast": {
+    "message": "налично"
+  },
   "suspendOthers": {
     "message": "Спри другите"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Няма намерени табове"
   },
+  "tabUntitled": {
+    "message": "Без заглавие"
+  },
   "failedToLoad": {
     "message": "Неуспешно зареждане. Отворете отново изскачащия прозорец, за да опитате пак."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Аудио"
+  },
+  "badgeWhitelisted": {
+    "message": "В бял списък"
   },
   "badgeProtected": {
     "message": "Защитен"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "За цялото време"
   },
+  "statLifetimeRam": {
+    "message": "Общо спестена RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "Изчислено с ~150 МБ на спрян раздел. Действителните спестявания варират според страницата."
+  },
+  "ramForecastTooltip": {
+    "message": "Прогнозна памет за освобождаване, когато неактивните ви раздели заспят, при ~150 MB на раздел."
+  },
+  "suspendedToast": {
+    "message": "Спрени $COUNT$ раздела · освободени ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Събудени $COUNT$ раздела",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Няма други раздели за спиране"
+  },
+  "noSuspendedToWake": {
+    "message": "Няма спрени раздели за събуждане"
+  },
+  "pinnedWontSuspend": {
+    "message": "Закачен — няма да бъде спрян"
+  },
+  "audioWontSuspend": {
+    "message": "Възпроизвежда звук — няма да бъде спрян"
+  },
+  "whitelistedWontSuspend": {
+    "message": "В белия списък — няма да бъде спрян"
+  },
+  "systemPageCantSuspend": {
+    "message": "Системна страница — не може да бъде спряна"
+  },
+  "clickToDismiss": {
+    "message": "Кликнете за затваряне"
+  },
+  "keepAwakeBtn": {
+    "message": "Дръж активен"
+  },
+  "suspendTimerHint": {
+    "message": "Разделите, от които сте превключили, се спират след този период. Увеличете го, ако се връщате към раздели след дълги паузи."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Съвет:</strong> Кликнете върху иконата на пъзел в лентата с инструменти на Chrome, за да закачите Drowzy за достъп с едно кликване."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Спира раздели, които още използвате?</strong> Отворете Drowzy → Настройки, за да увеличите 30-минутния таймер, или добавете сайта в белия списък с едно щракване."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Попълвате форма?</strong> Активирайте „Защита на раздели с форми\" в Настройки, за да предотвратите спиране на раздели с незапазени данни."
+  },
+  "onboardingRemapHint": {
+    "message": "Искате различни клавишни комбинации? Персонализирайте ги тук →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Оставете кратък отзив"
+  },
+  "reviewReportTitle": {
+    "message": "Докладвайте проблем"
+  },
+  "reviewDismissTitle": {
+    "message": "Затваряне"
+  },
   "statMemberSince": {
     "message": "Член от"
+  },
+  "shareStats": {
+    "message": "Споделяне"
+  },
+  "copiedStats": {
+    "message": "Статистиките са копирани!"
   },
   "settings": {
     "message": "Настройки"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Няма сайтове в белия списък"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Спиране..."
   },
-  "done": {
-    "message": "Готово!"
+  "suspendingSoon": {
+    "message": "скоро"
   },
   "waking": {
     "message": "Събуждане..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Премахни"
+  },
+  "replace": {
+    "message": "Замени"
+  },
+  "replaceSessionTitle": {
+    "message": "Замени текущите раздели с тази сесия"
+  },
+  "invalidDomain": {
+    "message": "Въведете валиден домейн (напр. example.com)"
+  },
+  "extensionPage": {
+    "message": "Страница на разширението"
+  },
+  "exportWhitelist": {
+    "message": "Експортиране"
+  },
+  "importWhitelist": {
+    "message": "Импортиране"
+  },
+  "exportWhitelistTitle": {
+    "message": "Копиране на белия списък"
+  },
+  "importWhitelistTitle": {
+    "message": "Импортиране на белия списък от клипборда"
+  },
+  "copiedSites": {
+    "message": "Копирани $COUNT$ сайт(а)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Импортирани $COUNT$ нов(и) сайт(а)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Не са намерени валидни домейни в клипборда"
+  },
+  "clipboardReadFailed": {
+    "message": "Не може да се прочете клипборда"
+  },
+  "enjoyingDrowzy": {
+    "message": "Харесва ли ви Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Да!"
+  },
+  "reviewNo": {
+    "message": "Не особено"
+  },
+  "whatsNew": {
+    "message": "Какво ново в v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Превключи към светъл режим"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Опции на менюто с десен бутон за спиране и бял списък."
   },
+  "privacyPermScripting": {
+    "message": "Инжектиране на малък скрипт за откриване на незапазени данни от формуляри преди спиране на раздел. Само по избор."
+  },
+  "privacyPermSidePanel": {
+    "message": "Показване на Drowzy в страничния панел на Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Незадължителен достъп до хостове, изискван при поискване само когато активирате Защита на формуляри или Маркиране на спрените раздели. Никога не се изисква при инсталиране. Може да се отмени по всяко време."
+  },
   "privacyContactTitle": {
     "message": "Контакт"
   },
   "privacyContactText": {
     "message": "Въпроси? Пишете ни на drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Замени"
+  "privacyYourDataTitle": {
+    "message": "Вашите данни"
   },
-  "replaceSessionTitle": {
-    "message": "Замени текущите раздели с тази сесия"
+  "privacyYourDataText": {
+    "message": "Тъй като нищо не напуска браузъра ви, няма табло, няма акаунт и няма начин да видим какво сте направили с Drowzy. Ако деинсталирате Drowzy, Chrome ви предлага възможност да изпратите незадължителна обратна връзка (причина за деинсталиране, браузър, ОС) чрез отделна уеб страница; това подаване е изрично и отива към анонимен формуляр. Можете да го пропуснете, като затворите раздела."
   },
-  "invalidDomain": {
-    "message": "Въведете валиден домейн (напр. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy е с отворен код."
   },
-  "extensionPage": {
-    "message": "Страница на разширението"
-  },
-  "exportWhitelist": {
-    "message": "Експортиране"
-  },
-  "importWhitelist": {
-    "message": "Импортиране"
-  },
-  "exportWhitelistTitle": {
-    "message": "Копиране на белия списък"
-  },
-  "importWhitelistTitle": {
-    "message": "Импортиране на белия списък от клипборда"
-  },
-  "copiedSites": {
-    "message": "Копирани $COUNT$ сайт(а)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Импортирани $COUNT$ нов(и) сайт(а)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Не са намерени валидни домейни в клипборда"
-  },
-  "clipboardReadFailed": {
-    "message": "Не може да се прочете клипборда"
-  },
-  "enjoyingDrowzy": {
-    "message": "Харесва ли ви Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Да!"
-  },
-  "reviewNo": {
-    "message": "Не особено"
-  },
-  "whatsNew": {
-    "message": "Какво ново в v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Прегледайте кода в GitHub"
   },
   "changelogTitle": {
     "message": "Какво ново в Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Какво ново"
+  },
+  "changelogVersionLabel": {
+    "message": "Версия"
   },
   "changelogCtaText": {
     "message": "Drowzy е безплатен и с отворен код. Ако ви спестява памет, оставете рецензия или звезда в GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Затваряне на дублиращи се раздели"
-  },
-  "tabUntitled": {
-    "message": "Без заглавие"
-  },
-  "badgeWhitelisted": {
-    "message": "В бял списък"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "скоро"
-  },
-  "changelogVersionLabel": {
-    "message": "Версия"
-  },
-  "copiedStats": {
-    "message": "Статистиките са копирани!"
-  },
-  "privacyFooterLink": {
-    "message": "Прегледайте кода в GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy е с отворен код."
-  },
-  "privacyPermHost": {
-    "message": "Незадължителен достъп до хостове, изискван при поискване само когато активирате Защита на формуляри или Маркиране на спрените раздели. Никога не се изисква при инсталиране. Може да се отмени по всяко време."
-  },
-  "privacyPermScripting": {
-    "message": "Инжектиране на малък скрипт за откриване на незапазени данни от формуляри преди спиране на раздел. Само по избор."
-  },
-  "privacyPermSidePanel": {
-    "message": "Показване на Drowzy в страничния панел на Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Тъй като нищо не напуска браузъра ви, няма табло, няма акаунт и няма начин да видим какво сте направили с Drowzy. Ако деинсталирате Drowzy, Chrome ви предлага възможност да изпратите незадължителна обратна връзка (причина за деинсталиране, браузър, ОС) чрез отделна уеб страница; това подаване е изрично и отива към анонимен формуляр. Можете да го пропуснете, като затворите раздела."
-  },
-  "privacyYourDataTitle": {
-    "message": "Вашите данни"
-  },
-  "ramEstimateTooltip": {
-    "message": "Изчислено с ~150 МБ на спрян раздел. Действителните спестявания варират според страницата."
-  },
-  "shareStats": {
-    "message": "Споделяне"
-  },
-  "statLifetimeRam": {
-    "message": "Общо спестена RAM"
   },
   "confirmDeleteTitle": {
     "message": "Кликнете отново, за да потвърдите изтриването"

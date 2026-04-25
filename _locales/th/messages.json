@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "ประหยัดแล้ว"
   },
+  "statForecast": {
+    "message": "พร้อมใช้"
+  },
   "suspendOthers": {
     "message": "ระงับแท็บอื่น"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "ไม่พบแท็บ"
   },
+  "tabUntitled": {
+    "message": "ไม่มีชื่อ"
+  },
   "failedToLoad": {
     "message": "โหลดไม่สำเร็จ เปิดป๊อปอัปอีกครั้งเพื่อลองใหม่"
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "เสียง"
+  },
+  "badgeWhitelisted": {
+    "message": "อยู่ในรายการที่อนุญาต"
   },
   "badgeProtected": {
     "message": "ป้องกัน"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "ตลอดเวลา"
   },
+  "statLifetimeRam": {
+    "message": "RAM ที่ประหยัดได้ทั้งหมด"
+  },
+  "ramEstimateTooltip": {
+    "message": "ประมาณการโดยใช้ ~150 MB ต่อแท็บที่ระงับ การประหยัดจริงแตกต่างกันไปตามหน้า"
+  },
+  "ramForecastTooltip": {
+    "message": "หน่วยความจำโดยประมาณที่จะถูกปลดปล่อยเมื่อแท็บที่ไม่ได้ใช้งานของคุณเข้าสู่โหมดสลีป ที่ ~150 MB ต่อแท็บ"
+  },
+  "suspendedToast": {
+    "message": "ระงับ $COUNT$ แท็บ · ปลดปล่อย ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "ปลุก $COUNT$ แท็บ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "ไม่มีแท็บอื่นให้ระงับ"
+  },
+  "noSuspendedToWake": {
+    "message": "ไม่มีแท็บที่ระงับให้ปลุก"
+  },
+  "pinnedWontSuspend": {
+    "message": "ปักหมุดแล้ว — จะไม่ถูกระงับ"
+  },
+  "audioWontSuspend": {
+    "message": "กำลังเล่นเสียง — จะไม่ถูกระงับ"
+  },
+  "whitelistedWontSuspend": {
+    "message": "อยู่ในรายการอนุญาต — จะไม่ถูกระงับ"
+  },
+  "systemPageCantSuspend": {
+    "message": "หน้าระบบ — ไม่สามารถระงับได้"
+  },
+  "clickToDismiss": {
+    "message": "คลิกเพื่อปิด"
+  },
+  "keepAwakeBtn": {
+    "message": "คงตื่น"
+  },
+  "suspendTimerHint": {
+    "message": "แท็บที่คุณสลับออกไปจะถูกหยุดชั่วคราวหลังจากเวลานี้ เพิ่มเวลาหากคุณกลับมาที่แท็บหลังจากช่วงเว้นนาน ๆ"
+  },
+  "onboardingPinTip": {
+    "message": "<strong>เคล็ดลับ:</strong> คลิกที่ไอคอนจิ๊กซอว์ในแถบเครื่องมือ Chrome เพื่อปักหมุด Drowzy สำหรับการเข้าถึงในคลิกเดียว"
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>กำลังหยุดแท็บที่คุณยังใช้อยู่?</strong> เปิด Drowzy → การตั้งค่า เพื่อเพิ่มตัวจับเวลา 30 นาที หรือเพิ่มเว็บไซต์ลงในรายการขาวของคุณด้วยคลิกเดียว"
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>กำลังกรอกแบบฟอร์ม?</strong> เปิดใช้งาน \"ปกป้องแท็บที่มีแบบฟอร์ม\" ในการตั้งค่า เพื่อไม่ให้แท็บที่มีข้อมูลที่ยังไม่ได้บันทึกถูกหยุดชั่วคราว"
+  },
+  "onboardingRemapHint": {
+    "message": "ต้องการแป้นพิมพ์ลัดที่แตกต่าง? ปรับแต่งที่นี่ →"
+  },
+  "reviewLeaveTitle": {
+    "message": "เขียนรีวิวสั้นๆ"
+  },
+  "reviewReportTitle": {
+    "message": "รายงานปัญหา"
+  },
+  "reviewDismissTitle": {
+    "message": "ปิด"
+  },
   "statMemberSince": {
     "message": "เป็นสมาชิกตั้งแต่"
+  },
+  "shareStats": {
+    "message": "แชร์"
+  },
+  "copiedStats": {
+    "message": "คัดลอกสถิติแล้ว!"
   },
   "settings": {
     "message": "การตั้งค่า"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "ไม่มีเว็บไซต์ในรายการที่อนุญาต"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "กำลังระงับ..."
   },
-  "done": {
-    "message": "เสร็จแล้ว!"
+  "suspendingSoon": {
+    "message": "เร็วๆ นี้"
   },
   "waking": {
     "message": "กำลังปลุก..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "ลบ"
+  },
+  "replace": {
+    "message": "แทนที่"
+  },
+  "replaceSessionTitle": {
+    "message": "แทนที่แท็บปัจจุบันด้วยเซสชันนี้"
+  },
+  "invalidDomain": {
+    "message": "กรุณาใส่โดเมนที่ถูกต้อง (เช่น example.com)"
+  },
+  "extensionPage": {
+    "message": "หน้าส่วนขยาย"
+  },
+  "exportWhitelist": {
+    "message": "ส่งออก"
+  },
+  "importWhitelist": {
+    "message": "นำเข้า"
+  },
+  "exportWhitelistTitle": {
+    "message": "คัดลอกรายการที่อนุญาต"
+  },
+  "importWhitelistTitle": {
+    "message": "นำเข้ารายการที่อนุญาตจากคลิปบอร์ด"
+  },
+  "copiedSites": {
+    "message": "คัดลอกแล้ว $COUNT$ เว็บไซต์",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "นำเข้าแล้ว $COUNT$ เว็บไซต์ใหม่",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "ไม่พบโดเมนที่ถูกต้องในคลิปบอร์ด"
+  },
+  "clipboardReadFailed": {
+    "message": "ไม่สามารถอ่านคลิปบอร์ดได้"
+  },
+  "enjoyingDrowzy": {
+    "message": "ชอบ Drowzy ไหม?"
+  },
+  "reviewYes": {
+    "message": "ใช่!"
+  },
+  "reviewNo": {
+    "message": "ไม่เชิง"
+  },
+  "whatsNew": {
+    "message": "มีอะไรใหม่ใน v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "เปลี่ยนเป็นโหมดสว่าง"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "ตัวเลือกเมนูคลิกขวาสำหรับการระงับและไวท์ลิสต์"
   },
+  "privacyPermScripting": {
+    "message": "ฉีดสคริปต์เล็กๆ เพื่อตรวจจับข้อมูลฟอร์มที่ยังไม่ได้บันทึกก่อนระงับแท็บ เลือกเข้าร่วมเท่านั้น"
+  },
+  "privacyPermSidePanel": {
+    "message": "แสดง Drowzy ในแผงด้านข้างของ Chrome"
+  },
+  "privacyPermHost": {
+    "message": "การเข้าถึงโฮสต์ตามตัวเลือก ขอตามต้องการเฉพาะเมื่อคุณเปิดใช้การปกป้องฟอร์มหรือการทำเครื่องหมายแท็บที่ระงับ ไม่เคยขอตอนติดตั้ง สามารถเพิกถอนได้ตลอดเวลา"
+  },
   "privacyContactTitle": {
     "message": "ติดต่อ"
   },
   "privacyContactText": {
     "message": "มีคำถาม? ติดต่อได้ที่ drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "แทนที่"
+  "privacyYourDataTitle": {
+    "message": "ข้อมูลของคุณ"
   },
-  "replaceSessionTitle": {
-    "message": "แทนที่แท็บปัจจุบันด้วยเซสชันนี้"
+  "privacyYourDataText": {
+    "message": "เนื่องจากไม่มีอะไรออกจากเบราว์เซอร์ของคุณ ไม่มีแดชบอร์ด ไม่มีบัญชี และไม่มีวิธีที่เราจะเห็นสิ่งที่คุณทำกับ Drowzy หากคุณถอนการติดตั้ง Drowzy, Chrome จะเสนอโอกาสให้คุณส่งคำติชมตามตัวเลือก (เหตุผลในการถอนการติดตั้ง เบราว์เซอร์ OS) ผ่านหน้าเว็บแยกต่างหาก การส่งนั้นชัดเจนและไปยังแบบฟอร์มที่ไม่ระบุชื่อ คุณสามารถข้ามได้โดยปิดแท็บ"
   },
-  "invalidDomain": {
-    "message": "กรุณาใส่โดเมนที่ถูกต้อง (เช่น example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy เป็นโอเพนซอร์ส"
   },
-  "extensionPage": {
-    "message": "หน้าส่วนขยาย"
-  },
-  "exportWhitelist": {
-    "message": "ส่งออก"
-  },
-  "importWhitelist": {
-    "message": "นำเข้า"
-  },
-  "exportWhitelistTitle": {
-    "message": "คัดลอกรายการที่อนุญาต"
-  },
-  "importWhitelistTitle": {
-    "message": "นำเข้ารายการที่อนุญาตจากคลิปบอร์ด"
-  },
-  "copiedSites": {
-    "message": "คัดลอกแล้ว $COUNT$ เว็บไซต์",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "นำเข้าแล้ว $COUNT$ เว็บไซต์ใหม่",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "ไม่พบโดเมนที่ถูกต้องในคลิปบอร์ด"
-  },
-  "clipboardReadFailed": {
-    "message": "ไม่สามารถอ่านคลิปบอร์ดได้"
-  },
-  "enjoyingDrowzy": {
-    "message": "ชอบ Drowzy ไหม?"
-  },
-  "reviewYes": {
-    "message": "ใช่!"
-  },
-  "reviewNo": {
-    "message": "ไม่เชิง"
-  },
-  "whatsNew": {
-    "message": "มีอะไรใหม่ใน v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "ดูโค้ดบน GitHub"
   },
   "changelogTitle": {
     "message": "มีอะไรใหม่ใน Drowzy"
   },
   "changelogWhatsNew": {
     "message": "มีอะไรใหม่"
+  },
+  "changelogVersionLabel": {
+    "message": "เวอร์ชัน"
   },
   "changelogCtaText": {
     "message": "Drowzy ฟรีและโอเพ่นซอร์ส หากประหยัดหน่วยความจำได้ ลองเขียนรีวิวหรือให้ดาวบน GitHub"
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "ปิดแท็บซ้ำ"
-  },
-  "tabUntitled": {
-    "message": "ไม่มีชื่อ"
-  },
-  "badgeWhitelisted": {
-    "message": "อยู่ในรายการที่อนุญาต"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "เร็วๆ นี้"
-  },
-  "changelogVersionLabel": {
-    "message": "เวอร์ชัน"
-  },
-  "copiedStats": {
-    "message": "คัดลอกสถิติแล้ว!"
-  },
-  "privacyFooterLink": {
-    "message": "ดูโค้ดบน GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy เป็นโอเพนซอร์ส"
-  },
-  "privacyPermHost": {
-    "message": "การเข้าถึงโฮสต์ตามตัวเลือก ขอตามต้องการเฉพาะเมื่อคุณเปิดใช้การปกป้องฟอร์มหรือการทำเครื่องหมายแท็บที่ระงับ ไม่เคยขอตอนติดตั้ง สามารถเพิกถอนได้ตลอดเวลา"
-  },
-  "privacyPermScripting": {
-    "message": "ฉีดสคริปต์เล็กๆ เพื่อตรวจจับข้อมูลฟอร์มที่ยังไม่ได้บันทึกก่อนระงับแท็บ เลือกเข้าร่วมเท่านั้น"
-  },
-  "privacyPermSidePanel": {
-    "message": "แสดง Drowzy ในแผงด้านข้างของ Chrome"
-  },
-  "privacyYourDataText": {
-    "message": "เนื่องจากไม่มีอะไรออกจากเบราว์เซอร์ของคุณ ไม่มีแดชบอร์ด ไม่มีบัญชี และไม่มีวิธีที่เราจะเห็นสิ่งที่คุณทำกับ Drowzy หากคุณถอนการติดตั้ง Drowzy, Chrome จะเสนอโอกาสให้คุณส่งคำติชมตามตัวเลือก (เหตุผลในการถอนการติดตั้ง เบราว์เซอร์ OS) ผ่านหน้าเว็บแยกต่างหาก การส่งนั้นชัดเจนและไปยังแบบฟอร์มที่ไม่ระบุชื่อ คุณสามารถข้ามได้โดยปิดแท็บ"
-  },
-  "privacyYourDataTitle": {
-    "message": "ข้อมูลของคุณ"
-  },
-  "ramEstimateTooltip": {
-    "message": "ประมาณการโดยใช้ ~150 MB ต่อแท็บที่ระงับ การประหยัดจริงแตกต่างกันไปตามหน้า"
-  },
-  "shareStats": {
-    "message": "แชร์"
-  },
-  "statLifetimeRam": {
-    "message": "RAM ที่ประหยัดได้ทั้งหมด"
   },
   "confirmDeleteTitle": {
     "message": "คลิกอีกครั้งเพื่อยืนยันการลบ"

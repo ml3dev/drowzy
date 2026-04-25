@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "節約済み"
   },
+  "statForecast": {
+    "message": "利用可能"
+  },
   "suspendOthers": {
     "message": "他をサスペンド"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "タブが見つかりません"
   },
+  "tabUntitled": {
+    "message": "無題"
+  },
   "failedToLoad": {
     "message": "読み込みに失敗しました。ポップアップを再度開いてください。"
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "オーディオ"
+  },
+  "badgeWhitelisted": {
+    "message": "ホワイトリスト"
   },
   "badgeProtected": {
     "message": "保護中"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "累計"
   },
+  "statLifetimeRam": {
+    "message": "累計RAM節約量"
+  },
+  "ramEstimateTooltip": {
+    "message": "サスペンドされたタブごとに約150MBを使用して推定。実際の節約量はページによって異なります。"
+  },
+  "ramForecastTooltip": {
+    "message": "アイドル状態のタブがスリープしたときに節約できる推定メモリ、タブあたり約150 MB。"
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ 個のタブを休止 · ~$RAM$ を解放",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ 個のタブを復帰",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "休止できる他のタブがありません"
+  },
+  "noSuspendedToWake": {
+    "message": "復帰できる休止中のタブがありません"
+  },
+  "pinnedWontSuspend": {
+    "message": "ピン留め済み — 休止されません"
+  },
+  "audioWontSuspend": {
+    "message": "音声再生中 — 休止されません"
+  },
+  "whitelistedWontSuspend": {
+    "message": "ホワイトリスト登録済み — 休止されません"
+  },
+  "systemPageCantSuspend": {
+    "message": "システムページ — 休止できません"
+  },
+  "clickToDismiss": {
+    "message": "クリックで閉じる"
+  },
+  "keepAwakeBtn": {
+    "message": "起こしておく"
+  },
+  "suspendTimerHint": {
+    "message": "切り替えたタブはこの時間が経過すると停止されます。長時間経ってからタブに戻る場合は時間を延ばしてください。"
+  },
+  "onboardingPinTip": {
+    "message": "<strong>ヒント:</strong> Chrome ツールバーのパズルアイコンをクリックして、Drowzy をピン留めし、ワンクリックでアクセスできるようにしましょう。"
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>まだ使っているタブが停止される?</strong> Drowzy → 設定で30分タイマーを延ばすか、サイトをワンクリックでホワイトリストに追加してください。"
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>フォームに入力中?</strong> 設定で「フォームのあるタブを保護」を有効にすると、未保存の入力があるタブが停止されません。"
+  },
+  "onboardingRemapHint": {
+    "message": "別のキーボードショートカットがいいですか？ こちらでカスタマイズ →"
+  },
+  "reviewLeaveTitle": {
+    "message": "簡単なレビューを残す"
+  },
+  "reviewReportTitle": {
+    "message": "問題を報告"
+  },
+  "reviewDismissTitle": {
+    "message": "閉じる"
+  },
   "statMemberSince": {
     "message": "利用開始日"
+  },
+  "shareStats": {
+    "message": "共有"
+  },
+  "copiedStats": {
+    "message": "統計をコピーしました！"
   },
   "settings": {
     "message": "設定"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "ホワイトリストに登録されたサイトはありません"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "サスペンド中..."
   },
-  "done": {
-    "message": "完了！"
+  "suspendingSoon": {
+    "message": "まもなく"
   },
   "waking": {
     "message": "復帰中..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "削除"
+  },
+  "replace": {
+    "message": "置き換え"
+  },
+  "replaceSessionTitle": {
+    "message": "現在のタブをこのセッションで置き換える"
+  },
+  "invalidDomain": {
+    "message": "有効なドメインを入力してください（例：example.com）"
+  },
+  "extensionPage": {
+    "message": "拡張機能ページ"
+  },
+  "exportWhitelist": {
+    "message": "エクスポート"
+  },
+  "importWhitelist": {
+    "message": "インポート"
+  },
+  "exportWhitelistTitle": {
+    "message": "ホワイトリストをコピー"
+  },
+  "importWhitelistTitle": {
+    "message": "クリップボードからホワイトリストをインポート"
+  },
+  "copiedSites": {
+    "message": "$COUNT$件のサイトをコピーしました",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$件の新しいサイトをインポートしました",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "クリップボードに有効なドメインが見つかりません"
+  },
+  "clipboardReadFailed": {
+    "message": "クリップボードを読み取れません"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzyは気に入りましたか？"
+  },
+  "reviewYes": {
+    "message": "はい！"
+  },
+  "reviewNo": {
+    "message": "いいえ"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$の新機能",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "ライトモードに切り替え"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "サスペンドとホワイトリストのための右クリックメニューオプション。"
   },
+  "privacyPermScripting": {
+    "message": "タブをサスペンドする前に未保存のフォームデータを検出するための小さなスクリプトを挿入。オプトインのみ。"
+  },
+  "privacyPermSidePanel": {
+    "message": "Chromeのサイドパネルに Drowzy を表示します。"
+  },
+  "privacyPermHost": {
+    "message": "オプションのホストアクセス。フォーム保護またはサスペンドタブのマーキングを有効にした場合のみ、オンデマンドで要求されます。インストール時には決して要求されません。いつでも取り消し可能。"
+  },
   "privacyContactTitle": {
     "message": "お問い合わせ"
   },
   "privacyContactText": {
     "message": "ご質問は drowzyextension@gmail.com までお問い合わせください"
   },
-  "replace": {
-    "message": "置き換え"
+  "privacyYourDataTitle": {
+    "message": "あなたのデータ"
   },
-  "replaceSessionTitle": {
-    "message": "現在のタブをこのセッションで置き換える"
+  "privacyYourDataText": {
+    "message": "ブラウザから何も外に出ないため、ダッシュボードもアカウントもなく、Drowzyで何をしたかを私たちが確認する方法はありません。Drowzyをアンインストールすると、Chromeは別のウェブページを通じてオプションのフィードバック（アンインストールの理由、ブラウザ、OS）を送信する機会を提供します。その送信は明示的で、匿名フォームに送られます。タブを閉じることでスキップできます。"
   },
-  "invalidDomain": {
-    "message": "有効なドメインを入力してください（例：example.com）"
+  "privacyFooterText": {
+    "message": "Drowzyはオープンソースです。"
   },
-  "extensionPage": {
-    "message": "拡張機能ページ"
-  },
-  "exportWhitelist": {
-    "message": "エクスポート"
-  },
-  "importWhitelist": {
-    "message": "インポート"
-  },
-  "exportWhitelistTitle": {
-    "message": "ホワイトリストをコピー"
-  },
-  "importWhitelistTitle": {
-    "message": "クリップボードからホワイトリストをインポート"
-  },
-  "copiedSites": {
-    "message": "$COUNT$件のサイトをコピーしました",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$件の新しいサイトをインポートしました",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "クリップボードに有効なドメインが見つかりません"
-  },
-  "clipboardReadFailed": {
-    "message": "クリップボードを読み取れません"
-  },
-  "enjoyingDrowzy": {
-    "message": "Drowzyは気に入りましたか？"
-  },
-  "reviewYes": {
-    "message": "はい！"
-  },
-  "reviewNo": {
-    "message": "いいえ"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$の新機能",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "GitHubでコードを見る"
   },
   "changelogTitle": {
     "message": "Drowzyの新機能"
   },
   "changelogWhatsNew": {
     "message": "新機能"
+  },
+  "changelogVersionLabel": {
+    "message": "バージョン"
   },
   "changelogCtaText": {
     "message": "Drowzyは無料のオープンソースです。メモリ節約に役立っていれば、レビューやGitHubでのスターをご検討ください。"
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "重複タブを閉じる"
-  },
-  "tabUntitled": {
-    "message": "無題"
-  },
-  "badgeWhitelisted": {
-    "message": "ホワイトリスト"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "まもなく"
-  },
-  "changelogVersionLabel": {
-    "message": "バージョン"
-  },
-  "copiedStats": {
-    "message": "統計をコピーしました！"
-  },
-  "privacyFooterLink": {
-    "message": "GitHubでコードを見る"
-  },
-  "privacyFooterText": {
-    "message": "Drowzyはオープンソースです。"
-  },
-  "privacyPermHost": {
-    "message": "オプションのホストアクセス。フォーム保護またはサスペンドタブのマーキングを有効にした場合のみ、オンデマンドで要求されます。インストール時には決して要求されません。いつでも取り消し可能。"
-  },
-  "privacyPermScripting": {
-    "message": "タブをサスペンドする前に未保存のフォームデータを検出するための小さなスクリプトを挿入。オプトインのみ。"
-  },
-  "privacyPermSidePanel": {
-    "message": "Chromeのサイドパネルに Drowzy を表示します。"
-  },
-  "privacyYourDataText": {
-    "message": "ブラウザから何も外に出ないため、ダッシュボードもアカウントもなく、Drowzyで何をしたかを私たちが確認する方法はありません。Drowzyをアンインストールすると、Chromeは別のウェブページを通じてオプションのフィードバック（アンインストールの理由、ブラウザ、OS）を送信する機会を提供します。その送信は明示的で、匿名フォームに送られます。タブを閉じることでスキップできます。"
-  },
-  "privacyYourDataTitle": {
-    "message": "あなたのデータ"
-  },
-  "ramEstimateTooltip": {
-    "message": "サスペンドされたタブごとに約150MBを使用して推定。実際の節約量はページによって異なります。"
-  },
-  "shareStats": {
-    "message": "共有"
-  },
-  "statLifetimeRam": {
-    "message": "累計RAM節約量"
   },
   "confirmDeleteTitle": {
     "message": "もう一度クリックして削除を確認"

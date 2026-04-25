@@ -184,8 +184,48 @@ function renderStatsStrip(status) {
   if (!status) return;
   animateStat(document.getElementById('statSleepingValue'), status.suspendedCount);
   animateStat(document.getElementById('statProtectedValue'), status.protectedCount);
-  var mem = status.estimatedMbSaved ? fmtRam(status.estimatedMbSaved) : '\u2014';
-  animateStat(document.getElementById('statMemoryValue'), mem);
+
+  // The third strip slot adapts based on state to avoid a 4-item strip:
+  //  - if Drowzy has actually freed memory, show that ("saved", blue dot)
+  //  - else if there are eligible tabs, show the forecast ("available", amber dot via .strip-stat-forecast)
+  //  - else show an em-dash with the default "saved" label
+  // Visual + label both differ between saved and forecast so the forecast
+  // doesn't read as already-realized savings.
+  var memItem = document.getElementById('statMemoryItem');
+  var memLabel = document.getElementById('statMemoryLabel');
+  var memValue = document.getElementById('statMemoryValue');
+  if (status.estimatedMbSaved > 0) {
+    memItem.classList.remove('strip-stat-forecast');
+    memItem.title = t('ramEstimateTooltip');
+    memLabel.textContent = t('statSaved');
+    animateStat(memValue, fmtRam(status.estimatedMbSaved));
+  } else if (status.eligibleCount && status.estimatedMbForecast) {
+    memItem.classList.add('strip-stat-forecast');
+    memItem.title = t('ramForecastTooltip');
+    memLabel.textContent = t('statForecast');
+    animateStat(memValue, fmtRam(status.estimatedMbForecast));
+  } else {
+    memItem.classList.remove('strip-stat-forecast');
+    memItem.title = t('ramEstimateTooltip');
+    memLabel.textContent = t('statSaved');
+    animateStat(memValue, '\u2014');
+  }
+
+  // Disable quick-action buttons when there's nothing to act on, with an
+  // explanatory tooltip \u2014 prevents the "click does nothing" feel that makes
+  // a new user think the extension is broken.
+  var btnSusp = document.getElementById('btnSuspendOthers');
+  if (btnSusp) {
+    var noEligible = !status.eligibleCount;
+    btnSusp.disabled = noEligible;
+    btnSusp.title = noEligible ? t('noOthersToSuspend') : '';
+  }
+  var btnWake = document.getElementById('btnWakeAll');
+  if (btnWake) {
+    var noSleeping = !status.suspendedCount;
+    btnWake.disabled = noSleeping;
+    btnWake.title = noSleeping ? t('noSuspendedToWake') : '';
+  }
 }
 
 function tabListSignature(tabs) {
@@ -341,11 +381,20 @@ function renderCurrentTab(tabList, settings) {
     isInternal = proto !== 'http:' && proto !== 'https:';
   } catch {}
 
+  // Pick the status line based on why this tab is/isn't suspendable. Active
+  // is the fallback; the more specific reasons take priority since a pinned
+  // active tab is "active AND pinned" — the pin is the actually informative bit.
+  var statusKey = 'activeWontSuspend';
+  if (isInternal) statusKey = 'systemPageCantSuspend';
+  else if (settings.protectPinned && active.pinned) statusKey = 'pinnedWontSuspend';
+  else if (settings.protectAudio && active.audible) statusKey = 'audioWontSuspend';
+  else if (whitelisted) statusKey = 'whitelistedWontSuspend';
+
   // Signature-dedupe: the polling loop runs every 5s; skip DOM writes when
   // nothing changed. Prevents the favicon/domain flicker from re-setting
   // img.src and retriggering onerror on every poll.
   var section = document.getElementById('currentTabSection');
-  var sig = (active.url || '') + '|' + (active.favIconUrl || '') + '|' + domain + '|' + (whitelisted ? 1 : 0) + '|' + (isInternal ? 1 : 0);
+  var sig = (active.url || '') + '|' + (active.favIconUrl || '') + '|' + domain + '|' + (whitelisted ? 1 : 0) + '|' + (isInternal ? 1 : 0) + '|' + statusKey;
   if (section && section.dataset.sig === sig) return;
   if (section) section.dataset.sig = sig;
 
@@ -365,7 +414,7 @@ function renderCurrentTab(tabList, settings) {
     fav.removeAttribute('src');
   }
 
-  document.getElementById('currentTabStatus').textContent = t('activeWontSuspend');
+  document.getElementById('currentTabStatus').textContent = t(statusKey);
 
   var btn = document.getElementById('btnToggleWhitelist');
   btn.style.display = isInternal ? 'none' : '';
@@ -595,31 +644,39 @@ function attachListeners() {
   document.getElementById('themeToggle').addEventListener('click', toggleTheme);
 
   document.getElementById('btnSuspendOthers').addEventListener('click', async function() {
+    if (this.disabled) return;
     var text = this.querySelector('.btn-text');
+    var origLabel = t('suspendOthers');
     text.textContent = t('suspending');
     this.disabled = true;
-    await msg({ action: 'suspendOthers' });
-    text.textContent = t('done');
-    var btn = this;
-    setTimeout(async function() {
-      text.textContent = t('suspendOthers');
-      btn.disabled = false;
-      await loadAll();
-    }, 400);
+    var res = await msg({ action: 'suspendOthers' });
+    var count = (res && res.count) || 0;
+    if (count > 0) {
+      showToast(t('suspendedToast', [String(count), fmtRam(res.mbFreed || count * 150)]));
+    } else {
+      showToast(t('noOthersToSuspend'));
+    }
+    text.textContent = origLabel;
+    this.disabled = false;
+    await loadAll();
   });
 
   document.getElementById('btnWakeAll').addEventListener('click', async function() {
+    if (this.disabled) return;
     var text = this.querySelector('.btn-text');
+    var origLabel = t('wakeAll');
     text.textContent = t('waking');
     this.disabled = true;
-    await msg({ action: 'unsuspendAll' });
-    text.textContent = t('done');
-    var btn = this;
-    setTimeout(async function() {
-      text.textContent = t('wakeAll');
-      btn.disabled = false;
-      await loadAll();
-    }, 400);
+    var res = await msg({ action: 'unsuspendAll' });
+    var count = (res && res.count) || 0;
+    if (count > 0) {
+      showToast(t('wokeToast', [String(count)]));
+    } else {
+      showToast(t('noSuspendedToWake'));
+    }
+    text.textContent = origLabel;
+    this.disabled = false;
+    await loadAll();
   });
 
   document.getElementById('btnToggleWhitelist').addEventListener('click', async function() {

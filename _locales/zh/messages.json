@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "已节省"
   },
+  "statForecast": {
+    "message": "可节省"
+  },
   "suspendOthers": {
     "message": "休眠其他标签页"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "未找到标签页"
   },
+  "tabUntitled": {
+    "message": "无标题"
+  },
   "failedToLoad": {
     "message": "加载失败。请重新打开弹出窗口以重试。"
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "音频"
+  },
+  "badgeWhitelisted": {
+    "message": "已加白名单"
   },
   "badgeProtected": {
     "message": "已保护"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "全部时间"
   },
+  "statLifetimeRam": {
+    "message": "总共节省的 RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "估计每个挂起标签使用约 150 MB。实际节省因页面而异。"
+  },
+  "ramForecastTooltip": {
+    "message": "您的闲置标签页休眠时预计可释放的内存,约每个标签页150 MB。"
+  },
+  "suspendedToast": {
+    "message": "已休眠 $COUNT$ 个标签页 · 释放 ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "已唤醒 $COUNT$ 个标签页",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "没有其他标签页可休眠"
+  },
+  "noSuspendedToWake": {
+    "message": "没有已休眠的标签页可唤醒"
+  },
+  "pinnedWontSuspend": {
+    "message": "已固定 — 不会被休眠"
+  },
+  "audioWontSuspend": {
+    "message": "正在播放音频 — 不会被休眠"
+  },
+  "whitelistedWontSuspend": {
+    "message": "在白名单中 — 不会被休眠"
+  },
+  "systemPageCantSuspend": {
+    "message": "系统页面 — 无法休眠"
+  },
+  "clickToDismiss": {
+    "message": "点击关闭"
+  },
+  "keepAwakeBtn": {
+    "message": "保持唤醒"
+  },
+  "suspendTimerHint": {
+    "message": "您切换离开的标签页将在这段时间后被挂起。如果您经常长时间后返回标签页,请增加此时间。"
+  },
+  "onboardingPinTip": {
+    "message": "<strong>提示：</strong>点击 Chrome 工具栏中的拼图图标,固定 Drowzy 以便一键访问。"
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>挂起您还在使用的标签页?</strong> 打开 Drowzy → 设置,提高 30 分钟计时器,或一键将网站加入白名单。"
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>正在填写表单?</strong> 在设置中启用\"保护带表单的标签页\",以防止带有未保存输入的标签页被挂起。"
+  },
+  "onboardingRemapHint": {
+    "message": "想要其他键盘快捷键？在此自定义 →"
+  },
+  "reviewLeaveTitle": {
+    "message": "留下快速评论"
+  },
+  "reviewReportTitle": {
+    "message": "报告问题"
+  },
+  "reviewDismissTitle": {
+    "message": "关闭"
+  },
   "statMemberSince": {
     "message": "使用起始日"
+  },
+  "shareStats": {
+    "message": "分享"
+  },
+  "copiedStats": {
+    "message": "统计数据已复制！"
   },
   "settings": {
     "message": "设置"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "没有白名单网站"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "正在休眠..."
   },
-  "done": {
-    "message": "完成！"
+  "suspendingSoon": {
+    "message": "即将"
   },
   "waking": {
     "message": "正在唤醒..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "移除"
+  },
+  "replace": {
+    "message": "替换"
+  },
+  "replaceSessionTitle": {
+    "message": "用此会话替换当前标签页"
+  },
+  "invalidDomain": {
+    "message": "请输入有效的域名（例如 example.com）"
+  },
+  "extensionPage": {
+    "message": "扩展页面"
+  },
+  "exportWhitelist": {
+    "message": "导出"
+  },
+  "importWhitelist": {
+    "message": "导入"
+  },
+  "exportWhitelistTitle": {
+    "message": "复制白名单"
+  },
+  "importWhitelistTitle": {
+    "message": "从剪贴板导入白名单"
+  },
+  "copiedSites": {
+    "message": "已复制 $COUNT$ 个网站",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "已导入 $COUNT$ 个新网站",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "剪贴板中未找到有效域名"
+  },
+  "clipboardReadFailed": {
+    "message": "无法读取剪贴板"
+  },
+  "enjoyingDrowzy": {
+    "message": "喜欢 Drowzy 吗？"
+  },
+  "reviewYes": {
+    "message": "喜欢！"
+  },
+  "reviewNo": {
+    "message": "不太满意"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$ 新功能",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "切换到浅色模式"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "用于挂起和白名单的右键菜单选项。"
   },
+  "privacyPermScripting": {
+    "message": "注入一个小脚本以在挂起标签前检测未保存的表单数据。仅限选择加入。"
+  },
+  "privacyPermSidePanel": {
+    "message": "在 Chrome 的侧边栏中显示 Drowzy。"
+  },
+  "privacyPermHost": {
+    "message": "可选的主机访问，仅在您启用表单保护或挂起标签标记时按需请求。安装时绝不请求。可随时撤销。"
+  },
   "privacyContactTitle": {
     "message": "联系方式"
   },
   "privacyContactText": {
     "message": "有问题？请联系 drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "替换"
+  "privacyYourDataTitle": {
+    "message": "您的数据"
   },
-  "replaceSessionTitle": {
-    "message": "用此会话替换当前标签页"
+  "privacyYourDataText": {
+    "message": "由于没有任何内容离开您的浏览器，没有仪表板、没有账户，我们也无法看到您使用 Drowzy 做了什么。如果您卸载 Drowzy，Chrome 会通过一个单独的网页向您提供发送可选反馈（卸载原因、浏览器、OS）的机会；该提交是明确的，并且会发送到匿名表单。您可以通过关闭标签来跳过它。"
   },
-  "invalidDomain": {
-    "message": "请输入有效的域名（例如 example.com）"
+  "privacyFooterText": {
+    "message": "Drowzy 是开源的。"
   },
-  "extensionPage": {
-    "message": "扩展页面"
-  },
-  "exportWhitelist": {
-    "message": "导出"
-  },
-  "importWhitelist": {
-    "message": "导入"
-  },
-  "exportWhitelistTitle": {
-    "message": "复制白名单"
-  },
-  "importWhitelistTitle": {
-    "message": "从剪贴板导入白名单"
-  },
-  "copiedSites": {
-    "message": "已复制 $COUNT$ 个网站",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "已导入 $COUNT$ 个新网站",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "剪贴板中未找到有效域名"
-  },
-  "clipboardReadFailed": {
-    "message": "无法读取剪贴板"
-  },
-  "enjoyingDrowzy": {
-    "message": "喜欢 Drowzy 吗？"
-  },
-  "reviewYes": {
-    "message": "喜欢！"
-  },
-  "reviewNo": {
-    "message": "不太满意"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$ 新功能",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "在 GitHub 上浏览代码"
   },
   "changelogTitle": {
     "message": "Drowzy 新变化"
   },
   "changelogWhatsNew": {
     "message": "新变化"
+  },
+  "changelogVersionLabel": {
+    "message": "版本"
   },
   "changelogCtaText": {
     "message": "Drowzy 是免费开源的。如果它帮您节省了内存，请考虑留下评价或在 GitHub 上给我们加星。"
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "关闭重复标签页"
-  },
-  "tabUntitled": {
-    "message": "无标题"
-  },
-  "badgeWhitelisted": {
-    "message": "已加白名单"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "即将"
-  },
-  "changelogVersionLabel": {
-    "message": "版本"
-  },
-  "copiedStats": {
-    "message": "统计数据已复制！"
-  },
-  "privacyFooterLink": {
-    "message": "在 GitHub 上浏览代码"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy 是开源的。"
-  },
-  "privacyPermHost": {
-    "message": "可选的主机访问，仅在您启用表单保护或挂起标签标记时按需请求。安装时绝不请求。可随时撤销。"
-  },
-  "privacyPermScripting": {
-    "message": "注入一个小脚本以在挂起标签前检测未保存的表单数据。仅限选择加入。"
-  },
-  "privacyPermSidePanel": {
-    "message": "在 Chrome 的侧边栏中显示 Drowzy。"
-  },
-  "privacyYourDataText": {
-    "message": "由于没有任何内容离开您的浏览器，没有仪表板、没有账户，我们也无法看到您使用 Drowzy 做了什么。如果您卸载 Drowzy，Chrome 会通过一个单独的网页向您提供发送可选反馈（卸载原因、浏览器、OS）的机会；该提交是明确的，并且会发送到匿名表单。您可以通过关闭标签来跳过它。"
-  },
-  "privacyYourDataTitle": {
-    "message": "您的数据"
-  },
-  "ramEstimateTooltip": {
-    "message": "估计每个挂起标签使用约 150 MB。实际节省因页面而异。"
-  },
-  "shareStats": {
-    "message": "分享"
-  },
-  "statLifetimeRam": {
-    "message": "总共节省的 RAM"
   },
   "confirmDeleteTitle": {
     "message": "再次点击以确认删除"

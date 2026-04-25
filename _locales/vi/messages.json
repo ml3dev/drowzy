@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "đã tiết kiệm"
   },
+  "statForecast": {
+    "message": "khả dụng"
+  },
   "suspendOthers": {
     "message": "Tạm ngưng tab khác"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Không tìm thấy tab nào"
   },
+  "tabUntitled": {
+    "message": "Không có tiêu đề"
+  },
   "failedToLoad": {
     "message": "Tải thất bại. Mở lại cửa sổ bật lên để thử lại."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Âm thanh"
+  },
+  "badgeWhitelisted": {
+    "message": "Trong danh sách trắng"
   },
   "badgeProtected": {
     "message": "Được bảo vệ"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Tất cả thời gian"
   },
+  "statLifetimeRam": {
+    "message": "Tổng RAM đã tiết kiệm"
+  },
+  "ramEstimateTooltip": {
+    "message": "Ước tính sử dụng ~150 MB cho mỗi tab tạm ngưng. Mức tiết kiệm thực tế thay đổi theo trang."
+  },
+  "ramForecastTooltip": {
+    "message": "Bộ nhớ ước tính sẽ được giải phóng khi các tab không hoạt động của bạn ngủ, khoảng 150 MB mỗi tab."
+  },
+  "suspendedToast": {
+    "message": "Đã tạm dừng $COUNT$ tab · giải phóng ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Đã đánh thức $COUNT$ tab",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Không có tab nào khác để tạm dừng"
+  },
+  "noSuspendedToWake": {
+    "message": "Không có tab tạm dừng nào để đánh thức"
+  },
+  "pinnedWontSuspend": {
+    "message": "Đã ghim — sẽ không bị tạm dừng"
+  },
+  "audioWontSuspend": {
+    "message": "Đang phát âm thanh — sẽ không bị tạm dừng"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Trong danh sách trắng — sẽ không bị tạm dừng"
+  },
+  "systemPageCantSuspend": {
+    "message": "Trang hệ thống — không thể tạm dừng"
+  },
+  "clickToDismiss": {
+    "message": "Nhấp để đóng"
+  },
+  "keepAwakeBtn": {
+    "message": "Giữ thức"
+  },
+  "suspendTimerHint": {
+    "message": "Các thẻ bạn đã chuyển khỏi sẽ bị tạm dừng sau khoảng thời gian này. Tăng thời gian này nếu bạn thường quay lại các thẻ sau những khoảng nghỉ dài."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Mẹo:</strong> Nhấp vào biểu tượng câu đố trên thanh công cụ Chrome để ghim Drowzy nhằm truy cập một lần nhấp."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Tạm dừng các thẻ bạn vẫn còn dùng?</strong> Mở Drowzy → Cài đặt để tăng bộ hẹn giờ 30 phút, hoặc thêm trang web vào danh sách trắng của bạn chỉ bằng một cú nhấp chuột."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Đang điền biểu mẫu?</strong> Bật \"Bảo vệ thẻ có biểu mẫu\" trong Cài đặt để các thẻ có nội dung chưa lưu không bị tạm dừng."
+  },
+  "onboardingRemapHint": {
+    "message": "Muốn phím tắt khác? Tùy chỉnh tại đây →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Để lại đánh giá nhanh"
+  },
+  "reviewReportTitle": {
+    "message": "Báo cáo sự cố"
+  },
+  "reviewDismissTitle": {
+    "message": "Đóng"
+  },
   "statMemberSince": {
     "message": "Thành viên từ"
+  },
+  "shareStats": {
+    "message": "Chia sẻ"
+  },
+  "copiedStats": {
+    "message": "Đã sao chép số liệu!"
   },
   "settings": {
     "message": "Cài đặt"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Không có trang nào trong danh sách trắng"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Đang tạm ngưng..."
   },
-  "done": {
-    "message": "Xong!"
+  "suspendingSoon": {
+    "message": "sắp"
   },
   "waking": {
     "message": "Đang đánh thức..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Xóa"
+  },
+  "replace": {
+    "message": "Thay thế"
+  },
+  "replaceSessionTitle": {
+    "message": "Thay thế các tab hiện tại bằng phiên này"
+  },
+  "invalidDomain": {
+    "message": "Nhập tên miền hợp lệ (ví dụ: example.com)"
+  },
+  "extensionPage": {
+    "message": "Trang tiện ích mở rộng"
+  },
+  "exportWhitelist": {
+    "message": "Xuất"
+  },
+  "importWhitelist": {
+    "message": "Nhập"
+  },
+  "exportWhitelistTitle": {
+    "message": "Sao chép danh sách trắng"
+  },
+  "importWhitelistTitle": {
+    "message": "Nhập danh sách trắng từ bộ nhớ tạm"
+  },
+  "copiedSites": {
+    "message": "Đã sao chép $COUNT$ trang web",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Đã nhập $COUNT$ trang web mới",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Không tìm thấy tên miền hợp lệ trong bộ nhớ tạm"
+  },
+  "clipboardReadFailed": {
+    "message": "Không thể đọc bộ nhớ tạm"
+  },
+  "enjoyingDrowzy": {
+    "message": "Bạn thích Drowzy không?"
+  },
+  "reviewYes": {
+    "message": "Có!"
+  },
+  "reviewNo": {
+    "message": "Không hẳn"
+  },
+  "whatsNew": {
+    "message": "Có gì mới trong v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Chuyển sang chế độ sáng"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Tùy chọn menu nhấp chuột phải để tạm ngưng và danh sách trắng."
   },
+  "privacyPermScripting": {
+    "message": "Tiêm một tập lệnh nhỏ để phát hiện dữ liệu biểu mẫu chưa lưu trước khi tạm ngưng tab. Chỉ chọn tham gia."
+  },
+  "privacyPermSidePanel": {
+    "message": "Hiển thị Drowzy trong bảng bên của Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Quyền truy cập máy chủ tùy chọn, chỉ được yêu cầu theo nhu cầu khi bạn bật Bảo vệ biểu mẫu hoặc Đánh dấu tab tạm ngưng. Không bao giờ được yêu cầu khi cài đặt. Có thể thu hồi bất kỳ lúc nào."
+  },
   "privacyContactTitle": {
     "message": "Liên hệ"
   },
   "privacyContactText": {
     "message": "Có câu hỏi? Liên hệ tại drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Thay thế"
+  "privacyYourDataTitle": {
+    "message": "Dữ liệu của bạn"
   },
-  "replaceSessionTitle": {
-    "message": "Thay thế các tab hiện tại bằng phiên này"
+  "privacyYourDataText": {
+    "message": "Vì không có gì rời khỏi trình duyệt của bạn, không có bảng điều khiển, không có tài khoản, và không có cách nào để chúng tôi nhìn thấy những gì bạn đã làm với Drowzy. Nếu bạn gỡ cài đặt Drowzy, Chrome cung cấp cho bạn cơ hội gửi phản hồi tùy chọn (lý do gỡ cài đặt, trình duyệt, OS) thông qua một trang web riêng; việc gửi đó là rõ ràng và đi đến biểu mẫu ẩn danh. Bạn có thể bỏ qua nó bằng cách đóng tab."
   },
-  "invalidDomain": {
-    "message": "Nhập tên miền hợp lệ (ví dụ: example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy là mã nguồn mở."
   },
-  "extensionPage": {
-    "message": "Trang tiện ích mở rộng"
-  },
-  "exportWhitelist": {
-    "message": "Xuất"
-  },
-  "importWhitelist": {
-    "message": "Nhập"
-  },
-  "exportWhitelistTitle": {
-    "message": "Sao chép danh sách trắng"
-  },
-  "importWhitelistTitle": {
-    "message": "Nhập danh sách trắng từ bộ nhớ tạm"
-  },
-  "copiedSites": {
-    "message": "Đã sao chép $COUNT$ trang web",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Đã nhập $COUNT$ trang web mới",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Không tìm thấy tên miền hợp lệ trong bộ nhớ tạm"
-  },
-  "clipboardReadFailed": {
-    "message": "Không thể đọc bộ nhớ tạm"
-  },
-  "enjoyingDrowzy": {
-    "message": "Bạn thích Drowzy không?"
-  },
-  "reviewYes": {
-    "message": "Có!"
-  },
-  "reviewNo": {
-    "message": "Không hẳn"
-  },
-  "whatsNew": {
-    "message": "Có gì mới trong v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Duyệt mã trên GitHub"
   },
   "changelogTitle": {
     "message": "Có gì mới trong Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Có gì mới"
+  },
+  "changelogVersionLabel": {
+    "message": "Phiên bản"
   },
   "changelogCtaText": {
     "message": "Drowzy miễn phí và mã nguồn mở. Nếu tiết kiệm bộ nhớ cho bạn, hãy để lại đánh giá hoặc gắn sao trên GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Đóng các thẻ trùng lặp"
-  },
-  "tabUntitled": {
-    "message": "Không có tiêu đề"
-  },
-  "badgeWhitelisted": {
-    "message": "Trong danh sách trắng"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "sắp"
-  },
-  "changelogVersionLabel": {
-    "message": "Phiên bản"
-  },
-  "copiedStats": {
-    "message": "Đã sao chép số liệu!"
-  },
-  "privacyFooterLink": {
-    "message": "Duyệt mã trên GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy là mã nguồn mở."
-  },
-  "privacyPermHost": {
-    "message": "Quyền truy cập máy chủ tùy chọn, chỉ được yêu cầu theo nhu cầu khi bạn bật Bảo vệ biểu mẫu hoặc Đánh dấu tab tạm ngưng. Không bao giờ được yêu cầu khi cài đặt. Có thể thu hồi bất kỳ lúc nào."
-  },
-  "privacyPermScripting": {
-    "message": "Tiêm một tập lệnh nhỏ để phát hiện dữ liệu biểu mẫu chưa lưu trước khi tạm ngưng tab. Chỉ chọn tham gia."
-  },
-  "privacyPermSidePanel": {
-    "message": "Hiển thị Drowzy trong bảng bên của Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Vì không có gì rời khỏi trình duyệt của bạn, không có bảng điều khiển, không có tài khoản, và không có cách nào để chúng tôi nhìn thấy những gì bạn đã làm với Drowzy. Nếu bạn gỡ cài đặt Drowzy, Chrome cung cấp cho bạn cơ hội gửi phản hồi tùy chọn (lý do gỡ cài đặt, trình duyệt, OS) thông qua một trang web riêng; việc gửi đó là rõ ràng và đi đến biểu mẫu ẩn danh. Bạn có thể bỏ qua nó bằng cách đóng tab."
-  },
-  "privacyYourDataTitle": {
-    "message": "Dữ liệu của bạn"
-  },
-  "ramEstimateTooltip": {
-    "message": "Ước tính sử dụng ~150 MB cho mỗi tab tạm ngưng. Mức tiết kiệm thực tế thay đổi theo trang."
-  },
-  "shareStats": {
-    "message": "Chia sẻ"
-  },
-  "statLifetimeRam": {
-    "message": "Tổng RAM đã tiết kiệm"
   },
   "confirmDeleteTitle": {
     "message": "Nhấp lại để xác nhận xóa"

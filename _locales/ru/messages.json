@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "сэкономлено"
   },
+  "statForecast": {
+    "message": "доступно"
+  },
   "suspendOthers": {
     "message": "Приостановить остальные"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Вкладки не найдены"
   },
+  "tabUntitled": {
+    "message": "Без названия"
+  },
   "failedToLoad": {
     "message": "Не удалось загрузить. Откройте popup снова для повтора."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Аудио"
+  },
+  "badgeWhitelisted": {
+    "message": "В белом списке"
   },
   "badgeProtected": {
     "message": "Защищена"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "За всё время"
   },
+  "statLifetimeRam": {
+    "message": "Всего сэкономлено ОЗУ"
+  },
+  "ramEstimateTooltip": {
+    "message": "Оценено с использованием ~150 МБ на приостановленную вкладку. Фактическая экономия зависит от страницы."
+  },
+  "ramForecastTooltip": {
+    "message": "Расчётная память, которая освободится, когда ваши неактивные вкладки заснут, ~150 МБ на вкладку."
+  },
+  "suspendedToast": {
+    "message": "Приостановлено $COUNT$ вкладок · освобождено ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Пробуждено $COUNT$ вкладок",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Нет других вкладок для приостановки"
+  },
+  "noSuspendedToWake": {
+    "message": "Нет приостановленных вкладок для пробуждения"
+  },
+  "pinnedWontSuspend": {
+    "message": "Закреплена — не будет приостановлена"
+  },
+  "audioWontSuspend": {
+    "message": "Воспроизводит звук — не будет приостановлена"
+  },
+  "whitelistedWontSuspend": {
+    "message": "В белом списке — не будет приостановлена"
+  },
+  "systemPageCantSuspend": {
+    "message": "Системная страница — не может быть приостановлена"
+  },
+  "clickToDismiss": {
+    "message": "Нажмите, чтобы закрыть"
+  },
+  "keepAwakeBtn": {
+    "message": "Не усыплять"
+  },
+  "suspendTimerHint": {
+    "message": "Вкладки, с которых вы переключились, приостанавливаются через это время. Увеличьте его, если возвращаетесь к вкладкам после долгих перерывов."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Совет:</strong> Нажмите на значок пазла в панели инструментов Chrome, чтобы закрепить Drowzy для доступа в один клик."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Усыпляет вкладки, которые вам ещё нужны?</strong> Откройте Drowzy → Настройки, чтобы увеличить 30-минутный таймер, или добавьте сайт в белый список одним кликом."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Заполняете форму?</strong> Включите «Защищать вкладки с формами» в Настройках, чтобы вкладки с несохранёнными данными не усыплялись."
+  },
+  "onboardingRemapHint": {
+    "message": "Хотите другие сочетания клавиш? Настройте их здесь →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Оставить быстрый отзыв"
+  },
+  "reviewReportTitle": {
+    "message": "Сообщить о проблеме"
+  },
+  "reviewDismissTitle": {
+    "message": "Закрыть"
+  },
   "statMemberSince": {
     "message": "Участник с"
+  },
+  "shareStats": {
+    "message": "Поделиться"
+  },
+  "copiedStats": {
+    "message": "Статистика скопирована!"
   },
   "settings": {
     "message": "Настройки"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Нет сайтов в белом списке"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Приостановка..."
   },
-  "done": {
-    "message": "Готово!"
+  "suspendingSoon": {
+    "message": "скоро"
   },
   "waking": {
     "message": "Пробуждение..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Удалить"
+  },
+  "replace": {
+    "message": "Заменить"
+  },
+  "replaceSessionTitle": {
+    "message": "Заменить текущие вкладки этой сессией"
+  },
+  "invalidDomain": {
+    "message": "Введите корректный домен (например, example.com)"
+  },
+  "extensionPage": {
+    "message": "Страница расширения"
+  },
+  "exportWhitelist": {
+    "message": "Экспорт"
+  },
+  "importWhitelist": {
+    "message": "Импорт"
+  },
+  "exportWhitelistTitle": {
+    "message": "Копировать белый список"
+  },
+  "importWhitelistTitle": {
+    "message": "Импортировать белый список из буфера обмена"
+  },
+  "copiedSites": {
+    "message": "Скопировано сайтов: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Импортировано новых сайтов: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "В буфере обмена не найдено валидных доменов"
+  },
+  "clipboardReadFailed": {
+    "message": "Не удалось прочитать буфер обмена"
+  },
+  "enjoyingDrowzy": {
+    "message": "Нравится Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Да!"
+  },
+  "reviewNo": {
+    "message": "Не очень"
+  },
+  "whatsNew": {
+    "message": "Что нового в v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Переключить на светлую тему"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Опции меню правого клика для приостановки и белого списка."
   },
+  "privacyPermScripting": {
+    "message": "Внедрение небольшого скрипта для обнаружения несохранённых данных формы перед приостановкой вкладки. Только по согласию."
+  },
+  "privacyPermSidePanel": {
+    "message": "Отображение Drowzy в боковой панели Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Дополнительный доступ к хостам, запрашивается по требованию только при включении Защиты форм или Маркировки приостановленных вкладок. Никогда не запрашивается при установке. Отзывается в любое время."
+  },
   "privacyContactTitle": {
     "message": "Контакты"
   },
   "privacyContactText": {
     "message": "Вопросы? Пишите на drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Заменить"
+  "privacyYourDataTitle": {
+    "message": "Ваши данные"
   },
-  "replaceSessionTitle": {
-    "message": "Заменить текущие вкладки этой сессией"
+  "privacyYourDataText": {
+    "message": "Поскольку ничего не покидает ваш браузер, нет панели управления, нет учётной записи и нет способа узнать, что вы делали с Drowzy. Если вы удалите Drowzy, Chrome предложит вам возможность отправить дополнительный отзыв (причина удаления, браузер, ОС) через отдельную веб-страницу; эта отправка явная и идёт в анонимную форму. Вы можете пропустить её, закрыв вкладку."
   },
-  "invalidDomain": {
-    "message": "Введите корректный домен (например, example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy — open source."
   },
-  "extensionPage": {
-    "message": "Страница расширения"
-  },
-  "exportWhitelist": {
-    "message": "Экспорт"
-  },
-  "importWhitelist": {
-    "message": "Импорт"
-  },
-  "exportWhitelistTitle": {
-    "message": "Копировать белый список"
-  },
-  "importWhitelistTitle": {
-    "message": "Импортировать белый список из буфера обмена"
-  },
-  "copiedSites": {
-    "message": "Скопировано сайтов: $COUNT$",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Импортировано новых сайтов: $COUNT$",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "В буфере обмена не найдено валидных доменов"
-  },
-  "clipboardReadFailed": {
-    "message": "Не удалось прочитать буфер обмена"
-  },
-  "enjoyingDrowzy": {
-    "message": "Нравится Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Да!"
-  },
-  "reviewNo": {
-    "message": "Не очень"
-  },
-  "whatsNew": {
-    "message": "Что нового в v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Просмотреть код на GitHub"
   },
   "changelogTitle": {
     "message": "Что нового в Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Что нового"
+  },
+  "changelogVersionLabel": {
+    "message": "Версия"
   },
   "changelogCtaText": {
     "message": "Drowzy бесплатен и имеет открытый код. Если он экономит память, оставьте отзыв или звезду на GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Закрыть дублирующиеся вкладки"
-  },
-  "tabUntitled": {
-    "message": "Без названия"
-  },
-  "badgeWhitelisted": {
-    "message": "В белом списке"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "скоро"
-  },
-  "changelogVersionLabel": {
-    "message": "Версия"
-  },
-  "copiedStats": {
-    "message": "Статистика скопирована!"
-  },
-  "privacyFooterLink": {
-    "message": "Просмотреть код на GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy — open source."
-  },
-  "privacyPermHost": {
-    "message": "Дополнительный доступ к хостам, запрашивается по требованию только при включении Защиты форм или Маркировки приостановленных вкладок. Никогда не запрашивается при установке. Отзывается в любое время."
-  },
-  "privacyPermScripting": {
-    "message": "Внедрение небольшого скрипта для обнаружения несохранённых данных формы перед приостановкой вкладки. Только по согласию."
-  },
-  "privacyPermSidePanel": {
-    "message": "Отображение Drowzy в боковой панели Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Поскольку ничего не покидает ваш браузер, нет панели управления, нет учётной записи и нет способа узнать, что вы делали с Drowzy. Если вы удалите Drowzy, Chrome предложит вам возможность отправить дополнительный отзыв (причина удаления, браузер, ОС) через отдельную веб-страницу; эта отправка явная и идёт в анонимную форму. Вы можете пропустить её, закрыв вкладку."
-  },
-  "privacyYourDataTitle": {
-    "message": "Ваши данные"
-  },
-  "ramEstimateTooltip": {
-    "message": "Оценено с использованием ~150 МБ на приостановленную вкладку. Фактическая экономия зависит от страницы."
-  },
-  "shareStats": {
-    "message": "Поделиться"
-  },
-  "statLifetimeRam": {
-    "message": "Всего сэкономлено ОЗУ"
   },
   "confirmDeleteTitle": {
     "message": "Нажмите снова для подтверждения удаления"

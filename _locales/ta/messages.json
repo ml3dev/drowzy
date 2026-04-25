@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "சேமிக்கப்பட்டது"
   },
+  "statForecast": {
+    "message": "கிடைக்கும்"
+  },
   "suspendOthers": {
     "message": "மற்றவற்றை இடைநிறுத்து"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "தாவல்கள் எதுவும் கிடைக்கவில்லை"
   },
+  "tabUntitled": {
+    "message": "தலைப்பில்லை"
+  },
   "failedToLoad": {
     "message": "ஏற்றுவதில் தோல்வி. மீண்டும் முயற்சிக்க popup-ஐ திறக்கவும்."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "ஒலி"
+  },
+  "badgeWhitelisted": {
+    "message": "அனுமதிப்பட்டியலில்"
   },
   "badgeProtected": {
     "message": "பாதுகாக்கப்பட்டது"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "மொத்தம்"
   },
+  "statLifetimeRam": {
+    "message": "மொத்த RAM சேமிப்பு"
+  },
+  "ramEstimateTooltip": {
+    "message": "இடைநிறுத்தப்பட்ட தாவலுக்கு ~150 MB பயன்படுத்தி மதிப்பிடப்பட்டது. உண்மையான சேமிப்பு பக்கத்தைப் பொறுத்து மாறுபடும்."
+  },
+  "ramForecastTooltip": {
+    "message": "உங்கள் செயலற்ற தாவல்கள் தூங்கும்போது சேமிக்க கிடைக்கும் தோராயமான நினைவகம், ஒரு தாவலுக்கு ~150 MB."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ தாவல்(கள்) நிறுத்தப்பட்டது · ~$RAM$ விடுவிக்கப்பட்டது",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ தாவல்(கள்) எழுப்பப்பட்டது",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "நிறுத்த வேறு தாவல்கள் இல்லை"
+  },
+  "noSuspendedToWake": {
+    "message": "எழுப்ப நிறுத்தப்பட்ட தாவல்கள் இல்லை"
+  },
+  "pinnedWontSuspend": {
+    "message": "பின் செய்யப்பட்டது — நிறுத்தப்படாது"
+  },
+  "audioWontSuspend": {
+    "message": "ஒலி இயங்குகிறது — நிறுத்தப்படாது"
+  },
+  "whitelistedWontSuspend": {
+    "message": "வெள்ளைப் பட்டியலில் — நிறுத்தப்படாது"
+  },
+  "systemPageCantSuspend": {
+    "message": "கணினி பக்கம் — நிறுத்த முடியாது"
+  },
+  "clickToDismiss": {
+    "message": "மூட கிளிக் செய்க"
+  },
+  "keepAwakeBtn": {
+    "message": "விழித்திருக்கச் செய்"
+  },
+  "suspendTimerHint": {
+    "message": "நீங்கள் விட்டுச் சென்ற தாவல்கள் இந்த நேரத்திற்குப் பிறகு இடைநிறுத்தப்படும். நீண்ட இடைவெளிகளுக்குப் பிறகு தாவல்களுக்குத் திரும்பினால் இதை அதிகரிக்கவும்."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>குறிப்பு:</strong> ஒற்றை-கிளிக் அணுகலுக்காக Drowzy ஐ பின் செய்ய Chrome கருவிப்பட்டியில் உள்ள புதிர் ஐகானைக் கிளிக் செய்க."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>நீங்கள் இன்னும் பயன்படுத்தும் தாவல்கள் இடைநிறுத்தப்படுகின்றனவா?</strong> 30-நிமிட டைமரை அதிகரிக்க அல்லது ஒரு கிளிக்கில் தளத்தை உங்கள் வெள்ளைப் பட்டியலில் சேர்க்க Drowzy → அமைப்புகளைத் திறக்கவும்."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>படிவம் நிரப்புகிறீர்களா?</strong> சேமிக்கப்படாத உள்ளீடுகள் கொண்ட தாவல்கள் இடைநிறுத்தப்படாமல் இருக்க அமைப்புகளில் \"படிவங்கள் கொண்ட தாவல்களைப் பாதுகாக்கவும்\" ஐ இயக்கவும்."
+  },
+  "onboardingRemapHint": {
+    "message": "வேறு விசைப்பலகை குறுக்குவழிகள் வேண்டுமா? இங்கே தனிப்பயனாக்கவும் →"
+  },
+  "reviewLeaveTitle": {
+    "message": "விரைவான மதிப்பாய்வை விடுங்கள்"
+  },
+  "reviewReportTitle": {
+    "message": "சிக்கலைப் புகாரளிக்கவும்"
+  },
+  "reviewDismissTitle": {
+    "message": "நிராகரி"
+  },
   "statMemberSince": {
     "message": "உறுப்பினர் ஆன நாள்"
+  },
+  "shareStats": {
+    "message": "பகிர்"
+  },
+  "copiedStats": {
+    "message": "புள்ளிவிவரங்கள் நகலெடுக்கப்பட்டன!"
   },
   "settings": {
     "message": "அமைப்புகள்"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "அனுமதிப்பட்டியலில் தளங்கள் இல்லை"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "இடைநிறுத்துகிறது..."
   },
-  "done": {
-    "message": "முடிந்தது!"
+  "suspendingSoon": {
+    "message": "விரைவில்"
   },
   "waking": {
     "message": "எழுப்புகிறது..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "அகற்று"
+  },
+  "replace": {
+    "message": "மாற்றவும்"
+  },
+  "replaceSessionTitle": {
+    "message": "தற்போதைய தாவல்களை இந்த அமர்வுடன் மாற்றவும்"
+  },
+  "invalidDomain": {
+    "message": "சரியான டொமைனை உள்ளிடவும் (எ.கா. example.com)"
+  },
+  "extensionPage": {
+    "message": "நீட்டிப்பு பக்கம்"
+  },
+  "exportWhitelist": {
+    "message": "ஏற்றுமதி"
+  },
+  "importWhitelist": {
+    "message": "இறக்குமதி"
+  },
+  "exportWhitelistTitle": {
+    "message": "அனுமதிப் பட்டியலை நகலெடு"
+  },
+  "importWhitelistTitle": {
+    "message": "கிளிப்போர்டிலிருந்து அனுமதிப் பட்டியலை இறக்குமதி செய்"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ தளம்(கள்) நகலெடுக்கப்பட்டன",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ புதிய தளம்(கள்) இறக்குமதி செய்யப்பட்டன",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "கிளிப்போர்டில் சரியான டொமைன்கள் கிடைக்கவில்லை"
+  },
+  "clipboardReadFailed": {
+    "message": "கிளிப்போர்டைப் படிக்க இயலவில்லை"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy பிடிக்கிறதா?"
+  },
+  "reviewYes": {
+    "message": "ஆமாம்!"
+  },
+  "reviewNo": {
+    "message": "அவ்வளவாக இல்லை"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$ இல் புதியவை",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "ஒளி பயன்முறைக்கு மாறு"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "இடைநிறுத்தல் மற்றும் வெள்ளைப் பட்டியலுக்கான வலது-கிளிக் மெனு விருப்பங்கள்."
   },
+  "privacyPermScripting": {
+    "message": "ஒரு தாவலை இடைநிறுத்துவதற்கு முன்பு சேமிக்கப்படாத படிவத் தரவைக் கண்டறிய ஒரு சிறிய ஸ்கிரிப்டை செலுத்துதல். விருப்பம் மட்டுமே."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome-ன் பக்க பேனலில் Drowzy-ஐக் காண்பித்தல்."
+  },
+  "privacyPermHost": {
+    "message": "விரும்பினால் ஹோஸ்ட் அணுகல், படிவ பாதுகாப்பு அல்லது இடைநிறுத்தப்பட்ட-தாவல் குறியிடலை இயக்கும்போது மட்டுமே கோரப்படுகிறது. நிறுவலின் போது ஒருபோதும் கோரப்படாது. எந்த நேரத்திலும் ரத்து செய்யக்கூடியது."
+  },
   "privacyContactTitle": {
     "message": "தொடர்பு"
   },
   "privacyContactText": {
     "message": "கேள்விகள்? drowzyextension@gmail.com இல் தொடர்பு கொள்ளவும்"
   },
-  "replace": {
-    "message": "மாற்றவும்"
+  "privacyYourDataTitle": {
+    "message": "உங்கள் தரவு"
   },
-  "replaceSessionTitle": {
-    "message": "தற்போதைய தாவல்களை இந்த அமர்வுடன் மாற்றவும்"
+  "privacyYourDataText": {
+    "message": "எதுவும் உங்கள் உலாவியை விட்டு வெளியேறாததால், டாஷ்போர்டு இல்லை, கணக்கு இல்லை, Drowzy-உடன் நீங்கள் என்ன செய்தீர்கள் என்பதை நாங்கள் பார்க்க வழியில்லை. நீங்கள் Drowzy-ஐ நிறுவல் நீக்கினால், Chrome உங்களுக்கு தனித்த வலைப் பக்கத்தின் மூலம் விருப்ப கருத்துக்களை (நிறுவல் நீக்கக் காரணம், உலாவி, OS) அனுப்ப வாய்ப்பளிக்கிறது; அந்த சமர்ப்பிப்பு வெளிப்படையானது மற்றும் அநாமதேய படிவத்திற்கு செல்கிறது. தாவலை மூடுவதன் மூலம் நீங்கள் அதைத் தவிர்க்கலாம்."
   },
-  "invalidDomain": {
-    "message": "சரியான டொமைனை உள்ளிடவும் (எ.கா. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy திறந்த மூலம்."
   },
-  "extensionPage": {
-    "message": "நீட்டிப்பு பக்கம்"
-  },
-  "exportWhitelist": {
-    "message": "ஏற்றுமதி"
-  },
-  "importWhitelist": {
-    "message": "இறக்குமதி"
-  },
-  "exportWhitelistTitle": {
-    "message": "அனுமதிப் பட்டியலை நகலெடு"
-  },
-  "importWhitelistTitle": {
-    "message": "கிளிப்போர்டிலிருந்து அனுமதிப் பட்டியலை இறக்குமதி செய்"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ தளம்(கள்) நகலெடுக்கப்பட்டன",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ புதிய தளம்(கள்) இறக்குமதி செய்யப்பட்டன",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "கிளிப்போர்டில் சரியான டொமைன்கள் கிடைக்கவில்லை"
-  },
-  "clipboardReadFailed": {
-    "message": "கிளிப்போர்டைப் படிக்க இயலவில்லை"
-  },
-  "enjoyingDrowzy": {
-    "message": "Drowzy பிடிக்கிறதா?"
-  },
-  "reviewYes": {
-    "message": "ஆமாம்!"
-  },
-  "reviewNo": {
-    "message": "அவ்வளவாக இல்லை"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$ இல் புதியவை",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "GitHub-ல் குறியீட்டை உலாவவும்"
   },
   "changelogTitle": {
     "message": "Drowzy இல் புதியவை"
   },
   "changelogWhatsNew": {
     "message": "புதியவை"
+  },
+  "changelogVersionLabel": {
+    "message": "பதிப்பு"
   },
   "changelogCtaText": {
     "message": "Drowzy இலவசம் மற்றும் திறந்த மூலம். நினைவகம் சேமிக்கிறது என்றால், மதிப்பாய்வு அல்லது GitHub-இல் நட்சத்திரம் கொடுங்கள்."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "நகல் தாவல்களை மூடு"
-  },
-  "tabUntitled": {
-    "message": "தலைப்பில்லை"
-  },
-  "badgeWhitelisted": {
-    "message": "அனுமதிப்பட்டியலில்"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "விரைவில்"
-  },
-  "changelogVersionLabel": {
-    "message": "பதிப்பு"
-  },
-  "copiedStats": {
-    "message": "புள்ளிவிவரங்கள் நகலெடுக்கப்பட்டன!"
-  },
-  "privacyFooterLink": {
-    "message": "GitHub-ல் குறியீட்டை உலாவவும்"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy திறந்த மூலம்."
-  },
-  "privacyPermHost": {
-    "message": "விரும்பினால் ஹோஸ்ட் அணுகல், படிவ பாதுகாப்பு அல்லது இடைநிறுத்தப்பட்ட-தாவல் குறியிடலை இயக்கும்போது மட்டுமே கோரப்படுகிறது. நிறுவலின் போது ஒருபோதும் கோரப்படாது. எந்த நேரத்திலும் ரத்து செய்யக்கூடியது."
-  },
-  "privacyPermScripting": {
-    "message": "ஒரு தாவலை இடைநிறுத்துவதற்கு முன்பு சேமிக்கப்படாத படிவத் தரவைக் கண்டறிய ஒரு சிறிய ஸ்கிரிப்டை செலுத்துதல். விருப்பம் மட்டுமே."
-  },
-  "privacyPermSidePanel": {
-    "message": "Chrome-ன் பக்க பேனலில் Drowzy-ஐக் காண்பித்தல்."
-  },
-  "privacyYourDataText": {
-    "message": "எதுவும் உங்கள் உலாவியை விட்டு வெளியேறாததால், டாஷ்போர்டு இல்லை, கணக்கு இல்லை, Drowzy-உடன் நீங்கள் என்ன செய்தீர்கள் என்பதை நாங்கள் பார்க்க வழியில்லை. நீங்கள் Drowzy-ஐ நிறுவல் நீக்கினால், Chrome உங்களுக்கு தனித்த வலைப் பக்கத்தின் மூலம் விருப்ப கருத்துக்களை (நிறுவல் நீக்கக் காரணம், உலாவி, OS) அனுப்ப வாய்ப்பளிக்கிறது; அந்த சமர்ப்பிப்பு வெளிப்படையானது மற்றும் அநாமதேய படிவத்திற்கு செல்கிறது. தாவலை மூடுவதன் மூலம் நீங்கள் அதைத் தவிர்க்கலாம்."
-  },
-  "privacyYourDataTitle": {
-    "message": "உங்கள் தரவு"
-  },
-  "ramEstimateTooltip": {
-    "message": "இடைநிறுத்தப்பட்ட தாவலுக்கு ~150 MB பயன்படுத்தி மதிப்பிடப்பட்டது. உண்மையான சேமிப்பு பக்கத்தைப் பொறுத்து மாறுபடும்."
-  },
-  "shareStats": {
-    "message": "பகிர்"
-  },
-  "statLifetimeRam": {
-    "message": "மொத்த RAM சேமிப்பு"
   },
   "confirmDeleteTitle": {
     "message": "நீக்குவதை உறுதிப்படுத்த மீண்டும் கிளிக் செய்யவும்"

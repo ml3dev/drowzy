@@ -118,6 +118,26 @@
       font-size: 12px;
       color: var(--color-accent);
     }
+    .tips {
+      margin-top: 28px;
+      padding: 16px 18px;
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      border-left: 2px solid var(--color-accent);
+    }
+    .tip {
+      font-size: 13.5px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+    .tip + .tip { margin-top: 8px; }
+    .tip strong { color: var(--color-text); }
+    .tip a {
+      color: var(--color-accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .tip a:hover { color: var(--color-accent-hover); }
     .cta-section {
       margin-top: 40px;
       text-align: center;
@@ -205,6 +225,13 @@
       <li><span class="li-dot">&#x2022;</span><span data-i18n-html="actionAltW">Press <kbd>Alt+W</kbd> to wake all suspended tabs</span></li>
       <li><span class="li-dot">&#x2022;</span><span data-i18n-html="actionRightClick">Right-click on any page for quick suspend options</span></li>
     </ul>
+
+    <div class="tips">
+      <p class="tip" data-i18n-html="onboardingPinTip"><strong>Tip:</strong> Click the puzzle icon in your Chrome toolbar to pin Drowzy for one-click access.</p>
+      <p class="tip" data-i18n-html="onboardingTimerTip"><strong>Suspending tabs you still want?</strong> Open Drowzy → Settings to bump the 30-minute timer up, or add the site to your whitelist with one click.</p>
+      <p class="tip" data-i18n-html="onboardingFormsTip"><strong>Filling out a form?</strong> Enable "Protect tabs with forms" in Settings to keep tabs with unsaved input from being suspended.</p>
+      <p class="tip"><a href="#" id="btnRemapShortcuts" data-i18n="onboardingRemapHint">Want different keyboard shortcuts? Customize them here →</a></p>
+    </div>
 
     <div class="cta-section">
       <p data-i18n="onboardingCta">Drowzy is already running. Open a few tabs and try it out!</p>

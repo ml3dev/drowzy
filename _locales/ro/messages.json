@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "economisit"
   },
+  "statForecast": {
+    "message": "disponibil"
+  },
   "suspendOthers": {
     "message": "Suspendă celelalte"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Nu s-au găsit file"
   },
+  "tabUntitled": {
+    "message": "Fără titlu"
+  },
   "failedToLoad": {
     "message": "Încărcare eșuată. Redeschide popup-ul pentru a reîncerca."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Pe lista albă"
   },
   "badgeProtected": {
     "message": "Protejat"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Din totdeauna"
   },
+  "statLifetimeRam": {
+    "message": "Total RAM economisit"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimat folosind ~150 MB pe filă suspendată. Economiile reale variază în funcție de pagină."
+  },
+  "ramForecastTooltip": {
+    "message": "Memorie estimată care va fi eliberată când filele inactive vor adormi, la ~150 MB per filă."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ filă(e) suspendată(e) · ~$RAM$ eliberați",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ filă(e) trezită(e)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Nu există alte file de suspendat"
+  },
+  "noSuspendedToWake": {
+    "message": "Nu există file suspendate de trezit"
+  },
+  "pinnedWontSuspend": {
+    "message": "Fixată — nu va fi suspendată"
+  },
+  "audioWontSuspend": {
+    "message": "Redă audio — nu va fi suspendată"
+  },
+  "whitelistedWontSuspend": {
+    "message": "În lista albă — nu va fi suspendată"
+  },
+  "systemPageCantSuspend": {
+    "message": "Pagină de sistem — nu poate fi suspendată"
+  },
+  "clickToDismiss": {
+    "message": "Faceți clic pentru a închide"
+  },
+  "keepAwakeBtn": {
+    "message": "Menține activă"
+  },
+  "suspendTimerHint": {
+    "message": "Filele de la care ai plecat sunt suspendate după acest timp. Mărește-l dacă te întorci la file după pauze lungi."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Sfat:</strong> Faceți clic pe pictograma puzzle din bara de instrumente Chrome pentru a fixa Drowzy pentru acces cu un clic."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Suspendă file pe care încă le folosești?</strong> Deschide Drowzy → Setări pentru a mări temporizatorul de 30 de minute, sau adaugă site-ul în lista albă cu un clic."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Completezi un formular?</strong> Activează „Protejează filele cu formulare\" în Setări astfel încât filele cu introduceri nesalvate să nu fie suspendate."
+  },
+  "onboardingRemapHint": {
+    "message": "Doriți alte comenzi rapide de la tastatură? Personalizați-le aici →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Lăsați o recenzie rapidă"
+  },
+  "reviewReportTitle": {
+    "message": "Raportați o problemă"
+  },
+  "reviewDismissTitle": {
+    "message": "Închide"
+  },
   "statMemberSince": {
     "message": "Membru din"
+  },
+  "shareStats": {
+    "message": "Partajează"
+  },
+  "copiedStats": {
+    "message": "Statistici copiate!"
   },
   "settings": {
     "message": "Setări"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Niciun site pe lista albă"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Se suspendă..."
   },
-  "done": {
-    "message": "Gata!"
+  "suspendingSoon": {
+    "message": "în curând"
   },
   "waking": {
     "message": "Se trezesc..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Elimină"
+  },
+  "replace": {
+    "message": "Înlocuiește"
+  },
+  "replaceSessionTitle": {
+    "message": "Înlocuiește filele curente cu această sesiune"
+  },
+  "invalidDomain": {
+    "message": "Introduceți un domeniu valid (de ex. example.com)"
+  },
+  "extensionPage": {
+    "message": "Pagina extensiei"
+  },
+  "exportWhitelist": {
+    "message": "Exportă"
+  },
+  "importWhitelist": {
+    "message": "Importă"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copiază lista albă"
+  },
+  "importWhitelistTitle": {
+    "message": "Importă lista albă din clipboard"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ site(-uri) copiat(e)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ site(-uri) noi importat(e)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Nu s-au găsit domenii valide în clipboard"
+  },
+  "clipboardReadFailed": {
+    "message": "Nu s-a putut citi clipboard-ul"
+  },
+  "enjoyingDrowzy": {
+    "message": "Îți place Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Da!"
+  },
+  "reviewNo": {
+    "message": "Nu prea"
+  },
+  "whatsNew": {
+    "message": "Ce e nou în v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Comută la modul luminos"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Opțiuni de meniu cu clic dreapta pentru suspendare și lista albă."
   },
+  "privacyPermScripting": {
+    "message": "Injectarea unui mic script pentru a detecta datele de formular nesalvate înainte de a suspenda o filă. Doar opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Afișarea Drowzy în panoul lateral al Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Acces opțional la gazdă, solicitat la cerere doar când activați Protecția formularelor sau Marcarea filelor suspendate. Niciodată cerut la instalare. Revocabil oricând."
+  },
   "privacyContactTitle": {
     "message": "Contact"
   },
   "privacyContactText": {
     "message": "Întrebări? Contactează-ne la drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Înlocuiește"
+  "privacyYourDataTitle": {
+    "message": "Datele tale"
   },
-  "replaceSessionTitle": {
-    "message": "Înlocuiește filele curente cu această sesiune"
+  "privacyYourDataText": {
+    "message": "Pentru că nimic nu părăsește browserul tău, nu există nicio tablou de bord, niciun cont și niciun mod să vedem ce ai făcut cu Drowzy. Dacă dezinstalezi Drowzy, Chrome îți oferă șansa să trimiți feedback opțional (motivul dezinstalării, browser, OS) printr-o pagină web separată; acea trimitere este explicită și merge la un formular anonim. Poți să o sari închizând fila."
   },
-  "invalidDomain": {
-    "message": "Introduceți un domeniu valid (de ex. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy este open source."
   },
-  "extensionPage": {
-    "message": "Pagina extensiei"
-  },
-  "exportWhitelist": {
-    "message": "Exportă"
-  },
-  "importWhitelist": {
-    "message": "Importă"
-  },
-  "exportWhitelistTitle": {
-    "message": "Copiază lista albă"
-  },
-  "importWhitelistTitle": {
-    "message": "Importă lista albă din clipboard"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ site(-uri) copiat(e)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ site(-uri) noi importat(e)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Nu s-au găsit domenii valide în clipboard"
-  },
-  "clipboardReadFailed": {
-    "message": "Nu s-a putut citi clipboard-ul"
-  },
-  "enjoyingDrowzy": {
-    "message": "Îți place Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Da!"
-  },
-  "reviewNo": {
-    "message": "Nu prea"
-  },
-  "whatsNew": {
-    "message": "Ce e nou în v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Răsfoiți codul pe GitHub"
   },
   "changelogTitle": {
     "message": "Ce e nou în Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Ce e nou"
+  },
+  "changelogVersionLabel": {
+    "message": "Versiune"
   },
   "changelogCtaText": {
     "message": "Drowzy este gratuit și open source. Dacă vă economisește memorie, lăsați o recenzie sau o stea pe GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Închide filele duplicate"
-  },
-  "tabUntitled": {
-    "message": "Fără titlu"
-  },
-  "badgeWhitelisted": {
-    "message": "Pe lista albă"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "în curând"
-  },
-  "changelogVersionLabel": {
-    "message": "Versiune"
-  },
-  "copiedStats": {
-    "message": "Statistici copiate!"
-  },
-  "privacyFooterLink": {
-    "message": "Răsfoiți codul pe GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy este open source."
-  },
-  "privacyPermHost": {
-    "message": "Acces opțional la gazdă, solicitat la cerere doar când activați Protecția formularelor sau Marcarea filelor suspendate. Niciodată cerut la instalare. Revocabil oricând."
-  },
-  "privacyPermScripting": {
-    "message": "Injectarea unui mic script pentru a detecta datele de formular nesalvate înainte de a suspenda o filă. Doar opt-in."
-  },
-  "privacyPermSidePanel": {
-    "message": "Afișarea Drowzy în panoul lateral al Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Pentru că nimic nu părăsește browserul tău, nu există nicio tablou de bord, niciun cont și niciun mod să vedem ce ai făcut cu Drowzy. Dacă dezinstalezi Drowzy, Chrome îți oferă șansa să trimiți feedback opțional (motivul dezinstalării, browser, OS) printr-o pagină web separată; acea trimitere este explicită și merge la un formular anonim. Poți să o sari închizând fila."
-  },
-  "privacyYourDataTitle": {
-    "message": "Datele tale"
-  },
-  "ramEstimateTooltip": {
-    "message": "Estimat folosind ~150 MB pe filă suspendată. Economiile reale variază în funcție de pagină."
-  },
-  "shareStats": {
-    "message": "Partajează"
-  },
-  "statLifetimeRam": {
-    "message": "Total RAM economisit"
   },
   "confirmDeleteTitle": {
     "message": "Faceți clic din nou pentru a confirma ștergerea"

@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "সংরক্ষিত"
   },
+  "statForecast": {
+    "message": "উপলব্ধ"
+  },
   "suspendOthers": {
     "message": "অন্যগুলো সাসপেন্ড করুন"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "কোনো ট্যাব পাওয়া যায়নি"
   },
+  "tabUntitled": {
+    "message": "শিরোনামহীন"
+  },
   "failedToLoad": {
     "message": "লোড করতে ব্যর্থ। আবার চেষ্টা করতে পপআপ পুনরায় খুলুন।"
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "অডিও"
+  },
+  "badgeWhitelisted": {
+    "message": "সাদা তালিকাভুক্ত"
   },
   "badgeProtected": {
     "message": "সুরক্ষিত"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "সর্বকালীন"
   },
+  "statLifetimeRam": {
+    "message": "মোট RAM সঞ্চয়"
+  },
+  "ramEstimateTooltip": {
+    "message": "প্রতি স্থগিত ট্যাবে ~150 MB ব্যবহার করে অনুমান করা। প্রকৃত সঞ্চয় পৃষ্ঠা অনুসারে পরিবর্তিত হয়।"
+  },
+  "ramForecastTooltip": {
+    "message": "আপনার নিষ্ক্রিয় ট্যাবগুলি ঘুমিয়ে গেলে সংরক্ষণ করার জন্য আনুমানিক মেমরি, প্রতি ট্যাবে ~150 MB।"
+  },
+  "suspendedToast": {
+    "message": "$COUNT$টি ট্যাব স্থগিত · ~$RAM$ মুক্ত হয়েছে",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$টি ট্যাব জাগ্রত হয়েছে",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "স্থগিত করার মতো অন্য কোনও ট্যাব নেই"
+  },
+  "noSuspendedToWake": {
+    "message": "জাগ্রত করার মতো কোনও স্থগিত ট্যাব নেই"
+  },
+  "pinnedWontSuspend": {
+    "message": "পিন করা — স্থগিত হবে না"
+  },
+  "audioWontSuspend": {
+    "message": "অডিও বাজছে — স্থগিত হবে না"
+  },
+  "whitelistedWontSuspend": {
+    "message": "শ্বেততালিকাভুক্ত — স্থগিত হবে না"
+  },
+  "systemPageCantSuspend": {
+    "message": "সিস্টেম পৃষ্ঠা — স্থগিত করা যাবে না"
+  },
+  "clickToDismiss": {
+    "message": "বন্ধ করতে ক্লিক করুন"
+  },
+  "keepAwakeBtn": {
+    "message": "সক্রিয় রাখুন"
+  },
+  "suspendTimerHint": {
+    "message": "যে ট্যাব থেকে আপনি সরে গেছেন সেগুলি এই সময় পরে স্থগিত হয়। দীর্ঘ বিরতির পরে ট্যাবে ফিরে এলে এটি বাড়ান।"
+  },
+  "onboardingPinTip": {
+    "message": "<strong>টিপ:</strong> এক ক্লিকে Drowzy অ্যাক্সেস করতে আপনার Chrome টুলবারে ধাঁধা আইকনে ক্লিক করুন।"
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>এখনো ব্যবহার করছেন এমন ট্যাব স্থগিত হচ্ছে?</strong> ৩০-মিনিটের টাইমার বাড়াতে বা এক ক্লিকে সাইটটিকে আপনার শ্বেত তালিকায় যোগ করতে Drowzy → সেটিংস খুলুন।"
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>একটি ফর্ম পূরণ করছেন?</strong> অসংরক্ষিত ইনপুট সহ ট্যাবগুলি স্থগিত হওয়া থেকে রক্ষা করতে সেটিংসে \"ফর্ম সহ ট্যাব রক্ষা করুন\" সক্ষম করুন।"
+  },
+  "onboardingRemapHint": {
+    "message": "অন্য কীবোর্ড শর্টকাট চান? এখানে কাস্টমাইজ করুন →"
+  },
+  "reviewLeaveTitle": {
+    "message": "একটি দ্রুত পর্যালোচনা দিন"
+  },
+  "reviewReportTitle": {
+    "message": "একটি সমস্যা রিপোর্ট করুন"
+  },
+  "reviewDismissTitle": {
+    "message": "বরখাস্ত"
+  },
   "statMemberSince": {
     "message": "সদস্য থেকে"
+  },
+  "shareStats": {
+    "message": "শেয়ার"
+  },
+  "copiedStats": {
+    "message": "পরিসংখ্যান কপি হয়েছে!"
   },
   "settings": {
     "message": "সেটিংস"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "কোনো সাইট হোয়াইটলিস্ট করা নেই"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "সাসপেন্ড হচ্ছে..."
   },
-  "done": {
-    "message": "সম্পন্ন!"
+  "suspendingSoon": {
+    "message": "শীঘ্রই"
   },
   "waking": {
     "message": "জাগানো হচ্ছে..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "সরান"
+  },
+  "replace": {
+    "message": "প্রতিস্থাপন"
+  },
+  "replaceSessionTitle": {
+    "message": "বর্তমান ট্যাবগুলি এই সেশন দিয়ে প্রতিস্থাপন করুন"
+  },
+  "invalidDomain": {
+    "message": "একটি বৈধ ডোমেইন লিখুন (যেমন example.com)"
+  },
+  "extensionPage": {
+    "message": "এক্সটেনশন পেজ"
+  },
+  "exportWhitelist": {
+    "message": "রপ্তানি"
+  },
+  "importWhitelist": {
+    "message": "আমদানি"
+  },
+  "exportWhitelistTitle": {
+    "message": "হোয়াইটলিস্ট কপি করুন"
+  },
+  "importWhitelistTitle": {
+    "message": "ক্লিপবোর্ড থেকে হোয়াইটলিস্ট আমদানি করুন"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ সাইট কপি করা হয়েছে",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ নতুন সাইট আমদানি করা হয়েছে",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "ক্লিপবোর্ডে কোনো বৈধ ডোমেইন পাওয়া যায়নি"
+  },
+  "clipboardReadFailed": {
+    "message": "ক্লিপবোর্ড পড়া যায়নি"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy পছন্দ হচ্ছে?"
+  },
+  "reviewYes": {
+    "message": "হ্যাঁ!"
+  },
+  "reviewNo": {
+    "message": "তেমন নয়"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$-এ নতুন কী",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "লাইট মোডে যান"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "স্থগিত এবং হোয়াইটলিস্টের জন্য রাইট-ক্লিক মেনু বিকল্প।"
   },
+  "privacyPermScripting": {
+    "message": "একটি ট্যাব স্থগিত করার আগে অসংরক্ষিত ফর্ম ডেটা সনাক্ত করতে একটি ছোট স্ক্রিপ্ট ইনজেক্ট করা। শুধুমাত্র অপ্ট-ইন।"
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome-এর সাইড প্যানেলে Drowzy প্রদর্শন করা।"
+  },
+  "privacyPermHost": {
+    "message": "ঐচ্ছিক হোস্ট অ্যাক্সেস, কেবল ফর্ম সুরক্ষা বা স্থগিত-ট্যাব চিহ্নিতকরণ সক্ষম করলে চাওয়া হয়। ইনস্টলে কখনও চাওয়া হয় না। যেকোনো সময় প্রত্যাহারযোগ্য।"
+  },
   "privacyContactTitle": {
     "message": "যোগাযোগ"
   },
   "privacyContactText": {
     "message": "প্রশ্ন আছে? drowzyextension@gmail.com-এ যোগাযোগ করুন"
   },
-  "replace": {
-    "message": "প্রতিস্থাপন"
+  "privacyYourDataTitle": {
+    "message": "আপনার ডেটা"
   },
-  "replaceSessionTitle": {
-    "message": "বর্তমান ট্যাবগুলি এই সেশন দিয়ে প্রতিস্থাপন করুন"
+  "privacyYourDataText": {
+    "message": "যেহেতু কিছুই আপনার ব্রাউজার ছেড়ে যায় না, তাই কোনো ড্যাশবোর্ড, কোনো অ্যাকাউন্ট নেই, এবং Drowzy দিয়ে আপনি কী করেছেন তা আমাদের দেখার কোনো উপায় নেই। আপনি যদি Drowzy আনইনস্টল করেন, Chrome আপনাকে একটি পৃথক ওয়েব পেজের মাধ্যমে ঐচ্ছিক প্রতিক্রিয়া পাঠানোর সুযোগ দেয় (আনইনস্টল করার কারণ, ব্রাউজার, OS); সেই জমা স্পষ্ট এবং একটি বেনামী ফর্মে যায়। ট্যাব বন্ধ করে আপনি এটি এড়িয়ে যেতে পারেন।"
   },
-  "invalidDomain": {
-    "message": "একটি বৈধ ডোমেইন লিখুন (যেমন example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy ওপেন সোর্স।"
   },
-  "extensionPage": {
-    "message": "এক্সটেনশন পেজ"
-  },
-  "exportWhitelist": {
-    "message": "রপ্তানি"
-  },
-  "importWhitelist": {
-    "message": "আমদানি"
-  },
-  "exportWhitelistTitle": {
-    "message": "হোয়াইটলিস্ট কপি করুন"
-  },
-  "importWhitelistTitle": {
-    "message": "ক্লিপবোর্ড থেকে হোয়াইটলিস্ট আমদানি করুন"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ সাইট কপি করা হয়েছে",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ নতুন সাইট আমদানি করা হয়েছে",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "ক্লিপবোর্ডে কোনো বৈধ ডোমেইন পাওয়া যায়নি"
-  },
-  "clipboardReadFailed": {
-    "message": "ক্লিপবোর্ড পড়া যায়নি"
-  },
-  "enjoyingDrowzy": {
-    "message": "Drowzy পছন্দ হচ্ছে?"
-  },
-  "reviewYes": {
-    "message": "হ্যাঁ!"
-  },
-  "reviewNo": {
-    "message": "তেমন নয়"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$-এ নতুন কী",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "GitHub-এ কোড ব্রাউজ করুন"
   },
   "changelogTitle": {
     "message": "Drowzy-তে নতুন কী"
   },
   "changelogWhatsNew": {
     "message": "নতুন কী"
+  },
+  "changelogVersionLabel": {
+    "message": "সংস্করণ"
   },
   "changelogCtaText": {
     "message": "Drowzy বিনামূল্যে এবং ওপেন সোর্স। মেমোরি সাশ্রয় করলে একটি রিভিউ দিন বা GitHub-এ স্টার দিন।"
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "ডুপ্লিকেট ট্যাব বন্ধ করুন"
-  },
-  "tabUntitled": {
-    "message": "শিরোনামহীন"
-  },
-  "badgeWhitelisted": {
-    "message": "সাদা তালিকাভুক্ত"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "শীঘ্রই"
-  },
-  "changelogVersionLabel": {
-    "message": "সংস্করণ"
-  },
-  "copiedStats": {
-    "message": "পরিসংখ্যান কপি হয়েছে!"
-  },
-  "privacyFooterLink": {
-    "message": "GitHub-এ কোড ব্রাউজ করুন"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy ওপেন সোর্স।"
-  },
-  "privacyPermHost": {
-    "message": "ঐচ্ছিক হোস্ট অ্যাক্সেস, কেবল ফর্ম সুরক্ষা বা স্থগিত-ট্যাব চিহ্নিতকরণ সক্ষম করলে চাওয়া হয়। ইনস্টলে কখনও চাওয়া হয় না। যেকোনো সময় প্রত্যাহারযোগ্য।"
-  },
-  "privacyPermScripting": {
-    "message": "একটি ট্যাব স্থগিত করার আগে অসংরক্ষিত ফর্ম ডেটা সনাক্ত করতে একটি ছোট স্ক্রিপ্ট ইনজেক্ট করা। শুধুমাত্র অপ্ট-ইন।"
-  },
-  "privacyPermSidePanel": {
-    "message": "Chrome-এর সাইড প্যানেলে Drowzy প্রদর্শন করা।"
-  },
-  "privacyYourDataText": {
-    "message": "যেহেতু কিছুই আপনার ব্রাউজার ছেড়ে যায় না, তাই কোনো ড্যাশবোর্ড, কোনো অ্যাকাউন্ট নেই, এবং Drowzy দিয়ে আপনি কী করেছেন তা আমাদের দেখার কোনো উপায় নেই। আপনি যদি Drowzy আনইনস্টল করেন, Chrome আপনাকে একটি পৃথক ওয়েব পেজের মাধ্যমে ঐচ্ছিক প্রতিক্রিয়া পাঠানোর সুযোগ দেয় (আনইনস্টল করার কারণ, ব্রাউজার, OS); সেই জমা স্পষ্ট এবং একটি বেনামী ফর্মে যায়। ট্যাব বন্ধ করে আপনি এটি এড়িয়ে যেতে পারেন।"
-  },
-  "privacyYourDataTitle": {
-    "message": "আপনার ডেটা"
-  },
-  "ramEstimateTooltip": {
-    "message": "প্রতি স্থগিত ট্যাবে ~150 MB ব্যবহার করে অনুমান করা। প্রকৃত সঞ্চয় পৃষ্ঠা অনুসারে পরিবর্তিত হয়।"
-  },
-  "shareStats": {
-    "message": "শেয়ার"
-  },
-  "statLifetimeRam": {
-    "message": "মোট RAM সঞ্চয়"
   },
   "confirmDeleteTitle": {
     "message": "মুছে ফেলা নিশ্চিত করতে আবার ক্লিক করুন"

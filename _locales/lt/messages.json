@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "sutaupyta"
   },
+  "statForecast": {
+    "message": "prieinama"
+  },
   "suspendOthers": {
     "message": "Sustabdyti kitas"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Kortelių nerasta"
   },
+  "tabUntitled": {
+    "message": "Be pavadinimo"
+  },
   "failedToLoad": {
     "message": "Nepavyko įkelti. Iš naujo atidarykite iššokantį langą, kad bandytumėte dar kartą."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Garsas"
+  },
+  "badgeWhitelisted": {
+    "message": "Baltajame sąraše"
   },
   "badgeProtected": {
     "message": "Apsaugota"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Iš viso"
   },
+  "statLifetimeRam": {
+    "message": "Iš viso išsaugota RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "Apskaičiuota naudojant ~150 MB sustabdytam skirtukui. Tikrasis taupymas skiriasi pagal puslapį."
+  },
+  "ramForecastTooltip": {
+    "message": "Apytikslė atmintis, kuri bus atlaisvinta, kai jūsų neaktyvūs skirtukai užmigs, ~150 MB skirtukui."
+  },
+  "suspendedToast": {
+    "message": "Sustabdyta $COUNT$ skirtuk. · atlaisvinta ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Pažadinta $COUNT$ skirtuk.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Nėra kitų skirtukų sustabdyti"
+  },
+  "noSuspendedToWake": {
+    "message": "Nėra sustabdytų skirtukų pažadinti"
+  },
+  "pinnedWontSuspend": {
+    "message": "Prisegta — nebus sustabdyta"
+  },
+  "audioWontSuspend": {
+    "message": "Grojama garsas — nebus sustabdyta"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Baltajame sąraše — nebus sustabdyta"
+  },
+  "systemPageCantSuspend": {
+    "message": "Sistemos puslapis — negali būti sustabdytas"
+  },
+  "clickToDismiss": {
+    "message": "Spustelėkite norėdami uždaryti"
+  },
+  "keepAwakeBtn": {
+    "message": "Palikti aktyvią"
+  },
+  "suspendTimerHint": {
+    "message": "Skirtukai, nuo kurių perėjote, sustabdomi po šio laiko. Padidinkite jį, jei prie skirtukų grįžtate po ilgų pertraukų."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Patarimas:</strong> Spustelėkite dėlionės piktogramą „Chrome“ įrankių juostoje, kad prisegtumėte „Drowzy“ vienu spustelėjimu."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Sustabdo skirtukus, kurių dar reikia?</strong> Atidarykite Drowzy → Nustatymai, kad padidintumėte 30 minučių laikmatį, arba pridėkite svetainę į baltąjį sąrašą vienu paspaudimu."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Pildote formą?</strong> Įjunkite „Apsaugoti skirtukus su formomis\" Nustatymuose, kad skirtukai su neišsaugotu įvedimu nebūtų sustabdomi."
+  },
+  "onboardingRemapHint": {
+    "message": "Norite kitokių klaviatūros sparčiųjų klavišų? Pritaikykite juos čia →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Palikite greitą apžvalgą"
+  },
+  "reviewReportTitle": {
+    "message": "Pranešti apie problemą"
+  },
+  "reviewDismissTitle": {
+    "message": "Uždaryti"
+  },
   "statMemberSince": {
     "message": "Narys nuo"
+  },
+  "shareStats": {
+    "message": "Dalintis"
+  },
+  "copiedStats": {
+    "message": "Statistika nukopijuota!"
   },
   "settings": {
     "message": "Nustatymai"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Baltajame sąraše svetainių nėra"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Sustabdoma..."
   },
-  "done": {
-    "message": "Atlikta!"
+  "suspendingSoon": {
+    "message": "netrukus"
   },
   "waking": {
     "message": "Žadinama..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Pašalinti"
+  },
+  "replace": {
+    "message": "Pakeisti"
+  },
+  "replaceSessionTitle": {
+    "message": "Pakeisti dabartinius skirtukus šia sesija"
+  },
+  "invalidDomain": {
+    "message": "Įveskite tinkamą domeną (pvz. example.com)"
+  },
+  "extensionPage": {
+    "message": "Plėtinio puslapis"
+  },
+  "exportWhitelist": {
+    "message": "Eksportuoti"
+  },
+  "importWhitelist": {
+    "message": "Importuoti"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopijuoti baltąjį sąrašą"
+  },
+  "importWhitelistTitle": {
+    "message": "Importuoti baltąjį sąrašą iš iškarpinės"
+  },
+  "copiedSites": {
+    "message": "Nukopijuota $COUNT$ svetainių",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Importuota $COUNT$ naujų svetainių",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Iškarpinėje nerasta tinkamų domenų"
+  },
+  "clipboardReadFailed": {
+    "message": "Nepavyko nuskaityti iškarpinės"
+  },
+  "enjoyingDrowzy": {
+    "message": "Patinka Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Taip!"
+  },
+  "reviewNo": {
+    "message": "Ne visai"
+  },
+  "whatsNew": {
+    "message": "Kas naujo v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Perjungti į šviesų režimą"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Dešiniojo paspaudimo meniu parinktys sustabdymui ir baltajam sąrašui."
   },
+  "privacyPermScripting": {
+    "message": "Mažo scenarijaus įterpimas, siekiant aptikti neišsaugotus formos duomenis prieš sustabdant skirtuką. Tik pasirinktinai."
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzy rodymas Chrome šoniniame skydelyje."
+  },
+  "privacyPermHost": {
+    "message": "Pasirinktinė pagrindinio kompiuterio prieiga, prašoma pagal poreikį tik tada, kai įjungiate Formų apsaugą arba Sustabdytų skirtukų žymėjimą. Niekada neprašoma diegimo metu. Galima atšaukti bet kuriuo metu."
+  },
   "privacyContactTitle": {
     "message": "Kontaktai"
   },
   "privacyContactText": {
     "message": "Turite klausimų? Rašykite adresu drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Pakeisti"
+  "privacyYourDataTitle": {
+    "message": "Jūsų duomenys"
   },
-  "replaceSessionTitle": {
-    "message": "Pakeisti dabartinius skirtukus šia sesija"
+  "privacyYourDataText": {
+    "message": "Kadangi niekas neišeina iš jūsų naršyklės, nėra prietaisų skydelio, paskyros ar būdo mums pamatyti, ką padarėte su Drowzy. Jei pašalinsite Drowzy, Chrome siūlo galimybę išsiųsti pasirinktinį atsiliepimą (pašalinimo priežastis, naršyklė, OS) per atskirą tinklalapį; tas pateikimas yra aiškus ir patenka į anoniminę formą. Galite jį praleisti uždarydami skirtuką."
   },
-  "invalidDomain": {
-    "message": "Įveskite tinkamą domeną (pvz. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy yra atvirojo kodo."
   },
-  "extensionPage": {
-    "message": "Plėtinio puslapis"
-  },
-  "exportWhitelist": {
-    "message": "Eksportuoti"
-  },
-  "importWhitelist": {
-    "message": "Importuoti"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopijuoti baltąjį sąrašą"
-  },
-  "importWhitelistTitle": {
-    "message": "Importuoti baltąjį sąrašą iš iškarpinės"
-  },
-  "copiedSites": {
-    "message": "Nukopijuota $COUNT$ svetainių",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Importuota $COUNT$ naujų svetainių",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Iškarpinėje nerasta tinkamų domenų"
-  },
-  "clipboardReadFailed": {
-    "message": "Nepavyko nuskaityti iškarpinės"
-  },
-  "enjoyingDrowzy": {
-    "message": "Patinka Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Taip!"
-  },
-  "reviewNo": {
-    "message": "Ne visai"
-  },
-  "whatsNew": {
-    "message": "Kas naujo v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Naršyti kodą GitHub"
   },
   "changelogTitle": {
     "message": "Kas naujo Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Kas naujo"
+  },
+  "changelogVersionLabel": {
+    "message": "Versija"
   },
   "changelogCtaText": {
     "message": "Drowzy yra nemokamas ir atviro kodo. Jei jis taupo jūsų atmintį, palikite atsiliepimą arba žvaigždutę GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Uždaryti pasikartojančius skirtukus"
-  },
-  "tabUntitled": {
-    "message": "Be pavadinimo"
-  },
-  "badgeWhitelisted": {
-    "message": "Baltajame sąraše"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "netrukus"
-  },
-  "changelogVersionLabel": {
-    "message": "Versija"
-  },
-  "copiedStats": {
-    "message": "Statistika nukopijuota!"
-  },
-  "privacyFooterLink": {
-    "message": "Naršyti kodą GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy yra atvirojo kodo."
-  },
-  "privacyPermHost": {
-    "message": "Pasirinktinė pagrindinio kompiuterio prieiga, prašoma pagal poreikį tik tada, kai įjungiate Formų apsaugą arba Sustabdytų skirtukų žymėjimą. Niekada neprašoma diegimo metu. Galima atšaukti bet kuriuo metu."
-  },
-  "privacyPermScripting": {
-    "message": "Mažo scenarijaus įterpimas, siekiant aptikti neišsaugotus formos duomenis prieš sustabdant skirtuką. Tik pasirinktinai."
-  },
-  "privacyPermSidePanel": {
-    "message": "Drowzy rodymas Chrome šoniniame skydelyje."
-  },
-  "privacyYourDataText": {
-    "message": "Kadangi niekas neišeina iš jūsų naršyklės, nėra prietaisų skydelio, paskyros ar būdo mums pamatyti, ką padarėte su Drowzy. Jei pašalinsite Drowzy, Chrome siūlo galimybę išsiųsti pasirinktinį atsiliepimą (pašalinimo priežastis, naršyklė, OS) per atskirą tinklalapį; tas pateikimas yra aiškus ir patenka į anoniminę formą. Galite jį praleisti uždarydami skirtuką."
-  },
-  "privacyYourDataTitle": {
-    "message": "Jūsų duomenys"
-  },
-  "ramEstimateTooltip": {
-    "message": "Apskaičiuota naudojant ~150 MB sustabdytam skirtukui. Tikrasis taupymas skiriasi pagal puslapį."
-  },
-  "shareStats": {
-    "message": "Dalintis"
-  },
-  "statLifetimeRam": {
-    "message": "Iš viso išsaugota RAM"
   },
   "confirmDeleteTitle": {
     "message": "Spustelėkite dar kartą, kad patvirtintumėte ištrynimą"

@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "sparat"
   },
+  "statForecast": {
+    "message": "tillgängligt"
+  },
   "suspendOthers": {
     "message": "Suspendera andra"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Inga flikar hittades"
   },
+  "tabUntitled": {
+    "message": "Namnlös"
+  },
   "failedToLoad": {
     "message": "Kunde inte ladda. Öppna popup igen för att försöka igen."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Ljud"
+  },
+  "badgeWhitelisted": {
+    "message": "Vitlistad"
   },
   "badgeProtected": {
     "message": "Skyddad"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Totalt"
   },
+  "statLifetimeRam": {
+    "message": "Totalt sparat RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "Uppskattat med ~150 MB per suspenderad flik. Faktiska besparingar varierar per sida."
+  },
+  "ramForecastTooltip": {
+    "message": "Uppskattat minne som frigörs när dina inaktiva flikar sövs, vid ~150 MB per flik."
+  },
+  "suspendedToast": {
+    "message": "Pausade $COUNT$ flik(ar) · frigjorde ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Väckte $COUNT$ flik(ar)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Inga andra flikar att pausa"
+  },
+  "noSuspendedToWake": {
+    "message": "Inga pausade flikar att väcka"
+  },
+  "pinnedWontSuspend": {
+    "message": "Fäst — kommer inte att pausas"
+  },
+  "audioWontSuspend": {
+    "message": "Spelar ljud — kommer inte att pausas"
+  },
+  "whitelistedWontSuspend": {
+    "message": "På vitlistan — kommer inte att pausas"
+  },
+  "systemPageCantSuspend": {
+    "message": "Systemsida — kan inte pausas"
+  },
+  "clickToDismiss": {
+    "message": "Klicka för att stänga"
+  },
+  "keepAwakeBtn": {
+    "message": "Håll vaken"
+  },
+  "suspendTimerHint": {
+    "message": "Flikar som du har bytt från avbryts efter denna tid. Öka den om du återkommer till flikar efter långa pauser."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Tips:</strong> Klicka på pusselikonen i Chromes verktygsfält för att fästa Drowzy för åtkomst med ett klick."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Avbryter flikar du fortfarande använder?</strong> Öppna Drowzy → Inställningar för att öka 30-minuterstimern, eller lägg till sidan i din vitlista med ett klick."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Fyller du i ett formulär?</strong> Aktivera \"Skydda flikar med formulär\" i Inställningar så att flikar med osparad inmatning inte avbryts."
+  },
+  "onboardingRemapHint": {
+    "message": "Vill du ha andra kortkommandon? Anpassa dem här →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Skriv en snabb recension"
+  },
+  "reviewReportTitle": {
+    "message": "Rapportera ett problem"
+  },
+  "reviewDismissTitle": {
+    "message": "Stäng"
+  },
   "statMemberSince": {
     "message": "Medlem sedan"
+  },
+  "shareStats": {
+    "message": "Dela"
+  },
+  "copiedStats": {
+    "message": "Statistik kopierad!"
   },
   "settings": {
     "message": "Inställningar"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Inga webbplatser vitlistade"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Suspenderar..."
   },
-  "done": {
-    "message": "Klart!"
+  "suspendingSoon": {
+    "message": "snart"
   },
   "waking": {
     "message": "Väcker..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Ta bort"
+  },
+  "replace": {
+    "message": "Ersätt"
+  },
+  "replaceSessionTitle": {
+    "message": "Ersätt nuvarande flikar med denna session"
+  },
+  "invalidDomain": {
+    "message": "Ange en giltig domän (t.ex. example.com)"
+  },
+  "extensionPage": {
+    "message": "Tilläggssida"
+  },
+  "exportWhitelist": {
+    "message": "Exportera"
+  },
+  "importWhitelist": {
+    "message": "Importera"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopiera vitlista"
+  },
+  "importWhitelistTitle": {
+    "message": "Importera vitlista från urklipp"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ webbplats(er) kopierad(e)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ ny(a) webbplats(er) importerad(e)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Inga giltiga domäner hittades i urklipp"
+  },
+  "clipboardReadFailed": {
+    "message": "Kunde inte läsa urklipp"
+  },
+  "enjoyingDrowzy": {
+    "message": "Gillar du Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ja!"
+  },
+  "reviewNo": {
+    "message": "Inte riktigt"
+  },
+  "whatsNew": {
+    "message": "Nyheter i v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Byt till ljust läge"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Högerklicksmeny-alternativ för suspendering och vitlista."
   },
+  "privacyPermScripting": {
+    "message": "Injicera ett litet skript för att upptäcka osparade formulärdata innan en flik suspenderas. Endast tillval."
+  },
+  "privacyPermSidePanel": {
+    "message": "Visa Drowzy i Chromes sidopanel."
+  },
+  "privacyPermHost": {
+    "message": "Valfri värdåtkomst, begärs på begäran endast när du aktiverar Formulärskydd eller Markering av suspenderade flikar. Begärs aldrig vid installation. Kan återkallas när som helst."
+  },
   "privacyContactTitle": {
     "message": "Kontakt"
   },
   "privacyContactText": {
     "message": "Frågor? Kontakta oss på drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Ersätt"
+  "privacyYourDataTitle": {
+    "message": "Dina data"
   },
-  "replaceSessionTitle": {
-    "message": "Ersätt nuvarande flikar med denna session"
+  "privacyYourDataText": {
+    "message": "Eftersom inget lämnar din webbläsare finns det ingen instrumentpanel, inget konto, och inget sätt för oss att se vad du har gjort med Drowzy. Om du avinstallerar Drowzy erbjuder Chrome dig en möjlighet att skicka valfri feedback (anledning till avinstallation, webbläsare, OS) via en separat webbsida; den inlämningen är uttrycklig och går till ett anonymt formulär. Du kan hoppa över det genom att stänga fliken."
   },
-  "invalidDomain": {
-    "message": "Ange en giltig domän (t.ex. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy är öppen källkod."
   },
-  "extensionPage": {
-    "message": "Tilläggssida"
-  },
-  "exportWhitelist": {
-    "message": "Exportera"
-  },
-  "importWhitelist": {
-    "message": "Importera"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopiera vitlista"
-  },
-  "importWhitelistTitle": {
-    "message": "Importera vitlista från urklipp"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ webbplats(er) kopierad(e)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ ny(a) webbplats(er) importerad(e)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Inga giltiga domäner hittades i urklipp"
-  },
-  "clipboardReadFailed": {
-    "message": "Kunde inte läsa urklipp"
-  },
-  "enjoyingDrowzy": {
-    "message": "Gillar du Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ja!"
-  },
-  "reviewNo": {
-    "message": "Inte riktigt"
-  },
-  "whatsNew": {
-    "message": "Nyheter i v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Bläddra koden på GitHub"
   },
   "changelogTitle": {
     "message": "Nyheter i Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nyheter"
+  },
+  "changelogVersionLabel": {
+    "message": "Version"
   },
   "changelogCtaText": {
     "message": "Drowzy är gratis och öppen källkod. Om det sparar minne, överväg att lämna ett omdöme eller en stjärna på GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Stäng dubblettflikar"
-  },
-  "tabUntitled": {
-    "message": "Namnlös"
-  },
-  "badgeWhitelisted": {
-    "message": "Vitlistad"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "snart"
-  },
-  "changelogVersionLabel": {
-    "message": "Version"
-  },
-  "copiedStats": {
-    "message": "Statistik kopierad!"
-  },
-  "privacyFooterLink": {
-    "message": "Bläddra koden på GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy är öppen källkod."
-  },
-  "privacyPermHost": {
-    "message": "Valfri värdåtkomst, begärs på begäran endast när du aktiverar Formulärskydd eller Markering av suspenderade flikar. Begärs aldrig vid installation. Kan återkallas när som helst."
-  },
-  "privacyPermScripting": {
-    "message": "Injicera ett litet skript för att upptäcka osparade formulärdata innan en flik suspenderas. Endast tillval."
-  },
-  "privacyPermSidePanel": {
-    "message": "Visa Drowzy i Chromes sidopanel."
-  },
-  "privacyYourDataText": {
-    "message": "Eftersom inget lämnar din webbläsare finns det ingen instrumentpanel, inget konto, och inget sätt för oss att se vad du har gjort med Drowzy. Om du avinstallerar Drowzy erbjuder Chrome dig en möjlighet att skicka valfri feedback (anledning till avinstallation, webbläsare, OS) via en separat webbsida; den inlämningen är uttrycklig och går till ett anonymt formulär. Du kan hoppa över det genom att stänga fliken."
-  },
-  "privacyYourDataTitle": {
-    "message": "Dina data"
-  },
-  "ramEstimateTooltip": {
-    "message": "Uppskattat med ~150 MB per suspenderad flik. Faktiska besparingar varierar per sida."
-  },
-  "shareStats": {
-    "message": "Dela"
-  },
-  "statLifetimeRam": {
-    "message": "Totalt sparat RAM"
   },
   "confirmDeleteTitle": {
     "message": "Klicka igen för att bekräfta borttagning"

@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "dijimatkan"
   },
+  "statForecast": {
+    "message": "tersedia"
+  },
   "suspendOthers": {
     "message": "Gantung Lain-lain"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Tiada tab dijumpai"
   },
+  "tabUntitled": {
+    "message": "Tanpa tajuk"
+  },
   "failedToLoad": {
     "message": "Gagal memuatkan. Buka semula popup untuk mencuba lagi."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Dalam senarai putih"
   },
   "badgeProtected": {
     "message": "Dilindungi"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Sepanjang masa"
   },
+  "statLifetimeRam": {
+    "message": "Jumlah RAM disimpan"
+  },
+  "ramEstimateTooltip": {
+    "message": "Dianggarkan menggunakan ~150 MB setiap tab yang digantung. Penjimatan sebenar berbeza mengikut halaman."
+  },
+  "ramForecastTooltip": {
+    "message": "Anggaran memori yang akan dibebaskan apabila tab anda yang melahu tertidur, pada ~150 MB per tab."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ tab digantung · ~$RAM$ dibebaskan",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ tab dikejutkan",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Tiada tab lain untuk digantung"
+  },
+  "noSuspendedToWake": {
+    "message": "Tiada tab digantung untuk dikejutkan"
+  },
+  "pinnedWontSuspend": {
+    "message": "Disemat — tidak akan digantung"
+  },
+  "audioWontSuspend": {
+    "message": "Audio dimainkan — tidak akan digantung"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Dalam senarai putih — tidak akan digantung"
+  },
+  "systemPageCantSuspend": {
+    "message": "Halaman sistem — tidak boleh digantung"
+  },
+  "clickToDismiss": {
+    "message": "Klik untuk menutup"
+  },
+  "keepAwakeBtn": {
+    "message": "Kekalkan aktif"
+  },
+  "suspendTimerHint": {
+    "message": "Tab yang anda tinggalkan akan digantung selepas tempoh ini. Tingkatkan jika anda kembali ke tab selepas jeda yang lama."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Petua:</strong> Klik ikon teka-teki dalam bar alat Chrome untuk menyemat Drowzy bagi akses satu klik."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Menggantung tab yang masih anda gunakan?</strong> Buka Drowzy → Tetapan untuk menambah pemasa 30 minit, atau tambahkan tapak ke senarai putih anda dengan satu klik."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Mengisi borang?</strong> Aktifkan \"Lindungi tab dengan borang\" di Tetapan supaya tab dengan input yang belum disimpan tidak digantung."
+  },
+  "onboardingRemapHint": {
+    "message": "Mahukan pintasan papan kekunci yang berbeza? Sesuaikan di sini →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Tinggalkan ulasan pantas"
+  },
+  "reviewReportTitle": {
+    "message": "Laporkan isu"
+  },
+  "reviewDismissTitle": {
+    "message": "Tutup"
+  },
   "statMemberSince": {
     "message": "Ahli sejak"
+  },
+  "shareStats": {
+    "message": "Kongsi"
+  },
+  "copiedStats": {
+    "message": "Statistik disalin!"
   },
   "settings": {
     "message": "Tetapan"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Tiada laman dalam senarai putih"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Menggantung..."
   },
-  "done": {
-    "message": "Selesai!"
+  "suspendingSoon": {
+    "message": "tidak lama lagi"
   },
   "waking": {
     "message": "Membangunkan..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Buang"
+  },
+  "replace": {
+    "message": "Ganti"
+  },
+  "replaceSessionTitle": {
+    "message": "Ganti tab semasa dengan sesi ini"
+  },
+  "invalidDomain": {
+    "message": "Masukkan domain yang sah (cth. example.com)"
+  },
+  "extensionPage": {
+    "message": "Halaman sambungan"
+  },
+  "exportWhitelist": {
+    "message": "Eksport"
+  },
+  "importWhitelist": {
+    "message": "Import"
+  },
+  "exportWhitelistTitle": {
+    "message": "Salin senarai putih"
+  },
+  "importWhitelistTitle": {
+    "message": "Import senarai putih dari papan klip"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ laman disalin",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ laman baharu diimport",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Tiada domain sah ditemui dalam papan klip"
+  },
+  "clipboardReadFailed": {
+    "message": "Tidak dapat membaca papan klip"
+  },
+  "enjoyingDrowzy": {
+    "message": "Suka Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ya!"
+  },
+  "reviewNo": {
+    "message": "Tidak juga"
+  },
+  "whatsNew": {
+    "message": "Apa yang baharu dalam v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Tukar ke mod cerah"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Pilihan menu klik kanan untuk menggantung dan senarai putih."
   },
+  "privacyPermScripting": {
+    "message": "Menyuntik skrip kecil untuk mengesan data borang yang tidak disimpan sebelum menggantung tab. Hanya opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Memaparkan Drowzy dalam panel sisi Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Akses hos pilihan, diminta atas permintaan hanya apabila anda mendayakan Perlindungan Borang atau Penandaan Tab Digantung. Tidak pernah diminta semasa pemasangan. Boleh dibatalkan pada bila-bila masa."
+  },
   "privacyContactTitle": {
     "message": "Hubungi"
   },
   "privacyContactText": {
     "message": "Soalan? Hubungi di drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Ganti"
+  "privacyYourDataTitle": {
+    "message": "Data anda"
   },
-  "replaceSessionTitle": {
-    "message": "Ganti tab semasa dengan sesi ini"
+  "privacyYourDataText": {
+    "message": "Kerana tiada apa-apa meninggalkan pelayar anda, tiada papan pemuka, tiada akaun, dan tiada cara untuk kami melihat apa yang anda lakukan dengan Drowzy. Jika anda menyahpasang Drowzy, Chrome menawarkan anda peluang untuk menghantar maklum balas pilihan (sebab nyahpasang, pelayar, OS) melalui halaman web berasingan; penyerahan itu eksplisit dan pergi ke borang tanpa nama. Anda boleh melangkaunya dengan menutup tab."
   },
-  "invalidDomain": {
-    "message": "Masukkan domain yang sah (cth. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy adalah sumber terbuka."
   },
-  "extensionPage": {
-    "message": "Halaman sambungan"
-  },
-  "exportWhitelist": {
-    "message": "Eksport"
-  },
-  "importWhitelist": {
-    "message": "Import"
-  },
-  "exportWhitelistTitle": {
-    "message": "Salin senarai putih"
-  },
-  "importWhitelistTitle": {
-    "message": "Import senarai putih dari papan klip"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ laman disalin",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ laman baharu diimport",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Tiada domain sah ditemui dalam papan klip"
-  },
-  "clipboardReadFailed": {
-    "message": "Tidak dapat membaca papan klip"
-  },
-  "enjoyingDrowzy": {
-    "message": "Suka Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ya!"
-  },
-  "reviewNo": {
-    "message": "Tidak juga"
-  },
-  "whatsNew": {
-    "message": "Apa yang baharu dalam v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Lihat kod di GitHub"
   },
   "changelogTitle": {
     "message": "Apa yang Baharu di Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Apa yang Baharu"
+  },
+  "changelogVersionLabel": {
+    "message": "Versi"
   },
   "changelogCtaText": {
     "message": "Drowzy percuma dan sumber terbuka. Jika ia menjimatkan memori, tinggalkan ulasan atau bintang di GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Tutup tab pendua"
-  },
-  "tabUntitled": {
-    "message": "Tanpa tajuk"
-  },
-  "badgeWhitelisted": {
-    "message": "Dalam senarai putih"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "tidak lama lagi"
-  },
-  "changelogVersionLabel": {
-    "message": "Versi"
-  },
-  "copiedStats": {
-    "message": "Statistik disalin!"
-  },
-  "privacyFooterLink": {
-    "message": "Lihat kod di GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy adalah sumber terbuka."
-  },
-  "privacyPermHost": {
-    "message": "Akses hos pilihan, diminta atas permintaan hanya apabila anda mendayakan Perlindungan Borang atau Penandaan Tab Digantung. Tidak pernah diminta semasa pemasangan. Boleh dibatalkan pada bila-bila masa."
-  },
-  "privacyPermScripting": {
-    "message": "Menyuntik skrip kecil untuk mengesan data borang yang tidak disimpan sebelum menggantung tab. Hanya opt-in."
-  },
-  "privacyPermSidePanel": {
-    "message": "Memaparkan Drowzy dalam panel sisi Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Kerana tiada apa-apa meninggalkan pelayar anda, tiada papan pemuka, tiada akaun, dan tiada cara untuk kami melihat apa yang anda lakukan dengan Drowzy. Jika anda menyahpasang Drowzy, Chrome menawarkan anda peluang untuk menghantar maklum balas pilihan (sebab nyahpasang, pelayar, OS) melalui halaman web berasingan; penyerahan itu eksplisit dan pergi ke borang tanpa nama. Anda boleh melangkaunya dengan menutup tab."
-  },
-  "privacyYourDataTitle": {
-    "message": "Data anda"
-  },
-  "ramEstimateTooltip": {
-    "message": "Dianggarkan menggunakan ~150 MB setiap tab yang digantung. Penjimatan sebenar berbeza mengikut halaman."
-  },
-  "shareStats": {
-    "message": "Kongsi"
-  },
-  "statLifetimeRam": {
-    "message": "Jumlah RAM disimpan"
   },
   "confirmDeleteTitle": {
     "message": "Klik sekali lagi untuk mengesahkan pemadaman"

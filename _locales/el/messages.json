@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "εξοικονόμηση"
   },
+  "statForecast": {
+    "message": "διαθέσιμα"
+  },
   "suspendOthers": {
     "message": "Αναστολή άλλων"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Δεν βρέθηκαν καρτέλες"
   },
+  "tabUntitled": {
+    "message": "Χωρίς τίτλο"
+  },
   "failedToLoad": {
     "message": "Αποτυχία φόρτωσης. Ανοίξτε ξανά το αναδυόμενο παράθυρο για επανάληψη."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Ήχος"
+  },
+  "badgeWhitelisted": {
+    "message": "Στη λίστα επιτρεπομένων"
   },
   "badgeProtected": {
     "message": "Προστατευμένη"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Συνολικά"
   },
+  "statLifetimeRam": {
+    "message": "Συνολική RAM που εξοικονομήθηκε"
+  },
+  "ramEstimateTooltip": {
+    "message": "Εκτιμάται χρησιμοποιώντας ~150 MB ανά ανεσταλμένη καρτέλα. Η πραγματική εξοικονόμηση διαφέρει ανά σελίδα."
+  },
+  "ramForecastTooltip": {
+    "message": "Εκτιμώμενη μνήμη που θα απελευθερωθεί όταν οι ανενεργές καρτέλες σας περάσουν σε αδράνεια, στα ~150 MB ανά καρτέλα."
+  },
+  "suspendedToast": {
+    "message": "Αναστάλθηκαν $COUNT$ καρτέλες · ελευθερώθηκαν ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Αφυπνίστηκαν $COUNT$ καρτέλες",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Δεν υπάρχουν άλλες καρτέλες προς αναστολή"
+  },
+  "noSuspendedToWake": {
+    "message": "Δεν υπάρχουν ανεσταλμένες καρτέλες προς αφύπνιση"
+  },
+  "pinnedWontSuspend": {
+    "message": "Καρφιτσωμένη — δεν θα ανασταλεί"
+  },
+  "audioWontSuspend": {
+    "message": "Αναπαράγει ήχο — δεν θα ανασταλεί"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Στη λίστα επιτρεπομένων — δεν θα ανασταλεί"
+  },
+  "systemPageCantSuspend": {
+    "message": "Σελίδα συστήματος — δεν μπορεί να ανασταλεί"
+  },
+  "clickToDismiss": {
+    "message": "Κάντε κλικ για κλείσιμο"
+  },
+  "keepAwakeBtn": {
+    "message": "Κράτα ξύπνια"
+  },
+  "suspendTimerHint": {
+    "message": "Οι καρτέλες από τις οποίες απομακρυνθήκατε αναστέλλονται μετά από αυτόν τον χρόνο. Αυξήστε τον αν επιστρέφετε σε καρτέλες μετά από μεγάλα διαλείμματα."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Συμβουλή:</strong> Κάντε κλικ στο εικονίδιο του παζλ στη γραμμή εργαλείων του Chrome για να καρφιτσώσετε το Drowzy για πρόσβαση με ένα κλικ."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Αναστέλλονται καρτέλες που χρειάζεστε ακόμα;</strong> Ανοίξτε Drowzy → Ρυθμίσεις για να αυξήσετε το χρονόμετρο των 30 λεπτών, ή προσθέστε τον ιστότοπο στη λευκή λίστα με ένα κλικ."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Συμπληρώνετε φόρμα;</strong> Ενεργοποιήστε την \"Προστασία καρτελών με φόρμες\" στις Ρυθμίσεις ώστε οι καρτέλες με μη αποθηκευμένα στοιχεία να μην αναστέλλονται."
+  },
+  "onboardingRemapHint": {
+    "message": "Θέλετε διαφορετικές συντομεύσεις πληκτρολογίου; Προσαρμόστε τις εδώ →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Αφήστε μια σύντομη αξιολόγηση"
+  },
+  "reviewReportTitle": {
+    "message": "Αναφορά προβλήματος"
+  },
+  "reviewDismissTitle": {
+    "message": "Απόρριψη"
+  },
   "statMemberSince": {
     "message": "Μέλος από"
+  },
+  "shareStats": {
+    "message": "Κοινοποίηση"
+  },
+  "copiedStats": {
+    "message": "Τα στατιστικά αντιγράφηκαν!"
   },
   "settings": {
     "message": "Ρυθμίσεις"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Κανένας ιστότοπος στη λευκή λίστα"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Αναστολή..."
   },
-  "done": {
-    "message": "Έγινε!"
+  "suspendingSoon": {
+    "message": "σύντομα"
   },
   "waking": {
     "message": "Αφύπνιση..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Αφαίρεση"
+  },
+  "replace": {
+    "message": "Αντικατάσταση"
+  },
+  "replaceSessionTitle": {
+    "message": "Αντικατάσταση τρεχουσών καρτελών με αυτή τη συνεδρία"
+  },
+  "invalidDomain": {
+    "message": "Εισάγετε έναν έγκυρο τομέα (π.χ. example.com)"
+  },
+  "extensionPage": {
+    "message": "Σελίδα επέκτασης"
+  },
+  "exportWhitelist": {
+    "message": "Εξαγωγή"
+  },
+  "importWhitelist": {
+    "message": "Εισαγωγή"
+  },
+  "exportWhitelistTitle": {
+    "message": "Αντιγραφή λευκής λίστας"
+  },
+  "importWhitelistTitle": {
+    "message": "Εισαγωγή λευκής λίστας από πρόχειρο"
+  },
+  "copiedSites": {
+    "message": "Αντιγράφηκαν $COUNT$ ιστότοπος(-οι)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Εισήχθησαν $COUNT$ νέος(-οι) ιστότοπος(-οι)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Δεν βρέθηκαν έγκυροι τομείς στο πρόχειρο"
+  },
+  "clipboardReadFailed": {
+    "message": "Αδυναμία ανάγνωσης προχείρου"
+  },
+  "enjoyingDrowzy": {
+    "message": "Σας αρέσει το Drowzy;"
+  },
+  "reviewYes": {
+    "message": "Ναι!"
+  },
+  "reviewNo": {
+    "message": "Όχι ιδιαίτερα"
+  },
+  "whatsNew": {
+    "message": "Τι νέο στη v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Εναλλαγή σε φωτεινή λειτουργία"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Επιλογές μενού δεξιού κλικ για αναστολή και λευκή λίστα."
   },
+  "privacyPermScripting": {
+    "message": "Εισαγωγή ενός μικρού script για ανίχνευση μη αποθηκευμένων δεδομένων φόρμας πριν την αναστολή μιας καρτέλας. Μόνο προαιρετικά."
+  },
+  "privacyPermSidePanel": {
+    "message": "Εμφάνιση του Drowzy στο πλευρικό πάνελ του Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Προαιρετική πρόσβαση κεντρικού υπολογιστή, ζητείται κατ' απαίτηση μόνο όταν ενεργοποιείτε την Προστασία Φόρμας ή τη Σήμανση Ανεσταλμένων Καρτελών. Δεν ζητείται ποτέ κατά την εγκατάσταση. Ανακλητέα ανά πάσα στιγμή."
+  },
   "privacyContactTitle": {
     "message": "Επικοινωνία"
   },
   "privacyContactText": {
     "message": "Ερωτήσεις; Επικοινωνήστε στο drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Αντικατάσταση"
+  "privacyYourDataTitle": {
+    "message": "Τα δεδομένα σας"
   },
-  "replaceSessionTitle": {
-    "message": "Αντικατάσταση τρεχουσών καρτελών με αυτή τη συνεδρία"
+  "privacyYourDataText": {
+    "message": "Επειδή τίποτα δεν φεύγει από το πρόγραμμα περιήγησής σας, δεν υπάρχει πίνακας ελέγχου, λογαριασμός ή τρόπος να δούμε τι έχετε κάνει με το Drowzy. Εάν απεγκαταστήσετε το Drowzy, το Chrome σας προσφέρει την ευκαιρία να στείλετε προαιρετικά σχόλια (λόγος απεγκατάστασης, πρόγραμμα περιήγησης, OS) μέσω μιας ξεχωριστής ιστοσελίδας· αυτή η υποβολή είναι ρητή και πηγαίνει σε μια ανώνυμη φόρμα. Μπορείτε να την παρακάμψετε κλείνοντας την καρτέλα."
   },
-  "invalidDomain": {
-    "message": "Εισάγετε έναν έγκυρο τομέα (π.χ. example.com)"
+  "privacyFooterText": {
+    "message": "Το Drowzy είναι ανοιχτού κώδικα."
   },
-  "extensionPage": {
-    "message": "Σελίδα επέκτασης"
-  },
-  "exportWhitelist": {
-    "message": "Εξαγωγή"
-  },
-  "importWhitelist": {
-    "message": "Εισαγωγή"
-  },
-  "exportWhitelistTitle": {
-    "message": "Αντιγραφή λευκής λίστας"
-  },
-  "importWhitelistTitle": {
-    "message": "Εισαγωγή λευκής λίστας από πρόχειρο"
-  },
-  "copiedSites": {
-    "message": "Αντιγράφηκαν $COUNT$ ιστότοπος(-οι)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Εισήχθησαν $COUNT$ νέος(-οι) ιστότοπος(-οι)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Δεν βρέθηκαν έγκυροι τομείς στο πρόχειρο"
-  },
-  "clipboardReadFailed": {
-    "message": "Αδυναμία ανάγνωσης προχείρου"
-  },
-  "enjoyingDrowzy": {
-    "message": "Σας αρέσει το Drowzy;"
-  },
-  "reviewYes": {
-    "message": "Ναι!"
-  },
-  "reviewNo": {
-    "message": "Όχι ιδιαίτερα"
-  },
-  "whatsNew": {
-    "message": "Τι νέο στη v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Περιήγηση στον κώδικα στο GitHub"
   },
   "changelogTitle": {
     "message": "Τι νέο στο Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Τι νέο"
+  },
+  "changelogVersionLabel": {
+    "message": "Έκδοση"
   },
   "changelogCtaText": {
     "message": "Το Drowzy είναι δωρεάν και ανοιχτού κώδικα. Αν σας εξοικονομεί μνήμη, αφήστε μια αξιολόγηση ή ένα αστέρι στο GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Κλείσιμο διπλότυπων καρτελών"
-  },
-  "tabUntitled": {
-    "message": "Χωρίς τίτλο"
-  },
-  "badgeWhitelisted": {
-    "message": "Στη λίστα επιτρεπομένων"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "σύντομα"
-  },
-  "changelogVersionLabel": {
-    "message": "Έκδοση"
-  },
-  "copiedStats": {
-    "message": "Τα στατιστικά αντιγράφηκαν!"
-  },
-  "privacyFooterLink": {
-    "message": "Περιήγηση στον κώδικα στο GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Το Drowzy είναι ανοιχτού κώδικα."
-  },
-  "privacyPermHost": {
-    "message": "Προαιρετική πρόσβαση κεντρικού υπολογιστή, ζητείται κατ' απαίτηση μόνο όταν ενεργοποιείτε την Προστασία Φόρμας ή τη Σήμανση Ανεσταλμένων Καρτελών. Δεν ζητείται ποτέ κατά την εγκατάσταση. Ανακλητέα ανά πάσα στιγμή."
-  },
-  "privacyPermScripting": {
-    "message": "Εισαγωγή ενός μικρού script για ανίχνευση μη αποθηκευμένων δεδομένων φόρμας πριν την αναστολή μιας καρτέλας. Μόνο προαιρετικά."
-  },
-  "privacyPermSidePanel": {
-    "message": "Εμφάνιση του Drowzy στο πλευρικό πάνελ του Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Επειδή τίποτα δεν φεύγει από το πρόγραμμα περιήγησής σας, δεν υπάρχει πίνακας ελέγχου, λογαριασμός ή τρόπος να δούμε τι έχετε κάνει με το Drowzy. Εάν απεγκαταστήσετε το Drowzy, το Chrome σας προσφέρει την ευκαιρία να στείλετε προαιρετικά σχόλια (λόγος απεγκατάστασης, πρόγραμμα περιήγησης, OS) μέσω μιας ξεχωριστής ιστοσελίδας· αυτή η υποβολή είναι ρητή και πηγαίνει σε μια ανώνυμη φόρμα. Μπορείτε να την παρακάμψετε κλείνοντας την καρτέλα."
-  },
-  "privacyYourDataTitle": {
-    "message": "Τα δεδομένα σας"
-  },
-  "ramEstimateTooltip": {
-    "message": "Εκτιμάται χρησιμοποιώντας ~150 MB ανά ανεσταλμένη καρτέλα. Η πραγματική εξοικονόμηση διαφέρει ανά σελίδα."
-  },
-  "shareStats": {
-    "message": "Κοινοποίηση"
-  },
-  "statLifetimeRam": {
-    "message": "Συνολική RAM που εξοικονομήθηκε"
   },
   "confirmDeleteTitle": {
     "message": "Κάντε ξανά κλικ για επιβεβαίωση διαγραφής"

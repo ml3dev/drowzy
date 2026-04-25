@@ -106,6 +106,14 @@ async function onInstalled(details) {
     await initStats();
     await chrome.storage.local.set({ drowzy_lastChangelogVersion: chrome.runtime.getManifest().version });
     try { chrome.tabs.create({ url: 'onboarding.html' }); } catch {}
+    // first-run quick-suspend: without this the user waits the full 30 min
+    // before anything visibly happens, which is the most common reason cited
+    // for "didn't notice a memory difference" and uninstalling. ~30s after
+    // install, suspend tabs Chrome reports as idle for 10+ minutes — only
+    // the obviously-stale ones, so it doesn't surprise the user with a
+    // recently-used tab going away. Uses chrome.alarms (not setTimeout) so the
+    // pass survives MV3 service-worker termination during the wait.
+    try { chrome.alarms.create('first-run-suspend', { delayInMinutes: 0.5 }); } catch {}
   } else if (details.reason === 'update') {
     let version = chrome.runtime.getManifest().version;
     let data = await chrome.storage.local.get('drowzy_lastChangelogVersion');
@@ -134,6 +142,33 @@ async function onStartup() {
   if (settings.suspendOnStartup) {
     setTimeout(() => suspendAllOnStartup(settings), 5000);
   }
+}
+
+async function firstRunQuickSuspend() {
+  // Conservative first-run pass. Uses tab.lastAccessed (Chrome 121+) so we
+  // only touch tabs Chrome itself confirms have been idle for a while; on
+  // 120 (no lastAccessed), we skip — better to miss the boost than surprise
+  // a fresh installer with a tab they were just using.
+  try {
+    let settings = await getSettings();
+    if (!settings.enableAutoSuspend) return;
+    let tabs = await chrome.tabs.query({});
+    let staleBefore = Date.now() - 10 * 60 * 1000;
+    for (let tab of tabs) {
+      if (tab.active || tab.discarded) continue;
+      if (typeof tab.lastAccessed !== 'number') continue;
+      if (tab.lastAccessed > staleBefore) continue;
+      if (isInternalUrl(tab.url)) continue;
+      if (settings.protectPinned && tab.pinned) continue;
+      if (settings.protectAudio && tab.audible) continue;
+      if (isWhitelisted(tab.url, settings.whitelist)) continue;
+      try {
+        let result = await chrome.tabs.discard(tab.id);
+        if (result) await recordSuspension();
+      } catch {}
+    }
+    await updateBadgeNow();
+  } catch {}
 }
 
 async function suspendAllOnStartup(settings) {
@@ -168,10 +203,13 @@ async function initTimestamps() {
     let now = Date.now();
     let liveIds = new Set(tabs.map(tab => tab.id));
 
-    // Add missing tabs
+    // Add missing tabs. Seed from tab.lastAccessed (Chrome 121+) when available
+    // so a service-worker restart with cleared session storage doesn't reset
+    // the apparent idle time of long-untouched tabs to NOW — that would silently
+    // give every tab a fresh 30-min timer on restart, which is the wrong behavior.
     for (let tab of tabs) {
       if (!(tab.id in _timestamps)) {
-        _timestamps[tab.id] = now;
+        _timestamps[tab.id] = (typeof tab.lastAccessed === 'number') ? tab.lastAccessed : now;
         _tsDirty = true;
       }
     }
@@ -295,6 +333,7 @@ async function createAlarm() {
 
 async function onAlarm(alarm) {
   if (alarm.name === ALARM_NAME) await checkAndSuspendTabs();
+  else if (alarm.name === 'first-run-suspend') await firstRunQuickSuspend();
 }
 
 async function onTabActivated(activeInfo) {
@@ -375,7 +414,9 @@ async function checkAndSuspendTabs() {
     let toSuspend = [];
     for (let tab of tabs) {
       if (!(tab.id in _timestamps)) {
-        _timestamps[tab.id] = now;
+        // Same reasoning as initTimestamps: prefer Chrome's lastAccessed when
+        // available so a stale-init doesn't grant a fresh 30-min timer.
+        _timestamps[tab.id] = (typeof tab.lastAccessed === 'number') ? tab.lastAccessed : now;
         _tsDirty = true;
       }
       if (shouldSuspend(tab, settings, _timestamps, now, threshold)) {
@@ -392,7 +433,9 @@ async function checkAndSuspendTabs() {
       }
       await new Promise(r => setTimeout(r, 2500));
       for (let tabId of toSuspend) {
-        await suspendTab(tabId);
+        // auto:true so suspendTab respects a Keep awake / refocus that landed
+        // during the warning window. Manual suspends bypass this check.
+        await suspendTab(tabId, settings, { auto: true });
       }
     }
   } finally { _suspending = false; }
@@ -405,7 +448,13 @@ function shouldSuspend(tab, settings, timestamps, now, threshold) {
   if (settings.protectAudio && tab.audible) return false;
   if (isWhitelisted(tab.url, settings.whitelist)) return false;
 
-  let lastActive = timestamps[tab.id];
+  let lastActive = timestamps[tab.id] || 0;
+  // tab.lastAccessed (Chrome 121+) is what Chrome itself tracks for tab activation;
+  // prefer the more recent of our timestamp and Chrome's so a tab activated
+  // before the service worker came up isn't immediately suspendable.
+  if (typeof tab.lastAccessed === 'number' && tab.lastAccessed > lastActive) {
+    lastActive = tab.lastAccessed;
+  }
   return lastActive && (now - lastActive >= threshold);
 }
 
@@ -434,7 +483,7 @@ function isWhitelisted(url, whitelist) {
   } catch { return false; }
 }
 
-async function suspendTab(tabId, cachedSettings) {
+async function suspendTab(tabId, cachedSettings, opts) {
   try {
     let tab = await chrome.tabs.get(tabId);
     if (tab.active || tab.discarded) return false;
@@ -469,6 +518,19 @@ async function suspendTab(tabId, cachedSettings) {
     try {
       let fresh = await chrome.tabs.get(tabId);
       if (fresh.active || fresh.discarded || fresh.audible || fresh.status === 'loading') return false;
+      // for auto-suspend only: if Keep awake bumped the timestamp during the
+      // warning window or tab.lastAccessed updated mid-await (user refocused),
+      // bail out. Manual suspends (context menu, Suspend Others, popup button)
+      // pass auto=false because the user has explicit intent — bypass timing.
+      if (opts && opts.auto) {
+        let now = Date.now();
+        let threshold = settings.suspendAfterMinutes * 60 * 1000;
+        let lastActive = _timestamps[tabId] || 0;
+        if (typeof fresh.lastAccessed === 'number' && fresh.lastAccessed > lastActive) {
+          lastActive = fresh.lastAccessed;
+        }
+        if (lastActive && now - lastActive < threshold) return false;
+      }
     } catch { return false; }
 
     let result = await chrome.tabs.discard(tabId);
@@ -577,23 +639,30 @@ async function suspendAllOthers(windowId) {
   let settings = await getSettings();
   let tabs = await chrome.tabs.query(windowId ? { windowId } : {});
 
+  let count = 0;
   for (let tab of tabs) {
     if (tab.active || tab.discarded || isInternalUrl(tab.url)) continue;
     if (settings.protectPinned && tab.pinned) continue;
     if (settings.protectAudio && tab.audible) continue;
     if (isWhitelisted(tab.url, settings.whitelist)) continue;
-    await suspendTab(tab.id, settings);
+    if (await suspendTab(tab.id, settings)) count++;
   }
+  return count;
 }
 
 async function unsuspendAll(windowId) {
   let query = { discarded: true };
   if (windowId) query.windowId = windowId;
   let tabs = await chrome.tabs.query(query);
+  let count = 0;
   for (let tab of tabs) {
-    try { await chrome.tabs.reload(tab.id); } catch {}
+    try {
+      await chrome.tabs.reload(tab.id);
+      count++;
+    } catch {}
   }
   await updateBadgeNow();
+  return count;
 }
 
 async function addWhitelist(domain) {
@@ -782,7 +851,12 @@ async function getTabList(windowId) {
       status = 'protected';
       protectReason = 'Whitelisted';
     } else if (settings.enableAutoSuspend && threshold > 0) {
-      let lastActive = _timestamps[tab.id];
+      // mirror shouldSuspend's logic so the displayed timer matches what
+      // actually happens — max of our timestamp and Chrome's lastAccessed
+      let lastActive = _timestamps[tab.id] || 0;
+      if (typeof tab.lastAccessed === 'number' && tab.lastAccessed > lastActive) {
+        lastActive = tab.lastAccessed;
+      }
       if (lastActive) {
         let remaining = threshold - (now - lastActive);
         timeLeft = Math.max(0, Math.ceil(remaining / 60000));
@@ -802,8 +876,15 @@ async function getTabList(windowId) {
 }
 
 function onMessage(msg, sender, sendResponse) {
-  // Content scripts (sender.tab exists) should never call background actions
+  // Content scripts (sender.tab exists) should never call background actions,
+  // with one narrow exception: the suspend-warning banner's "Keep awake" button
+  // needs to bump its own tab's timestamp. Scoped to the sender's own tab id.
   if (sender.tab) {
+    if (msg && msg.action === 'keepTabAwake' && sender.tab.id) {
+      touchTab(sender.tab.id);
+      sendResponse({ success: true });
+      return false;
+    }
     sendResponse({ error: 'Unauthorized' });
     return false;
   }
@@ -829,11 +910,17 @@ async function handleMessage(msg) {
           isWhitelisted(tab.url, settings.whitelist)
         )
       ).length;
+      // Tabs that aren't already discarded and aren't protected — i.e. the
+      // ones Drowzy will eventually suspend. Used for the forecast stat so
+      // first-session users see a non-zero number before the suspend timer fires.
+      let eligibleCount = Math.max(0, allTabs.length - protectedCount - discardedTabs.length);
       return {
         totalTabs: allTabs.length,
         suspendedCount: discardedTabs.length,
         protectedCount,
-        estimatedMbSaved: discardedTabs.length * MB_PER_TAB
+        eligibleCount,
+        estimatedMbSaved: discardedTabs.length * MB_PER_TAB,
+        estimatedMbForecast: eligibleCount * MB_PER_TAB
       };
     }
 
@@ -853,13 +940,13 @@ async function handleMessage(msg) {
     case 'suspendTab': return { success: await suspendTab(msg.tabId) };
     case 'suspendOthers': {
       let [at] = await chrome.tabs.query({ active: true, currentWindow: true });
-      await suspendAllOthers(at?.windowId);
-      return { success: true };
+      let count = await suspendAllOthers(at?.windowId);
+      return { success: true, count, mbFreed: count * MB_PER_TAB };
     }
     case 'unsuspendAll': {
       let [at] = await chrome.tabs.query({ active: true, currentWindow: true });
-      await unsuspendAll(at?.windowId);
-      return { success: true };
+      let count = await unsuspendAll(at?.windowId);
+      return { success: true, count };
     }
     case 'addWhitelist': {
       let result = await addWhitelist(msg.domain);

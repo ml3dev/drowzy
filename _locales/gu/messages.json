@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "બચાવેલ"
   },
+  "statForecast": {
+    "message": "ઉપલબ્ધ"
+  },
   "suspendOthers": {
     "message": "બાકીની સસ્પેન્ડ કરો"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "કોઈ ટેબ મળી નથી"
   },
+  "tabUntitled": {
+    "message": "શીર્ષક વિના"
+  },
   "failedToLoad": {
     "message": "લોડ થવામાં નિષ્ફળ. ફરીથી પ્રયાસ કરવા પોપઅપ ફરી ખોલો."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "ઑડિયો"
+  },
+  "badgeWhitelisted": {
+    "message": "મંજૂરી યાદીમાં"
   },
   "badgeProtected": {
     "message": "સુરક્ષિત"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "કુલ"
   },
+  "statLifetimeRam": {
+    "message": "કુલ RAM બચત"
+  },
+  "ramEstimateTooltip": {
+    "message": "સસ્પેન્ડ કરેલ ટૅબ દીઠ ~150 MB નો ઉપયોગ કરીને અંદાજિત. વાસ્તવિક બચત પૃષ્ઠ પ્રમાણે બદલાય છે."
+  },
+  "ramForecastTooltip": {
+    "message": "જ્યારે તમારા નિષ્ક્રિય ટૅબ્સ સૂઈ જાય ત્યારે બચાવવા માટે ઉપલબ્ધ અંદાજિત મેમરી, પ્રતિ ટૅબ ~150 MB."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ ટૅબ સસ્પેન્ડ કર્યા · ~$RAM$ મુક્ત થયા",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ ટૅબ જગાડ્યા",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "સસ્પેન્ડ કરવા માટે કોઈ અન્ય ટૅબ નથી"
+  },
+  "noSuspendedToWake": {
+    "message": "જગાડવા માટે કોઈ સસ્પેન્ડ કરેલા ટૅબ નથી"
+  },
+  "pinnedWontSuspend": {
+    "message": "પિન કરેલ — સસ્પેન્ડ થશે નહીં"
+  },
+  "audioWontSuspend": {
+    "message": "ઑડિયો વાગી રહ્યો છે — સસ્પેન્ડ થશે નહીં"
+  },
+  "whitelistedWontSuspend": {
+    "message": "વ્હાઇટલિસ્ટ કરેલ — સસ્પેન્ડ થશે નહીં"
+  },
+  "systemPageCantSuspend": {
+    "message": "સિસ્ટમ પૃષ્ઠ — સસ્પેન્ડ કરી શકાતું નથી"
+  },
+  "clickToDismiss": {
+    "message": "બંધ કરવા માટે ક્લિક કરો"
+  },
+  "keepAwakeBtn": {
+    "message": "જાગૃત રાખો"
+  },
+  "suspendTimerHint": {
+    "message": "જે ટૅબ્સથી તમે દૂર ગયા તેઓ આ સમય પછી સ્થગિત થાય છે. જો તમે લાંબા અંતરાલ પછી ટૅબ્સ પર પાછા ફરો છો, તો તેને વધારો."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>ટિપ:</strong> એક-ક્લિક ઍક્સેસ માટે Drowzy ને પિન કરવા Chrome ટૂલબારમાં પઝલ આઇકન પર ક્લિક કરો."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>તમે હજુ વાપરી રહ્યા હો તેવા ટૅબ્સ સ્થગિત થાય છે?</strong> ૩૦-મિનિટના ટાઈમરને વધારવા અથવા સાઇટને એક ક્લિકમાં તમારી શ્વેત સૂચીમાં ઉમેરવા Drowzy → સેટિંગ્સ ખોલો."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>ફોર્મ ભરી રહ્યા છો?</strong> સાચવ્યા વિનાનાં ઇનપુટવાળા ટૅબ્સને સ્થગિત થવાથી બચાવવા સેટિંગ્સમાં \"ફોર્મવાળા ટૅબ્સનું રક્ષણ કરો\" સક્ષમ કરો."
+  },
+  "onboardingRemapHint": {
+    "message": "અલગ કીબોર્ડ શૉર્ટકટ જોઈએ છે? અહીં કસ્ટમાઇઝ કરો →"
+  },
+  "reviewLeaveTitle": {
+    "message": "ઝડપી સમીક્ષા છોડો"
+  },
+  "reviewReportTitle": {
+    "message": "સમસ્યાની જાણ કરો"
+  },
+  "reviewDismissTitle": {
+    "message": "બરતરફ કરો"
+  },
   "statMemberSince": {
     "message": "સભ્ય ત્યારથી"
+  },
+  "shareStats": {
+    "message": "શેર કરો"
+  },
+  "copiedStats": {
+    "message": "આંકડા કૉપિ થયા!"
   },
   "settings": {
     "message": "સેટિંગ્સ"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "કોઈ સાઇટ વ્હાઇટલિસ્ટમાં નથી"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "સસ્પેન્ડ થઈ રહ્યું છે..."
   },
-  "done": {
-    "message": "થઈ ગયું!"
+  "suspendingSoon": {
+    "message": "ટૂંક સમયમાં"
   },
   "waking": {
     "message": "જગાડી રહ્યા છીએ..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "દૂર કરો"
+  },
+  "replace": {
+    "message": "બદલો"
+  },
+  "replaceSessionTitle": {
+    "message": "આ સત્ર સાથે વર્તમાન ટૅબ્સ બદલો"
+  },
+  "invalidDomain": {
+    "message": "માન્ય ડોમેન દાખલ કરો (દા.ત. example.com)"
+  },
+  "extensionPage": {
+    "message": "એક્સ્ટેન્શન પેજ"
+  },
+  "exportWhitelist": {
+    "message": "નિકાસ"
+  },
+  "importWhitelist": {
+    "message": "આયાત"
+  },
+  "exportWhitelistTitle": {
+    "message": "વ્હાઇટલિસ્ટ કૉપિ કરો"
+  },
+  "importWhitelistTitle": {
+    "message": "ક્લિપબોર્ડમાંથી વ્હાઇટલિસ્ટ આયાત કરો"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ સાઇટ(ટ્સ) કૉપિ કર્યા",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ નવા સાઇટ(ટ્સ) આયાત થયા",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "ક્લિપબોર્ડમાં કોઈ માન્ય ડોમેન મળ્યું નથી"
+  },
+  "clipboardReadFailed": {
+    "message": "ક્લિપબોર્ડ વાંચી શકાયું નહીં"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy ગમે છે?"
+  },
+  "reviewYes": {
+    "message": "હા!"
+  },
+  "reviewNo": {
+    "message": "ખરેખર નહીં"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$ માં નવું શું છે",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "લાઇટ મોડમાં બદલો"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "સસ્પેન્ડ અને વ્હાઇટલિસ્ટ માટે રાઇટ-ક્લિક મેનુ વિકલ્પો."
   },
+  "privacyPermScripting": {
+    "message": "ટૅબ સસ્પેન્ડ કરતા પહેલા સાચવ્યા વગરના ફોર્મ ડેટાને શોધવા માટે એક નાની સ્ક્રિપ્ટ ઇન્જેક્ટ કરવી. ફક્ત ઑપ્ટ-ઇન."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome ની સાઇડ પેનલમાં Drowzy પ્રદર્શિત કરવું."
+  },
+  "privacyPermHost": {
+    "message": "વૈકલ્પિક હોસ્ટ ઍક્સેસ, ફક્ત જ્યારે તમે ફોર્મ સુરક્ષા અથવા સસ્પેન્ડેડ-ટૅબ માર્કિંગ સક્ષમ કરો ત્યારે જ માંગવામાં આવે છે. ઇન્સ્ટોલ પર ક્યારેય માંગવામાં આવતી નથી. કોઈપણ સમયે રદ કરી શકાય છે."
+  },
   "privacyContactTitle": {
     "message": "સંપર્ક"
   },
   "privacyContactText": {
     "message": "પ્રશ્નો? drowzyextension@gmail.com પર સંપર્ક કરો"
   },
-  "replace": {
-    "message": "બદલો"
+  "privacyYourDataTitle": {
+    "message": "તમારો ડેટા"
   },
-  "replaceSessionTitle": {
-    "message": "આ સત્ર સાથે વર્તમાન ટૅબ્સ બદલો"
+  "privacyYourDataText": {
+    "message": "કારણ કે કંઈપણ તમારા બ્રાઉઝરને છોડતું નથી, ત્યાં કોઈ ડેશબોર્ડ, કોઈ એકાઉન્ટ અને Drowzy સાથે તમે શું કર્યું છે તે જોવાનો અમારા માટે કોઈ રસ્તો નથી. જો તમે Drowzy ને અનઇન્સ્ટોલ કરો છો, તો Chrome તમને એક અલગ વેબ પેજ દ્વારા વૈકલ્પિક પ્રતિસાદ (અનઇન્સ્ટોલ કરવાનું કારણ, બ્રાઉઝર, OS) મોકલવાની તક આપે છે; તે સબમિશન સ્પષ્ટ છે અને અનામી ફોર્મ પર જાય છે. તમે ટૅબ બંધ કરીને તેને છોડી શકો છો."
   },
-  "invalidDomain": {
-    "message": "માન્ય ડોમેન દાખલ કરો (દા.ત. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy ઓપન સોર્સ છે."
   },
-  "extensionPage": {
-    "message": "એક્સ્ટેન્શન પેજ"
-  },
-  "exportWhitelist": {
-    "message": "નિકાસ"
-  },
-  "importWhitelist": {
-    "message": "આયાત"
-  },
-  "exportWhitelistTitle": {
-    "message": "વ્હાઇટલિસ્ટ કૉપિ કરો"
-  },
-  "importWhitelistTitle": {
-    "message": "ક્લિપબોર્ડમાંથી વ્હાઇટલિસ્ટ આયાત કરો"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ સાઇટ(ટ્સ) કૉપિ કર્યા",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ નવા સાઇટ(ટ્સ) આયાત થયા",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "ક્લિપબોર્ડમાં કોઈ માન્ય ડોમેન મળ્યું નથી"
-  },
-  "clipboardReadFailed": {
-    "message": "ક્લિપબોર્ડ વાંચી શકાયું નહીં"
-  },
-  "enjoyingDrowzy": {
-    "message": "Drowzy ગમે છે?"
-  },
-  "reviewYes": {
-    "message": "હા!"
-  },
-  "reviewNo": {
-    "message": "ખરેખર નહીં"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$ માં નવું શું છે",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "GitHub પર કોડ બ્રાઉઝ કરો"
   },
   "changelogTitle": {
     "message": "Drowzy માં નવું શું છે"
   },
   "changelogWhatsNew": {
     "message": "નવું શું છે"
+  },
+  "changelogVersionLabel": {
+    "message": "સંસ્કરણ"
   },
   "changelogCtaText": {
     "message": "Drowzy મફત અને ઓપન સોર્સ છે. જો તે મેમરી બચાવે છે, તો સમીક્ષા અથવા GitHub પર સ્ટાર આપો."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "ડુપ્લિકેટ યેબ બંધ કરો"
-  },
-  "tabUntitled": {
-    "message": "શીર્ષક વિના"
-  },
-  "badgeWhitelisted": {
-    "message": "મંજૂરી યાદીમાં"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "ટૂંક સમયમાં"
-  },
-  "changelogVersionLabel": {
-    "message": "સંસ્કરણ"
-  },
-  "copiedStats": {
-    "message": "આંકડા કૉપિ થયા!"
-  },
-  "privacyFooterLink": {
-    "message": "GitHub પર કોડ બ્રાઉઝ કરો"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy ઓપન સોર્સ છે."
-  },
-  "privacyPermHost": {
-    "message": "વૈકલ્પિક હોસ્ટ ઍક્સેસ, ફક્ત જ્યારે તમે ફોર્મ સુરક્ષા અથવા સસ્પેન્ડેડ-ટૅબ માર્કિંગ સક્ષમ કરો ત્યારે જ માંગવામાં આવે છે. ઇન્સ્ટોલ પર ક્યારેય માંગવામાં આવતી નથી. કોઈપણ સમયે રદ કરી શકાય છે."
-  },
-  "privacyPermScripting": {
-    "message": "ટૅબ સસ્પેન્ડ કરતા પહેલા સાચવ્યા વગરના ફોર્મ ડેટાને શોધવા માટે એક નાની સ્ક્રિપ્ટ ઇન્જેક્ટ કરવી. ફક્ત ઑપ્ટ-ઇન."
-  },
-  "privacyPermSidePanel": {
-    "message": "Chrome ની સાઇડ પેનલમાં Drowzy પ્રદર્શિત કરવું."
-  },
-  "privacyYourDataText": {
-    "message": "કારણ કે કંઈપણ તમારા બ્રાઉઝરને છોડતું નથી, ત્યાં કોઈ ડેશબોર્ડ, કોઈ એકાઉન્ટ અને Drowzy સાથે તમે શું કર્યું છે તે જોવાનો અમારા માટે કોઈ રસ્તો નથી. જો તમે Drowzy ને અનઇન્સ્ટોલ કરો છો, તો Chrome તમને એક અલગ વેબ પેજ દ્વારા વૈકલ્પિક પ્રતિસાદ (અનઇન્સ્ટોલ કરવાનું કારણ, બ્રાઉઝર, OS) મોકલવાની તક આપે છે; તે સબમિશન સ્પષ્ટ છે અને અનામી ફોર્મ પર જાય છે. તમે ટૅબ બંધ કરીને તેને છોડી શકો છો."
-  },
-  "privacyYourDataTitle": {
-    "message": "તમારો ડેટા"
-  },
-  "ramEstimateTooltip": {
-    "message": "સસ્પેન્ડ કરેલ ટૅબ દીઠ ~150 MB નો ઉપયોગ કરીને અંદાજિત. વાસ્તવિક બચત પૃષ્ઠ પ્રમાણે બદલાય છે."
-  },
-  "shareStats": {
-    "message": "શેર કરો"
-  },
-  "statLifetimeRam": {
-    "message": "કુલ RAM બચત"
   },
   "confirmDeleteTitle": {
     "message": "કાઢી નાખવાની પુષ્ટિ કરવા ફરીથી ક્લિક કરો"

@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "sparet"
   },
+  "statForecast": {
+    "message": "tilgængelig"
+  },
   "suspendOthers": {
     "message": "Suspendér andre"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Ingen faneblade fundet"
   },
+  "tabUntitled": {
+    "message": "Unavngivet"
+  },
   "failedToLoad": {
     "message": "Kunne ikke indlæse. Åbn pop op-vinduet igen for at prøve igen."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Lyd"
+  },
+  "badgeWhitelisted": {
+    "message": "Hvidlistet"
   },
   "badgeProtected": {
     "message": "Beskyttet"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Alt i alt"
   },
+  "statLifetimeRam": {
+    "message": "Samlet RAM-besparelse"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimeret med ~150 MB per suspenderet fane. Faktiske besparelser varierer efter side."
+  },
+  "ramForecastTooltip": {
+    "message": "Estimeret hukommelse, der frigøres, når dine inaktive faner går i dvale, ved ~150 MB pr. fane."
+  },
+  "suspendedToast": {
+    "message": "Suspenderede $COUNT$ fane(r) · frigjort ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Vækkede $COUNT$ fane(r)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Ingen andre faner at suspendere"
+  },
+  "noSuspendedToWake": {
+    "message": "Ingen suspenderede faner at vække"
+  },
+  "pinnedWontSuspend": {
+    "message": "Fastgjort — vil ikke blive suspenderet"
+  },
+  "audioWontSuspend": {
+    "message": "Afspiller lyd — vil ikke blive suspenderet"
+  },
+  "whitelistedWontSuspend": {
+    "message": "På hvidlisten — vil ikke blive suspenderet"
+  },
+  "systemPageCantSuspend": {
+    "message": "Systemside — kan ikke suspenderes"
+  },
+  "clickToDismiss": {
+    "message": "Klik for at lukke"
+  },
+  "keepAwakeBtn": {
+    "message": "Hold vågen"
+  },
+  "suspendTimerHint": {
+    "message": "Faner, du har skiftet væk fra, suspenderes efter denne tid. Øg den, hvis du ofte vender tilbage til faner efter lange pauser."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Tip:</strong> Klik på puslespilsikonet på Chromes værktøjslinje for at fastgøre Drowzy og få adgang med ét klik."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Suspenderer faner, du stadig bruger?</strong> Åbn Drowzy → Indstillinger for at øge 30-minutters-timeren, eller tilføj sitet til whitelisten med ét klik."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Udfylder du en formular?</strong> Aktivér \"Beskyt faner med formularer\" i Indstillinger for at forhindre, at faner med ugemte input suspenderes."
+  },
+  "onboardingRemapHint": {
+    "message": "Vil du have andre tastaturgenveje? Tilpas dem her →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Skriv en hurtig anmeldelse"
+  },
+  "reviewReportTitle": {
+    "message": "Rapporter et problem"
+  },
+  "reviewDismissTitle": {
+    "message": "Luk"
+  },
   "statMemberSince": {
     "message": "Medlem siden"
+  },
+  "shareStats": {
+    "message": "Del"
+  },
+  "copiedStats": {
+    "message": "Statistik kopieret!"
   },
   "settings": {
     "message": "Indstillinger"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Ingen hvidlistede websteder"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Suspenderer..."
   },
-  "done": {
-    "message": "Færdig!"
+  "suspendingSoon": {
+    "message": "snart"
   },
   "waking": {
     "message": "Vækker..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Fjern"
+  },
+  "replace": {
+    "message": "Erstat"
+  },
+  "replaceSessionTitle": {
+    "message": "Erstat nuværende faner med denne session"
+  },
+  "invalidDomain": {
+    "message": "Indtast et gyldigt domæne (f.eks. example.com)"
+  },
+  "extensionPage": {
+    "message": "Udvidelsesside"
+  },
+  "exportWhitelist": {
+    "message": "Eksportér"
+  },
+  "importWhitelist": {
+    "message": "Importér"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopiér hvidliste"
+  },
+  "importWhitelistTitle": {
+    "message": "Importér hvidliste fra udklipsholder"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ websted(er) kopieret",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ nye websted(er) importeret",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Ingen gyldige domæner fundet i udklipsholder"
+  },
+  "clipboardReadFailed": {
+    "message": "Kunne ikke læse udklipsholder"
+  },
+  "enjoyingDrowzy": {
+    "message": "Kan du lide Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ja!"
+  },
+  "reviewNo": {
+    "message": "Ikke rigtig"
+  },
+  "whatsNew": {
+    "message": "Nyheder i v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Skift til lyst tema"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Højrekliksmenu-indstillinger til suspendering og hvidliste."
   },
+  "privacyPermScripting": {
+    "message": "Indsprøjtning af et lille script for at registrere ugemte formulardata, før en fane suspenderes. Kun tilvalg."
+  },
+  "privacyPermSidePanel": {
+    "message": "Visning af Drowzy i Chromes sidepanel."
+  },
+  "privacyPermHost": {
+    "message": "Valgfri værtsadgang, anmodes kun efter behov, når du aktiverer Formularbeskyttelse eller Markering af suspenderede faner. Anmodes aldrig ved installation. Kan altid tilbagekaldes."
+  },
   "privacyContactTitle": {
     "message": "Kontakt"
   },
   "privacyContactText": {
     "message": "Spørgsmål? Skriv til drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Erstat"
+  "privacyYourDataTitle": {
+    "message": "Dine data"
   },
-  "replaceSessionTitle": {
-    "message": "Erstat nuværende faner med denne session"
+  "privacyYourDataText": {
+    "message": "Da intet forlader din browser, er der intet dashboard, ingen konto og ingen måde for os at se, hvad du har gjort med Drowzy. Hvis du afinstallerer Drowzy, tilbyder Chrome dig muligheden for at sende valgfri feedback (årsag til afinstallation, browser, OS) via en separat webside; denne indsendelse er eksplicit og går til en anonym formular. Du kan springe det over ved at lukke fanen."
   },
-  "invalidDomain": {
-    "message": "Indtast et gyldigt domæne (f.eks. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy er open source."
   },
-  "extensionPage": {
-    "message": "Udvidelsesside"
-  },
-  "exportWhitelist": {
-    "message": "Eksportér"
-  },
-  "importWhitelist": {
-    "message": "Importér"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopiér hvidliste"
-  },
-  "importWhitelistTitle": {
-    "message": "Importér hvidliste fra udklipsholder"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ websted(er) kopieret",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ nye websted(er) importeret",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Ingen gyldige domæner fundet i udklipsholder"
-  },
-  "clipboardReadFailed": {
-    "message": "Kunne ikke læse udklipsholder"
-  },
-  "enjoyingDrowzy": {
-    "message": "Kan du lide Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ja!"
-  },
-  "reviewNo": {
-    "message": "Ikke rigtig"
-  },
-  "whatsNew": {
-    "message": "Nyheder i v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Se koden på GitHub"
   },
   "changelogTitle": {
     "message": "Nyheder i Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nyheder"
+  },
+  "changelogVersionLabel": {
+    "message": "Version"
   },
   "changelogCtaText": {
     "message": "Drowzy er gratis og open source. Hvis den sparer dig hukommelse, overvej at give en anmeldelse eller stjerne på GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Luk duplikerede faner"
-  },
-  "tabUntitled": {
-    "message": "Unavngivet"
-  },
-  "badgeWhitelisted": {
-    "message": "Hvidlistet"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "snart"
-  },
-  "changelogVersionLabel": {
-    "message": "Version"
-  },
-  "copiedStats": {
-    "message": "Statistik kopieret!"
-  },
-  "privacyFooterLink": {
-    "message": "Se koden på GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy er open source."
-  },
-  "privacyPermHost": {
-    "message": "Valgfri værtsadgang, anmodes kun efter behov, når du aktiverer Formularbeskyttelse eller Markering af suspenderede faner. Anmodes aldrig ved installation. Kan altid tilbagekaldes."
-  },
-  "privacyPermScripting": {
-    "message": "Indsprøjtning af et lille script for at registrere ugemte formulardata, før en fane suspenderes. Kun tilvalg."
-  },
-  "privacyPermSidePanel": {
-    "message": "Visning af Drowzy i Chromes sidepanel."
-  },
-  "privacyYourDataText": {
-    "message": "Da intet forlader din browser, er der intet dashboard, ingen konto og ingen måde for os at se, hvad du har gjort med Drowzy. Hvis du afinstallerer Drowzy, tilbyder Chrome dig muligheden for at sende valgfri feedback (årsag til afinstallation, browser, OS) via en separat webside; denne indsendelse er eksplicit og går til en anonym formular. Du kan springe det over ved at lukke fanen."
-  },
-  "privacyYourDataTitle": {
-    "message": "Dine data"
-  },
-  "ramEstimateTooltip": {
-    "message": "Estimeret med ~150 MB per suspenderet fane. Faktiske besparelser varierer efter side."
-  },
-  "shareStats": {
-    "message": "Del"
-  },
-  "statLifetimeRam": {
-    "message": "Samlet RAM-besparelse"
   },
   "confirmDeleteTitle": {
     "message": "Klik igen for at bekræfte sletning"

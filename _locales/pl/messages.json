@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "zaoszczędzone"
   },
+  "statForecast": {
+    "message": "dostępne"
+  },
   "suspendOthers": {
     "message": "Uśpij pozostałe"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Nie znaleziono kart"
   },
+  "tabUntitled": {
+    "message": "Bez tytułu"
+  },
   "failedToLoad": {
     "message": "Nie udało się załadować. Otwórz ponownie popup, aby spróbować."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Na białej liście"
   },
   "badgeProtected": {
     "message": "Chroniona"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Łącznie"
   },
+  "statLifetimeRam": {
+    "message": "Łącznie zaoszczędzona pamięć RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "Oszacowane przy użyciu ~150 MB na zawieszoną kartę. Rzeczywiste oszczędności różnią się w zależności od strony."
+  },
+  "ramForecastTooltip": {
+    "message": "Szacowana pamięć, która zostanie zwolniona, gdy nieaktywne karty zasną, ~150 MB na kartę."
+  },
+  "suspendedToast": {
+    "message": "Zawieszono $COUNT$ kart(y) · zwolniono ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Wybudzono $COUNT$ kart(y)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Brak innych kart do zawieszenia"
+  },
+  "noSuspendedToWake": {
+    "message": "Brak zawieszonych kart do wybudzenia"
+  },
+  "pinnedWontSuspend": {
+    "message": "Przypięta — nie zostanie zawieszona"
+  },
+  "audioWontSuspend": {
+    "message": "Odtwarza dźwięk — nie zostanie zawieszona"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Na białej liście — nie zostanie zawieszona"
+  },
+  "systemPageCantSuspend": {
+    "message": "Strona systemowa — nie można zawiesić"
+  },
+  "clickToDismiss": {
+    "message": "Kliknij, aby zamknąć"
+  },
+  "keepAwakeBtn": {
+    "message": "Pozostaw aktywną"
+  },
+  "suspendTimerHint": {
+    "message": "Karty, z których przeszedłeś, są zawieszane po tym czasie. Zwiększ go, jeśli wracasz do kart po dłuższych przerwach."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Wskazówka:</strong> Kliknij ikonę puzzla na pasku narzędzi Chrome, aby przypiąć Drowzy do dostępu jednym kliknięciem."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Zawiesza karty, których jeszcze potrzebujesz?</strong> Otwórz Drowzy → Ustawienia, aby zwiększyć 30-minutowy licznik, lub dodaj witrynę do białej listy jednym kliknięciem."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Wypełniasz formularz?</strong> Włącz „Chroń karty z formularzami\" w Ustawieniach, aby karty z niezapisanymi danymi nie były zawieszane."
+  },
+  "onboardingRemapHint": {
+    "message": "Chcesz innych skrótów klawiszowych? Dostosuj je tutaj →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Zostaw szybką recenzję"
+  },
+  "reviewReportTitle": {
+    "message": "Zgłoś problem"
+  },
+  "reviewDismissTitle": {
+    "message": "Zamknij"
+  },
   "statMemberSince": {
     "message": "Użytkownik od"
+  },
+  "shareStats": {
+    "message": "Udostępnij"
+  },
+  "copiedStats": {
+    "message": "Statystyki skopiowane!"
   },
   "settings": {
     "message": "Ustawienia"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Brak stron na białej liście"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Usypiam..."
   },
-  "done": {
-    "message": "Gotowe!"
+  "suspendingSoon": {
+    "message": "wkrótce"
   },
   "waking": {
     "message": "Budzę..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Usuń"
+  },
+  "replace": {
+    "message": "Zastąp"
+  },
+  "replaceSessionTitle": {
+    "message": "Zastąp obecne karty tą sesją"
+  },
+  "invalidDomain": {
+    "message": "Wpisz prawidłową domenę (np. example.com)"
+  },
+  "extensionPage": {
+    "message": "Strona rozszerzenia"
+  },
+  "exportWhitelist": {
+    "message": "Eksportuj"
+  },
+  "importWhitelist": {
+    "message": "Importuj"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopiuj białą listę"
+  },
+  "importWhitelistTitle": {
+    "message": "Importuj białą listę ze schowka"
+  },
+  "copiedSites": {
+    "message": "Skopiowano $COUNT$ stron",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Zaimportowano $COUNT$ nowych stron",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Nie znaleziono prawidłowych domen w schowku"
+  },
+  "clipboardReadFailed": {
+    "message": "Nie można odczytać schowka"
+  },
+  "enjoyingDrowzy": {
+    "message": "Podoba Ci się Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Tak!"
+  },
+  "reviewNo": {
+    "message": "Nie bardzo"
+  },
+  "whatsNew": {
+    "message": "Co nowego w v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Przełącz na jasny motyw"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Opcje menu prawego kliknięcia do zawieszania i białej listy."
   },
+  "privacyPermScripting": {
+    "message": "Wstrzykiwanie małego skryptu w celu wykrycia niezapisanych danych formularza przed zawieszeniem karty. Tylko opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Wyświetlanie Drowzy w panelu bocznym Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Opcjonalny dostęp do hosta, żądany na żądanie tylko po włączeniu Ochrony formularzy lub Oznaczania zawieszonych kart. Nigdy nie żądany przy instalacji. Można odwołać w dowolnym momencie."
+  },
   "privacyContactTitle": {
     "message": "Kontakt"
   },
   "privacyContactText": {
     "message": "Pytania? Napisz na drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Zastąp"
+  "privacyYourDataTitle": {
+    "message": "Twoje dane"
   },
-  "replaceSessionTitle": {
-    "message": "Zastąp obecne karty tą sesją"
+  "privacyYourDataText": {
+    "message": "Ponieważ nic nie opuszcza Twojej przeglądarki, nie ma pulpitu nawigacyjnego, konta ani sposobu, abyśmy mogli zobaczyć, co zrobiłeś z Drowzy. Jeśli odinstalujesz Drowzy, Chrome zaoferuje Ci możliwość wysłania opcjonalnej opinii (powód odinstalowania, przeglądarka, OS) przez oddzielną stronę internetową; to zgłoszenie jest jawne i trafia do anonimowego formularza. Możesz je pominąć zamykając kartę."
   },
-  "invalidDomain": {
-    "message": "Wpisz prawidłową domenę (np. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy jest open source."
   },
-  "extensionPage": {
-    "message": "Strona rozszerzenia"
-  },
-  "exportWhitelist": {
-    "message": "Eksportuj"
-  },
-  "importWhitelist": {
-    "message": "Importuj"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopiuj białą listę"
-  },
-  "importWhitelistTitle": {
-    "message": "Importuj białą listę ze schowka"
-  },
-  "copiedSites": {
-    "message": "Skopiowano $COUNT$ stron",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Zaimportowano $COUNT$ nowych stron",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Nie znaleziono prawidłowych domen w schowku"
-  },
-  "clipboardReadFailed": {
-    "message": "Nie można odczytać schowka"
-  },
-  "enjoyingDrowzy": {
-    "message": "Podoba Ci się Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Tak!"
-  },
-  "reviewNo": {
-    "message": "Nie bardzo"
-  },
-  "whatsNew": {
-    "message": "Co nowego w v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Przeglądaj kod na GitHub"
   },
   "changelogTitle": {
     "message": "Co nowego w Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Co nowego"
+  },
+  "changelogVersionLabel": {
+    "message": "Wersja"
   },
   "changelogCtaText": {
     "message": "Drowzy jest darmowy i open source. Jeśli oszczędza pamięć, zostaw opinię lub gwiazdkę na GitHubie."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Zamknij zduplikowane karty"
-  },
-  "tabUntitled": {
-    "message": "Bez tytułu"
-  },
-  "badgeWhitelisted": {
-    "message": "Na białej liście"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "wkrótce"
-  },
-  "changelogVersionLabel": {
-    "message": "Wersja"
-  },
-  "copiedStats": {
-    "message": "Statystyki skopiowane!"
-  },
-  "privacyFooterLink": {
-    "message": "Przeglądaj kod na GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy jest open source."
-  },
-  "privacyPermHost": {
-    "message": "Opcjonalny dostęp do hosta, żądany na żądanie tylko po włączeniu Ochrony formularzy lub Oznaczania zawieszonych kart. Nigdy nie żądany przy instalacji. Można odwołać w dowolnym momencie."
-  },
-  "privacyPermScripting": {
-    "message": "Wstrzykiwanie małego skryptu w celu wykrycia niezapisanych danych formularza przed zawieszeniem karty. Tylko opt-in."
-  },
-  "privacyPermSidePanel": {
-    "message": "Wyświetlanie Drowzy w panelu bocznym Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Ponieważ nic nie opuszcza Twojej przeglądarki, nie ma pulpitu nawigacyjnego, konta ani sposobu, abyśmy mogli zobaczyć, co zrobiłeś z Drowzy. Jeśli odinstalujesz Drowzy, Chrome zaoferuje Ci możliwość wysłania opcjonalnej opinii (powód odinstalowania, przeglądarka, OS) przez oddzielną stronę internetową; to zgłoszenie jest jawne i trafia do anonimowego formularza. Możesz je pominąć zamykając kartę."
-  },
-  "privacyYourDataTitle": {
-    "message": "Twoje dane"
-  },
-  "ramEstimateTooltip": {
-    "message": "Oszacowane przy użyciu ~150 MB na zawieszoną kartę. Rzeczywiste oszczędności różnią się w zależności od strony."
-  },
-  "shareStats": {
-    "message": "Udostępnij"
-  },
-  "statLifetimeRam": {
-    "message": "Łącznie zaoszczędzona pamięć RAM"
   },
   "confirmDeleteTitle": {
     "message": "Kliknij ponownie, aby potwierdzić usunięcie"

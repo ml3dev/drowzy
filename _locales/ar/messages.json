@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "تم التوفير"
   },
+  "statForecast": {
+    "message": "متاح"
+  },
   "suspendOthers": {
     "message": "تعليق الأخرى"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "لم يتم العثور على تبويبات"
   },
+  "tabUntitled": {
+    "message": "بدون عنوان"
+  },
   "failedToLoad": {
     "message": "فشل التحميل. أعد فتح النافذة المنبثقة للمحاولة مرة أخرى."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "صوت"
+  },
+  "badgeWhitelisted": {
+    "message": "في القائمة البيضاء"
   },
   "badgeProtected": {
     "message": "محمي"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "كل الأوقات"
   },
+  "statLifetimeRam": {
+    "message": "إجمالي ذاكرة موفرة"
+  },
+  "ramEstimateTooltip": {
+    "message": "يُقدر باستخدام ~150 ميجابايت لكل علامة تبويب معلقة. التوفير الفعلي يختلف حسب الصفحة."
+  },
+  "ramForecastTooltip": {
+    "message": "تقدير الذاكرة المتاحة للحفظ عندما تخلد علامات التبويب الخاملة إلى السكون، بمعدل ~150 ميجابايت لكل علامة تبويب."
+  },
+  "suspendedToast": {
+    "message": "تم تعليق $COUNT$ علامة تبويب · تم تحرير ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "تم إيقاظ $COUNT$ علامة تبويب",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "لا توجد علامات تبويب أخرى لتعليقها"
+  },
+  "noSuspendedToWake": {
+    "message": "لا توجد علامات تبويب معلقة لإيقاظها"
+  },
+  "pinnedWontSuspend": {
+    "message": "مثبتة — لن يتم تعليقها"
+  },
+  "audioWontSuspend": {
+    "message": "تشغّل صوتًا — لن يتم تعليقها"
+  },
+  "whitelistedWontSuspend": {
+    "message": "في القائمة البيضاء — لن يتم تعليقها"
+  },
+  "systemPageCantSuspend": {
+    "message": "صفحة نظام — لا يمكن تعليقها"
+  },
+  "clickToDismiss": {
+    "message": "انقر للإغلاق"
+  },
+  "keepAwakeBtn": {
+    "message": "أبقِ نشطًا"
+  },
+  "suspendTimerHint": {
+    "message": "يتم تعليق علامات التبويب التي تركتها بعد هذه المدة. زِد المدة إذا كنت تعود إلى علامات التبويب بعد فترات طويلة."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>نصيحة:</strong> انقر على أيقونة قطعة الأحجية في شريط أدوات Chrome لتثبيت Drowzy والوصول إليه بنقرة واحدة."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>تُعلَّق علامات تبويب لا تزال تستخدمها؟</strong> افتح Drowzy ← الإعدادات لرفع مؤقّت الـ30 دقيقة، أو أضف الموقع إلى قائمة الأمان بنقرة واحدة."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>هل تملأ نموذجًا؟</strong> فعِّل \"حماية علامات التبويب التي تحتوي على نماذج\" في الإعدادات لمنع تعليق علامات التبويب التي تحتوي على إدخال غير محفوظ."
+  },
+  "onboardingRemapHint": {
+    "message": "تريد اختصارات لوحة مفاتيح مختلفة؟ خصّصها هنا ←"
+  },
+  "reviewLeaveTitle": {
+    "message": "اكتب مراجعة سريعة"
+  },
+  "reviewReportTitle": {
+    "message": "الإبلاغ عن مشكلة"
+  },
+  "reviewDismissTitle": {
+    "message": "إغلاق"
+  },
   "statMemberSince": {
     "message": "عضو منذ"
+  },
+  "shareStats": {
+    "message": "مشاركة"
+  },
+  "copiedStats": {
+    "message": "تم نسخ الإحصائيات!"
   },
   "settings": {
     "message": "الإعدادات"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "لا توجد مواقع في القائمة البيضاء"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "جارٍ التعليق..."
   },
-  "done": {
-    "message": "تم!"
+  "suspendingSoon": {
+    "message": "قريبًا"
   },
   "waking": {
     "message": "جارٍ الإيقاظ..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "إزالة"
+  },
+  "replace": {
+    "message": "استبدال"
+  },
+  "replaceSessionTitle": {
+    "message": "استبدال التبويبات الحالية بهذه الجلسة"
+  },
+  "invalidDomain": {
+    "message": "أدخل نطاقًا صالحًا (مثل example.com)"
+  },
+  "extensionPage": {
+    "message": "صفحة الإضافة"
+  },
+  "exportWhitelist": {
+    "message": "تصدير"
+  },
+  "importWhitelist": {
+    "message": "استيراد"
+  },
+  "exportWhitelistTitle": {
+    "message": "نسخ القائمة البيضاء"
+  },
+  "importWhitelistTitle": {
+    "message": "استيراد القائمة البيضاء من الحافظة"
+  },
+  "copiedSites": {
+    "message": "تم نسخ $COUNT$ موقع",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "تم استيراد $COUNT$ موقع جديد",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "لم يتم العثور على نطاقات صالحة في الحافظة"
+  },
+  "clipboardReadFailed": {
+    "message": "تعذرت قراءة الحافظة"
+  },
+  "enjoyingDrowzy": {
+    "message": "هل تستمتع بـ Drowzy؟"
+  },
+  "reviewYes": {
+    "message": "نعم!"
+  },
+  "reviewNo": {
+    "message": "ليس حقًا"
+  },
+  "whatsNew": {
+    "message": "الجديد في v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "التبديل إلى الوضع الفاتح"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "خيارات قائمة النقر بالزر الأيمن للتعليق والقائمة البيضاء."
   },
+  "privacyPermScripting": {
+    "message": "حقن نص برمجي صغير لاكتشاف بيانات النموذج غير المحفوظة قبل تعليق علامة التبويب. اختياري فقط."
+  },
+  "privacyPermSidePanel": {
+    "message": "عرض Drowzy في لوحة Chrome الجانبية."
+  },
+  "privacyPermHost": {
+    "message": "وصول مضيف اختياري، يُطلب عند الحاجة فقط عند تفعيل حماية النماذج أو تمييز علامات التبويب المعلقة. لا يُطلب أبدًا عند التثبيت. يمكن إلغاؤه في أي وقت."
+  },
   "privacyContactTitle": {
     "message": "التواصل"
   },
   "privacyContactText": {
     "message": "أسئلة؟ تواصل معنا على drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "استبدال"
+  "privacyYourDataTitle": {
+    "message": "بياناتك"
   },
-  "replaceSessionTitle": {
-    "message": "استبدال التبويبات الحالية بهذه الجلسة"
+  "privacyYourDataText": {
+    "message": "نظرًا لأن لا شيء يغادر متصفحك، لا توجد لوحة معلومات، ولا حساب، ولا طريقة لنا لرؤية ما فعلته بـ Drowzy. إذا قمت بإلغاء تثبيت Drowzy، يقدم لك Chrome فرصة لإرسال ملاحظات اختيارية (سبب الإلغاء، المتصفح، نظام التشغيل) عبر صفحة ويب منفصلة؛ هذا الإرسال صريح ويذهب إلى نموذج مجهول. يمكنك تخطيه بإغلاق علامة التبويب."
   },
-  "invalidDomain": {
-    "message": "أدخل نطاقًا صالحًا (مثل example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy مفتوح المصدر."
   },
-  "extensionPage": {
-    "message": "صفحة الإضافة"
-  },
-  "exportWhitelist": {
-    "message": "تصدير"
-  },
-  "importWhitelist": {
-    "message": "استيراد"
-  },
-  "exportWhitelistTitle": {
-    "message": "نسخ القائمة البيضاء"
-  },
-  "importWhitelistTitle": {
-    "message": "استيراد القائمة البيضاء من الحافظة"
-  },
-  "copiedSites": {
-    "message": "تم نسخ $COUNT$ موقع",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "تم استيراد $COUNT$ موقع جديد",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "لم يتم العثور على نطاقات صالحة في الحافظة"
-  },
-  "clipboardReadFailed": {
-    "message": "تعذرت قراءة الحافظة"
-  },
-  "enjoyingDrowzy": {
-    "message": "هل تستمتع بـ Drowzy؟"
-  },
-  "reviewYes": {
-    "message": "نعم!"
-  },
-  "reviewNo": {
-    "message": "ليس حقًا"
-  },
-  "whatsNew": {
-    "message": "الجديد في v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "تصفح الكود على GitHub"
   },
   "changelogTitle": {
     "message": "الجديد في Drowzy"
   },
   "changelogWhatsNew": {
     "message": "ما الجديد"
+  },
+  "changelogVersionLabel": {
+    "message": "الإصدار"
   },
   "changelogCtaText": {
     "message": "Drowzy مجاني ومفتوح المصدر. إذا كان يوفر لك الذاكرة، فكر في ترك تقييم أو نجمة على GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "إغلاق علامات التبويب المكررة"
-  },
-  "tabUntitled": {
-    "message": "بدون عنوان"
-  },
-  "badgeWhitelisted": {
-    "message": "في القائمة البيضاء"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "قريبًا"
-  },
-  "changelogVersionLabel": {
-    "message": "الإصدار"
-  },
-  "copiedStats": {
-    "message": "تم نسخ الإحصائيات!"
-  },
-  "privacyFooterLink": {
-    "message": "تصفح الكود على GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy مفتوح المصدر."
-  },
-  "privacyPermHost": {
-    "message": "وصول مضيف اختياري، يُطلب عند الحاجة فقط عند تفعيل حماية النماذج أو تمييز علامات التبويب المعلقة. لا يُطلب أبدًا عند التثبيت. يمكن إلغاؤه في أي وقت."
-  },
-  "privacyPermScripting": {
-    "message": "حقن نص برمجي صغير لاكتشاف بيانات النموذج غير المحفوظة قبل تعليق علامة التبويب. اختياري فقط."
-  },
-  "privacyPermSidePanel": {
-    "message": "عرض Drowzy في لوحة Chrome الجانبية."
-  },
-  "privacyYourDataText": {
-    "message": "نظرًا لأن لا شيء يغادر متصفحك، لا توجد لوحة معلومات، ولا حساب، ولا طريقة لنا لرؤية ما فعلته بـ Drowzy. إذا قمت بإلغاء تثبيت Drowzy، يقدم لك Chrome فرصة لإرسال ملاحظات اختيارية (سبب الإلغاء، المتصفح، نظام التشغيل) عبر صفحة ويب منفصلة؛ هذا الإرسال صريح ويذهب إلى نموذج مجهول. يمكنك تخطيه بإغلاق علامة التبويب."
-  },
-  "privacyYourDataTitle": {
-    "message": "بياناتك"
-  },
-  "ramEstimateTooltip": {
-    "message": "يُقدر باستخدام ~150 ميجابايت لكل علامة تبويب معلقة. التوفير الفعلي يختلف حسب الصفحة."
-  },
-  "shareStats": {
-    "message": "مشاركة"
-  },
-  "statLifetimeRam": {
-    "message": "إجمالي ذاكرة موفرة"
   },
   "confirmDeleteTitle": {
     "message": "انقر مرة أخرى لتأكيد الحذف"

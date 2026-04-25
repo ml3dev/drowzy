@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "уштеђено"
   },
+  "statForecast": {
+    "message": "доступно"
+  },
   "suspendOthers": {
     "message": "Суспендуј остале"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Нису пронађене картице"
   },
+  "tabUntitled": {
+    "message": "Без наслова"
+  },
   "failedToLoad": {
     "message": "Учитавање није успело. Поново отворите popup за покушај."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Аудио"
+  },
+  "badgeWhitelisted": {
+    "message": "На белој листи"
   },
   "badgeProtected": {
     "message": "Заштићена"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Укупно"
   },
+  "statLifetimeRam": {
+    "message": "Укупно уштеђене RAM меморије"
+  },
+  "ramEstimateTooltip": {
+    "message": "Процењено коришћењем ~150 MB по обустављеној картици. Стварне уштеде се разликују по страници."
+  },
+  "ramForecastTooltip": {
+    "message": "Процењена меморија која ће бити ослобођена када ваше неактивне картице заспу, при ~150 MB по картици."
+  },
+  "suspendedToast": {
+    "message": "Заустављено $COUNT$ картица · ослобођено ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Пробуђено $COUNT$ картица",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Нема других картица за заустављање"
+  },
+  "noSuspendedToWake": {
+    "message": "Нема заустављених картица за буђење"
+  },
+  "pinnedWontSuspend": {
+    "message": "Закачена — неће бити заустављена"
+  },
+  "audioWontSuspend": {
+    "message": "Репродукује звук — неће бити заустављена"
+  },
+  "whitelistedWontSuspend": {
+    "message": "На белој листи — неће бити заустављена"
+  },
+  "systemPageCantSuspend": {
+    "message": "Системска страница — не може се зауставити"
+  },
+  "clickToDismiss": {
+    "message": "Кликните да затворите"
+  },
+  "keepAwakeBtn": {
+    "message": "Држи будним"
+  },
+  "suspendTimerHint": {
+    "message": "Картице са којих сте прешли се обустављају након овог времена. Повећајте га ако се враћате на картице после дугих пауза."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Савет:</strong> Кликните на икону слагалице у Chrome траци алата да закачите Drowzy за приступ једним кликом."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Обуставља картице које још користите?</strong> Отворите Drowzy → Подешавања да повећате тајмер од 30 минута, или додајте сајт на белу листу једним кликом."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Попуњавате образац?</strong> Укључите „Заштити картице са обрасцима\" у Подешавањима да се картице са несачуваним уносом не обустављају."
+  },
+  "onboardingRemapHint": {
+    "message": "Желите друге пречице на тастатури? Прилагодите их овде →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Оставите брзу рецензију"
+  },
+  "reviewReportTitle": {
+    "message": "Пријавите проблем"
+  },
+  "reviewDismissTitle": {
+    "message": "Затвори"
+  },
   "statMemberSince": {
     "message": "Члан од"
+  },
+  "shareStats": {
+    "message": "Дели"
+  },
+  "copiedStats": {
+    "message": "Статистика копирана!"
   },
   "settings": {
     "message": "Подешавања"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Нема сајтова на белој листи"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Суспендовање..."
   },
-  "done": {
-    "message": "Готово!"
+  "suspendingSoon": {
+    "message": "ускоро"
   },
   "waking": {
     "message": "Буђење..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Уклони"
+  },
+  "replace": {
+    "message": "Замени"
+  },
+  "replaceSessionTitle": {
+    "message": "Замени тренутне картице овом сесијом"
+  },
+  "invalidDomain": {
+    "message": "Унесите важећи домен (нпр. example.com)"
+  },
+  "extensionPage": {
+    "message": "Страница додатка"
+  },
+  "exportWhitelist": {
+    "message": "Извези"
+  },
+  "importWhitelist": {
+    "message": "Увези"
+  },
+  "exportWhitelistTitle": {
+    "message": "Копирај белу листу"
+  },
+  "importWhitelistTitle": {
+    "message": "Увези белу листу из оставе"
+  },
+  "copiedSites": {
+    "message": "Копирано $COUNT$ сајтова",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Увезено $COUNT$ нових сајтова",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "У остави нису пронађени важећи домени"
+  },
+  "clipboardReadFailed": {
+    "message": "Није могуће прочитати оставу"
+  },
+  "enjoyingDrowzy": {
+    "message": "Свиђа ли вам се Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Да!"
+  },
+  "reviewNo": {
+    "message": "Не баш"
+  },
+  "whatsNew": {
+    "message": "Шта је ново у v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Пребаци на светли режим"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Опције менија десног клика за обуставу и белу листу."
   },
+  "privacyPermScripting": {
+    "message": "Убацивање малог скрипта за откривање несачуваних података образаца пре обустављања картице. Само опционо."
+  },
+  "privacyPermSidePanel": {
+    "message": "Приказивање Drowzy у бочном панелу Chrome-а."
+  },
+  "privacyPermHost": {
+    "message": "Опциони приступ хосту, тражен по потреби само када укључите Заштиту образаца или Означавање обустављених картица. Никада се не тражи при инсталацији. Може се опозвати у било ком тренутку."
+  },
   "privacyContactTitle": {
     "message": "Контакт"
   },
   "privacyContactText": {
     "message": "Питања? Пишите на drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Замени"
+  "privacyYourDataTitle": {
+    "message": "Ваши подаци"
   },
-  "replaceSessionTitle": {
-    "message": "Замени тренутне картице овом сесијом"
+  "privacyYourDataText": {
+    "message": "Пошто ништа не напушта ваш прегледач, нема контролне табле, нема налога, и нема начина да видимо шта сте радили са Drowzy. Ако деинсталирате Drowzy, Chrome вам нуди прилику да пошаљете опциону повратну информацију (разлог деинсталације, прегледач, ОС) преко засебне веб странице; та пошиљка је експлицитна и иде на анонимни образац. Можете је прескочити затварањем картице."
   },
-  "invalidDomain": {
-    "message": "Унесите важећи домен (нпр. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy је отвореног кода."
   },
-  "extensionPage": {
-    "message": "Страница додатка"
-  },
-  "exportWhitelist": {
-    "message": "Извези"
-  },
-  "importWhitelist": {
-    "message": "Увези"
-  },
-  "exportWhitelistTitle": {
-    "message": "Копирај белу листу"
-  },
-  "importWhitelistTitle": {
-    "message": "Увези белу листу из оставе"
-  },
-  "copiedSites": {
-    "message": "Копирано $COUNT$ сајтова",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Увезено $COUNT$ нових сајтова",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "У остави нису пронађени важећи домени"
-  },
-  "clipboardReadFailed": {
-    "message": "Није могуће прочитати оставу"
-  },
-  "enjoyingDrowzy": {
-    "message": "Свиђа ли вам се Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Да!"
-  },
-  "reviewNo": {
-    "message": "Не баш"
-  },
-  "whatsNew": {
-    "message": "Шта је ново у v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Прегледајте код на GitHub-у"
   },
   "changelogTitle": {
     "message": "Шта је ново у Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Шта је ново"
+  },
+  "changelogVersionLabel": {
+    "message": "Верзија"
   },
   "changelogCtaText": {
     "message": "Drowzy је бесплатан и отвореног кода. Ако вам штеди меморију, оставите рецензију или звездицу на GitHub-у."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Затвори дупликат картице"
-  },
-  "tabUntitled": {
-    "message": "Без наслова"
-  },
-  "badgeWhitelisted": {
-    "message": "На белој листи"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "ускоро"
-  },
-  "changelogVersionLabel": {
-    "message": "Верзија"
-  },
-  "copiedStats": {
-    "message": "Статистика копирана!"
-  },
-  "privacyFooterLink": {
-    "message": "Прегледајте код на GitHub-у"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy је отвореног кода."
-  },
-  "privacyPermHost": {
-    "message": "Опциони приступ хосту, тражен по потреби само када укључите Заштиту образаца или Означавање обустављених картица. Никада се не тражи при инсталацији. Може се опозвати у било ком тренутку."
-  },
-  "privacyPermScripting": {
-    "message": "Убацивање малог скрипта за откривање несачуваних података образаца пре обустављања картице. Само опционо."
-  },
-  "privacyPermSidePanel": {
-    "message": "Приказивање Drowzy у бочном панелу Chrome-а."
-  },
-  "privacyYourDataText": {
-    "message": "Пошто ништа не напушта ваш прегледач, нема контролне табле, нема налога, и нема начина да видимо шта сте радили са Drowzy. Ако деинсталирате Drowzy, Chrome вам нуди прилику да пошаљете опциону повратну информацију (разлог деинсталације, прегледач, ОС) преко засебне веб странице; та пошиљка је експлицитна и иде на анонимни образац. Можете је прескочити затварањем картице."
-  },
-  "privacyYourDataTitle": {
-    "message": "Ваши подаци"
-  },
-  "ramEstimateTooltip": {
-    "message": "Процењено коришћењем ~150 MB по обустављеној картици. Стварне уштеде се разликују по страници."
-  },
-  "shareStats": {
-    "message": "Дели"
-  },
-  "statLifetimeRam": {
-    "message": "Укупно уштеђене RAM меморије"
   },
   "confirmDeleteTitle": {
     "message": "Кликните поново за потврду брисања"

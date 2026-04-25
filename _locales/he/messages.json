@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "נחסך"
   },
+  "statForecast": {
+    "message": "זמין"
+  },
   "suspendOthers": {
     "message": "השעה אחרות"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "לא נמצאו כרטיסיות"
   },
+  "tabUntitled": {
+    "message": "ללא כותרת"
+  },
   "failedToLoad": {
     "message": "הטעינה נכשלה. פתח מחדש את החלון הקופץ כדי לנסות שוב."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "שמע"
+  },
+  "badgeWhitelisted": {
+    "message": "ברשימה הלבנה"
   },
   "badgeProtected": {
     "message": "מוגן"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "מאז ומתמיד"
   },
+  "statLifetimeRam": {
+    "message": "סך RAM שנחסך"
+  },
+  "ramEstimateTooltip": {
+    "message": "מוערך באמצעות ~150 MB ללשונית מושעית. החיסכון בפועל משתנה לפי דף."
+  },
+  "ramForecastTooltip": {
+    "message": "זיכרון משוער שיתפנה כאשר הכרטיסיות הלא פעילות שלך יישנו, ב-~150 MB לכל כרטיסייה."
+  },
+  "suspendedToast": {
+    "message": "הושעו $COUNT$ כרטיסיות · שוחררו ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "הוערו $COUNT$ כרטיסיות",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "אין כרטיסיות אחרות להשעות"
+  },
+  "noSuspendedToWake": {
+    "message": "אין כרטיסיות מושעות להעיר"
+  },
+  "pinnedWontSuspend": {
+    "message": "מוצמדת — לא תושעה"
+  },
+  "audioWontSuspend": {
+    "message": "מנגנת שמע — לא תושעה"
+  },
+  "whitelistedWontSuspend": {
+    "message": "ברשימה הלבנה — לא תושעה"
+  },
+  "systemPageCantSuspend": {
+    "message": "דף מערכת — לא ניתן להשעות"
+  },
+  "clickToDismiss": {
+    "message": "לחץ לסגירה"
+  },
+  "keepAwakeBtn": {
+    "message": "השאר פעיל"
+  },
+  "suspendTimerHint": {
+    "message": "לשוניות שעברת מהן ייעצרו אחרי משך הזמן הזה. הגדל את הזמן אם אתה חוזר ללשוניות אחרי הפסקות ארוכות."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>טיפ:</strong> לחץ על סמל הפאזל בסרגל הכלים של Chrome כדי להצמיד את Drowzy לגישה בלחיצה אחת."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>עוצר לשוניות שאתה עדיין משתמש בהן?</strong> פתח את Drowzy ← הגדרות כדי להאריך את הטיימר של 30 דקות, או הוסף את האתר לרשימה הלבנה בלחיצה אחת."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>ממלא טופס?</strong> הפעל \"הגן על לשוניות עם טפסים\" בהגדרות כדי שלשוניות עם קלט שלא נשמר לא ייעצרו."
+  },
+  "onboardingRemapHint": {
+    "message": "רוצה קיצורי מקלדת אחרים? התאם אותם כאן ←"
+  },
+  "reviewLeaveTitle": {
+    "message": "השאר ביקורת מהירה"
+  },
+  "reviewReportTitle": {
+    "message": "דווח על בעיה"
+  },
+  "reviewDismissTitle": {
+    "message": "סגור"
+  },
   "statMemberSince": {
     "message": "חבר מאז"
+  },
+  "shareStats": {
+    "message": "שתף"
+  },
+  "copiedStats": {
+    "message": "הסטטיסטיקות הועתקו!"
   },
   "settings": {
     "message": "הגדרות"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "אין אתרים ברשימה הלבנה"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "משעה..."
   },
-  "done": {
-    "message": "בוצע!"
+  "suspendingSoon": {
+    "message": "בקרוב"
   },
   "waking": {
     "message": "מעיר..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "הסר"
+  },
+  "replace": {
+    "message": "החלף"
+  },
+  "replaceSessionTitle": {
+    "message": "החלף כרטיסיות נוכחיות בהפעלה זו"
+  },
+  "invalidDomain": {
+    "message": "הזן דומיין תקין (למשל example.com)"
+  },
+  "extensionPage": {
+    "message": "דף התוסף"
+  },
+  "exportWhitelist": {
+    "message": "ייצוא"
+  },
+  "importWhitelist": {
+    "message": "ייבוא"
+  },
+  "exportWhitelistTitle": {
+    "message": "העתק רשימת היתרים"
+  },
+  "importWhitelistTitle": {
+    "message": "ייבוא רשימת היתרים מהלוח"
+  },
+  "copiedSites": {
+    "message": "הועתקו $COUNT$ אתרים",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "יובאו $COUNT$ אתרים חדשים",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "לא נמצאו דומיינים תקינים בלוח"
+  },
+  "clipboardReadFailed": {
+    "message": "לא ניתן לקרוא את הלוח"
+  },
+  "enjoyingDrowzy": {
+    "message": "נהנים מ-Drowzy?"
+  },
+  "reviewYes": {
+    "message": "!כן"
+  },
+  "reviewNo": {
+    "message": "לא ממש"
+  },
+  "whatsNew": {
+    "message": "מה חדש ב-v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "עבור למצב בהיר"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "אפשרויות תפריט קליק ימני להשעיה ולרשימה הלבנה."
   },
+  "privacyPermScripting": {
+    "message": "הזרקת סקריפט קטן לזיהוי נתוני טופס לא שמורים לפני השעיית לשונית. הצטרפות בלבד."
+  },
+  "privacyPermSidePanel": {
+    "message": "הצגת Drowzy בלוח הצד של Chrome."
+  },
+  "privacyPermHost": {
+    "message": "גישת מארח אופציונלית, מבוקשת לפי דרישה רק כאשר אתה מפעיל הגנת טפסים או סימון לשוניות מושעות. לעולם לא מבוקשת בהתקנה. ניתן לבטל בכל עת."
+  },
   "privacyContactTitle": {
     "message": "יצירת קשר"
   },
   "privacyContactText": {
     "message": "שאלות? פנו אלינו ב-drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "החלף"
+  "privacyYourDataTitle": {
+    "message": "הנתונים שלך"
   },
-  "replaceSessionTitle": {
-    "message": "החלף כרטיסיות נוכחיות בהפעלה זו"
+  "privacyYourDataText": {
+    "message": "מכיוון ששום דבר לא יוצא מהדפדפן שלך, אין לוח מחוונים, אין חשבון, ואין דרך לנו לראות מה עשית עם Drowzy. אם תסיר את ההתקנה של Drowzy, Chrome מציע לך הזדמנות לשלוח משוב אופציונלי (סיבה להסרה, דפדפן, מערכת הפעלה) דרך דף אינטרנט נפרד; הגשה זו מפורשת ועוברת לטופס אנונימי. אתה יכול לדלג על זה על ידי סגירת הלשונית."
   },
-  "invalidDomain": {
-    "message": "הזן דומיין תקין (למשל example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy הוא קוד פתוח."
   },
-  "extensionPage": {
-    "message": "דף התוסף"
-  },
-  "exportWhitelist": {
-    "message": "ייצוא"
-  },
-  "importWhitelist": {
-    "message": "ייבוא"
-  },
-  "exportWhitelistTitle": {
-    "message": "העתק רשימת היתרים"
-  },
-  "importWhitelistTitle": {
-    "message": "ייבוא רשימת היתרים מהלוח"
-  },
-  "copiedSites": {
-    "message": "הועתקו $COUNT$ אתרים",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "יובאו $COUNT$ אתרים חדשים",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "לא נמצאו דומיינים תקינים בלוח"
-  },
-  "clipboardReadFailed": {
-    "message": "לא ניתן לקרוא את הלוח"
-  },
-  "enjoyingDrowzy": {
-    "message": "נהנים מ-Drowzy?"
-  },
-  "reviewYes": {
-    "message": "!כן"
-  },
-  "reviewNo": {
-    "message": "לא ממש"
-  },
-  "whatsNew": {
-    "message": "מה חדש ב-v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "עיין בקוד ב-GitHub"
   },
   "changelogTitle": {
     "message": "מה חדש ב-Drowzy"
   },
   "changelogWhatsNew": {
     "message": "מה חדש"
+  },
+  "changelogVersionLabel": {
+    "message": "גרסה"
   },
   "changelogCtaText": {
     "message": "Drowzy חינמי ובקוד פתוח. אם הוא חוסך לכם זיכרון, השאירו ביקורת או כוכב ב-GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "סגירת כרטיסיות כפולות"
-  },
-  "tabUntitled": {
-    "message": "ללא כותרת"
-  },
-  "badgeWhitelisted": {
-    "message": "ברשימה הלבנה"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "בקרוב"
-  },
-  "changelogVersionLabel": {
-    "message": "גרסה"
-  },
-  "copiedStats": {
-    "message": "הסטטיסטיקות הועתקו!"
-  },
-  "privacyFooterLink": {
-    "message": "עיין בקוד ב-GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy הוא קוד פתוח."
-  },
-  "privacyPermHost": {
-    "message": "גישת מארח אופציונלית, מבוקשת לפי דרישה רק כאשר אתה מפעיל הגנת טפסים או סימון לשוניות מושעות. לעולם לא מבוקשת בהתקנה. ניתן לבטל בכל עת."
-  },
-  "privacyPermScripting": {
-    "message": "הזרקת סקריפט קטן לזיהוי נתוני טופס לא שמורים לפני השעיית לשונית. הצטרפות בלבד."
-  },
-  "privacyPermSidePanel": {
-    "message": "הצגת Drowzy בלוח הצד של Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "מכיוון ששום דבר לא יוצא מהדפדפן שלך, אין לוח מחוונים, אין חשבון, ואין דרך לנו לראות מה עשית עם Drowzy. אם תסיר את ההתקנה של Drowzy, Chrome מציע לך הזדמנות לשלוח משוב אופציונלי (סיבה להסרה, דפדפן, מערכת הפעלה) דרך דף אינטרנט נפרד; הגשה זו מפורשת ועוברת לטופס אנונימי. אתה יכול לדלג על זה על ידי סגירת הלשונית."
-  },
-  "privacyYourDataTitle": {
-    "message": "הנתונים שלך"
-  },
-  "ramEstimateTooltip": {
-    "message": "מוערך באמצעות ~150 MB ללשונית מושעית. החיסכון בפועל משתנה לפי דף."
-  },
-  "shareStats": {
-    "message": "שתף"
-  },
-  "statLifetimeRam": {
-    "message": "סך RAM שנחסך"
   },
   "confirmDeleteTitle": {
     "message": "לחץ שוב כדי לאשר מחיקה"

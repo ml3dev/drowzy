@@ -424,6 +424,7 @@ body:not(.popup-ready) {
   letter-spacing: -0.03em;
   color: var(--color-text);
   line-height: 1.2;
+  transition: color var(--transition-default);
 }
 
 #statSleepingValue { color: var(--color-accent); }
@@ -446,11 +447,18 @@ body:not(.popup-ready) {
   width: 5px;
   height: 5px;
   border-radius: 50%;
+  transition: background-color var(--transition-default);
 }
 
 .strip-stat:first-child .strip-stat-label::before { background: var(--color-accent); }
 .strip-stat:nth-child(3) .strip-stat-label::before { background: var(--color-green); }
 .strip-stat:last-child .strip-stat-label::before { background: var(--color-blue); }
+
+/* When the third slot is rendering the forecast (no tabs suspended yet but
+   eligible ones exist), differentiate from "saved" with an amber dot + value
+   color so the number doesn't read as already-realized savings. */
+.strip-stat.strip-stat-forecast .strip-stat-label::before { background: var(--color-amber); }
+.strip-stat.strip-stat-forecast #statMemoryValue { color: var(--color-amber); }
 
 .strip-divider {
   width: 1px;
@@ -1289,7 +1297,6 @@ body:not(.popup-ready) {
   text-align: center;
   font-size: 10px;
   color: var(--color-text-tertiary);
-  border-top: 1px solid var(--border-default);
   letter-spacing: 0.02em;
 }
 

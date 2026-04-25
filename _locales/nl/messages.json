@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "bespaard"
   },
+  "statForecast": {
+    "message": "beschikbaar"
+  },
   "suspendOthers": {
     "message": "Overige opschorten"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Geen tabbladen gevonden"
   },
+  "tabUntitled": {
+    "message": "Naamloos"
+  },
   "failedToLoad": {
     "message": "Laden mislukt. Open de popup opnieuw om het te proberen."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Op whitelist"
   },
   "badgeProtected": {
     "message": "Beschermd"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Totaal"
   },
+  "statLifetimeRam": {
+    "message": "Totaal bespaard RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "Geschat met ongeveer 150 MB per opgeschort tabblad. Werkelijke besparingen verschillen per pagina."
+  },
+  "ramForecastTooltip": {
+    "message": "Geschat geheugen dat vrijkomt wanneer je inactieve tabbladen gaan slapen, ongeveer 150 MB per tabblad."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ tabblad(en) opgeschort · ~$RAM$ vrijgemaakt",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ tabblad(en) gewekt",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Geen andere tabbladen om op te schorten"
+  },
+  "noSuspendedToWake": {
+    "message": "Geen opgeschorte tabbladen om te wekken"
+  },
+  "pinnedWontSuspend": {
+    "message": "Vastgezet — wordt niet opgeschort"
+  },
+  "audioWontSuspend": {
+    "message": "Audio speelt — wordt niet opgeschort"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Op witte lijst — wordt niet opgeschort"
+  },
+  "systemPageCantSuspend": {
+    "message": "Systeempagina — kan niet worden opgeschort"
+  },
+  "clickToDismiss": {
+    "message": "Klik om te sluiten"
+  },
+  "keepAwakeBtn": {
+    "message": "Wakker houden"
+  },
+  "suspendTimerHint": {
+    "message": "Tabbladen die je hebt verlaten worden na deze tijd opgeschort. Verhoog dit als je na lange pauzes terugkomt naar tabbladen."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Tip:</strong> Klik op het puzzelpictogram in je Chrome-werkbalk om Drowzy vast te zetten voor toegang met één klik."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Schort tabbladen op die je nog wilt?</strong> Open Drowzy → Instellingen om de timer van 30 minuten te verhogen, of voeg de site met één klik toe aan je whitelist."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Een formulier aan het invullen?</strong> Schakel \"Bescherm tabbladen met formulieren\" in bij Instellingen zodat tabbladen met niet-opgeslagen invoer niet worden opgeschort."
+  },
+  "onboardingRemapHint": {
+    "message": "Wil je andere sneltoetsen? Pas ze hier aan →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Schrijf een snelle review"
+  },
+  "reviewReportTitle": {
+    "message": "Een probleem melden"
+  },
+  "reviewDismissTitle": {
+    "message": "Sluiten"
+  },
   "statMemberSince": {
     "message": "Lid sinds"
+  },
+  "shareStats": {
+    "message": "Delen"
+  },
+  "copiedStats": {
+    "message": "Statistieken gekopieerd!"
   },
   "settings": {
     "message": "Instellingen"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Geen sites op de witte lijst"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Opschorten..."
   },
-  "done": {
-    "message": "Klaar!"
+  "suspendingSoon": {
+    "message": "binnenkort"
   },
   "waking": {
     "message": "Activeren..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Verwijderen"
+  },
+  "replace": {
+    "message": "Vervangen"
+  },
+  "replaceSessionTitle": {
+    "message": "Huidige tabbladen vervangen door deze sessie"
+  },
+  "invalidDomain": {
+    "message": "Voer een geldig domein in (bijv. example.com)"
+  },
+  "extensionPage": {
+    "message": "Extensiepagina"
+  },
+  "exportWhitelist": {
+    "message": "Exporteren"
+  },
+  "importWhitelist": {
+    "message": "Importeren"
+  },
+  "exportWhitelistTitle": {
+    "message": "Witte lijst kopiëren"
+  },
+  "importWhitelistTitle": {
+    "message": "Witte lijst importeren van klembord"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ site(s) gekopieerd",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ nieuwe site(s) geïmporteerd",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Geen geldige domeinen gevonden op klembord"
+  },
+  "clipboardReadFailed": {
+    "message": "Klembord kon niet worden gelezen"
+  },
+  "enjoyingDrowzy": {
+    "message": "Bevalt Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ja!"
+  },
+  "reviewNo": {
+    "message": "Niet echt"
+  },
+  "whatsNew": {
+    "message": "Nieuw in v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Overschakelen naar lichte modus"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Rechtsklikmenu-opties voor opschorten en de witte lijst."
   },
+  "privacyPermScripting": {
+    "message": "Een klein script injecteren om niet-opgeslagen formuliergegevens te detecteren voordat een tabblad wordt opgeschort. Alleen opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzy weergeven in het zijpaneel van Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Optionele hosttoegang, op aanvraag aangevraagd alleen wanneer u Formulierbescherming of Markering van opgeschorte tabbladen inschakelt. Nooit aangevraagd bij installatie. Op elk moment intrekbaar."
+  },
   "privacyContactTitle": {
     "message": "Contact"
   },
   "privacyContactText": {
     "message": "Vragen? Neem contact op via drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Vervangen"
+  "privacyYourDataTitle": {
+    "message": "Uw gegevens"
   },
-  "replaceSessionTitle": {
-    "message": "Huidige tabbladen vervangen door deze sessie"
+  "privacyYourDataText": {
+    "message": "Omdat niets uw browser verlaat, is er geen dashboard, geen account en geen manier waarop wij kunnen zien wat u met Drowzy hebt gedaan. Als u Drowzy verwijdert, biedt Chrome u de mogelijkheid om optionele feedback (reden voor verwijdering, browser, OS) te sturen via een aparte webpagina; die inzending is expliciet en gaat naar een anoniem formulier. U kunt het overslaan door het tabblad te sluiten."
   },
-  "invalidDomain": {
-    "message": "Voer een geldig domein in (bijv. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy is open source."
   },
-  "extensionPage": {
-    "message": "Extensiepagina"
-  },
-  "exportWhitelist": {
-    "message": "Exporteren"
-  },
-  "importWhitelist": {
-    "message": "Importeren"
-  },
-  "exportWhitelistTitle": {
-    "message": "Witte lijst kopiëren"
-  },
-  "importWhitelistTitle": {
-    "message": "Witte lijst importeren van klembord"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ site(s) gekopieerd",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ nieuwe site(s) geïmporteerd",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Geen geldige domeinen gevonden op klembord"
-  },
-  "clipboardReadFailed": {
-    "message": "Klembord kon niet worden gelezen"
-  },
-  "enjoyingDrowzy": {
-    "message": "Bevalt Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ja!"
-  },
-  "reviewNo": {
-    "message": "Niet echt"
-  },
-  "whatsNew": {
-    "message": "Nieuw in v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Bekijk de code op GitHub"
   },
   "changelogTitle": {
     "message": "Nieuw in Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nieuw"
+  },
+  "changelogVersionLabel": {
+    "message": "Versie"
   },
   "changelogCtaText": {
     "message": "Drowzy is gratis en open source. Als het geheugen bespaart, laat dan een beoordeling achter of geef een ster op GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Dubbele tabbladen sluiten"
-  },
-  "tabUntitled": {
-    "message": "Naamloos"
-  },
-  "badgeWhitelisted": {
-    "message": "Op whitelist"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "binnenkort"
-  },
-  "changelogVersionLabel": {
-    "message": "Versie"
-  },
-  "copiedStats": {
-    "message": "Statistieken gekopieerd!"
-  },
-  "privacyFooterLink": {
-    "message": "Bekijk de code op GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy is open source."
-  },
-  "privacyPermHost": {
-    "message": "Optionele hosttoegang, op aanvraag aangevraagd alleen wanneer u Formulierbescherming of Markering van opgeschorte tabbladen inschakelt. Nooit aangevraagd bij installatie. Op elk moment intrekbaar."
-  },
-  "privacyPermScripting": {
-    "message": "Een klein script injecteren om niet-opgeslagen formuliergegevens te detecteren voordat een tabblad wordt opgeschort. Alleen opt-in."
-  },
-  "privacyPermSidePanel": {
-    "message": "Drowzy weergeven in het zijpaneel van Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Omdat niets uw browser verlaat, is er geen dashboard, geen account en geen manier waarop wij kunnen zien wat u met Drowzy hebt gedaan. Als u Drowzy verwijdert, biedt Chrome u de mogelijkheid om optionele feedback (reden voor verwijdering, browser, OS) te sturen via een aparte webpagina; die inzending is expliciet en gaat naar een anoniem formulier. U kunt het overslaan door het tabblad te sluiten."
-  },
-  "privacyYourDataTitle": {
-    "message": "Uw gegevens"
-  },
-  "ramEstimateTooltip": {
-    "message": "Geschat met ongeveer 150 MB per opgeschort tabblad. Werkelijke besparingen verschillen per pagina."
-  },
-  "shareStats": {
-    "message": "Delen"
-  },
-  "statLifetimeRam": {
-    "message": "Totaal bespaard RAM"
   },
   "confirmDeleteTitle": {
     "message": "Klik nogmaals om verwijdering te bevestigen"

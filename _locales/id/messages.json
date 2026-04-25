@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "dihemat"
   },
+  "statForecast": {
+    "message": "tersedia"
+  },
   "suspendOthers": {
     "message": "Tangguhkan Lainnya"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Tidak ada tab ditemukan"
   },
+  "tabUntitled": {
+    "message": "Tanpa judul"
+  },
   "failedToLoad": {
     "message": "Gagal memuat. Buka ulang popup untuk mencoba lagi."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Dalam daftar putih"
   },
   "badgeProtected": {
     "message": "Dilindungi"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Sepanjang waktu"
   },
+  "statLifetimeRam": {
+    "message": "Total RAM dihemat"
+  },
+  "ramEstimateTooltip": {
+    "message": "Diperkirakan menggunakan ~150 MB per tab yang ditangguhkan. Penghematan sebenarnya bervariasi per halaman."
+  },
+  "ramForecastTooltip": {
+    "message": "Perkiraan memori yang akan dibebaskan saat tab tidak aktif tertidur, sekitar ~150 MB per tab."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ tab disuspensi · ~$RAM$ dibebaskan",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ tab dibangunkan",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Tidak ada tab lain untuk disuspensi"
+  },
+  "noSuspendedToWake": {
+    "message": "Tidak ada tab tersuspensi untuk dibangunkan"
+  },
+  "pinnedWontSuspend": {
+    "message": "Disematkan — tidak akan disuspensi"
+  },
+  "audioWontSuspend": {
+    "message": "Audio diputar — tidak akan disuspensi"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Di whitelist — tidak akan disuspensi"
+  },
+  "systemPageCantSuspend": {
+    "message": "Halaman sistem — tidak dapat disuspensi"
+  },
+  "clickToDismiss": {
+    "message": "Klik untuk menutup"
+  },
+  "keepAwakeBtn": {
+    "message": "Tetap aktif"
+  },
+  "suspendTimerHint": {
+    "message": "Tab yang telah Anda tinggalkan ditangguhkan setelah waktu ini. Tingkatkan jika Anda kembali ke tab setelah jeda lama."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Tips:</strong> Klik ikon teka-teki di toolbar Chrome untuk menyematkan Drowzy demi akses sekali klik."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Menangguhkan tab yang masih Anda inginkan?</strong> Buka Drowzy → Pengaturan untuk menambah pengatur waktu 30 menit, atau tambahkan situs ke whitelist Anda dengan satu klik."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Mengisi formulir?</strong> Aktifkan \"Lindungi tab dengan formulir\" di Pengaturan agar tab dengan masukan yang belum disimpan tidak ditangguhkan."
+  },
+  "onboardingRemapHint": {
+    "message": "Mau pintasan keyboard yang berbeda? Kustomisasi di sini →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Tinggalkan ulasan singkat"
+  },
+  "reviewReportTitle": {
+    "message": "Laporkan masalah"
+  },
+  "reviewDismissTitle": {
+    "message": "Tutup"
+  },
   "statMemberSince": {
     "message": "Anggota sejak"
+  },
+  "shareStats": {
+    "message": "Bagikan"
+  },
+  "copiedStats": {
+    "message": "Statistik disalin!"
   },
   "settings": {
     "message": "Pengaturan"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Tidak ada situs di daftar putih"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Menangguhkan..."
   },
-  "done": {
-    "message": "Selesai!"
+  "suspendingSoon": {
+    "message": "segera"
   },
   "waking": {
     "message": "Membangunkan..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Hapus"
+  },
+  "replace": {
+    "message": "Ganti"
+  },
+  "replaceSessionTitle": {
+    "message": "Ganti tab saat ini dengan sesi ini"
+  },
+  "invalidDomain": {
+    "message": "Masukkan domain yang valid (mis. example.com)"
+  },
+  "extensionPage": {
+    "message": "Halaman ekstensi"
+  },
+  "exportWhitelist": {
+    "message": "Ekspor"
+  },
+  "importWhitelist": {
+    "message": "Impor"
+  },
+  "exportWhitelistTitle": {
+    "message": "Salin daftar putih"
+  },
+  "importWhitelistTitle": {
+    "message": "Impor daftar putih dari papan klip"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ situs disalin",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ situs baru diimpor",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Tidak ada domain valid ditemukan di papan klip"
+  },
+  "clipboardReadFailed": {
+    "message": "Tidak dapat membaca papan klip"
+  },
+  "enjoyingDrowzy": {
+    "message": "Menyukai Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ya!"
+  },
+  "reviewNo": {
+    "message": "Tidak juga"
+  },
+  "whatsNew": {
+    "message": "Yang baru di v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Beralih ke mode terang"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Opsi menu klik kanan untuk menangguhkan dan daftar putih."
   },
+  "privacyPermScripting": {
+    "message": "Menyuntikkan skrip kecil untuk mendeteksi data formulir yang belum disimpan sebelum menangguhkan tab. Hanya berdasarkan persetujuan."
+  },
+  "privacyPermSidePanel": {
+    "message": "Menampilkan Drowzy di panel samping Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Akses host opsional, diminta sesuai permintaan hanya saat Anda mengaktifkan Perlindungan Formulir atau Penandaan Tab yang Ditangguhkan. Tidak pernah diminta saat pemasangan. Dapat dicabut kapan saja."
+  },
   "privacyContactTitle": {
     "message": "Kontak"
   },
   "privacyContactText": {
     "message": "Ada pertanyaan? Hubungi kami di drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Ganti"
+  "privacyYourDataTitle": {
+    "message": "Data Anda"
   },
-  "replaceSessionTitle": {
-    "message": "Ganti tab saat ini dengan sesi ini"
+  "privacyYourDataText": {
+    "message": "Karena tidak ada yang meninggalkan browser Anda, tidak ada dasbor, tidak ada akun, dan tidak ada cara bagi kami untuk melihat apa yang telah Anda lakukan dengan Drowzy. Jika Anda menghapus Drowzy, Chrome menawarkan kesempatan untuk mengirim umpan balik opsional (alasan menghapus, browser, OS) melalui halaman web terpisah; pengiriman itu eksplisit dan masuk ke formulir anonim. Anda dapat melewatinya dengan menutup tab."
   },
-  "invalidDomain": {
-    "message": "Masukkan domain yang valid (mis. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy bersifat sumber terbuka."
   },
-  "extensionPage": {
-    "message": "Halaman ekstensi"
-  },
-  "exportWhitelist": {
-    "message": "Ekspor"
-  },
-  "importWhitelist": {
-    "message": "Impor"
-  },
-  "exportWhitelistTitle": {
-    "message": "Salin daftar putih"
-  },
-  "importWhitelistTitle": {
-    "message": "Impor daftar putih dari papan klip"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ situs disalin",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ situs baru diimpor",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Tidak ada domain valid ditemukan di papan klip"
-  },
-  "clipboardReadFailed": {
-    "message": "Tidak dapat membaca papan klip"
-  },
-  "enjoyingDrowzy": {
-    "message": "Menyukai Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ya!"
-  },
-  "reviewNo": {
-    "message": "Tidak juga"
-  },
-  "whatsNew": {
-    "message": "Yang baru di v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Telusuri kode di GitHub"
   },
   "changelogTitle": {
     "message": "Yang Baru di Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Yang Baru"
+  },
+  "changelogVersionLabel": {
+    "message": "Versi"
   },
   "changelogCtaText": {
     "message": "Drowzy gratis dan open source. Jika menghemat memori, tinggalkan ulasan atau bintang di GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Tutup tab duplikat"
-  },
-  "tabUntitled": {
-    "message": "Tanpa judul"
-  },
-  "badgeWhitelisted": {
-    "message": "Dalam daftar putih"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "segera"
-  },
-  "changelogVersionLabel": {
-    "message": "Versi"
-  },
-  "copiedStats": {
-    "message": "Statistik disalin!"
-  },
-  "privacyFooterLink": {
-    "message": "Telusuri kode di GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy bersifat sumber terbuka."
-  },
-  "privacyPermHost": {
-    "message": "Akses host opsional, diminta sesuai permintaan hanya saat Anda mengaktifkan Perlindungan Formulir atau Penandaan Tab yang Ditangguhkan. Tidak pernah diminta saat pemasangan. Dapat dicabut kapan saja."
-  },
-  "privacyPermScripting": {
-    "message": "Menyuntikkan skrip kecil untuk mendeteksi data formulir yang belum disimpan sebelum menangguhkan tab. Hanya berdasarkan persetujuan."
-  },
-  "privacyPermSidePanel": {
-    "message": "Menampilkan Drowzy di panel samping Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Karena tidak ada yang meninggalkan browser Anda, tidak ada dasbor, tidak ada akun, dan tidak ada cara bagi kami untuk melihat apa yang telah Anda lakukan dengan Drowzy. Jika Anda menghapus Drowzy, Chrome menawarkan kesempatan untuk mengirim umpan balik opsional (alasan menghapus, browser, OS) melalui halaman web terpisah; pengiriman itu eksplisit dan masuk ke formulir anonim. Anda dapat melewatinya dengan menutup tab."
-  },
-  "privacyYourDataTitle": {
-    "message": "Data Anda"
-  },
-  "ramEstimateTooltip": {
-    "message": "Diperkirakan menggunakan ~150 MB per tab yang ditangguhkan. Penghematan sebenarnya bervariasi per halaman."
-  },
-  "shareStats": {
-    "message": "Bagikan"
-  },
-  "statLifetimeRam": {
-    "message": "Total RAM dihemat"
   },
   "confirmDeleteTitle": {
     "message": "Klik lagi untuk mengonfirmasi penghapusan"

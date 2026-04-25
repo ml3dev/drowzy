@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "poupado"
   },
+  "statForecast": {
+    "message": "disponível"
+  },
   "suspendOthers": {
     "message": "Suspender outros"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Nenhum separador encontrado"
   },
+  "tabUntitled": {
+    "message": "Sem título"
+  },
   "failedToLoad": {
     "message": "Falha ao carregar. Reabra o popup para tentar novamente."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Áudio"
+  },
+  "badgeWhitelisted": {
+    "message": "Na lista branca"
   },
   "badgeProtected": {
     "message": "Protegido"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Total"
   },
+  "statLifetimeRam": {
+    "message": "RAM total poupada"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimado usando ~150 MB por separador suspenso. A poupança real varia por página."
+  },
+  "ramForecastTooltip": {
+    "message": "Memória estimada que será libertada quando os seus separadores inativos hibernarem, a ~150 MB por separador."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ separador(es) suspenso(s) · ~$RAM$ libertados",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ separador(es) reativado(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Sem outros separadores para suspender"
+  },
+  "noSuspendedToWake": {
+    "message": "Sem separadores suspensos para reativar"
+  },
+  "pinnedWontSuspend": {
+    "message": "Fixado — não será suspenso"
+  },
+  "audioWontSuspend": {
+    "message": "A reproduzir áudio — não será suspenso"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Na lista branca — não será suspenso"
+  },
+  "systemPageCantSuspend": {
+    "message": "Página do sistema — não pode ser suspensa"
+  },
+  "clickToDismiss": {
+    "message": "Clique para fechar"
+  },
+  "keepAwakeBtn": {
+    "message": "Manter ativo"
+  },
+  "suspendTimerHint": {
+    "message": "Os separadores que abandonou são suspensos após este tempo. Aumente-o se voltar aos separadores após longas pausas."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Dica:</strong> Clique no ícone do puzzle na barra de ferramentas do Chrome para fixar o Drowzy para acesso com um clique."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>A suspender separadores que ainda usa?</strong> Abra Drowzy → Definições para aumentar o temporizador de 30 minutos, ou adicione o site à sua lista branca com um clique."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>A preencher um formulário?</strong> Ative \"Proteger separadores com formulários\" nas Definições para que os separadores com entradas não guardadas não sejam suspensos."
+  },
+  "onboardingRemapHint": {
+    "message": "Quer outros atalhos de teclado? Personalize aqui →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Deixe uma avaliação rápida"
+  },
+  "reviewReportTitle": {
+    "message": "Reportar um problema"
+  },
+  "reviewDismissTitle": {
+    "message": "Dispensar"
+  },
   "statMemberSince": {
     "message": "Membro desde"
+  },
+  "shareStats": {
+    "message": "Partilhar"
+  },
+  "copiedStats": {
+    "message": "Estatísticas copiadas!"
   },
   "settings": {
     "message": "Definições"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Nenhum site na lista branca"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "A suspender..."
   },
-  "done": {
-    "message": "Concluído!"
+  "suspendingSoon": {
+    "message": "em breve"
   },
   "waking": {
     "message": "A acordar..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Remover"
+  },
+  "replace": {
+    "message": "Substituir"
+  },
+  "replaceSessionTitle": {
+    "message": "Substituir separadores atuais por esta sessão"
+  },
+  "invalidDomain": {
+    "message": "Introduza um domínio válido (ex. example.com)"
+  },
+  "extensionPage": {
+    "message": "Página da extensão"
+  },
+  "exportWhitelist": {
+    "message": "Exportar"
+  },
+  "importWhitelist": {
+    "message": "Importar"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copiar lista branca"
+  },
+  "importWhitelistTitle": {
+    "message": "Importar lista branca da área de transferência"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ site(s) copiado(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ novo(s) site(s) importado(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Nenhum domínio válido encontrado"
+  },
+  "clipboardReadFailed": {
+    "message": "Não foi possível ler a área de transferência"
+  },
+  "enjoyingDrowzy": {
+    "message": "Está a gostar do Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Sim!"
+  },
+  "reviewNo": {
+    "message": "Não muito"
+  },
+  "whatsNew": {
+    "message": "Novidades na v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Mudar para modo claro"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Opções do menu de clique direito para suspender e lista branca."
   },
+  "privacyPermScripting": {
+    "message": "Injetar um pequeno script para detetar dados de formulário não guardados antes de suspender um separador. Apenas opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Mostrar Drowzy no painel lateral do Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Acesso ao anfitrião opcional, pedido a pedido apenas quando ativa a Proteção de Formulários ou a Marcação de Separadores Suspensos. Nunca pedido na instalação. Revogável a qualquer momento."
+  },
   "privacyContactTitle": {
     "message": "Contacto"
   },
   "privacyContactText": {
     "message": "Questões? Contacte-nos em drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Substituir"
+  "privacyYourDataTitle": {
+    "message": "Os seus dados"
   },
-  "replaceSessionTitle": {
-    "message": "Substituir separadores atuais por esta sessão"
+  "privacyYourDataText": {
+    "message": "Como nada sai do seu navegador, não há painel, nem conta, nem forma de vermos o que fez com Drowzy. Se desinstalar Drowzy, o Chrome oferece-lhe a oportunidade de enviar feedback opcional (motivo da desinstalação, navegador, SO) através de uma página web separada; esse envio é explícito e vai para um formulário anónimo. Pode ignorá-lo fechando o separador."
   },
-  "invalidDomain": {
-    "message": "Introduza um domínio válido (ex. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy é código aberto."
   },
-  "extensionPage": {
-    "message": "Página da extensão"
-  },
-  "exportWhitelist": {
-    "message": "Exportar"
-  },
-  "importWhitelist": {
-    "message": "Importar"
-  },
-  "exportWhitelistTitle": {
-    "message": "Copiar lista branca"
-  },
-  "importWhitelistTitle": {
-    "message": "Importar lista branca da área de transferência"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ site(s) copiado(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ novo(s) site(s) importado(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Nenhum domínio válido encontrado"
-  },
-  "clipboardReadFailed": {
-    "message": "Não foi possível ler a área de transferência"
-  },
-  "enjoyingDrowzy": {
-    "message": "Está a gostar do Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Sim!"
-  },
-  "reviewNo": {
-    "message": "Não muito"
-  },
-  "whatsNew": {
-    "message": "Novidades na v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Ver o código no GitHub"
   },
   "changelogTitle": {
     "message": "Novidades no Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Novidades"
+  },
+  "changelogVersionLabel": {
+    "message": "Versão"
   },
   "changelogCtaText": {
     "message": "Drowzy é gratuito e open source. Se poupa memória, deixe uma avaliação ou estrela no GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Fechar separadores duplicados"
-  },
-  "tabUntitled": {
-    "message": "Sem título"
-  },
-  "badgeWhitelisted": {
-    "message": "Na lista branca"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "em breve"
-  },
-  "changelogVersionLabel": {
-    "message": "Versão"
-  },
-  "copiedStats": {
-    "message": "Estatísticas copiadas!"
-  },
-  "privacyFooterLink": {
-    "message": "Ver o código no GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy é código aberto."
-  },
-  "privacyPermHost": {
-    "message": "Acesso ao anfitrião opcional, pedido a pedido apenas quando ativa a Proteção de Formulários ou a Marcação de Separadores Suspensos. Nunca pedido na instalação. Revogável a qualquer momento."
-  },
-  "privacyPermScripting": {
-    "message": "Injetar um pequeno script para detetar dados de formulário não guardados antes de suspender um separador. Apenas opt-in."
-  },
-  "privacyPermSidePanel": {
-    "message": "Mostrar Drowzy no painel lateral do Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Como nada sai do seu navegador, não há painel, nem conta, nem forma de vermos o que fez com Drowzy. Se desinstalar Drowzy, o Chrome oferece-lhe a oportunidade de enviar feedback opcional (motivo da desinstalação, navegador, SO) através de uma página web separada; esse envio é explícito e vai para um formulário anónimo. Pode ignorá-lo fechando o separador."
-  },
-  "privacyYourDataTitle": {
-    "message": "Os seus dados"
-  },
-  "ramEstimateTooltip": {
-    "message": "Estimado usando ~150 MB por separador suspenso. A poupança real varia por página."
-  },
-  "shareStats": {
-    "message": "Partilhar"
-  },
-  "statLifetimeRam": {
-    "message": "RAM total poupada"
   },
   "confirmDeleteTitle": {
     "message": "Clique novamente para confirmar a eliminação"

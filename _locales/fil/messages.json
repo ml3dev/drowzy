@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "na-save"
   },
+  "statForecast": {
+    "message": "magagamit"
+  },
   "suspendOthers": {
     "message": "I-suspend ang Iba"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Walang nahanap na tab"
   },
+  "tabUntitled": {
+    "message": "Walang pamagat"
+  },
   "failedToLoad": {
     "message": "Hindi na-load. Buksan muli ang popup para subukan ulit."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Nasa whitelist"
   },
   "badgeProtected": {
     "message": "Protektado"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Lahat ng panahon"
   },
+  "statLifetimeRam": {
+    "message": "Kabuuang RAM na natipid"
+  },
+  "ramEstimateTooltip": {
+    "message": "Tinatantya gamit ang ~150 MB bawat suspended tab. Nag-iiba ang aktwal na pagtitipid bawat page."
+  },
+  "ramForecastTooltip": {
+    "message": "Tinatayang memory na maililigtas kapag natulog ang mga idle na tab mo, sa ~150 MB bawat tab."
+  },
+  "suspendedToast": {
+    "message": "Sinuspinde ang $COUNT$ tab · ~$RAM$ ang napalaya",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Nagising ang $COUNT$ tab",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Walang ibang tab na maaaring i-suspende"
+  },
+  "noSuspendedToWake": {
+    "message": "Walang naka-suspende na tab na maaaring gisingin"
+  },
+  "pinnedWontSuspend": {
+    "message": "Naka-pin — hindi isa-suspende"
+  },
+  "audioWontSuspend": {
+    "message": "May tumutugtog na audio — hindi isa-suspende"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Nasa whitelist — hindi isa-suspende"
+  },
+  "systemPageCantSuspend": {
+    "message": "Pahina ng system — hindi maaaring i-suspende"
+  },
+  "clickToDismiss": {
+    "message": "I-click para isara"
+  },
+  "keepAwakeBtn": {
+    "message": "Panatilihing aktibo"
+  },
+  "suspendTimerHint": {
+    "message": "Ang mga tab na inilipat mo ay sususpindihin pagkatapos ng oras na ito. Dagdagan kung madalas kang bumabalik sa mga tab pagkatapos ng mahabang puwang."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Tip:</strong> I-click ang puzzle icon sa Chrome toolbar mo para i-pin ang Drowzy para sa one-click access."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Sinususpende ang mga tab na ginagamit mo pa?</strong> Buksan ang Drowzy → Mga Setting upang dagdagan ang 30-minutong timer, o idagdag ang site sa iyong whitelist sa isang click."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Pumupuno ng form?</strong> I-enable ang \"Protektahan ang mga tab na may form\" sa Mga Setting upang hindi masuspende ang mga tab na may hindi naka-save na input."
+  },
+  "onboardingRemapHint": {
+    "message": "Gusto ng ibang keyboard shortcut? I-customize dito →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Mag-iwan ng mabilis na review"
+  },
+  "reviewReportTitle": {
+    "message": "Mag-ulat ng isyu"
+  },
+  "reviewDismissTitle": {
+    "message": "I-dismiss"
+  },
   "statMemberSince": {
     "message": "Miyembro mula"
+  },
+  "shareStats": {
+    "message": "Ibahagi"
+  },
+  "copiedStats": {
+    "message": "Nakopya ang stats!"
   },
   "settings": {
     "message": "Mga Setting"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Walang naka-whitelist na site"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Nag-su-suspend..."
   },
-  "done": {
-    "message": "Tapos na!"
+  "suspendingSoon": {
+    "message": "malapit na"
   },
   "waking": {
     "message": "Ginigising..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Tanggalin"
+  },
+  "replace": {
+    "message": "Palitan"
+  },
+  "replaceSessionTitle": {
+    "message": "Palitan ang kasalukuyang mga tab ng session na ito"
+  },
+  "invalidDomain": {
+    "message": "Maglagay ng valid na domain (hal. example.com)"
+  },
+  "extensionPage": {
+    "message": "Pahina ng extension"
+  },
+  "exportWhitelist": {
+    "message": "I-export"
+  },
+  "importWhitelist": {
+    "message": "I-import"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopyahin ang whitelist"
+  },
+  "importWhitelistTitle": {
+    "message": "I-import ang whitelist mula sa clipboard"
+  },
+  "copiedSites": {
+    "message": "Nakopya ang $COUNT$ site(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Na-import ang $COUNT$ bagong site(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Walang nahanap na valid na domain sa clipboard"
+  },
+  "clipboardReadFailed": {
+    "message": "Hindi mabasa ang clipboard"
+  },
+  "enjoyingDrowzy": {
+    "message": "Nae-enjoy mo ba ang Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Oo!"
+  },
+  "reviewNo": {
+    "message": "Hindi naman"
+  },
+  "whatsNew": {
+    "message": "Ano ang bago sa v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Lumipat sa light mode"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Mga opsyon sa menu ng right-click para sa pagsuspinde at whitelist."
   },
+  "privacyPermScripting": {
+    "message": "Pag-inject ng maliit na script upang matukoy ang hindi nasaling form data bago suspindihin ang isang tab. Opt-in lamang."
+  },
+  "privacyPermSidePanel": {
+    "message": "Pagpapakita ng Drowzy sa side panel ng Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Opsyonal na host access, hinihiling on-demand lamang kapag pinagana mo ang Form Protection o Suspended-Tab Marking. Hindi kailanman hinihiling sa pag-install. Maaaring bawiin anumang oras."
+  },
   "privacyContactTitle": {
     "message": "Makipag-ugnayan"
   },
   "privacyContactText": {
     "message": "May tanong? Mag-email sa drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Palitan"
+  "privacyYourDataTitle": {
+    "message": "Ang iyong data"
   },
-  "replaceSessionTitle": {
-    "message": "Palitan ang kasalukuyang mga tab ng session na ito"
+  "privacyYourDataText": {
+    "message": "Dahil walang umaalis sa iyong browser, walang dashboard, walang account, at walang paraan para makita namin kung ano ang ginawa mo sa Drowzy. Kung i-uninstall mo ang Drowzy, nag-aalok ang Chrome sa iyo ng pagkakataong magpadala ng opsyonal na feedback (dahilan ng pag-uninstall, browser, OS) sa pamamagitan ng hiwalay na web page; ang submission na iyon ay tahasan at napupunta sa anonymous na form. Maaari mong laktawan ito sa pamamagitan ng pagsasara ng tab."
   },
-  "invalidDomain": {
-    "message": "Maglagay ng valid na domain (hal. example.com)"
+  "privacyFooterText": {
+    "message": "Open source ang Drowzy."
   },
-  "extensionPage": {
-    "message": "Pahina ng extension"
-  },
-  "exportWhitelist": {
-    "message": "I-export"
-  },
-  "importWhitelist": {
-    "message": "I-import"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopyahin ang whitelist"
-  },
-  "importWhitelistTitle": {
-    "message": "I-import ang whitelist mula sa clipboard"
-  },
-  "copiedSites": {
-    "message": "Nakopya ang $COUNT$ site(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Na-import ang $COUNT$ bagong site(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Walang nahanap na valid na domain sa clipboard"
-  },
-  "clipboardReadFailed": {
-    "message": "Hindi mabasa ang clipboard"
-  },
-  "enjoyingDrowzy": {
-    "message": "Nae-enjoy mo ba ang Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Oo!"
-  },
-  "reviewNo": {
-    "message": "Hindi naman"
-  },
-  "whatsNew": {
-    "message": "Ano ang bago sa v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Tingnan ang code sa GitHub"
   },
   "changelogTitle": {
     "message": "Ano ang Bago sa Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Ano ang Bago"
+  },
+  "changelogVersionLabel": {
+    "message": "Bersyon"
   },
   "changelogCtaText": {
     "message": "Ang Drowzy ay libre at open source. Kung nakakatipid ito ng memory, mag-iwan ng review o mag-star sa GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Isara ang mga duplicate na tab"
-  },
-  "tabUntitled": {
-    "message": "Walang pamagat"
-  },
-  "badgeWhitelisted": {
-    "message": "Nasa whitelist"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "malapit na"
-  },
-  "changelogVersionLabel": {
-    "message": "Bersyon"
-  },
-  "copiedStats": {
-    "message": "Nakopya ang stats!"
-  },
-  "privacyFooterLink": {
-    "message": "Tingnan ang code sa GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Open source ang Drowzy."
-  },
-  "privacyPermHost": {
-    "message": "Opsyonal na host access, hinihiling on-demand lamang kapag pinagana mo ang Form Protection o Suspended-Tab Marking. Hindi kailanman hinihiling sa pag-install. Maaaring bawiin anumang oras."
-  },
-  "privacyPermScripting": {
-    "message": "Pag-inject ng maliit na script upang matukoy ang hindi nasaling form data bago suspindihin ang isang tab. Opt-in lamang."
-  },
-  "privacyPermSidePanel": {
-    "message": "Pagpapakita ng Drowzy sa side panel ng Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Dahil walang umaalis sa iyong browser, walang dashboard, walang account, at walang paraan para makita namin kung ano ang ginawa mo sa Drowzy. Kung i-uninstall mo ang Drowzy, nag-aalok ang Chrome sa iyo ng pagkakataong magpadala ng opsyonal na feedback (dahilan ng pag-uninstall, browser, OS) sa pamamagitan ng hiwalay na web page; ang submission na iyon ay tahasan at napupunta sa anonymous na form. Maaari mong laktawan ito sa pamamagitan ng pagsasara ng tab."
-  },
-  "privacyYourDataTitle": {
-    "message": "Ang iyong data"
-  },
-  "ramEstimateTooltip": {
-    "message": "Tinatantya gamit ang ~150 MB bawat suspended tab. Nag-iiba ang aktwal na pagtitipid bawat page."
-  },
-  "shareStats": {
-    "message": "Ibahagi"
-  },
-  "statLifetimeRam": {
-    "message": "Kabuuang RAM na natipid"
   },
   "confirmDeleteTitle": {
     "message": "I-click muli upang kumpirmahin ang pagtanggal"

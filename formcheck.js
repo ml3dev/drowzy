@@ -26,17 +26,40 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
 });
 
 function showSuspendWarning() {
+  // a banner on a hidden tab is theater - the user can't see it. only render
+  // when the tab is actually visible. when hidden, the suspend goes through
+  // silently (which the user already wasn't paying attention to).
+  if (document.visibilityState !== 'visible') return;
   if (!document.body || document.getElementById('drowzy-suspend-warning')) return;
+
   var el = document.createElement('div');
   el.id = 'drowzy-suspend-warning';
   el.setAttribute('role', 'alert');
-  el.textContent = chrome.i18n.getMessage('suspendWarningText') || 'Suspending tab soon...';
-  el.style.cssText = 'position:fixed;top:0;left:0;right:0;padding:6px 12px;background:rgba(167,139,250,0.95);color:#fff;font:13px -apple-system,system-ui,sans-serif;text-align:center;z-index:2147483647;transition:opacity 0.3s;cursor:pointer;';
-  el.title = 'Click to dismiss';
-  el.addEventListener('click', function() { if (el.parentNode) el.remove(); });
+  el.style.cssText = 'position:fixed;top:0;left:0;right:0;padding:8px 14px;background:rgba(167,139,250,0.97);color:#fff;font:13px -apple-system,system-ui,sans-serif;text-align:center;z-index:2147483647;transition:opacity 0.3s;display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,0.15);';
+
+  var bannerText = document.createElement('span');
+  bannerText.textContent = chrome.i18n.getMessage('suspendWarningText') || 'Suspending tab soon...';
+  bannerText.style.cssText = 'cursor:pointer;';
+  bannerText.title = chrome.i18n.getMessage('clickToDismiss') || 'Click to dismiss';
+  bannerText.addEventListener('click', function() { if (el.parentNode) el.remove(); });
+
+  var keepBtn = document.createElement('button');
+  keepBtn.textContent = chrome.i18n.getMessage('keepAwakeBtn') || 'Keep awake';
+  keepBtn.style.cssText = 'background:#fff;color:#7c3aed;border:none;padding:4px 12px;border-radius:4px;font:600 12px -apple-system,system-ui,sans-serif;cursor:pointer;';
+  keepBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    // tells background to bump this tab's timestamp + skip the imminent discard
+    try { chrome.runtime.sendMessage({ action: 'keepTabAwake' }); } catch {}
+    if (el.parentNode) el.remove();
+  });
+
+  el.appendChild(bannerText);
+  el.appendChild(keepBtn);
   document.body.appendChild(el);
-  setTimeout(function() { el.style.opacity = '0'; }, 2000);
-  setTimeout(function() { if (el.parentNode) el.remove(); }, 2500);
+  // background discards ~2500ms after warning, so the banner lifetime is bounded
+  // by the tab itself unloading. fade slightly before discard so it's not jarring.
+  setTimeout(function() { el.style.opacity = '0'; }, 2200);
+  setTimeout(function() { if (el.parentNode) el.remove(); }, 2700);
 }
 
 var _ceSnapshots = null;
@@ -61,7 +84,10 @@ function hasUnsavedFormData() {
   var fields = document.querySelectorAll(
     'input[type="text"], input[type="email"], ' +
     'input[type="url"], input[type="tel"], input[type="password"], ' +
-    'input[type="number"], input:not([type]), textarea, [contenteditable="true"]'
+    'input[type="number"], input[type="search"], ' +
+    'input[type="date"], input[type="datetime-local"], ' +
+    'input[type="month"], input[type="time"], input[type="week"], ' +
+    'input[type="color"], input:not([type]), textarea, [contenteditable="true"]'
   );
 
   for (var i = 0; i < fields.length; i++) {
@@ -77,6 +103,13 @@ function hasUnsavedFormData() {
     } else if (el.value !== el.defaultValue) {
       return true;
     }
+  }
+  // also check for changed checkboxes/radio buttons (e.g. someone toggled a
+  // settings page and didn't save). a discarded radio/checkbox state would be
+  // just as lost as a typed input.
+  var toggles = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+  for (var j = 0; j < toggles.length; j++) {
+    if (toggles[j].checked !== toggles[j].defaultChecked) return true;
   }
   return false;
 }

@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "estalviat"
   },
+  "statForecast": {
+    "message": "disponible"
+  },
   "suspendOthers": {
     "message": "Suspèn les altres"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "No s'han trobat pestanyes"
   },
+  "tabUntitled": {
+    "message": "Sense títol"
+  },
   "failedToLoad": {
     "message": "Error en carregar. Torneu a obrir la finestra emergent per tornar-ho a provar."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Àudio"
+  },
+  "badgeWhitelisted": {
+    "message": "A la llista blanca"
   },
   "badgeProtected": {
     "message": "Protegida"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Tot el temps"
   },
+  "statLifetimeRam": {
+    "message": "RAM total estalviada"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimat utilitzant ~150 MB per pestanya suspesa. L'estalvi real varia segons la pàgina."
+  },
+  "ramForecastTooltip": {
+    "message": "Memòria estimada disponible per estalviar quan les vostres pestanyes inactives es posin a dormir, a ~150 MB per pestanya."
+  },
+  "suspendedToast": {
+    "message": "Suspeses $COUNT$ pestanya/es · alliberats ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Despertades $COUNT$ pestanya/es",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "No hi ha altres pestanyes per suspendre"
+  },
+  "noSuspendedToWake": {
+    "message": "No hi ha pestanyes suspeses per despertar"
+  },
+  "pinnedWontSuspend": {
+    "message": "Fixada — no se suspendrà"
+  },
+  "audioWontSuspend": {
+    "message": "Reproduint àudio — no se suspendrà"
+  },
+  "whitelistedWontSuspend": {
+    "message": "A la llista blanca — no se suspendrà"
+  },
+  "systemPageCantSuspend": {
+    "message": "Pàgina del sistema — no es pot suspendre"
+  },
+  "clickToDismiss": {
+    "message": "Feu clic per descartar"
+  },
+  "keepAwakeBtn": {
+    "message": "Mantén actiu"
+  },
+  "suspendTimerHint": {
+    "message": "Les pestanyes que has deixat se suspenen després d'aquest temps. Augmenta'l si tornes a pestanyes després de pauses llargues."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Consell:</strong> Feu clic a la icona del trencaclosques de la barra d'eines de Chrome per fixar Drowzy i accedir-hi amb un sol clic."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Et suspèn pestanyes que encara vols?</strong> Obre Drowzy → Configuració per augmentar el temporitzador de 30 minuts, o afegeix el lloc a la llista blanca amb un clic."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Omplint un formulari?</strong> Activa \"Protegir pestanyes amb formularis\" a Configuració perquè les pestanyes amb dades sense desar no se suspenguin."
+  },
+  "onboardingRemapHint": {
+    "message": "Voleu altres dreceres de teclat? Personalitzeu-les aquí →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Deixa una ressenya ràpida"
+  },
+  "reviewReportTitle": {
+    "message": "Informa d'un problema"
+  },
+  "reviewDismissTitle": {
+    "message": "Descarta"
+  },
   "statMemberSince": {
     "message": "Membre des de"
+  },
+  "shareStats": {
+    "message": "Compartir"
+  },
+  "copiedStats": {
+    "message": "Estadístiques copiades!"
   },
   "settings": {
     "message": "Configuració"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Cap lloc a la llista blanca"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Suspenent..."
   },
-  "done": {
-    "message": "Fet!"
+  "suspendingSoon": {
+    "message": "aviat"
   },
   "waking": {
     "message": "Despertant..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Elimina"
+  },
+  "replace": {
+    "message": "Substitueix"
+  },
+  "replaceSessionTitle": {
+    "message": "Substitueix les pestanyes actuals per aquesta sessió"
+  },
+  "invalidDomain": {
+    "message": "Introduïu un domini vàlid (p. ex. example.com)"
+  },
+  "extensionPage": {
+    "message": "Pàgina de l'extensió"
+  },
+  "exportWhitelist": {
+    "message": "Exporta"
+  },
+  "importWhitelist": {
+    "message": "Importa"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copia la llista blanca"
+  },
+  "importWhitelistTitle": {
+    "message": "Importa la llista blanca des del porta-retalls"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ lloc(s) copiat(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ lloc(s) nou(s) importat(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "No s'han trobat dominis vàlids al porta-retalls"
+  },
+  "clipboardReadFailed": {
+    "message": "No s'ha pogut llegir el porta-retalls"
+  },
+  "enjoyingDrowzy": {
+    "message": "T'agrada Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Sí!"
+  },
+  "reviewNo": {
+    "message": "No gaire"
+  },
+  "whatsNew": {
+    "message": "Novetats a la v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Canvia al mode clar"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Opcions de menú del clic dret per suspendre i la llista blanca."
   },
+  "privacyPermScripting": {
+    "message": "Injectar un petit script per detectar dades de formulari no desades abans de suspendre una pestanya. Només opcional."
+  },
+  "privacyPermSidePanel": {
+    "message": "Mostrar Drowzy al panell lateral de Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Accés a l'amfitrió opcional, sol·licitat sota demanda només quan activeu Protecció de formularis o Marcatge de pestanyes suspeses. Mai no es demana en instal·lar. Revocable en qualsevol moment."
+  },
   "privacyContactTitle": {
     "message": "Contacte"
   },
   "privacyContactText": {
     "message": "Preguntes? Contacteu-nos a drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Substitueix"
+  "privacyYourDataTitle": {
+    "message": "Les vostres dades"
   },
-  "replaceSessionTitle": {
-    "message": "Substitueix les pestanyes actuals per aquesta sessió"
+  "privacyYourDataText": {
+    "message": "Com que res no surt del vostre navegador, no hi ha cap tauler, cap compte i cap manera que sapiguem què heu fet amb Drowzy. Si desinstal·leu Drowzy, Chrome us ofereix l'oportunitat d'enviar comentaris opcionals (motiu de la desinstal·lació, navegador, SO) a través d'una pàgina web separada; aquest enviament és explícit i va a un formulari anònim. Podeu ometre-ho tancant la pestanya."
   },
-  "invalidDomain": {
-    "message": "Introduïu un domini vàlid (p. ex. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy és de codi obert."
   },
-  "extensionPage": {
-    "message": "Pàgina de l'extensió"
-  },
-  "exportWhitelist": {
-    "message": "Exporta"
-  },
-  "importWhitelist": {
-    "message": "Importa"
-  },
-  "exportWhitelistTitle": {
-    "message": "Copia la llista blanca"
-  },
-  "importWhitelistTitle": {
-    "message": "Importa la llista blanca des del porta-retalls"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ lloc(s) copiat(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ lloc(s) nou(s) importat(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "No s'han trobat dominis vàlids al porta-retalls"
-  },
-  "clipboardReadFailed": {
-    "message": "No s'ha pogut llegir el porta-retalls"
-  },
-  "enjoyingDrowzy": {
-    "message": "T'agrada Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Sí!"
-  },
-  "reviewNo": {
-    "message": "No gaire"
-  },
-  "whatsNew": {
-    "message": "Novetats a la v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Veure el codi a GitHub"
   },
   "changelogTitle": {
     "message": "Novetats de Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Novetats"
+  },
+  "changelogVersionLabel": {
+    "message": "Versió"
   },
   "changelogCtaText": {
     "message": "Drowzy és gratuït i de codi obert. Si us estalvia memòria, deixeu una ressenya o una estrella a GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Tancar pestanyes duplicades"
-  },
-  "tabUntitled": {
-    "message": "Sense títol"
-  },
-  "badgeWhitelisted": {
-    "message": "A la llista blanca"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "aviat"
-  },
-  "changelogVersionLabel": {
-    "message": "Versió"
-  },
-  "copiedStats": {
-    "message": "Estadístiques copiades!"
-  },
-  "privacyFooterLink": {
-    "message": "Veure el codi a GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy és de codi obert."
-  },
-  "privacyPermHost": {
-    "message": "Accés a l'amfitrió opcional, sol·licitat sota demanda només quan activeu Protecció de formularis o Marcatge de pestanyes suspeses. Mai no es demana en instal·lar. Revocable en qualsevol moment."
-  },
-  "privacyPermScripting": {
-    "message": "Injectar un petit script per detectar dades de formulari no desades abans de suspendre una pestanya. Només opcional."
-  },
-  "privacyPermSidePanel": {
-    "message": "Mostrar Drowzy al panell lateral de Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Com que res no surt del vostre navegador, no hi ha cap tauler, cap compte i cap manera que sapiguem què heu fet amb Drowzy. Si desinstal·leu Drowzy, Chrome us ofereix l'oportunitat d'enviar comentaris opcionals (motiu de la desinstal·lació, navegador, SO) a través d'una pàgina web separada; aquest enviament és explícit i va a un formulari anònim. Podeu ometre-ho tancant la pestanya."
-  },
-  "privacyYourDataTitle": {
-    "message": "Les vostres dades"
-  },
-  "ramEstimateTooltip": {
-    "message": "Estimat utilitzant ~150 MB per pestanya suspesa. L'estalvi real varia segons la pàgina."
-  },
-  "shareStats": {
-    "message": "Compartir"
-  },
-  "statLifetimeRam": {
-    "message": "RAM total estalviada"
   },
   "confirmDeleteTitle": {
     "message": "Feu clic de nou per confirmar l'eliminació"

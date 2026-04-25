@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "ušetřeno"
   },
+  "statForecast": {
+    "message": "k dispozici"
+  },
   "suspendOthers": {
     "message": "Uspat ostatní"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Žádné karty nenalezeny"
   },
+  "tabUntitled": {
+    "message": "Bez názvu"
+  },
   "failedToLoad": {
     "message": "Načítání selhalo. Znovu otevřete vyskakovací okno a zkuste to znovu."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Zvuk"
+  },
+  "badgeWhitelisted": {
+    "message": "Na bílé listině"
   },
   "badgeProtected": {
     "message": "Chráněná"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Celkem"
   },
+  "statLifetimeRam": {
+    "message": "Celková ušetřená RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "Odhadováno pomocí ~150 MB na pozastavenou kartu. Skutečné úspory se liší podle stránky."
+  },
+  "ramForecastTooltip": {
+    "message": "Odhadovaná paměť, kterou ušetříte, až vaše neaktivní karty usnou, při ~150 MB na kartu."
+  },
+  "suspendedToast": {
+    "message": "Pozastaveno $COUNT$ karet · uvolněno ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Probuzeno $COUNT$ karet",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Žádné další karty k pozastavení"
+  },
+  "noSuspendedToWake": {
+    "message": "Žádné pozastavené karty k probuzení"
+  },
+  "pinnedWontSuspend": {
+    "message": "Připnuto — nebude pozastaveno"
+  },
+  "audioWontSuspend": {
+    "message": "Přehrává zvuk — nebude pozastaveno"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Na bílé listině — nebude pozastaveno"
+  },
+  "systemPageCantSuspend": {
+    "message": "Systémová stránka — nelze pozastavit"
+  },
+  "clickToDismiss": {
+    "message": "Klikněte pro zavření"
+  },
+  "keepAwakeBtn": {
+    "message": "Ponechat aktivní"
+  },
+  "suspendTimerHint": {
+    "message": "Karty, ze kterých jste přepnuli, se uspí po této době. Zvyšte ji, pokud se ke kartám vracíte po delších pauzách."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Tip:</strong> Klikněte na ikonu skládačky v panelu nástrojů Chromu a připněte si Drowzy pro rychlý přístup."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Uspávají se karty, které ještě používáte?</strong> Otevřete Drowzy → Nastavení a zvyšte 30minutový časovač, nebo přidejte web do whitelistu jedním klikem."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Vyplňujete formulář?</strong> Zapněte „Chránit karty s formuláři\" v Nastavení, aby se karty s neuloženým vstupem neuspávaly."
+  },
+  "onboardingRemapHint": {
+    "message": "Chcete jiné klávesové zkratky? Přizpůsobte si je zde →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Napište rychlou recenzi"
+  },
+  "reviewReportTitle": {
+    "message": "Nahlásit problém"
+  },
+  "reviewDismissTitle": {
+    "message": "Zavřít"
+  },
   "statMemberSince": {
     "message": "Členem od"
+  },
+  "shareStats": {
+    "message": "Sdílet"
+  },
+  "copiedStats": {
+    "message": "Statistiky zkopírovány!"
   },
   "settings": {
     "message": "Nastavení"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Žádné povolené weby"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Uspávání..."
   },
-  "done": {
-    "message": "Hotovo!"
+  "suspendingSoon": {
+    "message": "brzy"
   },
   "waking": {
     "message": "Probouzení..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Odebrat"
+  },
+  "replace": {
+    "message": "Nahradit"
+  },
+  "replaceSessionTitle": {
+    "message": "Nahradit aktuální karty touto relací"
+  },
+  "invalidDomain": {
+    "message": "Zadejte platnou doménu (např. example.com)"
+  },
+  "extensionPage": {
+    "message": "Stránka rozšíření"
+  },
+  "exportWhitelist": {
+    "message": "Exportovat"
+  },
+  "importWhitelist": {
+    "message": "Importovat"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopírovat seznam povolených"
+  },
+  "importWhitelistTitle": {
+    "message": "Importovat seznam povolených ze schránky"
+  },
+  "copiedSites": {
+    "message": "Zkopírováno $COUNT$ stránek",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Importováno $COUNT$ nových stránek",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Ve schránce nebyly nalezeny žádné platné domény"
+  },
+  "clipboardReadFailed": {
+    "message": "Nelze přečíst schránku"
+  },
+  "enjoyingDrowzy": {
+    "message": "Líbí se vám Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ano!"
+  },
+  "reviewNo": {
+    "message": "Ne moc"
+  },
+  "whatsNew": {
+    "message": "Co je nového ve v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Přepnout na světlý režim"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Možnosti nabídky pravým kliknutím pro pozastavení a bílou listinu."
   },
+  "privacyPermScripting": {
+    "message": "Vložení malého skriptu pro detekci neuložených dat formuláře před pozastavením karty. Pouze volitelně."
+  },
+  "privacyPermSidePanel": {
+    "message": "Zobrazení Drowzy v bočním panelu Chromu."
+  },
+  "privacyPermHost": {
+    "message": "Volitelný přístup k hostiteli, vyžadovaný na vyžádání pouze při povolení Ochrany formulářů nebo Označování pozastavených karet. Nikdy se nevyžaduje při instalaci. Kdykoli odvolatelné."
+  },
   "privacyContactTitle": {
     "message": "Kontakt"
   },
   "privacyContactText": {
     "message": "Otázky? Napište nám na drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Nahradit"
+  "privacyYourDataTitle": {
+    "message": "Vaše data"
   },
-  "replaceSessionTitle": {
-    "message": "Nahradit aktuální karty touto relací"
+  "privacyYourDataText": {
+    "message": "Protože nic neopouští váš prohlížeč, neexistuje žádný panel, žádný účet a žádný způsob, jak bychom mohli vidět, co jste s Drowzy dělali. Pokud Drowzy odinstalujete, Chrome vám nabídne možnost poslat volitelnou zpětnou vazbu (důvod odinstalace, prohlížeč, OS) prostřednictvím samostatné webové stránky; toto odeslání je explicitní a jde do anonymního formuláře. Můžete to přeskočit zavřením karty."
   },
-  "invalidDomain": {
-    "message": "Zadejte platnou doménu (např. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy je open source."
   },
-  "extensionPage": {
-    "message": "Stránka rozšíření"
-  },
-  "exportWhitelist": {
-    "message": "Exportovat"
-  },
-  "importWhitelist": {
-    "message": "Importovat"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopírovat seznam povolených"
-  },
-  "importWhitelistTitle": {
-    "message": "Importovat seznam povolených ze schránky"
-  },
-  "copiedSites": {
-    "message": "Zkopírováno $COUNT$ stránek",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Importováno $COUNT$ nových stránek",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Ve schránce nebyly nalezeny žádné platné domény"
-  },
-  "clipboardReadFailed": {
-    "message": "Nelze přečíst schránku"
-  },
-  "enjoyingDrowzy": {
-    "message": "Líbí se vám Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ano!"
-  },
-  "reviewNo": {
-    "message": "Ne moc"
-  },
-  "whatsNew": {
-    "message": "Co je nového ve v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Zobrazit kód na GitHubu"
   },
   "changelogTitle": {
     "message": "Co je nového v Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Co je nového"
+  },
+  "changelogVersionLabel": {
+    "message": "Verze"
   },
   "changelogCtaText": {
     "message": "Drowzy je zdarma a open source. Pokud vám šetří paměť, zanechte recenzi nebo hvězdičku na GitHubu."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Zavřít duplicitní karty"
-  },
-  "tabUntitled": {
-    "message": "Bez názvu"
-  },
-  "badgeWhitelisted": {
-    "message": "Na bílé listině"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "brzy"
-  },
-  "changelogVersionLabel": {
-    "message": "Verze"
-  },
-  "copiedStats": {
-    "message": "Statistiky zkopírovány!"
-  },
-  "privacyFooterLink": {
-    "message": "Zobrazit kód na GitHubu"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy je open source."
-  },
-  "privacyPermHost": {
-    "message": "Volitelný přístup k hostiteli, vyžadovaný na vyžádání pouze při povolení Ochrany formulářů nebo Označování pozastavených karet. Nikdy se nevyžaduje při instalaci. Kdykoli odvolatelné."
-  },
-  "privacyPermScripting": {
-    "message": "Vložení malého skriptu pro detekci neuložených dat formuláře před pozastavením karty. Pouze volitelně."
-  },
-  "privacyPermSidePanel": {
-    "message": "Zobrazení Drowzy v bočním panelu Chromu."
-  },
-  "privacyYourDataText": {
-    "message": "Protože nic neopouští váš prohlížeč, neexistuje žádný panel, žádný účet a žádný způsob, jak bychom mohli vidět, co jste s Drowzy dělali. Pokud Drowzy odinstalujete, Chrome vám nabídne možnost poslat volitelnou zpětnou vazbu (důvod odinstalace, prohlížeč, OS) prostřednictvím samostatné webové stránky; toto odeslání je explicitní a jde do anonymního formuláře. Můžete to přeskočit zavřením karty."
-  },
-  "privacyYourDataTitle": {
-    "message": "Vaše data"
-  },
-  "ramEstimateTooltip": {
-    "message": "Odhadováno pomocí ~150 MB na pozastavenou kartu. Skutečné úspory se liší podle stránky."
-  },
-  "shareStats": {
-    "message": "Sdílet"
-  },
-  "statLifetimeRam": {
-    "message": "Celková ušetřená RAM"
   },
   "confirmDeleteTitle": {
     "message": "Kliknutím znovu potvrďte odstranění"

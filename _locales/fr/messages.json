@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "économisé"
   },
+  "statForecast": {
+    "message": "disponible"
+  },
   "suspendOthers": {
     "message": "Suspendre les autres"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Aucun onglet trouvé"
   },
+  "tabUntitled": {
+    "message": "Sans titre"
+  },
   "failedToLoad": {
     "message": "Échec du chargement. Rouvrez le popup pour réessayer."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Liste blanche"
   },
   "badgeProtected": {
     "message": "Protégé"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Depuis le début"
   },
+  "statLifetimeRam": {
+    "message": "RAM totale économisée"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimé en utilisant ~150 Mo par onglet suspendu. Les économies réelles varient selon la page."
+  },
+  "ramForecastTooltip": {
+    "message": "Mémoire estimée libérée lorsque vos onglets inactifs s'endorment, à ~150 Mo par onglet."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ onglet(s) suspendu(s) · ~$RAM$ libéré",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ onglet(s) réveillé(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Aucun autre onglet à suspendre"
+  },
+  "noSuspendedToWake": {
+    "message": "Aucun onglet suspendu à réveiller"
+  },
+  "pinnedWontSuspend": {
+    "message": "Épinglé — ne sera pas suspendu"
+  },
+  "audioWontSuspend": {
+    "message": "Audio en cours — ne sera pas suspendu"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Sur liste blanche — ne sera pas suspendu"
+  },
+  "systemPageCantSuspend": {
+    "message": "Page système — ne peut pas être suspendue"
+  },
+  "clickToDismiss": {
+    "message": "Cliquez pour fermer"
+  },
+  "keepAwakeBtn": {
+    "message": "Garder actif"
+  },
+  "suspendTimerHint": {
+    "message": "Les onglets quittés sont suspendus après ce délai. Augmentez-le si vous revenez aux onglets après de longues pauses."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Astuce :</strong> Cliquez sur l'icône puzzle dans la barre d'outils de Chrome pour épingler Drowzy et y accéder en un clic."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Suspend des onglets que vous utilisez encore ?</strong> Ouvrez Drowzy → Paramètres pour augmenter la minuterie de 30 minutes, ou ajoutez le site à votre liste blanche en un clic."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Vous remplissez un formulaire ?</strong> Activez « Protéger les onglets avec des formulaires » dans les Paramètres pour que les onglets contenant des saisies non enregistrées ne soient pas suspendus."
+  },
+  "onboardingRemapHint": {
+    "message": "Vous voulez d'autres raccourcis clavier ? Personnalisez-les ici →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Laisser un avis rapide"
+  },
+  "reviewReportTitle": {
+    "message": "Signaler un problème"
+  },
+  "reviewDismissTitle": {
+    "message": "Fermer"
+  },
   "statMemberSince": {
     "message": "Membre depuis"
+  },
+  "shareStats": {
+    "message": "Partager"
+  },
+  "copiedStats": {
+    "message": "Statistiques copiées !"
   },
   "settings": {
     "message": "Paramètres"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Aucun site en liste blanche"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Suspension..."
   },
-  "done": {
-    "message": "Terminé !"
+  "suspendingSoon": {
+    "message": "bientôt"
   },
   "waking": {
     "message": "Réveil..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Supprimer"
+  },
+  "replace": {
+    "message": "Remplacer"
+  },
+  "replaceSessionTitle": {
+    "message": "Remplacer les onglets actuels par cette session"
+  },
+  "invalidDomain": {
+    "message": "Entrez un domaine valide (ex. example.com)"
+  },
+  "extensionPage": {
+    "message": "Page de l'extension"
+  },
+  "exportWhitelist": {
+    "message": "Exporter"
+  },
+  "importWhitelist": {
+    "message": "Importer"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copier la liste blanche"
+  },
+  "importWhitelistTitle": {
+    "message": "Importer la liste blanche depuis le presse-papiers"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ site(s) copié(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ nouveau(x) site(s) importé(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Aucun domaine valide trouvé dans le presse-papiers"
+  },
+  "clipboardReadFailed": {
+    "message": "Impossible de lire le presse-papiers"
+  },
+  "enjoyingDrowzy": {
+    "message": "Vous aimez Drowzy ?"
+  },
+  "reviewYes": {
+    "message": "Oui !"
+  },
+  "reviewNo": {
+    "message": "Pas vraiment"
+  },
+  "whatsNew": {
+    "message": "Nouveautés de la v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Passer en mode clair"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Options du menu clic droit pour suspendre et la liste blanche."
   },
+  "privacyPermScripting": {
+    "message": "Injection d'un petit script pour détecter les données de formulaire non enregistrées avant de suspendre un onglet. Sur invitation uniquement."
+  },
+  "privacyPermSidePanel": {
+    "message": "Affichage de Drowzy dans le panneau latéral de Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Accès hôte optionnel, demandé à la demande uniquement lorsque vous activez la Protection des formulaires ou le Marquage des onglets suspendus. Jamais demandé à l'installation. Révocable à tout moment."
+  },
   "privacyContactTitle": {
     "message": "Contact"
   },
   "privacyContactText": {
     "message": "Des questions ? Contactez-nous à drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Remplacer"
+  "privacyYourDataTitle": {
+    "message": "Vos données"
   },
-  "replaceSessionTitle": {
-    "message": "Remplacer les onglets actuels par cette session"
+  "privacyYourDataText": {
+    "message": "Comme rien ne quitte votre navigateur, il n'y a pas de tableau de bord, pas de compte, et aucun moyen pour nous de voir ce que vous avez fait avec Drowzy. Si vous désinstallez Drowzy, Chrome vous offre la possibilité d'envoyer des commentaires optionnels (raison de la désinstallation, navigateur, OS) via une page web séparée ; cet envoi est explicite et va à un formulaire anonyme. Vous pouvez le passer en fermant l'onglet."
   },
-  "invalidDomain": {
-    "message": "Entrez un domaine valide (ex. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy est open source."
   },
-  "extensionPage": {
-    "message": "Page de l'extension"
-  },
-  "exportWhitelist": {
-    "message": "Exporter"
-  },
-  "importWhitelist": {
-    "message": "Importer"
-  },
-  "exportWhitelistTitle": {
-    "message": "Copier la liste blanche"
-  },
-  "importWhitelistTitle": {
-    "message": "Importer la liste blanche depuis le presse-papiers"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ site(s) copié(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ nouveau(x) site(s) importé(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Aucun domaine valide trouvé dans le presse-papiers"
-  },
-  "clipboardReadFailed": {
-    "message": "Impossible de lire le presse-papiers"
-  },
-  "enjoyingDrowzy": {
-    "message": "Vous aimez Drowzy ?"
-  },
-  "reviewYes": {
-    "message": "Oui !"
-  },
-  "reviewNo": {
-    "message": "Pas vraiment"
-  },
-  "whatsNew": {
-    "message": "Nouveautés de la v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Voir le code sur GitHub"
   },
   "changelogTitle": {
     "message": "Nouveautés de Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nouveautés"
+  },
+  "changelogVersionLabel": {
+    "message": "Version"
   },
   "changelogCtaText": {
     "message": "Drowzy est gratuit et open source. S'il vous fait économiser de la mémoire, pensez à laisser un avis ou une étoile sur GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Fermer les onglets en double"
-  },
-  "tabUntitled": {
-    "message": "Sans titre"
-  },
-  "badgeWhitelisted": {
-    "message": "Liste blanche"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "bientôt"
-  },
-  "changelogVersionLabel": {
-    "message": "Version"
-  },
-  "copiedStats": {
-    "message": "Statistiques copiées !"
-  },
-  "privacyFooterLink": {
-    "message": "Voir le code sur GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy est open source."
-  },
-  "privacyPermHost": {
-    "message": "Accès hôte optionnel, demandé à la demande uniquement lorsque vous activez la Protection des formulaires ou le Marquage des onglets suspendus. Jamais demandé à l'installation. Révocable à tout moment."
-  },
-  "privacyPermScripting": {
-    "message": "Injection d'un petit script pour détecter les données de formulaire non enregistrées avant de suspendre un onglet. Sur invitation uniquement."
-  },
-  "privacyPermSidePanel": {
-    "message": "Affichage de Drowzy dans le panneau latéral de Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Comme rien ne quitte votre navigateur, il n'y a pas de tableau de bord, pas de compte, et aucun moyen pour nous de voir ce que vous avez fait avec Drowzy. Si vous désinstallez Drowzy, Chrome vous offre la possibilité d'envoyer des commentaires optionnels (raison de la désinstallation, navigateur, OS) via une page web séparée ; cet envoi est explicite et va à un formulaire anonyme. Vous pouvez le passer en fermant l'onglet."
-  },
-  "privacyYourDataTitle": {
-    "message": "Vos données"
-  },
-  "ramEstimateTooltip": {
-    "message": "Estimé en utilisant ~150 Mo par onglet suspendu. Les économies réelles varient selon la page."
-  },
-  "shareStats": {
-    "message": "Partager"
-  },
-  "statLifetimeRam": {
-    "message": "RAM totale économisée"
   },
   "confirmDeleteTitle": {
     "message": "Cliquez à nouveau pour confirmer la suppression"

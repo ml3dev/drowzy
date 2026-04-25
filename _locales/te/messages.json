@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "ఆదా చేయబడింది"
   },
+  "statForecast": {
+    "message": "అందుబాటులో ఉంది"
+  },
   "suspendOthers": {
     "message": "మిగతావి సస్పెండ్ చేయి"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "ట్యాబ్‌లు కనుగొనబడలేదు"
   },
+  "tabUntitled": {
+    "message": "శీర్షిక లేదు"
+  },
   "failedToLoad": {
     "message": "లోడ్ చేయడం విఫలమైంది. మళ్ళీ ప్రయత్నించడానికి popup తెరవండి."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "ఆడియో"
+  },
+  "badgeWhitelisted": {
+    "message": "అనుమతి జాబితాలో"
   },
   "badgeProtected": {
     "message": "రక్షించబడింది"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "మొత్తం"
   },
+  "statLifetimeRam": {
+    "message": "మొత్తం RAM ఆదా"
+  },
+  "ramEstimateTooltip": {
+    "message": "సస్పెండ్ చేసిన ట్యాబ్‌కు ~150 MB ఉపయోగించి అంచనా వేయబడింది. వాస్తవ ఆదా పేజీని బట్టి మారుతుంది."
+  },
+  "ramForecastTooltip": {
+    "message": "మీ నిష్క్రియ ట్యాబ్‌లు నిద్రపోయినప్పుడు ఆదా చేయడానికి అందుబాటులో ఉన్న అంచనా మెమరీ, ట్యాబ్‌కు ~150 MB."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ ట్యాబ్‌(లు) నిలిపివేయబడింది · ~$RAM$ విడుదల చేయబడింది",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ ట్యాబ్‌(లు) మేల్కొలిపారు",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "నిలిపివేయడానికి ఇతర ట్యాబ్‌లు లేవు"
+  },
+  "noSuspendedToWake": {
+    "message": "మేల్కొలపడానికి నిలిపివేయబడిన ట్యాబ్‌లు లేవు"
+  },
+  "pinnedWontSuspend": {
+    "message": "పిన్ చేయబడింది — నిలిపివేయబడదు"
+  },
+  "audioWontSuspend": {
+    "message": "ఆడియో ప్లే అవుతోంది — నిలిపివేయబడదు"
+  },
+  "whitelistedWontSuspend": {
+    "message": "తెలుపు జాబితాలో — నిలిపివేయబడదు"
+  },
+  "systemPageCantSuspend": {
+    "message": "సిస్టమ్ పేజీ — నిలిపివేయలేరు"
+  },
+  "clickToDismiss": {
+    "message": "మూసివేయడానికి క్లిక్ చేయండి"
+  },
+  "keepAwakeBtn": {
+    "message": "మెలకువగా ఉంచండి"
+  },
+  "suspendTimerHint": {
+    "message": "మీరు దూరమైన ట్యాబ్‌లు ఈ సమయం తర్వాత నిలిపివేయబడతాయి. దీర్ఘ విరామాల తర్వాత ట్యాబ్‌లకు తిరిగివస్తే దీన్ని పెంచండి."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>చిట్కా:</strong> ఒక్క-క్లిక్ ప్రాప్యత కోసం Drowzy ని పిన్ చేయడానికి మీ Chrome టూల్‌బార్‌లో పజిల్ చిహ్నంపై క్లిక్ చేయండి."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>మీరు ఇంకా ఉపయోగిస్తున్న ట్యాబ్‌లు నిలిపివేయబడుతున్నాయా?</strong> 30-నిమిషాల టైమర్‌ను పెంచడానికి లేదా ఒక క్లిక్‌తో సైట్‌ను మీ తెల్ల జాబితాకు జోడించడానికి Drowzy → సెట్టింగ్‌లను తెరవండి."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>ఫారమ్ నింపుతున్నారా?</strong> సేవ్ చేయని ఇన్‌పుట్‌తో ట్యాబ్‌లు నిలిపివేయబడకుండా ఉండటానికి సెట్టింగ్‌లలో \"ఫారమ్‌లతో ట్యాబ్‌లను రక్షించండి\"ని ప్రారంభించండి."
+  },
+  "onboardingRemapHint": {
+    "message": "వేరే కీబోర్డ్ షార్ట్‌కట్‌లు కావాలా? వాటిని ఇక్కడ అనుకూలీకరించండి →"
+  },
+  "reviewLeaveTitle": {
+    "message": "త్వరిత సమీక్షను వదిలివేయండి"
+  },
+  "reviewReportTitle": {
+    "message": "సమస్యను నివేదించండి"
+  },
+  "reviewDismissTitle": {
+    "message": "మూసివేయి"
+  },
   "statMemberSince": {
     "message": "సభ్యుడు ఎప్పటి నుండి"
+  },
+  "shareStats": {
+    "message": "భాగస్వామ్యం చేయండి"
+  },
+  "copiedStats": {
+    "message": "గణాంకాలు కాపీ చేయబడ్డాయి!"
   },
   "settings": {
     "message": "సెట్టింగ్‌లు"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "వైట్‌లిస్ట్ చేసిన సైట్‌లు లేవు"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "సస్పెండ్ చేస్తోంది..."
   },
-  "done": {
-    "message": "పూర్తయింది!"
+  "suspendingSoon": {
+    "message": "త్వరలో"
   },
   "waking": {
     "message": "మేల్కొలుపుతోంది..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "తొలగించు"
+  },
+  "replace": {
+    "message": "భర్తీ చేయండి"
+  },
+  "replaceSessionTitle": {
+    "message": "ఈ సెషన్‌తో ప్రస్తుత ట్యాబ్‌లను భర్తీ చేయండి"
+  },
+  "invalidDomain": {
+    "message": "చెల్లుబాటు అయ్యే డొమైన్ నమోదు చేయండి (ఉదా. example.com)"
+  },
+  "extensionPage": {
+    "message": "ఎక్స్‌టెన్షన్ పేజీ"
+  },
+  "exportWhitelist": {
+    "message": "ఎగుమతి"
+  },
+  "importWhitelist": {
+    "message": "దిగుమతి"
+  },
+  "exportWhitelistTitle": {
+    "message": "వైట్‌లిస్ట్ కాపీ చేయండి"
+  },
+  "importWhitelistTitle": {
+    "message": "క్లిప్‌బోర్డ్ నుండి వైట్‌లిస్ట్ దిగుమతి చేయండి"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ సైట్(లు) కాపీ చేయబడ్డాయి",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ కొత్త సైట్(లు) దిగుమతి చేయబడ్డాయి",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "క్లిప్‌బోర్డ్‌లో చెల్లుబాటు అయ్యే డొమైన్‌లు కనుగొనబడలేదు"
+  },
+  "clipboardReadFailed": {
+    "message": "క్లిప్‌బోర్డ్ చదవడం సాధ్యం కాలేదు"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy నచ్చుతోందా?"
+  },
+  "reviewYes": {
+    "message": "అవును!"
+  },
+  "reviewNo": {
+    "message": "అంతగా కాదు"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$ లో కొత్తవి",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "లైట్ మోడ్‌కు మారు"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "సస్పెండ్ మరియు వైట్‌లిస్ట్ కోసం రైట్-క్లిక్ మెనూ ఎంపికలు."
   },
+  "privacyPermScripting": {
+    "message": "ట్యాబ్‌ను సస్పెండ్ చేయడానికి ముందు సేవ్ చేయని ఫారమ్ డేటాను గుర్తించడానికి ఒక చిన్న స్క్రిప్ట్‌ను ఇంజెక్ట్ చేయడం. ఆప్ట్-ఇన్ మాత్రమే."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome యొక్క సైడ్ ప్యానెల్‌లో Drowzy ప్రదర్శించడం."
+  },
+  "privacyPermHost": {
+    "message": "ఐచ్ఛిక హోస్ట్ యాక్సెస్, మీరు ఫారమ్ రక్షణ లేదా సస్పెండ్-ట్యాబ్ గుర్తింపును ప్రారంభించినప్పుడు మాత్రమే డిమాండ్‌పై అభ్యర్థించబడుతుంది. ఇన్‌స్టాల్‌లో ఎప్పటికీ అభ్యర్థించబడదు. ఎప్పుడైనా రద్దు చేయవచ్చు."
+  },
   "privacyContactTitle": {
     "message": "సంప్రదింపు"
   },
   "privacyContactText": {
     "message": "ప్రశ్నలు? drowzyextension@gmail.com వద్ద సంప్రదించండి"
   },
-  "replace": {
-    "message": "భర్తీ చేయండి"
+  "privacyYourDataTitle": {
+    "message": "మీ డేటా"
   },
-  "replaceSessionTitle": {
-    "message": "ఈ సెషన్‌తో ప్రస్తుత ట్యాబ్‌లను భర్తీ చేయండి"
+  "privacyYourDataText": {
+    "message": "ఏదీ మీ బ్రౌజర్‌ను వదిలి వెళ్లనందున, డాష్‌బోర్డ్ లేదు, ఖాతా లేదు, మరియు మీరు Drowzy తో ఏమి చేశారో చూడటానికి మాకు మార్గం లేదు. మీరు Drowzy ను అన్‌ఇన్‌స్టాల్ చేస్తే, Chrome మీకు ప్రత్యేక వెబ్ పేజీ ద్వారా ఐచ్ఛిక అభిప్రాయం (అన్‌ఇన్‌స్టాల్ చేయడానికి కారణం, బ్రౌజర్, OS) పంపే అవకాశాన్ని అందిస్తుంది; ఆ సమర్పణ స్పష్టమైనది మరియు అనామక ఫారమ్‌కు వెళుతుంది. మీరు ట్యాబ్‌ను మూసివేయడం ద్వారా దానిని దాటవేయవచ్చు."
   },
-  "invalidDomain": {
-    "message": "చెల్లుబాటు అయ్యే డొమైన్ నమోదు చేయండి (ఉదా. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy ఓపెన్ సోర్స్."
   },
-  "extensionPage": {
-    "message": "ఎక్స్‌టెన్షన్ పేజీ"
-  },
-  "exportWhitelist": {
-    "message": "ఎగుమతి"
-  },
-  "importWhitelist": {
-    "message": "దిగుమతి"
-  },
-  "exportWhitelistTitle": {
-    "message": "వైట్‌లిస్ట్ కాపీ చేయండి"
-  },
-  "importWhitelistTitle": {
-    "message": "క్లిప్‌బోర్డ్ నుండి వైట్‌లిస్ట్ దిగుమతి చేయండి"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ సైట్(లు) కాపీ చేయబడ్డాయి",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ కొత్త సైట్(లు) దిగుమతి చేయబడ్డాయి",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "క్లిప్‌బోర్డ్‌లో చెల్లుబాటు అయ్యే డొమైన్‌లు కనుగొనబడలేదు"
-  },
-  "clipboardReadFailed": {
-    "message": "క్లిప్‌బోర్డ్ చదవడం సాధ్యం కాలేదు"
-  },
-  "enjoyingDrowzy": {
-    "message": "Drowzy నచ్చుతోందా?"
-  },
-  "reviewYes": {
-    "message": "అవును!"
-  },
-  "reviewNo": {
-    "message": "అంతగా కాదు"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$ లో కొత్తవి",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "GitHub లో కోడ్ బ్రౌజ్ చేయండి"
   },
   "changelogTitle": {
     "message": "Drowzy లో కొత్తవి"
   },
   "changelogWhatsNew": {
     "message": "కొత్తవి"
+  },
+  "changelogVersionLabel": {
+    "message": "వెర్షన్"
   },
   "changelogCtaText": {
     "message": "Drowzy ఉచితం మరియు ఓపెన్ సోర్స్. మెమరీ ఆదా చేస్తుంటే, సమీక్ష లేదా GitHub లో స్టార్ ఇవ్వండి."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "నకిలీ ట్యాబ్‌లను మూసివేయండి"
-  },
-  "tabUntitled": {
-    "message": "శీర్షిక లేదు"
-  },
-  "badgeWhitelisted": {
-    "message": "అనుమతి జాబితాలో"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "త్వరలో"
-  },
-  "changelogVersionLabel": {
-    "message": "వెర్షన్"
-  },
-  "copiedStats": {
-    "message": "గణాంకాలు కాపీ చేయబడ్డాయి!"
-  },
-  "privacyFooterLink": {
-    "message": "GitHub లో కోడ్ బ్రౌజ్ చేయండి"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy ఓపెన్ సోర్స్."
-  },
-  "privacyPermHost": {
-    "message": "ఐచ్ఛిక హోస్ట్ యాక్సెస్, మీరు ఫారమ్ రక్షణ లేదా సస్పెండ్-ట్యాబ్ గుర్తింపును ప్రారంభించినప్పుడు మాత్రమే డిమాండ్‌పై అభ్యర్థించబడుతుంది. ఇన్‌స్టాల్‌లో ఎప్పటికీ అభ్యర్థించబడదు. ఎప్పుడైనా రద్దు చేయవచ్చు."
-  },
-  "privacyPermScripting": {
-    "message": "ట్యాబ్‌ను సస్పెండ్ చేయడానికి ముందు సేవ్ చేయని ఫారమ్ డేటాను గుర్తించడానికి ఒక చిన్న స్క్రిప్ట్‌ను ఇంజెక్ట్ చేయడం. ఆప్ట్-ఇన్ మాత్రమే."
-  },
-  "privacyPermSidePanel": {
-    "message": "Chrome యొక్క సైడ్ ప్యానెల్‌లో Drowzy ప్రదర్శించడం."
-  },
-  "privacyYourDataText": {
-    "message": "ఏదీ మీ బ్రౌజర్‌ను వదిలి వెళ్లనందున, డాష్‌బోర్డ్ లేదు, ఖాతా లేదు, మరియు మీరు Drowzy తో ఏమి చేశారో చూడటానికి మాకు మార్గం లేదు. మీరు Drowzy ను అన్‌ఇన్‌స్టాల్ చేస్తే, Chrome మీకు ప్రత్యేక వెబ్ పేజీ ద్వారా ఐచ్ఛిక అభిప్రాయం (అన్‌ఇన్‌స్టాల్ చేయడానికి కారణం, బ్రౌజర్, OS) పంపే అవకాశాన్ని అందిస్తుంది; ఆ సమర్పణ స్పష్టమైనది మరియు అనామక ఫారమ్‌కు వెళుతుంది. మీరు ట్యాబ్‌ను మూసివేయడం ద్వారా దానిని దాటవేయవచ్చు."
-  },
-  "privacyYourDataTitle": {
-    "message": "మీ డేటా"
-  },
-  "ramEstimateTooltip": {
-    "message": "సస్పెండ్ చేసిన ట్యాబ్‌కు ~150 MB ఉపయోగించి అంచనా వేయబడింది. వాస్తవ ఆదా పేజీని బట్టి మారుతుంది."
-  },
-  "shareStats": {
-    "message": "భాగస్వామ్యం చేయండి"
-  },
-  "statLifetimeRam": {
-    "message": "మొత్తం RAM ఆదా"
   },
   "confirmDeleteTitle": {
     "message": "తొలగింపును నిర్ధారించడానికి మళ్లీ క్లిక్ చేయండి"

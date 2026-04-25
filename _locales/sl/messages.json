@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "prihranjeno"
   },
+  "statForecast": {
+    "message": "na voljo"
+  },
   "suspendOthers": {
     "message": "Zamrzni ostale"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Ni najdenih zavihkov"
   },
+  "tabUntitled": {
+    "message": "Brez naslova"
+  },
   "failedToLoad": {
     "message": "Nalaganje ni uspelo. Znova odpri pojavno okno za ponovni poskus."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Na belem seznamu"
   },
   "badgeProtected": {
     "message": "Zaščiten"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Skupaj"
   },
+  "statLifetimeRam": {
+    "message": "Skupaj prihranjenega RAM-a"
+  },
+  "ramEstimateTooltip": {
+    "message": "Ocenjeno z uporabo ~150 MB na zaustavljen zavihek. Dejanski prihranki se razlikujejo glede na stran."
+  },
+  "ramForecastTooltip": {
+    "message": "Ocenjeni pomnilnik, ki se bo sprostil, ko vaši nedejavni zavihki zaspijo, pri ~150 MB na zavihek."
+  },
+  "suspendedToast": {
+    "message": "Začasno ustavljenih $COUNT$ zavihkov · sproščeno ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Zbujenih $COUNT$ zavihkov",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Ni drugih zavihkov za začasno ustavitev"
+  },
+  "noSuspendedToWake": {
+    "message": "Ni začasno ustavljenih zavihkov za zbujanje"
+  },
+  "pinnedWontSuspend": {
+    "message": "Pripeto — ne bo začasno ustavljeno"
+  },
+  "audioWontSuspend": {
+    "message": "Predvaja zvok — ne bo začasno ustavljeno"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Na belem seznamu — ne bo začasno ustavljeno"
+  },
+  "systemPageCantSuspend": {
+    "message": "Sistemska stran — ni mogoče začasno ustaviti"
+  },
+  "clickToDismiss": {
+    "message": "Kliknite za zaprtje"
+  },
+  "keepAwakeBtn": {
+    "message": "Ostani aktiven"
+  },
+  "suspendTimerHint": {
+    "message": "Zavihki, s katerih ste preklopili, se ustavijo po tem času. Povečajte ga, če se vračate na zavihke po dolgih premorih."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Nasvet:</strong> Kliknite ikono sestavljanke v orodni vrstici Chrome, da pripnete Drowzy za dostop z enim klikom."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Ustavlja zavihke, ki jih še uporabljate?</strong> Odprite Drowzy → Nastavitve in povečajte 30-minutni časovnik, ali dodajte spletno mesto na beli seznam z enim klikom."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Izpolnjujete obrazec?</strong> Vklopite »Zaščiti zavihke z obrazci« v Nastavitvah, da zavihki z neshranjenim vnosom ne bodo ustavljeni."
+  },
+  "onboardingRemapHint": {
+    "message": "Želite druge bližnjice na tipkovnici? Prilagodite jih tukaj →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Pustite hitro oceno"
+  },
+  "reviewReportTitle": {
+    "message": "Prijavite težavo"
+  },
+  "reviewDismissTitle": {
+    "message": "Zapri"
+  },
   "statMemberSince": {
     "message": "Član od"
+  },
+  "shareStats": {
+    "message": "Deli"
+  },
+  "copiedStats": {
+    "message": "Statistika kopirana!"
   },
   "settings": {
     "message": "Nastavitve"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Ni strani na belem seznamu"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Zamrzovanje..."
   },
-  "done": {
-    "message": "Končano!"
+  "suspendingSoon": {
+    "message": "kmalu"
   },
   "waking": {
     "message": "Prebujanje..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Odstrani"
+  },
+  "replace": {
+    "message": "Zamenjaj"
+  },
+  "replaceSessionTitle": {
+    "message": "Zamenjaj trenutne zavihke s to sejo"
+  },
+  "invalidDomain": {
+    "message": "Vnesite veljavno domeno (npr. example.com)"
+  },
+  "extensionPage": {
+    "message": "Stran razširitve"
+  },
+  "exportWhitelist": {
+    "message": "Izvozi"
+  },
+  "importWhitelist": {
+    "message": "Uvozi"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopiraj beli seznam"
+  },
+  "importWhitelistTitle": {
+    "message": "Uvozi beli seznam iz odložišča"
+  },
+  "copiedSites": {
+    "message": "Kopiranih $COUNT$ strani",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Uvoženih $COUNT$ novih strani",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "V odložišču ni veljavnih domen"
+  },
+  "clipboardReadFailed": {
+    "message": "Odložišča ni bilo mogoče prebrati"
+  },
+  "enjoyingDrowzy": {
+    "message": "Vam je Drowzy všeč?"
+  },
+  "reviewYes": {
+    "message": "Da!"
+  },
+  "reviewNo": {
+    "message": "Ne ravno"
+  },
+  "whatsNew": {
+    "message": "Kaj je novega v v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Preklopi na svetli način"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Možnosti menija desnega klika za zaustavitev in beli seznam."
   },
+  "privacyPermScripting": {
+    "message": "Vbrizganje majhnega skripta za odkrivanje neshranjenih podatkov obrazca pred zaustavitvijo zavihka. Samo izbirno."
+  },
+  "privacyPermSidePanel": {
+    "message": "Prikaz Drowzy v stranski plošči Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Izbirni dostop do gostitelja, zahtevan na zahtevo le, ko omogočite Zaščito obrazcev ali Označevanje zaustavljenih zavihkov. Nikoli ni zahtevan pri namestitvi. Mogoče preklicati kadarkoli."
+  },
   "privacyContactTitle": {
     "message": "Kontakt"
   },
   "privacyContactText": {
     "message": "Vprašanja? Pišite na drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Zamenjaj"
+  "privacyYourDataTitle": {
+    "message": "Vaši podatki"
   },
-  "replaceSessionTitle": {
-    "message": "Zamenjaj trenutne zavihke s to sejo"
+  "privacyYourDataText": {
+    "message": "Ker nič ne zapusti vašega brskalnika, ni nadzorne plošče, ni računa, in ni načina, da bi videli, kaj ste počeli z Drowzy. Če Drowzy odstranite, Chrome vam ponudi možnost, da pošljete izbirne povratne informacije (razlog za odstranitev, brskalnik, OS) prek ločene spletne strani; ta predložitev je izrecna in gre v anonimni obrazec. Lahko jo preskočite z zaprtjem zavihka."
   },
-  "invalidDomain": {
-    "message": "Vnesite veljavno domeno (npr. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy je odprtokoden."
   },
-  "extensionPage": {
-    "message": "Stran razširitve"
-  },
-  "exportWhitelist": {
-    "message": "Izvozi"
-  },
-  "importWhitelist": {
-    "message": "Uvozi"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopiraj beli seznam"
-  },
-  "importWhitelistTitle": {
-    "message": "Uvozi beli seznam iz odložišča"
-  },
-  "copiedSites": {
-    "message": "Kopiranih $COUNT$ strani",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Uvoženih $COUNT$ novih strani",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "V odložišču ni veljavnih domen"
-  },
-  "clipboardReadFailed": {
-    "message": "Odložišča ni bilo mogoče prebrati"
-  },
-  "enjoyingDrowzy": {
-    "message": "Vam je Drowzy všeč?"
-  },
-  "reviewYes": {
-    "message": "Da!"
-  },
-  "reviewNo": {
-    "message": "Ne ravno"
-  },
-  "whatsNew": {
-    "message": "Kaj je novega v v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Prebrskajte kodo na GitHubu"
   },
   "changelogTitle": {
     "message": "Kaj je novega v Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Kaj je novega"
+  },
+  "changelogVersionLabel": {
+    "message": "Različica"
   },
   "changelogCtaText": {
     "message": "Drowzy je brezplačen in odprtokoden. Če vam prihrani pomnilnik, pustite oceno ali zvezdico na GitHubu."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Zapri podvojene zavihke"
-  },
-  "tabUntitled": {
-    "message": "Brez naslova"
-  },
-  "badgeWhitelisted": {
-    "message": "Na belem seznamu"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "kmalu"
-  },
-  "changelogVersionLabel": {
-    "message": "Različica"
-  },
-  "copiedStats": {
-    "message": "Statistika kopirana!"
-  },
-  "privacyFooterLink": {
-    "message": "Prebrskajte kodo na GitHubu"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy je odprtokoden."
-  },
-  "privacyPermHost": {
-    "message": "Izbirni dostop do gostitelja, zahtevan na zahtevo le, ko omogočite Zaščito obrazcev ali Označevanje zaustavljenih zavihkov. Nikoli ni zahtevan pri namestitvi. Mogoče preklicati kadarkoli."
-  },
-  "privacyPermScripting": {
-    "message": "Vbrizganje majhnega skripta za odkrivanje neshranjenih podatkov obrazca pred zaustavitvijo zavihka. Samo izbirno."
-  },
-  "privacyPermSidePanel": {
-    "message": "Prikaz Drowzy v stranski plošči Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Ker nič ne zapusti vašega brskalnika, ni nadzorne plošče, ni računa, in ni načina, da bi videli, kaj ste počeli z Drowzy. Če Drowzy odstranite, Chrome vam ponudi možnost, da pošljete izbirne povratne informacije (razlog za odstranitev, brskalnik, OS) prek ločene spletne strani; ta predložitev je izrecna in gre v anonimni obrazec. Lahko jo preskočite z zaprtjem zavihka."
-  },
-  "privacyYourDataTitle": {
-    "message": "Vaši podatki"
-  },
-  "ramEstimateTooltip": {
-    "message": "Ocenjeno z uporabo ~150 MB na zaustavljen zavihek. Dejanski prihranki se razlikujejo glede na stran."
-  },
-  "shareStats": {
-    "message": "Deli"
-  },
-  "statLifetimeRam": {
-    "message": "Skupaj prihranjenega RAM-a"
   },
   "confirmDeleteTitle": {
     "message": "Znova kliknite za potrditev brisanja"

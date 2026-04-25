@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "saved"
   },
+  "statForecast": {
+    "message": "available"
+  },
   "suspendOthers": {
     "message": "Suspend Others"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "No tabs found"
   },
+  "tabUntitled": {
+    "message": "Untitled"
+  },
   "failedToLoad": {
     "message": "Failed to load. Reopen popup to retry."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Whitelisted"
   },
   "badgeProtected": {
     "message": "Protected"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "All time"
   },
+  "statLifetimeRam": {
+    "message": "Lifetime RAM saved"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimated using ~150 MB per suspended tab. Actual savings vary by page."
+  },
+  "ramForecastTooltip": {
+    "message": "Estimated memory available to save when your idle tabs go to sleep, at ~150 MB per tab."
+  },
+  "suspendedToast": {
+    "message": "Suspended $COUNT$ tab(s) · ~$RAM$ freed",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Woke $COUNT$ tab(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "No other tabs to suspend"
+  },
+  "noSuspendedToWake": {
+    "message": "No suspended tabs to wake"
+  },
+  "pinnedWontSuspend": {
+    "message": "Pinned — won't be suspended"
+  },
+  "audioWontSuspend": {
+    "message": "Audio playing — won't be suspended"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Whitelisted — won't be suspended"
+  },
+  "systemPageCantSuspend": {
+    "message": "System page — can't be suspended"
+  },
+  "clickToDismiss": {
+    "message": "Click to dismiss"
+  },
+  "keepAwakeBtn": {
+    "message": "Keep awake"
+  },
+  "suspendTimerHint": {
+    "message": "Tabs you switched away from are suspended after this long. Increase if you find yourself coming back to tabs after long gaps."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Tip:</strong> Click the puzzle icon in your Chrome toolbar to pin Drowzy for one-click access."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Suspending tabs you still want?</strong> Open Drowzy → Settings to bump the 30-minute timer up, or add the site to your whitelist with one click."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Filling out a form?</strong> Enable \"Protect tabs with forms\" in Settings to keep tabs with unsaved input from being suspended."
+  },
+  "onboardingRemapHint": {
+    "message": "Want different keyboard shortcuts? Customize them here →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Leave a quick review"
+  },
+  "reviewReportTitle": {
+    "message": "Report an issue"
+  },
+  "reviewDismissTitle": {
+    "message": "Dismiss"
+  },
   "statMemberSince": {
     "message": "Member since"
+  },
+  "shareStats": {
+    "message": "Share"
+  },
+  "copiedStats": {
+    "message": "Stats copied!"
   },
   "settings": {
     "message": "Settings"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "No sites whitelisted"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Suspending..."
   },
-  "done": {
-    "message": "Done!"
+  "suspendingSoon": {
+    "message": "soon"
   },
   "waking": {
     "message": "Waking..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Remove"
+  },
+  "replace": {
+    "message": "Replace"
+  },
+  "replaceSessionTitle": {
+    "message": "Replace current tabs with this session"
+  },
+  "invalidDomain": {
+    "message": "Enter a valid domain (e.g. example.com)"
+  },
+  "extensionPage": {
+    "message": "Extension page"
+  },
+  "exportWhitelist": {
+    "message": "Export"
+  },
+  "importWhitelist": {
+    "message": "Import"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copy whitelist"
+  },
+  "importWhitelistTitle": {
+    "message": "Import whitelist from clipboard"
+  },
+  "copiedSites": {
+    "message": "Copied $COUNT$ site(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Imported $COUNT$ new site(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "No valid domains found in clipboard"
+  },
+  "clipboardReadFailed": {
+    "message": "Could not read clipboard"
+  },
+  "enjoyingDrowzy": {
+    "message": "Enjoying Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Yes!"
+  },
+  "reviewNo": {
+    "message": "Not really"
+  },
+  "whatsNew": {
+    "message": "What's new in v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Switch to light mode"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Right-click menu options for suspend and whitelist."
   },
+  "privacyPermScripting": {
+    "message": "Injecting a small script to detect unsaved form data before suspending a tab. Opt-in only."
+  },
+  "privacyPermSidePanel": {
+    "message": "Displaying Drowzy in Chrome's side panel."
+  },
+  "privacyPermHost": {
+    "message": "Optional host access, requested on-demand only when you enable Form Protection or Suspended-Tab Marking. Never requested at install. Revocable anytime."
+  },
   "privacyContactTitle": {
     "message": "Contact"
   },
   "privacyContactText": {
     "message": "Questions? Reach out at drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Replace"
+  "privacyYourDataTitle": {
+    "message": "Your data"
   },
-  "replaceSessionTitle": {
-    "message": "Replace current tabs with this session"
+  "privacyYourDataText": {
+    "message": "Because nothing leaves your browser, there's no dashboard, no account, and no way for us to see what you've done with Drowzy. If you uninstall Drowzy, Chrome offers you a chance to send optional feedback (reason for uninstalling, browser, OS) through a separate web page; that submission is explicit and goes to an anonymous form. You can skip it by closing the tab."
   },
-  "invalidDomain": {
-    "message": "Enter a valid domain (e.g. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy is open source."
   },
-  "extensionPage": {
-    "message": "Extension page"
-  },
-  "exportWhitelist": {
-    "message": "Export"
-  },
-  "importWhitelist": {
-    "message": "Import"
-  },
-  "exportWhitelistTitle": {
-    "message": "Copy whitelist"
-  },
-  "importWhitelistTitle": {
-    "message": "Import whitelist from clipboard"
-  },
-  "copiedSites": {
-    "message": "Copied $COUNT$ site(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Imported $COUNT$ new site(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "No valid domains found in clipboard"
-  },
-  "clipboardReadFailed": {
-    "message": "Could not read clipboard"
-  },
-  "enjoyingDrowzy": {
-    "message": "Enjoying Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Yes!"
-  },
-  "reviewNo": {
-    "message": "Not really"
-  },
-  "whatsNew": {
-    "message": "What's new in v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Browse the code on GitHub"
   },
   "changelogTitle": {
     "message": "What's New in Drowzy"
   },
   "changelogWhatsNew": {
     "message": "What's New"
+  },
+  "changelogVersionLabel": {
+    "message": "Version"
   },
   "changelogCtaText": {
     "message": "Drowzy is free and open source. If it's saving you memory, consider leaving a quick review or starring us on GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Close duplicate tabs"
-  },
-  "tabUntitled": {
-    "message": "Untitled"
-  },
-  "badgeWhitelisted": {
-    "message": "Whitelisted"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "soon"
-  },
-  "changelogVersionLabel": {
-    "message": "Version"
-  },
-  "copiedStats": {
-    "message": "Stats copied!"
-  },
-  "privacyFooterLink": {
-    "message": "Browse the code on GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy is open source."
-  },
-  "privacyPermHost": {
-    "message": "Optional host access, requested on-demand only when you enable Form Protection or Suspended-Tab Marking. Never requested at install. Revocable anytime."
-  },
-  "privacyPermScripting": {
-    "message": "Injecting a small script to detect unsaved form data before suspending a tab. Opt-in only."
-  },
-  "privacyPermSidePanel": {
-    "message": "Displaying Drowzy in Chrome's side panel."
-  },
-  "privacyYourDataText": {
-    "message": "Because nothing leaves your browser, there's no dashboard, no account, and no way for us to see what you've done with Drowzy. If you uninstall Drowzy, Chrome offers you a chance to send optional feedback (reason for uninstalling, browser, OS) through a separate web page; that submission is explicit and goes to an anonymous form. You can skip it by closing the tab."
-  },
-  "privacyYourDataTitle": {
-    "message": "Your data"
-  },
-  "ramEstimateTooltip": {
-    "message": "Estimated using ~150 MB per suspended tab. Actual savings vary by page."
-  },
-  "shareStats": {
-    "message": "Share"
-  },
-  "statLifetimeRam": {
-    "message": "Lifetime RAM saved"
   },
   "confirmDeleteTitle": {
     "message": "Click again to confirm delete"

@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "ସଞ୍ଚୟ"
   },
+  "statForecast": {
+    "message": "ଉପଲବ୍ଧ"
+  },
   "suspendOthers": {
     "message": "ଅନ୍ୟଗୁଡ଼ିକୁ ସସ୍ପେଣ୍ଡ"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "କୌଣସି ଟ୍ୟାବ୍ ମିଳିଲା ନାହିଁ"
   },
+  "tabUntitled": {
+    "message": "ଶିରୋନାମାହୀନ"
+  },
   "failedToLoad": {
     "message": "ଲୋଡ୍ ବିଫଳ। ପୁନଃଚେଷ୍ଟା ପାଇଁ ପପଅପ୍ ପୁନଃଖୋଲନ୍ତୁ।"
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "ଅଡିଓ"
+  },
+  "badgeWhitelisted": {
+    "message": "ଧଳା ତାଲିକାଭୁକ୍ତ"
   },
   "badgeProtected": {
     "message": "ସୁରକ୍ଷିତ"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "ସର୍ବକାଳୀନ"
   },
+  "statLifetimeRam": {
+    "message": "ସମୁଦାୟ RAM ସଞ୍ଚୟ"
+  },
+  "ramEstimateTooltip": {
+    "message": "ସ୍ଥଗିତ ଟ୍ୟାବ ପ୍ରତି ~150 MB ବ୍ୟବହାର କରି ଆକଳନ କରାଯାଇଛି। ପ୍ରକୃତ ସଞ୍ଚୟ ପୃଷ୍ଠା ଅନୁଯାୟୀ ଭିନ୍ନ।"
+  },
+  "ramForecastTooltip": {
+    "message": "ଆପଣଙ୍କ ନିଷ୍କ୍ରିୟ ଟ୍ୟାବ୍‌ଗୁଡ଼ିକ ଶୋଇବା ସମୟରେ ସଞ୍ଚୟ କରିବାକୁ ଆନୁମାନିକ ମେମୋରୀ, ପ୍ରତି ଟ୍ୟାବ୍‌ରେ ~150 MB."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ ଟ୍ୟାବ୍ ସ୍ଥଗିତ · ~$RAM$ ମୁକ୍ତ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ ଟ୍ୟାବ୍ ଜଗାଇ ଦିଆଗଲା",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "ସ୍ଥଗିତ କରିବାକୁ ଅନ୍ୟ ଟ୍ୟାବ୍ ନାହିଁ"
+  },
+  "noSuspendedToWake": {
+    "message": "ଜଗାଇବାକୁ କୌଣସି ସ୍ଥଗିତ ଟ୍ୟାବ୍ ନାହିଁ"
+  },
+  "pinnedWontSuspend": {
+    "message": "ପିନ୍ କରାଯାଇଛି — ସ୍ଥଗିତ କରାଯିବ ନାହିଁ"
+  },
+  "audioWontSuspend": {
+    "message": "ଅଡିଓ ଚାଲୁଛି — ସ୍ଥଗିତ କରାଯିବ ନାହିଁ"
+  },
+  "whitelistedWontSuspend": {
+    "message": "ଶ୍ୱେତ ତାଲିକାରେ — ସ୍ଥଗିତ କରାଯିବ ନାହିଁ"
+  },
+  "systemPageCantSuspend": {
+    "message": "ସିଷ୍ଟମ୍ ପୃଷ୍ଠା — ସ୍ଥଗିତ କରାଯାଇପାରିବ ନାହିଁ"
+  },
+  "clickToDismiss": {
+    "message": "ବନ୍ଦ କରିବାକୁ କ୍ଲିକ୍ କରନ୍ତୁ"
+  },
+  "keepAwakeBtn": {
+    "message": "ସକ୍ରିୟ ରଖନ୍ତୁ"
+  },
+  "suspendTimerHint": {
+    "message": "ଆପଣ ଯେଉଁ ଟ୍ୟାବ୍‌ଗୁଡ଼ିକରୁ ଚାଲିଗଲେ ସେଗୁଡ଼ିକ ଏହି ସମୟ ପରେ ସ୍ଥଗିତ ହୁଏ। ଯଦି ଆପଣ ଲମ୍ବା ବିରତି ପରେ ଟ୍ୟାବ୍‌ଗୁଡ଼ିକୁ ଫେରନ୍ତି, ଏହାକୁ ବଢ଼ାନ୍ତୁ।"
+  },
+  "onboardingPinTip": {
+    "message": "<strong>ସୂଚନା:</strong> ଗୋଟିଏ-କ୍ଲିକ୍ ପ୍ରବେଶ ପାଇଁ Drowzy କୁ ପିନ୍ କରିବାକୁ ଆପଣଙ୍କ Chrome ଟୁଲ୍‌ବାର୍‌ର ପଜଲ୍ ଆଇକନ୍ ଉପରେ କ୍ଲିକ୍ କରନ୍ତୁ।"
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>ଆପଣ ଏବେ ବ୍ୟବହାର କରୁଥିବା ଟ୍ୟାବ୍ ସ୍ଥଗିତ ହେଉଛି?</strong> 30-ମିନିଟ୍ ଟାଇମର୍ ବଢ଼ାଇବାକୁ କିମ୍ବା ଗୋଟିଏ କ୍ଲିକ୍‌ରେ ସାଇଟ୍‌କୁ ଆପଣଙ୍କ ଶ୍ୱେତ ତାଲିକାରେ ଯୋଗ କରିବାକୁ Drowzy → ସେଟିଂସ୍ ଖୋଲନ୍ତୁ।"
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>ଫର୍ମ ପୂରଣ କରୁଛନ୍ତି?</strong> ଅସଂରକ୍ଷିତ ଇନ୍‌ପୁଟ୍ ଥିବା ଟ୍ୟାବ୍ ସ୍ଥଗିତ ନ ହେବା ପାଇଁ ସେଟିଂସ୍‌ରେ \"ଫର୍ମ ଥିବା ଟ୍ୟାବ୍ ସୁରକ୍ଷା କରନ୍ତୁ\" ସକ୍ଷମ କରନ୍ତୁ।"
+  },
+  "onboardingRemapHint": {
+    "message": "ଭିନ୍ନ କୀ-ବୋର୍ଡ୍ ସର୍ଟକଟ୍ ଚାହାଁନ୍ତି? ଏଠାରେ କଷ୍ଟମାଇଜ୍ କରନ୍ତୁ →"
+  },
+  "reviewLeaveTitle": {
+    "message": "ଏକ ଶୀଘ୍ର ସମୀକ୍ଷା ଛାଡନ୍ତୁ"
+  },
+  "reviewReportTitle": {
+    "message": "ଏକ ସମସ୍ୟା ରିପୋର୍ଟ କରନ୍ତୁ"
+  },
+  "reviewDismissTitle": {
+    "message": "ଖାରଜ କରନ୍ତୁ"
+  },
   "statMemberSince": {
     "message": "ସଦସ୍ୟ ହୋଇଥିବା ଦିନ"
+  },
+  "shareStats": {
+    "message": "ଅଂଶୀଦାର କରନ୍ତୁ"
+  },
+  "copiedStats": {
+    "message": "ପରିସଂଖ୍ୟାନ କପି ହୋଇଛି!"
   },
   "settings": {
     "message": "ସେଟିଂସ୍"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "କୌଣସି ସାଇଟ୍ ହ୍ୱାଇଟଲିଷ୍ଟ ହୋଇନାହିଁ"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "ସସ୍ପେଣ୍ଡ ହେଉଛି..."
   },
-  "done": {
-    "message": "ସମ୍ପୂର୍ଣ୍ଣ!"
+  "suspendingSoon": {
+    "message": "ଶୀଘ୍ର"
   },
   "waking": {
     "message": "ଜାଗ୍ରତ ହେଉଛି..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "ହଟାନ୍ତୁ"
+  },
+  "replace": {
+    "message": "ବଦଳାନ୍ତୁ"
+  },
+  "replaceSessionTitle": {
+    "message": "ଏହି ସେସନ୍ ସହ ବର୍ତ୍ତମାନ ଟ୍ୟାବ୍ ବଦଳାନ୍ତୁ"
+  },
+  "invalidDomain": {
+    "message": "ଏକ ବୈଧ ଡୋମେନ୍ ପ୍ରବେଶ କରନ୍ତୁ (ଯଥା example.com)"
+  },
+  "extensionPage": {
+    "message": "ଏକ୍ସଟେନସନ ପୃଷ୍ଠା"
+  },
+  "exportWhitelist": {
+    "message": "ରପ୍ତାନି"
+  },
+  "importWhitelist": {
+    "message": "ଆମଦାନୀ"
+  },
+  "exportWhitelistTitle": {
+    "message": "ଧଳା ତାଲିକା କପି କରନ୍ତୁ"
+  },
+  "importWhitelistTitle": {
+    "message": "କ୍ଲିପବୋର୍ଡରୁ ଧଳା ତାଲିକା ଆମଦାନୀ କରନ୍ତୁ"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ ସାଇଟ୍ କପି ହେଲା",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ ନୂଆ ସାଇଟ୍ ଆମଦାନୀ ହେଲା",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "କ୍ଲିପବୋର୍ଡରେ କୌଣସି ବୈଧ ଡୋମେନ୍ ମିଳିଲା ନାହିଁ"
+  },
+  "clipboardReadFailed": {
+    "message": "କ୍ଲିପବୋର୍ଡ ପଢ଼ି ହେଲା ନାହିଁ"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy ପସନ୍ଦ କରୁଛନ୍ତି?"
+  },
+  "reviewYes": {
+    "message": "ହଁ!"
+  },
+  "reviewNo": {
+    "message": "ସେତିକି ନୁହେଁ"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$ ରେ ନୂଆ କଣ",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "ହାଲୁକା ମୋଡ୍ କୁ ବଦଳାନ୍ତୁ"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "ସ୍ଥଗିତ ଏବଂ ଶ୍ୱେତ ତାଲିକା ପାଇଁ ଡାହାଣ-କ୍ଲିକ ମେନୁ ବିକଳ୍ପଗୁଡ଼ିକ।"
   },
+  "privacyPermScripting": {
+    "message": "ଟ୍ୟାବ୍ ସ୍ଥଗିତ ପୂର୍ବରୁ ସଂରକ୍ଷିତ ନଥିବା ଫର୍ମ ଡାଟା ଚିହ୍ନଟ କରିବା ପାଇଁ ଏକ ଛୋଟ ସ୍କ୍ରିପ୍ଟ ଇଞ୍ଜେକ୍ଟ କରିବା। କେବଳ ଅପ୍ଟ୍-ଇନ୍।"
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome ର ସାଇଡ୍ ପ୍ୟାନେଲରେ Drowzy ପ୍ରଦର୍ଶନ।"
+  },
+  "privacyPermHost": {
+    "message": "ଐଚ୍ଛିକ ହୋଷ୍ଟ୍ ଆକ୍ସେସ୍, କେବଳ ଯେତେବେଳେ ଆପଣ ଫର୍ମ ସୁରକ୍ଷା କିମ୍ବା ସ୍ଥଗିତ-ଟ୍ୟାବ୍ ମାର୍କିଂ ସକ୍ଷମ କରନ୍ତି ସେତେବେଳେ ଚାହିଦା ଅନୁଯାୟୀ ଅନୁରୋଧ କରାଯାଏ। ଇନଷ୍ଟଲ୍ ସମୟରେ କେବେବି ଅନୁରୋଧ କରାଯାଏ ନାହିଁ। ଯେ କୌଣସି ସମୟରେ ବାତିଲ ଯୋଗ୍ୟ।"
+  },
   "privacyContactTitle": {
     "message": "ଯୋଗାଯୋଗ"
   },
   "privacyContactText": {
     "message": "ପ୍ରଶ୍ନ? drowzyextension@gmail.com ରେ ଯୋଗାଯୋଗ କରନ୍ତୁ"
   },
-  "replace": {
-    "message": "ବଦଳାନ୍ତୁ"
+  "privacyYourDataTitle": {
+    "message": "ଆପଣଙ୍କ ଡାଟା"
   },
-  "replaceSessionTitle": {
-    "message": "ଏହି ସେସନ୍ ସହ ବର୍ତ୍ତମାନ ଟ୍ୟାବ୍ ବଦଳାନ୍ତୁ"
+  "privacyYourDataText": {
+    "message": "କିଛି ବି ଆପଣଙ୍କ ବ୍ରାଉଜର୍ ଛାଡ଼େ ନାହିଁ, ତେଣୁ କୌଣସି ଡ୍ୟାଶବୋର୍ଡ ନାହିଁ, କୌଣସି ଆକାଉଣ୍ଟ ନାହିଁ, ଏବଂ Drowzy ସହିତ ଆପଣ କ'ଣ କରିଛନ୍ତି ଦେଖିବାର ଆମ ପାଇଁ କୌଣସି ଉପାୟ ନାହିଁ। ଯଦି ଆପଣ Drowzy ଅନଇନଷ୍ଟଲ କରନ୍ତି, Chrome ଆପଣଙ୍କୁ ଏକ ଅଲଗା ୱେବ୍ ପୃଷ୍ଠା ମାଧ୍ୟମରେ ଐଚ୍ଛିକ ମତାମତ (ଅନଇନଷ୍ଟଲ କରିବାର କାରଣ, ବ୍ରାଉଜର, OS) ପଠାଇବାର ସୁଯୋଗ ପ୍ରଦାନ କରେ; ସେହି ଦାଖଲ ସ୍ପଷ୍ଟ ଏବଂ ଏକ ଅଜ୍ଞାତ ଫର୍ମକୁ ଯାଏ। ଆପଣ ଟ୍ୟାବ୍ ବନ୍ଦ କରି ଏହାକୁ ଏଡାଇ ପାରିବେ।"
   },
-  "invalidDomain": {
-    "message": "ଏକ ବୈଧ ଡୋମେନ୍ ପ୍ରବେଶ କରନ୍ତୁ (ଯଥା example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy ଓପନ୍ ସୋର୍ସ୍।"
   },
-  "extensionPage": {
-    "message": "ଏକ୍ସଟେନସନ ପୃଷ୍ଠା"
-  },
-  "exportWhitelist": {
-    "message": "ରପ୍ତାନି"
-  },
-  "importWhitelist": {
-    "message": "ଆମଦାନୀ"
-  },
-  "exportWhitelistTitle": {
-    "message": "ଧଳା ତାଲିକା କପି କରନ୍ତୁ"
-  },
-  "importWhitelistTitle": {
-    "message": "କ୍ଲିପବୋର୍ଡରୁ ଧଳା ତାଲିକା ଆମଦାନୀ କରନ୍ତୁ"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ ସାଇଟ୍ କପି ହେଲା",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ ନୂଆ ସାଇଟ୍ ଆମଦାନୀ ହେଲା",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "କ୍ଲିପବୋର୍ଡରେ କୌଣସି ବୈଧ ଡୋମେନ୍ ମିଳିଲା ନାହିଁ"
-  },
-  "clipboardReadFailed": {
-    "message": "କ୍ଲିପବୋର୍ଡ ପଢ଼ି ହେଲା ନାହିଁ"
-  },
-  "enjoyingDrowzy": {
-    "message": "Drowzy ପସନ୍ଦ କରୁଛନ୍ତି?"
-  },
-  "reviewYes": {
-    "message": "ହଁ!"
-  },
-  "reviewNo": {
-    "message": "ସେତିକି ନୁହେଁ"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$ ରେ ନୂଆ କଣ",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "GitHub ରେ କୋଡ୍ ବ୍ରାଉଜ୍ କରନ୍ତୁ"
   },
   "changelogTitle": {
     "message": "Drowzy ରେ ନୂଆ କଣ"
   },
   "changelogWhatsNew": {
     "message": "ନୂଆ କଣ"
+  },
+  "changelogVersionLabel": {
+    "message": "ସଂସ୍କରଣ"
   },
   "changelogCtaText": {
     "message": "Drowzy ମାଗଣା ଏବଂ ଓପେନ ସୋର୍ସ। ଯଦି ଏହା ମେମୋରୀ ସଞ୍ଚୟ କରୁଛି, ସମୀକ୍ଷା ଦିଅନ୍ତୁ ବା GitHub ରେ ଷ୍ଟାର୍ ଦିଅନ୍ତୁ।"
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "ଡୁପ୍ଲିକେଟ ଟ୍ୟାବ୍ ବନ୍ଦ କରନ୍ତୁ"
-  },
-  "tabUntitled": {
-    "message": "ଶିରୋନାମାହୀନ"
-  },
-  "badgeWhitelisted": {
-    "message": "ଧଳା ତାଲିକାଭୁକ୍ତ"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "ଶୀଘ୍ର"
-  },
-  "changelogVersionLabel": {
-    "message": "ସଂସ୍କରଣ"
-  },
-  "copiedStats": {
-    "message": "ପରିସଂଖ୍ୟାନ କପି ହୋଇଛି!"
-  },
-  "privacyFooterLink": {
-    "message": "GitHub ରେ କୋଡ୍ ବ୍ରାଉଜ୍ କରନ୍ତୁ"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy ଓପନ୍ ସୋର୍ସ୍।"
-  },
-  "privacyPermHost": {
-    "message": "ଐଚ୍ଛିକ ହୋଷ୍ଟ୍ ଆକ୍ସେସ୍, କେବଳ ଯେତେବେଳେ ଆପଣ ଫର୍ମ ସୁରକ୍ଷା କିମ୍ବା ସ୍ଥଗିତ-ଟ୍ୟାବ୍ ମାର୍କିଂ ସକ୍ଷମ କରନ୍ତି ସେତେବେଳେ ଚାହିଦା ଅନୁଯାୟୀ ଅନୁରୋଧ କରାଯାଏ। ଇନଷ୍ଟଲ୍ ସମୟରେ କେବେବି ଅନୁରୋଧ କରାଯାଏ ନାହିଁ। ଯେ କୌଣସି ସମୟରେ ବାତିଲ ଯୋଗ୍ୟ।"
-  },
-  "privacyPermScripting": {
-    "message": "ଟ୍ୟାବ୍ ସ୍ଥଗିତ ପୂର୍ବରୁ ସଂରକ୍ଷିତ ନଥିବା ଫର୍ମ ଡାଟା ଚିହ୍ନଟ କରିବା ପାଇଁ ଏକ ଛୋଟ ସ୍କ୍ରିପ୍ଟ ଇଞ୍ଜେକ୍ଟ କରିବା। କେବଳ ଅପ୍ଟ୍-ଇନ୍।"
-  },
-  "privacyPermSidePanel": {
-    "message": "Chrome ର ସାଇଡ୍ ପ୍ୟାନେଲରେ Drowzy ପ୍ରଦର୍ଶନ।"
-  },
-  "privacyYourDataText": {
-    "message": "କିଛି ବି ଆପଣଙ୍କ ବ୍ରାଉଜର୍ ଛାଡ଼େ ନାହିଁ, ତେଣୁ କୌଣସି ଡ୍ୟାଶବୋର୍ଡ ନାହିଁ, କୌଣସି ଆକାଉଣ୍ଟ ନାହିଁ, ଏବଂ Drowzy ସହିତ ଆପଣ କ'ଣ କରିଛନ୍ତି ଦେଖିବାର ଆମ ପାଇଁ କୌଣସି ଉପାୟ ନାହିଁ। ଯଦି ଆପଣ Drowzy ଅନଇନଷ୍ଟଲ କରନ୍ତି, Chrome ଆପଣଙ୍କୁ ଏକ ଅଲଗା ୱେବ୍ ପୃଷ୍ଠା ମାଧ୍ୟମରେ ଐଚ୍ଛିକ ମତାମତ (ଅନଇନଷ୍ଟଲ କରିବାର କାରଣ, ବ୍ରାଉଜର, OS) ପଠାଇବାର ସୁଯୋଗ ପ୍ରଦାନ କରେ; ସେହି ଦାଖଲ ସ୍ପଷ୍ଟ ଏବଂ ଏକ ଅଜ୍ଞାତ ଫର୍ମକୁ ଯାଏ। ଆପଣ ଟ୍ୟାବ୍ ବନ୍ଦ କରି ଏହାକୁ ଏଡାଇ ପାରିବେ।"
-  },
-  "privacyYourDataTitle": {
-    "message": "ଆପଣଙ୍କ ଡାଟା"
-  },
-  "ramEstimateTooltip": {
-    "message": "ସ୍ଥଗିତ ଟ୍ୟାବ ପ୍ରତି ~150 MB ବ୍ୟବହାର କରି ଆକଳନ କରାଯାଇଛି। ପ୍ରକୃତ ସଞ୍ଚୟ ପୃଷ୍ଠା ଅନୁଯାୟୀ ଭିନ୍ନ।"
-  },
-  "shareStats": {
-    "message": "ଅଂଶୀଦାର କରନ୍ତୁ"
-  },
-  "statLifetimeRam": {
-    "message": "ସମୁଦାୟ RAM ସଞ୍ଚୟ"
   },
   "confirmDeleteTitle": {
     "message": "ବିଲୋପ ନିଶ୍ଚିତ କରିବାକୁ ପୁଣି କ୍ଲିକ କରନ୍ତୁ"

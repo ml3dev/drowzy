@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "заощаджено"
   },
+  "statForecast": {
+    "message": "доступно"
+  },
   "suspendOthers": {
     "message": "Призупинити інші"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Вкладок не знайдено"
   },
+  "tabUntitled": {
+    "message": "Без назви"
+  },
   "failedToLoad": {
     "message": "Не вдалося завантажити. Відкрийте спливаюче вікно знову, щоб повторити."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Аудіо"
+  },
+  "badgeWhitelisted": {
+    "message": "У білому списку"
   },
   "badgeProtected": {
     "message": "Захищена"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "За весь час"
   },
+  "statLifetimeRam": {
+    "message": "Усього збережено ОЗП"
+  },
+  "ramEstimateTooltip": {
+    "message": "Оцінено з використанням ~150 МБ на призупинену вкладку. Фактична економія залежить від сторінки."
+  },
+  "ramForecastTooltip": {
+    "message": "Орієнтовна пам'ять, яка звільниться, коли ваші неактивні вкладки заснуть, ~150 МБ на вкладку."
+  },
+  "suspendedToast": {
+    "message": "Призупинено $COUNT$ вкладок · звільнено ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Розбуджено $COUNT$ вкладок",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Немає інших вкладок для призупинення"
+  },
+  "noSuspendedToWake": {
+    "message": "Немає призупинених вкладок для розбудження"
+  },
+  "pinnedWontSuspend": {
+    "message": "Закріплено — не буде призупинено"
+  },
+  "audioWontSuspend": {
+    "message": "Відтворює звук — не буде призупинено"
+  },
+  "whitelistedWontSuspend": {
+    "message": "У білому списку — не буде призупинено"
+  },
+  "systemPageCantSuspend": {
+    "message": "Системна сторінка — не можна призупинити"
+  },
+  "clickToDismiss": {
+    "message": "Натисніть, щоб закрити"
+  },
+  "keepAwakeBtn": {
+    "message": "Не присипляти"
+  },
+  "suspendTimerHint": {
+    "message": "Вкладки, з яких ви перемкнулися, призупиняються після цього часу. Збільшіть його, якщо повертаєтеся до вкладок після довгих перерв."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Порада:</strong> Натисніть на іконку пазла на панелі інструментів Chrome, щоб закріпити Drowzy для доступу в один клік."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Присипляє вкладки, які вам ще потрібні?</strong> Відкрийте Drowzy → Налаштування, щоб збільшити 30-хвилинний таймер, або додайте сайт до білого списку одним кліком."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Заповнюєте форму?</strong> Увімкніть «Захищати вкладки з формами» в Налаштуваннях, щоб вкладки з незбереженим введенням не присипляли."
+  },
+  "onboardingRemapHint": {
+    "message": "Хочете інші клавіатурні скорочення? Налаштуйте їх тут →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Залишити швидкий відгук"
+  },
+  "reviewReportTitle": {
+    "message": "Повідомити про проблему"
+  },
+  "reviewDismissTitle": {
+    "message": "Закрити"
+  },
   "statMemberSince": {
     "message": "Учасник з"
+  },
+  "shareStats": {
+    "message": "Поділитися"
+  },
+  "copiedStats": {
+    "message": "Статистику скопійовано!"
   },
   "settings": {
     "message": "Налаштування"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Немає сайтів у білому списку"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Призупинення..."
   },
-  "done": {
-    "message": "Готово!"
+  "suspendingSoon": {
+    "message": "незабаром"
   },
   "waking": {
     "message": "Пробудження..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Видалити"
+  },
+  "replace": {
+    "message": "Замінити"
+  },
+  "replaceSessionTitle": {
+    "message": "Замінити поточні вкладки цим сеансом"
+  },
+  "invalidDomain": {
+    "message": "Введіть дійсний домен (наприклад, example.com)"
+  },
+  "extensionPage": {
+    "message": "Сторінка розширення"
+  },
+  "exportWhitelist": {
+    "message": "Експорт"
+  },
+  "importWhitelist": {
+    "message": "Імпорт"
+  },
+  "exportWhitelistTitle": {
+    "message": "Копіювати білий список"
+  },
+  "importWhitelistTitle": {
+    "message": "Імпортувати білий список з буфера обміну"
+  },
+  "copiedSites": {
+    "message": "Скопійовано $COUNT$ сайт(ів)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Імпортовано $COUNT$ новий(их) сайт(ів)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "У буфері обміну не знайдено дійсних доменів"
+  },
+  "clipboardReadFailed": {
+    "message": "Не вдалося прочитати буфер обміну"
+  },
+  "enjoyingDrowzy": {
+    "message": "Подобається Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Так!"
+  },
+  "reviewNo": {
+    "message": "Не дуже"
+  },
+  "whatsNew": {
+    "message": "Що нового у v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Перемкнути на світлу тему"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Параметри меню правої кнопки для призупинення та білого списку."
   },
+  "privacyPermScripting": {
+    "message": "Введення невеликого скрипту для виявлення незбережених даних форми перед призупиненням вкладки. Тільки за згодою."
+  },
+  "privacyPermSidePanel": {
+    "message": "Відображення Drowzy на бічній панелі Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Додатковий доступ до хосту, запитується на вимогу лише при увімкненні Захисту форм або Маркування призупинених вкладок. Ніколи не запитується при встановленні. Можна відкликати в будь-який час."
+  },
   "privacyContactTitle": {
     "message": "Контакти"
   },
   "privacyContactText": {
     "message": "Маєте запитання? Напишіть на drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Замінити"
+  "privacyYourDataTitle": {
+    "message": "Ваші дані"
   },
-  "replaceSessionTitle": {
-    "message": "Замінити поточні вкладки цим сеансом"
+  "privacyYourDataText": {
+    "message": "Оскільки нічого не залишає ваш браузер, немає панелі керування, облікового запису, і немає способу для нас побачити, що ви робили з Drowzy. Якщо ви видалите Drowzy, Chrome пропонує вам можливість надіслати додатковий відгук (причина видалення, браузер, ОС) через окрему веб-сторінку; це надсилання є явним і йде до анонімної форми. Ви можете пропустити це, закривши вкладку."
   },
-  "invalidDomain": {
-    "message": "Введіть дійсний домен (наприклад, example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy — open source."
   },
-  "extensionPage": {
-    "message": "Сторінка розширення"
-  },
-  "exportWhitelist": {
-    "message": "Експорт"
-  },
-  "importWhitelist": {
-    "message": "Імпорт"
-  },
-  "exportWhitelistTitle": {
-    "message": "Копіювати білий список"
-  },
-  "importWhitelistTitle": {
-    "message": "Імпортувати білий список з буфера обміну"
-  },
-  "copiedSites": {
-    "message": "Скопійовано $COUNT$ сайт(ів)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Імпортовано $COUNT$ новий(их) сайт(ів)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "У буфері обміну не знайдено дійсних доменів"
-  },
-  "clipboardReadFailed": {
-    "message": "Не вдалося прочитати буфер обміну"
-  },
-  "enjoyingDrowzy": {
-    "message": "Подобається Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Так!"
-  },
-  "reviewNo": {
-    "message": "Не дуже"
-  },
-  "whatsNew": {
-    "message": "Що нового у v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Переглянути код на GitHub"
   },
   "changelogTitle": {
     "message": "Що нового в Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Що нового"
+  },
+  "changelogVersionLabel": {
+    "message": "Версія"
   },
   "changelogCtaText": {
     "message": "Drowzy безкоштовний та з відкритим кодом. Якщо він економить пам'ять, залиште відгук або зірку на GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Закрити дублікати вкладок"
-  },
-  "tabUntitled": {
-    "message": "Без назви"
-  },
-  "badgeWhitelisted": {
-    "message": "У білому списку"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "незабаром"
-  },
-  "changelogVersionLabel": {
-    "message": "Версія"
-  },
-  "copiedStats": {
-    "message": "Статистику скопійовано!"
-  },
-  "privacyFooterLink": {
-    "message": "Переглянути код на GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy — open source."
-  },
-  "privacyPermHost": {
-    "message": "Додатковий доступ до хосту, запитується на вимогу лише при увімкненні Захисту форм або Маркування призупинених вкладок. Ніколи не запитується при встановленні. Можна відкликати в будь-який час."
-  },
-  "privacyPermScripting": {
-    "message": "Введення невеликого скрипту для виявлення незбережених даних форми перед призупиненням вкладки. Тільки за згодою."
-  },
-  "privacyPermSidePanel": {
-    "message": "Відображення Drowzy на бічній панелі Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Оскільки нічого не залишає ваш браузер, немає панелі керування, облікового запису, і немає способу для нас побачити, що ви робили з Drowzy. Якщо ви видалите Drowzy, Chrome пропонує вам можливість надіслати додатковий відгук (причина видалення, браузер, ОС) через окрему веб-сторінку; це надсилання є явним і йде до анонімної форми. Ви можете пропустити це, закривши вкладку."
-  },
-  "privacyYourDataTitle": {
-    "message": "Ваші дані"
-  },
-  "ramEstimateTooltip": {
-    "message": "Оцінено з використанням ~150 МБ на призупинену вкладку. Фактична економія залежить від сторінки."
-  },
-  "shareStats": {
-    "message": "Поділитися"
-  },
-  "statLifetimeRam": {
-    "message": "Усього збережено ОЗП"
   },
   "confirmDeleteTitle": {
     "message": "Натисніть ще раз, щоб підтвердити видалення"

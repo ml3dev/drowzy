@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "säästetty"
   },
+  "statForecast": {
+    "message": "saatavilla"
+  },
   "suspendOthers": {
     "message": "Keskeytä muut"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Välilehtiä ei löytynyt"
   },
+  "tabUntitled": {
+    "message": "Nimetön"
+  },
   "failedToLoad": {
     "message": "Lataus epäonnistui. Avaa ponnahdusikkuna uudelleen."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Ääni"
+  },
+  "badgeWhitelisted": {
+    "message": "Sallittu"
   },
   "badgeProtected": {
     "message": "Suojattu"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Kaikkien aikojen"
   },
+  "statLifetimeRam": {
+    "message": "Yhteensä säästetty RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "Arvioitu käyttäen ~150 Mt keskeytettyä välilehteä kohti. Todelliset säästöt vaihtelevat sivun mukaan."
+  },
+  "ramForecastTooltip": {
+    "message": "Arvioitu vapautuva muisti, kun joutilaina olevat välilehtesi nukahtavat, noin 150 Mt välilehteä kohden."
+  },
+  "suspendedToast": {
+    "message": "Pysäytetty $COUNT$ välilehteä · ~$RAM$ vapautettu",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Herätetty $COUNT$ välilehteä",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Ei muita välilehtiä pysäytettäväksi"
+  },
+  "noSuspendedToWake": {
+    "message": "Ei pysäytettyjä välilehtiä herätettäväksi"
+  },
+  "pinnedWontSuspend": {
+    "message": "Kiinnitetty — ei pysäytetä"
+  },
+  "audioWontSuspend": {
+    "message": "Ääni soi — ei pysäytetä"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Sallittujen luettelossa — ei pysäytetä"
+  },
+  "systemPageCantSuspend": {
+    "message": "Järjestelmäsivu — ei voi pysäyttää"
+  },
+  "clickToDismiss": {
+    "message": "Sulje napsauttamalla"
+  },
+  "keepAwakeBtn": {
+    "message": "Pidä hereillä"
+  },
+  "suspendTimerHint": {
+    "message": "Välilehdet, joista vaihdoit pois, suspendataan tämän ajan kuluttua. Lisää aikaa, jos palaat välilehtiin pitkien taukojen jälkeen."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Vinkki:</strong> Napsauta Chromen työkalupalkin palapelikuvaketta kiinnittääksesi Drowzyn yhden napsautuksen päähän."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Suspendoiko vielä tarvitsemiasi välilehtiä?</strong> Avaa Drowzy → Asetukset ja nosta 30 minuutin ajastinta, tai lisää sivusto valkoiselle listalle yhdellä klikkauksella."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Täytätkö lomaketta?</strong> Ota käyttöön \"Suojaa lomakkeita sisältävät välilehdet\" Asetuksissa, jotta tallentamattomia syötteitä sisältäviä välilehtiä ei suspendoida."
+  },
+  "onboardingRemapHint": {
+    "message": "Haluatko muita pikanäppäimiä? Mukauta niitä täältä →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Jätä nopea arvio"
+  },
+  "reviewReportTitle": {
+    "message": "Ilmoita ongelmasta"
+  },
+  "reviewDismissTitle": {
+    "message": "Sulje"
+  },
   "statMemberSince": {
     "message": "Jäsen alkaen"
+  },
+  "shareStats": {
+    "message": "Jaa"
+  },
+  "copiedStats": {
+    "message": "Tilastot kopioitu!"
   },
   "settings": {
     "message": "Asetukset"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Ei sallittuja sivustoja"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Keskeytetään..."
   },
-  "done": {
-    "message": "Valmis!"
+  "suspendingSoon": {
+    "message": "pian"
   },
   "waking": {
     "message": "Herätetään..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Poista"
+  },
+  "replace": {
+    "message": "Korvaa"
+  },
+  "replaceSessionTitle": {
+    "message": "Korvaa nykyiset välilehdet tällä istunnolla"
+  },
+  "invalidDomain": {
+    "message": "Syötä kelvollinen verkkotunnus (esim. example.com)"
+  },
+  "extensionPage": {
+    "message": "Laajennussivu"
+  },
+  "exportWhitelist": {
+    "message": "Vie"
+  },
+  "importWhitelist": {
+    "message": "Tuo"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopioi sallittujen lista"
+  },
+  "importWhitelistTitle": {
+    "message": "Tuo sallittujen lista leikepöydältä"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ sivustoa kopioitu",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ uutta sivustoa tuotu",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Leikepöydältä ei löytynyt kelvollisia verkkotunnuksia"
+  },
+  "clipboardReadFailed": {
+    "message": "Leikepöytää ei voitu lukea"
+  },
+  "enjoyingDrowzy": {
+    "message": "Pidätkö Drowzystä?"
+  },
+  "reviewYes": {
+    "message": "Kyllä!"
+  },
+  "reviewNo": {
+    "message": "Ei oikeastaan"
+  },
+  "whatsNew": {
+    "message": "Uutta versiossa 1.1.0 v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Vaihda vaaleaan tilaan"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Hiiren kakkospainikevalikon vaihtoehdot keskeyttämiseen ja sallittujen luetteloon."
   },
+  "privacyPermScripting": {
+    "message": "Pienen komentosarjan injektoiminen tallentamattomien lomaketietojen havaitsemiseksi ennen välilehden keskeyttämistä. Vain valinnainen."
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzyn näyttäminen Chromen sivupaneelissa."
+  },
+  "privacyPermHost": {
+    "message": "Valinnainen isäntäkäyttö, pyydetään tarvittaessa vain, kun otat käyttöön Lomakesuojauksen tai Keskeytettyjen välilehtien merkitsemisen. Ei koskaan pyydetä asennuksessa. Peruutettavissa milloin tahansa."
+  },
   "privacyContactTitle": {
     "message": "Yhteystiedot"
   },
   "privacyContactText": {
     "message": "Kysyttävää? Ota yhteyttä osoitteessa drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Korvaa"
+  "privacyYourDataTitle": {
+    "message": "Sinun tietosi"
   },
-  "replaceSessionTitle": {
-    "message": "Korvaa nykyiset välilehdet tällä istunnolla"
+  "privacyYourDataText": {
+    "message": "Koska mikään ei lähde selaimestasi, ei ole hallintapaneelia, tiliä eikä tapaa nähdä, mitä olet tehnyt Drowzyllä. Jos poistat Drowzyn, Chrome tarjoaa sinulle mahdollisuuden lähettää valinnainen palaute (poiston syy, selain, käyttöjärjestelmä) erillisen verkkosivun kautta; tämä lähetys on nimenomainen ja menee anonyymiin lomakkeeseen. Voit ohittaa sen sulkemalla välilehden."
   },
-  "invalidDomain": {
-    "message": "Syötä kelvollinen verkkotunnus (esim. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy on avoimen lähdekoodin."
   },
-  "extensionPage": {
-    "message": "Laajennussivu"
-  },
-  "exportWhitelist": {
-    "message": "Vie"
-  },
-  "importWhitelist": {
-    "message": "Tuo"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopioi sallittujen lista"
-  },
-  "importWhitelistTitle": {
-    "message": "Tuo sallittujen lista leikepöydältä"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ sivustoa kopioitu",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ uutta sivustoa tuotu",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Leikepöydältä ei löytynyt kelvollisia verkkotunnuksia"
-  },
-  "clipboardReadFailed": {
-    "message": "Leikepöytää ei voitu lukea"
-  },
-  "enjoyingDrowzy": {
-    "message": "Pidätkö Drowzystä?"
-  },
-  "reviewYes": {
-    "message": "Kyllä!"
-  },
-  "reviewNo": {
-    "message": "Ei oikeastaan"
-  },
-  "whatsNew": {
-    "message": "Uutta versiossa 1.1.0 v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Selaa koodia GitHubissa"
   },
   "changelogTitle": {
     "message": "Uutta Drowzyssä"
   },
   "changelogWhatsNew": {
     "message": "Uutta"
+  },
+  "changelogVersionLabel": {
+    "message": "Versio"
   },
   "changelogCtaText": {
     "message": "Drowzy on ilmainen ja avoimen lähdekoodin. Jos se säästää muistiasi, harkitse arvostelun jättämistä tai tähden antamista GitHubissa."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Sulje kaksoiskappaleet"
-  },
-  "tabUntitled": {
-    "message": "Nimetön"
-  },
-  "badgeWhitelisted": {
-    "message": "Sallittu"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "pian"
-  },
-  "changelogVersionLabel": {
-    "message": "Versio"
-  },
-  "copiedStats": {
-    "message": "Tilastot kopioitu!"
-  },
-  "privacyFooterLink": {
-    "message": "Selaa koodia GitHubissa"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy on avoimen lähdekoodin."
-  },
-  "privacyPermHost": {
-    "message": "Valinnainen isäntäkäyttö, pyydetään tarvittaessa vain, kun otat käyttöön Lomakesuojauksen tai Keskeytettyjen välilehtien merkitsemisen. Ei koskaan pyydetä asennuksessa. Peruutettavissa milloin tahansa."
-  },
-  "privacyPermScripting": {
-    "message": "Pienen komentosarjan injektoiminen tallentamattomien lomaketietojen havaitsemiseksi ennen välilehden keskeyttämistä. Vain valinnainen."
-  },
-  "privacyPermSidePanel": {
-    "message": "Drowzyn näyttäminen Chromen sivupaneelissa."
-  },
-  "privacyYourDataText": {
-    "message": "Koska mikään ei lähde selaimestasi, ei ole hallintapaneelia, tiliä eikä tapaa nähdä, mitä olet tehnyt Drowzyllä. Jos poistat Drowzyn, Chrome tarjoaa sinulle mahdollisuuden lähettää valinnainen palaute (poiston syy, selain, käyttöjärjestelmä) erillisen verkkosivun kautta; tämä lähetys on nimenomainen ja menee anonyymiin lomakkeeseen. Voit ohittaa sen sulkemalla välilehden."
-  },
-  "privacyYourDataTitle": {
-    "message": "Sinun tietosi"
-  },
-  "ramEstimateTooltip": {
-    "message": "Arvioitu käyttäen ~150 Mt keskeytettyä välilehteä kohti. Todelliset säästöt vaihtelevat sivun mukaan."
-  },
-  "shareStats": {
-    "message": "Jaa"
-  },
-  "statLifetimeRam": {
-    "message": "Yhteensä säästetty RAM"
   },
   "confirmDeleteTitle": {
     "message": "Vahvista poisto napsauttamalla uudelleen"

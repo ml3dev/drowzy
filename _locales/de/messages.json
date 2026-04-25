@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "gespart"
   },
+  "statForecast": {
+    "message": "verfügbar"
+  },
   "suspendOthers": {
     "message": "Andere suspendieren"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Keine Tabs gefunden"
   },
+  "tabUntitled": {
+    "message": "Ohne Titel"
+  },
   "failedToLoad": {
     "message": "Laden fehlgeschlagen. Popup erneut öffnen, um es erneut zu versuchen."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Freigegeben"
   },
   "badgeProtected": {
     "message": "Geschützt"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Insgesamt"
   },
+  "statLifetimeRam": {
+    "message": "Gesamter RAM gespart"
+  },
+  "ramEstimateTooltip": {
+    "message": "Geschätzt mit ~150 MB pro suspendiertem Tab. Tatsächliche Einsparungen variieren je nach Seite."
+  },
+  "ramForecastTooltip": {
+    "message": "Geschätzter Speicher, der freigegeben wird, sobald Ihre inaktiven Tabs einschlafen, bei ~150 MB pro Tab."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ Tab(s) suspendiert · ~$RAM$ freigegeben",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ Tab(s) aufgeweckt",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Keine anderen Tabs zum Suspendieren"
+  },
+  "noSuspendedToWake": {
+    "message": "Keine suspendierten Tabs zum Aufwecken"
+  },
+  "pinnedWontSuspend": {
+    "message": "Angeheftet — wird nicht suspendiert"
+  },
+  "audioWontSuspend": {
+    "message": "Audio läuft — wird nicht suspendiert"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Auf der Whitelist — wird nicht suspendiert"
+  },
+  "systemPageCantSuspend": {
+    "message": "Systemseite — kann nicht suspendiert werden"
+  },
+  "clickToDismiss": {
+    "message": "Zum Schließen klicken"
+  },
+  "keepAwakeBtn": {
+    "message": "Aktiv halten"
+  },
+  "suspendTimerHint": {
+    "message": "Tabs, von denen du weggewechselt hast, werden nach dieser Zeit suspendiert. Erhöhe sie, wenn du nach längeren Pausen zu Tabs zurückkehrst."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Tipp:</strong> Klicken Sie in der Chrome-Symbolleiste auf das Puzzleteil-Symbol, um Drowzy für den Schnellzugriff anzuheften."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Tabs, die du noch brauchst, werden suspendiert?</strong> Öffne Drowzy → Einstellungen, um den 30-Minuten-Timer zu erhöhen, oder füge die Seite mit einem Klick zur Whitelist hinzu."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Füllst du ein Formular aus?</strong> Aktiviere „Tabs mit Formularen schützen\" in den Einstellungen, damit Tabs mit ungespeicherter Eingabe nicht suspendiert werden."
+  },
+  "onboardingRemapHint": {
+    "message": "Möchten Sie andere Tastenkombinationen? Hier anpassen →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Schnelle Bewertung abgeben"
+  },
+  "reviewReportTitle": {
+    "message": "Problem melden"
+  },
+  "reviewDismissTitle": {
+    "message": "Schließen"
+  },
   "statMemberSince": {
     "message": "Mitglied seit"
+  },
+  "shareStats": {
+    "message": "Teilen"
+  },
+  "copiedStats": {
+    "message": "Statistik kopiert!"
   },
   "settings": {
     "message": "Einstellungen"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Keine Websites auf der Whitelist"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Wird suspendiert..."
   },
-  "done": {
-    "message": "Fertig!"
+  "suspendingSoon": {
+    "message": "bald"
   },
   "waking": {
     "message": "Wird aufgeweckt..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Entfernen"
+  },
+  "replace": {
+    "message": "Ersetzen"
+  },
+  "replaceSessionTitle": {
+    "message": "Aktuelle Tabs durch diese Sitzung ersetzen"
+  },
+  "invalidDomain": {
+    "message": "Geben Sie eine gültige Domain ein (z.B. example.com)"
+  },
+  "extensionPage": {
+    "message": "Erweiterungsseite"
+  },
+  "exportWhitelist": {
+    "message": "Exportieren"
+  },
+  "importWhitelist": {
+    "message": "Importieren"
+  },
+  "exportWhitelistTitle": {
+    "message": "Whitelist kopieren"
+  },
+  "importWhitelistTitle": {
+    "message": "Whitelist aus Zwischenablage importieren"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ Seite(n) kopiert",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ neue Seite(n) importiert",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Keine gültigen Domains in der Zwischenablage gefunden"
+  },
+  "clipboardReadFailed": {
+    "message": "Zwischenablage konnte nicht gelesen werden"
+  },
+  "enjoyingDrowzy": {
+    "message": "Gefällt Ihnen Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ja!"
+  },
+  "reviewNo": {
+    "message": "Nicht wirklich"
+  },
+  "whatsNew": {
+    "message": "Neu in v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Zum hellen Modus wechseln"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Rechtsklick-Menüoptionen zum Suspendieren und für die Whitelist."
   },
+  "privacyPermScripting": {
+    "message": "Einfügen eines kleinen Skripts zur Erkennung ungespeicherter Formulardaten vor dem Suspendieren eines Tabs. Nur Opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Anzeigen von Drowzy im Seitenbereich von Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Optionaler Hostzugriff, nur bei Bedarf angefordert, wenn Sie Formularschutz oder Markierung suspendierter Tabs aktivieren. Wird nie bei der Installation angefordert. Jederzeit widerrufbar."
+  },
   "privacyContactTitle": {
     "message": "Kontakt"
   },
   "privacyContactText": {
     "message": "Fragen? Schreiben Sie an drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Ersetzen"
+  "privacyYourDataTitle": {
+    "message": "Ihre Daten"
   },
-  "replaceSessionTitle": {
-    "message": "Aktuelle Tabs durch diese Sitzung ersetzen"
+  "privacyYourDataText": {
+    "message": "Da nichts Ihren Browser verlässt, gibt es kein Dashboard, kein Konto und keine Möglichkeit für uns, zu sehen, was Sie mit Drowzy gemacht haben. Wenn Sie Drowzy deinstallieren, bietet Chrome Ihnen die Möglichkeit, optionales Feedback (Grund für Deinstallation, Browser, Betriebssystem) über eine separate Webseite zu senden; diese Übermittlung ist explizit und geht an ein anonymes Formular. Sie können es überspringen, indem Sie den Tab schließen."
   },
-  "invalidDomain": {
-    "message": "Geben Sie eine gültige Domain ein (z.B. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy ist Open Source."
   },
-  "extensionPage": {
-    "message": "Erweiterungsseite"
-  },
-  "exportWhitelist": {
-    "message": "Exportieren"
-  },
-  "importWhitelist": {
-    "message": "Importieren"
-  },
-  "exportWhitelistTitle": {
-    "message": "Whitelist kopieren"
-  },
-  "importWhitelistTitle": {
-    "message": "Whitelist aus Zwischenablage importieren"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ Seite(n) kopiert",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ neue Seite(n) importiert",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Keine gültigen Domains in der Zwischenablage gefunden"
-  },
-  "clipboardReadFailed": {
-    "message": "Zwischenablage konnte nicht gelesen werden"
-  },
-  "enjoyingDrowzy": {
-    "message": "Gefällt Ihnen Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ja!"
-  },
-  "reviewNo": {
-    "message": "Nicht wirklich"
-  },
-  "whatsNew": {
-    "message": "Neu in v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Code auf GitHub ansehen"
   },
   "changelogTitle": {
     "message": "Neuheiten in Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Neuheiten"
+  },
+  "changelogVersionLabel": {
+    "message": "Version"
   },
   "changelogCtaText": {
     "message": "Drowzy ist kostenlos und Open Source. Wenn es Ihnen Speicher spart, hinterlassen Sie eine Bewertung oder geben Sie uns einen Stern auf GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Doppelte Tabs schließen"
-  },
-  "tabUntitled": {
-    "message": "Ohne Titel"
-  },
-  "badgeWhitelisted": {
-    "message": "Freigegeben"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "bald"
-  },
-  "changelogVersionLabel": {
-    "message": "Version"
-  },
-  "copiedStats": {
-    "message": "Statistik kopiert!"
-  },
-  "privacyFooterLink": {
-    "message": "Code auf GitHub ansehen"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy ist Open Source."
-  },
-  "privacyPermHost": {
-    "message": "Optionaler Hostzugriff, nur bei Bedarf angefordert, wenn Sie Formularschutz oder Markierung suspendierter Tabs aktivieren. Wird nie bei der Installation angefordert. Jederzeit widerrufbar."
-  },
-  "privacyPermScripting": {
-    "message": "Einfügen eines kleinen Skripts zur Erkennung ungespeicherter Formulardaten vor dem Suspendieren eines Tabs. Nur Opt-in."
-  },
-  "privacyPermSidePanel": {
-    "message": "Anzeigen von Drowzy im Seitenbereich von Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Da nichts Ihren Browser verlässt, gibt es kein Dashboard, kein Konto und keine Möglichkeit für uns, zu sehen, was Sie mit Drowzy gemacht haben. Wenn Sie Drowzy deinstallieren, bietet Chrome Ihnen die Möglichkeit, optionales Feedback (Grund für Deinstallation, Browser, Betriebssystem) über eine separate Webseite zu senden; diese Übermittlung ist explizit und geht an ein anonymes Formular. Sie können es überspringen, indem Sie den Tab schließen."
-  },
-  "privacyYourDataTitle": {
-    "message": "Ihre Daten"
-  },
-  "ramEstimateTooltip": {
-    "message": "Geschätzt mit ~150 MB pro suspendiertem Tab. Tatsächliche Einsparungen variieren je nach Seite."
-  },
-  "shareStats": {
-    "message": "Teilen"
-  },
-  "statLifetimeRam": {
-    "message": "Gesamter RAM gespart"
   },
   "confirmDeleteTitle": {
     "message": "Erneut klicken, um Löschung zu bestätigen"

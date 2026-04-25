@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "saglabāts"
   },
+  "statForecast": {
+    "message": "pieejams"
+  },
   "suspendOthers": {
     "message": "Apturēt pārējās"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Cilnes nav atrastas"
   },
+  "tabUntitled": {
+    "message": "Bez nosaukuma"
+  },
   "failedToLoad": {
     "message": "Neizdevās ielādēt. Atveriet uznirstošo logu vēlreiz."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "Baltajā sarakstā"
   },
   "badgeProtected": {
     "message": "Aizsargāta"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Kopā"
   },
+  "statLifetimeRam": {
+    "message": "Kopā ietaupīts RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "Aprēķināts, izmantojot ~150 MB uz apturēto cilni. Faktiskais ietaupījums atšķiras atkarībā no lapas."
+  },
+  "ramForecastTooltip": {
+    "message": "Aptuvenā atmiņa, kas atbrīvosies, kad jūsu neaktīvās cilnes iemigs, ~150 MB uz cilni."
+  },
+  "suspendedToast": {
+    "message": "Apturētas $COUNT$ cilne(s) · atbrīvots ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Pamodinātas $COUNT$ cilne(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Nav citu ciļņu, ko apturēt"
+  },
+  "noSuspendedToWake": {
+    "message": "Nav apturētu ciļņu, ko pamodināt"
+  },
+  "pinnedWontSuspend": {
+    "message": "Piesprausta — netiks apturēta"
+  },
+  "audioWontSuspend": {
+    "message": "Atskaņo audio — netiks apturēta"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Baltajā sarakstā — netiks apturēta"
+  },
+  "systemPageCantSuspend": {
+    "message": "Sistēmas lapa — nevar apturēt"
+  },
+  "clickToDismiss": {
+    "message": "Noklikšķiniet, lai aizvērtu"
+  },
+  "keepAwakeBtn": {
+    "message": "Turēt aktīvu"
+  },
+  "suspendTimerHint": {
+    "message": "Cilnes, no kurām pārslēdzāties, tiek pārtrauktas pēc šī laika. Palieliniet to, ja atgriežaties pie cilnēm pēc ilgiem pārtraukumiem."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Padoms:</strong> Noklikšķiniet uz puzles ikonas Chrome rīkjoslā, lai piespraustu Drowzy vienas piespiešanas piekļuvei."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Pārtrauc cilnes, kuras vēl izmantojat?</strong> Atveriet Drowzy → Iestatījumi, lai palielinātu 30 minūšu taimeri, vai pievienojiet vietni baltajam sarakstam ar vienu klikšķi."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Aizpildāt veidlapu?</strong> Ieslēdziet \"Aizsargāt cilnes ar veidlapām\" sadaļā Iestatījumi, lai cilnes ar nesaglabātu ievadi netiktu pārtrauktas."
+  },
+  "onboardingRemapHint": {
+    "message": "Vēlaties citus tastatūras īsinājumtaustiņus? Pielāgojiet tos šeit →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Atstāj ātru atsauksmi"
+  },
+  "reviewReportTitle": {
+    "message": "Ziņot par problēmu"
+  },
+  "reviewDismissTitle": {
+    "message": "Aizvērt"
+  },
   "statMemberSince": {
     "message": "Lietotājs kopš"
+  },
+  "shareStats": {
+    "message": "Kopīgot"
+  },
+  "copiedStats": {
+    "message": "Statistika nokopēta!"
   },
   "settings": {
     "message": "Iestatījumi"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Nav vietņu baltajā sarakstā"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Aptur..."
   },
-  "done": {
-    "message": "Gatavs!"
+  "suspendingSoon": {
+    "message": "drīz"
   },
   "waking": {
     "message": "Modina..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Noņemt"
+  },
+  "replace": {
+    "message": "Aizvietot"
+  },
+  "replaceSessionTitle": {
+    "message": "Aizvietot pašreizējās cilnes ar šo sesiju"
+  },
+  "invalidDomain": {
+    "message": "Ievadiet derīgu domēnu (piem. example.com)"
+  },
+  "extensionPage": {
+    "message": "Paplašinājuma lapa"
+  },
+  "exportWhitelist": {
+    "message": "Eksportēt"
+  },
+  "importWhitelist": {
+    "message": "Importēt"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopēt balto sarakstu"
+  },
+  "importWhitelistTitle": {
+    "message": "Importēt balto sarakstu no starpliktuves"
+  },
+  "copiedSites": {
+    "message": "Nokopēts(-i) $COUNT$ vietne(-es)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Importēts(-i) $COUNT$ jauna(-as) vietne(-es)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Starpliktuvē nav atrasti derīgi domēni"
+  },
+  "clipboardReadFailed": {
+    "message": "Neizdevās nolasīt starpliktuvi"
+  },
+  "enjoyingDrowzy": {
+    "message": "Vai Drowzy patīk?"
+  },
+  "reviewYes": {
+    "message": "Jā!"
+  },
+  "reviewNo": {
+    "message": "Ne īsti"
+  },
+  "whatsNew": {
+    "message": "Kas jauns v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Pārslēgt uz gaišo režīmu"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Labā klikšķa izvēlnes opcijas apturēšanai un baltajam sarakstam."
   },
+  "privacyPermScripting": {
+    "message": "Maza skripta ievadīšana, lai atklātu nesaglabātos veidlapas datus pirms cilnes apturēšanas. Tikai pēc izvēles."
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzy attēlošana Chrome sānu panelī."
+  },
+  "privacyPermHost": {
+    "message": "Izvēles resursdatora piekļuve, kas tiek pieprasīta pēc pieprasījuma tikai tad, kad iespējojat Veidlapu aizsardzību vai Apturētu cilņu marķējumu. Nekad netiek prasīts uzstādīšanas laikā. Atsaucams jebkurā laikā."
+  },
   "privacyContactTitle": {
     "message": "Kontakti"
   },
   "privacyContactText": {
     "message": "Jautājumi? Sazinieties ar mums: drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Aizvietot"
+  "privacyYourDataTitle": {
+    "message": "Jūsu dati"
   },
-  "replaceSessionTitle": {
-    "message": "Aizvietot pašreizējās cilnes ar šo sesiju"
+  "privacyYourDataText": {
+    "message": "Tā kā nekas nepamet jūsu pārlūkprogrammu, nav informācijas paneļa, konta un veida, kā mēs redzētu, ko esat darījis ar Drowzy. Ja atinstalējat Drowzy, Chrome piedāvā iespēju nosūtīt izvēles atsauksmes (atinstalēšanas iemesls, pārlūkprogramma, OS) caur atsevišķu tīmekļa lapu; šis iesniegums ir nepārprotams un iet uz anonīmu veidlapu. Varat to izlaist, aizverot cilni."
   },
-  "invalidDomain": {
-    "message": "Ievadiet derīgu domēnu (piem. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy ir atvērtā koda."
   },
-  "extensionPage": {
-    "message": "Paplašinājuma lapa"
-  },
-  "exportWhitelist": {
-    "message": "Eksportēt"
-  },
-  "importWhitelist": {
-    "message": "Importēt"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopēt balto sarakstu"
-  },
-  "importWhitelistTitle": {
-    "message": "Importēt balto sarakstu no starpliktuves"
-  },
-  "copiedSites": {
-    "message": "Nokopēts(-i) $COUNT$ vietne(-es)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Importēts(-i) $COUNT$ jauna(-as) vietne(-es)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Starpliktuvē nav atrasti derīgi domēni"
-  },
-  "clipboardReadFailed": {
-    "message": "Neizdevās nolasīt starpliktuvi"
-  },
-  "enjoyingDrowzy": {
-    "message": "Vai Drowzy patīk?"
-  },
-  "reviewYes": {
-    "message": "Jā!"
-  },
-  "reviewNo": {
-    "message": "Ne īsti"
-  },
-  "whatsNew": {
-    "message": "Kas jauns v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Pārlūkot kodu GitHub"
   },
   "changelogTitle": {
     "message": "Kas jauns Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Kas jauns"
+  },
+  "changelogVersionLabel": {
+    "message": "Versija"
   },
   "changelogCtaText": {
     "message": "Drowzy ir bezmaksas un atvērtā koda. Ja tas ietaupa atmiņu, atstājiet atsauksmi vai zvaigznīti GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Aizvērt ciļņu duplikātus"
-  },
-  "tabUntitled": {
-    "message": "Bez nosaukuma"
-  },
-  "badgeWhitelisted": {
-    "message": "Baltajā sarakstā"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "drīz"
-  },
-  "changelogVersionLabel": {
-    "message": "Versija"
-  },
-  "copiedStats": {
-    "message": "Statistika nokopēta!"
-  },
-  "privacyFooterLink": {
-    "message": "Pārlūkot kodu GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy ir atvērtā koda."
-  },
-  "privacyPermHost": {
-    "message": "Izvēles resursdatora piekļuve, kas tiek pieprasīta pēc pieprasījuma tikai tad, kad iespējojat Veidlapu aizsardzību vai Apturētu cilņu marķējumu. Nekad netiek prasīts uzstādīšanas laikā. Atsaucams jebkurā laikā."
-  },
-  "privacyPermScripting": {
-    "message": "Maza skripta ievadīšana, lai atklātu nesaglabātos veidlapas datus pirms cilnes apturēšanas. Tikai pēc izvēles."
-  },
-  "privacyPermSidePanel": {
-    "message": "Drowzy attēlošana Chrome sānu panelī."
-  },
-  "privacyYourDataText": {
-    "message": "Tā kā nekas nepamet jūsu pārlūkprogrammu, nav informācijas paneļa, konta un veida, kā mēs redzētu, ko esat darījis ar Drowzy. Ja atinstalējat Drowzy, Chrome piedāvā iespēju nosūtīt izvēles atsauksmes (atinstalēšanas iemesls, pārlūkprogramma, OS) caur atsevišķu tīmekļa lapu; šis iesniegums ir nepārprotams un iet uz anonīmu veidlapu. Varat to izlaist, aizverot cilni."
-  },
-  "privacyYourDataTitle": {
-    "message": "Jūsu dati"
-  },
-  "ramEstimateTooltip": {
-    "message": "Aprēķināts, izmantojot ~150 MB uz apturēto cilni. Faktiskais ietaupījums atšķiras atkarībā no lapas."
-  },
-  "shareStats": {
-    "message": "Kopīgot"
-  },
-  "statLifetimeRam": {
-    "message": "Kopā ietaupīts RAM"
   },
   "confirmDeleteTitle": {
     "message": "Noklikšķiniet vēlreiz, lai apstiprinātu dzēšanu"

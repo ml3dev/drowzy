@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "ذخیره‌شده"
   },
+  "statForecast": {
+    "message": "موجود"
+  },
   "suspendOthers": {
     "message": "تعلیق سایرین"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "زبانه‌ای یافت نشد"
   },
+  "tabUntitled": {
+    "message": "بدون عنوان"
+  },
   "failedToLoad": {
     "message": "بارگذاری ناموفق بود. پاپ‌آپ را دوباره باز کنید."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "صدا"
+  },
+  "badgeWhitelisted": {
+    "message": "در لیست سفید"
   },
   "badgeProtected": {
     "message": "محافظت‌شده"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "از ابتدا"
   },
+  "statLifetimeRam": {
+    "message": "کل RAM ذخیره شده"
+  },
+  "ramEstimateTooltip": {
+    "message": "با استفاده از ~150 مگابایت در هر برگه معلق تخمین زده شده است. صرفه‌جویی واقعی بر اساس صفحه متفاوت است."
+  },
+  "ramForecastTooltip": {
+    "message": "حافظه تخمینی که با خوابیدن زبانه‌های بیکار شما آزاد می‌شود، به ازای هر زبانه ~150 مگابایت."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ زبانه معلق شد · ~$RAM$ آزاد شد",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ زبانه بیدار شد",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "زبانه دیگری برای تعلیق نیست"
+  },
+  "noSuspendedToWake": {
+    "message": "زبانه معلقی برای بیدار کردن نیست"
+  },
+  "pinnedWontSuspend": {
+    "message": "سنجاق شده — معلق نخواهد شد"
+  },
+  "audioWontSuspend": {
+    "message": "در حال پخش صدا — معلق نخواهد شد"
+  },
+  "whitelistedWontSuspend": {
+    "message": "در فهرست سفید — معلق نخواهد شد"
+  },
+  "systemPageCantSuspend": {
+    "message": "صفحه سیستم — قابل تعلیق نیست"
+  },
+  "clickToDismiss": {
+    "message": "برای بستن کلیک کنید"
+  },
+  "keepAwakeBtn": {
+    "message": "فعال نگه دار"
+  },
+  "suspendTimerHint": {
+    "message": "تب‌هایی که از آن‌ها خارج شده‌اید پس از این مدت معلق می‌شوند. اگر پس از وقفه‌های طولانی به تب‌ها برمی‌گردید، آن را افزایش دهید."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>نکته:</strong> برای دسترسی یک‌کلیکی به Drowzy، روی نماد پازل در نوار ابزار Chrome کلیک کنید."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>تب‌هایی را که هنوز می‌خواهید معلق می‌کند؟</strong> Drowzy → تنظیمات را باز کنید تا تایمر ۳۰ دقیقه را افزایش دهید، یا سایت را با یک کلیک به فهرست سفید اضافه کنید."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>در حال پر کردن فرم هستید؟</strong> در تنظیمات «حفاظت از تب‌های دارای فرم» را فعال کنید تا تب‌های با ورودی ذخیره‌نشده معلق نشوند."
+  },
+  "onboardingRemapHint": {
+    "message": "میانبرهای صفحه‌کلید دیگری می‌خواهید؟ آنها را اینجا سفارشی کنید ←"
+  },
+  "reviewLeaveTitle": {
+    "message": "نظر سریع بدهید"
+  },
+  "reviewReportTitle": {
+    "message": "گزارش مشکل"
+  },
+  "reviewDismissTitle": {
+    "message": "رد کردن"
+  },
   "statMemberSince": {
     "message": "عضو از"
+  },
+  "shareStats": {
+    "message": "اشتراک‌گذاری"
+  },
+  "copiedStats": {
+    "message": "آمار کپی شد!"
   },
   "settings": {
     "message": "تنظیمات"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "سایتی در لیست سفید نیست"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "در حال تعلیق..."
   },
-  "done": {
-    "message": "انجام شد!"
+  "suspendingSoon": {
+    "message": "به‌زودی"
   },
   "waking": {
     "message": "در حال بیدار کردن..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "حذف"
+  },
+  "replace": {
+    "message": "جایگزینی"
+  },
+  "replaceSessionTitle": {
+    "message": "جایگزینی تب‌های فعلی با این جلسه"
+  },
+  "invalidDomain": {
+    "message": "یک دامنه معتبر وارد کنید (مثلاً example.com)"
+  },
+  "extensionPage": {
+    "message": "صفحه افزونه"
+  },
+  "exportWhitelist": {
+    "message": "صدور"
+  },
+  "importWhitelist": {
+    "message": "واردات"
+  },
+  "exportWhitelistTitle": {
+    "message": "کپی لیست سفید"
+  },
+  "importWhitelistTitle": {
+    "message": "واردات لیست سفید از کلیپ‌بورد"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ سایت کپی شد",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ سایت جدید وارد شد",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "دامنه معتبری در کلیپ‌بورد یافت نشد"
+  },
+  "clipboardReadFailed": {
+    "message": "خواندن کلیپ‌بورد ممکن نشد"
+  },
+  "enjoyingDrowzy": {
+    "message": "از Drowzy لذت می‌برید؟"
+  },
+  "reviewYes": {
+    "message": "بله!"
+  },
+  "reviewNo": {
+    "message": "نه واقعاً"
+  },
+  "whatsNew": {
+    "message": "تازه‌ها در v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "تغییر به حالت روشن"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "گزینه‌های منوی کلیک راست برای تعلیق و فهرست سفید."
   },
+  "privacyPermScripting": {
+    "message": "تزریق یک اسکریپت کوچک برای شناسایی داده‌های فرم ذخیره‌نشده قبل از تعلیق برگه. فقط اختیاری."
+  },
+  "privacyPermSidePanel": {
+    "message": "نمایش Drowzy در پنل کناری Chrome."
+  },
+  "privacyPermHost": {
+    "message": "دسترسی میزبان اختیاری، فقط هنگام فعال کردن محافظت از فرم یا علامت‌گذاری برگه‌های معلق درخواست می‌شود. هرگز در نصب درخواست نمی‌شود. در هر زمان قابل لغو است."
+  },
   "privacyContactTitle": {
     "message": "تماس"
   },
   "privacyContactText": {
     "message": "سؤالی دارید؟ با drowzyextension@gmail.com تماس بگیرید"
   },
-  "replace": {
-    "message": "جایگزینی"
+  "privacyYourDataTitle": {
+    "message": "داده‌های شما"
   },
-  "replaceSessionTitle": {
-    "message": "جایگزینی تب‌های فعلی با این جلسه"
+  "privacyYourDataText": {
+    "message": "از آنجا که هیچ چیز از مرورگر شما خارج نمی‌شود، هیچ داشبورد، هیچ حساب کاربری و هیچ راهی برای ما وجود ندارد که ببینیم با Drowzy چه کرده‌اید. اگر Drowzy را حذف کنید، Chrome به شما این امکان را می‌دهد که بازخورد اختیاری (دلیل حذف، مرورگر، سیستم‌عامل) را از طریق یک صفحه وب جداگانه ارسال کنید؛ این ارسال صریح است و به فرم ناشناس می‌رود. می‌توانید با بستن برگه آن را رد کنید."
   },
-  "invalidDomain": {
-    "message": "یک دامنه معتبر وارد کنید (مثلاً example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy منبع‌باز است."
   },
-  "extensionPage": {
-    "message": "صفحه افزونه"
-  },
-  "exportWhitelist": {
-    "message": "صدور"
-  },
-  "importWhitelist": {
-    "message": "واردات"
-  },
-  "exportWhitelistTitle": {
-    "message": "کپی لیست سفید"
-  },
-  "importWhitelistTitle": {
-    "message": "واردات لیست سفید از کلیپ‌بورد"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ سایت کپی شد",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ سایت جدید وارد شد",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "دامنه معتبری در کلیپ‌بورد یافت نشد"
-  },
-  "clipboardReadFailed": {
-    "message": "خواندن کلیپ‌بورد ممکن نشد"
-  },
-  "enjoyingDrowzy": {
-    "message": "از Drowzy لذت می‌برید؟"
-  },
-  "reviewYes": {
-    "message": "بله!"
-  },
-  "reviewNo": {
-    "message": "نه واقعاً"
-  },
-  "whatsNew": {
-    "message": "تازه‌ها در v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "مشاهده کد در GitHub"
   },
   "changelogTitle": {
     "message": "تازه‌های Drowzy"
   },
   "changelogWhatsNew": {
     "message": "تازه‌ها"
+  },
+  "changelogVersionLabel": {
+    "message": "نسخه"
   },
   "changelogCtaText": {
     "message": "Drowzy رایگان و متن‌باز است. اگر حافظه شما را صرفه‌جویی می‌کند، یک بررسی بگذارید یا در GitHub ستاره بدهید."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "بستن زبانه‌های تکراری"
-  },
-  "tabUntitled": {
-    "message": "بدون عنوان"
-  },
-  "badgeWhitelisted": {
-    "message": "در لیست سفید"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "به‌زودی"
-  },
-  "changelogVersionLabel": {
-    "message": "نسخه"
-  },
-  "copiedStats": {
-    "message": "آمار کپی شد!"
-  },
-  "privacyFooterLink": {
-    "message": "مشاهده کد در GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy منبع‌باز است."
-  },
-  "privacyPermHost": {
-    "message": "دسترسی میزبان اختیاری، فقط هنگام فعال کردن محافظت از فرم یا علامت‌گذاری برگه‌های معلق درخواست می‌شود. هرگز در نصب درخواست نمی‌شود. در هر زمان قابل لغو است."
-  },
-  "privacyPermScripting": {
-    "message": "تزریق یک اسکریپت کوچک برای شناسایی داده‌های فرم ذخیره‌نشده قبل از تعلیق برگه. فقط اختیاری."
-  },
-  "privacyPermSidePanel": {
-    "message": "نمایش Drowzy در پنل کناری Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "از آنجا که هیچ چیز از مرورگر شما خارج نمی‌شود، هیچ داشبورد، هیچ حساب کاربری و هیچ راهی برای ما وجود ندارد که ببینیم با Drowzy چه کرده‌اید. اگر Drowzy را حذف کنید، Chrome به شما این امکان را می‌دهد که بازخورد اختیاری (دلیل حذف، مرورگر، سیستم‌عامل) را از طریق یک صفحه وب جداگانه ارسال کنید؛ این ارسال صریح است و به فرم ناشناس می‌رود. می‌توانید با بستن برگه آن را رد کنید."
-  },
-  "privacyYourDataTitle": {
-    "message": "داده‌های شما"
-  },
-  "ramEstimateTooltip": {
-    "message": "با استفاده از ~150 مگابایت در هر برگه معلق تخمین زده شده است. صرفه‌جویی واقعی بر اساس صفحه متفاوت است."
-  },
-  "shareStats": {
-    "message": "اشتراک‌گذاری"
-  },
-  "statLifetimeRam": {
-    "message": "کل RAM ذخیره شده"
   },
   "confirmDeleteTitle": {
     "message": "برای تأیید حذف دوباره کلیک کنید"

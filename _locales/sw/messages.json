@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "imeokolewa"
   },
+  "statForecast": {
+    "message": "inapatikana"
+  },
   "suspendOthers": {
     "message": "Simamisha nyingine"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Hakuna tabo zilizopatikana"
   },
+  "tabUntitled": {
+    "message": "Bila kichwa"
+  },
   "failedToLoad": {
     "message": "Imeshindwa kupakia. Fungua popup tena kujaribu."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Sauti"
+  },
+  "badgeWhitelisted": {
+    "message": "Kwenye orodha nyeupe"
   },
   "badgeProtected": {
     "message": "Imelindwa"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Jumla"
   },
+  "statLifetimeRam": {
+    "message": "Jumla ya RAM iliyohifadhiwa"
+  },
+  "ramEstimateTooltip": {
+    "message": "Imekadiriwa kutumia ~150 MB kwa kila kichupo kilichositishwa. Akiba halisi inatofautiana kwa ukurasa."
+  },
+  "ramForecastTooltip": {
+    "message": "Kumbukumbu inayokadiriwa itakayoachiliwa wakati vichupo vyako visivyotumika vinapolala, kwa ~150 MB kwa kichupo."
+  },
+  "suspendedToast": {
+    "message": "Vichupo $COUNT$ vimesimamishwa · ~$RAM$ vimeachiliwa",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Vichupo $COUNT$ vimeamshwa",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Hakuna vichupo vingine vya kusimamisha"
+  },
+  "noSuspendedToWake": {
+    "message": "Hakuna vichupo vilivyosimamishwa vya kuamsha"
+  },
+  "pinnedWontSuspend": {
+    "message": "Imebandikwa — haitasimamishwa"
+  },
+  "audioWontSuspend": {
+    "message": "Sauti inacheza — haitasimamishwa"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Imeruhusiwa — haitasimamishwa"
+  },
+  "systemPageCantSuspend": {
+    "message": "Ukurasa wa mfumo — hauwezi kusimamishwa"
+  },
+  "clickToDismiss": {
+    "message": "Bofya ili kufunga"
+  },
+  "keepAwakeBtn": {
+    "message": "Endelea kuwa hai"
+  },
+  "suspendTimerHint": {
+    "message": "Vichupo ulivyobadilisha kutoka humo vinasimamishwa baada ya muda huu. Ongeza ikiwa unarejea kwenye vichupo baada ya mapumziko marefu."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Kidokezo:</strong> Bofya aikoni ya fumbo katika upau wa zana wa Chrome ili ubandike Drowzy kwa ufikiaji wa mbofyo mmoja."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Vichupo unavyotumia bado vinasimamishwa?</strong> Fungua Drowzy → Mipangilio ili kuongeza kipima muda cha dakika 30, au ongeza tovuti kwenye orodha yako nyeupe kwa mbofyo mmoja."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Unajaza fomu?</strong> Wezesha \"Linda vichupo na fomu\" kwenye Mipangilio ili vichupo vyenye taarifa zisizohifadhiwa visisimamishwe."
+  },
+  "onboardingRemapHint": {
+    "message": "Unataka njia za mkato za kibodi tofauti? Zibinafsishe hapa →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Acha ukaguzi wa haraka"
+  },
+  "reviewReportTitle": {
+    "message": "Ripoti tatizo"
+  },
+  "reviewDismissTitle": {
+    "message": "Funga"
+  },
   "statMemberSince": {
     "message": "Mwanachama tangu"
+  },
+  "shareStats": {
+    "message": "Shiriki"
+  },
+  "copiedStats": {
+    "message": "Takwimu zimenakiliwa!"
   },
   "settings": {
     "message": "Mipangilio"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Hakuna tovuti kwenye orodha nyeupe"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Inasimamisha..."
   },
-  "done": {
-    "message": "Imekamilika!"
+  "suspendingSoon": {
+    "message": "hivi karibuni"
   },
   "waking": {
     "message": "Inaamsha..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Ondoa"
+  },
+  "replace": {
+    "message": "Badilisha"
+  },
+  "replaceSessionTitle": {
+    "message": "Badilisha tabo za sasa na kikao hiki"
+  },
+  "invalidDomain": {
+    "message": "Weka kikoa halali (mfano example.com)"
+  },
+  "extensionPage": {
+    "message": "Ukurasa wa kiendelezi"
+  },
+  "exportWhitelist": {
+    "message": "Hamisha nje"
+  },
+  "importWhitelist": {
+    "message": "Ingiza"
+  },
+  "exportWhitelistTitle": {
+    "message": "Nakili orodha nyeupe"
+  },
+  "importWhitelistTitle": {
+    "message": "Ingiza orodha nyeupe kutoka kwenye ubao wa kunakili"
+  },
+  "copiedSites": {
+    "message": "Imenakiliwa tovuti $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Imeingizwa tovuti $COUNT$ mpya",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Hakuna kikoa halali kilichopatikana kwenye ubao wa kunakili"
+  },
+  "clipboardReadFailed": {
+    "message": "Haikuweza kusoma ubao wa kunakili"
+  },
+  "enjoyingDrowzy": {
+    "message": "Unafurahia Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Ndiyo!"
+  },
+  "reviewNo": {
+    "message": "Si sana"
+  },
+  "whatsNew": {
+    "message": "Nini kipya katika v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Badilisha hadi hali ya mwanga"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Chaguo za menyu ya bonyeza-kulia kwa kusitisha na orodha nyeupe."
   },
+  "privacyPermScripting": {
+    "message": "Kudunga hati ndogo ili kugundua data ya fomu ambayo haijahifadhiwa kabla ya kusitisha kichupo. Chaguo tu."
+  },
+  "privacyPermSidePanel": {
+    "message": "Kuonyesha Drowzy katika paneli ya kando ya Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Ufikiaji wa mwenyeji wa hiari, unaombwa kwa ombi tu unapowezesha Ulinzi wa Fomu au Kuashiria Vichupo Vilivyositishwa. Kamwe haombiwi wakati wa usakinishaji. Inaweza kufutwa wakati wowote."
+  },
   "privacyContactTitle": {
     "message": "Mawasiliano"
   },
   "privacyContactText": {
     "message": "Maswali? Wasiliana nasi kupitia drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Badilisha"
+  "privacyYourDataTitle": {
+    "message": "Data yako"
   },
-  "replaceSessionTitle": {
-    "message": "Badilisha tabo za sasa na kikao hiki"
+  "privacyYourDataText": {
+    "message": "Kwa sababu hakuna kinachoondoka kwenye kivinjari chako, hakuna dashibodi, hakuna akaunti, na hakuna njia kwetu kuona ulichofanya na Drowzy. Ukifuta Drowzy, Chrome inakupa fursa ya kutuma maoni ya hiari (sababu ya kufuta, kivinjari, OS) kupitia ukurasa tofauti wa wavuti; uwasilishaji huo ni wazi na unaenda kwa fomu isiyojulikana. Unaweza kuruka kwa kufunga kichupo."
   },
-  "invalidDomain": {
-    "message": "Weka kikoa halali (mfano example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy ni chanzo huria."
   },
-  "extensionPage": {
-    "message": "Ukurasa wa kiendelezi"
-  },
-  "exportWhitelist": {
-    "message": "Hamisha nje"
-  },
-  "importWhitelist": {
-    "message": "Ingiza"
-  },
-  "exportWhitelistTitle": {
-    "message": "Nakili orodha nyeupe"
-  },
-  "importWhitelistTitle": {
-    "message": "Ingiza orodha nyeupe kutoka kwenye ubao wa kunakili"
-  },
-  "copiedSites": {
-    "message": "Imenakiliwa tovuti $COUNT$",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Imeingizwa tovuti $COUNT$ mpya",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Hakuna kikoa halali kilichopatikana kwenye ubao wa kunakili"
-  },
-  "clipboardReadFailed": {
-    "message": "Haikuweza kusoma ubao wa kunakili"
-  },
-  "enjoyingDrowzy": {
-    "message": "Unafurahia Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ndiyo!"
-  },
-  "reviewNo": {
-    "message": "Si sana"
-  },
-  "whatsNew": {
-    "message": "Nini kipya katika v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Vinjari msimbo kwenye GitHub"
   },
   "changelogTitle": {
     "message": "Nini Kipya katika Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nini Kipya"
+  },
+  "changelogVersionLabel": {
+    "message": "Toleo"
   },
   "changelogCtaText": {
     "message": "Drowzy ni bure na chanzo huria. Ikiwa inakuokoa kumbukumbu, fikiria kuacha ukaguzi au nyota kwenye GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Funga vichupo vya nakala"
-  },
-  "tabUntitled": {
-    "message": "Bila kichwa"
-  },
-  "badgeWhitelisted": {
-    "message": "Kwenye orodha nyeupe"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "hivi karibuni"
-  },
-  "changelogVersionLabel": {
-    "message": "Toleo"
-  },
-  "copiedStats": {
-    "message": "Takwimu zimenakiliwa!"
-  },
-  "privacyFooterLink": {
-    "message": "Vinjari msimbo kwenye GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy ni chanzo huria."
-  },
-  "privacyPermHost": {
-    "message": "Ufikiaji wa mwenyeji wa hiari, unaombwa kwa ombi tu unapowezesha Ulinzi wa Fomu au Kuashiria Vichupo Vilivyositishwa. Kamwe haombiwi wakati wa usakinishaji. Inaweza kufutwa wakati wowote."
-  },
-  "privacyPermScripting": {
-    "message": "Kudunga hati ndogo ili kugundua data ya fomu ambayo haijahifadhiwa kabla ya kusitisha kichupo. Chaguo tu."
-  },
-  "privacyPermSidePanel": {
-    "message": "Kuonyesha Drowzy katika paneli ya kando ya Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Kwa sababu hakuna kinachoondoka kwenye kivinjari chako, hakuna dashibodi, hakuna akaunti, na hakuna njia kwetu kuona ulichofanya na Drowzy. Ukifuta Drowzy, Chrome inakupa fursa ya kutuma maoni ya hiari (sababu ya kufuta, kivinjari, OS) kupitia ukurasa tofauti wa wavuti; uwasilishaji huo ni wazi na unaenda kwa fomu isiyojulikana. Unaweza kuruka kwa kufunga kichupo."
-  },
-  "privacyYourDataTitle": {
-    "message": "Data yako"
-  },
-  "ramEstimateTooltip": {
-    "message": "Imekadiriwa kutumia ~150 MB kwa kila kichupo kilichositishwa. Akiba halisi inatofautiana kwa ukurasa."
-  },
-  "shareStats": {
-    "message": "Shiriki"
-  },
-  "statLifetimeRam": {
-    "message": "Jumla ya RAM iliyohifadhiwa"
   },
   "confirmDeleteTitle": {
     "message": "Bonyeza tena ili kuthibitisha kufuta"

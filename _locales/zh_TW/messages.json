@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "已節省"
   },
+  "statForecast": {
+    "message": "可節省"
+  },
   "suspendOthers": {
     "message": "休眠其他分頁"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "未找到分頁"
   },
+  "tabUntitled": {
+    "message": "無標題"
+  },
   "failedToLoad": {
     "message": "載入失敗。請重新開啟彈出視窗以重試。"
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "音訊"
+  },
+  "badgeWhitelisted": {
+    "message": "已加白名單"
   },
   "badgeProtected": {
     "message": "已保護"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "所有時間"
   },
+  "statLifetimeRam": {
+    "message": "總共節省的 RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "估計每個暫停分頁使用約 150 MB。實際節省因頁面而異。"
+  },
+  "ramForecastTooltip": {
+    "message": "您的閒置分頁休眠時預計可釋放的記憶體,約每個分頁150 MB。"
+  },
+  "suspendedToast": {
+    "message": "已休眠 $COUNT$ 個分頁 · 釋放 ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "已喚醒 $COUNT$ 個分頁",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "沒有其他分頁可休眠"
+  },
+  "noSuspendedToWake": {
+    "message": "沒有已休眠的分頁可喚醒"
+  },
+  "pinnedWontSuspend": {
+    "message": "已釘選 — 不會被休眠"
+  },
+  "audioWontSuspend": {
+    "message": "正在播放音訊 — 不會被休眠"
+  },
+  "whitelistedWontSuspend": {
+    "message": "在白名單中 — 不會被休眠"
+  },
+  "systemPageCantSuspend": {
+    "message": "系統頁面 — 無法休眠"
+  },
+  "clickToDismiss": {
+    "message": "點擊關閉"
+  },
+  "keepAwakeBtn": {
+    "message": "保持喚醒"
+  },
+  "suspendTimerHint": {
+    "message": "您切換離開的分頁將在這段時間後被掛起。如果您經常長時間後返回分頁,請增加此時間。"
+  },
+  "onboardingPinTip": {
+    "message": "<strong>提示：</strong>點擊 Chrome 工具列中的拼圖圖示,釘選 Drowzy 以便一鍵存取。"
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>掛起您還在使用的分頁?</strong> 開啟 Drowzy → 設定,提高 30 分鐘計時器,或一鍵將網站加入白名單。"
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>正在填寫表單?</strong> 在設定中啟用「保護有表單的分頁」,以防止有未儲存輸入的分頁被掛起。"
+  },
+  "onboardingRemapHint": {
+    "message": "想要其他鍵盤快速鍵？在此自訂 →"
+  },
+  "reviewLeaveTitle": {
+    "message": "留下快速評論"
+  },
+  "reviewReportTitle": {
+    "message": "回報問題"
+  },
+  "reviewDismissTitle": {
+    "message": "關閉"
+  },
   "statMemberSince": {
     "message": "使用起始日"
+  },
+  "shareStats": {
+    "message": "分享"
+  },
+  "copiedStats": {
+    "message": "統計資料已複製！"
   },
   "settings": {
     "message": "設定"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "沒有白名單網站"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "正在休眠..."
   },
-  "done": {
-    "message": "完成！"
+  "suspendingSoon": {
+    "message": "即將"
   },
   "waking": {
     "message": "正在喚醒..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "移除"
+  },
+  "replace": {
+    "message": "替換"
+  },
+  "replaceSessionTitle": {
+    "message": "用此工作階段替換目前分頁"
+  },
+  "invalidDomain": {
+    "message": "請輸入有效的網域（例如 example.com）"
+  },
+  "extensionPage": {
+    "message": "擴充功能頁面"
+  },
+  "exportWhitelist": {
+    "message": "匯出"
+  },
+  "importWhitelist": {
+    "message": "匯入"
+  },
+  "exportWhitelistTitle": {
+    "message": "複製白名單"
+  },
+  "importWhitelistTitle": {
+    "message": "從剪貼簿匯入白名單"
+  },
+  "copiedSites": {
+    "message": "已複製 $COUNT$ 個網站",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "已匯入 $COUNT$ 個新網站",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "剪貼簿中未找到有效網域"
+  },
+  "clipboardReadFailed": {
+    "message": "無法讀取剪貼簿"
+  },
+  "enjoyingDrowzy": {
+    "message": "喜歡 Drowzy 嗎？"
+  },
+  "reviewYes": {
+    "message": "喜歡！"
+  },
+  "reviewNo": {
+    "message": "不太滿意"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$ 新功能",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "切換至淺色模式"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "用於暫停和白名單的右鍵選單選項。"
   },
+  "privacyPermScripting": {
+    "message": "注入一個小腳本以在暫停分頁前偵測未儲存的表單資料。僅限選擇加入。"
+  },
+  "privacyPermSidePanel": {
+    "message": "在 Chrome 的側邊欄中顯示 Drowzy。"
+  },
+  "privacyPermHost": {
+    "message": "可選的主機存取，僅在您啟用表單保護或暫停分頁標記時按需請求。安裝時絕不請求。可隨時撤銷。"
+  },
   "privacyContactTitle": {
     "message": "聯絡方式"
   },
   "privacyContactText": {
     "message": "有問題？請聯絡 drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "替換"
+  "privacyYourDataTitle": {
+    "message": "您的資料"
   },
-  "replaceSessionTitle": {
-    "message": "用此工作階段替換目前分頁"
+  "privacyYourDataText": {
+    "message": "由於沒有任何內容離開您的瀏覽器，沒有儀表板、沒有帳戶，我們也無法看到您使用 Drowzy 做了什麼。如果您解除安裝 Drowzy，Chrome 會透過一個單獨的網頁向您提供傳送可選回饋（解除安裝原因、瀏覽器、OS）的機會；該提交是明確的，並且會傳送到匿名表單。您可以透過關閉分頁來跳過它。"
   },
-  "invalidDomain": {
-    "message": "請輸入有效的網域（例如 example.com）"
+  "privacyFooterText": {
+    "message": "Drowzy 是開源的。"
   },
-  "extensionPage": {
-    "message": "擴充功能頁面"
-  },
-  "exportWhitelist": {
-    "message": "匯出"
-  },
-  "importWhitelist": {
-    "message": "匯入"
-  },
-  "exportWhitelistTitle": {
-    "message": "複製白名單"
-  },
-  "importWhitelistTitle": {
-    "message": "從剪貼簿匯入白名單"
-  },
-  "copiedSites": {
-    "message": "已複製 $COUNT$ 個網站",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "已匯入 $COUNT$ 個新網站",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "剪貼簿中未找到有效網域"
-  },
-  "clipboardReadFailed": {
-    "message": "無法讀取剪貼簿"
-  },
-  "enjoyingDrowzy": {
-    "message": "喜歡 Drowzy 嗎？"
-  },
-  "reviewYes": {
-    "message": "喜歡！"
-  },
-  "reviewNo": {
-    "message": "不太滿意"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$ 新功能",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "在 GitHub 上瀏覽程式碼"
   },
   "changelogTitle": {
     "message": "Drowzy 新變化"
   },
   "changelogWhatsNew": {
     "message": "新變化"
+  },
+  "changelogVersionLabel": {
+    "message": "版本"
   },
   "changelogCtaText": {
     "message": "Drowzy 是免費開源的。如果它幫您節省了記憶體，請考慮留下評價或在 GitHub 上給我們加星。"
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "關閉重複分頁"
-  },
-  "tabUntitled": {
-    "message": "無標題"
-  },
-  "badgeWhitelisted": {
-    "message": "已加白名單"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "即將"
-  },
-  "changelogVersionLabel": {
-    "message": "版本"
-  },
-  "copiedStats": {
-    "message": "統計資料已複製！"
-  },
-  "privacyFooterLink": {
-    "message": "在 GitHub 上瀏覽程式碼"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy 是開源的。"
-  },
-  "privacyPermHost": {
-    "message": "可選的主機存取，僅在您啟用表單保護或暫停分頁標記時按需請求。安裝時絕不請求。可隨時撤銷。"
-  },
-  "privacyPermScripting": {
-    "message": "注入一個小腳本以在暫停分頁前偵測未儲存的表單資料。僅限選擇加入。"
-  },
-  "privacyPermSidePanel": {
-    "message": "在 Chrome 的側邊欄中顯示 Drowzy。"
-  },
-  "privacyYourDataText": {
-    "message": "由於沒有任何內容離開您的瀏覽器，沒有儀表板、沒有帳戶，我們也無法看到您使用 Drowzy 做了什麼。如果您解除安裝 Drowzy，Chrome 會透過一個單獨的網頁向您提供傳送可選回饋（解除安裝原因、瀏覽器、OS）的機會；該提交是明確的，並且會傳送到匿名表單。您可以透過關閉分頁來跳過它。"
-  },
-  "privacyYourDataTitle": {
-    "message": "您的資料"
-  },
-  "ramEstimateTooltip": {
-    "message": "估計每個暫停分頁使用約 150 MB。實際節省因頁面而異。"
-  },
-  "shareStats": {
-    "message": "分享"
-  },
-  "statLifetimeRam": {
-    "message": "總共節省的 RAM"
   },
   "confirmDeleteTitle": {
     "message": "再次點擊以確認刪除"

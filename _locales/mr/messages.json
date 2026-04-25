@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "वाचवलेले"
   },
+  "statForecast": {
+    "message": "उपलब्ध"
+  },
   "suspendOthers": {
     "message": "इतर निलंबित करा"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "टॅब सापडले नाहीत"
   },
+  "tabUntitled": {
+    "message": "शीर्षकरहित"
+  },
   "failedToLoad": {
     "message": "लोड करता आले नाही. पुन्हा प्रयत्न करण्यासाठी पॉपअप पुन्हा उघडा."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "ऑडिओ"
+  },
+  "badgeWhitelisted": {
+    "message": "परवानगी यादीत"
   },
   "badgeProtected": {
     "message": "संरक्षित"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "एकूण"
   },
+  "statLifetimeRam": {
+    "message": "एकूण RAM बचत"
+  },
+  "ramEstimateTooltip": {
+    "message": "प्रति निलंबित टॅब ~150 MB वापरून अंदाजित. वास्तविक बचत पृष्ठानुसार बदलते."
+  },
+  "ramForecastTooltip": {
+    "message": "जेव्हा तुमच्या निष्क्रिय टॅब झोपी जातील तेव्हा वाचवण्यासाठी उपलब्ध अंदाजे मेमरी, प्रति टॅब ~150 MB."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ टॅब निलंबित · ~$RAM$ मुक्त",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ टॅब जागे केले",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "निलंबित करण्यासाठी इतर टॅब नाहीत"
+  },
+  "noSuspendedToWake": {
+    "message": "जागे करण्यासाठी निलंबित टॅब नाहीत"
+  },
+  "pinnedWontSuspend": {
+    "message": "पिन केलेले — निलंबित होणार नाही"
+  },
+  "audioWontSuspend": {
+    "message": "ऑडिओ वाजत आहे — निलंबित होणार नाही"
+  },
+  "whitelistedWontSuspend": {
+    "message": "श्वेतसूचीत — निलंबित होणार नाही"
+  },
+  "systemPageCantSuspend": {
+    "message": "सिस्टम पृष्ठ — निलंबित करता येत नाही"
+  },
+  "clickToDismiss": {
+    "message": "बंद करण्यासाठी क्लिक करा"
+  },
+  "keepAwakeBtn": {
+    "message": "जागृत ठेवा"
+  },
+  "suspendTimerHint": {
+    "message": "तुम्ही ज्या टॅबवरून दूर गेलात ते या वेळेनंतर निलंबित होतात. लांब अंतरांनंतर तुम्ही टॅबवर परत येत असाल तर हे वाढवा."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>टीप:</strong> एक-क्लिक प्रवेशासाठी Drowzy पिन करण्यासाठी तुमच्या Chrome टूलबारमधील कोडे चिन्हावर क्लिक करा."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>तुम्ही अजूनही वापरत असलेले टॅब निलंबित होतात?</strong> 30-मिनिटांचा टायमर वाढवण्यासाठी किंवा एका क्लिकमध्ये साइट तुमच्या व्हाइटलिस्टमध्ये जोडण्यासाठी Drowzy → सेटिंग्ज उघडा."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>फॉर्म भरत आहात?</strong> न जतन केलेले इनपुट असलेले टॅब निलंबित होऊ नयेत म्हणून सेटिंग्जमध्ये \"फॉर्म असलेले टॅब संरक्षित करा\" सक्षम करा."
+  },
+  "onboardingRemapHint": {
+    "message": "वेगळे कीबोर्ड शॉर्टकट हवेत? येथे सानुकूलित करा →"
+  },
+  "reviewLeaveTitle": {
+    "message": "एक झटपट पुनरावलोकन द्या"
+  },
+  "reviewReportTitle": {
+    "message": "समस्येची तक्रार करा"
+  },
+  "reviewDismissTitle": {
+    "message": "बंद करा"
+  },
   "statMemberSince": {
     "message": "सदस्य यापासून"
+  },
+  "shareStats": {
+    "message": "सामायिक करा"
+  },
+  "copiedStats": {
+    "message": "आकडेवारी कॉपी केली!"
   },
   "settings": {
     "message": "सेटिंग्ज"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "व्हाइटलिस्ट केलेल्या साइट्स नाहीत"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "निलंबित करत आहे..."
   },
-  "done": {
-    "message": "झाले!"
+  "suspendingSoon": {
+    "message": "लवकरच"
   },
   "waking": {
     "message": "जागे करत आहे..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "काढा"
+  },
+  "replace": {
+    "message": "बदला"
+  },
+  "replaceSessionTitle": {
+    "message": "सध्याचे टॅब या सत्रासह बदला"
+  },
+  "invalidDomain": {
+    "message": "वैध डोमेन प्रविष्ट करा (उदा. example.com)"
+  },
+  "extensionPage": {
+    "message": "विस्तार पृष्ठ"
+  },
+  "exportWhitelist": {
+    "message": "निर्यात"
+  },
+  "importWhitelist": {
+    "message": "आयात"
+  },
+  "exportWhitelistTitle": {
+    "message": "श्वेतसूची कॉपी करा"
+  },
+  "importWhitelistTitle": {
+    "message": "क्लिपबोर्डमधून श्वेतसूची आयात करा"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ साइट कॉपी केली",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ नवीन साइट आयात केली",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "क्लिपबोर्डमध्ये वैध डोमेन सापडले नाहीत"
+  },
+  "clipboardReadFailed": {
+    "message": "क्लिपबोर्ड वाचता आले नाही"
+  },
+  "enjoyingDrowzy": {
+    "message": "Drowzy आवडत आहे?"
+  },
+  "reviewYes": {
+    "message": "हो!"
+  },
+  "reviewNo": {
+    "message": "फार नाही"
+  },
+  "whatsNew": {
+    "message": "v$VERSION$ मधील नवीन",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "लाइट मोडवर जा"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "निलंबन आणि श्वेतसूचीसाठी राइट-क्लिक मेनू पर्याय."
   },
+  "privacyPermScripting": {
+    "message": "टॅब निलंबित करण्यापूर्वी जतन न केलेला फॉर्म डेटा शोधण्यासाठी एक छोटी स्क्रिप्ट इंजेक्ट करणे. फक्त ऑप्ट-इन."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome च्या साइड पॅनेलमध्ये Drowzy प्रदर्शित करणे."
+  },
+  "privacyPermHost": {
+    "message": "पर्यायी होस्ट प्रवेश, फक्त जेव्हा आपण फॉर्म संरक्षण किंवा निलंबित-टॅब चिन्हांकन सक्षम करता तेव्हाच मागणीनुसार विनंती केली जाते. इंस्टॉलवर कधीही विनंती केली जात नाही. कधीही रद्द करण्यायोग्य."
+  },
   "privacyContactTitle": {
     "message": "संपर्क"
   },
   "privacyContactText": {
     "message": "प्रश्न आहेत? drowzyextension@gmail.com वर संपर्क साधा"
   },
-  "replace": {
-    "message": "बदला"
+  "privacyYourDataTitle": {
+    "message": "तुमचा डेटा"
   },
-  "replaceSessionTitle": {
-    "message": "सध्याचे टॅब या सत्रासह बदला"
+  "privacyYourDataText": {
+    "message": "काहीही तुमचा ब्राउझर सोडत नसल्यामुळे, कोणताही डॅशबोर्ड नाही, कोणतेही खाते नाही, आणि तुम्ही Drowzy सह काय केले हे पाहण्याचा आमच्यासाठी कोणताही मार्ग नाही. आपण Drowzy अनइंस्टॉल केल्यास, Chrome आपल्याला स्वतंत्र वेब पृष्ठाद्वारे पर्यायी अभिप्राय (अनइंस्टॉल करण्याचे कारण, ब्राउझर, OS) पाठवण्याची संधी देते; ते सबमिशन स्पष्ट आहे आणि अनामिक फॉर्मवर जाते. आपण टॅब बंद करून ते वगळू शकता."
   },
-  "invalidDomain": {
-    "message": "वैध डोमेन प्रविष्ट करा (उदा. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy ओपन सोर्स आहे."
   },
-  "extensionPage": {
-    "message": "विस्तार पृष्ठ"
-  },
-  "exportWhitelist": {
-    "message": "निर्यात"
-  },
-  "importWhitelist": {
-    "message": "आयात"
-  },
-  "exportWhitelistTitle": {
-    "message": "श्वेतसूची कॉपी करा"
-  },
-  "importWhitelistTitle": {
-    "message": "क्लिपबोर्डमधून श्वेतसूची आयात करा"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ साइट कॉपी केली",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ नवीन साइट आयात केली",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "क्लिपबोर्डमध्ये वैध डोमेन सापडले नाहीत"
-  },
-  "clipboardReadFailed": {
-    "message": "क्लिपबोर्ड वाचता आले नाही"
-  },
-  "enjoyingDrowzy": {
-    "message": "Drowzy आवडत आहे?"
-  },
-  "reviewYes": {
-    "message": "हो!"
-  },
-  "reviewNo": {
-    "message": "फार नाही"
-  },
-  "whatsNew": {
-    "message": "v$VERSION$ मधील नवीन",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "GitHub वर कोड पहा"
   },
   "changelogTitle": {
     "message": "Drowzy मधील नवीन"
   },
   "changelogWhatsNew": {
     "message": "नवीन"
+  },
+  "changelogVersionLabel": {
+    "message": "आवृत्ती"
   },
   "changelogCtaText": {
     "message": "Drowzy मोफत आणि ओपन सोर्स आहे. मेमरी वाचवत असल्यास, पुनरावलोकन द्या किंवा GitHub वर स्टार द्या."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "डुप्लिकेट टॅब बंद करा"
-  },
-  "tabUntitled": {
-    "message": "शीर्षकरहित"
-  },
-  "badgeWhitelisted": {
-    "message": "परवानगी यादीत"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "लवकरच"
-  },
-  "changelogVersionLabel": {
-    "message": "आवृत्ती"
-  },
-  "copiedStats": {
-    "message": "आकडेवारी कॉपी केली!"
-  },
-  "privacyFooterLink": {
-    "message": "GitHub वर कोड पहा"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy ओपन सोर्स आहे."
-  },
-  "privacyPermHost": {
-    "message": "पर्यायी होस्ट प्रवेश, फक्त जेव्हा आपण फॉर्म संरक्षण किंवा निलंबित-टॅब चिन्हांकन सक्षम करता तेव्हाच मागणीनुसार विनंती केली जाते. इंस्टॉलवर कधीही विनंती केली जात नाही. कधीही रद्द करण्यायोग्य."
-  },
-  "privacyPermScripting": {
-    "message": "टॅब निलंबित करण्यापूर्वी जतन न केलेला फॉर्म डेटा शोधण्यासाठी एक छोटी स्क्रिप्ट इंजेक्ट करणे. फक्त ऑप्ट-इन."
-  },
-  "privacyPermSidePanel": {
-    "message": "Chrome च्या साइड पॅनेलमध्ये Drowzy प्रदर्शित करणे."
-  },
-  "privacyYourDataText": {
-    "message": "काहीही तुमचा ब्राउझर सोडत नसल्यामुळे, कोणताही डॅशबोर्ड नाही, कोणतेही खाते नाही, आणि तुम्ही Drowzy सह काय केले हे पाहण्याचा आमच्यासाठी कोणताही मार्ग नाही. आपण Drowzy अनइंस्टॉल केल्यास, Chrome आपल्याला स्वतंत्र वेब पृष्ठाद्वारे पर्यायी अभिप्राय (अनइंस्टॉल करण्याचे कारण, ब्राउझर, OS) पाठवण्याची संधी देते; ते सबमिशन स्पष्ट आहे आणि अनामिक फॉर्मवर जाते. आपण टॅब बंद करून ते वगळू शकता."
-  },
-  "privacyYourDataTitle": {
-    "message": "तुमचा डेटा"
-  },
-  "ramEstimateTooltip": {
-    "message": "प्रति निलंबित टॅब ~150 MB वापरून अंदाजित. वास्तविक बचत पृष्ठानुसार बदलते."
-  },
-  "shareStats": {
-    "message": "सामायिक करा"
-  },
-  "statLifetimeRam": {
-    "message": "एकूण RAM बचत"
   },
   "confirmDeleteTitle": {
     "message": "हटवण्याची पुष्टी करण्यासाठी पुन्हा क्लिक करा"

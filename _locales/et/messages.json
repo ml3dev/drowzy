@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "säästetud"
   },
+  "statForecast": {
+    "message": "saadaval"
+  },
   "suspendOthers": {
     "message": "Peata teised"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Vahelehti ei leitud"
   },
+  "tabUntitled": {
+    "message": "Pealkirjata"
+  },
   "failedToLoad": {
     "message": "Laadimine ebaõnnestus. Ava hüpikaken uuesti."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Heli"
+  },
+  "badgeWhitelisted": {
+    "message": "Lubatud nimekirjas"
   },
   "badgeProtected": {
     "message": "Kaitstud"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Kogu aeg"
   },
+  "statLifetimeRam": {
+    "message": "Kogu säästetud RAM"
+  },
+  "ramEstimateTooltip": {
+    "message": "Hinnatud kasutades ~150 MB peatatud vahekaardi kohta. Tegelik säästmine sõltub lehest."
+  },
+  "ramForecastTooltip": {
+    "message": "Hinnanguline mälu, mis vabaneb, kui teie tegevuseta vahekaardid uinuvad, kiirusel ~150 MB vahekaardi kohta."
+  },
+  "suspendedToast": {
+    "message": "Peatatud $COUNT$ vahekaarti · vabastatud ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Äratatud $COUNT$ vahekaarti",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Pole teisi vahekaarte peatamiseks"
+  },
+  "noSuspendedToWake": {
+    "message": "Pole peatatud vahekaarte äratamiseks"
+  },
+  "pinnedWontSuspend": {
+    "message": "Kinnitatud — ei peatata"
+  },
+  "audioWontSuspend": {
+    "message": "Mängib heli — ei peatata"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Lubatud nimekirjas — ei peatata"
+  },
+  "systemPageCantSuspend": {
+    "message": "Süsteemileht — ei saa peatada"
+  },
+  "clickToDismiss": {
+    "message": "Klõpsa sulgemiseks"
+  },
+  "keepAwakeBtn": {
+    "message": "Hoia ärkvel"
+  },
+  "suspendTimerHint": {
+    "message": "Vahekaardid, millelt eemaldusid, peatatakse selle aja möödudes. Suurenda seda, kui pöördud vahekaartide juurde tagasi pikkade vahedega."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Vihje:</strong> Klõpsa Chromei tööriistaribal pusletükki ikoonil, et kinnitada Drowzy kiireks juurdepääsuks."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Peatab vahekaarte, mida ikka kasutad?</strong> Ava Drowzy → Seaded ja suurenda 30-minutilist taimerit või lisa sait valgesse nimekirja ühe klõpsuga."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Täidad vormi?</strong> Lülita Seadetes sisse „Kaitse vorme sisaldavaid vahekaarte\", et salvestamata sisendiga vahekaarte ei peatataks."
+  },
+  "onboardingRemapHint": {
+    "message": "Soovid teisi klaviatuuri otseteid? Kohanda neid siin →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Jäta kiire arvustus"
+  },
+  "reviewReportTitle": {
+    "message": "Teata probleemist"
+  },
+  "reviewDismissTitle": {
+    "message": "Sulge"
+  },
   "statMemberSince": {
     "message": "Liige alates"
+  },
+  "shareStats": {
+    "message": "Jaga"
+  },
+  "copiedStats": {
+    "message": "Statistika kopeeritud!"
   },
   "settings": {
     "message": "Seaded"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Lubatud saite pole"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Peatamine..."
   },
-  "done": {
-    "message": "Valmis!"
+  "suspendingSoon": {
+    "message": "varsti"
   },
   "waking": {
     "message": "Äratamine..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Eemalda"
+  },
+  "replace": {
+    "message": "Asenda"
+  },
+  "replaceSessionTitle": {
+    "message": "Asenda praegused vahelehed selle seansiga"
+  },
+  "invalidDomain": {
+    "message": "Sisestage kehtiv domeen (nt example.com)"
+  },
+  "extensionPage": {
+    "message": "Laienduse leht"
+  },
+  "exportWhitelist": {
+    "message": "Ekspordi"
+  },
+  "importWhitelist": {
+    "message": "Impordi"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopeeri lubatavate nimekiri"
+  },
+  "importWhitelistTitle": {
+    "message": "Impordi lubatavate nimekiri lõikelaualt"
+  },
+  "copiedSites": {
+    "message": "Kopeeritud $COUNT$ saiti",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Imporditud $COUNT$ uut saiti",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "Lõikelaualt ei leitud kehtivaid domeene"
+  },
+  "clipboardReadFailed": {
+    "message": "Lõikelauda ei saanud lugeda"
+  },
+  "enjoyingDrowzy": {
+    "message": "Kas Drowzy meeldib?"
+  },
+  "reviewYes": {
+    "message": "Jah!"
+  },
+  "reviewNo": {
+    "message": "Mitte eriti"
+  },
+  "whatsNew": {
+    "message": "Mis on uut versioonis 1.1.0 v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Lülitu heledasse režiimi"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Paremklõpsumenüü valikud peatamiseks ja valge nimekirja jaoks."
   },
+  "privacyPermScripting": {
+    "message": "Väikese skripti süstimine, et tuvastada salvestamata vormiandmed enne vahekaardi peatamist. Ainult valikuline."
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzy kuvamine Chrome'i külgpaneelis."
+  },
+  "privacyPermHost": {
+    "message": "Valikuline hostijuurdepääs, mida küsitakse nõudmisel ainult siis, kui lubate Vormikaitse või Peatatud vahekaartide märgistamise. Installimisel ei küsita kunagi. Igal ajal tühistatav."
+  },
   "privacyContactTitle": {
     "message": "Kontakt"
   },
   "privacyContactText": {
     "message": "Küsimusi? Kirjuta meile aadressil drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Asenda"
+  "privacyYourDataTitle": {
+    "message": "Teie andmed"
   },
-  "replaceSessionTitle": {
-    "message": "Asenda praegused vahelehed selle seansiga"
+  "privacyYourDataText": {
+    "message": "Kuna miski ei lahku teie brauserist, pole armatuurlauda, kontot ega võimalust näha, mida olete Drowzyga teinud. Kui desinstallite Drowzy, pakub Chrome teile võimalust saata valikulist tagasisidet (desinstallimise põhjus, brauser, OS) eraldi veebilehe kaudu; see esitamine on selgesõnaline ja läheb anonüümsele vormile. Saate selle vahekaardi sulgemisega vahele jätta."
   },
-  "invalidDomain": {
-    "message": "Sisestage kehtiv domeen (nt example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy on avatud lähtekoodiga."
   },
-  "extensionPage": {
-    "message": "Laienduse leht"
-  },
-  "exportWhitelist": {
-    "message": "Ekspordi"
-  },
-  "importWhitelist": {
-    "message": "Impordi"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopeeri lubatavate nimekiri"
-  },
-  "importWhitelistTitle": {
-    "message": "Impordi lubatavate nimekiri lõikelaualt"
-  },
-  "copiedSites": {
-    "message": "Kopeeritud $COUNT$ saiti",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Imporditud $COUNT$ uut saiti",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "Lõikelaualt ei leitud kehtivaid domeene"
-  },
-  "clipboardReadFailed": {
-    "message": "Lõikelauda ei saanud lugeda"
-  },
-  "enjoyingDrowzy": {
-    "message": "Kas Drowzy meeldib?"
-  },
-  "reviewYes": {
-    "message": "Jah!"
-  },
-  "reviewNo": {
-    "message": "Mitte eriti"
-  },
-  "whatsNew": {
-    "message": "Mis on uut versioonis 1.1.0 v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Sirvi koodi GitHubis"
   },
   "changelogTitle": {
     "message": "Mis on Drowzys uut"
   },
   "changelogWhatsNew": {
     "message": "Mis on uut"
+  },
+  "changelogVersionLabel": {
+    "message": "Versioon"
   },
   "changelogCtaText": {
     "message": "Drowzy on tasuta ja avatud lähtekoodiga. Kui see säästab teile mälu, jätke arvustus või tärn GitHubis."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Sulge duplikaat-vahekaardid"
-  },
-  "tabUntitled": {
-    "message": "Pealkirjata"
-  },
-  "badgeWhitelisted": {
-    "message": "Lubatud nimekirjas"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "varsti"
-  },
-  "changelogVersionLabel": {
-    "message": "Versioon"
-  },
-  "copiedStats": {
-    "message": "Statistika kopeeritud!"
-  },
-  "privacyFooterLink": {
-    "message": "Sirvi koodi GitHubis"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy on avatud lähtekoodiga."
-  },
-  "privacyPermHost": {
-    "message": "Valikuline hostijuurdepääs, mida küsitakse nõudmisel ainult siis, kui lubate Vormikaitse või Peatatud vahekaartide märgistamise. Installimisel ei küsita kunagi. Igal ajal tühistatav."
-  },
-  "privacyPermScripting": {
-    "message": "Väikese skripti süstimine, et tuvastada salvestamata vormiandmed enne vahekaardi peatamist. Ainult valikuline."
-  },
-  "privacyPermSidePanel": {
-    "message": "Drowzy kuvamine Chrome'i külgpaneelis."
-  },
-  "privacyYourDataText": {
-    "message": "Kuna miski ei lahku teie brauserist, pole armatuurlauda, kontot ega võimalust näha, mida olete Drowzyga teinud. Kui desinstallite Drowzy, pakub Chrome teile võimalust saata valikulist tagasisidet (desinstallimise põhjus, brauser, OS) eraldi veebilehe kaudu; see esitamine on selgesõnaline ja läheb anonüümsele vormile. Saate selle vahekaardi sulgemisega vahele jätta."
-  },
-  "privacyYourDataTitle": {
-    "message": "Teie andmed"
-  },
-  "ramEstimateTooltip": {
-    "message": "Hinnatud kasutades ~150 MB peatatud vahekaardi kohta. Tegelik säästmine sõltub lehest."
-  },
-  "shareStats": {
-    "message": "Jaga"
-  },
-  "statLifetimeRam": {
-    "message": "Kogu säästetud RAM"
   },
   "confirmDeleteTitle": {
     "message": "Klõpsake uuesti, et kustutamist kinnitada"

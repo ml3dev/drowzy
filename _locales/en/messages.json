@@ -28,6 +28,9 @@
   "statSaved": {
     "message": "saved"
   },
+  "statForecast": {
+    "message": "available"
+  },
   "suspendOthers": {
     "message": "Suspend Others"
   },
@@ -154,6 +157,76 @@
   "ramEstimateTooltip": {
     "message": "Estimated using ~150 MB per suspended tab. Actual savings vary by page."
   },
+  "ramForecastTooltip": {
+    "message": "Estimated memory available to save when your idle tabs go to sleep, at ~150 MB per tab."
+  },
+  "suspendedToast": {
+    "message": "Suspended $COUNT$ tab(s) · ~$RAM$ freed",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Woke $COUNT$ tab(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "No other tabs to suspend"
+  },
+  "noSuspendedToWake": {
+    "message": "No suspended tabs to wake"
+  },
+  "pinnedWontSuspend": {
+    "message": "Pinned — won't be suspended"
+  },
+  "audioWontSuspend": {
+    "message": "Audio playing — won't be suspended"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Whitelisted — won't be suspended"
+  },
+  "systemPageCantSuspend": {
+    "message": "System page — can't be suspended"
+  },
+  "clickToDismiss": {
+    "message": "Click to dismiss"
+  },
+  "keepAwakeBtn": {
+    "message": "Keep awake"
+  },
+  "suspendTimerHint": {
+    "message": "Tabs you switched away from are suspended after this long. Increase if you find yourself coming back to tabs after long gaps."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Tip:</strong> Click the puzzle icon in your Chrome toolbar to pin Drowzy for one-click access."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Suspending tabs you still want?</strong> Open Drowzy → Settings to bump the 30-minute timer up, or add the site to your whitelist with one click."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Filling out a form?</strong> Enable \"Protect tabs with forms\" in Settings to keep tabs with unsaved input from being suspended."
+  },
+  "onboardingRemapHint": {
+    "message": "Want different keyboard shortcuts? Customize them here →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Leave a quick review"
+  },
+  "reviewReportTitle": {
+    "message": "Report an issue"
+  },
+  "reviewDismissTitle": {
+    "message": "Dismiss"
+  },
   "statMemberSince": {
     "message": "Since"
   },
@@ -221,16 +294,13 @@
     "message": "No sites whitelisted"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, full URL, or site.com/path/*"
   },
   "suspending": {
     "message": "Suspending..."
   },
   "suspendingSoon": {
     "message": "soon"
-  },
-  "done": {
-    "message": "Done!"
   },
   "waking": {
     "message": "Waking..."

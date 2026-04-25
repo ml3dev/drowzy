@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "ahorrado"
   },
+  "statForecast": {
+    "message": "disponible"
+  },
   "suspendOthers": {
     "message": "Suspender otras"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "No se encontraron pestañas"
   },
+  "tabUntitled": {
+    "message": "Sin título"
+  },
   "failedToLoad": {
     "message": "Error al cargar. Vuelve a abrir el popup para reintentar."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Audio"
+  },
+  "badgeWhitelisted": {
+    "message": "En lista blanca"
   },
   "badgeProtected": {
     "message": "Protegida"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Desde siempre"
   },
+  "statLifetimeRam": {
+    "message": "RAM total ahorrada"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimado usando ~150 MB por pestaña suspendida. El ahorro real varía según la página."
+  },
+  "ramForecastTooltip": {
+    "message": "Memoria estimada que se liberará cuando tus pestañas inactivas se duerman, a ~150 MB por pestaña."
+  },
+  "suspendedToast": {
+    "message": "$COUNT$ pestaña(s) suspendidas · liberados ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "$COUNT$ pestaña(s) reactivadas",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "No hay otras pestañas para suspender"
+  },
+  "noSuspendedToWake": {
+    "message": "No hay pestañas suspendidas para reactivar"
+  },
+  "pinnedWontSuspend": {
+    "message": "Fijada — no se suspenderá"
+  },
+  "audioWontSuspend": {
+    "message": "Reproduciendo audio — no se suspenderá"
+  },
+  "whitelistedWontSuspend": {
+    "message": "En la lista blanca — no se suspenderá"
+  },
+  "systemPageCantSuspend": {
+    "message": "Página del sistema — no se puede suspender"
+  },
+  "clickToDismiss": {
+    "message": "Clic para cerrar"
+  },
+  "keepAwakeBtn": {
+    "message": "Mantener activa"
+  },
+  "suspendTimerHint": {
+    "message": "Las pestañas de las que te alejaste se suspenden tras este tiempo. Auméntalo si volvés a pestañas tras largas pausas."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Consejo:</strong> Haz clic en el icono del rompecabezas en la barra de herramientas de Chrome para fijar Drowzy y acceder con un clic."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>¿Te suspende pestañas que aún querés?</strong> Abrí Drowzy → Configuración para aumentar el temporizador de 30 minutos, o agregá el sitio a tu lista blanca con un clic."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>¿Llenando un formulario?</strong> Activá \"Proteger pestañas con formularios\" en Configuración para que las pestañas con entradas sin guardar no se suspendan."
+  },
+  "onboardingRemapHint": {
+    "message": "¿Quieres otros atajos de teclado? Personalízalos aquí →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Deja una reseña rápida"
+  },
+  "reviewReportTitle": {
+    "message": "Reportar un problema"
+  },
+  "reviewDismissTitle": {
+    "message": "Descartar"
+  },
   "statMemberSince": {
     "message": "Miembro desde"
+  },
+  "shareStats": {
+    "message": "Compartir"
+  },
+  "copiedStats": {
+    "message": "¡Estadísticas copiadas!"
   },
   "settings": {
     "message": "Configuración"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Ningún sitio en lista blanca"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Suspendiendo..."
   },
-  "done": {
-    "message": "¡Listo!"
+  "suspendingSoon": {
+    "message": "pronto"
   },
   "waking": {
     "message": "Despertando..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Quitar"
+  },
+  "replace": {
+    "message": "Reemplazar"
+  },
+  "replaceSessionTitle": {
+    "message": "Reemplazar pestañas actuales con esta sesión"
+  },
+  "invalidDomain": {
+    "message": "Introduce un dominio válido (ej. example.com)"
+  },
+  "extensionPage": {
+    "message": "Página de la extensión"
+  },
+  "exportWhitelist": {
+    "message": "Exportar"
+  },
+  "importWhitelist": {
+    "message": "Importar"
+  },
+  "exportWhitelistTitle": {
+    "message": "Copiar lista blanca"
+  },
+  "importWhitelistTitle": {
+    "message": "Importar lista blanca desde el portapapeles"
+  },
+  "copiedSites": {
+    "message": "$COUNT$ sitio(s) copiado(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "$COUNT$ sitio(s) nuevo(s) importado(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "No se encontraron dominios válidos en el portapapeles"
+  },
+  "clipboardReadFailed": {
+    "message": "No se pudo leer el portapapeles"
+  },
+  "enjoyingDrowzy": {
+    "message": "¿Te gusta Drowzy?"
+  },
+  "reviewYes": {
+    "message": "¡Sí!"
+  },
+  "reviewNo": {
+    "message": "No mucho"
+  },
+  "whatsNew": {
+    "message": "Novedades en v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Cambiar a modo claro"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Opciones del menú contextual para suspender y la lista blanca."
   },
+  "privacyPermScripting": {
+    "message": "Inyectar un pequeño script para detectar datos de formulario no guardados antes de suspender una pestaña. Solo opcional."
+  },
+  "privacyPermSidePanel": {
+    "message": "Mostrar Drowzy en el panel lateral de Chrome."
+  },
+  "privacyPermHost": {
+    "message": "Acceso al host opcional, solicitado bajo demanda solo cuando habilitas Protección de Formularios o Marcado de Pestañas Suspendidas. Nunca se solicita en la instalación. Revocable en cualquier momento."
+  },
   "privacyContactTitle": {
     "message": "Contacto"
   },
   "privacyContactText": {
     "message": "¿Preguntas? Escríbenos a drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Reemplazar"
+  "privacyYourDataTitle": {
+    "message": "Tus datos"
   },
-  "replaceSessionTitle": {
-    "message": "Reemplazar pestañas actuales con esta sesión"
+  "privacyYourDataText": {
+    "message": "Como nada sale de tu navegador, no hay panel, ni cuenta, ni forma de que veamos lo que has hecho con Drowzy. Si desinstalas Drowzy, Chrome te ofrece la oportunidad de enviar comentarios opcionales (motivo de la desinstalación, navegador, SO) a través de una página web separada; ese envío es explícito y va a un formulario anónimo. Puedes omitirlo cerrando la pestaña."
   },
-  "invalidDomain": {
-    "message": "Introduce un dominio válido (ej. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy es de código abierto."
   },
-  "extensionPage": {
-    "message": "Página de la extensión"
-  },
-  "exportWhitelist": {
-    "message": "Exportar"
-  },
-  "importWhitelist": {
-    "message": "Importar"
-  },
-  "exportWhitelistTitle": {
-    "message": "Copiar lista blanca"
-  },
-  "importWhitelistTitle": {
-    "message": "Importar lista blanca desde el portapapeles"
-  },
-  "copiedSites": {
-    "message": "$COUNT$ sitio(s) copiado(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "$COUNT$ sitio(s) nuevo(s) importado(s)",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "No se encontraron dominios válidos en el portapapeles"
-  },
-  "clipboardReadFailed": {
-    "message": "No se pudo leer el portapapeles"
-  },
-  "enjoyingDrowzy": {
-    "message": "¿Te gusta Drowzy?"
-  },
-  "reviewYes": {
-    "message": "¡Sí!"
-  },
-  "reviewNo": {
-    "message": "No mucho"
-  },
-  "whatsNew": {
-    "message": "Novedades en v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Ver el código en GitHub"
   },
   "changelogTitle": {
     "message": "Novedades en Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Novedades"
+  },
+  "changelogVersionLabel": {
+    "message": "Versión"
   },
   "changelogCtaText": {
     "message": "Drowzy es gratuito y de código abierto. Si te ahorra memoria, considera dejar una reseña o una estrella en GitHub."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Cerrar pestañas duplicadas"
-  },
-  "tabUntitled": {
-    "message": "Sin título"
-  },
-  "badgeWhitelisted": {
-    "message": "En lista blanca"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "pronto"
-  },
-  "changelogVersionLabel": {
-    "message": "Versión"
-  },
-  "copiedStats": {
-    "message": "¡Estadísticas copiadas!"
-  },
-  "privacyFooterLink": {
-    "message": "Ver el código en GitHub"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy es de código abierto."
-  },
-  "privacyPermHost": {
-    "message": "Acceso al host opcional, solicitado bajo demanda solo cuando habilitas Protección de Formularios o Marcado de Pestañas Suspendidas. Nunca se solicita en la instalación. Revocable en cualquier momento."
-  },
-  "privacyPermScripting": {
-    "message": "Inyectar un pequeño script para detectar datos de formulario no guardados antes de suspender una pestaña. Solo opcional."
-  },
-  "privacyPermSidePanel": {
-    "message": "Mostrar Drowzy en el panel lateral de Chrome."
-  },
-  "privacyYourDataText": {
-    "message": "Como nada sale de tu navegador, no hay panel, ni cuenta, ni forma de que veamos lo que has hecho con Drowzy. Si desinstalas Drowzy, Chrome te ofrece la oportunidad de enviar comentarios opcionales (motivo de la desinstalación, navegador, SO) a través de una página web separada; ese envío es explícito y va a un formulario anónimo. Puedes omitirlo cerrando la pestaña."
-  },
-  "privacyYourDataTitle": {
-    "message": "Tus datos"
-  },
-  "ramEstimateTooltip": {
-    "message": "Estimado usando ~150 MB por pestaña suspendida. El ahorro real varía según la página."
-  },
-  "shareStats": {
-    "message": "Compartir"
-  },
-  "statLifetimeRam": {
-    "message": "RAM total ahorrada"
   },
   "confirmDeleteTitle": {
     "message": "Haz clic de nuevo para confirmar la eliminación"

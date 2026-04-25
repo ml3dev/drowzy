@@ -23,6 +23,9 @@
   "statSaved": {
     "message": "ušteđeno"
   },
+  "statForecast": {
+    "message": "dostupno"
+  },
   "suspendOthers": {
     "message": "Suspendiraj ostale"
   },
@@ -50,6 +53,9 @@
   "noTabsFound": {
     "message": "Nema pronađenih kartica"
   },
+  "tabUntitled": {
+    "message": "Bez naslova"
+  },
   "failedToLoad": {
     "message": "Učitavanje nije uspjelo. Ponovno otvorite skočni prozor za ponovni pokušaj."
   },
@@ -64,6 +70,9 @@
   },
   "badgeAudio": {
     "message": "Zvuk"
+  },
+  "badgeWhitelisted": {
+    "message": "Na popisu dopuštenih"
   },
   "badgeProtected": {
     "message": "Zaštićena"
@@ -137,8 +146,90 @@
   "statAllTime": {
     "message": "Ukupno"
   },
+  "statLifetimeRam": {
+    "message": "Ukupno ušteđenog RAM-a"
+  },
+  "ramEstimateTooltip": {
+    "message": "Procijenjeno koristeći ~150 MB po obustavljenoj kartici. Stvarne uštede variraju ovisno o stranici."
+  },
+  "ramForecastTooltip": {
+    "message": "Procijenjena memorija koja će se osloboditi kad vaše neaktivne kartice usnu, po ~150 MB po kartici."
+  },
+  "suspendedToast": {
+    "message": "Suspendirano $COUNT$ kartica · oslobođeno ~$RAM$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "ram": {
+        "content": "$2"
+      }
+    }
+  },
+  "wokeToast": {
+    "message": "Probuđeno $COUNT$ kartica",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noOthersToSuspend": {
+    "message": "Nema drugih kartica za suspendiranje"
+  },
+  "noSuspendedToWake": {
+    "message": "Nema suspendiranih kartica za buđenje"
+  },
+  "pinnedWontSuspend": {
+    "message": "Prikvačeno — neće biti suspendirano"
+  },
+  "audioWontSuspend": {
+    "message": "Reproducira zvuk — neće biti suspendirano"
+  },
+  "whitelistedWontSuspend": {
+    "message": "Na bijeloj listi — neće biti suspendirano"
+  },
+  "systemPageCantSuspend": {
+    "message": "Sistemska stranica — ne može se suspendirati"
+  },
+  "clickToDismiss": {
+    "message": "Kliknite za zatvaranje"
+  },
+  "keepAwakeBtn": {
+    "message": "Drži budnim"
+  },
+  "suspendTimerHint": {
+    "message": "Kartice s kojih ste prebacili obustavljaju se nakon ovog vremena. Povećajte ga ako se vraćate na kartice nakon dugih stanki."
+  },
+  "onboardingPinTip": {
+    "message": "<strong>Savjet:</strong> Kliknite ikonu slagalice u Chrome alatnoj traci da prikvačite Drowzy za pristup jednim klikom."
+  },
+  "onboardingTimerTip": {
+    "message": "<strong>Obustavlja kartice koje još koristite?</strong> Otvorite Drowzy → Postavke kako biste povećali timer od 30 minuta, ili dodajte stranicu u bijelu listu jednim klikom."
+  },
+  "onboardingFormsTip": {
+    "message": "<strong>Ispunjavate obrazac?</strong> Omogućite „Zaštita kartica s obrascima\" u Postavkama kako se kartice s nespremljenim unosom ne bi obustavile."
+  },
+  "onboardingRemapHint": {
+    "message": "Želite druge tipkovničke prečace? Prilagodite ih ovdje →"
+  },
+  "reviewLeaveTitle": {
+    "message": "Ostavite brzu recenziju"
+  },
+  "reviewReportTitle": {
+    "message": "Prijavite problem"
+  },
+  "reviewDismissTitle": {
+    "message": "Odbaci"
+  },
   "statMemberSince": {
     "message": "Član od"
+  },
+  "shareStats": {
+    "message": "Dijeli"
+  },
+  "copiedStats": {
+    "message": "Statistika je kopirana!"
   },
   "settings": {
     "message": "Postavke"
@@ -197,11 +288,14 @@
   "noSitesWhitelisted": {
     "message": "Nema dopuštenih stranica"
   },
+  "whitelistPlaceholder": {
+    "message": "example.com or site.com/path/*"
+  },
   "suspending": {
     "message": "Suspendiranje..."
   },
-  "done": {
-    "message": "Gotovo!"
+  "suspendingSoon": {
+    "message": "uskoro"
   },
   "waking": {
     "message": "Buđenje..."
@@ -225,6 +319,70 @@
   },
   "remove": {
     "message": "Ukloni"
+  },
+  "replace": {
+    "message": "Zamijeni"
+  },
+  "replaceSessionTitle": {
+    "message": "Zamijeni trenutne kartice ovom sesijom"
+  },
+  "invalidDomain": {
+    "message": "Unesite valjanu domenu (npr. example.com)"
+  },
+  "extensionPage": {
+    "message": "Stranica proširenja"
+  },
+  "exportWhitelist": {
+    "message": "Izvezi"
+  },
+  "importWhitelist": {
+    "message": "Uvezi"
+  },
+  "exportWhitelistTitle": {
+    "message": "Kopiraj bijelu listu"
+  },
+  "importWhitelistTitle": {
+    "message": "Uvezi bijelu listu iz međuspremnika"
+  },
+  "copiedSites": {
+    "message": "Kopirano $COUNT$ stranica",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importedSites": {
+    "message": "Uvezeno $COUNT$ novih stranica",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noValidDomains": {
+    "message": "U međuspremniku nisu pronađene valjane domene"
+  },
+  "clipboardReadFailed": {
+    "message": "Nije moguće pročitati međuspremnik"
+  },
+  "enjoyingDrowzy": {
+    "message": "Sviđa li vam se Drowzy?"
+  },
+  "reviewYes": {
+    "message": "Da!"
+  },
+  "reviewNo": {
+    "message": "Ne baš"
+  },
+  "whatsNew": {
+    "message": "Što je novo u v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "switchToLight": {
     "message": "Prebaci na svjetli način"
@@ -372,81 +530,41 @@
   "privacyPermContextMenus": {
     "message": "Opcije izbornika desnog klika za obustavu i bijelu listu."
   },
+  "privacyPermScripting": {
+    "message": "Ubrizgavanje male skripte za otkrivanje nespremljenih podataka obrasca prije obustave kartice. Samo opcijski."
+  },
+  "privacyPermSidePanel": {
+    "message": "Prikazivanje Drowzyja na bočnoj ploči Chromea."
+  },
+  "privacyPermHost": {
+    "message": "Opcijski pristup hostu, traži se na zahtjev samo kada omogućite Zaštitu obrazaca ili Označavanje obustavljenih kartica. Nikada se ne traži pri instalaciji. Opozivo u bilo koje vrijeme."
+  },
   "privacyContactTitle": {
     "message": "Kontakt"
   },
   "privacyContactText": {
     "message": "Imate pitanja? Obratite nam se na drowzyextension@gmail.com"
   },
-  "replace": {
-    "message": "Zamijeni"
+  "privacyYourDataTitle": {
+    "message": "Vaši podaci"
   },
-  "replaceSessionTitle": {
-    "message": "Zamijeni trenutne kartice ovom sesijom"
+  "privacyYourDataText": {
+    "message": "Budući da ništa ne napušta vaš preglednik, nema nadzorne ploče, nema računa, i nema načina da vidimo što ste radili s Drowzyjem. Ako deinstalirate Drowzy, Chrome vam nudi priliku da pošaljete opcijske povratne informacije (razlog deinstalacije, preglednik, OS) putem zasebne web stranice; to je podnošenje izričito i ide u anonimni obrazac. Možete ga preskočiti zatvaranjem kartice."
   },
-  "invalidDomain": {
-    "message": "Unesite valjanu domenu (npr. example.com)"
+  "privacyFooterText": {
+    "message": "Drowzy je otvorenog koda."
   },
-  "extensionPage": {
-    "message": "Stranica proširenja"
-  },
-  "exportWhitelist": {
-    "message": "Izvezi"
-  },
-  "importWhitelist": {
-    "message": "Uvezi"
-  },
-  "exportWhitelistTitle": {
-    "message": "Kopiraj bijelu listu"
-  },
-  "importWhitelistTitle": {
-    "message": "Uvezi bijelu listu iz međuspremnika"
-  },
-  "copiedSites": {
-    "message": "Kopirano $COUNT$ stranica",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "importedSites": {
-    "message": "Uvezeno $COUNT$ novih stranica",
-    "placeholders": {
-      "count": {
-        "content": "$1"
-      }
-    }
-  },
-  "noValidDomains": {
-    "message": "U međuspremniku nisu pronađene valjane domene"
-  },
-  "clipboardReadFailed": {
-    "message": "Nije moguće pročitati međuspremnik"
-  },
-  "enjoyingDrowzy": {
-    "message": "Sviđa li vam se Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Da!"
-  },
-  "reviewNo": {
-    "message": "Ne baš"
-  },
-  "whatsNew": {
-    "message": "Što je novo u v$VERSION$",
-    "placeholders": {
-      "version": {
-        "content": "$1",
-        "example": "1.3.2"
-      }
-    }
+  "privacyFooterLink": {
+    "message": "Pregledaj kod na GitHubu"
   },
   "changelogTitle": {
     "message": "Što je novo u Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Što je novo"
+  },
+  "changelogVersionLabel": {
+    "message": "Verzija"
   },
   "changelogCtaText": {
     "message": "Drowzy je besplatan i otvorenog koda. Ako vam štedi memoriju, ostavite recenziju ili zvjezdicu na GitHubu."
@@ -476,54 +594,6 @@
   },
   "closeDuplicatesTitle": {
     "message": "Zatvori duplikate kartica"
-  },
-  "tabUntitled": {
-    "message": "Bez naslova"
-  },
-  "badgeWhitelisted": {
-    "message": "Na popisu dopuštenih"
-  },
-  "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
-  },
-  "suspendingSoon": {
-    "message": "uskoro"
-  },
-  "changelogVersionLabel": {
-    "message": "Verzija"
-  },
-  "copiedStats": {
-    "message": "Statistika je kopirana!"
-  },
-  "privacyFooterLink": {
-    "message": "Pregledaj kod na GitHubu"
-  },
-  "privacyFooterText": {
-    "message": "Drowzy je otvorenog koda."
-  },
-  "privacyPermHost": {
-    "message": "Opcijski pristup hostu, traži se na zahtjev samo kada omogućite Zaštitu obrazaca ili Označavanje obustavljenih kartica. Nikada se ne traži pri instalaciji. Opozivo u bilo koje vrijeme."
-  },
-  "privacyPermScripting": {
-    "message": "Ubrizgavanje male skripte za otkrivanje nespremljenih podataka obrasca prije obustave kartice. Samo opcijski."
-  },
-  "privacyPermSidePanel": {
-    "message": "Prikazivanje Drowzyja na bočnoj ploči Chromea."
-  },
-  "privacyYourDataText": {
-    "message": "Budući da ništa ne napušta vaš preglednik, nema nadzorne ploče, nema računa, i nema načina da vidimo što ste radili s Drowzyjem. Ako deinstalirate Drowzy, Chrome vam nudi priliku da pošaljete opcijske povratne informacije (razlog deinstalacije, preglednik, OS) putem zasebne web stranice; to je podnošenje izričito i ide u anonimni obrazac. Možete ga preskočiti zatvaranjem kartice."
-  },
-  "privacyYourDataTitle": {
-    "message": "Vaši podaci"
-  },
-  "ramEstimateTooltip": {
-    "message": "Procijenjeno koristeći ~150 MB po obustavljenoj kartici. Stvarne uštede variraju ovisno o stranici."
-  },
-  "shareStats": {
-    "message": "Dijeli"
-  },
-  "statLifetimeRam": {
-    "message": "Ukupno ušteđenog RAM-a"
   },
   "confirmDeleteTitle": {
     "message": "Kliknite ponovno za potvrdu brisanja"
