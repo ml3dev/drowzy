@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Desde siempre"
   },
-  "statRamSaved": {
-    "message": "RAM ahorrada (est.)"
-  },
   "statMemberSince": {
     "message": "Miembro desde"
   },
@@ -343,13 +340,10 @@
     "message": "Entendido, vamos"
   },
   "privacyTitle": {
-    "message": "Drowzy – Política de privacidad"
+    "message": "Política de privacidad"
   },
   "privacyUpdated": {
     "message": "Última actualización: abril de 2026"
-  },
-  "privacyShortTitle": {
-    "message": "La versión corta"
   },
   "privacyShortText": {
     "message": "Drowzy no recopila ningún dato. Sin analíticas, sin rastreo, sin servidores externos. Todo permanece en tu navegador."
@@ -364,19 +358,19 @@
     "message": "Permisos"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy usa estos permisos de Chrome:"
+    "message": "Drowzy solo solicita los permisos que necesita para hacer su único trabajo:"
   },
   "privacyPermTabs": {
-    "message": "tabs – listar, suspender y restaurar pestañas del navegador"
+    "message": "Listar, suspender y restaurar pestañas del navegador."
   },
   "privacyPermStorage": {
-    "message": "storage – guardar tus ajustes localmente"
+    "message": "Guardar tu configuración y sesiones localmente."
   },
   "privacyPermAlarms": {
-    "message": "alarms – comprobaciones periódicas de pestañas inactivas"
+    "message": "Comprobaciones periódicas de pestañas inactivas (cada 60 segundos)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – opciones del menú del clic derecho"
+    "message": "Opciones del menú contextual para suspender y la lista blanca."
   },
   "privacyContactTitle": {
     "message": "Contacto"
@@ -440,82 +434,19 @@
     "message": "No mucho"
   },
   "whatsNew": {
-    "message": "Novedades en v1.3.1"
+    "message": "Novedades en v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Novedades en Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Novedades"
-  },
-  "changelogNewFeatures": {
-    "message": "Nuevas funciones"
-  },
-  "changelogBugFixes": {
-    "message": "Correcciones"
-  },
-  "changelogImprovements": {
-    "message": "Mejoras"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Solicitud de reseña"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Después de suspender algunas pestañas, Drowzy te preguntará si te gusta. ¡Un pulgar arriba nos ayuda mucho!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Página de cambios"
-  },
-  "changelogChangelogDesc": {
-    "message": "¡La estás viendo! Se abre automáticamente al actualizar. Accesible desde Ajustes."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Tiempo de restauración de sesión"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Las pestañas restauradas ya no se suspenden automáticamente de inmediato. Reinician correctamente sus temporizadores."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Tiempo de espera de verificación de formularios"
-  },
-  "changelogFormCheckDesc": {
-    "message": "La verificación de formularios ahora tiene un tiempo de espera de 500ms para que pestañas no responsivas no bloqueen la cola."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Duplicados de lista blanca"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Corregido problema de distinción entre mayúsculas y minúsculas. Todas las entradas se normalizan."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Estadísticas en vivo"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "El popup se actualiza automáticamente cuando las pestañas se suspenden o despiertan en segundo plano."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Opciones de restauración de sesión"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Las sesiones ahora tienen botones separados de \"Abrir\" y \"Reemplazar\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Validación y exportación/importación de lista blanca"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "La entrada de lista blanca ahora valida dominios. Puedes exportar e importar tu lista blanca a través del portapapeles."
-  },
-  "changelogA11yTitle": {
-    "message": "Accesibilidad"
-  },
-  "changelogA11yDesc": {
-    "message": "Los elementos de la lista de pestañas son navegables por teclado con roles ARIA adecuados. Las notificaciones se anuncian a los lectores de pantalla."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Animaciones más suaves"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Las animaciones escalonadas están limitadas para evitar retrasos largos en cascada."
   },
   "changelogCtaText": {
     "message": "Drowzy es gratuito y de código abierto. Si te ahorra memoria, considera dejar una reseña o una estrella en GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Estrella en GitHub"
-  },
-  "suspendThis": {
-    "message": "Suspender pestaña"
-  },
-  "failedToSuspend": {
-    "message": "No se puede suspender esta pestaña"
   },
   "closedDuplicates": {
     "message": "Se cerraron $COUNT$ pestaña(s) duplicada(s)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "pronto"
   },
-  "confirm": {
-    "message": "¿Seguro?"
+  "changelogVersionLabel": {
+    "message": "Versión"
+  },
+  "copiedStats": {
+    "message": "¡Estadísticas copiadas!"
+  },
+  "privacyFooterLink": {
+    "message": "Ver el código en GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy es de código abierto."
+  },
+  "privacyPermHost": {
+    "message": "Acceso al host opcional, solicitado bajo demanda solo cuando habilitas Protección de Formularios o Marcado de Pestañas Suspendidas. Nunca se solicita en la instalación. Revocable en cualquier momento."
+  },
+  "privacyPermScripting": {
+    "message": "Inyectar un pequeño script para detectar datos de formulario no guardados antes de suspender una pestaña. Solo opcional."
+  },
+  "privacyPermSidePanel": {
+    "message": "Mostrar Drowzy en el panel lateral de Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Como nada sale de tu navegador, no hay panel, ni cuenta, ni forma de que veamos lo que has hecho con Drowzy. Si desinstalas Drowzy, Chrome te ofrece la oportunidad de enviar comentarios opcionales (motivo de la desinstalación, navegador, SO) a través de una página web separada; ese envío es explícito y va a un formulario anónimo. Puedes omitirlo cerrando la pestaña."
+  },
+  "privacyYourDataTitle": {
+    "message": "Tus datos"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimado usando ~150 MB por pestaña suspendida. El ahorro real varía según la página."
+  },
+  "shareStats": {
+    "message": "Compartir"
+  },
+  "statLifetimeRam": {
+    "message": "RAM total ahorrada"
+  },
+  "confirmDeleteTitle": {
+    "message": "Haz clic de nuevo para confirmar la eliminación"
   }
 }

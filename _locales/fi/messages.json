@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Kaikkien aikojen"
   },
-  "statRamSaved": {
-    "message": "Säästetty RAM (arvio)"
-  },
   "statMemberSince": {
     "message": "Jäsen alkaen"
   },
@@ -343,13 +340,10 @@
     "message": "Selvä, mennään"
   },
   "privacyTitle": {
-    "message": "Drowzy – Tietosuojakäytäntö"
+    "message": "Tietosuojakäytäntö"
   },
   "privacyUpdated": {
     "message": "Viimeksi päivitetty: huhtikuu 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Lyhyt versio"
   },
   "privacyShortText": {
     "message": "Drowzy ei kerää mitään tietoja. Ei analytiikkaa, ei seurantaa, ei ulkoisia palvelimia. Kaikki pysyy selaimessasi."
@@ -364,19 +358,19 @@
     "message": "Käyttöoikeudet"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy käyttää näitä Chromen käyttöoikeuksia:"
+    "message": "Drowzy pyytää vain oikeuksia, joita se tarvitsee yhteen tehtäväänsä:"
   },
   "privacyPermTabs": {
-    "message": "tabs – selaimen välilehtien listaus, keskeytys ja palautus"
+    "message": "Selaimen välilehtien luettelointi, keskeyttäminen ja palauttaminen."
   },
   "privacyPermStorage": {
-    "message": "storage – asetusten paikallinen tallennus"
+    "message": "Asetustesi ja istuntojesi tallentaminen paikallisesti."
   },
   "privacyPermAlarms": {
-    "message": "alarms – säännölliset tarkistukset käyttämättömille välilehdille"
+    "message": "Inaktiivisten välilehtien säännölliset tarkistukset (60 sekunnin välein)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – hiiren oikean painikkeen valikkovaihtoehdot"
+    "message": "Hiiren kakkospainikevalikon vaihtoehdot keskeyttämiseen ja sallittujen luetteloon."
   },
   "privacyContactTitle": {
     "message": "Yhteystiedot"
@@ -440,82 +434,19 @@
     "message": "Ei oikeastaan"
   },
   "whatsNew": {
-    "message": "Uutta versiossa 1.1.0"
+    "message": "Uutta versiossa 1.1.0 v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Uutta Drowzyssä"
   },
   "changelogWhatsNew": {
     "message": "Uutta"
-  },
-  "changelogNewFeatures": {
-    "message": "Uudet ominaisuudet"
-  },
-  "changelogBugFixes": {
-    "message": "Virheenkorjaukset"
-  },
-  "changelogImprovements": {
-    "message": "Parannukset"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Arvostelukehotus"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Muutaman välilehden keskeytettyäsi Drowzy kysyy, pidätkö siitä. Nopea peukku ylös auttaa meitä paljon!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Muutoslokisivu"
-  },
-  "changelogChangelogDesc": {
-    "message": "Katsot sitä juuri nyt! Avautuu automaattisesti päivityksessä. Saatavilla Asetuksista."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Istunnon palautuksen ajoitus"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Palautettuja välilehtiä ei enää keskeytetä heti automaattisesti. Ne nollaavat nyt oikein käyttämättömyysajastimensa."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Lomakkeen tarkistuksen aikakatkaisu"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Lomakkeen tarkistuksella on nyt 500ms aikakatkaisu, jotta reagoimattomat välilehdet eivät voi estää jonoa."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Sallittujen listan kopiot"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Korjattu kirjainkoon erotteluongelma, jossa \"Example.com\" ja \"example.com\" voitiin molemmat lisätä. Kaikki merkinnät normalisoidaan nyt."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Reaaliaikaiset tilastot"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Ponnahdusikkuna päivittyy nyt automaattisesti, kun välilehtiä keskeytetään tai herätetään."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Istunnon palautusasetukset"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Istunnoilla on nyt erilliset \"Avaa\" ja \"Korvaa\" -painikkeet."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Sallittujen listan validointi ja vienti/tuonti"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Sallittujen lista tarkistaa nyt verkkotunnukset. Voit viedä ja tuoda leikepöydän kautta."
-  },
-  "changelogA11yTitle": {
-    "message": "Esteettömyys"
-  },
-  "changelogA11yDesc": {
-    "message": "Välilehtiluettelon kohteet ovat nyt navigoitavissa näppäimistöllä ARIA-rooleilla. Ilmoitukset tiedotetaan ruudunlukijoille."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Sulavammat animaatiot"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Välilehtilistan porrastetut animaatiot on nyt rajoitettu, jotta ikkunoissa, joissa on paljon välilehtiä, ei ole pitkää viivettä."
   },
   "changelogCtaText": {
     "message": "Drowzy on ilmainen ja avoimen lähdekoodin. Jos se säästää muistiasi, harkitse arvostelun jättämistä tai tähden antamista GitHubissa."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Tähti GitHubissa"
-  },
-  "suspendThis": {
-    "message": "Pysäytä välilehti"
-  },
-  "failedToSuspend": {
-    "message": "Tätä välilehteä ei voi pysäyttää"
   },
   "closedDuplicates": {
     "message": "Suljettiin $COUNT$ kaksoiskappale(tta)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "pian"
   },
-  "confirm": {
-    "message": "Varma?"
+  "changelogVersionLabel": {
+    "message": "Versio"
+  },
+  "copiedStats": {
+    "message": "Tilastot kopioitu!"
+  },
+  "privacyFooterLink": {
+    "message": "Selaa koodia GitHubissa"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy on avoimen lähdekoodin."
+  },
+  "privacyPermHost": {
+    "message": "Valinnainen isäntäkäyttö, pyydetään tarvittaessa vain, kun otat käyttöön Lomakesuojauksen tai Keskeytettyjen välilehtien merkitsemisen. Ei koskaan pyydetä asennuksessa. Peruutettavissa milloin tahansa."
+  },
+  "privacyPermScripting": {
+    "message": "Pienen komentosarjan injektoiminen tallentamattomien lomaketietojen havaitsemiseksi ennen välilehden keskeyttämistä. Vain valinnainen."
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzyn näyttäminen Chromen sivupaneelissa."
+  },
+  "privacyYourDataText": {
+    "message": "Koska mikään ei lähde selaimestasi, ei ole hallintapaneelia, tiliä eikä tapaa nähdä, mitä olet tehnyt Drowzyllä. Jos poistat Drowzyn, Chrome tarjoaa sinulle mahdollisuuden lähettää valinnainen palaute (poiston syy, selain, käyttöjärjestelmä) erillisen verkkosivun kautta; tämä lähetys on nimenomainen ja menee anonyymiin lomakkeeseen. Voit ohittaa sen sulkemalla välilehden."
+  },
+  "privacyYourDataTitle": {
+    "message": "Sinun tietosi"
+  },
+  "ramEstimateTooltip": {
+    "message": "Arvioitu käyttäen ~150 Mt keskeytettyä välilehteä kohti. Todelliset säästöt vaihtelevat sivun mukaan."
+  },
+  "shareStats": {
+    "message": "Jaa"
+  },
+  "statLifetimeRam": {
+    "message": "Yhteensä säästetty RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "Vahvista poisto napsauttamalla uudelleen"
   }
 }

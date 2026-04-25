@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Sepanjang masa"
   },
-  "statRamSaved": {
-    "message": "RAM dijimatkan (anggaran)"
-  },
   "statMemberSince": {
     "message": "Ahli sejak"
   },
@@ -343,13 +340,10 @@
     "message": "Faham, jom"
   },
   "privacyTitle": {
-    "message": "Drowzy – Dasar Privasi"
+    "message": "Dasar Privasi"
   },
   "privacyUpdated": {
     "message": "Kemas kini terakhir: April 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Versi ringkas"
   },
   "privacyShortText": {
     "message": "Drowzy tidak mengumpul sebarang data. Tiada analitik, tiada penjejakan, tiada pelayan luaran. Semuanya kekal dalam pelayar anda."
@@ -364,19 +358,19 @@
     "message": "Kebenaran"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy menggunakan kebenaran Chrome ini:"
+    "message": "Drowzy hanya meminta kebenaran yang diperlukan untuk melakukan satu tugasnya:"
   },
   "privacyPermTabs": {
-    "message": "tabs – menyenarai, menggantung dan memulihkan tab pelayar"
+    "message": "Menyenaraikan, menggantung, dan memulihkan tab pelayar."
   },
   "privacyPermStorage": {
-    "message": "storage – menyimpan tetapan anda secara setempat"
+    "message": "Menyimpan tetapan dan sesi anda secara setempat."
   },
   "privacyPermAlarms": {
-    "message": "alarms – pemeriksaan berkala untuk tab tidak aktif"
+    "message": "Pemeriksaan berkala tab tidak aktif (setiap 60 saat)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – pilihan menu klik kanan"
+    "message": "Pilihan menu klik kanan untuk menggantung dan senarai putih."
   },
   "privacyContactTitle": {
     "message": "Hubungi"
@@ -440,82 +434,19 @@
     "message": "Tidak juga"
   },
   "whatsNew": {
-    "message": "Apa yang baharu dalam v1.3.1"
+    "message": "Apa yang baharu dalam v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Apa yang Baharu di Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Apa yang Baharu"
-  },
-  "changelogNewFeatures": {
-    "message": "Ciri Baharu"
-  },
-  "changelogBugFixes": {
-    "message": "Pembaikan Pepijat"
-  },
-  "changelogImprovements": {
-    "message": "Penambahbaikan"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Permintaan Ulasan"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Selepas menangguhkan beberapa tab, Drowzy akan bertanya sama ada anda suka. Ibu jari cepat ke atas sangat membantu kami!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Halaman Log Perubahan"
-  },
-  "changelogChangelogDesc": {
-    "message": "Anda sedang melihatnya! Dibuka secara automatik semasa kemas kini. Akses dari Tetapan bila-bila masa."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Masa Pemulihan Sesi"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Tab yang dipulihkan tidak lagi ditangguhkan secara automatik serta-merta. Ia kini menetapkan semula pemasa melahu mereka dengan betul."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Tamat Masa Semakan Borang"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Semakan data borang kini mempunyai had masa 500ms supaya tab yang tidak bertindak balas tidak boleh menyekat barisan."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Pendua Senarai Putih"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Isu sensitiviti huruf besar dan kecil di mana \"Example.com\" dan \"example.com\" kedua-duanya boleh ditambah telah diperbaiki. Semua entri kini dinormalisasi."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Statistik Langsung"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Popup kini dikemas kini secara automatik apabila tab ditangguhkan atau dibangunkam."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Pilihan Pemulihan Sesi"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sesi kini mempunyai butang \"Buka\" dan \"Ganti\" yang berasingan."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Pengesahan dan Eksport/Import Senarai Putih"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Input senarai putih kini mengesahkan domain. Anda boleh mengeksport dan mengimport melalui papan klip."
-  },
-  "changelogA11yTitle": {
-    "message": "Kebolehcapaian"
-  },
-  "changelogA11yDesc": {
-    "message": "Item senarai tab kini boleh dinavigasi melalui papan kekunci dengan peranan ARIA. Pemberitahuan diumumkan kepada pembaca skrin."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Animasi Lebih Lancar"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Animasi berperingkat senarai tab kini dihadkan supaya tetingkap dengan banyak tab tidak mempunyai kelewatan panjang."
   },
   "changelogCtaText": {
     "message": "Drowzy percuma dan sumber terbuka. Jika ia menjimatkan memori, tinggalkan ulasan atau bintang di GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Bintang di GitHub"
-  },
-  "suspendThis": {
-    "message": "Tangguhkan tab"
-  },
-  "failedToSuspend": {
-    "message": "Tidak dapat menangguhkan tab ini"
   },
   "closedDuplicates": {
     "message": "Menutup $COUNT$ tab pendua",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "tidak lama lagi"
   },
-  "confirm": {
-    "message": "Pasti?"
+  "changelogVersionLabel": {
+    "message": "Versi"
+  },
+  "copiedStats": {
+    "message": "Statistik disalin!"
+  },
+  "privacyFooterLink": {
+    "message": "Lihat kod di GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy adalah sumber terbuka."
+  },
+  "privacyPermHost": {
+    "message": "Akses hos pilihan, diminta atas permintaan hanya apabila anda mendayakan Perlindungan Borang atau Penandaan Tab Digantung. Tidak pernah diminta semasa pemasangan. Boleh dibatalkan pada bila-bila masa."
+  },
+  "privacyPermScripting": {
+    "message": "Menyuntik skrip kecil untuk mengesan data borang yang tidak disimpan sebelum menggantung tab. Hanya opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Memaparkan Drowzy dalam panel sisi Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Kerana tiada apa-apa meninggalkan pelayar anda, tiada papan pemuka, tiada akaun, dan tiada cara untuk kami melihat apa yang anda lakukan dengan Drowzy. Jika anda menyahpasang Drowzy, Chrome menawarkan anda peluang untuk menghantar maklum balas pilihan (sebab nyahpasang, pelayar, OS) melalui halaman web berasingan; penyerahan itu eksplisit dan pergi ke borang tanpa nama. Anda boleh melangkaunya dengan menutup tab."
+  },
+  "privacyYourDataTitle": {
+    "message": "Data anda"
+  },
+  "ramEstimateTooltip": {
+    "message": "Dianggarkan menggunakan ~150 MB setiap tab yang digantung. Penjimatan sebenar berbeza mengikut halaman."
+  },
+  "shareStats": {
+    "message": "Kongsi"
+  },
+  "statLifetimeRam": {
+    "message": "Jumlah RAM disimpan"
+  },
+  "confirmDeleteTitle": {
+    "message": "Klik sekali lagi untuk mengesahkan pemadaman"
   }
 }

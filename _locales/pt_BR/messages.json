@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Total"
   },
-  "statRamSaved": {
-    "message": "RAM economizada (estimativa)"
-  },
   "statMemberSince": {
     "message": "Membro desde"
   },
@@ -343,13 +340,10 @@
     "message": "Entendi, vamos lá"
   },
   "privacyTitle": {
-    "message": "Drowzy – Política de Privacidade"
+    "message": "Política de Privacidade"
   },
   "privacyUpdated": {
     "message": "Última atualização: abril de 2026"
-  },
-  "privacyShortTitle": {
-    "message": "A versão resumida"
   },
   "privacyShortText": {
     "message": "O Drowzy não coleta nenhum dado. Sem analytics, sem rastreamento, sem servidores externos. Tudo permanece no seu navegador."
@@ -364,19 +358,19 @@
     "message": "Permissões"
   },
   "privacyPermissionsIntro": {
-    "message": "O Drowzy usa estas permissões do Chrome:"
+    "message": "Drowzy solicita apenas as permissões de que precisa para fazer seu único trabalho:"
   },
   "privacyPermTabs": {
-    "message": "tabs – listar, suspender e restaurar abas do navegador"
+    "message": "Listar, suspender e restaurar abas do navegador."
   },
   "privacyPermStorage": {
-    "message": "storage – salvar suas configurações localmente"
+    "message": "Salvar suas configurações e sessões localmente."
   },
   "privacyPermAlarms": {
-    "message": "alarms – verificações periódicas de abas inativas"
+    "message": "Verificações periódicas de abas inativas (a cada 60 segundos)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – opções do menu de contexto"
+    "message": "Opções do menu de clique direito para suspender e lista branca."
   },
   "privacyContactTitle": {
     "message": "Contato"
@@ -440,82 +434,19 @@
     "message": "Não muito"
   },
   "whatsNew": {
-    "message": "Novidades na v1.3.1"
+    "message": "Novidades na v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Novidades no Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Novidades"
-  },
-  "changelogNewFeatures": {
-    "message": "Novos recursos"
-  },
-  "changelogBugFixes": {
-    "message": "Correções"
-  },
-  "changelogImprovements": {
-    "message": "Melhorias"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Avaliação"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Após suspender algumas abas, o Drowzy perguntará se você está gostando. Um joinha nos ajuda muito!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Página de alterações"
-  },
-  "changelogChangelogDesc": {
-    "message": "Você está olhando! Abre automaticamente na atualização. Acessível nas Configurações."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Restauração de sessão"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Abas restauradas não são mais suspensas de imediato. Temporizadores são resetados corretamente."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Timeout de formulários"
-  },
-  "changelogFormCheckDesc": {
-    "message": "A verificação de formulários tem timeout de 500ms para não bloquear a fila de suspensão."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Duplicatas na lista"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Corrigido problema de maiúsculas/minúsculas. Entradas normalizadas."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Estatísticas em tempo real"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "O popup atualiza automaticamente quando abas são suspensas ou despertadas."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Opções de restauração"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sessões têm botões separados de \"Abrir\" e \"Substituir\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Validação e exportação/importação"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "A entrada valida domínios. Exporte e importe via área de transferência."
-  },
-  "changelogA11yTitle": {
-    "message": "Acessibilidade"
-  },
-  "changelogA11yDesc": {
-    "message": "Itens navegáveis por teclado com ARIA. Notificações para leitores de tela."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Animações mais suaves"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Animações escalonadas são limitadas para evitar atrasos longos."
   },
   "changelogCtaText": {
     "message": "Drowzy é gratuito e open source. Se economiza memória, deixe uma avaliação ou estrela no GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Estrela no GitHub"
-  },
-  "suspendThis": {
-    "message": "Suspender aba"
-  },
-  "failedToSuspend": {
-    "message": "Não é possível suspender esta aba"
   },
   "closedDuplicates": {
     "message": "Fechadas $COUNT$ aba(s) duplicada(s)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "em breve"
   },
-  "confirm": {
-    "message": "Certeza?"
+  "changelogVersionLabel": {
+    "message": "Versão"
+  },
+  "copiedStats": {
+    "message": "Estatísticas copiadas!"
+  },
+  "privacyFooterLink": {
+    "message": "Veja o código no GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy é código aberto."
+  },
+  "privacyPermHost": {
+    "message": "Acesso ao host opcional, solicitado sob demanda apenas quando você ativa Proteção de Formulários ou Marcação de Abas Suspensas. Nunca solicitado na instalação. Revogável a qualquer momento."
+  },
+  "privacyPermScripting": {
+    "message": "Injetar um pequeno script para detectar dados de formulário não salvos antes de suspender uma aba. Somente opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Exibir Drowzy no painel lateral do Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Como nada sai do seu navegador, não há painel, nem conta, nem forma de vermos o que você fez com Drowzy. Se você desinstalar Drowzy, o Chrome oferece a chance de enviar feedback opcional (motivo da desinstalação, navegador, SO) através de uma página web separada; esse envio é explícito e vai para um formulário anônimo. Você pode pulá-lo fechando a aba."
+  },
+  "privacyYourDataTitle": {
+    "message": "Seus dados"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimado usando ~150 MB por aba suspensa. A economia real varia por página."
+  },
+  "shareStats": {
+    "message": "Compartilhar"
+  },
+  "statLifetimeRam": {
+    "message": "RAM total economizada"
+  },
+  "confirmDeleteTitle": {
+    "message": "Clique novamente para confirmar exclusão"
   }
 }

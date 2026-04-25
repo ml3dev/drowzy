@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Iš viso"
   },
-  "statRamSaved": {
-    "message": "Sutaupyta RAM (apytiksliai)"
-  },
   "statMemberSince": {
     "message": "Narys nuo"
   },
@@ -343,13 +340,10 @@
     "message": "Supratau, pradėkime"
   },
   "privacyTitle": {
-    "message": "Drowzy – Privatumo politika"
+    "message": "Privatumo politika"
   },
   "privacyUpdated": {
     "message": "Paskutinį kartą atnaujinta: 2026 m. balandis"
-  },
-  "privacyShortTitle": {
-    "message": "Trumpa versija"
   },
   "privacyShortText": {
     "message": "Drowzy nerenka jokių duomenų. Jokios analitikos, jokio sekimo, jokių išorinių serverių. Viskas lieka jūsų naršyklėje."
@@ -364,19 +358,19 @@
     "message": "Leidimai"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy naudoja šiuos Chrome leidimus:"
+    "message": "Drowzy prašo tik tų leidimų, kurių jam reikia atlikti vieną darbą:"
   },
   "privacyPermTabs": {
-    "message": "tabs – naršyklės kortelių sąrašas, sustabdymas ir atkūrimas"
+    "message": "Naršyklės skirtukų išvardijimas, sustabdymas ir atkūrimas."
   },
   "privacyPermStorage": {
-    "message": "storage – nustatymų saugojimas vietinėje atmintyje"
+    "message": "Jūsų nustatymų ir seansų išsaugojimas vietoje."
   },
   "privacyPermAlarms": {
-    "message": "alarms – periodiniai neaktyvių kortelių patikrinimai"
+    "message": "Periodinės neaktyvių skirtukų patikros (kas 60 sekundžių)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – dešiniojo pelės mygtuko meniu parinktys"
+    "message": "Dešiniojo paspaudimo meniu parinktys sustabdymui ir baltajam sąrašui."
   },
   "privacyContactTitle": {
     "message": "Kontaktai"
@@ -440,82 +434,19 @@
     "message": "Ne visai"
   },
   "whatsNew": {
-    "message": "Kas naujo v1.3.1"
+    "message": "Kas naujo v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Kas naujo Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Kas naujo"
-  },
-  "changelogNewFeatures": {
-    "message": "Naujos funkcijos"
-  },
-  "changelogBugFixes": {
-    "message": "Klaidų taisymai"
-  },
-  "changelogImprovements": {
-    "message": "Patobulinimai"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Atsiliepimo užklausa"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Pristabdžius kelis skirtukus, Drowzy paklaus, ar jums patinka. Greitas balsas labai mums padeda!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Pakeitimų puslapis"
-  },
-  "changelogChangelogDesc": {
-    "message": "Jūs žiūrite į jį! Atidaromas automatiškai atnaujinant. Pasiekiamas iš Nustatymų."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Sesijos atkūrimo laikas"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Atkurti skirtukai nebėra nedelsiant automatiškai pristabdomi. Dabar jie teisingai atstato savo neveiklumo laikmačius."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Formos patikros skirtasis laikas"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Formos duomenų patikra dabar turi 500ms skirtąjį laiką, todėl nereaguojantys skirtukai negali blokuoti eilės."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Baltojo sąrašo dublikatai"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Ištaisyta didžiųjų ir mažųjų raidžių jautrumo problema, dėl kurios buvo galima pridėti ir \"Example.com\", ir \"example.com\". Visi įrašai dabar normalizuoti."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Tiesioginė statistika"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Iššokantysis langas dabar automatiškai atnaujinamas pristabdant arba pažadinant skirtukus."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Sesijos atkūrimo parinktys"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sesijose dabar yra atskiri mygtukai \"Atidaryti\" ir \"Pakeisti\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Baltojo sąrašo tikrinimas ir eksportas/importas"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Baltojo sąrašo įvestis dabar tikrina domenus. Galite eksportuoti ir importuoti per iškarpinę."
-  },
-  "changelogA11yTitle": {
-    "message": "Prieinamumas"
-  },
-  "changelogA11yDesc": {
-    "message": "Skirtukų sąrašo elementai dabar yra naršomi klaviatūra su ARIA vaidmenimis. Pranešimai skelbiami ekrano skaitytuvams."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Sklandesnės animacijos"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Skirtukų sąrašo pakopinės animacijos dabar yra apribotos, todėl langai su daugeliu skirtukų neturi ilgo vėlavimo."
   },
   "changelogCtaText": {
     "message": "Drowzy yra nemokamas ir atviro kodo. Jei jis taupo jūsų atmintį, palikite atsiliepimą arba žvaigždutę GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Žvaigždutė GitHub"
-  },
-  "suspendThis": {
-    "message": "Sustabdyti skirtuką"
-  },
-  "failedToSuspend": {
-    "message": "Nepavyko sustabdyti šio skirtuko"
   },
   "closedDuplicates": {
     "message": "Uždaryta $COUNT$ pasikartojančių skirtukų",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "netrukus"
   },
-  "confirm": {
-    "message": "Tikrai?"
+  "changelogVersionLabel": {
+    "message": "Versija"
+  },
+  "copiedStats": {
+    "message": "Statistika nukopijuota!"
+  },
+  "privacyFooterLink": {
+    "message": "Naršyti kodą GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy yra atvirojo kodo."
+  },
+  "privacyPermHost": {
+    "message": "Pasirinktinė pagrindinio kompiuterio prieiga, prašoma pagal poreikį tik tada, kai įjungiate Formų apsaugą arba Sustabdytų skirtukų žymėjimą. Niekada neprašoma diegimo metu. Galima atšaukti bet kuriuo metu."
+  },
+  "privacyPermScripting": {
+    "message": "Mažo scenarijaus įterpimas, siekiant aptikti neišsaugotus formos duomenis prieš sustabdant skirtuką. Tik pasirinktinai."
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzy rodymas Chrome šoniniame skydelyje."
+  },
+  "privacyYourDataText": {
+    "message": "Kadangi niekas neišeina iš jūsų naršyklės, nėra prietaisų skydelio, paskyros ar būdo mums pamatyti, ką padarėte su Drowzy. Jei pašalinsite Drowzy, Chrome siūlo galimybę išsiųsti pasirinktinį atsiliepimą (pašalinimo priežastis, naršyklė, OS) per atskirą tinklalapį; tas pateikimas yra aiškus ir patenka į anoniminę formą. Galite jį praleisti uždarydami skirtuką."
+  },
+  "privacyYourDataTitle": {
+    "message": "Jūsų duomenys"
+  },
+  "ramEstimateTooltip": {
+    "message": "Apskaičiuota naudojant ~150 MB sustabdytam skirtukui. Tikrasis taupymas skiriasi pagal puslapį."
+  },
+  "shareStats": {
+    "message": "Dalintis"
+  },
+  "statLifetimeRam": {
+    "message": "Iš viso išsaugota RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "Spustelėkite dar kartą, kad patvirtintumėte ištrynimą"
   }
 }

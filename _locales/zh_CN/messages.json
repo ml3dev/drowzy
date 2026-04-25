@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "全部时间"
   },
-  "statRamSaved": {
-    "message": "已节省 RAM（估计）"
-  },
   "statMemberSince": {
     "message": "使用起始日"
   },
@@ -343,13 +340,10 @@
     "message": "知道了，开始使用"
   },
   "privacyTitle": {
-    "message": "Drowzy – 隐私政策"
+    "message": "隐私政策"
   },
   "privacyUpdated": {
     "message": "最后更新：2026 年 4 月"
-  },
-  "privacyShortTitle": {
-    "message": "简短版本"
   },
   "privacyShortText": {
     "message": "Drowzy 不收集任何数据。没有分析、没有追踪、没有外部服务器。一切都保存在您的浏览器中。"
@@ -364,19 +358,19 @@
     "message": "权限"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy 使用以下 Chrome 权限："
+    "message": "Drowzy 仅请求其完成单一任务所需的权限："
   },
   "privacyPermTabs": {
-    "message": "tabs – 列出、休眠和恢复浏览器标签页"
+    "message": "列出、挂起和恢复浏览器标签。"
   },
   "privacyPermStorage": {
-    "message": "storage – 在本地保存您的设置"
+    "message": "将您的设置和会话本地保存。"
   },
   "privacyPermAlarms": {
-    "message": "alarms – 定期检查不活跃的标签页"
+    "message": "定期检查非活动标签（每 60 秒）。"
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – 右键菜单选项"
+    "message": "用于挂起和白名单的右键菜单选项。"
   },
   "privacyContactTitle": {
     "message": "联系方式"
@@ -440,82 +434,19 @@
     "message": "不太满意"
   },
   "whatsNew": {
-    "message": "v1.3.1 新功能"
+    "message": "v$VERSION$ 新功能",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzy 新变化"
   },
   "changelogWhatsNew": {
     "message": "新变化"
-  },
-  "changelogNewFeatures": {
-    "message": "新功能"
-  },
-  "changelogBugFixes": {
-    "message": "问题修复"
-  },
-  "changelogImprovements": {
-    "message": "改进"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "评价提示"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "在您休眠了几个标签页后，Drowzy 会温和地询问您是否喜欢它。一个快速的好评对我们帮助很大！"
-  },
-  "changelogChangelogTitle": {
-    "message": "更新日志页面"
-  },
-  "changelogChangelogDesc": {
-    "message": "您正在看的就是它！更新时自动打开，让您随时了解更改内容。也可以从设置中随时访问。"
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "会话恢复时机"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "恢复的标签页不再会被立即自动休眠。它们现在会在创建时正确重置空闲计时器。"
-  },
-  "changelogFormCheckTitle": {
-    "message": "表单检查超时"
-  },
-  "changelogFormCheckDesc": {
-    "message": "表单数据检查现在有 500 毫秒超时，因此无响应的标签页不能阻塞整个休眠队列。"
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "白名单重复问题"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "修复了大小写敏感问题，\"Example.com\" 和 \"example.com\" 不再能同时添加。所有条目现在已标准化。"
-  },
-  "changelogLiveStatsTitle": {
-    "message": "实时统计"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "弹出窗口现在会在标签页被休眠或唤醒时自动刷新。不再有过时的数据。"
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "会话恢复选项"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "会话现在有独立的\"打开\"（添加标签页）和\"替换\"（替换当前标签页）按钮，让您清楚了解操作结果。"
-  },
-  "changelogWhitelistValTitle": {
-    "message": "白名单验证和导出/导入"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "白名单输入现在会验证域名。您还可以导出白名单并通过剪贴板在另一台设备上导入。"
-  },
-  "changelogA11yTitle": {
-    "message": "无障碍功能"
-  },
-  "changelogA11yDesc": {
-    "message": "标签页列表项现在可通过键盘导航并具有正确的 ARIA 角色。提示通知会向屏幕阅读器播报。"
-  },
-  "changelogAnimationsTitle": {
-    "message": "更流畅的动画"
-  },
-  "changelogAnimationsDesc": {
-    "message": "标签页列表交错动画现在有上限，因此多标签页窗口不会有过长的级联延迟。"
   },
   "changelogCtaText": {
     "message": "Drowzy 是免费开源的。如果它帮您节省了内存，请考虑留下评价或在 GitHub 上给我们加星。"
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "在 GitHub 上加星"
-  },
-  "suspendThis": {
-    "message": "休眠标签页"
-  },
-  "failedToSuspend": {
-    "message": "无法休眠此标签页"
   },
   "closedDuplicates": {
     "message": "已关闭 $COUNT$ 个重复标签页",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "即将"
   },
-  "confirm": {
-    "message": "确定？"
+  "changelogVersionLabel": {
+    "message": "版本"
+  },
+  "copiedStats": {
+    "message": "统计数据已复制！"
+  },
+  "privacyFooterLink": {
+    "message": "在 GitHub 上浏览代码"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy 是开源的。"
+  },
+  "privacyPermHost": {
+    "message": "可选的主机访问，仅在您启用表单保护或挂起标签标记时按需请求。安装时绝不请求。可随时撤销。"
+  },
+  "privacyPermScripting": {
+    "message": "注入一个小脚本以在挂起标签前检测未保存的表单数据。仅限选择加入。"
+  },
+  "privacyPermSidePanel": {
+    "message": "在 Chrome 的侧边栏中显示 Drowzy。"
+  },
+  "privacyYourDataText": {
+    "message": "由于没有任何内容离开您的浏览器，没有仪表板、没有账户，我们也无法看到您使用 Drowzy 做了什么。如果您卸载 Drowzy，Chrome 会通过一个单独的网页向您提供发送可选反馈（卸载原因、浏览器、OS）的机会；该提交是明确的，并且会发送到匿名表单。您可以通过关闭标签来跳过它。"
+  },
+  "privacyYourDataTitle": {
+    "message": "您的数据"
+  },
+  "ramEstimateTooltip": {
+    "message": "估计每个挂起标签使用约 150 MB。实际节省因页面而异。"
+  },
+  "shareStats": {
+    "message": "分享"
+  },
+  "statLifetimeRam": {
+    "message": "总共节省的 RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "再次点击以确认删除"
   }
 }

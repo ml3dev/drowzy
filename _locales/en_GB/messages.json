@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "All time"
   },
-  "statRamSaved": {
-    "message": "RAM saved (est.)"
-  },
   "statMemberSince": {
     "message": "Member since"
   },
@@ -343,13 +340,10 @@
     "message": "Got it, let's go"
   },
   "privacyTitle": {
-    "message": "Drowzy – Privacy Policy"
+    "message": "Privacy Policy"
   },
   "privacyUpdated": {
     "message": "Last updated: April 2026"
-  },
-  "privacyShortTitle": {
-    "message": "The short version"
   },
   "privacyShortText": {
     "message": "Drowzy doesn't collect any data. No analytics, no tracking, no external servers. Everything stays in your browser."
@@ -364,19 +358,19 @@
     "message": "Permissions"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy uses these Chrome permissions:"
+    "message": "Drowzy requests only the permissions it needs to do its one job:"
   },
   "privacyPermTabs": {
-    "message": "tabs – listing, suspending, and restoring browser tabs"
+    "message": "Listing, suspending, and restoring browser tabs."
   },
   "privacyPermStorage": {
-    "message": "storage – saving your settings locally"
+    "message": "Saving your settings and sessions locally."
   },
   "privacyPermAlarms": {
-    "message": "alarms – periodic checks for inactive tabs"
+    "message": "Periodic checks for inactive tabs (every 60 seconds)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – right-click menu options"
+    "message": "Right-click menu options for suspend and whitelist."
   },
   "privacyContactTitle": {
     "message": "Contact"
@@ -440,82 +434,19 @@
     "message": "Not really"
   },
   "whatsNew": {
-    "message": "What's new in v1.3.1"
+    "message": "What's new in v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "What's New in Drowzy"
   },
   "changelogWhatsNew": {
     "message": "What's New"
-  },
-  "changelogNewFeatures": {
-    "message": "New Features"
-  },
-  "changelogBugFixes": {
-    "message": "Bug Fixes"
-  },
-  "changelogImprovements": {
-    "message": "Improvements"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Review Prompt"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "After you've suspended a few tabs, Drowzy will gently ask if you're enjoying it. A quick thumbs up helps us a lot!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Changelog Page"
-  },
-  "changelogChangelogDesc": {
-    "message": "You're looking at it! Opens automatically on update so you always know what changed. Access it anytime from Settings."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Session Restore Timing"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Restored tabs no longer get auto-suspended immediately. They now properly reset their idle timers on creation."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Form Check Timeout"
-  },
-  "changelogFormCheckDesc": {
-    "message": "The form data check now has a 500ms timeout so unresponsive tabs can't block the entire suspension queue."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Whitelist Duplicates"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Fixed case sensitivity issue where \"Example.com\" and \"example.com\" could both be added. All entries are now normalised."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Live Stats"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "The popup now refreshes automatically when tabs are suspended or woken in the background. No more stale numbers."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Session Restore Options"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sessions now have separate \"Open\" (add tabs) and \"Replace\" (swap current tabs) buttons so you know exactly what will happen."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Whitelist Validation & Export/Import"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Whitelist input now validates domains. You can also export your whitelist and import it on another device via clipboard."
-  },
-  "changelogA11yTitle": {
-    "message": "Accessibility"
-  },
-  "changelogA11yDesc": {
-    "message": "Tab list items are now keyboard-navigable with proper ARIA roles. Toast notifications are announced to screen readers."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Smoother Animations"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Tab list stagger animations are now capped so windows with many tabs don't have a long cascade delay."
   },
   "changelogCtaText": {
     "message": "Drowzy is free and open source. If it's saving you memory, consider leaving a quick review or starring us on GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Star on GitHub"
-  },
-  "suspendThis": {
-    "message": "Suspend Tab"
-  },
-  "failedToSuspend": {
-    "message": "Cannot suspend this tab"
   },
   "closedDuplicates": {
     "message": "Closed $COUNT$ duplicate tab(s)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "soon"
   },
-  "confirm": {
-    "message": "Sure?"
+  "changelogVersionLabel": {
+    "message": "Version"
+  },
+  "copiedStats": {
+    "message": "Stats copied!"
+  },
+  "privacyFooterLink": {
+    "message": "Browse the code on GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy is open source."
+  },
+  "privacyPermHost": {
+    "message": "Optional host access, requested on-demand only when you enable Form Protection or Suspended-Tab Marking. Never requested at install. Revocable anytime."
+  },
+  "privacyPermScripting": {
+    "message": "Injecting a small script to detect unsaved form data before suspending a tab. Opt-in only."
+  },
+  "privacyPermSidePanel": {
+    "message": "Displaying Drowzy in Chrome's side panel."
+  },
+  "privacyYourDataText": {
+    "message": "Because nothing leaves your browser, there's no dashboard, no account, and no way for us to see what you've done with Drowzy. If you uninstall Drowzy, Chrome offers you a chance to send optional feedback (reason for uninstalling, browser, OS) through a separate web page; that submission is explicit and goes to an anonymous form. You can skip it by closing the tab."
+  },
+  "privacyYourDataTitle": {
+    "message": "Your data"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimated using ~150 MB per suspended tab. Actual savings vary by page."
+  },
+  "shareStats": {
+    "message": "Share"
+  },
+  "statLifetimeRam": {
+    "message": "Lifetime RAM saved"
+  },
+  "confirmDeleteTitle": {
+    "message": "Click again to confirm delete"
   }
 }

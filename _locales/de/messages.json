@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Insgesamt"
   },
-  "statRamSaved": {
-    "message": "RAM gespart (geschätzt)"
-  },
   "statMemberSince": {
     "message": "Mitglied seit"
   },
@@ -343,13 +340,10 @@
     "message": "Verstanden, los geht's"
   },
   "privacyTitle": {
-    "message": "Drowzy – Datenschutzrichtlinie"
+    "message": "Datenschutzrichtlinie"
   },
   "privacyUpdated": {
     "message": "Zuletzt aktualisiert: April 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Die Kurzversion"
   },
   "privacyShortText": {
     "message": "Drowzy sammelt keine Daten. Keine Analysen, kein Tracking, keine externen Server. Alles bleibt in Ihrem Browser."
@@ -364,19 +358,19 @@
     "message": "Berechtigungen"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy verwendet diese Chrome-Berechtigungen:"
+    "message": "Drowzy fordert nur die Berechtigungen an, die es für seine einzige Aufgabe benötigt:"
   },
   "privacyPermTabs": {
-    "message": "tabs – Auflisten, Suspendieren und Wiederherstellen von Browser-Tabs"
+    "message": "Auflisten, Suspendieren und Wiederherstellen von Browser-Tabs."
   },
   "privacyPermStorage": {
-    "message": "storage – Lokales Speichern Ihrer Einstellungen"
+    "message": "Lokales Speichern Ihrer Einstellungen und Sitzungen."
   },
   "privacyPermAlarms": {
-    "message": "alarms – Regelmäßige Überprüfung auf inaktive Tabs"
+    "message": "Regelmäßige Prüfungen inaktiver Tabs (alle 60 Sekunden)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – Rechtsklick-Menüoptionen"
+    "message": "Rechtsklick-Menüoptionen zum Suspendieren und für die Whitelist."
   },
   "privacyContactTitle": {
     "message": "Kontakt"
@@ -440,82 +434,19 @@
     "message": "Nicht wirklich"
   },
   "whatsNew": {
-    "message": "Neu in v1.3.1"
+    "message": "Neu in v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Neuheiten in Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Neuheiten"
-  },
-  "changelogNewFeatures": {
-    "message": "Neue Funktionen"
-  },
-  "changelogBugFixes": {
-    "message": "Fehlerbehebungen"
-  },
-  "changelogImprovements": {
-    "message": "Verbesserungen"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Bewertungsanfrage"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Nachdem Sie einige Tabs suspendiert haben, fragt Drowzy, ob es Ihnen gefällt. Ein kurzer Daumen hoch hilft uns sehr!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Änderungsprotokoll"
-  },
-  "changelogChangelogDesc": {
-    "message": "Das sehen Sie gerade! Öffnet sich automatisch bei Updates. Jederzeit über die Einstellungen erreichbar."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Sitzungswiederherstellungs-Timing"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Wiederhergestellte Tabs werden nicht mehr sofort automatisch suspendiert. Sie setzen ihre Leerlauf-Timer jetzt korrekt zurück."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Formularüberprüfungs-Timeout"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Die Formulardatenprüfung hat jetzt ein 500ms-Timeout, sodass nicht reagierende Tabs die Warteschlange nicht blockieren können."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Whitelist-Duplikate"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Problem mit Groß-/Kleinschreibung behoben. Alle Einträge werden jetzt normalisiert."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Live-Statistiken"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Das Popup aktualisiert sich jetzt automatisch, wenn Tabs im Hintergrund suspendiert oder aufgeweckt werden."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Sitzungswiederherstellungs-Optionen"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sitzungen haben jetzt separate Schaltflächen „Öffnen\" und „Ersetzen\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Whitelist-Validierung und Export/Import"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Die Whitelist-Eingabe validiert jetzt Domains. Sie können Ihre Whitelist auch exportieren und auf einem anderen Gerät importieren."
-  },
-  "changelogA11yTitle": {
-    "message": "Barrierefreiheit"
-  },
-  "changelogA11yDesc": {
-    "message": "Tab-Listenelemente sind jetzt per Tastatur navigierbar mit korrekten ARIA-Rollen. Toast-Benachrichtigungen werden Screenreadern angekündigt."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Flüssigere Animationen"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Gestaffelte Tab-Listen-Animationen sind jetzt begrenzt, sodass Fenster mit vielen Tabs keine lange Kaskaden-Verzögerung haben."
   },
   "changelogCtaText": {
     "message": "Drowzy ist kostenlos und Open Source. Wenn es Ihnen Speicher spart, hinterlassen Sie eine Bewertung oder geben Sie uns einen Stern auf GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Stern auf GitHub"
-  },
-  "suspendThis": {
-    "message": "Tab suspendieren"
-  },
-  "failedToSuspend": {
-    "message": "Dieser Tab kann nicht suspendiert werden"
   },
   "closedDuplicates": {
     "message": "$COUNT$ doppelte(n) Tab(s) geschlossen",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "bald"
   },
-  "confirm": {
-    "message": "Sicher?"
+  "changelogVersionLabel": {
+    "message": "Version"
+  },
+  "copiedStats": {
+    "message": "Statistik kopiert!"
+  },
+  "privacyFooterLink": {
+    "message": "Code auf GitHub ansehen"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy ist Open Source."
+  },
+  "privacyPermHost": {
+    "message": "Optionaler Hostzugriff, nur bei Bedarf angefordert, wenn Sie Formularschutz oder Markierung suspendierter Tabs aktivieren. Wird nie bei der Installation angefordert. Jederzeit widerrufbar."
+  },
+  "privacyPermScripting": {
+    "message": "Einfügen eines kleinen Skripts zur Erkennung ungespeicherter Formulardaten vor dem Suspendieren eines Tabs. Nur Opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Anzeigen von Drowzy im Seitenbereich von Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Da nichts Ihren Browser verlässt, gibt es kein Dashboard, kein Konto und keine Möglichkeit für uns, zu sehen, was Sie mit Drowzy gemacht haben. Wenn Sie Drowzy deinstallieren, bietet Chrome Ihnen die Möglichkeit, optionales Feedback (Grund für Deinstallation, Browser, Betriebssystem) über eine separate Webseite zu senden; diese Übermittlung ist explizit und geht an ein anonymes Formular. Sie können es überspringen, indem Sie den Tab schließen."
+  },
+  "privacyYourDataTitle": {
+    "message": "Ihre Daten"
+  },
+  "ramEstimateTooltip": {
+    "message": "Geschätzt mit ~150 MB pro suspendiertem Tab. Tatsächliche Einsparungen variieren je nach Seite."
+  },
+  "shareStats": {
+    "message": "Teilen"
+  },
+  "statLifetimeRam": {
+    "message": "Gesamter RAM gespart"
+  },
+  "confirmDeleteTitle": {
+    "message": "Erneut klicken, um Löschung zu bestätigen"
   }
 }

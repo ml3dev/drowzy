@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Łącznie"
   },
-  "statRamSaved": {
-    "message": "Zaoszczędzona RAM (szacunkowo)"
-  },
   "statMemberSince": {
     "message": "Użytkownik od"
   },
@@ -343,13 +340,10 @@
     "message": "Rozumiem, zaczynajmy"
   },
   "privacyTitle": {
-    "message": "Drowzy – Polityka prywatności"
+    "message": "Polityka prywatności"
   },
   "privacyUpdated": {
     "message": "Ostatnia aktualizacja: kwiecień 2026"
-  },
-  "privacyShortTitle": {
-    "message": "W skrócie"
   },
   "privacyShortText": {
     "message": "Drowzy nie zbiera żadnych danych. Bez analityki, bez śledzenia, bez zewnętrznych serwerów. Wszystko pozostaje w Twojej przeglądarce."
@@ -364,19 +358,19 @@
     "message": "Uprawnienia"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy używa następujących uprawnień Chrome:"
+    "message": "Drowzy prosi tylko o uprawnienia potrzebne do wykonania swojego jednego zadania:"
   },
   "privacyPermTabs": {
-    "message": "tabs – wyświetlanie, usypianie i przywracanie kart przeglądarki"
+    "message": "Listowanie, zawieszanie i przywracanie kart przeglądarki."
   },
   "privacyPermStorage": {
-    "message": "storage – lokalne zapisywanie ustawień"
+    "message": "Lokalne zapisywanie ustawień i sesji."
   },
   "privacyPermAlarms": {
-    "message": "alarms – okresowe sprawdzanie nieaktywnych kart"
+    "message": "Okresowe sprawdzanie nieaktywnych kart (co 60 sekund)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – opcje menu kontekstowego"
+    "message": "Opcje menu prawego kliknięcia do zawieszania i białej listy."
   },
   "privacyContactTitle": {
     "message": "Kontakt"
@@ -440,82 +434,19 @@
     "message": "Nie bardzo"
   },
   "whatsNew": {
-    "message": "Co nowego w v1.3.1"
+    "message": "Co nowego w v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Co nowego w Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Co nowego"
-  },
-  "changelogNewFeatures": {
-    "message": "Nowe funkcje"
-  },
-  "changelogBugFixes": {
-    "message": "Poprawki błędów"
-  },
-  "changelogImprovements": {
-    "message": "Ulepszenia"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Prośba o opinię"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Po uśpieniu kilku kart Drowzy zapyta, czy Ci się podoba. Szybki kciuk w górę bardzo nam pomaga!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Strona zmian"
-  },
-  "changelogChangelogDesc": {
-    "message": "Właśnie na nią patrzysz! Otwiera się automatycznie przy aktualizacji. Dostępna z Ustawień."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Czas przywracania sesji"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Przywrócone karty nie są już natychmiast automatycznie usypiane. Teraz poprawnie resetują swoje timery bezczynności."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Limit czasu sprawdzania formularzy"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Sprawdzanie formularzy ma teraz 500ms limit czasu, więc niereagujące karty nie mogą blokować kolejki."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Duplikaty białej listy"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Naprawiono problem z rozróżnianiem wielkości liter, gdzie \"Example.com\" i \"example.com\" mogły być dodane jednocześnie. Wszystkie wpisy są teraz znormalizowane."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Statystyki na żywo"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Popup automatycznie się odświeża, gdy karty są usypiane lub budzone."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Opcje przywracania sesji"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sesje mają teraz oddzielne przyciski \"Otwórz\" i \"Zastąp\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Walidacja i eksport/import białej listy"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Wprowadzanie białej listy teraz waliduje domeny. Możesz eksportować i importować przez schowek."
-  },
-  "changelogA11yTitle": {
-    "message": "Dostępność"
-  },
-  "changelogA11yDesc": {
-    "message": "Elementy listy kart są teraz nawigowalne klawiaturą z rolami ARIA. Powiadomienia są ogłaszane czytnikom ekranu."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Płynniejsze animacje"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Animacje kaskadowe listy kart są teraz ograniczone, więc okna z wieloma kartami nie mają długiego opóźnienia."
   },
   "changelogCtaText": {
     "message": "Drowzy jest darmowy i open source. Jeśli oszczędza pamięć, zostaw opinię lub gwiazdkę na GitHubie."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Gwiazdka na GitHubie"
-  },
-  "suspendThis": {
-    "message": "Uśpij kartę"
-  },
-  "failedToSuspend": {
-    "message": "Nie można uśpić tej karty"
   },
   "closedDuplicates": {
     "message": "Zamknięto $COUNT$ zduplikowanych kart",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "wkrótce"
   },
-  "confirm": {
-    "message": "Na pewno?"
+  "changelogVersionLabel": {
+    "message": "Wersja"
+  },
+  "copiedStats": {
+    "message": "Statystyki skopiowane!"
+  },
+  "privacyFooterLink": {
+    "message": "Przeglądaj kod na GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy jest open source."
+  },
+  "privacyPermHost": {
+    "message": "Opcjonalny dostęp do hosta, żądany na żądanie tylko po włączeniu Ochrony formularzy lub Oznaczania zawieszonych kart. Nigdy nie żądany przy instalacji. Można odwołać w dowolnym momencie."
+  },
+  "privacyPermScripting": {
+    "message": "Wstrzykiwanie małego skryptu w celu wykrycia niezapisanych danych formularza przed zawieszeniem karty. Tylko opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Wyświetlanie Drowzy w panelu bocznym Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Ponieważ nic nie opuszcza Twojej przeglądarki, nie ma pulpitu nawigacyjnego, konta ani sposobu, abyśmy mogli zobaczyć, co zrobiłeś z Drowzy. Jeśli odinstalujesz Drowzy, Chrome zaoferuje Ci możliwość wysłania opcjonalnej opinii (powód odinstalowania, przeglądarka, OS) przez oddzielną stronę internetową; to zgłoszenie jest jawne i trafia do anonimowego formularza. Możesz je pominąć zamykając kartę."
+  },
+  "privacyYourDataTitle": {
+    "message": "Twoje dane"
+  },
+  "ramEstimateTooltip": {
+    "message": "Oszacowane przy użyciu ~150 MB na zawieszoną kartę. Rzeczywiste oszczędności różnią się w zależności od strony."
+  },
+  "shareStats": {
+    "message": "Udostępnij"
+  },
+  "statLifetimeRam": {
+    "message": "Łącznie zaoszczędzona pamięć RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "Kliknij ponownie, aby potwierdzić usunięcie"
   }
 }

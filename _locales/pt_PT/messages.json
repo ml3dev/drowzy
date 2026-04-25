@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Total"
   },
-  "statRamSaved": {
-    "message": "RAM poupada (estimativa)"
-  },
   "statMemberSince": {
     "message": "Membro desde"
   },
@@ -343,13 +340,10 @@
     "message": "Percebi, vamos a isso"
   },
   "privacyTitle": {
-    "message": "Drowzy – Política de Privacidade"
+    "message": "Política de Privacidade"
   },
   "privacyUpdated": {
     "message": "Última atualização: abril de 2026"
-  },
-  "privacyShortTitle": {
-    "message": "A versão resumida"
   },
   "privacyShortText": {
     "message": "O Drowzy não recolhe quaisquer dados. Sem analíticas, sem rastreio, sem servidores externos. Tudo permanece no seu navegador."
@@ -364,19 +358,19 @@
     "message": "Permissões"
   },
   "privacyPermissionsIntro": {
-    "message": "O Drowzy utiliza estas permissões do Chrome:"
+    "message": "Drowzy solicita apenas as permissões de que precisa para fazer o seu único trabalho:"
   },
   "privacyPermTabs": {
-    "message": "tabs – listar, suspender e restaurar separadores do navegador"
+    "message": "Listar, suspender e restaurar separadores do navegador."
   },
   "privacyPermStorage": {
-    "message": "storage – guardar as suas definições localmente"
+    "message": "Guardar as suas definições e sessões localmente."
   },
   "privacyPermAlarms": {
-    "message": "alarms – verificações periódicas de separadores inativos"
+    "message": "Verificações periódicas de separadores inativos (a cada 60 segundos)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – opções do menu de contexto"
+    "message": "Opções do menu de clique direito para suspender e lista branca."
   },
   "privacyContactTitle": {
     "message": "Contacto"
@@ -440,82 +434,19 @@
     "message": "Não muito"
   },
   "whatsNew": {
-    "message": "Novidades na v1.3.1"
+    "message": "Novidades na v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Novidades no Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Novidades"
-  },
-  "changelogNewFeatures": {
-    "message": "Novas funcionalidades"
-  },
-  "changelogBugFixes": {
-    "message": "Correções"
-  },
-  "changelogImprovements": {
-    "message": "Melhorias"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Pedido de avaliação"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Após suspender alguns separadores, o Drowzy perguntará se está a gostar. Um gosto rápido ajuda-nos muito!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Página de alterações"
-  },
-  "changelogChangelogDesc": {
-    "message": "Está a vê-la! Abre automaticamente na atualização. Acessível nas Definições."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Restauro de sessão"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Separadores restaurados já não são suspensos de imediato. Temporizadores reiniciam corretamente."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Timeout de formulários"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Verificação de formulários tem timeout de 500ms para não bloquear a fila."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Duplicados na lista branca"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Corrigido problema de maiúsculas/minúsculas. Entradas normalizadas."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Estatísticas em tempo real"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "O popup atualiza-se quando separadores são suspensos ou acordados."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Opções de restauro"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sessões têm botões separados \"Abrir\" e \"Substituir\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Validação e exportação/importação"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Entrada valida domínios. Exporte e importe via área de transferência."
-  },
-  "changelogA11yTitle": {
-    "message": "Acessibilidade"
-  },
-  "changelogA11yDesc": {
-    "message": "Itens navegáveis por teclado com ARIA. Notificações para leitores de ecrã."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Animações mais suaves"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Animações escalonadas limitadas para evitar atrasos longos."
   },
   "changelogCtaText": {
     "message": "Drowzy é gratuito e open source. Se poupa memória, deixe uma avaliação ou estrela no GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Estrela no GitHub"
-  },
-  "suspendThis": {
-    "message": "Suspender separador"
-  },
-  "failedToSuspend": {
-    "message": "Não é possível suspender este separador"
   },
   "closedDuplicates": {
     "message": "Fechados $COUNT$ separador(es) duplicado(s)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "em breve"
   },
-  "confirm": {
-    "message": "Certeza?"
+  "changelogVersionLabel": {
+    "message": "Versão"
+  },
+  "copiedStats": {
+    "message": "Estatísticas copiadas!"
+  },
+  "privacyFooterLink": {
+    "message": "Ver o código no GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy é código aberto."
+  },
+  "privacyPermHost": {
+    "message": "Acesso ao anfitrião opcional, pedido a pedido apenas quando ativa a Proteção de Formulários ou a Marcação de Separadores Suspensos. Nunca pedido na instalação. Revogável a qualquer momento."
+  },
+  "privacyPermScripting": {
+    "message": "Injetar um pequeno script para detetar dados de formulário não guardados antes de suspender um separador. Apenas opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Mostrar Drowzy no painel lateral do Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Como nada sai do seu navegador, não há painel, nem conta, nem forma de vermos o que fez com Drowzy. Se desinstalar Drowzy, o Chrome oferece-lhe a oportunidade de enviar feedback opcional (motivo da desinstalação, navegador, SO) através de uma página web separada; esse envio é explícito e vai para um formulário anónimo. Pode ignorá-lo fechando o separador."
+  },
+  "privacyYourDataTitle": {
+    "message": "Os seus dados"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimado usando ~150 MB por separador suspenso. A poupança real varia por página."
+  },
+  "shareStats": {
+    "message": "Partilhar"
+  },
+  "statLifetimeRam": {
+    "message": "RAM total poupada"
+  },
+  "confirmDeleteTitle": {
+    "message": "Clique novamente para confirmar a eliminação"
   }
 }

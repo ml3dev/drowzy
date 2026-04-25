@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Tüm zamanlar"
   },
-  "statRamSaved": {
-    "message": "Tasarruf edilen RAM (tahmini)"
-  },
   "statMemberSince": {
     "message": "Üyelik başlangıcı"
   },
@@ -343,13 +340,10 @@
     "message": "Anladım, hadi başlayalım"
   },
   "privacyTitle": {
-    "message": "Drowzy – Gizlilik Politikası"
+    "message": "Gizlilik Politikası"
   },
   "privacyUpdated": {
     "message": "Son güncelleme: Nisan 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Kısa versiyon"
   },
   "privacyShortText": {
     "message": "Drowzy hiçbir veri toplamaz. Analitik yok, izleme yok, harici sunucu yok. Her şey tarayıcınızda kalır."
@@ -364,19 +358,19 @@
     "message": "İzinler"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy şu Chrome izinlerini kullanır:"
+    "message": "Drowzy yalnızca tek bir işi yapmak için ihtiyaç duyduğu izinleri ister:"
   },
   "privacyPermTabs": {
-    "message": "tabs – tarayıcı sekmelerini listeleme, askıya alma ve geri yükleme"
+    "message": "Tarayıcı sekmelerini listeleme, askıya alma ve geri yükleme."
   },
   "privacyPermStorage": {
-    "message": "storage – ayarlarınızı yerel olarak kaydetme"
+    "message": "Ayarlarınızı ve oturumlarınızı yerel olarak kaydetme."
   },
   "privacyPermAlarms": {
-    "message": "alarms – etkin olmayan sekmeler için periyodik kontroller"
+    "message": "Etkin olmayan sekmelerin periyodik kontrolleri (her 60 saniyede bir)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – sağ tıklama menüsü seçenekleri"
+    "message": "Askıya alma ve beyaz liste için sağ tık menüsü seçenekleri."
   },
   "privacyContactTitle": {
     "message": "İletişim"
@@ -440,82 +434,19 @@
     "message": "Pek değil"
   },
   "whatsNew": {
-    "message": "v1.3.1'daki yenilikler"
+    "message": "v$VERSION$'daki yenilikler",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzy'daki Yenilikler"
   },
   "changelogWhatsNew": {
     "message": "Yenilikler"
-  },
-  "changelogNewFeatures": {
-    "message": "Yeni Özellikler"
-  },
-  "changelogBugFixes": {
-    "message": "Hata Düzeltmeleri"
-  },
-  "changelogImprovements": {
-    "message": "İyileştirmeler"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Değerlendirme İsteği"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Birkaç sekmeyi askıya aldıktan sonra Drowzy size memnun olup olmadığınızı soracak. Hızlı bir beğeni bize çok yardımcı olur!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Değişiklik Sayfası"
-  },
-  "changelogChangelogDesc": {
-    "message": "Şimdi bakıyorsunuz! Güncelleme sırasında otomatik açılır. Ayarlardan erişebilirsiniz."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Oturum Geri Yükleme"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Geri yüklenen sekmeler artık hemen askıya alınmıyor. Zamanlayıcılar doğru şekilde sıfırlanıyor."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Form Kontrolü Zaman Aşımı"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Form kontrolü 500ms zaman aşımına sahip, yanıt vermeyen sekmeler kuyruğu engellemiyor."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Beyaz Liste Tekrarları"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Büyük/küçük harf duyarlılığı sorunu düzeltildi. Tüm girişler normalize ediliyor."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Canlı İstatistikler"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Popup sekmeler askıya alındığında veya uyandırıldığında otomatik yenileniyor."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Oturum Geri Yükleme Seçenekleri"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Oturumlar ayrı \"Aç\" ve \"Değiştir\" düğmelerine sahip."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Beyaz Liste Doğrulaması ve Aktarma"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Beyaz liste girişi alan adlarını doğruluyor. Pano aracılığıyla aktarabilirsiniz."
-  },
-  "changelogA11yTitle": {
-    "message": "Erişilebilirlik"
-  },
-  "changelogA11yDesc": {
-    "message": "Sekme listesi öğeleri ARIA rolleriyle klavye ile gezilebilir. Bildirimler ekran okuyuculara duyurulur."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Daha Akıcı Animasyonlar"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Kademeli animasyonlar sınırlandırılmış, uzun gecikmeler önleniyor."
   },
   "changelogCtaText": {
     "message": "Drowzy ücretsiz ve açık kaynaklıdır. Bellek tasarrufu sağlıyorsa, değerlendirme bırakın veya GitHub'da yıldız verin."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "GitHub'da Yıldız"
-  },
-  "suspendThis": {
-    "message": "Sekmeyi askıya al"
-  },
-  "failedToSuspend": {
-    "message": "Bu sekme askıya alınamıyor"
   },
   "closedDuplicates": {
     "message": "$COUNT$ yinelenen sekme kapatıldı",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "yakında"
   },
-  "confirm": {
-    "message": "Emin misiniz?"
+  "changelogVersionLabel": {
+    "message": "Sürüm"
+  },
+  "copiedStats": {
+    "message": "İstatistikler kopyalandı!"
+  },
+  "privacyFooterLink": {
+    "message": "Kodu GitHub'da görüntüle"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy açık kaynaklıdır."
+  },
+  "privacyPermHost": {
+    "message": "İsteğe bağlı ana bilgisayar erişimi, yalnızca Form Koruması veya Askıya Alınmış Sekme İşaretlemesini etkinleştirdiğinizde talep edilir. Kurulumda asla talep edilmez. Her zaman iptal edilebilir."
+  },
+  "privacyPermScripting": {
+    "message": "Bir sekmeyi askıya almadan önce kaydedilmemiş form verilerini algılamak için küçük bir komut dosyası enjekte etmek. Yalnızca isteğe bağlı."
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzy'yi Chrome'un yan panelinde gösterme."
+  },
+  "privacyYourDataText": {
+    "message": "Hiçbir şey tarayıcınızdan ayrılmadığı için, kontrol paneli yok, hesap yok ve Drowzy ile ne yaptığınızı görmemizin bir yolu yok. Drowzy'yi kaldırırsanız, Chrome size ayrı bir web sayfası aracılığıyla isteğe bağlı geri bildirim (kaldırma nedeni, tarayıcı, OS) gönderme şansı sunar; bu gönderim açıktır ve anonim bir forma gider. Sekmeyi kapatarak atlayabilirsiniz."
+  },
+  "privacyYourDataTitle": {
+    "message": "Verileriniz"
+  },
+  "ramEstimateTooltip": {
+    "message": "Askıya alınmış sekme başına ~150 MB kullanılarak tahmin edildi. Gerçek tasarruflar sayfaya göre değişir."
+  },
+  "shareStats": {
+    "message": "Paylaş"
+  },
+  "statLifetimeRam": {
+    "message": "Toplam tasarruf edilen RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "Silmeyi onaylamak için tekrar tıklayın"
   }
 }

@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Tất cả thời gian"
   },
-  "statRamSaved": {
-    "message": "RAM đã tiết kiệm (ước tính)"
-  },
   "statMemberSince": {
     "message": "Thành viên từ"
   },
@@ -343,13 +340,10 @@
     "message": "Đã hiểu, bắt đầu thôi"
   },
   "privacyTitle": {
-    "message": "Drowzy – Chính sách quyền riêng tư"
+    "message": "Chính sách quyền riêng tư"
   },
   "privacyUpdated": {
     "message": "Cập nhật lần cuối: Tháng 4 năm 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Phiên bản ngắn gọn"
   },
   "privacyShortText": {
     "message": "Drowzy không thu thập bất kỳ dữ liệu nào. Không phân tích, không theo dõi, không máy chủ bên ngoài. Mọi thứ đều ở trong trình duyệt của bạn."
@@ -364,19 +358,19 @@
     "message": "Quyền"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy sử dụng các quyền Chrome sau:"
+    "message": "Drowzy chỉ yêu cầu các quyền cần thiết để thực hiện một công việc duy nhất:"
   },
   "privacyPermTabs": {
-    "message": "tabs – liệt kê, tạm ngưng và khôi phục các tab trình duyệt"
+    "message": "Liệt kê, tạm ngưng và khôi phục các tab trình duyệt."
   },
   "privacyPermStorage": {
-    "message": "storage – lưu cài đặt của bạn cục bộ"
+    "message": "Lưu cài đặt và phiên làm việc của bạn cục bộ."
   },
   "privacyPermAlarms": {
-    "message": "alarms – kiểm tra định kỳ các tab không hoạt động"
+    "message": "Kiểm tra định kỳ các tab không hoạt động (mỗi 60 giây)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – tùy chọn menu chuột phải"
+    "message": "Tùy chọn menu nhấp chuột phải để tạm ngưng và danh sách trắng."
   },
   "privacyContactTitle": {
     "message": "Liên hệ"
@@ -440,82 +434,19 @@
     "message": "Không hẳn"
   },
   "whatsNew": {
-    "message": "Có gì mới trong v1.3.1"
+    "message": "Có gì mới trong v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Có gì mới trong Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Có gì mới"
-  },
-  "changelogNewFeatures": {
-    "message": "Tính năng mới"
-  },
-  "changelogBugFixes": {
-    "message": "Sửa lỗi"
-  },
-  "changelogImprovements": {
-    "message": "Cải tiến"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Yêu cầu đánh giá"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Sau khi tạm ngưng một vài tab, Drowzy sẽ hỏi bạn có thích không. Một lượt thích nhanh giúp chúng tôi rất nhiều!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Trang nhật ký thay đổi"
-  },
-  "changelogChangelogDesc": {
-    "message": "Bạn đang xem nó đây! Mở tự động khi cập nhật. Truy cập bất cứ lúc nào từ Cài đặt."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Thời gian khôi phục phiên"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Các tab được khôi phục không còn bị tạm ngưng tự động ngay lập tức. Giờ đây chúng đặt lại bộ hẹn giờ nhàn rỗi đúng cách."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Hết thời gian kiểm tra biểu mẫu"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Kiểm tra biểu mẫu giờ có thời gian chờ 500ms để các tab không phản hồi không thể chặn hàng đợi."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Trùng lặp danh sách trắng"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Đã sửa lỗi phân biệt chữ hoa chữ thường khiến \"Example.com\" và \"example.com\" đều có thể được thêm vào. Tất cả mục nhập giờ đã được chuẩn hóa."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Thống kê trực tiếp"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Popup tự động làm mới khi tab được tạm ngưng hoặc đánh thức."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Tùy chọn khôi phục phiên"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Phiên giờ có các nút \"Mở\" và \"Thay thế\" riêng biệt."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Xác thực và xuất/nhập danh sách trắng"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Nhập danh sách trắng giờ xác thực tên miền. Bạn có thể xuất và nhập qua bộ nhớ tạm."
-  },
-  "changelogA11yTitle": {
-    "message": "Khả năng truy cập"
-  },
-  "changelogA11yDesc": {
-    "message": "Các mục danh sách tab giờ có thể điều hướng bằng bàn phím với vai trò ARIA. Thông báo được đọc cho trình đọc màn hình."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Hoạt ảnh mượt mà hơn"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Hoạt ảnh xen kẽ danh sách tab giờ được giới hạn để cửa sổ có nhiều tab không bị trễ lâu."
   },
   "changelogCtaText": {
     "message": "Drowzy miễn phí và mã nguồn mở. Nếu tiết kiệm bộ nhớ cho bạn, hãy để lại đánh giá hoặc gắn sao trên GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Gắn sao trên GitHub"
-  },
-  "suspendThis": {
-    "message": "Tạm ngưng thẻ"
-  },
-  "failedToSuspend": {
-    "message": "Không thể tạm ngưng thẻ này"
   },
   "closedDuplicates": {
     "message": "Đã đóng $COUNT$ thẻ trùng lặp",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "sắp"
   },
-  "confirm": {
-    "message": "Chắc chưa?"
+  "changelogVersionLabel": {
+    "message": "Phiên bản"
+  },
+  "copiedStats": {
+    "message": "Đã sao chép số liệu!"
+  },
+  "privacyFooterLink": {
+    "message": "Duyệt mã trên GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy là mã nguồn mở."
+  },
+  "privacyPermHost": {
+    "message": "Quyền truy cập máy chủ tùy chọn, chỉ được yêu cầu theo nhu cầu khi bạn bật Bảo vệ biểu mẫu hoặc Đánh dấu tab tạm ngưng. Không bao giờ được yêu cầu khi cài đặt. Có thể thu hồi bất kỳ lúc nào."
+  },
+  "privacyPermScripting": {
+    "message": "Tiêm một tập lệnh nhỏ để phát hiện dữ liệu biểu mẫu chưa lưu trước khi tạm ngưng tab. Chỉ chọn tham gia."
+  },
+  "privacyPermSidePanel": {
+    "message": "Hiển thị Drowzy trong bảng bên của Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Vì không có gì rời khỏi trình duyệt của bạn, không có bảng điều khiển, không có tài khoản, và không có cách nào để chúng tôi nhìn thấy những gì bạn đã làm với Drowzy. Nếu bạn gỡ cài đặt Drowzy, Chrome cung cấp cho bạn cơ hội gửi phản hồi tùy chọn (lý do gỡ cài đặt, trình duyệt, OS) thông qua một trang web riêng; việc gửi đó là rõ ràng và đi đến biểu mẫu ẩn danh. Bạn có thể bỏ qua nó bằng cách đóng tab."
+  },
+  "privacyYourDataTitle": {
+    "message": "Dữ liệu của bạn"
+  },
+  "ramEstimateTooltip": {
+    "message": "Ước tính sử dụng ~150 MB cho mỗi tab tạm ngưng. Mức tiết kiệm thực tế thay đổi theo trang."
+  },
+  "shareStats": {
+    "message": "Chia sẻ"
+  },
+  "statLifetimeRam": {
+    "message": "Tổng RAM đã tiết kiệm"
+  },
+  "confirmDeleteTitle": {
+    "message": "Nhấp lại để xác nhận xóa"
   }
 }

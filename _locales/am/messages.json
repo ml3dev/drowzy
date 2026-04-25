@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "ሁል ጊዜ"
   },
-  "statRamSaved": {
-    "message": "የተቆጠበ RAM (ግምት)"
-  },
   "statMemberSince": {
     "message": "አባል ከ"
   },
@@ -343,13 +340,10 @@
     "message": "ገባኝ፣ እንሂድ"
   },
   "privacyTitle": {
-    "message": "Drowzy – የግላዊነት ፖሊሲ"
+    "message": "የግላዊነት መመሪያ"
   },
   "privacyUpdated": {
     "message": "የመጨረሻ ዝመና: ኤፕሪል 2026"
-  },
-  "privacyShortTitle": {
-    "message": "አጭሩ ስሪት"
   },
   "privacyShortText": {
     "message": "Drowzy ምንም ዳታ አይሰበስብም። ምንም ትንታኔ፣ ምንም ክትትል፣ ምንም ውጫዊ አገልጋዮች የሉም። ሁሉም ነገር በአሳሽዎ ውስጥ ይቆያል።"
@@ -364,19 +358,19 @@
     "message": "ፈቃዶች"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy እነዚህን የChrome ፈቃዶች ይጠቀማል:"
+    "message": "Drowzy ለአንድ ስራው የሚያስፈልጉትን ፈቃዶች ብቻ ይጠይቃል፦"
   },
   "privacyPermTabs": {
-    "message": "tabs – የአሳሽ ትሮችን መዘርዘር፣ ማቋረጥ እና መመለስ"
+    "message": "የአሳሽ ትሮችን መዘርዘር፣ ማገድ እና መመለስ።"
   },
   "privacyPermStorage": {
-    "message": "storage – ቅንብሮችዎን በአካባቢው ማስቀመጥ"
+    "message": "ቅንብሮችዎን እና ክፍለ-ጊዜዎችን በአካባቢው ማስቀመጥ።"
   },
   "privacyPermAlarms": {
-    "message": "alarms – ንቁ ያልሆኑ ትሮችን ወቅታዊ ምርመራ"
+    "message": "ለሌሉ ትሮች ወቅታዊ ምርመራዎች (በየ 60 ሰከንድ)።"
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – የቀኝ ጠቅ ምናሌ አማራጮች"
+    "message": "ለማገድ እና ለነጭ ዝርዝር በቀኝ-ጠቅ ዝርዝር አማራጮች።"
   },
   "privacyContactTitle": {
     "message": "ያግኙን"
@@ -440,82 +434,19 @@
     "message": "ብዙም አይደለም"
   },
   "whatsNew": {
-    "message": "በ v1.3.1 ውስጥ አዲስ"
+    "message": "በ v$VERSION$ ውስጥ አዲስ",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzy ውስጥ አዲስ ነገር"
   },
   "changelogWhatsNew": {
     "message": "አዲስ ነገር"
-  },
-  "changelogNewFeatures": {
-    "message": "አዲስ ባህሪያት"
-  },
-  "changelogBugFixes": {
-    "message": "ስህተት ማስተካከያ"
-  },
-  "changelogImprovements": {
-    "message": "ማሻሻያዎች"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "ግምገማ ጥያቄ"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "ጥቂት ትሮችን ካገዱ በኋላ፣ Drowzy ይወዳሉ እንደሆነ ይጠይቃል። ፈጣን የአውራ ጣት ወደ ላይ ብዙ ይረዳናል!"
-  },
-  "changelogChangelogTitle": {
-    "message": "የለውጥ ዝርዝር ገጽ"
-  },
-  "changelogChangelogDesc": {
-    "message": "አሁን እያዩት ነው! ሲዘምን ራስ-ሰራ ይከፈታል። ከቅንብሮች ሁልጊዜ ይደረስበታል።"
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "ክፍለ ጊዜ ማስመለስ ጊዜ"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "የተመለሱ ትሮች ወዲያውኑ ራስ-ሰራ አይገደቡም። አሁን በፍጥረት ጊዜ ዘመናቸውን ያስተካክላሉ።"
-  },
-  "changelogFormCheckTitle": {
-    "message": "ቅጽ ማረጋገጫ ጊዜ ማለፍ"
-  },
-  "changelogFormCheckDesc": {
-    "message": "የቅጽ ውሂብ ማረጋገጫ አሁን 500ms ጊዜ ገደብ አለው ስለዚህ ምላሽ የማይሰጡ ትሮች ወረፋውን ማገድ አይችሉም።"
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "ነጭ ዝርዝር ድግግሞሽ"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "\"Example.com\" እና \"example.com\" ሁለቱም ሊታከሉ የሚችሉበት የፊደል መጠን ችግር ተስተካክሏል። ሁሉም ግቤቶች አሁን ተመሳስለዋል።"
-  },
-  "changelogLiveStatsTitle": {
-    "message": "ቀጥታ ስታቲስቲክስ"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "ትሮች ሲገደቡ ወይም ሲነቁ ፖፕአፕ ራስ-ሰራ ያድሳል።"
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "ክፍለ ጊዜ ማስመለስ አማራጮች"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "ክፍለ ጊዜዎች አሁን \"ክፈት\" (ትሮች ጨምር) እና \"ተካ\" (አሁን ያሉ ትሮችን ቀይር) ተለያዩ ቁልፎች አሏቸው።"
-  },
-  "changelogWhitelistValTitle": {
-    "message": "ነጭ ዝርዝር ማረጋገጫ እና ወደ ውጭ/ወደ ውስጥ"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "ነጭ ዝርዝር ግቤት ጎራዎችን ያረጋግጣል። ከቅንጥብ ሰሌዳ ማስመጣት እና መላክም ይችላሉ።"
-  },
-  "changelogA11yTitle": {
-    "message": "ተደራሽነት"
-  },
-  "changelogA11yDesc": {
-    "message": "የትሮች ዝርዝር ንጥሎች አሁን ከኪቦርድ ሊደረስባቸው ይችላሉ ከ ARIA ሚናዎች ጋር። የማሳወቂያዎች ለማንበቢያ ሰሌዳ ይታወቃሉ።"
-  },
-  "changelogAnimationsTitle": {
-    "message": "ለስላሳ አኒሜሽኖች"
-  },
-  "changelogAnimationsDesc": {
-    "message": "የትሮች ዝርዝር ቅደም ተከተል አኒሜሽኖች ከፍተኛ ገደብ ተቀምጧል ስለዚህ ብዙ ትሮች ያሉ መስኮቶች ረጅም መዘግየት አይኖራቸውም።"
   },
   "changelogCtaText": {
     "message": "Drowzy ነፃ እና ክፍት ምንጭ ነው። ማህደረ ትውስታ እየቆጠበ ከሆነ ግምገማ ወይም በ GitHub ላይ ኮከብ ያስቀምጡ።"
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "GitHub ላይ ኮከብ"
-  },
-  "suspendThis": {
-    "message": "ታብን አግድ"
-  },
-  "failedToSuspend": {
-    "message": "ይህን ታብ ማገድ አይቻልም"
   },
   "closedDuplicates": {
     "message": "$COUNT$ ድግግሞሽ ታብ(ዎች) ተዘግተዋል",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "በቅርቡ"
   },
-  "confirm": {
-    "message": "እርግጠኛ ነዎት?"
+  "changelogVersionLabel": {
+    "message": "ስሪት"
+  },
+  "copiedStats": {
+    "message": "ስታቲስቲክስ ተቀድቷል!"
+  },
+  "privacyFooterLink": {
+    "message": "ኮዱን በGitHub ይመልከቱ"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy ክፍት ምንጭ ነው።"
+  },
+  "privacyPermHost": {
+    "message": "የቅጽ ጥበቃ ወይም የትር ምልክት ሲያንቁ ብቻ የሚሰጥ አማራጭ የአስተናጋጅ መዳረሻ። በመጫን ላይ በፍጹም አይጠየቅም። በማንኛውም ጊዜ መሰረዝ ይቻላል።"
+  },
+  "privacyPermScripting": {
+    "message": "ትር ከመታገድ በፊት ያልተቀመጡ የቅጽ ውሂብ ለመፈለግ ትንሽ ስክሪፕት መጨመር። በውዴታ ብቻ።"
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzy ን በChrome የጎን ፓነል ውስጥ ማሳየት።"
+  },
+  "privacyYourDataText": {
+    "message": "ምንም ነገር ከአሳሽዎ ስለማይወጣ፣ ምንም ዳሽቦርድ፣ ምንም መለያ የለም፣ እና በDrowzy ምን እንዳደረጉ ለማየት ምንም መንገድ የለም። Drowzy ን ካራቆሉ፣ Chrome አማራጭ ግብረመልስ (የማራቆት ምክንያት፣ አሳሽ፣ OS) በተለየ የድር ገጽ በኩል የመላክ እድል ይሰጥዎታል፤ ያ ማስረከብ ግልጽ ነው እና ወደ ስም-አልባ ቅጽ ይሄዳል። ትሩን በመዝጋት መዝለል ይችላሉ።"
+  },
+  "privacyYourDataTitle": {
+    "message": "የእርስዎ ውሂብ"
+  },
+  "ramEstimateTooltip": {
+    "message": "በግምት 150 ሜባ በታገደ ትር በመጠቀም የተሰላ። ትክክለኛ ቁጠባ በገጽ ይለያያል።"
+  },
+  "shareStats": {
+    "message": "አጋራ"
+  },
+  "statLifetimeRam": {
+    "message": "የእድሜ ልክ RAM ቁጠባ"
+  },
+  "confirmDeleteTitle": {
+    "message": "እንደገና ጠቅ ያድርጉ ለማረጋገጥ መሰረዝ"
   }
 }

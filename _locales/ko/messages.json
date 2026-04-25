@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "전체"
   },
-  "statRamSaved": {
-    "message": "절약된 RAM (추정)"
-  },
   "statMemberSince": {
     "message": "가입일"
   },
@@ -343,13 +340,10 @@
     "message": "알겠습니다, 시작하겠습니다"
   },
   "privacyTitle": {
-    "message": "Drowzy – 개인정보 보호정책"
+    "message": "개인정보 처리방침"
   },
   "privacyUpdated": {
     "message": "최종 업데이트: 2026년 4월"
-  },
-  "privacyShortTitle": {
-    "message": "요약"
   },
   "privacyShortText": {
     "message": "Drowzy는 어떠한 데이터도 수집하지 않습니다. 분석 없음, 추적 없음, 외부 서버 없음. 모든 것은 브라우저에 남습니다."
@@ -364,19 +358,19 @@
     "message": "권한"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy는 다음 Chrome 권한을 사용합니다:"
+    "message": "Drowzy는 단 하나의 작업을 수행하는 데 필요한 권한만 요청합니다:"
   },
   "privacyPermTabs": {
-    "message": "tabs – 브라우저 탭 목록 조회, 일시중지 및 복원"
+    "message": "브라우저 탭 나열, 일시 중단 및 복원."
   },
   "privacyPermStorage": {
-    "message": "storage – 설정을 로컬에 저장"
+    "message": "설정 및 세션을 로컬에 저장."
   },
   "privacyPermAlarms": {
-    "message": "alarms – 비활성 탭의 주기적 확인"
+    "message": "비활성 탭에 대한 주기적 확인 (60초마다)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – 우클릭 메뉴 옵션"
+    "message": "일시 중단 및 화이트리스트를 위한 우클릭 메뉴 옵션."
   },
   "privacyContactTitle": {
     "message": "문의"
@@ -440,82 +434,19 @@
     "message": "별로요"
   },
   "whatsNew": {
-    "message": "v1.3.1의 새로운 기능"
+    "message": "v$VERSION$의 새로운 기능",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzy의 새로운 기능"
   },
   "changelogWhatsNew": {
     "message": "새로운 기능"
-  },
-  "changelogNewFeatures": {
-    "message": "새 기능"
-  },
-  "changelogBugFixes": {
-    "message": "버그 수정"
-  },
-  "changelogImprovements": {
-    "message": "개선사항"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "리뷰 요청"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "몇 개의 탭을 일시중지한 후, Drowzy가 만족스러운지 물어볼 것입니다. 빠른 좋아요가 큰 도움이 됩니다!"
-  },
-  "changelogChangelogTitle": {
-    "message": "변경 로그 페이지"
-  },
-  "changelogChangelogDesc": {
-    "message": "지금 보고 계신 페이지입니다! 업데이트 시 자동으로 열립니다. 설정에서 언제든 접근 가능합니다."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "세션 복원 타이밍"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "복원된 탭이 더 이상 즉시 자동 일시중지되지 않습니다. 생성 시 유휴 타이머가 올바르게 재설정됩니다."
-  },
-  "changelogFormCheckTitle": {
-    "message": "양식 확인 타임아웃"
-  },
-  "changelogFormCheckDesc": {
-    "message": "양식 데이터 확인에 500ms 타임아웃이 적용되어 응답하지 않는 탭이 전체 대기열을 차단할 수 없습니다."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "화이트리스트 중복"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "대소문자 구분 문제를 수정했습니다. 모든 항목이 이제 정규화됩니다."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "실시간 통계"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "탭이 백그라운드에서 일시중지되거나 깨어날 때 팝업이 자동으로 새로고침됩니다."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "세션 복원 옵션"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "세션에 \"열기\"(탭 추가)와 \"교체\"(현재 탭 교체) 버튼이 별도로 추가되었습니다."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "화이트리스트 검증 및 내보내기/가져오기"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "화이트리스트 입력 시 도메인이 검증됩니다. 클립보드를 통해 다른 기기에서 내보내기/가져오기도 가능합니다."
-  },
-  "changelogA11yTitle": {
-    "message": "접근성"
-  },
-  "changelogA11yDesc": {
-    "message": "탭 목록 항목이 적절한 ARIA 역할과 함께 키보드로 탐색 가능해졌습니다. 토스트 알림이 스크린 리더에 전달됩니다."
-  },
-  "changelogAnimationsTitle": {
-    "message": "부드러운 애니메이션"
-  },
-  "changelogAnimationsDesc": {
-    "message": "탭 목록 순차 애니메이션에 상한이 설정되어 탭이 많은 창에서 긴 캐스케이드 지연이 없어졌습니다."
   },
   "changelogCtaText": {
     "message": "Drowzy는 무료 오픈소스입니다. 메모리 절약에 도움이 되고 있다면 리뷰를 남기거나 GitHub에서 스타를 눌러주세요."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "GitHub에서 스타"
-  },
-  "suspendThis": {
-    "message": "탭 일시중지"
-  },
-  "failedToSuspend": {
-    "message": "이 탭을 일시중지할 수 없습니다"
   },
   "closedDuplicates": {
     "message": "중복 탭 $COUNT$개를 닫았습니다",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "곧"
   },
-  "confirm": {
-    "message": "확실합니까?"
+  "changelogVersionLabel": {
+    "message": "버전"
+  },
+  "copiedStats": {
+    "message": "통계가 복사되었습니다!"
+  },
+  "privacyFooterLink": {
+    "message": "GitHub에서 코드 보기"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy는 오픈소스입니다."
+  },
+  "privacyPermHost": {
+    "message": "선택적 호스트 액세스. 양식 보호 또는 일시 중단된 탭 표시를 활성화할 때만 요청됩니다. 설치 시에는 절대 요청되지 않습니다. 언제든지 취소 가능합니다."
+  },
+  "privacyPermScripting": {
+    "message": "탭을 일시 중단하기 전에 저장되지 않은 양식 데이터를 감지하기 위해 작은 스크립트를 삽입합니다. 옵트인 전용."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome 사이드 패널에 Drowzy 표시."
+  },
+  "privacyYourDataText": {
+    "message": "아무것도 브라우저를 벗어나지 않기 때문에 대시보드도, 계정도 없고, Drowzy로 무엇을 했는지 우리가 볼 방법이 없습니다. Drowzy를 제거하면 Chrome에서 별도의 웹 페이지를 통해 선택적 피드백(제거 이유, 브라우저, OS)을 보낼 기회를 제공합니다. 해당 제출은 명시적이며 익명 양식으로 전송됩니다. 탭을 닫아 건너뛸 수 있습니다."
+  },
+  "privacyYourDataTitle": {
+    "message": "귀하의 데이터"
+  },
+  "ramEstimateTooltip": {
+    "message": "일시 중단된 탭당 ~150MB 사용으로 추정됩니다. 실제 절약량은 페이지에 따라 다릅니다."
+  },
+  "shareStats": {
+    "message": "공유"
+  },
+  "statLifetimeRam": {
+    "message": "누적 RAM 절약"
+  },
+  "confirmDeleteTitle": {
+    "message": "삭제를 확인하려면 다시 클릭하세요"
   }
 }

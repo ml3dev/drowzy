@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Din totdeauna"
   },
-  "statRamSaved": {
-    "message": "RAM economisit (est.)"
-  },
   "statMemberSince": {
     "message": "Membru din"
   },
@@ -343,13 +340,10 @@
     "message": "Am înțeles, să începem"
   },
   "privacyTitle": {
-    "message": "Drowzy – Politica de confidențialitate"
+    "message": "Politică de confidențialitate"
   },
   "privacyUpdated": {
     "message": "Ultima actualizare: aprilie 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Pe scurt"
   },
   "privacyShortText": {
     "message": "Drowzy nu colectează niciun fel de date. Fără analize, fără urmărire, fără servere externe. Totul rămâne în browserul tău."
@@ -364,19 +358,19 @@
     "message": "Permisiuni"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy folosește aceste permisiuni Chrome:"
+    "message": "Drowzy solicită doar permisiunile de care are nevoie pentru a-și face singura sa treabă:"
   },
   "privacyPermTabs": {
-    "message": "tabs – listarea, suspendarea și restaurarea filelor din browser"
+    "message": "Listare, suspendare și restaurare a filelor browserului."
   },
   "privacyPermStorage": {
-    "message": "storage – salvarea setărilor local"
+    "message": "Salvarea setărilor și sesiunilor tale local."
   },
   "privacyPermAlarms": {
-    "message": "alarms – verificări periodice pentru file inactive"
+    "message": "Verificări periodice ale filelor inactive (la fiecare 60 de secunde)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – opțiuni din meniul click dreapta"
+    "message": "Opțiuni de meniu cu clic dreapta pentru suspendare și lista albă."
   },
   "privacyContactTitle": {
     "message": "Contact"
@@ -440,82 +434,19 @@
     "message": "Nu prea"
   },
   "whatsNew": {
-    "message": "Ce e nou în v1.3.1"
+    "message": "Ce e nou în v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Ce e nou în Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Ce e nou"
-  },
-  "changelogNewFeatures": {
-    "message": "Funcții noi"
-  },
-  "changelogBugFixes": {
-    "message": "Remedieri"
-  },
-  "changelogImprovements": {
-    "message": "Îmbunătățiri"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Solicitare de recenzie"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "După ce suspendați câteva file, Drowzy va întreba dacă vă place. Un like rapid ne ajută enorm!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Pagina de modificări"
-  },
-  "changelogChangelogDesc": {
-    "message": "Tocmai o vedeți! Se deschide automat la actualizare. Accesibilă din Setări."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Momentul restaurării sesiunii"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Filele restaurate nu mai sunt suspendate automat imediat. Acum resetează corect temporizatoarele de inactivitate."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Expirare verificare formular"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Verificarea formularelor are acum un timeout de 500ms, astfel încât filele care nu răspund nu pot bloca coada."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Duplicate în lista albă"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "S-a remediat problema de sensibilitate la majuscule unde \"Example.com\" și \"example.com\" puteau fi adăugate ambele. Toate intrările sunt acum normalizate."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Statistici în timp real"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Popup-ul se actualizează automat când filele sunt suspendate sau trezite."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Opțiuni de restaurare a sesiunii"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sesiunile au acum butoane separate \"Deschide\" și \"Înlocuiește\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Validare și export/import al listei albe"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Introducerea listei albe validează acum domeniile. Puteți exporta și importa prin clipboard."
-  },
-  "changelogA11yTitle": {
-    "message": "Accesibilitate"
-  },
-  "changelogA11yDesc": {
-    "message": "Elementele listei de file sunt acum navigabile cu tastatura cu roluri ARIA. Notificările sunt anunțate cititorelor de ecran."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Animații mai fluide"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Animațiile în cascadă sunt limitate pentru a evita întârzieri lungi în ferestrele cu multe file."
   },
   "changelogCtaText": {
     "message": "Drowzy este gratuit și open source. Dacă vă economisește memorie, lăsați o recenzie sau o stea pe GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Stea pe GitHub"
-  },
-  "suspendThis": {
-    "message": "Suspendă fila"
-  },
-  "failedToSuspend": {
-    "message": "Nu se poate suspenda această filă"
   },
   "closedDuplicates": {
     "message": "S-au închis $COUNT$ file duplicate",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "în curând"
   },
-  "confirm": {
-    "message": "Sigur?"
+  "changelogVersionLabel": {
+    "message": "Versiune"
+  },
+  "copiedStats": {
+    "message": "Statistici copiate!"
+  },
+  "privacyFooterLink": {
+    "message": "Răsfoiți codul pe GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy este open source."
+  },
+  "privacyPermHost": {
+    "message": "Acces opțional la gazdă, solicitat la cerere doar când activați Protecția formularelor sau Marcarea filelor suspendate. Niciodată cerut la instalare. Revocabil oricând."
+  },
+  "privacyPermScripting": {
+    "message": "Injectarea unui mic script pentru a detecta datele de formular nesalvate înainte de a suspenda o filă. Doar opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Afișarea Drowzy în panoul lateral al Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Pentru că nimic nu părăsește browserul tău, nu există nicio tablou de bord, niciun cont și niciun mod să vedem ce ai făcut cu Drowzy. Dacă dezinstalezi Drowzy, Chrome îți oferă șansa să trimiți feedback opțional (motivul dezinstalării, browser, OS) printr-o pagină web separată; acea trimitere este explicită și merge la un formular anonim. Poți să o sari închizând fila."
+  },
+  "privacyYourDataTitle": {
+    "message": "Datele tale"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimat folosind ~150 MB pe filă suspendată. Economiile reale variază în funcție de pagină."
+  },
+  "shareStats": {
+    "message": "Partajează"
+  },
+  "statLifetimeRam": {
+    "message": "Total RAM economisit"
+  },
+  "confirmDeleteTitle": {
+    "message": "Faceți clic din nou pentru a confirma ștergerea"
   }
 }

@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Укупно"
   },
-  "statRamSaved": {
-    "message": "Уштеђена RAM (процена)"
-  },
   "statMemberSince": {
     "message": "Члан од"
   },
@@ -343,13 +340,10 @@
     "message": "Разумем, идемо"
   },
   "privacyTitle": {
-    "message": "Drowzy – Политика приватности"
+    "message": "Политика приватности"
   },
   "privacyUpdated": {
     "message": "Последње ажурирање: април 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Укратко"
   },
   "privacyShortText": {
     "message": "Drowzy не прикупља никакве податке. Без аналитике, без праћења, без спољних сервера. Све остаје у вашем прегледачу."
@@ -364,19 +358,19 @@
     "message": "Дозволе"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy користи ове Chrome дозволе:"
+    "message": "Drowzy тражи само дозволе које су му потребне да обави свој један посао:"
   },
   "privacyPermTabs": {
-    "message": "tabs – приказ, суспендовање и обнављање картица прегледача"
+    "message": "Излиставање, обустављање и враћање картица прегледача."
   },
   "privacyPermStorage": {
-    "message": "storage – локално чување подешавања"
+    "message": "Чување ваших подешавања и сесија локално."
   },
   "privacyPermAlarms": {
-    "message": "alarms – периодичне провере неактивних картица"
+    "message": "Периодичне провере неактивних картица (свака 60 секунди)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – опције у контекстном менију"
+    "message": "Опције менија десног клика за обуставу и белу листу."
   },
   "privacyContactTitle": {
     "message": "Контакт"
@@ -440,82 +434,19 @@
     "message": "Не баш"
   },
   "whatsNew": {
-    "message": "Шта је ново у v1.3.1"
+    "message": "Шта је ново у v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Шта је ново у Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Шта је ново"
-  },
-  "changelogNewFeatures": {
-    "message": "Нове функције"
-  },
-  "changelogBugFixes": {
-    "message": "Исправке грешака"
-  },
-  "changelogImprovements": {
-    "message": "Побољшања"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Захтев за рецензију"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Након суспендовања неколико картица, Drowzy ће питати да ли вам се свиђа. Брзи палац горе нам много помаже!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Страница измена"
-  },
-  "changelogChangelogDesc": {
-    "message": "Управо је гледате! Отвара се аутоматски при ажурирању. Доступна из Подешавања."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Време обнове сесије"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Обновљене картице се више не суспендују одмах аутоматски. Сада правилно ресетују своје тајмере неактивности."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Временско ограничење провере образаца"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Провера образаца сада има 500ms временско ограничење тако да картице које не реагују не могу блокирати ред."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Дупликати беле листе"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Исправљен проблем са осетљивошћу на велика и мала слова где су \"Example.com\" и \"example.com\" могли бити додати. Сви уноси су сада нормализовани."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Статистике уживо"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Искачући прозор се аутоматски освежава када се картице суспендују или пробуде."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Опције обнове сесије"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Сесије сада имају одвојене дугмиће \"Отвори\" и \"Замени\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Валидација и извоз/увоз беле листе"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Унос беле листе сада проверава домене. Можете извозити и увозити преко оставе."
-  },
-  "changelogA11yTitle": {
-    "message": "Приступачност"
-  },
-  "changelogA11yDesc": {
-    "message": "Ставке листе картица сада су навигативне тастатуром са ARIA улогама. Обавештења се објављују читачима екрана."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Глаткије анимације"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Каскадне анимације листе картица су сада ограничене тако да прозори са много картица немају дуго кашњење."
   },
   "changelogCtaText": {
     "message": "Drowzy је бесплатан и отвореног кода. Ако вам штеди меморију, оставите рецензију или звездицу на GitHub-у."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Звездица на GitHub-у"
-  },
-  "suspendThis": {
-    "message": "Суспендуј картицу"
-  },
-  "failedToSuspend": {
-    "message": "Ова картица не може бити суспендована"
   },
   "closedDuplicates": {
     "message": "Затворено $COUNT$ дупликат картица",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "ускоро"
   },
-  "confirm": {
-    "message": "Сигурни?"
+  "changelogVersionLabel": {
+    "message": "Верзија"
+  },
+  "copiedStats": {
+    "message": "Статистика копирана!"
+  },
+  "privacyFooterLink": {
+    "message": "Прегледајте код на GitHub-у"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy је отвореног кода."
+  },
+  "privacyPermHost": {
+    "message": "Опциони приступ хосту, тражен по потреби само када укључите Заштиту образаца или Означавање обустављених картица. Никада се не тражи при инсталацији. Може се опозвати у било ком тренутку."
+  },
+  "privacyPermScripting": {
+    "message": "Убацивање малог скрипта за откривање несачуваних података образаца пре обустављања картице. Само опционо."
+  },
+  "privacyPermSidePanel": {
+    "message": "Приказивање Drowzy у бочном панелу Chrome-а."
+  },
+  "privacyYourDataText": {
+    "message": "Пошто ништа не напушта ваш прегледач, нема контролне табле, нема налога, и нема начина да видимо шта сте радили са Drowzy. Ако деинсталирате Drowzy, Chrome вам нуди прилику да пошаљете опциону повратну информацију (разлог деинсталације, прегледач, ОС) преко засебне веб странице; та пошиљка је експлицитна и иде на анонимни образац. Можете је прескочити затварањем картице."
+  },
+  "privacyYourDataTitle": {
+    "message": "Ваши подаци"
+  },
+  "ramEstimateTooltip": {
+    "message": "Процењено коришћењем ~150 MB по обустављеној картици. Стварне уштеде се разликују по страници."
+  },
+  "shareStats": {
+    "message": "Дели"
+  },
+  "statLifetimeRam": {
+    "message": "Укупно уштеђене RAM меморије"
+  },
+  "confirmDeleteTitle": {
+    "message": "Кликните поново за потврду брисања"
   }
 }

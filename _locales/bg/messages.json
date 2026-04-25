@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "За цялото време"
   },
-  "statRamSaved": {
-    "message": "Спестена RAM (прибл.)"
-  },
   "statMemberSince": {
     "message": "Член от"
   },
@@ -343,13 +340,10 @@
     "message": "Разбрах, да започваме"
   },
   "privacyTitle": {
-    "message": "Drowzy – Политика за поверителност"
+    "message": "Политика за поверителност"
   },
   "privacyUpdated": {
     "message": "Последна актуализация: април 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Кратката версия"
   },
   "privacyShortText": {
     "message": "Drowzy не събира никакви данни. Без анализи, без проследяване, без външни сървъри. Всичко остава в браузъра ви."
@@ -364,19 +358,19 @@
     "message": "Разрешения"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy използва следните разрешения на Chrome:"
+    "message": "Drowzy изисква само разрешенията, от които се нуждае за единствената си работа:"
   },
   "privacyPermTabs": {
-    "message": "tabs – списък, спиране и възстановяване на табовете на браузъра"
+    "message": "Списък, спиране и възстановяване на разделите на браузъра."
   },
   "privacyPermStorage": {
-    "message": "storage – локално запазване на настройките ви"
+    "message": "Запазване на вашите настройки и сесии локално."
   },
   "privacyPermAlarms": {
-    "message": "alarms – периодични проверки за неактивни табове"
+    "message": "Периодични проверки за неактивни раздели (на всеки 60 секунди)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – опции в контекстното меню"
+    "message": "Опции на менюто с десен бутон за спиране и бял списък."
   },
   "privacyContactTitle": {
     "message": "Контакт"
@@ -440,82 +434,19 @@
     "message": "Не особено"
   },
   "whatsNew": {
-    "message": "Какво ново в v1.3.1"
+    "message": "Какво ново в v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Какво ново в Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Какво ново"
-  },
-  "changelogNewFeatures": {
-    "message": "Нови функции"
-  },
-  "changelogBugFixes": {
-    "message": "Корекции"
-  },
-  "changelogImprovements": {
-    "message": "Подобрения"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Заявка за рецензия"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "След като спрете няколко раздела, Drowzy ще попита дали ви харесва. Бърз палец нагоре ни помага много!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Страница на промените"
-  },
-  "changelogChangelogDesc": {
-    "message": "Гледате я в момента! Отваря се автоматично при актуализация. Достъпна от Настройки по всяко време."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Времена на възстановяване на сесия"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Възстановените раздели вече не се спират автоматично незабавно. Сега правилно нулират таймерите си."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Таймаут за проверка на формуляри"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Проверката на формулярни данни вече има таймаут от 500ms, така че неотзивчиви раздели не могат да блокират опашката."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Дубликати в белия списък"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Отстранен проблем с чувствителността към регистъра, при който \"Example.com\" и \"example.com\" можеха да бъдат добавени едновременно. Всички записи вече са нормализирани."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Статистики в реално време"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Попъпът вече се обновява автоматично при спиране или събуждане на раздели."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Опции за възстановяване на сесия"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Сесиите вече имат отделни бутони \"Отвори\" и \"Замени\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Валидиране и експорт/импорт на белия списък"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Вписването в белия списък вече валидира домейни. Можете да експортирате и импортирате чрез клипборда."
-  },
-  "changelogA11yTitle": {
-    "message": "Достъпност"
-  },
-  "changelogA11yDesc": {
-    "message": "Елементите от списъка с раздели вече са навигируеми с клавиатура с ARIA роли. Известията се обявяват на екранните четци."
-  },
-  "changelogAnimationsTitle": {
-    "message": "По-плавни анимации"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Каскадните анимации на списъка с раздели вече са ограничени, за да се избегнат дълги забавяния."
   },
   "changelogCtaText": {
     "message": "Drowzy е безплатен и с отворен код. Ако ви спестява памет, оставете рецензия или звезда в GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Звезда в GitHub"
-  },
-  "suspendThis": {
-    "message": "Приспи раздела"
-  },
-  "failedToSuspend": {
-    "message": "Този раздел не може да бъде приспан"
   },
   "closedDuplicates": {
     "message": "Затворени $COUNT$ дублиращи се раздел(а)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "скоро"
   },
-  "confirm": {
-    "message": "Сигурни ли сте?"
+  "changelogVersionLabel": {
+    "message": "Версия"
+  },
+  "copiedStats": {
+    "message": "Статистиките са копирани!"
+  },
+  "privacyFooterLink": {
+    "message": "Прегледайте кода в GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy е с отворен код."
+  },
+  "privacyPermHost": {
+    "message": "Незадължителен достъп до хостове, изискван при поискване само когато активирате Защита на формуляри или Маркиране на спрените раздели. Никога не се изисква при инсталиране. Може да се отмени по всяко време."
+  },
+  "privacyPermScripting": {
+    "message": "Инжектиране на малък скрипт за откриване на незапазени данни от формуляри преди спиране на раздел. Само по избор."
+  },
+  "privacyPermSidePanel": {
+    "message": "Показване на Drowzy в страничния панел на Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Тъй като нищо не напуска браузъра ви, няма табло, няма акаунт и няма начин да видим какво сте направили с Drowzy. Ако деинсталирате Drowzy, Chrome ви предлага възможност да изпратите незадължителна обратна връзка (причина за деинсталиране, браузър, ОС) чрез отделна уеб страница; това подаване е изрично и отива към анонимен формуляр. Можете да го пропуснете, като затворите раздела."
+  },
+  "privacyYourDataTitle": {
+    "message": "Вашите данни"
+  },
+  "ramEstimateTooltip": {
+    "message": "Изчислено с ~150 МБ на спрян раздел. Действителните спестявания варират според страницата."
+  },
+  "shareStats": {
+    "message": "Споделяне"
+  },
+  "statLifetimeRam": {
+    "message": "Общо спестена RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "Кликнете отново, за да потвърдите изтриването"
   }
 }

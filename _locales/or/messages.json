@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "ସର୍ବକାଳୀନ"
   },
-  "statRamSaved": {
-    "message": "RAM ସଞ୍ଚୟ (ଆନୁମାନିକ)"
-  },
   "statMemberSince": {
     "message": "ସଦସ୍ୟ ହୋଇଥିବା ଦିନ"
   },
@@ -343,13 +340,10 @@
     "message": "ବୁଝିଲି, ଆରମ୍ଭ କରିବା"
   },
   "privacyTitle": {
-    "message": "Drowzy – ଗୋପନୀୟତା ନୀତି"
+    "message": "ଗୋପନୀୟତା ନୀତି"
   },
   "privacyUpdated": {
     "message": "ଶେଷ ଅପଡେଟ୍: ଏପ୍ରିଲ 2026"
-  },
-  "privacyShortTitle": {
-    "message": "ସଂକ୍ଷିପ୍ତ ସଂସ୍କରଣ"
   },
   "privacyShortText": {
     "message": "Drowzy କୌଣସି ଡାଟା ସଂଗ୍ରହ କରେ ନାହିଁ। କୌଣସି ଆନାଲିଟିକ୍ସ ନାହିଁ, କୌଣସି ଟ୍ରାକିଂ ନାହିଁ, କୌଣସି ବାହ୍ୟ ସର୍ଭର ନାହିଁ। ସବୁକିଛି ଆପଣଙ୍କ ବ୍ରାଉଜରରେ ରହେ।"
@@ -364,19 +358,19 @@
     "message": "ଅନୁମତି"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy ଏହି Chrome ଅନୁମତି ବ୍ୟବହାର କରେ:"
+    "message": "Drowzy କେବଳ ସେହି ଅନୁମତିଗୁଡ଼ିକ ଅନୁରୋଧ କରେ ଯାହା ଏହାର ଗୋଟିଏ କାମ କରିବାକୁ ଆବଶ୍ୟକ:"
   },
   "privacyPermTabs": {
-    "message": "tabs – ବ୍ରାଉଜର ଟ୍ୟାବ୍ ତାଲିକା, ସସ୍ପେଣ୍ଡ ଏବଂ ପୁନଃସ୍ଥାପନ"
+    "message": "ବ୍ରାଉଜର ଟ୍ୟାବଗୁଡ଼ିକୁ ତାଲିକାଭୁକ୍ତ କରିବା, ସ୍ଥଗିତ କରିବା ଏବଂ ପୁନଃସ୍ଥାପନ କରିବା।"
   },
   "privacyPermStorage": {
-    "message": "storage – ସ୍ଥାନୀୟ ଭାବେ ସେଟିଂସ୍ ସେଭ୍"
+    "message": "ଆପଣଙ୍କ ସେଟିଂସ୍ ଏବଂ ସେସନଗୁଡ଼ିକୁ ସ୍ଥାନୀୟ ଭାବରେ ସଞ୍ଚୟ କରିବା।"
   },
   "privacyPermAlarms": {
-    "message": "alarms – ନିଷ୍କ୍ରିୟ ଟ୍ୟାବ୍ ପାଇଁ ନିୟମିତ ଯାଞ୍ଚ"
+    "message": "ନିଷ୍କ୍ରିୟ ଟ୍ୟାବଗୁଡ଼ିକର ନିୟମିତ ଯାଞ୍ଚ (ପ୍ରତି 60 ସେକେଣ୍ଡରେ)।"
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – ଡାହାଣ-କ୍ଲିକ୍ ମେନୁ ବିକଳ୍ପ"
+    "message": "ସ୍ଥଗିତ ଏବଂ ଶ୍ୱେତ ତାଲିକା ପାଇଁ ଡାହାଣ-କ୍ଲିକ ମେନୁ ବିକଳ୍ପଗୁଡ଼ିକ।"
   },
   "privacyContactTitle": {
     "message": "ଯୋଗାଯୋଗ"
@@ -440,82 +434,19 @@
     "message": "ସେତିକି ନୁହେଁ"
   },
   "whatsNew": {
-    "message": "v1.3.1 ରେ ନୂଆ କଣ"
+    "message": "v$VERSION$ ରେ ନୂଆ କଣ",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzy ରେ ନୂଆ କଣ"
   },
   "changelogWhatsNew": {
     "message": "ନୂଆ କଣ"
-  },
-  "changelogNewFeatures": {
-    "message": "ନୂଆ ବୈଶିଷ୍ଟ୍ୟ"
-  },
-  "changelogBugFixes": {
-    "message": "ବଗ୍ ସମାଧାନ"
-  },
-  "changelogImprovements": {
-    "message": "ଉନ୍ନତି"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "ସମୀକ୍ଷା ଅନୁରୋଧ"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "କିଛି ଟ୍ୟାବ୍ ସ୍ଥଗିତ କରିବା ପରେ, Drowzy ଆପଣଙ୍କୁ ପଚାରିବ। ଏକ ଦ୍ରୁତ ଥମ୍ବସ୍ ଅପ୍ ଆମକୁ ବହୁତ ସାହାଯ୍ୟ କରେ!"
-  },
-  "changelogChangelogTitle": {
-    "message": "ପରିବର୍ତ୍ତନ ଲଗ୍ ପୃଷ୍ଠା"
-  },
-  "changelogChangelogDesc": {
-    "message": "ଆପଣ ଏହା ଦେଖୁଛନ୍ତି! ଅପଡେଟ୍ ସମୟରେ ସ୍ବୟଂଚାଳିତ ଭାବରେ ଖୋଲେ। ସେଟିଂସ୍ ରୁ ଯେକୌଣସି ସମୟରେ ପ୍ରବେଶ କରନ୍ତୁ।"
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "ସେସନ ପୁନରୁଦ୍ଧାର ସମୟ"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "ପୁନରୁଦ୍ଧାର ହୋଇଥିବା ଟ୍ୟାବ୍ ଏବେ ତୁରନ୍ତ ସ୍ଥଗିତ ହୁଏ ନାହିଁ। ସେମାନେ ନିଷ୍କ୍ରିୟ ଟାଇମର୍ ସଠିକ୍ ଭାବରେ ରିସେଟ୍ କରନ୍ତି।"
-  },
-  "changelogFormCheckTitle": {
-    "message": "ଫର୍ମ ଯାଞ୍ଚ ସମୟସୀମା"
-  },
-  "changelogFormCheckDesc": {
-    "message": "ଫର୍ମ ଡାଟା ଯାଞ୍ଚରେ ଏବେ 500ms ସମୟସୀମା ଅଛି ଯାହା ଫଳରେ ଅପ୍ରତିକ୍ରିୟାଶୀଳ ଟ୍ୟାବ୍ ସାରିକୁ ଅବରୋଧ କରିପାରିବ ନାହିଁ।"
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "ଧଳା ତାଲିକା ନକଲ"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "\"Example.com\" ଏବଂ \"example.com\" ଉଭୟ ଯୋଡ଼ା ଯାଇପାରୁଥିବା କେସ୍ ସେନ୍ସିଟିଭିଟି ସମସ୍ୟା ସମାଧାନ କରାଯାଇଛି। ସମସ୍ତ ଏଣ୍ଟ୍ରି ବର୍ତ୍ତମାନ ସାମାନ୍ୟୀକୃତ ହୋଇଛି।"
-  },
-  "changelogLiveStatsTitle": {
-    "message": "ସିଧା ପରିସଂଖ୍ୟାନ"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "ଟ୍ୟାବ୍ ସ୍ଥଗିତ ବା ଜାଗ୍ରତ ହେଲେ ପପଅପ୍ ସ୍ବୟଂଚାଳିତ ଭାବରେ ସତେଜ ହୁଏ।"
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "ସେସନ ପୁନରୁଦ୍ଧାର ବିକଳ୍ପ"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "ସେସନ ମାନଙ୍କରେ ଏବେ ଅଲଗା \"ଖୋଲନ୍ତୁ\" ଏବଂ \"ବଦଳାନ୍ତୁ\" ବଟନ୍ ଅଛି।"
-  },
-  "changelogWhitelistValTitle": {
-    "message": "ଧଳା ତାଲିକା ଯାଞ୍ଚ ଏବଂ ରପ୍ତାନି/ଆମଦାନୀ"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "ଧଳା ତାଲିକା ଇନପୁଟ୍ ଏବେ ଡୋମେନ ଯାଞ୍ଚ କରେ। କ୍ଲିପବୋର୍ଡ ମାଧ୍ୟମରେ ରପ୍ତାନି ଏବଂ ଆମଦାନୀ କରିପାରିବେ।"
-  },
-  "changelogA11yTitle": {
-    "message": "ସୁଗମ୍ୟତା"
-  },
-  "changelogA11yDesc": {
-    "message": "ଟ୍ୟାବ୍ ତାଲିକା ଆଇଟମ୍ ଏବେ ARIA ଭୂମିକା ସହ କୀବୋର୍ଡ-ନ୍ୟାଭିଗେବଲ। ଟୋଷ୍ଟ ବିଜ୍ଞପ୍ତି ସ୍କ୍ରିନ ରିଡର୍ ପାଇଁ ଘୋଷଣା କରାଯାଏ।"
-  },
-  "changelogAnimationsTitle": {
-    "message": "ସୁଗମ ଆନିମେସନ"
-  },
-  "changelogAnimationsDesc": {
-    "message": "ଟ୍ୟାବ୍ ତାଲିକା ଷ୍ଟ୍ୟାଗର ଆନିମେସନ ଏବେ ସୀମିତ ଯାହା ଫଳରେ ଅନେକ ଟ୍ୟାବ୍ ଥିବା ୱିଣ୍ଡୋରେ ଲମ୍ବା ବିଳମ୍ବ ହୁଏ ନାହିଁ।"
   },
   "changelogCtaText": {
     "message": "Drowzy ମାଗଣା ଏବଂ ଓପେନ ସୋର୍ସ। ଯଦି ଏହା ମେମୋରୀ ସଞ୍ଚୟ କରୁଛି, ସମୀକ୍ଷା ଦିଅନ୍ତୁ ବା GitHub ରେ ଷ୍ଟାର୍ ଦିଅନ୍ତୁ।"
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "GitHub ରେ ଷ୍ଟାର୍"
-  },
-  "suspendThis": {
-    "message": "ଟ୍ୟାବ୍ ସ୍ଥଗିତ କରନ୍ତୁ"
-  },
-  "failedToSuspend": {
-    "message": "ଏହି ଟ୍ୟାବ୍ ସ୍ଥଗିତ କରାଯାଇ ପାରିବ ନାହିଁ"
   },
   "closedDuplicates": {
     "message": "$COUNT$ ଡୁପ୍ଲିକେଟ ଟ୍ୟାବ୍ ବନ୍ଦ ହେଲା",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "ଶୀଘ୍ର"
   },
-  "confirm": {
-    "message": "ନିଶ୍ଚିତ?"
+  "changelogVersionLabel": {
+    "message": "ସଂସ୍କରଣ"
+  },
+  "copiedStats": {
+    "message": "ପରିସଂଖ୍ୟାନ କପି ହୋଇଛି!"
+  },
+  "privacyFooterLink": {
+    "message": "GitHub ରେ କୋଡ୍ ବ୍ରାଉଜ୍ କରନ୍ତୁ"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy ଓପନ୍ ସୋର୍ସ୍।"
+  },
+  "privacyPermHost": {
+    "message": "ଐଚ୍ଛିକ ହୋଷ୍ଟ୍ ଆକ୍ସେସ୍, କେବଳ ଯେତେବେଳେ ଆପଣ ଫର୍ମ ସୁରକ୍ଷା କିମ୍ବା ସ୍ଥଗିତ-ଟ୍ୟାବ୍ ମାର୍କିଂ ସକ୍ଷମ କରନ୍ତି ସେତେବେଳେ ଚାହିଦା ଅନୁଯାୟୀ ଅନୁରୋଧ କରାଯାଏ। ଇନଷ୍ଟଲ୍ ସମୟରେ କେବେବି ଅନୁରୋଧ କରାଯାଏ ନାହିଁ। ଯେ କୌଣସି ସମୟରେ ବାତିଲ ଯୋଗ୍ୟ।"
+  },
+  "privacyPermScripting": {
+    "message": "ଟ୍ୟାବ୍ ସ୍ଥଗିତ ପୂର୍ବରୁ ସଂରକ୍ଷିତ ନଥିବା ଫର୍ମ ଡାଟା ଚିହ୍ନଟ କରିବା ପାଇଁ ଏକ ଛୋଟ ସ୍କ୍ରିପ୍ଟ ଇଞ୍ଜେକ୍ଟ କରିବା। କେବଳ ଅପ୍ଟ୍-ଇନ୍।"
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome ର ସାଇଡ୍ ପ୍ୟାନେଲରେ Drowzy ପ୍ରଦର୍ଶନ।"
+  },
+  "privacyYourDataText": {
+    "message": "କିଛି ବି ଆପଣଙ୍କ ବ୍ରାଉଜର୍ ଛାଡ଼େ ନାହିଁ, ତେଣୁ କୌଣସି ଡ୍ୟାଶବୋର୍ଡ ନାହିଁ, କୌଣସି ଆକାଉଣ୍ଟ ନାହିଁ, ଏବଂ Drowzy ସହିତ ଆପଣ କ'ଣ କରିଛନ୍ତି ଦେଖିବାର ଆମ ପାଇଁ କୌଣସି ଉପାୟ ନାହିଁ। ଯଦି ଆପଣ Drowzy ଅନଇନଷ୍ଟଲ କରନ୍ତି, Chrome ଆପଣଙ୍କୁ ଏକ ଅଲଗା ୱେବ୍ ପୃଷ୍ଠା ମାଧ୍ୟମରେ ଐଚ୍ଛିକ ମତାମତ (ଅନଇନଷ୍ଟଲ କରିବାର କାରଣ, ବ୍ରାଉଜର, OS) ପଠାଇବାର ସୁଯୋଗ ପ୍ରଦାନ କରେ; ସେହି ଦାଖଲ ସ୍ପଷ୍ଟ ଏବଂ ଏକ ଅଜ୍ଞାତ ଫର୍ମକୁ ଯାଏ। ଆପଣ ଟ୍ୟାବ୍ ବନ୍ଦ କରି ଏହାକୁ ଏଡାଇ ପାରିବେ।"
+  },
+  "privacyYourDataTitle": {
+    "message": "ଆପଣଙ୍କ ଡାଟା"
+  },
+  "ramEstimateTooltip": {
+    "message": "ସ୍ଥଗିତ ଟ୍ୟାବ ପ୍ରତି ~150 MB ବ୍ୟବହାର କରି ଆକଳନ କରାଯାଇଛି। ପ୍ରକୃତ ସଞ୍ଚୟ ପୃଷ୍ଠା ଅନୁଯାୟୀ ଭିନ୍ନ।"
+  },
+  "shareStats": {
+    "message": "ଅଂଶୀଦାର କରନ୍ତୁ"
+  },
+  "statLifetimeRam": {
+    "message": "ସମୁଦାୟ RAM ସଞ୍ଚୟ"
+  },
+  "confirmDeleteTitle": {
+    "message": "ବିଲୋପ ନିଶ୍ଚିତ କରିବାକୁ ପୁଣି କ୍ଲିକ କରନ୍ତୁ"
   }
 }

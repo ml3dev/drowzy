@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Lahat ng panahon"
   },
-  "statRamSaved": {
-    "message": "Na-save na RAM (tinatayang)"
-  },
   "statMemberSince": {
     "message": "Miyembro mula"
   },
@@ -343,13 +340,10 @@
     "message": "Sige, tara na"
   },
   "privacyTitle": {
-    "message": "Drowzy – Patakaran sa Privacy"
+    "message": "Patakaran sa Privacy"
   },
   "privacyUpdated": {
     "message": "Huling na-update: Abril 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Ang maikling bersyon"
   },
   "privacyShortText": {
     "message": "Hindi nagkokolekta ng anumang data ang Drowzy. Walang analytics, walang tracking, walang external na server. Lahat ay nananatili sa iyong browser."
@@ -364,19 +358,19 @@
     "message": "Mga Permiso"
   },
   "privacyPermissionsIntro": {
-    "message": "Ginagamit ng Drowzy ang mga Chrome permission na ito:"
+    "message": "Hinihiling lang ng Drowzy ang mga pahintulot na kailangan nito para gawin ang isang trabaho nito:"
   },
   "privacyPermTabs": {
-    "message": "tabs – paglilista, pag-suspend, at pag-restore ng mga browser tab"
+    "message": "Paglilista, pagsuspinde, at pagpapanumbalik ng mga browser tab."
   },
   "privacyPermStorage": {
-    "message": "storage – pag-save ng iyong mga setting nang lokal"
+    "message": "Pag-save ng iyong mga setting at sesyon nang lokal."
   },
   "privacyPermAlarms": {
-    "message": "alarms – pana-panahong pagsusuri ng mga hindi aktibong tab"
+    "message": "Pana-panahong pagsusuri ng mga hindi aktibong tab (bawat 60 segundo)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – mga opsyon sa right-click menu"
+    "message": "Mga opsyon sa menu ng right-click para sa pagsuspinde at whitelist."
   },
   "privacyContactTitle": {
     "message": "Makipag-ugnayan"
@@ -440,82 +434,19 @@
     "message": "Hindi naman"
   },
   "whatsNew": {
-    "message": "Ano ang bago sa v1.3.1"
+    "message": "Ano ang bago sa v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Ano ang Bago sa Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Ano ang Bago"
-  },
-  "changelogNewFeatures": {
-    "message": "Mga Bagong Feature"
-  },
-  "changelogBugFixes": {
-    "message": "Mga Pag-aayos ng Bug"
-  },
-  "changelogImprovements": {
-    "message": "Mga Pagpapabuti"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Paghingi ng Review"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Pagkatapos i-suspend ang ilang tab, magtatanong ang Drowzy kung gusto mo ito. Isang mabilis na thumbs up ay nakakatulong sa amin!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Pahina ng Changelog"
-  },
-  "changelogChangelogDesc": {
-    "message": "Tinitingnan mo na ito! Awtomatikong bubukas sa update. Ma-access mula sa Settings."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Timing ng Session Restore"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Ang mga na-restore na tab ay hindi na agad ina-auto-suspend. Nire-reset na nila nang tama ang kanilang idle timer."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Timeout ng Pagsusuri ng Form"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Ang form check ay may 500ms timeout na para hindi ma-block ng hindi tumutugon na mga tab ang queue."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Mga Duplicate sa Whitelist"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Naayos ang isyu sa case sensitivity kung saan ang \"Example.com\" at \"example.com\" ay parehong maaaring idagdag. Lahat ng entry ay na-normalize na."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Live na Estadistika"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Ang popup ay awtomatikong nagre-refresh kapag nag-suspend o naggising ang mga tab."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Mga Opsyon sa Session Restore"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Ang mga session ay may hiwalay na na \"Buksan\" at \"Palitan\" na mga button."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Whitelist Validation at Export/Import"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Ang whitelist input ay nagva-validate na ng mga domain. Maaari kang mag-export at import sa pamamagitan ng clipboard."
-  },
-  "changelogA11yTitle": {
-    "message": "Kakayahang Ma-access"
-  },
-  "changelogA11yDesc": {
-    "message": "Ang mga item sa tab list ay keyboard-navigable na ngayon na may ARIA roles. Ang mga toast notification ay ina-announce sa mga screen reader."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Mas Maayos na Animations"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Ang stagger animations ng tab list ay may cap na para hindi magkaroon ng mahabang delay ang mga window na may maraming tab."
   },
   "changelogCtaText": {
     "message": "Ang Drowzy ay libre at open source. Kung nakakatipid ito ng memory, mag-iwan ng review o mag-star sa GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Star sa GitHub"
-  },
-  "suspendThis": {
-    "message": "I-suspend ang tab"
-  },
-  "failedToSuspend": {
-    "message": "Hindi ma-suspend ang tab na ito"
   },
   "closedDuplicates": {
     "message": "Isinara ang $COUNT$ duplicate na tab",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "malapit na"
   },
-  "confirm": {
-    "message": "Sigurado?"
+  "changelogVersionLabel": {
+    "message": "Bersyon"
+  },
+  "copiedStats": {
+    "message": "Nakopya ang stats!"
+  },
+  "privacyFooterLink": {
+    "message": "Tingnan ang code sa GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Open source ang Drowzy."
+  },
+  "privacyPermHost": {
+    "message": "Opsyonal na host access, hinihiling on-demand lamang kapag pinagana mo ang Form Protection o Suspended-Tab Marking. Hindi kailanman hinihiling sa pag-install. Maaaring bawiin anumang oras."
+  },
+  "privacyPermScripting": {
+    "message": "Pag-inject ng maliit na script upang matukoy ang hindi nasaling form data bago suspindihin ang isang tab. Opt-in lamang."
+  },
+  "privacyPermSidePanel": {
+    "message": "Pagpapakita ng Drowzy sa side panel ng Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Dahil walang umaalis sa iyong browser, walang dashboard, walang account, at walang paraan para makita namin kung ano ang ginawa mo sa Drowzy. Kung i-uninstall mo ang Drowzy, nag-aalok ang Chrome sa iyo ng pagkakataong magpadala ng opsyonal na feedback (dahilan ng pag-uninstall, browser, OS) sa pamamagitan ng hiwalay na web page; ang submission na iyon ay tahasan at napupunta sa anonymous na form. Maaari mong laktawan ito sa pamamagitan ng pagsasara ng tab."
+  },
+  "privacyYourDataTitle": {
+    "message": "Ang iyong data"
+  },
+  "ramEstimateTooltip": {
+    "message": "Tinatantya gamit ang ~150 MB bawat suspended tab. Nag-iiba ang aktwal na pagtitipid bawat page."
+  },
+  "shareStats": {
+    "message": "Ibahagi"
+  },
+  "statLifetimeRam": {
+    "message": "Kabuuang RAM na natipid"
+  },
+  "confirmDeleteTitle": {
+    "message": "I-click muli upang kumpirmahin ang pagtanggal"
   }
 }

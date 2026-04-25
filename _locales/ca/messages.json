@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Tot el temps"
   },
-  "statRamSaved": {
-    "message": "RAM estalviada (est.)"
-  },
   "statMemberSince": {
     "message": "Membre des de"
   },
@@ -343,13 +340,10 @@
     "message": "Entès, endavant"
   },
   "privacyTitle": {
-    "message": "Drowzy – Política de privacitat"
+    "message": "Política de privadesa"
   },
   "privacyUpdated": {
     "message": "Última actualització: abril de 2026"
-  },
-  "privacyShortTitle": {
-    "message": "La versió curta"
   },
   "privacyShortText": {
     "message": "Drowzy no recull cap dada. Sense analítiques, sense seguiment, sense servidors externs. Tot queda al vostre navegador."
@@ -364,19 +358,19 @@
     "message": "Permisos"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy utilitza aquests permisos de Chrome:"
+    "message": "Drowzy només demana els permisos que necessita per fer la seva única tasca:"
   },
   "privacyPermTabs": {
-    "message": "tabs – llistar, suspendre i restaurar les pestanyes del navegador"
+    "message": "Llistar, suspendre i restaurar pestanyes del navegador."
   },
   "privacyPermStorage": {
-    "message": "storage – desar la vostra configuració localment"
+    "message": "Desar la vostra configuració i les sessions localment."
   },
   "privacyPermAlarms": {
-    "message": "alarms – comprovacions periòdiques de pestanyes inactives"
+    "message": "Comprovacions periòdiques de pestanyes inactives (cada 60 segons)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – opcions del menú contextual"
+    "message": "Opcions de menú del clic dret per suspendre i la llista blanca."
   },
   "privacyContactTitle": {
     "message": "Contacte"
@@ -440,82 +434,19 @@
     "message": "No gaire"
   },
   "whatsNew": {
-    "message": "Novetats a la v1.3.1"
+    "message": "Novetats a la v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Novetats de Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Novetats"
-  },
-  "changelogNewFeatures": {
-    "message": "Noves funcionalitats"
-  },
-  "changelogBugFixes": {
-    "message": "Correccions"
-  },
-  "changelogImprovements": {
-    "message": "Millores"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Sol·licitud de ressenya"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Després de suspendre unes quantes pestanyes, Drowzy us preguntarà si us agrada. Un polze amunt ens ajuda molt!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Pàgina de canvis"
-  },
-  "changelogChangelogDesc": {
-    "message": "L'esteu veient! S'obre automàticament en actualitzar. Accessible des de Configuració."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Temporització de restauració de sessió"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Les pestanyes restaurades ja no se suspenen immediatament. Ara reinicien correctament els temporitzadors."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Temps d'espera de verificació de formulari"
-  },
-  "changelogFormCheckDesc": {
-    "message": "La verificació de formularis ara té un temps d'espera de 500ms perquè les pestanyes que no responen no bloquegin la cua."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Duplicats a la llista blanca"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "S'ha corregit un problema de distinció entre majúscules i minúscules on \"Example.com\" i \"example.com\" es podien afegir tots dos. Totes les entrades ara estan normalitzades."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Estadístiques en directe"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "El popup s'actualitza automàticament quan les pestanyes se suspenen o es desperten."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Opcions de restauració de sessió"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Les sessions ara tenen botons separats \"Obre\" i \"Substitueix\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Validació i exportació/importació de la llista blanca"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "L'entrada de la llista blanca ara valida dominis. Podeu exportar i importar via porta-retalls."
-  },
-  "changelogA11yTitle": {
-    "message": "Accessibilitat"
-  },
-  "changelogA11yDesc": {
-    "message": "Els elements de la llista de pestanyes ara són navegables per teclat amb rols ARIA. Les notificacions s'anuncien als lectors de pantalla."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Animacions més suaus"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Les animacions escalonades estan limitades perquè les finestres amb moltes pestanyes no tinguin retards llargs."
   },
   "changelogCtaText": {
     "message": "Drowzy és gratuït i de codi obert. Si us estalvia memòria, deixeu una ressenya o una estrella a GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Estrella a GitHub"
-  },
-  "suspendThis": {
-    "message": "Suspendre pestanya"
-  },
-  "failedToSuspend": {
-    "message": "No es pot suspendre aquesta pestanya"
   },
   "closedDuplicates": {
     "message": "S'han tancat $COUNT$ pestanya(es) duplicada(es)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "aviat"
   },
-  "confirm": {
-    "message": "Segur?"
+  "changelogVersionLabel": {
+    "message": "Versió"
+  },
+  "copiedStats": {
+    "message": "Estadístiques copiades!"
+  },
+  "privacyFooterLink": {
+    "message": "Veure el codi a GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy és de codi obert."
+  },
+  "privacyPermHost": {
+    "message": "Accés a l'amfitrió opcional, sol·licitat sota demanda només quan activeu Protecció de formularis o Marcatge de pestanyes suspeses. Mai no es demana en instal·lar. Revocable en qualsevol moment."
+  },
+  "privacyPermScripting": {
+    "message": "Injectar un petit script per detectar dades de formulari no desades abans de suspendre una pestanya. Només opcional."
+  },
+  "privacyPermSidePanel": {
+    "message": "Mostrar Drowzy al panell lateral de Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Com que res no surt del vostre navegador, no hi ha cap tauler, cap compte i cap manera que sapiguem què heu fet amb Drowzy. Si desinstal·leu Drowzy, Chrome us ofereix l'oportunitat d'enviar comentaris opcionals (motiu de la desinstal·lació, navegador, SO) a través d'una pàgina web separada; aquest enviament és explícit i va a un formulari anònim. Podeu ometre-ho tancant la pestanya."
+  },
+  "privacyYourDataTitle": {
+    "message": "Les vostres dades"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimat utilitzant ~150 MB per pestanya suspesa. L'estalvi real varia segons la pàgina."
+  },
+  "shareStats": {
+    "message": "Compartir"
+  },
+  "statLifetimeRam": {
+    "message": "RAM total estalviada"
+  },
+  "confirmDeleteTitle": {
+    "message": "Feu clic de nou per confirmar l'eliminació"
   }
 }

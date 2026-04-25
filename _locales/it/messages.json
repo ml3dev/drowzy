@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Totale"
   },
-  "statRamSaved": {
-    "message": "RAM risparmiata (stima)"
-  },
   "statMemberSince": {
     "message": "Membro dal"
   },
@@ -343,13 +340,10 @@
     "message": "Capito, andiamo"
   },
   "privacyTitle": {
-    "message": "Drowzy – Informativa sulla privacy"
+    "message": "Informativa sulla privacy"
   },
   "privacyUpdated": {
     "message": "Ultimo aggiornamento: aprile 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Versione breve"
   },
   "privacyShortText": {
     "message": "Drowzy non raccoglie alcun dato. Nessuna analisi, nessun tracciamento, nessun server esterno. Tutto resta nel tuo browser."
@@ -364,19 +358,19 @@
     "message": "Autorizzazioni"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy utilizza queste autorizzazioni di Chrome:"
+    "message": "Drowzy richiede solo le autorizzazioni di cui ha bisogno per svolgere il suo unico compito:"
   },
   "privacyPermTabs": {
-    "message": "tabs – elenco, sospensione e ripristino delle schede del browser"
+    "message": "Elencare, sospendere e ripristinare le schede del browser."
   },
   "privacyPermStorage": {
-    "message": "storage – salvataggio locale delle impostazioni"
+    "message": "Salvare le tue impostazioni e sessioni localmente."
   },
   "privacyPermAlarms": {
-    "message": "alarms – controlli periodici delle schede inattive"
+    "message": "Controlli periodici delle schede inattive (ogni 60 secondi)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – opzioni del menu contestuale"
+    "message": "Opzioni del menu del clic destro per sospendere e per la lista bianca."
   },
   "privacyContactTitle": {
     "message": "Contatti"
@@ -440,82 +434,19 @@
     "message": "Non molto"
   },
   "whatsNew": {
-    "message": "Novità nella v1.3.1"
+    "message": "Novità nella v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Novità di Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Novità"
-  },
-  "changelogNewFeatures": {
-    "message": "Nuove funzionalità"
-  },
-  "changelogBugFixes": {
-    "message": "Correzioni"
-  },
-  "changelogImprovements": {
-    "message": "Miglioramenti"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Richiesta di recensione"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Dopo aver sospeso alcune schede, Drowzy ti chiederà se ti piace. Un pollice in su ci aiuta molto!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Pagina delle modifiche"
-  },
-  "changelogChangelogDesc": {
-    "message": "La stai guardando! Si apre automaticamente con gli aggiornamenti. Accessibile dalle Impostazioni."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Ripristino sessione"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Le schede ripristinate non vengono più sospese subito. I timer di inattività vengono resettati correttamente."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Timeout verifica moduli"
-  },
-  "changelogFormCheckDesc": {
-    "message": "La verifica dei moduli ha un timeout di 500ms così le schede non responsive non bloccano la coda."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Duplicati nella lista bianca"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Corretto il problema di sensibilità alle maiuscole. Tutte le voci sono normalizzate."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Statistiche in tempo reale"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Il popup si aggiorna automaticamente quando le schede vengono sospese o riattivate in background."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Opzioni di ripristino sessione"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Le sessioni hanno pulsanti separati \"Apri\" e \"Sostituisci\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Validazione e esportazione/importazione"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "L'input valida i domini. Puoi esportare e importare la lista bianca tramite appunti."
-  },
-  "changelogA11yTitle": {
-    "message": "Accessibilità"
-  },
-  "changelogA11yDesc": {
-    "message": "Elementi navigabili da tastiera con ruoli ARIA. Le notifiche sono annunciate agli screen reader."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Animazioni più fluide"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Le animazioni sfalsate sono limitate per evitare lunghi ritardi a cascata."
   },
   "changelogCtaText": {
     "message": "Drowzy è gratuito e open source. Se fa risparmiare memoria, lascia una recensione o una stella su GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Stella su GitHub"
-  },
-  "suspendThis": {
-    "message": "Sospendi scheda"
-  },
-  "failedToSuspend": {
-    "message": "Impossibile sospendere questa scheda"
   },
   "closedDuplicates": {
     "message": "Chiuse $COUNT$ schede duplicate",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "presto"
   },
-  "confirm": {
-    "message": "Sicuro?"
+  "changelogVersionLabel": {
+    "message": "Versione"
+  },
+  "copiedStats": {
+    "message": "Statistiche copiate!"
+  },
+  "privacyFooterLink": {
+    "message": "Sfoglia il codice su GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy è open source."
+  },
+  "privacyPermHost": {
+    "message": "Accesso host facoltativo, richiesto su richiesta solo quando attivi la Protezione moduli o la Marcatura schede sospese. Mai richiesto in fase di installazione. Revocabile in qualsiasi momento."
+  },
+  "privacyPermScripting": {
+    "message": "Iniezione di un piccolo script per rilevare i dati del modulo non salvati prima di sospendere una scheda. Solo opt-in."
+  },
+  "privacyPermSidePanel": {
+    "message": "Visualizzazione di Drowzy nel pannello laterale di Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Poiché nulla lascia il tuo browser, non c'è dashboard, nessun account, e nessun modo per noi di vedere cosa hai fatto con Drowzy. Se disinstalli Drowzy, Chrome ti offre la possibilità di inviare feedback facoltativo (motivo della disinstallazione, browser, OS) tramite una pagina web separata; tale invio è esplicito e va a un modulo anonimo. Puoi saltarlo chiudendo la scheda."
+  },
+  "privacyYourDataTitle": {
+    "message": "I tuoi dati"
+  },
+  "ramEstimateTooltip": {
+    "message": "Stimato utilizzando ~150 MB per scheda sospesa. I risparmi effettivi variano in base alla pagina."
+  },
+  "shareStats": {
+    "message": "Condividi"
+  },
+  "statLifetimeRam": {
+    "message": "RAM totale risparmiata"
+  },
+  "confirmDeleteTitle": {
+    "message": "Fai clic di nuovo per confermare l'eliminazione"
   }
 }

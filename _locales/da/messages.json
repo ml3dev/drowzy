@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Alt i alt"
   },
-  "statRamSaved": {
-    "message": "RAM sparet (ca.)"
-  },
   "statMemberSince": {
     "message": "Medlem siden"
   },
@@ -343,13 +340,10 @@
     "message": "Forstået, lad os komme i gang"
   },
   "privacyTitle": {
-    "message": "Drowzy – Privatlivspolitik"
+    "message": "Privatlivspolitik"
   },
   "privacyUpdated": {
     "message": "Sidst opdateret: april 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Den korte version"
   },
   "privacyShortText": {
     "message": "Drowzy indsamler ingen data. Ingen analyse, ingen sporing, ingen eksterne servere. Alt forbliver i din browser."
@@ -364,19 +358,19 @@
     "message": "Tilladelser"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy bruger disse Chrome-tilladelser:"
+    "message": "Drowzy beder kun om de tilladelser, det skal bruge for at udføre sit ene job:"
   },
   "privacyPermTabs": {
-    "message": "tabs – oplistning, suspendering og gendannelse af browserfaneblade"
+    "message": "Listning, suspendering og gendannelse af browserfaner."
   },
   "privacyPermStorage": {
-    "message": "storage – lokal lagring af dine indstillinger"
+    "message": "Lokal lagring af dine indstillinger og sessioner."
   },
   "privacyPermAlarms": {
-    "message": "alarms – periodiske tjek for inaktive faneblade"
+    "message": "Periodiske kontroller af inaktive faner (hvert 60. sekund)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – højreklik-menumuligheder"
+    "message": "Højrekliksmenu-indstillinger til suspendering og hvidliste."
   },
   "privacyContactTitle": {
     "message": "Kontakt"
@@ -440,82 +434,19 @@
     "message": "Ikke rigtig"
   },
   "whatsNew": {
-    "message": "Nyheder i v1.3.1"
+    "message": "Nyheder i v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Nyheder i Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nyheder"
-  },
-  "changelogNewFeatures": {
-    "message": "Nye funktioner"
-  },
-  "changelogBugFixes": {
-    "message": "Fejlrettelser"
-  },
-  "changelogImprovements": {
-    "message": "Forbedringer"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Anmeldelsesanmodning"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Efter at have suspenderet et par faner, vil Drowzy spørge om du kan lide den. Et hurtigt thumbs up hjælper os meget!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Ændringslogside"
-  },
-  "changelogChangelogDesc": {
-    "message": "Du ser på den nu! Åbner automatisk ved opdatering. Tilgængelig fra Indstillinger."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Session gendannelsestiming"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Gendannede faner suspenderes ikke længere automatisk med det samme. De nulstiller nu korrekt deres inaktivitetstimere."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Formular-kontroltimeout"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Formularkontrol har nu en 500ms timeout, så ikke-reagerende faner ikke kan blokere køen."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Hvidliste-dubletter"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Rettede problem med store/små bogstaver, hvor \"Example.com\" og \"example.com\" begge kunne tilføjes. Alle poster normaliseres nu."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Live statistikker"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Popup opdateres nu automatisk, når faner suspenderes eller vækkes."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Session gendannelsesmuligheder"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sessioner har nu separate \"Åbn\" og \"Erstat\" knapper."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Hvidliste-validering og eksport/import"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Hvidliste-input validerer nu domæner. Du kan eksportere og importere via udklipsholder."
-  },
-  "changelogA11yTitle": {
-    "message": "Tilgængelighed"
-  },
-  "changelogA11yDesc": {
-    "message": "Faneliste-elementer kan nu navigeres med tastatur med ARIA-roller. Notifikationer annonceres til skærmlæsere."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Glattere animationer"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Forskudte animationer er nu begrænset, så vinduer med mange faner ikke har en lang kaskade-forsinkelse."
   },
   "changelogCtaText": {
     "message": "Drowzy er gratis og open source. Hvis den sparer dig hukommelse, overvej at give en anmeldelse eller stjerne på GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Stjerne på GitHub"
-  },
-  "suspendThis": {
-    "message": "Suspendér fane"
-  },
-  "failedToSuspend": {
-    "message": "Kan ikke suspendere denne fane"
   },
   "closedDuplicates": {
     "message": "Lukkede $COUNT$ duplikerede fane(r)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "snart"
   },
-  "confirm": {
-    "message": "Sikker?"
+  "changelogVersionLabel": {
+    "message": "Version"
+  },
+  "copiedStats": {
+    "message": "Statistik kopieret!"
+  },
+  "privacyFooterLink": {
+    "message": "Se koden på GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy er open source."
+  },
+  "privacyPermHost": {
+    "message": "Valgfri værtsadgang, anmodes kun efter behov, når du aktiverer Formularbeskyttelse eller Markering af suspenderede faner. Anmodes aldrig ved installation. Kan altid tilbagekaldes."
+  },
+  "privacyPermScripting": {
+    "message": "Indsprøjtning af et lille script for at registrere ugemte formulardata, før en fane suspenderes. Kun tilvalg."
+  },
+  "privacyPermSidePanel": {
+    "message": "Visning af Drowzy i Chromes sidepanel."
+  },
+  "privacyYourDataText": {
+    "message": "Da intet forlader din browser, er der intet dashboard, ingen konto og ingen måde for os at se, hvad du har gjort med Drowzy. Hvis du afinstallerer Drowzy, tilbyder Chrome dig muligheden for at sende valgfri feedback (årsag til afinstallation, browser, OS) via en separat webside; denne indsendelse er eksplicit og går til en anonym formular. Du kan springe det over ved at lukke fanen."
+  },
+  "privacyYourDataTitle": {
+    "message": "Dine data"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimeret med ~150 MB per suspenderet fane. Faktiske besparelser varierer efter side."
+  },
+  "shareStats": {
+    "message": "Del"
+  },
+  "statLifetimeRam": {
+    "message": "Samlet RAM-besparelse"
+  },
+  "confirmDeleteTitle": {
+    "message": "Klik igen for at bekræfte sletning"
   }
 }

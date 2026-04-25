@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "മൊത്തം"
   },
-  "statRamSaved": {
-    "message": "ലാഭിച്ച RAM (ഏകദേശം)"
-  },
   "statMemberSince": {
     "message": "അംഗത്വം മുതൽ"
   },
@@ -343,13 +340,10 @@
     "message": "മനസ്സിലായി, തുടങ്ങാം"
   },
   "privacyTitle": {
-    "message": "Drowzy – സ്വകാര്യതാ നയം"
+    "message": "സ്വകാര്യതാ നയം"
   },
   "privacyUpdated": {
     "message": "അവസാനം അപ്‌ഡേറ്റ് ചെയ്തത്: ഏപ്രിൽ 2026"
-  },
-  "privacyShortTitle": {
-    "message": "ചുരുക്ക പതിപ്പ്"
   },
   "privacyShortText": {
     "message": "Drowzy ഒരു ഡാറ്റയും ശേഖരിക്കുന്നില്ല. അനലിറ്റിക്‌സ് ഇല്ല, ട്രാക്കിംഗ് ഇല്ല, ബാഹ്യ സെർവറുകൾ ഇല്ല. എല്ലാം നിങ്ങളുടെ ബ്രൗസറിൽ തന്നെ തുടരും."
@@ -364,19 +358,19 @@
     "message": "അനുമതികൾ"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy ഈ Chrome അനുമതികൾ ഉപയോഗിക്കുന്നു:"
+    "message": "Drowzy അതിന്റെ ഒരു ജോലി ചെയ്യാൻ ആവശ്യമായ അനുമതികൾ മാത്രം അഭ്യർത്ഥിക്കുന്നു:"
   },
   "privacyPermTabs": {
-    "message": "tabs – ബ്രൗസർ ടാബുകൾ ലിസ്റ്റ് ചെയ്യൽ, സസ്‌പെൻഡ് ചെയ്യൽ, പുനഃസ്ഥാപിക്കൽ"
+    "message": "ബ്രൗസർ ടാബുകൾ ലിസ്റ്റുചെയ്യൽ, സസ്പെൻഡ് ചെയ്യൽ, പുനഃസ്ഥാപിക്കൽ."
   },
   "privacyPermStorage": {
-    "message": "storage – നിങ്ങളുടെ ക്രമീകരണങ്ങൾ ലോക്കലായി സേവ് ചെയ്യൽ"
+    "message": "നിങ്ങളുടെ ക്രമീകരണങ്ങളും സെഷനുകളും പ്രാദേശികമായി സംരക്ഷിക്കൽ."
   },
   "privacyPermAlarms": {
-    "message": "alarms – നിഷ്‌ക്രിയ ടാബുകൾക്കായി ആനുകാലിക പരിശോധനകൾ"
+    "message": "നിഷ്ക്രിയ ടാബുകൾക്കായുള്ള ആനുകാലിക പരിശോധനകൾ (ഓരോ 60 സെക്കൻഡിലും)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – റൈറ്റ്-ക്ലിക്ക് മെനു ഓപ്ഷനുകൾ"
+    "message": "സസ്പെൻഡ്, വൈറ്റ്‌ലിസ്റ്റ് എന്നിവയ്‌ക്കായുള്ള റൈറ്റ്-ക്ലിക്ക് മെനു ഓപ്ഷനുകൾ."
   },
   "privacyContactTitle": {
     "message": "ബന്ധപ്പെടുക"
@@ -440,82 +434,19 @@
     "message": "അത്ര ഇല്ല"
   },
   "whatsNew": {
-    "message": "v1.3.1-ൽ പുതിയത്"
+    "message": "v$VERSION$-ൽ പുതിയത്",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzy-ൽ പുതിയത്"
   },
   "changelogWhatsNew": {
     "message": "പുതിയത്"
-  },
-  "changelogNewFeatures": {
-    "message": "പുതിയ ഫീച്ചറുകൾ"
-  },
-  "changelogBugFixes": {
-    "message": "ബഗ് പരിഹാരങ്ങൾ"
-  },
-  "changelogImprovements": {
-    "message": "മെച്ചപ്പെടുത്തലുകൾ"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "അവലോകന അഭ്യർത്ഥന"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "കുറച്ച് ടാബുകൾ സസ്പെൻഡ് ചെയ്ത ശേഷം, Drowzy ഇഷ്ടമാകുന്നുണ്ടോ എന്ന് ചോദിക്കും. ഒരു ദ്രുത തംബ്സ് അപ് ഞങ്ങളെ വളരെ സഹായിക്കും!"
-  },
-  "changelogChangelogTitle": {
-    "message": "മാറ്റ ലോഗ് പേജ്"
-  },
-  "changelogChangelogDesc": {
-    "message": "നിങ്ങൾ ഇത് കാണുകയാണ്! അപ്‌ഡേറ്റിൽ യാന്ത്രികമായി തുറക്കും. ക്രമീകരണങ്ങളിൽ നിന്ന് എപ്പോൾ വേണമെങ്കിലും ആക്‌സസ് ചെയ്യാം."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "സെഷൻ പുനഃസ്ഥാപന സമയം"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "പുനഃസ്ഥാപിച്ച ടാബുകൾ ഇനി ഉടനടി ഓട്ടോ-സസ്‌പെൻഡ് ചെയ്യില്ല. അവ ഇപ്പോൾ അവയുടെ നിഷ്‌ക്രിയ ടൈമറുകൾ ശരിയായി റീസെറ്റ് ചെയ്യുന്നു."
-  },
-  "changelogFormCheckTitle": {
-    "message": "ഫോം ചെക്ക് ടൈമൗട്ട്"
-  },
-  "changelogFormCheckDesc": {
-    "message": "ഫോം ഡാറ്റ പരിശോധനയ്ക്ക് ഇപ്പോൾ 500ms ടൈമൗട്ട് ഉണ്ട്, അതിനാൽ പ്രതികരിക്കാത്ത ടാബുകൾ ക്യൂ തടയില്ല."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "വൈറ്റ്‌ലിസ്റ്റ് ഡ്യൂപ്ലിക്കേറ്റുകൾ"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "\"Example.com\"-ഉം \"example.com\"-ഉം രണ്ടും ചേർക്കാൻ കഴിയുന്ന കേസ് സെൻസിറ്റിവിറ്റി പ്രശ്നം പരിഹരിച്ചു. എല്ലാ എൻട്രികളും ഇപ്പോൾ നോർമലൈസ് ചെയ്തിരിക്കുന്നു."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "തത്സമയ സ്ഥിതിവിവരക്കണക്കുകൾ"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "ടാബുകൾ സസ്പെൻഡ് ചെയ്യുമ്പോഴോ ഉണർത്തുമ്പോഴോ പോപ്പ്-അപ്പ് സ്വയം പുതുക്കുന്നു."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "സെഷൻ പുനഃസ്ഥാപന ഓപ്ഷനുകൾ"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "സെഷനുകൾക്ക് ഇപ്പോൾ \"തുറക്കുക\" എന്നും \"മാറ്റിസ്ഥാപിക്കുക\" എന്നും പ്രത്യേക ബട്ടണുകളുണ്ട്."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "വൈറ്റ്‌ലിസ്റ്റ് സാധൂകരണവും എക്സ്പോർട്ട്/ഇംപോർട്ടും"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "വൈറ്റ്‌ലിസ്റ്റ് ഇൻപുട്ട് ഇപ്പോൾ ഡൊമെയ്‌നുകൾ സാധൂകരിക്കുന്നു. ക്ലിപ്പ്ബോർഡ് വഴി എക്സ്‌പോർട്ടും ഇംപോർട്ടും ചെയ്യാം."
-  },
-  "changelogA11yTitle": {
-    "message": "പ്രാപ്യത"
-  },
-  "changelogA11yDesc": {
-    "message": "ടാബ് ലിസ്റ്റ് ഇനങ്ങൾ ഇപ്പോൾ ARIA റോളുകളോടെ കീബോർഡ്-നാവിഗേറ്റ് ചെയ്യാവുന്നതാണ്. ടോസ്റ്റ് അറിയിപ്പുകൾ സ്ക്രീൻ റീഡറുകൾക്ക് അറിയിക്കുന്നു."
-  },
-  "changelogAnimationsTitle": {
-    "message": "സുഗമമായ ആനിമേഷനുകൾ"
-  },
-  "changelogAnimationsDesc": {
-    "message": "ടാബ് ലിസ്റ്റ് സ്റ്റാഗർ ആനിമേഷനുകൾ ഇപ്പോൾ പരിമിതപ്പെടുത്തിയിരിക്കുന്നു, അതിനാൽ നിരവധി ടാബുകളുള്ള വിൻഡോകളിൽ ദീർഘ കാലതാമസം ഉണ്ടാകില്ല."
   },
   "changelogCtaText": {
     "message": "Drowzy സൗജന്യവും ഓപ്പൺ സോഴ്‌സും ആണ്. മെമ്മറി ലാഭിക്കുന്നുണ്ടെങ്കിൽ, അവലോകനം നൽകുക അല്ലെങ്കിൽ GitHub-ൽ നക്ഷത്രം നൽകുക."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "GitHub-ൽ നക്ഷത്രം"
-  },
-  "suspendThis": {
-    "message": "ടാബ് സസ്‌പെന്ഡ് ചെയ്യുക"
-  },
-  "failedToSuspend": {
-    "message": "ഈ ടാബ് സസ്‌പെന്ഡ് ചെയ്യാന്‍ കഴിയില്ല"
   },
   "closedDuplicates": {
     "message": "$COUNT$ ഡ്യൂപ്ലിക്കേറ്റ് ടാബ്(കള്‍) അടച്ചു",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "ഉടൻ"
   },
-  "confirm": {
-    "message": "ഉറപ്പാണോ?"
+  "changelogVersionLabel": {
+    "message": "പതിപ്പ്"
+  },
+  "copiedStats": {
+    "message": "സ്ഥിതിവിവരക്കണക്കുകൾ പകർത്തി!"
+  },
+  "privacyFooterLink": {
+    "message": "GitHub-ൽ കോഡ് ബ്രൗസ് ചെയ്യുക"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy ഓപ്പൺ സോഴ്‌സാണ്."
+  },
+  "privacyPermHost": {
+    "message": "ഓപ്ഷണൽ ഹോസ്റ്റ് ആക്സസ്, ഫോം പരിരക്ഷണം അല്ലെങ്കിൽ സസ്പെൻഡ് ടാബ് അടയാളപ്പെടുത്തൽ പ്രവർത്തനക്ഷമമാക്കുമ്പോൾ മാത്രമേ ഡിമാൻഡിൽ അഭ്യർത്ഥിക്കുകയുള്ളൂ. ഇൻസ്റ്റാളിൽ ഒരിക്കലും അഭ്യർത്ഥിക്കില്ല. എപ്പോൾ വേണമെങ്കിലും റദ്ദാക്കാം."
+  },
+  "privacyPermScripting": {
+    "message": "ഒരു ടാബ് സസ്പെൻഡ് ചെയ്യുന്നതിന് മുമ്പ് സംരക്ഷിക്കാത്ത ഫോം ഡാറ്റ കണ്ടെത്താൻ ഒരു ചെറിയ സ്ക്രിപ്റ്റ് കുത്തിവയ്ക്കുന്നു. ഓപ്റ്റ്-ഇൻ മാത്രം."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome-ന്റെ സൈഡ് പാനലിൽ Drowzy പ്രദർശിപ്പിക്കുന്നു."
+  },
+  "privacyYourDataText": {
+    "message": "ഒന്നും നിങ്ങളുടെ ബ്രൗസർ വിടാത്തതിനാൽ, ഡാഷ്ബോർഡില്ല, അക്കൗണ്ടില്ല, Drowzy ഉപയോഗിച്ച് നിങ്ങൾ എന്താണ് ചെയ്തതെന്ന് ഞങ്ങൾക്ക് കാണാൻ ഒരു മാർഗവുമില്ല. നിങ്ങൾ Drowzy അൺഇൻസ്റ്റാൾ ചെയ്താൽ, ഒരു പ്രത്യേക വെബ് പേജിലൂടെ ഓപ്ഷണൽ ഫീഡ്ബാക്ക് (അൺഇൻസ്റ്റാൾ ചെയ്യാനുള്ള കാരണം, ബ്രൗസർ, OS) അയയ്ക്കാനുള്ള അവസരം Chrome നിങ്ങൾക്ക് നൽകുന്നു; ആ സമർപ്പണം വ്യക്തമാണ് കൂടാതെ ഒരു അജ്ഞാത ഫോമിലേക്ക് പോകുന്നു. ടാബ് അടച്ച് നിങ്ങൾക്ക് ഇത് ഒഴിവാക്കാം."
+  },
+  "privacyYourDataTitle": {
+    "message": "നിങ്ങളുടെ ഡാറ്റ"
+  },
+  "ramEstimateTooltip": {
+    "message": "സസ്പെൻഡ് ചെയ്ത ടാബിന് ~150 MB ഉപയോഗിച്ച് കണക്കാക്കിയത്. യഥാർത്ഥ സമ്പാദ്യം പേജ് അനുസരിച്ച് വ്യത്യാസപ്പെടും."
+  },
+  "shareStats": {
+    "message": "പങ്കിടുക"
+  },
+  "statLifetimeRam": {
+    "message": "മൊത്തം RAM സമ്പാദ്യം"
+  },
+  "confirmDeleteTitle": {
+    "message": "ഇല്ലാതാക്കൽ സ്ഥിരീകരിക്കാൻ വീണ്ടും ക്ലിക്കുചെയ്യുക"
   }
 }

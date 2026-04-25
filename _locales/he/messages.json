@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "מאז ומתמיד"
   },
-  "statRamSaved": {
-    "message": "RAM שנחסך (הערכה)"
-  },
   "statMemberSince": {
     "message": "חבר מאז"
   },
@@ -343,13 +340,10 @@
     "message": "הבנתי, בוא נתחיל"
   },
   "privacyTitle": {
-    "message": "Drowzy – מדיניות פרטיות"
+    "message": "מדיניות פרטיות"
   },
   "privacyUpdated": {
     "message": "עדכון אחרון: אפריל 2026"
-  },
-  "privacyShortTitle": {
-    "message": "הגרסה הקצרה"
   },
   "privacyShortText": {
     "message": "Drowzy לא אוסף שום נתונים. ללא ניתוח, ללא מעקב, ללא שרתים חיצוניים. הכל נשאר בדפדפן שלך."
@@ -364,19 +358,19 @@
     "message": "הרשאות"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy משתמש בהרשאות Chrome הבאות:"
+    "message": "Drowzy מבקש רק את ההרשאות שהוא צריך כדי לבצע את העבודה היחידה שלו:"
   },
   "privacyPermTabs": {
-    "message": "tabs – הצגה, השעיה ושחזור של כרטיסיות הדפדפן"
+    "message": "רישום, השעיה ושחזור לשוניות דפדפן."
   },
   "privacyPermStorage": {
-    "message": "storage – שמירת ההגדרות שלך באופן מקומי"
+    "message": "שמירת ההגדרות והפעלות שלך באופן מקומי."
   },
   "privacyPermAlarms": {
-    "message": "alarms – בדיקות תקופתיות של כרטיסיות לא פעילות"
+    "message": "בדיקות תקופתיות של לשוניות לא פעילות (כל 60 שניות)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – אפשרויות בתפריט לחיצה ימנית"
+    "message": "אפשרויות תפריט קליק ימני להשעיה ולרשימה הלבנה."
   },
   "privacyContactTitle": {
     "message": "יצירת קשר"
@@ -440,82 +434,19 @@
     "message": "לא ממש"
   },
   "whatsNew": {
-    "message": "מה חדש ב-v1.3.1"
+    "message": "מה חדש ב-v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "מה חדש ב-Drowzy"
   },
   "changelogWhatsNew": {
     "message": "מה חדש"
-  },
-  "changelogNewFeatures": {
-    "message": "תכונות חדשות"
-  },
-  "changelogBugFixes": {
-    "message": "תיקוני באגים"
-  },
-  "changelogImprovements": {
-    "message": "שיפורים"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "בקשת ביקורת"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "אחרי שתשהו כמה כרטיסיות, Drowzy ישאל אם אתם נהנים. לייק מהיר עוזר לנו המון!"
-  },
-  "changelogChangelogTitle": {
-    "message": "דף שינויים"
-  },
-  "changelogChangelogDesc": {
-    "message": "אתם מסתכלים עליו! נפתח אוטומטית בעדכון. נגיש מההגדרות."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "תזמון שחזור הפעלה"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "כרטיסיות שחוזרות לא מושהות יותר מיד. הן מאפסות נכון את טיימרי הסרק."
-  },
-  "changelogFormCheckTitle": {
-    "message": "זמן קצוב לבדיקת טופס"
-  },
-  "changelogFormCheckDesc": {
-    "message": "בדיקת נתוני טופס כוללת עכשיו timeout של 500ms כדי שכרטיסיות שלא מגיבות לא יחסמו את התור."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "כפילויות ברשימת ההיתרים"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "תוקנה בעיית רגישות לאותיות גדולות וקטנות שבה ניתן היה להוסיף גם \"Example.com\" וגם \"example.com\". כל הרשומות מנורמלות כעת."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "סטטיסטיקות חיות"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "החלון הקופץ מתעדכן אוטומטית כשכרטיסיות מושהות או מתעוררות."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "אפשרויות שחזור הפעלה"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "להפעלות יש כעת כפתורי \"פתח\" ו\"החלף\" נפרדים."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "אימות ויצוא/ייבוא של רשימת היתרים"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "קלט רשימת ההיתרים מאמת כעת דומיינים. ניתן לייצא ולייבא דרך הלוח."
-  },
-  "changelogA11yTitle": {
-    "message": "נגישות"
-  },
-  "changelogA11yDesc": {
-    "message": "פריטי רשימת הכרטיסיות ניתנים כעת לניווט במקלדת עם תפקידי ARIA. התראות מוכרזות לקוראי מסך."
-  },
-  "changelogAnimationsTitle": {
-    "message": "אנימציות חלקות יותר"
-  },
-  "changelogAnimationsDesc": {
-    "message": "אנימציות מדורגות מוגבלות כעת כך שחלונות עם כרטיסיות רבות לא יחוו עיכוב ארוך."
   },
   "changelogCtaText": {
     "message": "Drowzy חינמי ובקוד פתוח. אם הוא חוסך לכם זיכרון, השאירו ביקורת או כוכב ב-GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "כוכב ב-GitHub"
-  },
-  "suspendThis": {
-    "message": "השהה כרטיסייה"
-  },
-  "failedToSuspend": {
-    "message": "לא ניתן להשהות כרטיסייה זו"
   },
   "closedDuplicates": {
     "message": "נסגרו $COUNT$ כרטיסיות כפולות",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "בקרוב"
   },
-  "confirm": {
-    "message": "?בטוח"
+  "changelogVersionLabel": {
+    "message": "גרסה"
+  },
+  "copiedStats": {
+    "message": "הסטטיסטיקות הועתקו!"
+  },
+  "privacyFooterLink": {
+    "message": "עיין בקוד ב-GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy הוא קוד פתוח."
+  },
+  "privacyPermHost": {
+    "message": "גישת מארח אופציונלית, מבוקשת לפי דרישה רק כאשר אתה מפעיל הגנת טפסים או סימון לשוניות מושעות. לעולם לא מבוקשת בהתקנה. ניתן לבטל בכל עת."
+  },
+  "privacyPermScripting": {
+    "message": "הזרקת סקריפט קטן לזיהוי נתוני טופס לא שמורים לפני השעיית לשונית. הצטרפות בלבד."
+  },
+  "privacyPermSidePanel": {
+    "message": "הצגת Drowzy בלוח הצד של Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "מכיוון ששום דבר לא יוצא מהדפדפן שלך, אין לוח מחוונים, אין חשבון, ואין דרך לנו לראות מה עשית עם Drowzy. אם תסיר את ההתקנה של Drowzy, Chrome מציע לך הזדמנות לשלוח משוב אופציונלי (סיבה להסרה, דפדפן, מערכת הפעלה) דרך דף אינטרנט נפרד; הגשה זו מפורשת ועוברת לטופס אנונימי. אתה יכול לדלג על זה על ידי סגירת הלשונית."
+  },
+  "privacyYourDataTitle": {
+    "message": "הנתונים שלך"
+  },
+  "ramEstimateTooltip": {
+    "message": "מוערך באמצעות ~150 MB ללשונית מושעית. החיסכון בפועל משתנה לפי דף."
+  },
+  "shareStats": {
+    "message": "שתף"
+  },
+  "statLifetimeRam": {
+    "message": "סך RAM שנחסך"
+  },
+  "confirmDeleteTitle": {
+    "message": "לחץ שוב כדי לאשר מחיקה"
   }
 }

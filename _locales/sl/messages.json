@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Skupaj"
   },
-  "statRamSaved": {
-    "message": "Prihranjen RAM (ocena)"
-  },
   "statMemberSince": {
     "message": "Član od"
   },
@@ -343,13 +340,10 @@
     "message": "Razumem, gremo"
   },
   "privacyTitle": {
-    "message": "Drowzy – Pravilnik o zasebnosti"
+    "message": "Pravilnik o zasebnosti"
   },
   "privacyUpdated": {
     "message": "Zadnja posodobitev: april 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Na kratko"
   },
   "privacyShortText": {
     "message": "Drowzy ne zbira nobenih podatkov. Brez analitike, brez sledenja, brez zunanjih strežnikov. Vse ostane v vašem brskalniku."
@@ -364,19 +358,19 @@
     "message": "Dovoljenja"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy uporablja ta dovoljenja za Chrome:"
+    "message": "Drowzy zahteva samo dovoljenja, ki jih potrebuje za svoje edino opravilo:"
   },
   "privacyPermTabs": {
-    "message": "tabs – prikaz, zamrznitev in obnovitev zavihkov brskalnika"
+    "message": "Naštevanje, zaustavljanje in obnavljanje zavihkov brskalnika."
   },
   "privacyPermStorage": {
-    "message": "storage – lokalno shranjevanje nastavitev"
+    "message": "Lokalno shranjevanje vaših nastavitev in sej."
   },
   "privacyPermAlarms": {
-    "message": "alarms – občasno preverjanje neaktivnih zavihkov"
+    "message": "Občasna preverjanja neaktivnih zavihkov (vsakih 60 sekund)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – možnosti v kontekstnem meniju"
+    "message": "Možnosti menija desnega klika za zaustavitev in beli seznam."
   },
   "privacyContactTitle": {
     "message": "Kontakt"
@@ -440,82 +434,19 @@
     "message": "Ne ravno"
   },
   "whatsNew": {
-    "message": "Kaj je novega v v1.3.1"
+    "message": "Kaj je novega v v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Kaj je novega v Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Kaj je novega"
-  },
-  "changelogNewFeatures": {
-    "message": "Nove funkcije"
-  },
-  "changelogBugFixes": {
-    "message": "Popravki napak"
-  },
-  "changelogImprovements": {
-    "message": "Izboljšave"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Prošnja za oceno"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Po zaustavitvi nekaj zavihkov vas bo Drowzy vprašal, ali vam je všeč. Hiter palec gor nam zelo pomaga!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Stran sprememb"
-  },
-  "changelogChangelogDesc": {
-    "message": "Ravno jo gledate! Odpre se samodejno ob posodobitvi. Dostopna iz Nastavitev."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Čas obnovitve seje"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Obnovljeni zavihki se ne zaustavijo več takoj samodejno. Zdaj pravilno ponastavijo svoje časovnike nedejavnosti."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Časovna omejitev preverjanja obrazcev"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Preverjanje obrazcev ima zdaj 500ms časovno omejitev, da neodzivni zavihki ne morejo blokirati čakalne vrste."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Dvojniki belega seznama"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Odpravljena težava z občutljivostjo na velike in male črke, kjer sta se lahko dodala \"Example.com\" in \"example.com\". Vsi vnosi so zdaj normalizirani."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Statistike v živo"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Pojavno okno se zdaj samodejno osvežuje ob zaustavitvi ali prebuditvi zavihkov."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Možnosti obnovitve seje"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Seje imajo zdaj ločena gumba \"Odpri\" in \"Zamenjaj\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Preverjanje in izvoz/uvoz belega seznama"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Vnos belega seznama zdaj preverja domene. Izvažate in uvažate lahko prek odložišča."
-  },
-  "changelogA11yTitle": {
-    "message": "Dostopnost"
-  },
-  "changelogA11yDesc": {
-    "message": "Elementi seznama zavihkov so zdaj navigabilni s tipkovnico z vlogami ARIA. Obvestila se napovedujejo bralnikom zaslona."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Gladkejše animacije"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Stopničaste animacije seznama zavihkov so zdaj omejene, da okna z veliko zavihki nimajo dolgih zakasnitev."
   },
   "changelogCtaText": {
     "message": "Drowzy je brezplačen in odprtokoden. Če vam prihrani pomnilnik, pustite oceno ali zvezdico na GitHubu."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Zvezdica na GitHubu"
-  },
-  "suspendThis": {
-    "message": "Ustavi zavihek"
-  },
-  "failedToSuspend": {
-    "message": "Tega zavihka ni mogoče ustaviti"
   },
   "closedDuplicates": {
     "message": "Zaprtih $COUNT$ podvojenih zavihkov",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "kmalu"
   },
-  "confirm": {
-    "message": "Ste prepričani?"
+  "changelogVersionLabel": {
+    "message": "Različica"
+  },
+  "copiedStats": {
+    "message": "Statistika kopirana!"
+  },
+  "privacyFooterLink": {
+    "message": "Prebrskajte kodo na GitHubu"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy je odprtokoden."
+  },
+  "privacyPermHost": {
+    "message": "Izbirni dostop do gostitelja, zahtevan na zahtevo le, ko omogočite Zaščito obrazcev ali Označevanje zaustavljenih zavihkov. Nikoli ni zahtevan pri namestitvi. Mogoče preklicati kadarkoli."
+  },
+  "privacyPermScripting": {
+    "message": "Vbrizganje majhnega skripta za odkrivanje neshranjenih podatkov obrazca pred zaustavitvijo zavihka. Samo izbirno."
+  },
+  "privacyPermSidePanel": {
+    "message": "Prikaz Drowzy v stranski plošči Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Ker nič ne zapusti vašega brskalnika, ni nadzorne plošče, ni računa, in ni načina, da bi videli, kaj ste počeli z Drowzy. Če Drowzy odstranite, Chrome vam ponudi možnost, da pošljete izbirne povratne informacije (razlog za odstranitev, brskalnik, OS) prek ločene spletne strani; ta predložitev je izrecna in gre v anonimni obrazec. Lahko jo preskočite z zaprtjem zavihka."
+  },
+  "privacyYourDataTitle": {
+    "message": "Vaši podatki"
+  },
+  "ramEstimateTooltip": {
+    "message": "Ocenjeno z uporabo ~150 MB na zaustavljen zavihek. Dejanski prihranki se razlikujejo glede na stran."
+  },
+  "shareStats": {
+    "message": "Deli"
+  },
+  "statLifetimeRam": {
+    "message": "Skupaj prihranjenega RAM-a"
+  },
+  "confirmDeleteTitle": {
+    "message": "Znova kliknite za potrditev brisanja"
   }
 }

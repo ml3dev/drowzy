@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "از ابتدا"
   },
-  "statRamSaved": {
-    "message": "RAM ذخیره‌شده (تخمینی)"
-  },
   "statMemberSince": {
     "message": "عضو از"
   },
@@ -343,13 +340,10 @@
     "message": "متوجه شدم، بزن بریم"
   },
   "privacyTitle": {
-    "message": "Drowzy – سیاست حفظ حریم خصوصی"
+    "message": "سیاست حفظ حریم خصوصی"
   },
   "privacyUpdated": {
     "message": "آخرین به‌روزرسانی: آوریل ۲۰۲۶"
-  },
-  "privacyShortTitle": {
-    "message": "نسخه کوتاه"
   },
   "privacyShortText": {
     "message": "Drowzy هیچ داده‌ای جمع‌آوری نمی‌کند. بدون تحلیل، بدون ردیابی، بدون سرورهای خارجی. همه چیز در مرورگر شما باقی می‌ماند."
@@ -364,19 +358,19 @@
     "message": "مجوزها"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy از این مجوزهای Chrome استفاده می‌کند:"
+    "message": "Drowzy فقط مجوزهایی را که برای انجام یک کار خود نیاز دارد درخواست می‌کند:"
   },
   "privacyPermTabs": {
-    "message": "tabs – فهرست‌بندی، تعلیق و بازیابی زبانه‌های مرورگر"
+    "message": "فهرست‌بندی، تعلیق و بازگردانی برگه‌های مرورگر."
   },
   "privacyPermStorage": {
-    "message": "storage – ذخیره محلی تنظیمات شما"
+    "message": "ذخیره‌سازی محلی تنظیمات و جلسات شما."
   },
   "privacyPermAlarms": {
-    "message": "alarms – بررسی‌های دوره‌ای زبانه‌های غیرفعال"
+    "message": "بررسی‌های دوره‌ای برگه‌های غیرفعال (هر 60 ثانیه)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – گزینه‌های منوی راست‌کلیک"
+    "message": "گزینه‌های منوی کلیک راست برای تعلیق و فهرست سفید."
   },
   "privacyContactTitle": {
     "message": "تماس"
@@ -440,82 +434,19 @@
     "message": "نه واقعاً"
   },
   "whatsNew": {
-    "message": "تازه‌ها در v1.3.1"
+    "message": "تازه‌ها در v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "تازه‌های Drowzy"
   },
   "changelogWhatsNew": {
     "message": "تازه‌ها"
-  },
-  "changelogNewFeatures": {
-    "message": "ویژگی‌های جدید"
-  },
-  "changelogBugFixes": {
-    "message": "رفع اشکال"
-  },
-  "changelogImprovements": {
-    "message": "بهبودها"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "درخواست بررسی"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "پس از تعلیق چند تب، Drowzy از شما می‌پرسد آیا لذت می‌برید. یک لایک سریع خیلی به ما کمک می‌کند!"
-  },
-  "changelogChangelogTitle": {
-    "message": "صفحه تغییرات"
-  },
-  "changelogChangelogDesc": {
-    "message": "الان دارید آن را می‌بینید! هنگام به‌روزرسانی خودکار باز می‌شود. از تنظیمات قابل دسترسی است."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "زمان‌بندی بازیابی جلسه"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "تب‌های بازیابی شده دیگر فوراً به حالت تعلیق درنمی‌آیند. اکنون تایمرهای بیکاری خود را به درستی بازنشانی می‌کنند."
-  },
-  "changelogFormCheckTitle": {
-    "message": "مهلت بررسی فرم"
-  },
-  "changelogFormCheckDesc": {
-    "message": "بررسی فرم اکنون مهلت 500 میلی‌ثانیه‌ای دارد تا تب‌های بدون پاسخ نتوانند صف را مسدود کنند."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "تکراری‌های لیست سفید"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "مشکل حساسیت به حروف بزرگ و کوچک رفع شد که در آن \"Example.com\" و \"example.com\" هر دو قابل افزودن بودند. همه ورودی‌ها اکنون نرمال‌سازی شده‌اند."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "آمار زنده"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "پاپ‌آپ اکنون هنگام تعلیق یا بیدار شدن تب‌ها به‌روزرسانی خودکار می‌شود."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "گزینه‌های بازیابی جلسه"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "جلسات اکنون دکمه‌های جداگانه \"باز کردن\" و \"جایگزینی\" دارند."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "اعتبارسنجی و صادرات/واردات لیست سفید"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "ورودی لیست سفید اکنون دامنه‌ها را اعتبارسنجی می‌کند. می‌توانید از طریق کلیپ‌بورد صادر و وارد کنید."
-  },
-  "changelogA11yTitle": {
-    "message": "دسترسی‌پذیری"
-  },
-  "changelogA11yDesc": {
-    "message": "آیتم‌های لیست تب‌ها اکنون با نقش‌های ARIA قابل پیمایش با صفحه‌کلید هستند. اعلان‌ها به صفحه‌خوان‌ها اعلام می‌شوند."
-  },
-  "changelogAnimationsTitle": {
-    "message": "انیمیشن‌های روان‌تر"
-  },
-  "changelogAnimationsDesc": {
-    "message": "انیمیشن‌های پلکانی لیست تب‌ها اکنون محدود شده‌اند تا پنجره‌هایی با تعداد زیاد تب تأخیر طولانی نداشته باشند."
   },
   "changelogCtaText": {
     "message": "Drowzy رایگان و متن‌باز است. اگر حافظه شما را صرفه‌جویی می‌کند، یک بررسی بگذارید یا در GitHub ستاره بدهید."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "ستاره در GitHub"
-  },
-  "suspendThis": {
-    "message": "تعلیق زبانه"
-  },
-  "failedToSuspend": {
-    "message": "امکان تعلیق این زبانه وجود ندارد"
   },
   "closedDuplicates": {
     "message": "$COUNT$ زبانه تکراری بسته شد",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "به‌زودی"
   },
-  "confirm": {
-    "message": "مطمئنید؟"
+  "changelogVersionLabel": {
+    "message": "نسخه"
+  },
+  "copiedStats": {
+    "message": "آمار کپی شد!"
+  },
+  "privacyFooterLink": {
+    "message": "مشاهده کد در GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy منبع‌باز است."
+  },
+  "privacyPermHost": {
+    "message": "دسترسی میزبان اختیاری، فقط هنگام فعال کردن محافظت از فرم یا علامت‌گذاری برگه‌های معلق درخواست می‌شود. هرگز در نصب درخواست نمی‌شود. در هر زمان قابل لغو است."
+  },
+  "privacyPermScripting": {
+    "message": "تزریق یک اسکریپت کوچک برای شناسایی داده‌های فرم ذخیره‌نشده قبل از تعلیق برگه. فقط اختیاری."
+  },
+  "privacyPermSidePanel": {
+    "message": "نمایش Drowzy در پنل کناری Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "از آنجا که هیچ چیز از مرورگر شما خارج نمی‌شود، هیچ داشبورد، هیچ حساب کاربری و هیچ راهی برای ما وجود ندارد که ببینیم با Drowzy چه کرده‌اید. اگر Drowzy را حذف کنید، Chrome به شما این امکان را می‌دهد که بازخورد اختیاری (دلیل حذف، مرورگر، سیستم‌عامل) را از طریق یک صفحه وب جداگانه ارسال کنید؛ این ارسال صریح است و به فرم ناشناس می‌رود. می‌توانید با بستن برگه آن را رد کنید."
+  },
+  "privacyYourDataTitle": {
+    "message": "داده‌های شما"
+  },
+  "ramEstimateTooltip": {
+    "message": "با استفاده از ~150 مگابایت در هر برگه معلق تخمین زده شده است. صرفه‌جویی واقعی بر اساس صفحه متفاوت است."
+  },
+  "shareStats": {
+    "message": "اشتراک‌گذاری"
+  },
+  "statLifetimeRam": {
+    "message": "کل RAM ذخیره شده"
+  },
+  "confirmDeleteTitle": {
+    "message": "برای تأیید حذف دوباره کلیک کنید"
   }
 }

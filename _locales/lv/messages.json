@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Kopā"
   },
-  "statRamSaved": {
-    "message": "Ietaupītā RAM (aptuveni)"
-  },
   "statMemberSince": {
     "message": "Lietotājs kopš"
   },
@@ -343,13 +340,10 @@
     "message": "Sapratu, sākam"
   },
   "privacyTitle": {
-    "message": "Drowzy – Privātuma politika"
+    "message": "Privātuma politika"
   },
   "privacyUpdated": {
     "message": "Pēdējoreiz atjaunināts: 2026. gada aprīlis"
-  },
-  "privacyShortTitle": {
-    "message": "Īsā versija"
   },
   "privacyShortText": {
     "message": "Drowzy neapkopo nekādus datus. Nav analītikas, nav izsekošanas, nav ārējo serveru. Viss paliek jūsu pārlūkprogrammā."
@@ -364,19 +358,19 @@
     "message": "Atļaujas"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy izmanto šādas Chrome atļaujas:"
+    "message": "Drowzy pieprasa tikai tās atļaujas, kas tam nepieciešamas, lai veiktu vienu darbu:"
   },
   "privacyPermTabs": {
-    "message": "tabs – pārlūka ciļņu uzskaitīšana, apturēšana un atjaunošana"
+    "message": "Pārlūkprogrammas ciļņu uzskaitīšana, apturēšana un atjaunošana."
   },
   "privacyPermStorage": {
-    "message": "storage – jūsu iestatījumu lokālā saglabāšana"
+    "message": "Jūsu iestatījumu un sesiju saglabāšana lokāli."
   },
   "privacyPermAlarms": {
-    "message": "alarms – periodiskas neaktīvo ciļņu pārbaudes"
+    "message": "Periodiskas neaktīvu ciļņu pārbaudes (ik pēc 60 sekundēm)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – labā klikšķa izvēlnes opcijas"
+    "message": "Labā klikšķa izvēlnes opcijas apturēšanai un baltajam sarakstam."
   },
   "privacyContactTitle": {
     "message": "Kontakti"
@@ -440,82 +434,19 @@
     "message": "Ne īsti"
   },
   "whatsNew": {
-    "message": "Kas jauns v1.3.1"
+    "message": "Kas jauns v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Kas jauns Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Kas jauns"
-  },
-  "changelogNewFeatures": {
-    "message": "Jaunas iespējas"
-  },
-  "changelogBugFixes": {
-    "message": "Kļūdu labojumi"
-  },
-  "changelogImprovements": {
-    "message": "Uzlabojumi"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Atsauksmes pieprasījums"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Pēc dažu ciļņu apturēšanas Drowzy pajautās, vai jums patīk. Ātrs īkšķis uz augšu mums ļoti palīdz!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Izmaiņu lapa"
-  },
-  "changelogChangelogDesc": {
-    "message": "Jūs to skatāt! Atveras automātiski, atjauninot. Pieejams no Iestatījumiem."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Sesijas atjaunošanas laiks"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Atjaunotās cilnes vairs netiek nekavējoties automātiski apturētas. Tagad tās pareizi atiestata savus dīkstāves taimerus."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Veidlapas pārbaudes noildze"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Veidlapas datu pārbaudei tagad ir 500ms noildze, tāpēc nereaģējošas cilnes nevar bloķēt rindu."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Baltā saraksta dublikāti"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Novērsta lielo un mazo burtu jutības problēma, kur \"Example.com\" un \"example.com\" varēja pievienot abus. Visi ieraksti tagad ir normalizēti."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Reāllaika statistika"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Uznirstošais logs tagad automātiski atjauninās, kad cilnes tiek apturētas vai pamodinātas."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Sesijas atjaunošanas opcijas"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sesijām tagad ir atseviškas pogas \"Atvērt\" un \"Aizvietot\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Baltā saraksta validācija un eksports/imports"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Baltā saraksta ievade tagad validē domēnus. Jūs varat eksportēt un importēt caur starpliktuvi."
-  },
-  "changelogA11yTitle": {
-    "message": "Pieejamība"
-  },
-  "changelogA11yDesc": {
-    "message": "Ciļņu saraksta elementi tagad ir navigējami ar tastatūru ar ARIA lomām. Paziņojumi tiek paziņoti ekrāna lasītājiem."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Vienmērīgākas animācijas"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Ciļņu saraksta pakāpeniskās animācijas tagad ir ierobežotas, lai logi ar daudzām cilnēm neradītu ilgu aizkavi."
   },
   "changelogCtaText": {
     "message": "Drowzy ir bezmaksas un atvērtā koda. Ja tas ietaupa atmiņu, atstājiet atsauksmi vai zvaigznīti GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Zvaigznīte GitHub"
-  },
-  "suspendThis": {
-    "message": "Apturēt cilni"
-  },
-  "failedToSuspend": {
-    "message": "Šo cilni nevar apturēt"
   },
   "closedDuplicates": {
     "message": "Aizvērtas $COUNT$ ciļņu duplikāts(-i)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "drīz"
   },
-  "confirm": {
-    "message": "Tiešām?"
+  "changelogVersionLabel": {
+    "message": "Versija"
+  },
+  "copiedStats": {
+    "message": "Statistika nokopēta!"
+  },
+  "privacyFooterLink": {
+    "message": "Pārlūkot kodu GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy ir atvērtā koda."
+  },
+  "privacyPermHost": {
+    "message": "Izvēles resursdatora piekļuve, kas tiek pieprasīta pēc pieprasījuma tikai tad, kad iespējojat Veidlapu aizsardzību vai Apturētu cilņu marķējumu. Nekad netiek prasīts uzstādīšanas laikā. Atsaucams jebkurā laikā."
+  },
+  "privacyPermScripting": {
+    "message": "Maza skripta ievadīšana, lai atklātu nesaglabātos veidlapas datus pirms cilnes apturēšanas. Tikai pēc izvēles."
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzy attēlošana Chrome sānu panelī."
+  },
+  "privacyYourDataText": {
+    "message": "Tā kā nekas nepamet jūsu pārlūkprogrammu, nav informācijas paneļa, konta un veida, kā mēs redzētu, ko esat darījis ar Drowzy. Ja atinstalējat Drowzy, Chrome piedāvā iespēju nosūtīt izvēles atsauksmes (atinstalēšanas iemesls, pārlūkprogramma, OS) caur atsevišķu tīmekļa lapu; šis iesniegums ir nepārprotams un iet uz anonīmu veidlapu. Varat to izlaist, aizverot cilni."
+  },
+  "privacyYourDataTitle": {
+    "message": "Jūsu dati"
+  },
+  "ramEstimateTooltip": {
+    "message": "Aprēķināts, izmantojot ~150 MB uz apturēto cilni. Faktiskais ietaupījums atšķiras atkarībā no lapas."
+  },
+  "shareStats": {
+    "message": "Kopīgot"
+  },
+  "statLifetimeRam": {
+    "message": "Kopā ietaupīts RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "Noklikšķiniet vēlreiz, lai apstiprinātu dzēšanu"
   }
 }

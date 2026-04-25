@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "所有時間"
   },
-  "statRamSaved": {
-    "message": "已節省 RAM（估計）"
-  },
   "statMemberSince": {
     "message": "使用起始日"
   },
@@ -343,13 +340,10 @@
     "message": "了解了，開始使用"
   },
   "privacyTitle": {
-    "message": "Drowzy – 隱私權政策"
+    "message": "隱私政策"
   },
   "privacyUpdated": {
     "message": "最後更新：2026 年 4 月"
-  },
-  "privacyShortTitle": {
-    "message": "簡短版本"
   },
   "privacyShortText": {
     "message": "Drowzy 不收集任何資料。沒有分析、沒有追蹤、沒有外部伺服器。一切都保存在您的瀏覽器中。"
@@ -364,19 +358,19 @@
     "message": "權限"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy 使用以下 Chrome 權限："
+    "message": "Drowzy 僅請求其完成單一任務所需的權限："
   },
   "privacyPermTabs": {
-    "message": "tabs – 列出、休眠和恢復瀏覽器分頁"
+    "message": "列出、暫停和還原瀏覽器分頁。"
   },
   "privacyPermStorage": {
-    "message": "storage – 在本機儲存您的設定"
+    "message": "將您的設定和工作階段本地儲存。"
   },
   "privacyPermAlarms": {
-    "message": "alarms – 定期檢查不活躍的分頁"
+    "message": "定期檢查非活動分頁（每 60 秒）。"
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – 右鍵選單選項"
+    "message": "用於暫停和白名單的右鍵選單選項。"
   },
   "privacyContactTitle": {
     "message": "聯絡方式"
@@ -440,82 +434,19 @@
     "message": "不太滿意"
   },
   "whatsNew": {
-    "message": "v1.3.1 新功能"
+    "message": "v$VERSION$ 新功能",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzy 新變化"
   },
   "changelogWhatsNew": {
     "message": "新變化"
-  },
-  "changelogNewFeatures": {
-    "message": "新功能"
-  },
-  "changelogBugFixes": {
-    "message": "問題修復"
-  },
-  "changelogImprovements": {
-    "message": "改進"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "評價提示"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "在您休眠了幾個分頁後，Drowzy 會溫和地詢問您是否喜歡它。一個快速的好評對我們幫助很大！"
-  },
-  "changelogChangelogTitle": {
-    "message": "更新日誌頁面"
-  },
-  "changelogChangelogDesc": {
-    "message": "您正在看的就是它！更新時自動開啟，讓您隨時了解更改內容。也可以從設定中隨時存取。"
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "工作階段恢復時機"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "恢復的分頁不再會被立即自動休眠。它們現在會在建立時正確重設閒置計時器。"
-  },
-  "changelogFormCheckTitle": {
-    "message": "表單檢查逾時"
-  },
-  "changelogFormCheckDesc": {
-    "message": "表單資料檢查現在有 500 毫秒逾時，因此無回應的分頁不能阻塞整個休眠佇列。"
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "白名單重複問題"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "修復了大小寫敏感問題，\"Example.com\" 和 \"example.com\" 不再能同時新增。所有條目現在已標準化。"
-  },
-  "changelogLiveStatsTitle": {
-    "message": "即時統計"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "彈出視窗現在會在分頁被休眠或喚醒時自動重新整理。不再有過時的數據。"
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "工作階段恢復選項"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "工作階段現在有獨立的「開啟」（新增分頁）和「替換」（替換目前分頁）按鈕，讓您清楚了解操作結果。"
-  },
-  "changelogWhitelistValTitle": {
-    "message": "白名單驗證和匯出/匯入"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "白名單輸入現在會驗證網域。您還可以匯出白名單並透過剪貼簿在另一台裝置上匯入。"
-  },
-  "changelogA11yTitle": {
-    "message": "無障礙功能"
-  },
-  "changelogA11yDesc": {
-    "message": "分頁清單項目現在可透過鍵盤導覽並具有正確的 ARIA 角色。提示通知會向螢幕閱讀器播報。"
-  },
-  "changelogAnimationsTitle": {
-    "message": "更流暢的動畫"
-  },
-  "changelogAnimationsDesc": {
-    "message": "分頁清單交錯動畫現在有上限，因此多分頁視窗不會有過長的級聯延遲。"
   },
   "changelogCtaText": {
     "message": "Drowzy 是免費開源的。如果它幫您節省了記憶體，請考慮留下評價或在 GitHub 上給我們加星。"
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "在 GitHub 上加星"
-  },
-  "suspendThis": {
-    "message": "暫停分頁"
-  },
-  "failedToSuspend": {
-    "message": "無法暫停此分頁"
   },
   "closedDuplicates": {
     "message": "已關閉 $COUNT$ 個重複分頁",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "即將"
   },
-  "confirm": {
-    "message": "確定？"
+  "changelogVersionLabel": {
+    "message": "版本"
+  },
+  "copiedStats": {
+    "message": "統計資料已複製！"
+  },
+  "privacyFooterLink": {
+    "message": "在 GitHub 上瀏覽程式碼"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy 是開源的。"
+  },
+  "privacyPermHost": {
+    "message": "可選的主機存取，僅在您啟用表單保護或暫停分頁標記時按需請求。安裝時絕不請求。可隨時撤銷。"
+  },
+  "privacyPermScripting": {
+    "message": "注入一個小腳本以在暫停分頁前偵測未儲存的表單資料。僅限選擇加入。"
+  },
+  "privacyPermSidePanel": {
+    "message": "在 Chrome 的側邊欄中顯示 Drowzy。"
+  },
+  "privacyYourDataText": {
+    "message": "由於沒有任何內容離開您的瀏覽器，沒有儀表板、沒有帳戶，我們也無法看到您使用 Drowzy 做了什麼。如果您解除安裝 Drowzy，Chrome 會透過一個單獨的網頁向您提供傳送可選回饋（解除安裝原因、瀏覽器、OS）的機會；該提交是明確的，並且會傳送到匿名表單。您可以透過關閉分頁來跳過它。"
+  },
+  "privacyYourDataTitle": {
+    "message": "您的資料"
+  },
+  "ramEstimateTooltip": {
+    "message": "估計每個暫停分頁使用約 150 MB。實際節省因頁面而異。"
+  },
+  "shareStats": {
+    "message": "分享"
+  },
+  "statLifetimeRam": {
+    "message": "總共節省的 RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "再次點擊以確認刪除"
   }
 }

@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "કુલ"
   },
-  "statRamSaved": {
-    "message": "બચાવેલ RAM (અંદાજિત)"
-  },
   "statMemberSince": {
     "message": "સભ્ય ત્યારથી"
   },
@@ -343,13 +340,10 @@
     "message": "સમજાયું, ચાલો"
   },
   "privacyTitle": {
-    "message": "Drowzy – ગોપનીયતા નીતિ"
+    "message": "ગોપનીયતા નીતિ"
   },
   "privacyUpdated": {
     "message": "છેલ્લે અપડેટ: એપ્રિલ 2026"
-  },
-  "privacyShortTitle": {
-    "message": "ટૂંકું વર્ણન"
   },
   "privacyShortText": {
     "message": "Drowzy કોઈ ડેટા એકત્ર કરતું નથી. કોઈ એનાલિટિક્સ નહીં, કોઈ ટ્રેકિંગ નહીં, કોઈ બાહ્ય સર્વર નહીં. બધું તમારા બ્રાઉઝરમાં જ રહે છે."
@@ -364,19 +358,19 @@
     "message": "પરવાનગીઓ"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy આ Chrome પરવાનગીઓ વાપરે છે:"
+    "message": "Drowzy માત્ર તે પરવાનગીઓની વિનંતી કરે છે જે તેને તેનું એક કાર્ય કરવા માટે જરૂરી છે:"
   },
   "privacyPermTabs": {
-    "message": "tabs – બ્રાઉઝર ટેબ યાદી, સસ્પેન્ડ અને રિસ્ટોર કરવી"
+    "message": "બ્રાઉઝર ટૅબ્સની યાદી, સસ્પેન્ડ અને પુનઃસ્થાપિત કરવી."
   },
   "privacyPermStorage": {
-    "message": "storage – તમારી સેટિંગ્સ સ્થાનિક રીતે સાચવવી"
+    "message": "તમારી સેટિંગ્સ અને સત્રો સ્થાનિક રીતે સાચવવી."
   },
   "privacyPermAlarms": {
-    "message": "alarms – નિષ્ક્રિય ટેબ માટે સમયાંતરે તપાસ"
+    "message": "નિષ્ક્રિય ટૅબ્સ માટે સામયિક તપાસો (દર 60 સેકન્ડે)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – જમણું-ક્લિક મેનૂ વિકલ્પો"
+    "message": "સસ્પેન્ડ અને વ્હાઇટલિસ્ટ માટે રાઇટ-ક્લિક મેનુ વિકલ્પો."
   },
   "privacyContactTitle": {
     "message": "સંપર્ક"
@@ -440,82 +434,19 @@
     "message": "ખરેખર નહીં"
   },
   "whatsNew": {
-    "message": "v1.3.1 માં નવું શું છે"
+    "message": "v$VERSION$ માં નવું શું છે",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzy માં નવું શું છે"
   },
   "changelogWhatsNew": {
     "message": "નવું શું છે"
-  },
-  "changelogNewFeatures": {
-    "message": "નવી સુવિધાઓ"
-  },
-  "changelogBugFixes": {
-    "message": "બગ ફિક્સ"
-  },
-  "changelogImprovements": {
-    "message": "સુધારાઓ"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "સમીક્ષા વિનંતી"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "થોડા ટૅબ્સ સસ્પેન્ડ કર્યા પછી, Drowzy પૂછશે કે તમે તેનો આનંદ માણો છો. એક ઝડપી થમ્બ્સ અપ અમને ઘણી મદદ કરે છે!"
-  },
-  "changelogChangelogTitle": {
-    "message": "ફેરફાર લોગ પૃષ્ઠ"
-  },
-  "changelogChangelogDesc": {
-    "message": "તમે તે જોઈ રહ્યા છો! અપડેટ પર આપોઆપ ખુલે છે. સેટિંગ્સમાંથી ગમે ત્યારે ઍક્સેસ કરો."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "સત્ર પુનઃસ્થાપના સમય"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "પુનઃસ્થાપિત ટૅબ્સ હવે તરત જ સસ્પેન્ડ થતા નથી. તેઓ હવે તેમના નિષ્ક્રિય ટાઈમર યોગ્ય રીતે રીસેટ કરે છે."
-  },
-  "changelogFormCheckTitle": {
-    "message": "ફોર્મ ચેક ટાઈમઆઉટ"
-  },
-  "changelogFormCheckDesc": {
-    "message": "ફોર્મ ડેટા ચેકમાં હવે 500ms ટાઈમઆઉટ છે જેથી પ્રતિસાદ ન આપતા ટૅબ્સ કતાર અવરોધિત ન કરી શકે."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "વ્હાઇટલિસ્ટ ડુપ્લિકેટ્સ"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "કેસ સેન્સિટિવિટી સમસ્યા ઠીક કરવામાં આવી જ્યાં \"Example.com\" અને \"example.com\" બંને ઉમેરી શકાતા હતા. બધી એન્ટ્રીઓ હવે સામાન્યીકૃત છે."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "લાઇવ આંકડા"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "ટૅબ્સ સસ્પેન્ડ થાય અથવા જાગે ત્યારે પૉપઅપ આપોઆપ રિફ્રેશ થાય છે."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "સત્ર પુનઃસ્થાપના વિકલ્પો"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "સત્રોમાં હવે અલગ \"ખોલો\" અને \"બદલો\" બટન છે."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "વ્હાઇટલિસ્ટ માન્યતા અને નિકાસ/આયાત"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "વ્હાઇટલિસ્ટ ઇનપુટ હવે ડોમેન માન્ય કરે છે. ક્લિપબોર્ડ દ્વારા નિકાસ અને આયાત કરી શકો છો."
-  },
-  "changelogA11yTitle": {
-    "message": "સુલભતા"
-  },
-  "changelogA11yDesc": {
-    "message": "ટૅબ સૂચિ આઇટમ હવે ARIA ભૂમિકાઓ સાથે કીબોર્ડ-નેવિગેબલ છે. ટોસ્ટ સૂચનાઓ સ્ક્રીન રીડર્સને જાહેર કરાય છે."
-  },
-  "changelogAnimationsTitle": {
-    "message": "સરળ એનિમેશન"
-  },
-  "changelogAnimationsDesc": {
-    "message": "ટૅબ સૂચિ સ્ટેગર એનિમેશન હવે મર્યાદિત છે જેથી ઘણા ટૅબ્સવાળી વિન્ડોઝમાં લાંબો વિલંબ ન થાય."
   },
   "changelogCtaText": {
     "message": "Drowzy મફત અને ઓપન સોર્સ છે. જો તે મેમરી બચાવે છે, તો સમીક્ષા અથવા GitHub પર સ્ટાર આપો."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "GitHub પર સ્ટાર"
-  },
-  "suspendThis": {
-    "message": "યેબ સસ્પેન્ડ કરો"
-  },
-  "failedToSuspend": {
-    "message": "આ યેબ સસ્પેન્ડ કરી શકાતું નથી"
   },
   "closedDuplicates": {
     "message": "$COUNT$ ડુપ્લિકેટ યેબ બંધ કરવામાં આવ્યા",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "ટૂંક સમયમાં"
   },
-  "confirm": {
-    "message": "ખાતરી?"
+  "changelogVersionLabel": {
+    "message": "સંસ્કરણ"
+  },
+  "copiedStats": {
+    "message": "આંકડા કૉપિ થયા!"
+  },
+  "privacyFooterLink": {
+    "message": "GitHub પર કોડ બ્રાઉઝ કરો"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy ઓપન સોર્સ છે."
+  },
+  "privacyPermHost": {
+    "message": "વૈકલ્પિક હોસ્ટ ઍક્સેસ, ફક્ત જ્યારે તમે ફોર્મ સુરક્ષા અથવા સસ્પેન્ડેડ-ટૅબ માર્કિંગ સક્ષમ કરો ત્યારે જ માંગવામાં આવે છે. ઇન્સ્ટોલ પર ક્યારેય માંગવામાં આવતી નથી. કોઈપણ સમયે રદ કરી શકાય છે."
+  },
+  "privacyPermScripting": {
+    "message": "ટૅબ સસ્પેન્ડ કરતા પહેલા સાચવ્યા વગરના ફોર્મ ડેટાને શોધવા માટે એક નાની સ્ક્રિપ્ટ ઇન્જેક્ટ કરવી. ફક્ત ઑપ્ટ-ઇન."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome ની સાઇડ પેનલમાં Drowzy પ્રદર્શિત કરવું."
+  },
+  "privacyYourDataText": {
+    "message": "કારણ કે કંઈપણ તમારા બ્રાઉઝરને છોડતું નથી, ત્યાં કોઈ ડેશબોર્ડ, કોઈ એકાઉન્ટ અને Drowzy સાથે તમે શું કર્યું છે તે જોવાનો અમારા માટે કોઈ રસ્તો નથી. જો તમે Drowzy ને અનઇન્સ્ટોલ કરો છો, તો Chrome તમને એક અલગ વેબ પેજ દ્વારા વૈકલ્પિક પ્રતિસાદ (અનઇન્સ્ટોલ કરવાનું કારણ, બ્રાઉઝર, OS) મોકલવાની તક આપે છે; તે સબમિશન સ્પષ્ટ છે અને અનામી ફોર્મ પર જાય છે. તમે ટૅબ બંધ કરીને તેને છોડી શકો છો."
+  },
+  "privacyYourDataTitle": {
+    "message": "તમારો ડેટા"
+  },
+  "ramEstimateTooltip": {
+    "message": "સસ્પેન્ડ કરેલ ટૅબ દીઠ ~150 MB નો ઉપયોગ કરીને અંદાજિત. વાસ્તવિક બચત પૃષ્ઠ પ્રમાણે બદલાય છે."
+  },
+  "shareStats": {
+    "message": "શેર કરો"
+  },
+  "statLifetimeRam": {
+    "message": "કુલ RAM બચત"
+  },
+  "confirmDeleteTitle": {
+    "message": "કાઢી નાખવાની પુષ્ટિ કરવા ફરીથી ક્લિક કરો"
   }
 }

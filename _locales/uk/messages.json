@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "За весь час"
   },
-  "statRamSaved": {
-    "message": "RAM заощаджено (прибл.)"
-  },
   "statMemberSince": {
     "message": "Учасник з"
   },
@@ -343,13 +340,10 @@
     "message": "Зрозуміло, починаємо"
   },
   "privacyTitle": {
-    "message": "Drowzy – Політика конфіденційності"
+    "message": "Політика конфіденційності"
   },
   "privacyUpdated": {
     "message": "Останнє оновлення: квітень 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Коротка версія"
   },
   "privacyShortText": {
     "message": "Drowzy не збирає жодних даних. Без аналітики, без відстеження, без зовнішніх серверів. Все залишається у вашому браузері."
@@ -364,19 +358,19 @@
     "message": "Дозволи"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy використовує такі дозволи Chrome:"
+    "message": "Drowzy запитує лише ті дозволи, які потрібні для виконання його єдиної роботи:"
   },
   "privacyPermTabs": {
-    "message": "tabs – перегляд, призупинення та відновлення вкладок браузера"
+    "message": "Перелік, призупинення та відновлення вкладок браузера."
   },
   "privacyPermStorage": {
-    "message": "storage – збереження налаштувань локально"
+    "message": "Локальне збереження ваших налаштувань і сесій."
   },
   "privacyPermAlarms": {
-    "message": "alarms – періодична перевірка неактивних вкладок"
+    "message": "Періодичні перевірки неактивних вкладок (кожні 60 секунд)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – параметри контекстного меню"
+    "message": "Параметри меню правої кнопки для призупинення та білого списку."
   },
   "privacyContactTitle": {
     "message": "Контакти"
@@ -440,82 +434,19 @@
     "message": "Не дуже"
   },
   "whatsNew": {
-    "message": "Що нового у v1.3.1"
+    "message": "Що нового у v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Що нового в Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Що нового"
-  },
-  "changelogNewFeatures": {
-    "message": "Нові функції"
-  },
-  "changelogBugFixes": {
-    "message": "Виправлення помилок"
-  },
-  "changelogImprovements": {
-    "message": "Покращення"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Запит на відгук"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Після призупинення кількох вкладок Drowzy запитає, чи вам подобається. Швидкий лайк дуже нам допомагає!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Сторінка змін"
-  },
-  "changelogChangelogDesc": {
-    "message": "Ви дивитесь на неї! Відкривається автоматично при оновленні. Доступна з Налаштувань."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Таймінг відновлення сеансу"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Відновлені вкладки більше не призупиняються автоматично одразу. Тепер вони правильно скидають свої таймери бездіяльності."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Тайм-аут перевірки форм"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Перевірка даних форм тепер має тайм-аут 500мс, тому вкладки, що не відповідають, не можуть блокувати чергу."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Дублікати білого списку"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Виправлено проблему чутливості до регістру, через яку \"Example.com\" і \"example.com\" могли бути додані одночасно. Тепер усі записи нормалізовані."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Статистика в реальному часі"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Спливаюче вікно тепер автоматично оновлюється, коли вкладки призупиняються або пробуджуються."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Параметри відновлення сеансу"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Сеанси тепер мають окремі кнопки \"Відкрити\" та \"Замінити\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Валідація та експорт/імпорт білого списку"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Введення білого списку тепер перевіряє домени. Ви можете експортувати та імпортувати через буфер обміну."
-  },
-  "changelogA11yTitle": {
-    "message": "Доступність"
-  },
-  "changelogA11yDesc": {
-    "message": "Елементи списку вкладок тепер доступні з клавіатури з ролями ARIA. Сповіщення оголошуються програмам зчитування з екрана."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Плавніші анімації"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Каскадні анімації списку вкладок тепер обмежені, тому вікна з багатьма вкладками не мають тривалої затримки."
   },
   "changelogCtaText": {
     "message": "Drowzy безкоштовний та з відкритим кодом. Якщо він економить пам'ять, залиште відгук або зірку на GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Зірка на GitHub"
-  },
-  "suspendThis": {
-    "message": "Призупинити вкладку"
-  },
-  "failedToSuspend": {
-    "message": "Неможливо призупинити цю вкладку"
   },
   "closedDuplicates": {
     "message": "Закрито $COUNT$ дублікатів вкладок",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "незабаром"
   },
-  "confirm": {
-    "message": "Впевнені?"
+  "changelogVersionLabel": {
+    "message": "Версія"
+  },
+  "copiedStats": {
+    "message": "Статистику скопійовано!"
+  },
+  "privacyFooterLink": {
+    "message": "Переглянути код на GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy — open source."
+  },
+  "privacyPermHost": {
+    "message": "Додатковий доступ до хосту, запитується на вимогу лише при увімкненні Захисту форм або Маркування призупинених вкладок. Ніколи не запитується при встановленні. Можна відкликати в будь-який час."
+  },
+  "privacyPermScripting": {
+    "message": "Введення невеликого скрипту для виявлення незбережених даних форми перед призупиненням вкладки. Тільки за згодою."
+  },
+  "privacyPermSidePanel": {
+    "message": "Відображення Drowzy на бічній панелі Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Оскільки нічого не залишає ваш браузер, немає панелі керування, облікового запису, і немає способу для нас побачити, що ви робили з Drowzy. Якщо ви видалите Drowzy, Chrome пропонує вам можливість надіслати додатковий відгук (причина видалення, браузер, ОС) через окрему веб-сторінку; це надсилання є явним і йде до анонімної форми. Ви можете пропустити це, закривши вкладку."
+  },
+  "privacyYourDataTitle": {
+    "message": "Ваші дані"
+  },
+  "ramEstimateTooltip": {
+    "message": "Оцінено з використанням ~150 МБ на призупинену вкладку. Фактична економія залежить від сторінки."
+  },
+  "shareStats": {
+    "message": "Поділитися"
+  },
+  "statLifetimeRam": {
+    "message": "Усього збережено ОЗП"
+  },
+  "confirmDeleteTitle": {
+    "message": "Натисніть ще раз, щоб підтвердити видалення"
   }
 }

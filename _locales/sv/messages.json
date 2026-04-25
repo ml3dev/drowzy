@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Totalt"
   },
-  "statRamSaved": {
-    "message": "RAM sparat (uppsk.)"
-  },
   "statMemberSince": {
     "message": "Medlem sedan"
   },
@@ -343,13 +340,10 @@
     "message": "Uppfattat, kör igång"
   },
   "privacyTitle": {
-    "message": "Drowzy – Integritetspolicy"
+    "message": "Integritetspolicy"
   },
   "privacyUpdated": {
     "message": "Senast uppdaterad: april 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Kortversionen"
   },
   "privacyShortText": {
     "message": "Drowzy samlar inte in någon data. Ingen analys, ingen spårning, inga externa servrar. Allt stannar i din webbläsare."
@@ -364,19 +358,19 @@
     "message": "Behörigheter"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy använder dessa Chrome-behörigheter:"
+    "message": "Drowzy begär endast de behörigheter den behöver för sitt enda jobb:"
   },
   "privacyPermTabs": {
-    "message": "tabs – lista, suspendera och återställa webbläsarflikar"
+    "message": "Lista, suspendera och återställa webbläsarflikar."
   },
   "privacyPermStorage": {
-    "message": "storage – spara dina inställningar lokalt"
+    "message": "Spara dina inställningar och sessioner lokalt."
   },
   "privacyPermAlarms": {
-    "message": "alarms – periodiska kontroller av inaktiva flikar"
+    "message": "Periodiska kontroller av inaktiva flikar (var 60:e sekund)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – högerklicksalternativ"
+    "message": "Högerklicksmeny-alternativ för suspendering och vitlista."
   },
   "privacyContactTitle": {
     "message": "Kontakt"
@@ -440,82 +434,19 @@
     "message": "Inte riktigt"
   },
   "whatsNew": {
-    "message": "Nyheter i v1.3.1"
+    "message": "Nyheter i v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Nyheter i Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nyheter"
-  },
-  "changelogNewFeatures": {
-    "message": "Nya funktioner"
-  },
-  "changelogBugFixes": {
-    "message": "Buggfixar"
-  },
-  "changelogImprovements": {
-    "message": "Förbättringar"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Omdömesförfrågan"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Efter att du har pausat några flikar kommer Drowzy fråga om du gillar den. Ett snabbt tummen upp hjälper oss mycket!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Ändringsloggsida"
-  },
-  "changelogChangelogDesc": {
-    "message": "Du tittar på den nu! Öppnas automatiskt vid uppdatering. Tillgänglig från Inställningar."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Sessionsåterställningstiming"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Återställda flikar pausas inte längre automatiskt omedelbart. De återställer nu korrekt sina inaktivitetstimrar."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Timeout för formulärkontroll"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Formulärkontrollen har nu en 500ms timeout så att flikar som inte svarar inte kan blockera kön."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Vitlisteduplikat"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Fixade problem med skiftlägeskänslighet där \"Example.com\" och \"example.com\" båda kunde läggas till. Alla poster normaliseras nu."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Realtidsstatistik"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Popup uppdateras nu automatiskt när flikar pausas eller vaknar."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Alternativ för sessionsåterställning"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Sessioner har nu separata knappar \"Öppna\" och \"Ersätt\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Vitlistevalidering och export/import"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Vitlisteinmatningen validerar nu domäner. Du kan exportera och importera via urklipp."
-  },
-  "changelogA11yTitle": {
-    "message": "Tillgänglighet"
-  },
-  "changelogA11yDesc": {
-    "message": "Fliklisteobjekt kan nu navigeras med tangentbordet med ARIA-roller. Aviseringar meddelas till skärmläsare."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Jämnare animationer"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Stegade animationer är nu begränsade så att fönster med många flikar inte har en lång kaskadförsening."
   },
   "changelogCtaText": {
     "message": "Drowzy är gratis och öppen källkod. Om det sparar minne, överväg att lämna ett omdöme eller en stjärna på GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Stjärna på GitHub"
-  },
-  "suspendThis": {
-    "message": "Pausa flik"
-  },
-  "failedToSuspend": {
-    "message": "Kan inte pausa denna flik"
   },
   "closedDuplicates": {
     "message": "Stängde $COUNT$ dubblettflik(ar)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "snart"
   },
-  "confirm": {
-    "message": "Säker?"
+  "changelogVersionLabel": {
+    "message": "Version"
+  },
+  "copiedStats": {
+    "message": "Statistik kopierad!"
+  },
+  "privacyFooterLink": {
+    "message": "Bläddra koden på GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy är öppen källkod."
+  },
+  "privacyPermHost": {
+    "message": "Valfri värdåtkomst, begärs på begäran endast när du aktiverar Formulärskydd eller Markering av suspenderade flikar. Begärs aldrig vid installation. Kan återkallas när som helst."
+  },
+  "privacyPermScripting": {
+    "message": "Injicera ett litet skript för att upptäcka osparade formulärdata innan en flik suspenderas. Endast tillval."
+  },
+  "privacyPermSidePanel": {
+    "message": "Visa Drowzy i Chromes sidopanel."
+  },
+  "privacyYourDataText": {
+    "message": "Eftersom inget lämnar din webbläsare finns det ingen instrumentpanel, inget konto, och inget sätt för oss att se vad du har gjort med Drowzy. Om du avinstallerar Drowzy erbjuder Chrome dig en möjlighet att skicka valfri feedback (anledning till avinstallation, webbläsare, OS) via en separat webbsida; den inlämningen är uttrycklig och går till ett anonymt formulär. Du kan hoppa över det genom att stänga fliken."
+  },
+  "privacyYourDataTitle": {
+    "message": "Dina data"
+  },
+  "ramEstimateTooltip": {
+    "message": "Uppskattat med ~150 MB per suspenderad flik. Faktiska besparingar varierar per sida."
+  },
+  "shareStats": {
+    "message": "Dela"
+  },
+  "statLifetimeRam": {
+    "message": "Totalt sparat RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "Klicka igen för att bekräfta borttagning"
   }
 }

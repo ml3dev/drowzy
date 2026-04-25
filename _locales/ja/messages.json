@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "累計"
   },
-  "statRamSaved": {
-    "message": "節約RAM（推定）"
-  },
   "statMemberSince": {
     "message": "利用開始日"
   },
@@ -343,13 +340,10 @@
     "message": "了解、始めましょう"
   },
   "privacyTitle": {
-    "message": "Drowzy – プライバシーポリシー"
+    "message": "プライバシーポリシー"
   },
   "privacyUpdated": {
     "message": "最終更新日：2026年4月"
-  },
-  "privacyShortTitle": {
-    "message": "要約"
   },
   "privacyShortText": {
     "message": "Drowzyはいかなるデータも収集しません。分析なし、トラッキングなし、外部サーバーなし。すべてはブラウザ内に留まります。"
@@ -364,19 +358,19 @@
     "message": "権限"
   },
   "privacyPermissionsIntro": {
-    "message": "DrowzyはこれらのChrome権限を使用します："
+    "message": "Drowzy は、その唯一の仕事を行うために必要な権限のみを要求します："
   },
   "privacyPermTabs": {
-    "message": "tabs – ブラウザタブの一覧表示、サスペンド、復元"
+    "message": "ブラウザタブの一覧表示、サスペンド、復元。"
   },
   "privacyPermStorage": {
-    "message": "storage – 設定のローカル保存"
+    "message": "設定とセッションをローカルに保存。"
   },
   "privacyPermAlarms": {
-    "message": "alarms – 非アクティブタブの定期チェック"
+    "message": "非アクティブなタブの定期チェック（60秒ごと）。"
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – 右クリックメニューオプション"
+    "message": "サスペンドとホワイトリストのための右クリックメニューオプション。"
   },
   "privacyContactTitle": {
     "message": "お問い合わせ"
@@ -440,82 +434,19 @@
     "message": "いいえ"
   },
   "whatsNew": {
-    "message": "v1.3.1の新機能"
+    "message": "v$VERSION$の新機能",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzyの新機能"
   },
   "changelogWhatsNew": {
     "message": "新機能"
-  },
-  "changelogNewFeatures": {
-    "message": "新機能"
-  },
-  "changelogBugFixes": {
-    "message": "バグ修正"
-  },
-  "changelogImprovements": {
-    "message": "改善"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "レビューのお願い"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "いくつかのタブをサスペンドした後、Drowzyが気に入っているかお尋ねします。高評価をいただけると大変助かります！"
-  },
-  "changelogChangelogTitle": {
-    "message": "変更履歴ページ"
-  },
-  "changelogChangelogDesc": {
-    "message": "今ご覧のページです！更新時に自動的に開くので、変更点を常に把握できます。設定からいつでもアクセスできます。"
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "セッション復元タイミング"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "復元されたタブが即座に自動サスペンドされなくなりました。作成時にアイドルタイマーが正しくリセットされます。"
-  },
-  "changelogFormCheckTitle": {
-    "message": "フォームチェックタイムアウト"
-  },
-  "changelogFormCheckDesc": {
-    "message": "フォームデータチェックに500msのタイムアウトが設定され、応答しないタブがサスペンドキュー全体をブロックしなくなりました。"
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "ホワイトリストの重複"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "大文字小文字の区別に関する問題を修正。すべてのエントリが正規化されるようになりました。"
-  },
-  "changelogLiveStatsTitle": {
-    "message": "リアルタイム統計"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "タブがバックグラウンドでサスペンドまたは復帰した際、ポップアップが自動的に更新されるようになりました。"
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "セッション復元オプション"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "セッションに「開く」（タブを追加）と「置き換え」（現在のタブを入れ替え）の個別ボタンが追加されました。"
-  },
-  "changelogWhitelistValTitle": {
-    "message": "ホワイトリストの検証とエクスポート/インポート"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "ホワイトリスト入力でドメインが検証されるようになりました。クリップボード経由で別のデバイスにエクスポート・インポートも可能です。"
-  },
-  "changelogA11yTitle": {
-    "message": "アクセシビリティ"
-  },
-  "changelogA11yDesc": {
-    "message": "タブリストの項目がキーボードでナビゲート可能になり、適切なARIAロールが設定されました。トースト通知はスクリーンリーダーに通知されます。"
-  },
-  "changelogAnimationsTitle": {
-    "message": "スムーズなアニメーション"
-  },
-  "changelogAnimationsDesc": {
-    "message": "タブリストのスタッガーアニメーションに上限が設定され、多くのタブがあるウィンドウでの長いカスケード遅延がなくなりました。"
   },
   "changelogCtaText": {
     "message": "Drowzyは無料のオープンソースです。メモリ節約に役立っていれば、レビューやGitHubでのスターをご検討ください。"
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "GitHubでスター"
-  },
-  "suspendThis": {
-    "message": "タブをサスペンド"
-  },
-  "failedToSuspend": {
-    "message": "このタブはサスペンドできません"
   },
   "closedDuplicates": {
     "message": "$COUNT$個の重複タブを閉じました",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "まもなく"
   },
-  "confirm": {
-    "message": "本当に？"
+  "changelogVersionLabel": {
+    "message": "バージョン"
+  },
+  "copiedStats": {
+    "message": "統計をコピーしました！"
+  },
+  "privacyFooterLink": {
+    "message": "GitHubでコードを見る"
+  },
+  "privacyFooterText": {
+    "message": "Drowzyはオープンソースです。"
+  },
+  "privacyPermHost": {
+    "message": "オプションのホストアクセス。フォーム保護またはサスペンドタブのマーキングを有効にした場合のみ、オンデマンドで要求されます。インストール時には決して要求されません。いつでも取り消し可能。"
+  },
+  "privacyPermScripting": {
+    "message": "タブをサスペンドする前に未保存のフォームデータを検出するための小さなスクリプトを挿入。オプトインのみ。"
+  },
+  "privacyPermSidePanel": {
+    "message": "Chromeのサイドパネルに Drowzy を表示します。"
+  },
+  "privacyYourDataText": {
+    "message": "ブラウザから何も外に出ないため、ダッシュボードもアカウントもなく、Drowzyで何をしたかを私たちが確認する方法はありません。Drowzyをアンインストールすると、Chromeは別のウェブページを通じてオプションのフィードバック（アンインストールの理由、ブラウザ、OS）を送信する機会を提供します。その送信は明示的で、匿名フォームに送られます。タブを閉じることでスキップできます。"
+  },
+  "privacyYourDataTitle": {
+    "message": "あなたのデータ"
+  },
+  "ramEstimateTooltip": {
+    "message": "サスペンドされたタブごとに約150MBを使用して推定。実際の節約量はページによって異なります。"
+  },
+  "shareStats": {
+    "message": "共有"
+  },
+  "statLifetimeRam": {
+    "message": "累計RAM節約量"
+  },
+  "confirmDeleteTitle": {
+    "message": "もう一度クリックして削除を確認"
   }
 }

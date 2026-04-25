@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Összesen"
   },
-  "statRamSaved": {
-    "message": "Megtakarított RAM (becsült)"
-  },
   "statMemberSince": {
     "message": "Tag óta"
   },
@@ -343,13 +340,10 @@
     "message": "Értem, kezdjük"
   },
   "privacyTitle": {
-    "message": "Drowzy – Adatvédelmi szabályzat"
+    "message": "Adatvédelmi irányelvek"
   },
   "privacyUpdated": {
     "message": "Utolsó frissítés: 2026. április"
-  },
-  "privacyShortTitle": {
-    "message": "Rövid változat"
   },
   "privacyShortText": {
     "message": "A Drowzy semmilyen adatot nem gyűjt. Nincs analitika, nincs nyomkövetés, nincsenek külső szerverek. Minden a böngésződben marad."
@@ -364,19 +358,19 @@
     "message": "Engedélyek"
   },
   "privacyPermissionsIntro": {
-    "message": "A Drowzy a következő Chrome engedélyeket használja:"
+    "message": "A Drowzy csak azokat az engedélyeket kéri, amelyekre az egyetlen feladatához szüksége van:"
   },
   "privacyPermTabs": {
-    "message": "tabs – böngészőlapok listázása, felfüggesztése és visszaállítása"
+    "message": "Böngésző fülek listázása, felfüggesztése és visszaállítása."
   },
   "privacyPermStorage": {
-    "message": "storage – beállítások helyi mentése"
+    "message": "Beállításai és munkamenetei helyi mentése."
   },
   "privacyPermAlarms": {
-    "message": "alarms – inaktív lapok időszakos ellenőrzése"
+    "message": "Inaktív fülek időszakos ellenőrzése (60 másodpercenként)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – jobb kattintás menü opciók"
+    "message": "Jobb kattintás menüopciók a felfüggesztéshez és a fehér listához."
   },
   "privacyContactTitle": {
     "message": "Kapcsolat"
@@ -440,82 +434,19 @@
     "message": "Nem igazán"
   },
   "whatsNew": {
-    "message": "Újdonságok a v1.3.1-ban"
+    "message": "Újdonságok a v$VERSION$-ban",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Újdonságok a Drowzy-ban"
   },
   "changelogWhatsNew": {
     "message": "Újdonságok"
-  },
-  "changelogNewFeatures": {
-    "message": "Új funkciók"
-  },
-  "changelogBugFixes": {
-    "message": "Hibajavítások"
-  },
-  "changelogImprovements": {
-    "message": "Fejlesztések"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Értékelés kérése"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Néhány lap felfüggesztése után a Drowzy megkérdezi, tetszik-e. Egy gyors felfelé mutató hüvelykujj sokat segít!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Változásnapló oldal"
-  },
-  "changelogChangelogDesc": {
-    "message": "Éppen ezt nézed! Automatikusan megnyílik frissítéskor. Bármikor elérhető a Beállításokból."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Munkamenet-visszaállítás időzítése"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "A visszaállított lapok már nem függesztődnek fel azonnal automatikusan. Most helyesen állítják vissza tétlenségi időzítőiket."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Űrlapellenőrzés időkorlátja"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Az űrlapellenőrzés most 500ms-os időkorláttal rendelkezik, így a nem reagáló lapok nem blokkolhatják a várakozási sort."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Engedélyezési lista duplikátumok"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Javítva a kis- és nagybetű-érzékenységi probléma, amely lehetővé tette az \"Example.com\" és az \"example.com\" egyidejű hozzáadását. Minden bejegyzés mostantól normalizálva van."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Élő statisztikák"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "A felugró ablak automatikusan frissül, amikor a lapok felfüggesztésre kerülnek vagy felébrednek."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Munkamenet-visszaállítási lehetőségek"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "A munkameneteknek most külön \"Megnyitás\" és \"Csere\" gombjai vannak."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Engedélyezési lista ellenőrzése és exportálás/importálás"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Az engedélyezési lista bevitele most érvényesíti a domaineket. Exportálhat és importálhat a vágólapon keresztül."
-  },
-  "changelogA11yTitle": {
-    "message": "Akadálymentesítés"
-  },
-  "changelogA11yDesc": {
-    "message": "A laplistaelemek most billentyűzettel navigálhatók ARIA-szerepekkel. Az értesítések képernyőolvasóknak kerülnek bejelentésre."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Simább animációk"
-  },
-  "changelogAnimationsDesc": {
-    "message": "A lépcsőzetes animációk most korlátozottak, hogy a sok lappal rendelkező ablakoknak ne legyen hosszú késleltetése."
   },
   "changelogCtaText": {
     "message": "A Drowzy ingyenes és nyílt forráskódú. Ha memóriát takarít meg, hagyjon értékelést vagy csillagot a GitHubon."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Csillag a GitHubon"
-  },
-  "suspendThis": {
-    "message": "Lap fülfüggesztése"
-  },
-  "failedToSuspend": {
-    "message": "Ez a lap nem függesztőhető fel"
   },
   "closedDuplicates": {
     "message": "$COUNT$ duplikált lap bezárva",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "hamarosan"
   },
-  "confirm": {
-    "message": "Biztos?"
+  "changelogVersionLabel": {
+    "message": "Verzió"
+  },
+  "copiedStats": {
+    "message": "Statisztikák másolva!"
+  },
+  "privacyFooterLink": {
+    "message": "Tekintse meg a kódot a GitHubon"
+  },
+  "privacyFooterText": {
+    "message": "A Drowzy nyílt forráskódú."
+  },
+  "privacyPermHost": {
+    "message": "Opcionális gazdagép-hozzáférés, csak igény szerint kérve, amikor engedélyezi az Űrlapvédelmet vagy a Felfüggesztett-fülek jelölését. Soha nem kérve telepítéskor. Bármikor visszavonható."
+  },
+  "privacyPermScripting": {
+    "message": "Egy kis szkript befecskendezése a nem mentett űrlapadatok észlelésére egy fül felfüggesztése előtt. Csak opcionális."
+  },
+  "privacyPermSidePanel": {
+    "message": "A Drowzy megjelenítése a Chrome oldalsó paneljében."
+  },
+  "privacyYourDataText": {
+    "message": "Mivel semmi sem hagyja el a böngészőjét, nincs irányítópult, nincs fiók, és nincs módunk arra, hogy lássuk, mit csinált a Drowzy-val. Ha eltávolítja a Drowzy-t, a Chrome lehetőséget kínál opcionális visszajelzés küldésére (eltávolítás oka, böngésző, OS) egy külön weboldalon keresztül; ez a beküldés explicit, és egy anonim űrlapra kerül. Kihagyhatja a fül bezárásával."
+  },
+  "privacyYourDataTitle": {
+    "message": "Az Ön adatai"
+  },
+  "ramEstimateTooltip": {
+    "message": "Becsülve felfüggesztett fülenként ~150 MB-tal. A tényleges megtakarítás oldalanként eltérő."
+  },
+  "shareStats": {
+    "message": "Megosztás"
+  },
+  "statLifetimeRam": {
+    "message": "Összesen megtakarított RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "Kattintson újra a törlés megerősítéséhez"
   }
 }

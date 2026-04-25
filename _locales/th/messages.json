@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "ตลอดเวลา"
   },
-  "statRamSaved": {
-    "message": "RAM ที่ประหยัดได้ (ประมาณ)"
-  },
   "statMemberSince": {
     "message": "เป็นสมาชิกตั้งแต่"
   },
@@ -343,13 +340,10 @@
     "message": "เข้าใจแล้ว ไปกันเลย"
   },
   "privacyTitle": {
-    "message": "Drowzy – นโยบายความเป็นส่วนตัว"
+    "message": "นโยบายความเป็นส่วนตัว"
   },
   "privacyUpdated": {
     "message": "อัปเดตล่าสุด: เมษายน 2026"
-  },
-  "privacyShortTitle": {
-    "message": "เวอร์ชันสั้น"
   },
   "privacyShortText": {
     "message": "Drowzy ไม่เก็บรวบรวมข้อมูลใดๆ ไม่มีการวิเคราะห์ ไม่มีการติดตาม ไม่มีเซิร์ฟเวอร์ภายนอก ทุกอย่างอยู่ในเบราว์เซอร์ของคุณ"
@@ -364,19 +358,19 @@
     "message": "สิทธิ์"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy ใช้สิทธิ์เหล่านี้ของ Chrome:"
+    "message": "Drowzy ขอเฉพาะสิทธิ์ที่จำเป็นเพื่อทำงานหนึ่งเดียวเท่านั้น:"
   },
   "privacyPermTabs": {
-    "message": "tabs – การแสดงรายการ ระงับ และกู้คืนแท็บเบราว์เซอร์"
+    "message": "แสดงรายการ ระงับ และคืนค่าแท็บเบราว์เซอร์"
   },
   "privacyPermStorage": {
-    "message": "storage – บันทึกการตั้งค่าของคุณในเครื่อง"
+    "message": "บันทึกการตั้งค่าและเซสชันของคุณในเครื่อง"
   },
   "privacyPermAlarms": {
-    "message": "alarms – ตรวจสอบแท็บที่ไม่ได้ใช้งานเป็นระยะ"
+    "message": "การตรวจสอบแท็บที่ไม่ใช้งานเป็นระยะ (ทุก 60 วินาที)"
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – ตัวเลือกเมนูคลิกขวา"
+    "message": "ตัวเลือกเมนูคลิกขวาสำหรับการระงับและไวท์ลิสต์"
   },
   "privacyContactTitle": {
     "message": "ติดต่อ"
@@ -440,82 +434,19 @@
     "message": "ไม่เชิง"
   },
   "whatsNew": {
-    "message": "มีอะไรใหม่ใน v1.3.1"
+    "message": "มีอะไรใหม่ใน v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "มีอะไรใหม่ใน Drowzy"
   },
   "changelogWhatsNew": {
     "message": "มีอะไรใหม่"
-  },
-  "changelogNewFeatures": {
-    "message": "ฟีเจอร์ใหม่"
-  },
-  "changelogBugFixes": {
-    "message": "แก้ไขข้อบกพร่อง"
-  },
-  "changelogImprovements": {
-    "message": "การปรับปรุง"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "ขอรีวิว"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "หลังจากระงับแท็บไม่กี่แท็บ Drowzy จะถามว่าคุณชอบหรือไม่ การกดถูกใจอย่างรวดเร็วช่วยเราได้มาก!"
-  },
-  "changelogChangelogTitle": {
-    "message": "หน้าบันทึกการเปลี่ยนแปลง"
-  },
-  "changelogChangelogDesc": {
-    "message": "คุณกำลังดูอยู่! เปิดอัตโนมัติเมื่ออัปเดต เข้าถึงได้ทุกเมื่อจากการตั้งค่า"
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "เวลาการคืนค่าเซสชัน"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "แท็บที่กู้คืนจะไม่ถูกระงับอัตโนมัติทันทีอีกต่อไป ตอนนี้จะรีเซ็ตตัวจับเวลาไม่ใช้งานอย่างถูกต้อง"
-  },
-  "changelogFormCheckTitle": {
-    "message": "หมดเวลาตรวจสอบฟอร์ม"
-  },
-  "changelogFormCheckDesc": {
-    "message": "การตรวจสอบฟอร์มมีการหมดเวลา 500ms แล้ว ดังนั้นแท็บที่ไม่ตอบสนองจะไม่สามารถบล็อกคิวได้"
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "รายการซ้ำในรายการที่อนุญาต"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "แก้ไขปัญหาตัวพิมพ์เล็ก-ใหญ่ที่ทำให้ \"Example.com\" และ \"example.com\" สามารถเพิ่มได้ทั้งคู่ ตอนนี้รายการทั้งหมดถูกทำให้เป็นมาตรฐานแล้ว"
-  },
-  "changelogLiveStatsTitle": {
-    "message": "สถิติสด"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "ป๊อปอัปรีเฟรชอัตโนมัติเมื่อแท็บถูกระงับหรือปลุก"
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "ตัวเลือกการคืนค่าเซสชัน"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "เซสชันมีปุ่ม \"เปิด\" และ \"แทนที่\" แยกกันแล้ว"
-  },
-  "changelogWhitelistValTitle": {
-    "message": "การตรวจสอบรายการที่อนุญาตและส่งออก/นำเข้า"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "อินพุตรายการที่อนุญาตตรวจสอบโดเมนแล้ว สามารถส่งออกและนำเข้าผ่านคลิปบอร์ดได้"
-  },
-  "changelogA11yTitle": {
-    "message": "การเข้าถึง"
-  },
-  "changelogA11yDesc": {
-    "message": "รายการแท็บสามารถนำทางด้วยแป้นพิมพ์ได้พร้อมบทบาท ARIA การแจ้งเตือนถูกประกาศให้โปรแกรมอ่านหน้าจอ"
-  },
-  "changelogAnimationsTitle": {
-    "message": "แอนิเมชันที่ลื่นขึ้น"
-  },
-  "changelogAnimationsDesc": {
-    "message": "แอนิเมชันแบบเรียงลำดับถูกจำกัดแล้ว หน้าต่างที่มีแท็บจำนวนมากจะไม่มีการหน่วงเวลานาน"
   },
   "changelogCtaText": {
     "message": "Drowzy ฟรีและโอเพ่นซอร์ส หากประหยัดหน่วยความจำได้ ลองเขียนรีวิวหรือให้ดาวบน GitHub"
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "ให้ดาวบน GitHub"
-  },
-  "suspendThis": {
-    "message": "ระงับแท็บ"
-  },
-  "failedToSuspend": {
-    "message": "ไม่สามารถระงับแท็บนี้ได้"
   },
   "closedDuplicates": {
     "message": "ปิดแท็บซ้ำ $COUNT$ แท็บแล้ว",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "เร็วๆ นี้"
   },
-  "confirm": {
-    "message": "แน่ใจ?"
+  "changelogVersionLabel": {
+    "message": "เวอร์ชัน"
+  },
+  "copiedStats": {
+    "message": "คัดลอกสถิติแล้ว!"
+  },
+  "privacyFooterLink": {
+    "message": "ดูโค้ดบน GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy เป็นโอเพนซอร์ส"
+  },
+  "privacyPermHost": {
+    "message": "การเข้าถึงโฮสต์ตามตัวเลือก ขอตามต้องการเฉพาะเมื่อคุณเปิดใช้การปกป้องฟอร์มหรือการทำเครื่องหมายแท็บที่ระงับ ไม่เคยขอตอนติดตั้ง สามารถเพิกถอนได้ตลอดเวลา"
+  },
+  "privacyPermScripting": {
+    "message": "ฉีดสคริปต์เล็กๆ เพื่อตรวจจับข้อมูลฟอร์มที่ยังไม่ได้บันทึกก่อนระงับแท็บ เลือกเข้าร่วมเท่านั้น"
+  },
+  "privacyPermSidePanel": {
+    "message": "แสดง Drowzy ในแผงด้านข้างของ Chrome"
+  },
+  "privacyYourDataText": {
+    "message": "เนื่องจากไม่มีอะไรออกจากเบราว์เซอร์ของคุณ ไม่มีแดชบอร์ด ไม่มีบัญชี และไม่มีวิธีที่เราจะเห็นสิ่งที่คุณทำกับ Drowzy หากคุณถอนการติดตั้ง Drowzy, Chrome จะเสนอโอกาสให้คุณส่งคำติชมตามตัวเลือก (เหตุผลในการถอนการติดตั้ง เบราว์เซอร์ OS) ผ่านหน้าเว็บแยกต่างหาก การส่งนั้นชัดเจนและไปยังแบบฟอร์มที่ไม่ระบุชื่อ คุณสามารถข้ามได้โดยปิดแท็บ"
+  },
+  "privacyYourDataTitle": {
+    "message": "ข้อมูลของคุณ"
+  },
+  "ramEstimateTooltip": {
+    "message": "ประมาณการโดยใช้ ~150 MB ต่อแท็บที่ระงับ การประหยัดจริงแตกต่างกันไปตามหน้า"
+  },
+  "shareStats": {
+    "message": "แชร์"
+  },
+  "statLifetimeRam": {
+    "message": "RAM ที่ประหยัดได้ทั้งหมด"
+  },
+  "confirmDeleteTitle": {
+    "message": "คลิกอีกครั้งเพื่อยืนยันการลบ"
   }
 }

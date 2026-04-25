@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Συνολικά"
   },
-  "statRamSaved": {
-    "message": "RAM που εξοικονομήθηκε (εκτ.)"
-  },
   "statMemberSince": {
     "message": "Μέλος από"
   },
@@ -343,13 +340,10 @@
     "message": "Κατάλαβα, πάμε"
   },
   "privacyTitle": {
-    "message": "Drowzy – Πολιτική απορρήτου"
+    "message": "Πολιτική απορρήτου"
   },
   "privacyUpdated": {
     "message": "Τελευταία ενημέρωση: Απρίλιος 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Η σύντομη εκδοχή"
   },
   "privacyShortText": {
     "message": "Το Drowzy δεν συλλέγει κανένα δεδομένο. Χωρίς αναλύσεις, χωρίς παρακολούθηση, χωρίς εξωτερικούς διακομιστές. Τα πάντα μένουν στον περιηγητή σας."
@@ -364,19 +358,19 @@
     "message": "Δικαιώματα"
   },
   "privacyPermissionsIntro": {
-    "message": "Το Drowzy χρησιμοποιεί αυτά τα δικαιώματα Chrome:"
+    "message": "Το Drowzy ζητά μόνο τα δικαιώματα που χρειάζεται για τη μοναδική του δουλειά:"
   },
   "privacyPermTabs": {
-    "message": "tabs – λίστα, αναστολή και επαναφορά καρτελών περιηγητή"
+    "message": "Καταχώριση, αναστολή και επαναφορά καρτελών του προγράμματος περιήγησης."
   },
   "privacyPermStorage": {
-    "message": "storage – τοπική αποθήκευση των ρυθμίσεών σας"
+    "message": "Τοπική αποθήκευση των ρυθμίσεων και των συνεδριών σας."
   },
   "privacyPermAlarms": {
-    "message": "alarms – περιοδικοί έλεγχοι για ανενεργές καρτέλες"
+    "message": "Περιοδικοί έλεγχοι ανενεργών καρτελών (κάθε 60 δευτερόλεπτα)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – επιλογές μενού δεξιού κλικ"
+    "message": "Επιλογές μενού δεξιού κλικ για αναστολή και λευκή λίστα."
   },
   "privacyContactTitle": {
     "message": "Επικοινωνία"
@@ -440,82 +434,19 @@
     "message": "Όχι ιδιαίτερα"
   },
   "whatsNew": {
-    "message": "Τι νέο στη v1.3.1"
+    "message": "Τι νέο στη v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Τι νέο στο Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Τι νέο"
-  },
-  "changelogNewFeatures": {
-    "message": "Νέα χαρακτηριστικά"
-  },
-  "changelogBugFixes": {
-    "message": "Διορθώσεις σφαλμάτων"
-  },
-  "changelogImprovements": {
-    "message": "Βελτιώσεις"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Αίτημα αξιολόγησης"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Αφού αναστείλετε μερικές καρτέλες, το Drowzy θα ρωτήσει αν σας αρέσει. Ένα γρήγορο thumbs up μας βοηθάει πολύ!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Σελίδα αλλαγών"
-  },
-  "changelogChangelogDesc": {
-    "message": "Την βλέπετε! Ανοίγει αυτόματα κατά την ενημέρωση. Προσβάσιμη από τις Ρυθμίσεις."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Χρονισμός επαναφοράς συνεδρίας"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Οι επαναφερμένες καρτέλες δεν αναστέλλονται πλέον αμέσως. Τώρα επαναφέρουν σωστά τους χρονομετρητές αδράνειας."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Χρονικό όριο ελέγχου φόρμας"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Ο έλεγχος φόρμας έχει πλέον χρονικό όριο 500ms, ώστε οι μη ανταποκρινόμενες καρτέλες να μην μπλοκάρουν την ουρά."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Διπλότυπα λευκής λίστας"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Διορθώθηκε πρόβλημα ευαισθησίας πεζών-κεφαλαίων όπου τα \"Example.com\" και \"example.com\" μπορούσαν να προστεθούν και τα δύο. Όλες οι καταχωρίσεις είναι πλέον κανονικοποιημένες."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Ζωντανά στατιστικά"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Το popup ανανεώνεται αυτόματα όταν οι καρτέλες αναστέλλονται ή ξυπνούν."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Επιλογές επαναφοράς συνεδρίας"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Οι συνεδρίες έχουν πλέον ξεχωριστά κουμπιά \"Άνοιγμα\" και \"Αντικατάσταση\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Επαλήθευση και εξαγωγή/εισαγωγή λευκής λίστας"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Η εισαγωγή λευκής λίστας τώρα επαληθεύει τομείς. Μπορείτε να εξάγετε και εισάγετε μέσω προχείρου."
-  },
-  "changelogA11yTitle": {
-    "message": "Προσβασιμότητα"
-  },
-  "changelogA11yDesc": {
-    "message": "Τα στοιχεία λίστας καρτελών μπορούν πλέον να πλοηγηθούν με πληκτρολόγιο με ρόλους ARIA. Οι ειδοποιήσεις ανακοινώνονται σε αναγνώστες οθόνης."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Ομαλότερα κινούμενα σχέδια"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Τα κλιμακωτά εφέ κίνησης είναι πλέον περιορισμένα ώστε τα παράθυρα με πολλές καρτέλες να μην έχουν μεγάλη καθυστέρηση."
   },
   "changelogCtaText": {
     "message": "Το Drowzy είναι δωρεάν και ανοιχτού κώδικα. Αν σας εξοικονομεί μνήμη, αφήστε μια αξιολόγηση ή ένα αστέρι στο GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Αστέρι στο GitHub"
-  },
-  "suspendThis": {
-    "message": "Αναστολή καρτέλας"
-  },
-  "failedToSuspend": {
-    "message": "Δεν είναι δυνατή η αναστολή αυτής της καρτέλας"
   },
   "closedDuplicates": {
     "message": "Κλείστηκαν $COUNT$ διπλότυπες καρτέλες",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "σύντομα"
   },
-  "confirm": {
-    "message": "Σίγουρα;"
+  "changelogVersionLabel": {
+    "message": "Έκδοση"
+  },
+  "copiedStats": {
+    "message": "Τα στατιστικά αντιγράφηκαν!"
+  },
+  "privacyFooterLink": {
+    "message": "Περιήγηση στον κώδικα στο GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Το Drowzy είναι ανοιχτού κώδικα."
+  },
+  "privacyPermHost": {
+    "message": "Προαιρετική πρόσβαση κεντρικού υπολογιστή, ζητείται κατ' απαίτηση μόνο όταν ενεργοποιείτε την Προστασία Φόρμας ή τη Σήμανση Ανεσταλμένων Καρτελών. Δεν ζητείται ποτέ κατά την εγκατάσταση. Ανακλητέα ανά πάσα στιγμή."
+  },
+  "privacyPermScripting": {
+    "message": "Εισαγωγή ενός μικρού script για ανίχνευση μη αποθηκευμένων δεδομένων φόρμας πριν την αναστολή μιας καρτέλας. Μόνο προαιρετικά."
+  },
+  "privacyPermSidePanel": {
+    "message": "Εμφάνιση του Drowzy στο πλευρικό πάνελ του Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Επειδή τίποτα δεν φεύγει από το πρόγραμμα περιήγησής σας, δεν υπάρχει πίνακας ελέγχου, λογαριασμός ή τρόπος να δούμε τι έχετε κάνει με το Drowzy. Εάν απεγκαταστήσετε το Drowzy, το Chrome σας προσφέρει την ευκαιρία να στείλετε προαιρετικά σχόλια (λόγος απεγκατάστασης, πρόγραμμα περιήγησης, OS) μέσω μιας ξεχωριστής ιστοσελίδας· αυτή η υποβολή είναι ρητή και πηγαίνει σε μια ανώνυμη φόρμα. Μπορείτε να την παρακάμψετε κλείνοντας την καρτέλα."
+  },
+  "privacyYourDataTitle": {
+    "message": "Τα δεδομένα σας"
+  },
+  "ramEstimateTooltip": {
+    "message": "Εκτιμάται χρησιμοποιώντας ~150 MB ανά ανεσταλμένη καρτέλα. Η πραγματική εξοικονόμηση διαφέρει ανά σελίδα."
+  },
+  "shareStats": {
+    "message": "Κοινοποίηση"
+  },
+  "statLifetimeRam": {
+    "message": "Συνολική RAM που εξοικονομήθηκε"
+  },
+  "confirmDeleteTitle": {
+    "message": "Κάντε ξανά κλικ για επιβεβαίωση διαγραφής"
   }
 }

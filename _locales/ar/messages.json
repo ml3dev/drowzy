@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "كل الأوقات"
   },
-  "statRamSaved": {
-    "message": "RAM الموفّرة (تقديري)"
-  },
   "statMemberSince": {
     "message": "عضو منذ"
   },
@@ -343,13 +340,10 @@
     "message": "فهمت، هيا بنا"
   },
   "privacyTitle": {
-    "message": "Drowzy – سياسة الخصوصية"
+    "message": "سياسة الخصوصية"
   },
   "privacyUpdated": {
     "message": "آخر تحديث: أبريل 2026"
-  },
-  "privacyShortTitle": {
-    "message": "النسخة المختصرة"
   },
   "privacyShortText": {
     "message": "Drowzy لا يجمع أي بيانات. لا تحليلات، لا تتبع، لا خوادم خارجية. كل شيء يبقى في متصفحك."
@@ -364,19 +358,19 @@
     "message": "الأذونات"
   },
   "privacyPermissionsIntro": {
-    "message": "يستخدم Drowzy أذونات Chrome التالية:"
+    "message": "يطلب Drowzy فقط الأذونات التي يحتاجها لأداء وظيفته الواحدة:"
   },
   "privacyPermTabs": {
-    "message": "tabs – عرض وتعليق واستعادة تبويبات المتصفح"
+    "message": "إدراج علامات تبويب المتصفح وتعليقها واستعادتها."
   },
   "privacyPermStorage": {
-    "message": "storage – حفظ إعداداتك محليًا"
+    "message": "حفظ إعداداتك وجلساتك محليًا."
   },
   "privacyPermAlarms": {
-    "message": "alarms – فحوصات دورية للتبويبات غير النشطة"
+    "message": "فحوصات دورية للعلامات غير النشطة (كل 60 ثانية)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – خيارات قائمة النقر بزر الماوس الأيمن"
+    "message": "خيارات قائمة النقر بالزر الأيمن للتعليق والقائمة البيضاء."
   },
   "privacyContactTitle": {
     "message": "التواصل"
@@ -440,82 +434,19 @@
     "message": "ليس حقًا"
   },
   "whatsNew": {
-    "message": "الجديد في v1.3.1"
+    "message": "الجديد في v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "الجديد في Drowzy"
   },
   "changelogWhatsNew": {
     "message": "ما الجديد"
-  },
-  "changelogNewFeatures": {
-    "message": "ميزات جديدة"
-  },
-  "changelogBugFixes": {
-    "message": "إصلاحات"
-  },
-  "changelogImprovements": {
-    "message": "تحسينات"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "طلب تقييم"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "بعد تعليق بعض التبويبات، سيسألك Drowzy إذا كنت تستمتع به. إبهام سريع يساعدنا كثيرًا!"
-  },
-  "changelogChangelogTitle": {
-    "message": "صفحة سجل التغييرات"
-  },
-  "changelogChangelogDesc": {
-    "message": "أنت تنظر إليها! تفتح تلقائيًا عند التحديث. يمكنك الوصول إليها من الإعدادات."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "توقيت استعادة الجلسة"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "لم تعد التبويبات المستعادة تُعلّق تلقائيًا. أصبحت تعيد تعيين مؤقتات الخمول بشكل صحيح."
-  },
-  "changelogFormCheckTitle": {
-    "message": "مهلة فحص النموذج"
-  },
-  "changelogFormCheckDesc": {
-    "message": "أصبح لفحص النموذج مهلة 500 مللي ثانية حتى لا تتمكن التبويبات غير المستجيبة من حظر القائمة."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "تكرارات القائمة البيضاء"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "تم إصلاح مشكلة حساسية الأحرف. جميع الإدخالات أصبحت موحدة."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "إحصائيات مباشرة"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "يتم تحديث النافذة المنبثقة تلقائيًا عند تعليق أو إيقاظ التبويبات في الخلفية."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "خيارات استعادة الجلسة"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "أصبح للجلسات أزرار \"فتح\" و\"استبدال\" منفصلة."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "التحقق من القائمة البيضاء والتصدير/الاستيراد"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "يتم الآن التحقق من إدخال القائمة البيضاء. يمكنك تصدير واستيراد قائمتك عبر الحافظة."
-  },
-  "changelogA11yTitle": {
-    "message": "إمكانية الوصول"
-  },
-  "changelogA11yDesc": {
-    "message": "أصبحت عناصر القائمة قابلة للتنقل بلوحة المفاتيح مع أدوار ARIA مناسبة. يتم الإعلان عن الإشعارات لقارئات الشاشة."
-  },
-  "changelogAnimationsTitle": {
-    "message": "حركات أكثر سلاسة"
-  },
-  "changelogAnimationsDesc": {
-    "message": "أصبحت حركات القائمة محدودة حتى لا تتسبب النوافذ ذات التبويبات الكثيرة في تأخير طويل."
   },
   "changelogCtaText": {
     "message": "Drowzy مجاني ومفتوح المصدر. إذا كان يوفر لك الذاكرة، فكر في ترك تقييم أو نجمة على GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "نجمة على GitHub"
-  },
-  "suspendThis": {
-    "message": "تعليق علامة التبويب"
-  },
-  "failedToSuspend": {
-    "message": "لا يمكن تعليق علامة التبويب هذه"
   },
   "closedDuplicates": {
     "message": "تم إغلاق $COUNT$ علامة(ات) تبويب مكررة",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "قريبًا"
   },
-  "confirm": {
-    "message": "متأكد؟"
+  "changelogVersionLabel": {
+    "message": "الإصدار"
+  },
+  "copiedStats": {
+    "message": "تم نسخ الإحصائيات!"
+  },
+  "privacyFooterLink": {
+    "message": "تصفح الكود على GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy مفتوح المصدر."
+  },
+  "privacyPermHost": {
+    "message": "وصول مضيف اختياري، يُطلب عند الحاجة فقط عند تفعيل حماية النماذج أو تمييز علامات التبويب المعلقة. لا يُطلب أبدًا عند التثبيت. يمكن إلغاؤه في أي وقت."
+  },
+  "privacyPermScripting": {
+    "message": "حقن نص برمجي صغير لاكتشاف بيانات النموذج غير المحفوظة قبل تعليق علامة التبويب. اختياري فقط."
+  },
+  "privacyPermSidePanel": {
+    "message": "عرض Drowzy في لوحة Chrome الجانبية."
+  },
+  "privacyYourDataText": {
+    "message": "نظرًا لأن لا شيء يغادر متصفحك، لا توجد لوحة معلومات، ولا حساب، ولا طريقة لنا لرؤية ما فعلته بـ Drowzy. إذا قمت بإلغاء تثبيت Drowzy، يقدم لك Chrome فرصة لإرسال ملاحظات اختيارية (سبب الإلغاء، المتصفح، نظام التشغيل) عبر صفحة ويب منفصلة؛ هذا الإرسال صريح ويذهب إلى نموذج مجهول. يمكنك تخطيه بإغلاق علامة التبويب."
+  },
+  "privacyYourDataTitle": {
+    "message": "بياناتك"
+  },
+  "ramEstimateTooltip": {
+    "message": "يُقدر باستخدام ~150 ميجابايت لكل علامة تبويب معلقة. التوفير الفعلي يختلف حسب الصفحة."
+  },
+  "shareStats": {
+    "message": "مشاركة"
+  },
+  "statLifetimeRam": {
+    "message": "إجمالي ذاكرة موفرة"
+  },
+  "confirmDeleteTitle": {
+    "message": "انقر مرة أخرى لتأكيد الحذف"
   }
 }

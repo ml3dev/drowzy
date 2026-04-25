@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "మొత్తం"
   },
-  "statRamSaved": {
-    "message": "ఆదా అయిన RAM (అంచనా)"
-  },
   "statMemberSince": {
     "message": "సభ్యుడు ఎప్పటి నుండి"
   },
@@ -343,13 +340,10 @@
     "message": "అర్థమైంది, మొదలు పెడదాం"
   },
   "privacyTitle": {
-    "message": "Drowzy – గోప్యతా విధానం"
+    "message": "గోప్యతా విధానం"
   },
   "privacyUpdated": {
     "message": "చివరిగా నవీకరించబడింది: ఏప్రిల్ 2026"
-  },
-  "privacyShortTitle": {
-    "message": "సంక్షిప్త వెర్షన్"
   },
   "privacyShortText": {
     "message": "Drowzy ఎటువంటి డేటాను సేకరించదు. విశ్లేషణలు లేవు, ట్రాకింగ్ లేదు, బాహ్య సర్వర్లు లేవు. అంతా మీ బ్రౌజర్‌లో ఉంటుంది."
@@ -364,19 +358,19 @@
     "message": "అనుమతులు"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy ఈ Chrome అనుమతులను ఉపయోగిస్తుంది:"
+    "message": "Drowzy దాని ఒక పనిని చేయడానికి అవసరమైన అనుమతులను మాత్రమే అభ్యర్థిస్తుంది:"
   },
   "privacyPermTabs": {
-    "message": "tabs – బ్రౌజర్ ట్యాబ్‌లను జాబితా చేయడం, సస్పెండ్ చేయడం మరియు పునరుద్ధరించడం"
+    "message": "బ్రౌజర్ ట్యాబ్‌లను జాబితా చేయడం, సస్పెండ్ చేయడం మరియు పునరుద్ధరించడం."
   },
   "privacyPermStorage": {
-    "message": "storage – మీ సెట్టింగ్‌లను స్థానికంగా సేవ్ చేయడం"
+    "message": "మీ సెట్టింగ్‌లు మరియు సెషన్‌లను స్థానికంగా సేవ్ చేయడం."
   },
   "privacyPermAlarms": {
-    "message": "alarms – నిష్క్రియ ట్యాబ్‌ల కోసం ఆవర్తన తనిఖీలు"
+    "message": "నిష్క్రియ ట్యాబ్‌ల కోసం ఆవర్తన తనిఖీలు (ప్రతి 60 సెకన్లకు)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – కుడి క్లిక్ మెనూ ఎంపికలు"
+    "message": "సస్పెండ్ మరియు వైట్‌లిస్ట్ కోసం రైట్-క్లిక్ మెనూ ఎంపికలు."
   },
   "privacyContactTitle": {
     "message": "సంప్రదింపు"
@@ -440,82 +434,19 @@
     "message": "అంతగా కాదు"
   },
   "whatsNew": {
-    "message": "v1.3.1 లో కొత్తవి"
+    "message": "v$VERSION$ లో కొత్తవి",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzy లో కొత్తవి"
   },
   "changelogWhatsNew": {
     "message": "కొత్తవి"
-  },
-  "changelogNewFeatures": {
-    "message": "కొత్త ఫీచర్లు"
-  },
-  "changelogBugFixes": {
-    "message": "బగ్ ఫిక్స్‌లు"
-  },
-  "changelogImprovements": {
-    "message": "మెరుగుదలలు"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "సమీక్ష అభ్యర్థన"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "కొన్ని ట్యాబ్‌లను సస్పెండ్ చేసిన తర్వాత, Drowzy మీకు నచ్చుతోందా అని అడుగుతుంది. త్వరిత థంబ్స్ అప్ మాకు చాలా సహాయం చేస్తుంది!"
-  },
-  "changelogChangelogTitle": {
-    "message": "మార్పు లాగ్ పేజీ"
-  },
-  "changelogChangelogDesc": {
-    "message": "మీరు దాన్ని చూస్తున్నారు! అప్‌డేట్ సమయంలో స్వయంచాలకంగా తెరుచుకుంటుంది. సెట్టింగ్‌ల నుండి ఎప్పుడైనా యాక్సెస్ చేయండి."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "సెషన్ పునరుద్ధరణ సమయం"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "పునరుద్ధరించిన ట్యాబ్‌లు ఇకపై వెంటనే ఆటో-సస్పెండ్ కావు. అవి ఇప్పుడు తమ ఐడిల్ టైమర్‌లను సరిగ్గా రీసెట్ చేస్తాయి."
-  },
-  "changelogFormCheckTitle": {
-    "message": "ఫారమ్ తనిఖీ సమయం ముగిసింది"
-  },
-  "changelogFormCheckDesc": {
-    "message": "ఫారమ్ డేటా తనిఖీకి ఇప్పుడు 500ms టైమ్‌అవుట్ ఉంది, కాబట్టి స్పందించని ట్యాబ్‌లు క్యూను బ్లాక్ చేయలేవు."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "వైట్‌లిస్ట్ డూప్లికేట్‌లు"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "\"Example.com\" మరియు \"example.com\" రెండూ జోడించగలిగే కేస్ సెన్సిటివిటీ సమస్య పరిష్కరించబడింది. అన్ని ఎంట్రీలు ఇప్పుడు సాధారణీకరించబడ్డాయి."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "లైవ్ గణాంకాలు"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "ట్యాబ్‌లు సస్పెండ్ చేయబడినప్పుడు లేదా మేల్కొన్నప్పుడు పాప్‌అప్ స్వయంచాలకంగా రిఫ్రెష్ అవుతుంది."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "సెషన్ పునరుద్ధరణ ఎంపికలు"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "సెషన్‌లకు ఇప్పుడు ప్రత్యేక \"ఓపెన్\" మరియు \"భర్తీ\" బటన్‌లు ఉన్నాయి."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "వైట్‌లిస్ట్ ధ్రువీకరణ మరియు ఎగుమతి/దిగుమతి"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "వైట్‌లిస్ట్ ఇన్‌పుట్ ఇప్పుడు డొమైన్‌లను ధ్రువీకరిస్తుంది. క్లిప్‌బోర్డ్ ద్వారా ఎగుమతి మరియు దిగుమతి చేయవచ్చు."
-  },
-  "changelogA11yTitle": {
-    "message": "ప్రాప్యత"
-  },
-  "changelogA11yDesc": {
-    "message": "ట్యాబ్ జాబితా ఐటమ్‌లు ఇప్పుడు ARIA పాత్రలతో కీబోర్డ్-నావిగేట్ చేయగలవు. టోస్ట్ నోటిఫికేషన్‌లు స్క్రీన్ రీడర్‌లకు ప్రకటించబడతాయి."
-  },
-  "changelogAnimationsTitle": {
-    "message": "మృదువైన యానిమేషన్‌లు"
-  },
-  "changelogAnimationsDesc": {
-    "message": "ట్యాబ్ జాబితా స్ట్యాగర్ యానిమేషన్‌లు ఇప్పుడు పరిమితం చేయబడ్డాయి కాబట్టి అనేక ట్యాబ్‌లు ఉన్న విండోలలో సుదీర్ఘ ఆలస్యం ఉండదు."
   },
   "changelogCtaText": {
     "message": "Drowzy ఉచితం మరియు ఓపెన్ సోర్స్. మెమరీ ఆదా చేస్తుంటే, సమీక్ష లేదా GitHub లో స్టార్ ఇవ్వండి."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "GitHub లో స్టార్"
-  },
-  "suspendThis": {
-    "message": "ట్యాబ్‌ని నిలిపివేయండి"
-  },
-  "failedToSuspend": {
-    "message": "ఈ ట్యాబ్‌ని నిలిపివేయలేరు"
   },
   "closedDuplicates": {
     "message": "$COUNT$ నకిలీ ట్యాబ్(లు) మూసివేయబడ్డాయి",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "త్వరలో"
   },
-  "confirm": {
-    "message": "ఖచ్చితమా?"
+  "changelogVersionLabel": {
+    "message": "వెర్షన్"
+  },
+  "copiedStats": {
+    "message": "గణాంకాలు కాపీ చేయబడ్డాయి!"
+  },
+  "privacyFooterLink": {
+    "message": "GitHub లో కోడ్ బ్రౌజ్ చేయండి"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy ఓపెన్ సోర్స్."
+  },
+  "privacyPermHost": {
+    "message": "ఐచ్ఛిక హోస్ట్ యాక్సెస్, మీరు ఫారమ్ రక్షణ లేదా సస్పెండ్-ట్యాబ్ గుర్తింపును ప్రారంభించినప్పుడు మాత్రమే డిమాండ్‌పై అభ్యర్థించబడుతుంది. ఇన్‌స్టాల్‌లో ఎప్పటికీ అభ్యర్థించబడదు. ఎప్పుడైనా రద్దు చేయవచ్చు."
+  },
+  "privacyPermScripting": {
+    "message": "ట్యాబ్‌ను సస్పెండ్ చేయడానికి ముందు సేవ్ చేయని ఫారమ్ డేటాను గుర్తించడానికి ఒక చిన్న స్క్రిప్ట్‌ను ఇంజెక్ట్ చేయడం. ఆప్ట్-ఇన్ మాత్రమే."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome యొక్క సైడ్ ప్యానెల్‌లో Drowzy ప్రదర్శించడం."
+  },
+  "privacyYourDataText": {
+    "message": "ఏదీ మీ బ్రౌజర్‌ను వదిలి వెళ్లనందున, డాష్‌బోర్డ్ లేదు, ఖాతా లేదు, మరియు మీరు Drowzy తో ఏమి చేశారో చూడటానికి మాకు మార్గం లేదు. మీరు Drowzy ను అన్‌ఇన్‌స్టాల్ చేస్తే, Chrome మీకు ప్రత్యేక వెబ్ పేజీ ద్వారా ఐచ్ఛిక అభిప్రాయం (అన్‌ఇన్‌స్టాల్ చేయడానికి కారణం, బ్రౌజర్, OS) పంపే అవకాశాన్ని అందిస్తుంది; ఆ సమర్పణ స్పష్టమైనది మరియు అనామక ఫారమ్‌కు వెళుతుంది. మీరు ట్యాబ్‌ను మూసివేయడం ద్వారా దానిని దాటవేయవచ్చు."
+  },
+  "privacyYourDataTitle": {
+    "message": "మీ డేటా"
+  },
+  "ramEstimateTooltip": {
+    "message": "సస్పెండ్ చేసిన ట్యాబ్‌కు ~150 MB ఉపయోగించి అంచనా వేయబడింది. వాస్తవ ఆదా పేజీని బట్టి మారుతుంది."
+  },
+  "shareStats": {
+    "message": "భాగస్వామ్యం చేయండి"
+  },
+  "statLifetimeRam": {
+    "message": "మొత్తం RAM ఆదా"
+  },
+  "confirmDeleteTitle": {
+    "message": "తొలగింపును నిర్ధారించడానికి మళ్లీ క్లిక్ చేయండి"
   }
 }

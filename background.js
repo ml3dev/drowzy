@@ -110,10 +110,11 @@ async function onInstalled(details) {
     let version = chrome.runtime.getManifest().version;
     let data = await chrome.storage.local.get('drowzy_lastChangelogVersion');
     let lastVer = data.drowzy_lastChangelogVersion || '';
-    // Only show changelog on major/minor bumps (e.g. 1.2.x → 1.3.x), not patches
-    let curMinor = version.split('.').slice(0, 2).join('.');
-    let lastMinor = lastVer.split('.').slice(0, 2).join('.');
-    if (curMinor !== lastMinor) {
+    // Only show changelog on MAJOR version bumps (e.g. 1.x.x → 2.x.x).
+    // Minor and patch bumps silently update the stored version.
+    let curMajor = version.split('.')[0];
+    let lastMajor = lastVer.split('.')[0];
+    if (lastVer && curMajor !== lastMajor) {
       await chrome.storage.local.set({ drowzy_lastChangelogVersion: version });
       try { chrome.tabs.create({ url: 'changelog.html' }); } catch {}
     } else if (lastVer !== version) {

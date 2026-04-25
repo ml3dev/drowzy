@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Depuis le début"
   },
-  "statRamSaved": {
-    "message": "RAM économisée (est.)"
-  },
   "statMemberSince": {
     "message": "Membre depuis"
   },
@@ -343,13 +340,10 @@
     "message": "Compris, c'est parti"
   },
   "privacyTitle": {
-    "message": "Drowzy – Politique de confidentialité"
+    "message": "Politique de confidentialité"
   },
   "privacyUpdated": {
     "message": "Dernière mise à jour : avril 2026"
-  },
-  "privacyShortTitle": {
-    "message": "En bref"
   },
   "privacyShortText": {
     "message": "Drowzy ne collecte aucune donnée. Pas d'analytique, pas de pistage, pas de serveurs externes. Tout reste dans votre navigateur."
@@ -364,19 +358,19 @@
     "message": "Autorisations"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy utilise ces autorisations Chrome :"
+    "message": "Drowzy ne demande que les autorisations dont il a besoin pour effectuer sa seule tâche :"
   },
   "privacyPermTabs": {
-    "message": "tabs – lister, suspendre et restaurer les onglets du navigateur"
+    "message": "Lister, suspendre et restaurer les onglets du navigateur."
   },
   "privacyPermStorage": {
-    "message": "storage – enregistrer vos paramètres localement"
+    "message": "Enregistrement local de vos paramètres et sessions."
   },
   "privacyPermAlarms": {
-    "message": "alarms – vérifications périodiques des onglets inactifs"
+    "message": "Vérifications périodiques des onglets inactifs (toutes les 60 secondes)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – options du menu contextuel"
+    "message": "Options du menu clic droit pour suspendre et la liste blanche."
   },
   "privacyContactTitle": {
     "message": "Contact"
@@ -440,82 +434,19 @@
     "message": "Pas vraiment"
   },
   "whatsNew": {
-    "message": "Nouveautés de la v1.3.1"
+    "message": "Nouveautés de la v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Nouveautés de Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nouveautés"
-  },
-  "changelogNewFeatures": {
-    "message": "Nouvelles fonctionnalités"
-  },
-  "changelogBugFixes": {
-    "message": "Corrections de bugs"
-  },
-  "changelogImprovements": {
-    "message": "Améliorations"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Demande d'avis"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Après avoir suspendu quelques onglets, Drowzy vous demandera si vous l'appréciez. Un pouce en l'air nous aide beaucoup !"
-  },
-  "changelogChangelogTitle": {
-    "message": "Page des changements"
-  },
-  "changelogChangelogDesc": {
-    "message": "Vous la regardez ! S'ouvre automatiquement lors des mises à jour. Accessible à tout moment depuis les Paramètres."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Timing de restauration de session"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Les onglets restaurés ne sont plus suspendus immédiatement. Ils réinitialisent correctement leurs minuteries d'inactivité."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Délai de vérification des formulaires"
-  },
-  "changelogFormCheckDesc": {
-    "message": "La vérification des formulaires a maintenant un délai de 500ms pour que les onglets non réactifs ne bloquent pas la file."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Doublons de liste blanche"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Correction du problème de sensibilité à la casse. Toutes les entrées sont maintenant normalisées."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Statistiques en direct"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Le popup se rafraîchit automatiquement lorsque les onglets sont suspendus ou réveillés en arrière-plan."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Options de restauration de session"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Les sessions ont maintenant des boutons séparés « Ouvrir » et « Remplacer »."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Validation et export/import de la liste blanche"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "L'entrée de la liste blanche valide maintenant les domaines. Vous pouvez aussi exporter et importer votre liste via le presse-papiers."
-  },
-  "changelogA11yTitle": {
-    "message": "Accessibilité"
-  },
-  "changelogA11yDesc": {
-    "message": "Les éléments de la liste d'onglets sont maintenant navigables au clavier avec des rôles ARIA corrects. Les notifications sont annoncées aux lecteurs d'écran."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Animations plus fluides"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Les animations échelonnées sont maintenant plafonnées pour éviter de longs délais en cascade."
   },
   "changelogCtaText": {
     "message": "Drowzy est gratuit et open source. S'il vous fait économiser de la mémoire, pensez à laisser un avis ou une étoile sur GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Étoile sur GitHub"
-  },
-  "suspendThis": {
-    "message": "Suspendre l'onglet"
-  },
-  "failedToSuspend": {
-    "message": "Impossible de suspendre cet onglet"
   },
   "closedDuplicates": {
     "message": "$COUNT$ onglet(s) en double fermé(s)",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "bientôt"
   },
-  "confirm": {
-    "message": "Sûr ?"
+  "changelogVersionLabel": {
+    "message": "Version"
+  },
+  "copiedStats": {
+    "message": "Statistiques copiées !"
+  },
+  "privacyFooterLink": {
+    "message": "Voir le code sur GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy est open source."
+  },
+  "privacyPermHost": {
+    "message": "Accès hôte optionnel, demandé à la demande uniquement lorsque vous activez la Protection des formulaires ou le Marquage des onglets suspendus. Jamais demandé à l'installation. Révocable à tout moment."
+  },
+  "privacyPermScripting": {
+    "message": "Injection d'un petit script pour détecter les données de formulaire non enregistrées avant de suspendre un onglet. Sur invitation uniquement."
+  },
+  "privacyPermSidePanel": {
+    "message": "Affichage de Drowzy dans le panneau latéral de Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Comme rien ne quitte votre navigateur, il n'y a pas de tableau de bord, pas de compte, et aucun moyen pour nous de voir ce que vous avez fait avec Drowzy. Si vous désinstallez Drowzy, Chrome vous offre la possibilité d'envoyer des commentaires optionnels (raison de la désinstallation, navigateur, OS) via une page web séparée ; cet envoi est explicite et va à un formulaire anonyme. Vous pouvez le passer en fermant l'onglet."
+  },
+  "privacyYourDataTitle": {
+    "message": "Vos données"
+  },
+  "ramEstimateTooltip": {
+    "message": "Estimé en utilisant ~150 Mo par onglet suspendu. Les économies réelles varient selon la page."
+  },
+  "shareStats": {
+    "message": "Partager"
+  },
+  "statLifetimeRam": {
+    "message": "RAM totale économisée"
+  },
+  "confirmDeleteTitle": {
+    "message": "Cliquez à nouveau pour confirmer la suppression"
   }
 }

@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Kogu aeg"
   },
-  "statRamSaved": {
-    "message": "Säästetud RAM (hinnang)"
-  },
   "statMemberSince": {
     "message": "Liige alates"
   },
@@ -343,13 +340,10 @@
     "message": "Selge, alustame"
   },
   "privacyTitle": {
-    "message": "Drowzy – Privaatsuspoliitika"
+    "message": "Privaatsuspoliitika"
   },
   "privacyUpdated": {
     "message": "Viimati uuendatud: aprill 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Lühiversioon"
   },
   "privacyShortText": {
     "message": "Drowzy ei kogu mingeid andmeid. Pole analüütikat, pole jälgimist, pole välisservereid. Kõik jääb sinu brauserisse."
@@ -364,19 +358,19 @@
     "message": "Õigused"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy kasutab järgmisi Chrome'i õigusi:"
+    "message": "Drowzy küsib ainult lubasid, mida ta vajab ühe töö tegemiseks:"
   },
   "privacyPermTabs": {
-    "message": "tabs – brauseri vahelehtede loetlemine, peatamine ja taastamine"
+    "message": "Brauseri vahekaartide loendamine, peatamine ja taastamine."
   },
   "privacyPermStorage": {
-    "message": "storage – seadete kohalik salvestamine"
+    "message": "Teie sätete ja seansside lokaalne salvestamine."
   },
   "privacyPermAlarms": {
-    "message": "alarms – perioodilised kontrollid mitteaktiivsete vahelehtede jaoks"
+    "message": "Mitteaktiivsete vahekaartide perioodilised kontrollid (iga 60 sekundi tagant)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – paremklõpsu menüü valikud"
+    "message": "Paremklõpsumenüü valikud peatamiseks ja valge nimekirja jaoks."
   },
   "privacyContactTitle": {
     "message": "Kontakt"
@@ -440,82 +434,19 @@
     "message": "Mitte eriti"
   },
   "whatsNew": {
-    "message": "Mis on uut versioonis 1.1.0"
+    "message": "Mis on uut versioonis 1.1.0 v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Mis on Drowzys uut"
   },
   "changelogWhatsNew": {
     "message": "Mis on uut"
-  },
-  "changelogNewFeatures": {
-    "message": "Uued funktsioonid"
-  },
-  "changelogBugFixes": {
-    "message": "Veaparandused"
-  },
-  "changelogImprovements": {
-    "message": "Täiustused"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Arvustuse päring"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Pärast mõne vahelehe peatamist küsib Drowzy, kas see meeldib. Kiire pöidla üles aitab meid palju!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Muudatuste leht"
-  },
-  "changelogChangelogDesc": {
-    "message": "Vaatate seda praegu! Avaneb automaatselt uuendamisel. Ligipääsetav Seadetest."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Seansi taastamise ajastus"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Taastatud vahelehti ei peatata enam kohe automaatselt. Nüüd lähtestavad nad korrektselt oma jõudeoleku taimerid."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Vormi kontrollimise ajalõpp"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Vormi andmete kontrollimisel on nüüd 500ms ajalõpp, et reageerimata vahelehed ei saaks järjekorda blokeerida."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Lubatavate nimekirja duplikaadid"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Parandatud suur- ja väiketähtede eristamise probleem, kus \"Example.com\" ja \"example.com\" said mõlemad lisada. Kõik kirjed on nüüd normaliseeritud."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Reaalajas statistika"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Hüpikaken värskendab nüüd automaatselt, kui vahelehti peatatakse või äratatakse."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Seansi taastamise valikud"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Seansidel on nüüd eraldi nupud \"Ava\" ja \"Asenda\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Lubatavate nimekirja valideerimine ja eksport/import"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Lubatavate nimekirja sisend valideerib nüüd domeene. Saate eksportida ja importida lõikelaua kaudu."
-  },
-  "changelogA11yTitle": {
-    "message": "Ligipääsetavus"
-  },
-  "changelogA11yDesc": {
-    "message": "Vahelehe loendi elemendid on nüüd klaviatuuriga navigeeritavad ARIA rollidega. Teavitused edastatakse ekraanilugejatele."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Sujuvamad animatsioonid"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Vahelehe loendi hajutatud animatsioonid on nüüd piiratud, et paljude vahelehededega akendel ei oleks pikka viivitust."
   },
   "changelogCtaText": {
     "message": "Drowzy on tasuta ja avatud lähtekoodiga. Kui see säästab teile mälu, jätke arvustus või tärn GitHubis."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Täht GitHubis"
-  },
-  "suspendThis": {
-    "message": "Peata vahekaart"
-  },
-  "failedToSuspend": {
-    "message": "Seda vahekaarti ei saa peatada"
   },
   "closedDuplicates": {
     "message": "Suleti $COUNT$ duplikaat-vahekaarti",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "varsti"
   },
-  "confirm": {
-    "message": "Kindel?"
+  "changelogVersionLabel": {
+    "message": "Versioon"
+  },
+  "copiedStats": {
+    "message": "Statistika kopeeritud!"
+  },
+  "privacyFooterLink": {
+    "message": "Sirvi koodi GitHubis"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy on avatud lähtekoodiga."
+  },
+  "privacyPermHost": {
+    "message": "Valikuline hostijuurdepääs, mida küsitakse nõudmisel ainult siis, kui lubate Vormikaitse või Peatatud vahekaartide märgistamise. Installimisel ei küsita kunagi. Igal ajal tühistatav."
+  },
+  "privacyPermScripting": {
+    "message": "Väikese skripti süstimine, et tuvastada salvestamata vormiandmed enne vahekaardi peatamist. Ainult valikuline."
+  },
+  "privacyPermSidePanel": {
+    "message": "Drowzy kuvamine Chrome'i külgpaneelis."
+  },
+  "privacyYourDataText": {
+    "message": "Kuna miski ei lahku teie brauserist, pole armatuurlauda, kontot ega võimalust näha, mida olete Drowzyga teinud. Kui desinstallite Drowzy, pakub Chrome teile võimalust saata valikulist tagasisidet (desinstallimise põhjus, brauser, OS) eraldi veebilehe kaudu; see esitamine on selgesõnaline ja läheb anonüümsele vormile. Saate selle vahekaardi sulgemisega vahele jätta."
+  },
+  "privacyYourDataTitle": {
+    "message": "Teie andmed"
+  },
+  "ramEstimateTooltip": {
+    "message": "Hinnatud kasutades ~150 MB peatatud vahekaardi kohta. Tegelik säästmine sõltub lehest."
+  },
+  "shareStats": {
+    "message": "Jaga"
+  },
+  "statLifetimeRam": {
+    "message": "Kogu säästetud RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "Klõpsake uuesti, et kustutamist kinnitada"
   }
 }

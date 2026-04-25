@@ -5,6 +5,7 @@ var _toastTimer = null;
 var _allTabs = null;
 var _tabListSig = '';
 var _sessionListSig = '';
+var _renderedSessionIds = null;
 var _pollTimer = null;
 
 function t(key, subs) {
@@ -75,6 +76,10 @@ function localizeHtml() {
   document.querySelectorAll('[data-i18n-title]').forEach(function(el) {
     var msg = chrome.i18n.getMessage(el.getAttribute('data-i18n-title'));
     if (msg) el.title = msg;
+  });
+  document.querySelectorAll('[data-i18n-aria]').forEach(function(el) {
+    var msg = chrome.i18n.getMessage(el.getAttribute('data-i18n-aria'));
+    if (msg) el.setAttribute('aria-label', msg);
   });
 
   // Set version in footer dynamically
@@ -153,6 +158,8 @@ async function loadAll() {
   } catch (e) {
     var list = document.getElementById('tabList');
     if (list) list.innerHTML = '<div class="tab-list-empty"><span class="empty-icon">' + icon('x', 22) + '</span><span>' + esc(t('failedToLoad')) + '</span></div>';
+    // Reset sig so a successful recovery render is not skipped by dedupe
+    _tabListSig = '';
   }
 }
 
@@ -185,8 +192,9 @@ function tabListSignature(tabs) {
   if (!tabs) return '';
   var parts = [];
   for (var i = 0; i < tabs.length; i++) {
-    var t = tabs[i];
-    parts.push(t.id + '|' + t.status + '|' + (t.title || '') + '|' + (t.timeLeft == null ? '' : t.timeLeft) + '|' + (t.protectReason || '') + '|' + (t.favIconUrl || ''));
+    // Don't shadow the outer `t()` i18n helper
+    var tab = tabs[i];
+    parts.push(tab.id + '|' + tab.status + '|' + (tab.title || '') + '|' + (tab.timeLeft == null ? '' : tab.timeLeft) + '|' + (tab.protectReason || '') + '|' + (tab.favIconUrl || ''));
   }
   return parts.join('\u0001');
 }
@@ -291,7 +299,7 @@ function faviconFallback(url) {
   var span = document.createElement('span');
   span.className = 'favicon-fallback';
   try {
-    span.textContent = new URL(url).hostname.replace('www.', '').charAt(0).toUpperCase();
+    span.textContent = new URL(url).hostname.replace(/^www\./, '').charAt(0).toUpperCase();
   } catch { span.textContent = '?'; }
   return span;
 }
@@ -394,8 +402,16 @@ function renderSessions(sessions) {
 
   if (!sessions || !sessions.length) {
     container.innerHTML = '<div class="empty-state"><span class="empty-icon">' + icon('folderOpen', 20) + '</span><span>' + esc(t('emptySessionState')) + '</span></div>';
+    _renderedSessionIds = new Set();
     return;
   }
+
+  // Track which session IDs were already on screen so we can apply a fresh
+  // entrance animation only to genuinely new ones, not re-animate existing.
+  var prevIds = _renderedSessionIds;
+  var firstRender = prevIds === null;
+  var currentIds = new Set();
+  for (var n = 0; n < sessions.length; n++) currentIds.add(sessions[n].id);
 
   container.innerHTML = '';
   for (var i = 0; i < sessions.length; i++) {
@@ -403,6 +419,9 @@ function renderSessions(sessions) {
     var card = document.createElement('div');
     card.className = 'session-card';
     card.style.setProperty('--i', i);
+    if (!firstRender && prevIds && !prevIds.has(s.id)) {
+      card.classList.add('is-new');
+    }
 
     var stack = document.createElement('div');
     stack.className = 'session-favicon-stack';
@@ -467,25 +486,33 @@ function renderSessions(sessions) {
       });
     })(s, restoreBtn, replaceBtn, deleteBtn);
 
-    (function(session, dBtn) {
+    (function(session, dBtn, sessionCard) {
       var confirmTimer = null;
+      function reset() {
+        dBtn.dataset.confirming = '';
+        dBtn.classList.remove('confirming');
+        dBtn.innerHTML = icon('trash2', 13);
+        dBtn.title = t('deleteSessionTitle');
+      }
       dBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
         if (dBtn.dataset.confirming) {
           clearTimeout(confirmTimer);
-          dBtn.dataset.confirming = '';
-          await msg({ action: 'deleteSession', id: session.id });
-          await loadAll();
+          sessionCard.classList.add('is-removing');
+          // Wait for the leave animation before actually deleting + reloading
+          setTimeout(async function() {
+            await msg({ action: 'deleteSession', id: session.id });
+            await loadAll();
+          }, 220);
         } else {
           dBtn.dataset.confirming = '1';
-          dBtn.innerHTML = '<span style="font-size:11px">' + esc(t('confirm') || '?') + '</span>';
-          confirmTimer = setTimeout(function() {
-            dBtn.dataset.confirming = '';
-            dBtn.innerHTML = icon('trash2', 13);
-          }, 3000);
+          dBtn.classList.add('confirming');
+          dBtn.innerHTML = icon('check', 13);
+          dBtn.title = t('confirmDeleteTitle');
+          confirmTimer = setTimeout(reset, 3000);
         }
       });
-    })(s, deleteBtn);
+    })(s, deleteBtn, card);
 
     actions.appendChild(restoreBtn);
     actions.appendChild(replaceBtn);
@@ -495,6 +522,7 @@ function renderSessions(sessions) {
     card.appendChild(actions);
     container.appendChild(card);
   }
+  _renderedSessionIds = currentIds;
 }
 
 function renderLifetimeStats(stats) {
@@ -752,7 +780,7 @@ function attachListeners() {
     if (stats.installDate) {
       lines.push('\u2022 Using since ' + new Date(stats.installDate).toLocaleDateString(undefined, { month: 'short', year: 'numeric' }));
     }
-    lines.push('', 'https://chromewebstore.google.com/detail/drowzy/oijfnkaakdamnijjgehjpfmclhigmapa');
+    lines.push('', 'https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa');
     try {
       await navigator.clipboard.writeText(lines.join('\n'));
       showToast(t('copiedStats') || 'Stats copied!');
@@ -760,7 +788,9 @@ function attachListeners() {
   });
 
   var whatsNewBtn = document.getElementById('btnWhatsNew');
-  whatsNewBtn.textContent = t('changelogWhatsNew') + ' v' + chrome.runtime.getManifest().version;
+  // `whatsNew` uses a $VERSION$ placeholder so each locale puts the version
+  // in the right grammatical position. Pass the live version as the sub.
+  whatsNewBtn.textContent = chrome.i18n.getMessage('whatsNew', [chrome.runtime.getManifest().version]) || ('What\'s new v' + chrome.runtime.getManifest().version);
   whatsNewBtn.addEventListener('click', function(e) {
     e.preventDefault();
     chrome.tabs.create({ url: 'changelog.html' });
@@ -839,8 +869,8 @@ async function saveSession() {
   var result = await msg({ action: 'saveSession', name: input.value.trim() });
   if (result && result.success) {
     input.value = '';
-    feedback.textContent = t('sessionSaved');
-    feedback.className = 'session-feedback success';
+    feedback.textContent = '';
+    feedback.className = 'session-feedback';
     showToast(t('sessionSaved'));
     await loadAll();
   } else {
@@ -887,6 +917,8 @@ async function addFromInput() {
     _addingWhitelist = false;
     return;
   }
+  // Clear any lingering error state from a previous failed attempt
+  input.classList.remove('input-error');
   input.value = '';
   input.disabled = false;
   _addingWhitelist = false;

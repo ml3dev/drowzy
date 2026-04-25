@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Jumla"
   },
-  "statRamSaved": {
-    "message": "RAM iliyookolewa (makadirio)"
-  },
   "statMemberSince": {
     "message": "Mwanachama tangu"
   },
@@ -343,13 +340,10 @@
     "message": "Nimeelewa, tuanze"
   },
   "privacyTitle": {
-    "message": "Drowzy – Sera ya Faragha"
+    "message": "Sera ya Faragha"
   },
   "privacyUpdated": {
     "message": "Ilisasishwa mwisho: Aprili 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Toleo fupi"
   },
   "privacyShortText": {
     "message": "Drowzy haikusanyi data yoyote. Hakuna uchambuzi, hakuna ufuatiliaji, hakuna seva za nje. Kila kitu kinabaki kwenye kivinjari chako."
@@ -364,19 +358,19 @@
     "message": "Ruhusa"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy inatumia ruhusa hizi za Chrome:"
+    "message": "Drowzy huomba tu ruhusa zinazohitajika kufanya kazi yake moja:"
   },
   "privacyPermTabs": {
-    "message": "tabs – kuorodhesha, kusimamisha, na kurejesha tabo za kivinjari"
+    "message": "Kuorodhesha, kusitisha, na kurejesha vichupo vya kivinjari."
   },
   "privacyPermStorage": {
-    "message": "storage – kuhifadhi mipangilio yako kimtaa"
+    "message": "Kuhifadhi mipangilio na vipindi vyako kwa ndani."
   },
   "privacyPermAlarms": {
-    "message": "alarms – ukaguzi wa mara kwa mara wa tabo zisizotumika"
+    "message": "Ukaguzi wa mara kwa mara wa vichupo visivyofanya kazi (kila sekunde 60)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – chaguo za menyu ya kubofya kulia"
+    "message": "Chaguo za menyu ya bonyeza-kulia kwa kusitisha na orodha nyeupe."
   },
   "privacyContactTitle": {
     "message": "Mawasiliano"
@@ -440,82 +434,19 @@
     "message": "Si sana"
   },
   "whatsNew": {
-    "message": "Nini kipya katika v1.3.1"
+    "message": "Nini kipya katika v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Nini Kipya katika Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Nini Kipya"
-  },
-  "changelogNewFeatures": {
-    "message": "Vipengele Vipya"
-  },
-  "changelogBugFixes": {
-    "message": "Marekebisho ya Hitilafu"
-  },
-  "changelogImprovements": {
-    "message": "Maboresho"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Ombi la Ukaguzi"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Baada ya kusimamisha tabo chache, Drowzy itauliza kama unaifurahia. Kidole cha haraka kinasaidia sana!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Ukurasa wa Mabadiliko"
-  },
-  "changelogChangelogDesc": {
-    "message": "Unaiona sasa hivi! Inafunguliwa kiotomatiki wakati wa kusasisha. Ipatikane kutoka kwa Mipangilio."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Muda wa Kurejesha Kikao"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Tabo zilizorejeshwa hazisimamishwi tena kiotomatiki mara moja. Sasa zinarejesha vipima vyao vya kutokuwa na shughuli kwa usahihi."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Muda wa Kukagua Fomu"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Ukaguzi wa data ya fomu sasa una muda wa 500ms ili tabo zisizojbu haziwezi kuzuia foleni."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Nakala za Orodha Nyeupe"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Tatizo la unyeti wa herufi kubwa na ndogo ambapo \"Example.com\" na \"example.com\" zingeweza kuongezwa zote mbili limerekebishwa. Maingizo yote sasa yamekuwa ya kawaida."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Takwimu za Moja kwa Moja"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Popup sasa inasasishwa kiotomatiki tabo zinaposimamishwa au kuamshwa."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Chaguzi za Kurejesha Kikao"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Vikao sasa vina vitufe tofauti vya \"Fungua\" na \"Badilisha\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Uthibitisho na Uhamishaji wa Orodha Nyeupe"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Ingizo la orodha nyeupe sasa linathibitisha vikoa. Unaweza kuhamisha nje na kuingiza kupitia ubao wa kunakili."
-  },
-  "changelogA11yTitle": {
-    "message": "Ufikivu"
-  },
-  "changelogA11yDesc": {
-    "message": "Vipengee vya orodha ya tabo sasa vinaweza kuzungukwa kwa kibodi kwa majukumu ya ARIA. Arifa zinatangazwa kwa wasomaji wa skrini."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Uhuishaji Laini"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Uhuishaji wa hatua kwa hatua wa orodha ya tabo sasa umezuiwa ili madirisha yenye tabo nyingi yasiwe na ucheleweshaji mrefu."
   },
   "changelogCtaText": {
     "message": "Drowzy ni bure na chanzo huria. Ikiwa inakuokoa kumbukumbu, fikiria kuacha ukaguzi au nyota kwenye GitHub."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Nyota kwenye GitHub"
-  },
-  "suspendThis": {
-    "message": "Simamisha kichupo"
-  },
-  "failedToSuspend": {
-    "message": "Haiwezi kusimamisha kichupo hiki"
   },
   "closedDuplicates": {
     "message": "Imefunga vichupo $COUNT$ vya nakala",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "hivi karibuni"
   },
-  "confirm": {
-    "message": "Una uhakika?"
+  "changelogVersionLabel": {
+    "message": "Toleo"
+  },
+  "copiedStats": {
+    "message": "Takwimu zimenakiliwa!"
+  },
+  "privacyFooterLink": {
+    "message": "Vinjari msimbo kwenye GitHub"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy ni chanzo huria."
+  },
+  "privacyPermHost": {
+    "message": "Ufikiaji wa mwenyeji wa hiari, unaombwa kwa ombi tu unapowezesha Ulinzi wa Fomu au Kuashiria Vichupo Vilivyositishwa. Kamwe haombiwi wakati wa usakinishaji. Inaweza kufutwa wakati wowote."
+  },
+  "privacyPermScripting": {
+    "message": "Kudunga hati ndogo ili kugundua data ya fomu ambayo haijahifadhiwa kabla ya kusitisha kichupo. Chaguo tu."
+  },
+  "privacyPermSidePanel": {
+    "message": "Kuonyesha Drowzy katika paneli ya kando ya Chrome."
+  },
+  "privacyYourDataText": {
+    "message": "Kwa sababu hakuna kinachoondoka kwenye kivinjari chako, hakuna dashibodi, hakuna akaunti, na hakuna njia kwetu kuona ulichofanya na Drowzy. Ukifuta Drowzy, Chrome inakupa fursa ya kutuma maoni ya hiari (sababu ya kufuta, kivinjari, OS) kupitia ukurasa tofauti wa wavuti; uwasilishaji huo ni wazi na unaenda kwa fomu isiyojulikana. Unaweza kuruka kwa kufunga kichupo."
+  },
+  "privacyYourDataTitle": {
+    "message": "Data yako"
+  },
+  "ramEstimateTooltip": {
+    "message": "Imekadiriwa kutumia ~150 MB kwa kila kichupo kilichositishwa. Akiba halisi inatofautiana kwa ukurasa."
+  },
+  "shareStats": {
+    "message": "Shiriki"
+  },
+  "statLifetimeRam": {
+    "message": "Jumla ya RAM iliyohifadhiwa"
+  },
+  "confirmDeleteTitle": {
+    "message": "Bonyeza tena ili kuthibitisha kufuta"
   }
 }

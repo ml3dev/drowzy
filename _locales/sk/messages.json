@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "Celkovo"
   },
-  "statRamSaved": {
-    "message": "Ušetrená RAM (odhad)"
-  },
   "statMemberSince": {
     "message": "Členom od"
   },
@@ -343,13 +340,10 @@
     "message": "Rozumiem, poďme na to"
   },
   "privacyTitle": {
-    "message": "Drowzy – Zásady ochrany osobných údajov"
+    "message": "Zásady ochrany osobných údajov"
   },
   "privacyUpdated": {
     "message": "Posledná aktualizácia: apríl 2026"
-  },
-  "privacyShortTitle": {
-    "message": "Stručne"
   },
   "privacyShortText": {
     "message": "Drowzy nezhromažďuje žiadne údaje. Žiadna analytika, žiadne sledovanie, žiadne externé servery. Všetko zostáva vo vašom prehliadači."
@@ -364,19 +358,19 @@
     "message": "Oprávnenia"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy používa tieto oprávnenia Chrome:"
+    "message": "Drowzy si vyžiada len oprávnenia, ktoré potrebuje na vykonanie svojej jedinej úlohy:"
   },
   "privacyPermTabs": {
-    "message": "tabs – zobrazenie, pozastavenie a obnovenie kariet prehliadača"
+    "message": "Vypisovanie, pozastavovanie a obnovovanie kariet prehliadača."
   },
   "privacyPermStorage": {
-    "message": "storage – lokálne ukladanie nastavení"
+    "message": "Lokálne ukladanie vašich nastavení a relácií."
   },
   "privacyPermAlarms": {
-    "message": "alarms – pravidelné kontroly neaktívnych kariet"
+    "message": "Pravidelné kontroly neaktívnych kariet (každých 60 sekúnd)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – možnosti v kontextovej ponuke"
+    "message": "Možnosti ponuky pravým kliknutím pre pozastavenie a bielu listinu."
   },
   "privacyContactTitle": {
     "message": "Kontakt"
@@ -440,82 +434,19 @@
     "message": "Nie celkom"
   },
   "whatsNew": {
-    "message": "Čo je nové vo v1.3.1"
+    "message": "Čo je nové vo v$VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Čo je nové v Drowzy"
   },
   "changelogWhatsNew": {
     "message": "Čo je nové"
-  },
-  "changelogNewFeatures": {
-    "message": "Nové funkcie"
-  },
-  "changelogBugFixes": {
-    "message": "Opravy chýb"
-  },
-  "changelogImprovements": {
-    "message": "Vylepšenia"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "Žiadosť o recenziu"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "Po uspávaní niekoľkých kariet sa Drowzy opýta, či sa vám páči. Rýchly palec hore nám veľmi pomôže!"
-  },
-  "changelogChangelogTitle": {
-    "message": "Stránka zmien"
-  },
-  "changelogChangelogDesc": {
-    "message": "Práve sa na ňu pozeráte! Otvára sa automaticky pri aktualizácii. Prístupná z Nastavení."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "Načasovanie obnovy relácie"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "Obnovené karty sa už neuspávajú automaticky okamžite. Teraz správne resetujú svoje časovače nečinnosti."
-  },
-  "changelogFormCheckTitle": {
-    "message": "Časový limit kontroly formulárov"
-  },
-  "changelogFormCheckDesc": {
-    "message": "Kontrola formulárov má teraz 500ms časový limit, takže nereagujúce karty nemôžu blokovať front."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "Duplikáty bieleho zoznamu"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "Opravený problém s rozlišovaním veľkých a malých písmen, kde bolo možné pridať \"Example.com\" aj \"example.com\". Všetky záznamy sú teraz normalizované."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "Štatistiky naživo"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "Popup sa teraz automaticky obnovuje pri uspávaní alebo prebúdzaní kariet."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "Možnosti obnovy relácie"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "Relácie majú teraz oddelené tlačidlá \"Otvoriť\" a \"Nahradiť\"."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "Validácia a export/import bieleho zoznamu"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "Vstup bieleho zoznamu teraz overuje domény. Môžete exportovať a importovať cez schránku."
-  },
-  "changelogA11yTitle": {
-    "message": "Prístupnosť"
-  },
-  "changelogA11yDesc": {
-    "message": "Položky zoznamu kariet sú teraz navigovateľné klávesnicou s rolami ARIA. Oznámenia sú oznamované čítačkám obrazovky."
-  },
-  "changelogAnimationsTitle": {
-    "message": "Plynulejšie animácie"
-  },
-  "changelogAnimationsDesc": {
-    "message": "Kaskádové animácie zoznamu kariet sú teraz obmedzené, takže okná s mnohými kartami nemajú dlhé oneskorenie."
   },
   "changelogCtaText": {
     "message": "Drowzy je zadarmo a open source. Ak vám šetrí pamäť, zanechajte recenziu alebo hviezdičku na GitHube."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "Hviezdička na GitHube"
-  },
-  "suspendThis": {
-    "message": "Uspať kartu"
-  },
-  "failedToSuspend": {
-    "message": "Túto kartu nie je možné uspať"
   },
   "closedDuplicates": {
     "message": "Zatvorených $COUNT$ duplicitných kariet",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "čoskoro"
   },
-  "confirm": {
-    "message": "Iste?"
+  "changelogVersionLabel": {
+    "message": "Verzia"
+  },
+  "copiedStats": {
+    "message": "Štatistiky skopírované!"
+  },
+  "privacyFooterLink": {
+    "message": "Zobraziť kód na GitHube"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy je open source."
+  },
+  "privacyPermHost": {
+    "message": "Voliteľný prístup k hostiteľovi, vyžadovaný na požiadanie len pri povolení Ochrany formulárov alebo Označovania pozastavených kariet. Nikdy sa nevyžaduje pri inštalácii. Kedykoľvek odvolateľné."
+  },
+  "privacyPermScripting": {
+    "message": "Vloženie malého skriptu na detekciu neuložených údajov formulára pred pozastavením karty. Len voliteľne."
+  },
+  "privacyPermSidePanel": {
+    "message": "Zobrazenie Drowzy v bočnom paneli Chromu."
+  },
+  "privacyYourDataText": {
+    "message": "Keďže nič neopustí váš prehliadač, nie je žiadny panel, žiadny účet a žiadny spôsob, ako by sme mohli vidieť, čo ste robili s Drowzy. Ak Drowzy odinštalujete, Chrome vám ponúkne možnosť odoslať voliteľnú spätnú väzbu (dôvod odinštalovania, prehliadač, OS) prostredníctvom samostatnej webovej stránky; toto odoslanie je explicitné a smeruje do anonymného formulára. Môžete ho preskočiť zatvorením karty."
+  },
+  "privacyYourDataTitle": {
+    "message": "Vaše údaje"
+  },
+  "ramEstimateTooltip": {
+    "message": "Odhadované použitím ~150 MB na pozastavenú kartu. Skutočné úspory sa líšia podľa stránky."
+  },
+  "shareStats": {
+    "message": "Zdieľať"
+  },
+  "statLifetimeRam": {
+    "message": "Celková ušetrená pamäť RAM"
+  },
+  "confirmDeleteTitle": {
+    "message": "Kliknutím znova potvrďte odstránenie"
   }
 }

@@ -137,9 +137,6 @@
   "statAllTime": {
     "message": "ಒಟ್ಟು"
   },
-  "statRamSaved": {
-    "message": "ಉಳಿಸಿದ RAM (ಅಂದಾಜು)"
-  },
   "statMemberSince": {
     "message": "ಸದಸ್ಯರಾದ ದಿನಾಂಕ"
   },
@@ -343,13 +340,10 @@
     "message": "ಅರ್ಥವಾಯಿತು, ಹೋಗೋಣ"
   },
   "privacyTitle": {
-    "message": "Drowzy – ಗೌಪ್ಯತಾ ನೀತಿ"
+    "message": "ಗೌಪ್ಯತಾ ನೀತಿ"
   },
   "privacyUpdated": {
     "message": "ಕೊನೆಯ ನವೀಕರಣ: ಏಪ್ರಿಲ್ 2026"
-  },
-  "privacyShortTitle": {
-    "message": "ಸಂಕ್ಷಿಪ್ತ ಆವೃತ್ತಿ"
   },
   "privacyShortText": {
     "message": "Drowzy ಯಾವುದೇ ಡೇಟಾವನ್ನು ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ಯಾವುದೇ ವಿಶ್ಲೇಷಣೆ ಇಲ್ಲ, ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ, ಬಾಹ್ಯ ಸರ್ವರ್‌ಗಳಿಲ್ಲ. ಎಲ್ಲವೂ ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಉಳಿಯುತ್ತದೆ."
@@ -364,19 +358,19 @@
     "message": "ಅನುಮತಿಗಳು"
   },
   "privacyPermissionsIntro": {
-    "message": "Drowzy ಈ Chrome ಅನುಮತಿಗಳನ್ನು ಬಳಸುತ್ತದೆ:"
+    "message": "Drowzy ತನ್ನ ಒಂದು ಕೆಲಸವನ್ನು ಮಾಡಲು ಅಗತ್ಯವಿರುವ ಅನುಮತಿಗಳನ್ನು ಮಾತ್ರ ಕೋರುತ್ತದೆ:"
   },
   "privacyPermTabs": {
-    "message": "tabs – ಬ್ರೌಸರ್ ಟ್ಯಾಬ್‌ಗಳ ಪಟ್ಟಿ ಮಾಡುವುದು, ಸಸ್ಪೆಂಡ್ ಮಾಡುವುದು ಮತ್ತು ಮರುಸ್ಥಾಪಿಸುವುದು"
+    "message": "ಬ್ರೌಸರ್ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡುವುದು, ಸಸ್ಪೆಂಡ್ ಮಾಡುವುದು ಮತ್ತು ಮರುಸ್ಥಾಪಿಸುವುದು."
   },
   "privacyPermStorage": {
-    "message": "storage – ನಿಮ್ಮ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಸ್ಥಳೀಯವಾಗಿ ಉಳಿಸುವುದು"
+    "message": "ನಿಮ್ಮ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಮತ್ತು ಸೆಷನ್‌ಗಳನ್ನು ಸ್ಥಳೀಯವಾಗಿ ಉಳಿಸುವುದು."
   },
   "privacyPermAlarms": {
-    "message": "alarms – ನಿಷ್ಕ್ರಿಯ ಟ್ಯಾಬ್‌ಗಳ ಆವರ್ತಕ ಪರಿಶೀಲನೆಗಳು"
+    "message": "ನಿಷ್ಕ್ರಿಯ ಟ್ಯಾಬ್‌ಗಳ ಆವರ್ತಕ ಪರಿಶೀಲನೆಗಳು (ಪ್ರತಿ 60 ಸೆಕೆಂಡ್‌ಗಳಿಗೆ)."
   },
   "privacyPermContextMenus": {
-    "message": "contextMenus – ರೈಟ್-ಕ್ಲಿಕ್ ಮೆನು ಆಯ್ಕೆಗಳು"
+    "message": "ಸಸ್ಪೆಂಡ್ ಮತ್ತು ವೈಟ್‌ಲಿಸ್ಟ್‌ಗಾಗಿ ರೈಟ್-ಕ್ಲಿಕ್ ಮೆನು ಆಯ್ಕೆಗಳು."
   },
   "privacyContactTitle": {
     "message": "ಸಂಪರ್ಕ"
@@ -440,82 +434,19 @@
     "message": "ಅಷ್ಟಾಗಿ ಇಲ್ಲ"
   },
   "whatsNew": {
-    "message": "v1.3.1 ರಲ್ಲಿ ಹೊಸದೇನು"
+    "message": "v$VERSION$ ರಲ್ಲಿ ಹೊಸದೇನು",
+    "placeholders": {
+      "version": {
+        "content": "$1",
+        "example": "1.3.2"
+      }
+    }
   },
   "changelogTitle": {
     "message": "Drowzy ನಲ್ಲಿ ಹೊಸದೇನು"
   },
   "changelogWhatsNew": {
     "message": "ಹೊಸದೇನು"
-  },
-  "changelogNewFeatures": {
-    "message": "ಹೊಸ ವೈಶಿಷ್ಟ್ಯಗಳು"
-  },
-  "changelogBugFixes": {
-    "message": "ದೋಷ ಸರಿಪಡಿಸುವಿಕೆಗಳು"
-  },
-  "changelogImprovements": {
-    "message": "ಸುಧಾರಣೆಗಳು"
-  },
-  "changelogReviewPromptTitle": {
-    "message": "ವಿಮರ್ಶೆ ವಿನಂತಿ"
-  },
-  "changelogReviewPromptDesc": {
-    "message": "ಕೆಲವು ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸ್ಥಗಿತಗೊಳಿಸಿದ ನಂತರ, Drowzy ನಿಮಗೆ ಇಷ್ಟವಾಗುತ್ತಿದೆಯೇ ಎಂದು ಕೇಳುತ್ತದೆ. ತ್ವರಿತ ಥಂಬ್ಸ್ ಅಪ್ ನಮಗೆ ಬಹಳ ಸಹಾಯ ಮಾಡುತ್ತದೆ!"
-  },
-  "changelogChangelogTitle": {
-    "message": "ಬದಲಾವಣೆ ಲಾಗ್ ಪುಟ"
-  },
-  "changelogChangelogDesc": {
-    "message": "ನೀವು ಇದನ್ನು ನೋಡುತ್ತಿದ್ದೀರಿ! ಅಪ್‌ಡೇಟ್‌ನಲ್ಲಿ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ತೆರೆಯುತ್ತದೆ. ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಂದ ಯಾವಾಗಲೂ ಪ್ರವೇಶಿಸಿ."
-  },
-  "changelogSessionRestoreTitle": {
-    "message": "ಅವಧಿ ಮರುಸ್ಥಾಪನೆ ಸಮಯ"
-  },
-  "changelogSessionRestoreDesc": {
-    "message": "ಮರುಸ್ಥಾಪಿಸಿದ ಟ್ಯಾಬ್‌ಗಳು ಇನ್ನು ತಕ್ಷಣವೇ ಸ್ವಯಂ-ಸ್ಥಗಿತಗೊಳ್ಳುವುದಿಲ್ಲ. ಅವು ಈಗ ತಮ್ಮ ನಿಷ್ಕ್ರಿಯ ಟೈಮರ್‌ಗಳನ್ನು ಸರಿಯಾಗಿ ಮರುಹೊಂದಿಸುತ್ತವೆ."
-  },
-  "changelogFormCheckTitle": {
-    "message": "ಫಾರ್ಮ್ ಪರಿಶೀಲನೆ ಸಮಯಮೀರುವಿಕೆ"
-  },
-  "changelogFormCheckDesc": {
-    "message": "ಫಾರ್ಮ್ ಡೇಟಾ ಪರಿಶೀಲನೆಯು ಈಗ 500ms ಸಮಯಮೀರುವಿಕೆಯನ್ನು ಹೊಂದಿದೆ ಆದ್ದರಿಂದ ಪ್ರತಿಕ್ರಿಯಿಸದ ಟ್ಯಾಬ್‌ಗಳು ಸರತಿಯನ್ನು ತಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ."
-  },
-  "changelogWhitelistDupesTitle": {
-    "message": "ಶ್ವೇತಪಟ್ಟಿ ನಕಲುಗಳು"
-  },
-  "changelogWhitelistDupesDesc": {
-    "message": "\"Example.com\" ಮತ್ತು \"example.com\" ಎರಡನ್ನೂ ಸೇರಿಸಬಹುದಾದ ಕೇಸ್ ಸೆನ್ಸಿಟಿವಿಟಿ ಸಮಸ್ಯೆಯನ್ನು ಸರಿಪಡಿಸಲಾಗಿದೆ. ಎಲ್ಲಾ ನಮೂದುಗಳನ್ನು ಈಗ ಸಾಮಾನ್ಯೀಕರಿಸಲಾಗಿದೆ."
-  },
-  "changelogLiveStatsTitle": {
-    "message": "ನೇರ ಅಂಕಿಅಂಶಗಳು"
-  },
-  "changelogLiveStatsDesc": {
-    "message": "ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸ್ಥಗಿತಗೊಳಿಸಿದಾಗ ಅಥವಾ ಎಚ್ಚರಗೊಳಿಸಿದಾಗ ಪಾಪ್‌ಅಪ್ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಿಫ್ರೆಶ್ ಆಗುತ್ತದೆ."
-  },
-  "changelogSessionOptionsTitle": {
-    "message": "ಅವಧಿ ಮರುಸ್ಥಾಪನೆ ಆಯ್ಕೆಗಳು"
-  },
-  "changelogSessionOptionsDesc": {
-    "message": "ಅವಧಿಗಳಲ್ಲಿ ಈಗ ಪ್ರತ್ಯೇಕ \"ತೆರೆಯಿರಿ\" ಮತ್ತು \"ಬದಲಿಸಿ\" ಬಟನ್‌ಗಳಿವೆ."
-  },
-  "changelogWhitelistValTitle": {
-    "message": "ಶ್ವೇತಪಟ್ಟಿ ಊರ್ಜಿತಗೊಳಿಸುವಿಕೆ ಮತ್ತು ರಫ್ತು/ಆಮದು"
-  },
-  "changelogWhitelistValDesc": {
-    "message": "ಶ್ವೇತಪಟ್ಟಿ ಇನ್‌ಪುಟ್ ಈಗ ಡೊಮೇನ್‌ಗಳನ್ನು ಊರ್ಜಿತಗೊಳಿಸುತ್ತದೆ. ಕ್ಲಿಪ್‌ಬೋರ್ಡ್ ಮೂಲಕ ರಫ್ತು ಮತ್ತು ಆಮದು ಮಾಡಬಹುದು."
-  },
-  "changelogA11yTitle": {
-    "message": "ಪ್ರವೇಶಿಸುವಿಕೆ"
-  },
-  "changelogA11yDesc": {
-    "message": "ಟ್ಯಾಬ್ ಪಟ್ಟಿ ಐಟಂಗಳು ಈಗ ARIA ಪಾತ್ರಗಳೊಂದಿಗೆ ಕೀಬೋರ್ಡ್-ನ್ಯಾವಿಗೇಬಲ್ ಆಗಿವೆ. ಟೋಸ್ಟ್ ಅಧಿಸೂಚನೆಗಳು ಸ್ಕ್ರೀನ್ ರೀಡರ್‌ಗಳಿಗೆ ಘೋಷಿಸಲ್ಪಡುತ್ತವೆ."
-  },
-  "changelogAnimationsTitle": {
-    "message": "ಸುಗಮ ಅನಿಮೇಶನ್‌ಗಳು"
-  },
-  "changelogAnimationsDesc": {
-    "message": "ಟ್ಯಾಬ್ ಪಟ್ಟಿ ಸ್ಟ್ಯಾಗರ್ ಅನಿಮೇಶನ್‌ಗಳು ಈಗ ಮಿತಿಯಲ್ಲಿವೆ ಆದ್ದರಿಂದ ಅನೇಕ ಟ್ಯಾಬ್‌ಗಳಿರುವ ವಿಂಡೋಗಳಲ್ಲಿ ದೀರ್ಘ ವಿಳಂಬ ಇರುವುದಿಲ್ಲ."
   },
   "changelogCtaText": {
     "message": "Drowzy ಉಚಿತ ಮತ್ತು ಮುಕ್ತ ಮೂಲವಾಗಿದೆ. ಇದು ಮೆಮೊರಿ ಉಳಿಸುತ್ತಿದ್ದರೆ, ವಿಮರ್ಶೆ ಅಥವಾ GitHub ನಲ್ಲಿ ನಕ್ಷತ್ರ ನೀಡಿ."
@@ -525,12 +456,6 @@
   },
   "changelogStarBtn": {
     "message": "GitHub ನಲ್ಲಿ ನಕ್ಷತ್ರ"
-  },
-  "suspendThis": {
-    "message": "ಟ್ಯಾಬ್ ಅಮಾನತುಗೊಳಿಸಿ"
-  },
-  "failedToSuspend": {
-    "message": "ಈ ಟ್ಯಾಬ್ ಅನ್ನು ಅಮಾನತುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
   },
   "closedDuplicates": {
     "message": "$COUNT$ ನಕಲಿ ಟ್ಯಾಬ್(ಗಳನ್ನು) ಮುಚ್ಚಲಾಗಿದೆ",
@@ -564,7 +489,43 @@
   "suspendingSoon": {
     "message": "ಶೀಘ್ರದಲ್ಲಿ"
   },
-  "confirm": {
-    "message": "ಖಚಿತವೇ?"
+  "changelogVersionLabel": {
+    "message": "ಆವೃತ್ತಿ"
+  },
+  "copiedStats": {
+    "message": "ಅಂಕಿಅಂಶಗಳನ್ನು ನಕಲಿಸಲಾಗಿದೆ!"
+  },
+  "privacyFooterLink": {
+    "message": "GitHub ನಲ್ಲಿ ಕೋಡ್ ಬ್ರೌಸ್ ಮಾಡಿ"
+  },
+  "privacyFooterText": {
+    "message": "Drowzy ಓಪನ್ ಸೋರ್ಸ್ ಆಗಿದೆ."
+  },
+  "privacyPermHost": {
+    "message": "ಐಚ್ಛಿಕ ಹೋಸ್ಟ್ ಪ್ರವೇಶ, ನೀವು ಫಾರ್ಮ್ ರಕ್ಷಣೆ ಅಥವಾ ಸಸ್ಪೆಂಡೆಡ್-ಟ್ಯಾಬ್ ಮಾರ್ಕಿಂಗ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿದಾಗ ಮಾತ್ರ ಬೇಡಿಕೆಯ ಮೇರೆಗೆ ವಿನಂತಿಸಲಾಗುತ್ತದೆ. ಸ್ಥಾಪನೆಯಲ್ಲಿ ಎಂದಿಗೂ ವಿನಂತಿಸಲಾಗುವುದಿಲ್ಲ. ಯಾವುದೇ ಸಮಯದಲ್ಲಿ ಹಿಂತೆಗೆದುಕೊಳ್ಳಬಹುದು."
+  },
+  "privacyPermScripting": {
+    "message": "ಟ್ಯಾಬ್ ಅನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡುವ ಮೊದಲು ಉಳಿಸದ ಫಾರ್ಮ್ ಡೇಟಾವನ್ನು ಪತ್ತೆಹಚ್ಚಲು ಸಣ್ಣ ಸ್ಕ್ರಿಪ್ಟ್ ಅನ್ನು ಇಂಜೆಕ್ಟ್ ಮಾಡುವುದು. ಆಯ್ಕೆ ಮಾತ್ರ."
+  },
+  "privacyPermSidePanel": {
+    "message": "Chrome ನ ಸೈಡ್ ಪ್ಯಾನೆಲ್‌ನಲ್ಲಿ Drowzy ಅನ್ನು ಪ್ರದರ್ಶಿಸುವುದು."
+  },
+  "privacyYourDataText": {
+    "message": "ಯಾವುದೂ ನಿಮ್ಮ ಬ್ರೌಸರ್ ಅನ್ನು ಬಿಡುವುದಿಲ್ಲವಾದ್ದರಿಂದ, ಯಾವುದೇ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್, ಖಾತೆಯಿಲ್ಲ, ಮತ್ತು ನೀವು Drowzy ಯೊಂದಿಗೆ ಏನು ಮಾಡಿದ್ದೀರಿ ಎಂಬುದನ್ನು ನೋಡಲು ನಮಗೆ ಯಾವುದೇ ಮಾರ್ಗವಿಲ್ಲ. ನೀವು Drowzy ಅನ್ನು ಅಸ್ಥಾಪಿಸಿದರೆ, Chrome ನಿಮಗೆ ಪ್ರತ್ಯೇಕ ವೆಬ್ ಪುಟದ ಮೂಲಕ ಐಚ್ಛಿಕ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು (ಅಸ್ಥಾಪಿಸುವ ಕಾರಣ, ಬ್ರೌಸರ್, OS) ಕಳುಹಿಸುವ ಅವಕಾಶವನ್ನು ನೀಡುತ್ತದೆ; ಆ ಸಲ್ಲಿಕೆ ಸ್ಪಷ್ಟವಾಗಿದೆ ಮತ್ತು ಅನಾಮಧೇಯ ಫಾರ್ಮ್‌ಗೆ ಹೋಗುತ್ತದೆ. ಟ್ಯಾಬ್ ಮುಚ್ಚುವ ಮೂಲಕ ನೀವು ಅದನ್ನು ಬಿಟ್ಟುಬಿಡಬಹುದು."
+  },
+  "privacyYourDataTitle": {
+    "message": "ನಿಮ್ಮ ಡೇಟಾ"
+  },
+  "ramEstimateTooltip": {
+    "message": "ಸಸ್ಪೆಂಡ್ ಮಾಡಿದ ಟ್ಯಾಬ್‌ಗೆ ~150 MB ಬಳಸಿ ಅಂದಾಜಿಸಲಾಗಿದೆ. ನಿಜವಾದ ಉಳಿತಾಯಗಳು ಪುಟದಿಂದ ಬದಲಾಗುತ್ತವೆ."
+  },
+  "shareStats": {
+    "message": "ಹಂಚಿಕೊಳ್ಳಿ"
+  },
+  "statLifetimeRam": {
+    "message": "ಒಟ್ಟು RAM ಉಳಿತಾಯ"
+  },
+  "confirmDeleteTitle": {
+    "message": "ಅಳಿಸಲು ದೃಢೀಕರಿಸಲು ಮತ್ತೊಮ್ಮೆ ಕ್ಲಿಕ್ ಮಾಡಿ"
   }
 }
