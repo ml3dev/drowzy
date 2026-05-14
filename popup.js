@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', init);
 
+// Per-tab memory estimate. Must match MB_PER_TAB in background.js. If you
+// retune one, retune both: the popup uses it for stats display, the
+// background uses it for toast counts and the forecast number.
+var MB_PER_TAB = 150;
+
 var _loaded = false;
 var _toastTimer = null;
 var _allTabs = null;
@@ -579,7 +584,7 @@ function renderLifetimeStats(stats) {
   animateStat(document.getElementById('statToday'), stats.totalTabsSuspendedToday || 0);
   animateStat(document.getElementById('statAllTime'), stats.totalTabsSuspended || 0);
 
-  var ram = (stats.totalTabsSuspended || 0) * 150;
+  var ram = (stats.totalTabsSuspended || 0) * MB_PER_TAB;
   animateStat(document.getElementById('statRamAllTime'), ram ? fmtRam(ram) : '\u2014');
 
   if (stats.installDate) {
@@ -652,7 +657,7 @@ function attachListeners() {
     var res = await msg({ action: 'suspendOthers' });
     var count = (res && res.count) || 0;
     if (count > 0) {
-      showToast(t('suspendedToast', [String(count), fmtRam(res.mbFreed || count * 150)]));
+      showToast(t('suspendedToast', [String(count), fmtRam(res.mbFreed || count * MB_PER_TAB)]));
     } else {
       showToast(t('noOthersToSuspend'));
     }

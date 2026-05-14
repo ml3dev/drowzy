@@ -140,7 +140,12 @@ async function onStartup() {
 
   let settings = await getSettings();
   if (settings.suspendOnStartup) {
-    setTimeout(() => suspendAllOnStartup(settings), 5000);
+    // Use an alarm rather than setTimeout. Once onStartup's awaits resolve the
+    // service worker has no pending events keeping it alive: a 5s timer can
+    // miss its deadline if the worker is terminated first. Alarms survive
+    // worker death. 0.1 min gets clamped to ~30s in production, which is also
+    // enough delay for Chrome to finish restoring saved tabs.
+    try { chrome.alarms.create('startup-suspend', { delayInMinutes: 0.1 }); } catch {}
   }
 }
 
@@ -334,6 +339,10 @@ async function createAlarm() {
 async function onAlarm(alarm) {
   if (alarm.name === ALARM_NAME) await checkAndSuspendTabs();
   else if (alarm.name === 'first-run-suspend') await firstRunQuickSuspend();
+  else if (alarm.name === 'startup-suspend') {
+    let settings = await getSettings();
+    if (settings.suspendOnStartup) await suspendAllOnStartup(settings);
+  }
 }
 
 async function onTabActivated(activeInfo) {
@@ -623,10 +632,18 @@ async function handleSuspendCurrent(activeTab) {
   if (isWhitelisted(activeTab.url, settings.whitelist)) return;
 
   let allTabs = await chrome.tabs.query({ windowId: activeTab.windowId });
-  // Prefer the next tab by browser position, then previous, then any non-discarded tab
+  // chrome.tabs.query returns tabs ordered by index. Prefer the next tab by
+  // position; if none, fall back to the closest previous tab (largest index
+  // below activeTab). Old code fell back to candidates[length-1], which could
+  // pick a tab far from the current position.
   let candidates = allTabs.filter(tab => tab.id !== activeTab.id && !tab.discarded && !isInternalUrl(tab.url));
   if (!candidates.length) return;
-  let other = candidates.find(tab => tab.index > activeTab.index) || candidates[candidates.length - 1];
+  let next = candidates.find(tab => tab.index > activeTab.index);
+  let prev = null;
+  for (let tab of candidates) {
+    if (tab.index < activeTab.index && (!prev || tab.index > prev.index)) prev = tab;
+  }
+  let other = next || prev || candidates[0];
   if (!other) return;
 
   try {
