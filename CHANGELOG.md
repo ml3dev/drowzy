@@ -1,0 +1,315 @@
+# Changelog
+
+All notable changes to Drowzy are documented here.
+
+## [1.3.5] -- 2026-05-15
+
+### Fixed
+- **Whitelist remove button replaced with a visible "Remove ×" pill** (was an icon-only X users reported missing entirely). Optimistic fade on click + `_whitelistSig` reset to defeat a race with the polling `loadAll` that could otherwise short-circuit the re-render.
+- **"Never suspend this site" toggle flips optimistically** + confirmation toast (`Added X to whitelist` / `Removed X from whitelist`). New i18n keys: `addedToWhitelist`, `removedFromWhitelist`.
+- **Whitelist text-input add now toasts** to match: success or `X is already in whitelist` on duplicate. New i18n key: `alreadyWhitelisted`.
+- **`renderShortcutsStatus` now re-polls on each `loadAll`** so the Settings → Keyboard shortcuts row updates without a popup reopen if the user edits bindings in `chrome://extensions/shortcuts` via the Customize link. Previously it ran once at popup init only.
+- **"Suspend Others" silently skipped tabs in Chrome's `loading` state.** `suspendTab`'s pre-discard recheck bailed on `fresh.status === 'loading'` for every path. SPAs like Reddit sit in `loading` indefinitely from background streaming, so the manual action did nothing on those tabs. Check is now inside `if (opts && opts.auto)` — manual paths bypass it.
+- **Welcome page showed bogus shortcut hints for commands Chrome couldn't auto-bind.** `onboarding.js` now hides the `<li>` entirely for unbound commands; bound commands swap the `<kbd>` for the real `cmd.shortcut`.
+- **`closeDuplicates` could close a live tab and keep a discarded shell.** Pick order is now pinned → active → live → first; the live-tab tiebreaker is new.
+- **Popup whitelist toggle no-op'd on IP-literal current tabs** (`http://[::1]/`, `http://127.0.0.1:3000/`). Gate now matches `background.addWhitelist`'s accept set (IPv4 dotted-quads + `::1`).
+- **`addWhitelist` skipped the `^www\.` strip on whitespace-prefixed input.** `.trim()` runs before the regex now. Read-time normalization in `getSettings` had been masking it.
+- **Share Stats clipboard text was hardcoded English.** All five strings now go through `chrome.i18n.getMessage` (new `shareStats*` keys with `$COUNT$` / `$RAM$` / `$DATE$` placeholders).
+- **Share Stats used hardcoded `150` instead of `MB_PER_TAB`.** Missed spot from 1.3.4's constant cleanup.
+
+### Changed
+- **Default auto-suspend timer: 30 min → 15 min.** Industry median is 10–15 min (Auto Tab Discard 10, Tab Wrangler 20, Chrome Memory Saver 2 hrs and panned for it). 30 was on the long end; 1.3.3 added the first-run quick-suspend pass specifically because users didn't notice memory savings at 30. Drowzy's protections (active/pinned/audio/forms/warning banner) let it run more aggressive than competitors. Existing users keep their setting via `chrome.storage.sync`. Updated `featureAutoSuspend` + `onboardingTimerTip` across all 57 locales (substring 30→15 inside those two keys only).
+- **Windows `suggested_key` defaults rotated** to less-claimed combos: `suspend-current` `Alt+Shift+Z` → `Alt+Shift+P`, `wake-all` `Alt+Shift+W` → `Alt+Shift+O`. Old combos collided too often (Zoom, screen recorders, Office). New installers only — Chrome doesn't retry `suggested_key` for existing installs. `suspend-others` stays on `Alt+Shift+S`.
+
+### Added
+- **Whitelisted-sites label now shows a count** (`Whitelisted sites (5)`) so the list reads as bounded; it already scrolled at `max-height: 140px`.
+- **Settings → "Keyboard shortcuts" row.** Shows bind status from `chrome.commands.getAll()` ("All set" or "$BOUND$ of $TOTAL$ set") and a Customize link to `chrome://extensions/shortcuts`. Persistent path to the shortcuts editor; welcome page was the only entry before and it only shows on install. New i18n keys: `keyboardShortcuts`, `customizeShortcuts`, `shortcutsAllSet`, `shortcutsSomeUnset`. Chrome has no programmatic shortcut-set API (`chrome.commands` exposes only `getAll()`), so the editor is the only path.
+
+### Polish
+- **Whitelisted badge icon: `star` → `shield`.** Star reads as bookmark/favorite; shield matches the rest of the whitelist UI (the "Never suspend this site" toggle, the empty-whitelist state, the popup button), where shield/shieldCheck already mean "protected from suspension." Gold badge color kept so the row still visually distinguishes from blue/green/amber neighbors.
+- **"Today" stat icon: `moon` → `calendarDays`.** Moon is the right icon for sleeping tabs and dark-mode (both = night) but reading "today" off a crescent doesn't connect. Calendar icon makes the stat readable at a glance. Added Lucide's `calendar-days` SVG to `icons.js`.
+- **`fmtRam` strips trailing `.0` for whole-GB values** ("2 GB" not "2.0 GB"). Affects stats strip, hero card, suspend toast, share text.
+- **Wake-tab click from popup focuses the destination window** via `chrome.windows.update({focused: true})` so a click on a tab in another window actually takes you there.
+- **Per-tab suspend button has `aria-label`** matching its `title`.
+- **Toolbar action-badge color changed `#6C63FF` → `#7c3aed`** to match Drowzy's brand accent (it was a slightly-off indigo before). Also explicitly set the badge text color to white via `chrome.action.setBadgeTextColor` (feature-detected — Chrome 110+; older browsers fall back to Chrome's default auto-contrast).
+- **Welcome page CTA rewritten** from *"Drowzy is already running. Open a few tabs and try it out!"* (misleading with 15-min default) to *"Drowzy is now running. Open it from your toolbar and hit 'Suspend Others' to try it out."* — points at a button that gives instant feedback. Updated `onboardingCta` in `en` / `en_US` / `en_GB` + HTML fallback; 54 translated locales keep their existing copy until translators update.
+- **Popup `max-height` raised 520 → 580px** + `html { overflow: hidden }` added. Old 520 surfaced a near-useless ~20px scroll range in popups with 3+ visible tabs. 600 (Chrome's nominal max) triggered a double scrollbar on some displays because actual usable popup height is closer to 580 in practice. Sidepanel unaffected (overrides with `max-height: none`).
+
+## [1.3.4] -- 2026-05-14
+
+Small quality update from a full audit pass: bug fixes, polish, accessibility, and one minor code-quality cleanup. No new permissions, no new strings, no schema changes.
+
+### Fixed
+- **Startup suspend pass could be skipped when the service worker died before the 5s timer fired.** `onStartup` scheduled `suspendAllOnStartup` via `setTimeout(..., 5000)`. Once `onStartup`'s awaits resolve, the service worker has no pending events keeping it alive; Chrome can terminate it after ~30s of idle, and a setTimeout doesn't count as keepalive. On a cold browser launch where the worker has no other work, the 5s deadline was usually hit, but not guaranteed. Replaced with `chrome.alarms.create('startup-suspend', { delayInMinutes: 0.1 })` which Chrome clamps to ~30s in production and survives a worker restart. The `onAlarm` handler now dispatches the `startup-suspend` alarm to `suspendAllOnStartup` (after re-fetching settings, in case the user toggled "Suspend on startup" off between the schedule and the fire).
+- **`handleSuspendCurrent` fell back to `candidates[length - 1]` when no next tab existed**, which could land far from the active tab (the last candidate in the filtered list, not necessarily the previous tab). Now it explicitly looks for the closest previous tab (largest `index` below `activeTab.index`), then falls back to any candidate only if both next and previous are absent. Triggered when you suspend the active tab via `Alt+S` / context menu while it's the rightmost tab in a window.
+
+### Changed
+- **`MB_PER_TAB` is now defined once per file** rather than scattered as a magic `150` in three places in `popup.js`. The constant must stay in sync with `background.js`'s `MB_PER_TAB`; comment in `popup.js` calls this out. No user-visible change; defensive cleanup so a future tuning is a one-line edit.
+
+### Polish
+- **`prefers-reduced-motion` honored on the onboarding page.** The popup, side panel, changelog, and privacy-policy pages all already had the media query that flattens animations and transitions to 1ms; `onboarding.html` was the only page that didn't, so a user with reduced-motion enabled would still see the 0.4s fade-up of the welcome container. Added the same `* { animation-duration: 1ms !important; ... }` block to `onboarding.html`'s inline style.
+- **Whitelist input HTML placeholder synced with the i18n value.** The 1.3.3 release updated `en/messages.json#whitelistPlaceholder` to `"example.com, full URL, or site.com/path/*"` but the static `placeholder=` attribute in `popup.html` and `sidepanel.html` was still `"example.com or site.com/path/*"`. Localization overwrites it at popup-open, so users normally see the new wording, but a failed i18n pass (extension reload race, unusual locale) would leave the old text visible. HTML defaults now match en exactly.
+
+### Audit
+- **Full read-through of all source files.** `background.js`, `popup.js`/`html`/`css`, `sidepanel.html`, `formcheck.js`, `icons.js`, `onboarding.html`/`js`, `changelog.html`/`js`, `privacy-policy.html`/`js`. No additional bugs found beyond the two fixed above; the 1.3.2 / 1.3.3 polish work held up.
+- **All 57 locale files validated** for JSON validity, key parity against `en` (175 keys, no missing/extra in any locale), and placeholder structure (every `$COUNT$` / `$RAM$` / `$VERSION$` / `$DATE$` substitution token present in `en` is also present in the corresponding translated value). No locale repairs needed.
+- **i18n key reference scan** confirms every `data-i18n*` attribute and `chrome.i18n.getMessage` / `t(...)` call resolves to a real key, and every key in `en/messages.json` is reachable from source (including the dynamic ones referenced via variable interpolation: `t(statusKey)` for the current-tab status and `BADGES[reason].labelKey` for the protect-reason badges).
+- **Chrome MV3 best practices verified** for the suspend pipeline: `chrome.tabs.discard()` remains the canonical API; `tab.lastAccessed` (Chrome 121+) is feature-detected with `typeof === 'number'` and gracefully falls back on 120; `chrome.storage.session` correctly used for the in-memory `tabTimestamps` cache that survives worker restarts via re-seeding from `tab.lastAccessed`; `chrome.alarms` minimum delay (0.5 min in production) respected. The known quirk that `tab.lastAccessed` becomes `undefined` for discarded tabs is handled correctly: every code path that reads it either guards with the typeof check or has already early-returned on `tab.discarded`.
+
+## [1.3.3] -- 2026-04-25
+
+### Added
+- **First-run quick-suspend pass** (`firstRunQuickSuspend` in `background.js`). 30s after install, Drowzy suspends tabs that Chrome reports as idle for 10+ minutes via `tab.lastAccessed` (Chrome 121+; skipped on 120). Without this, a fresh installer waited the full 30-minute timer before any visible effect — the most common reason cited for "didn't notice a memory difference" in uninstall feedback. Conservative threshold (10 min via Chrome's own tracking) avoids surprising a user with a recently-used tab going away. Honors all the usual protections (pinned, audio, whitelist, internal pages).
+- **`tab.lastAccessed` honored in suspend decisions** (`shouldSuspend` and the final recheck inside `suspendTab`). Drowzy now takes the more recent of its own activation timestamp and Chrome's `tab.lastAccessed` (Chrome 121+) when deciding whether a tab is past the idle threshold. Fixes a class of "tab I just used got suspended" caused by service-worker restarts: when the worker came up cold, Drowzy's in-memory `_timestamps` were re-seeded to `Date.now()` for missing tabs, but `tab.lastAccessed` had the truer "last focused" timestamp. Feature-detected so 120 still works.
+- **"Keep awake" button on the suspend warning banner** (`formcheck.js`). The banner used to be a click-to-dismiss strip with no way to actually stop the imminent discard — the only recourse was to whitelist the site after the fact. The banner now has an explicit "Keep awake" button that sends a `keepTabAwake` message to the background; the background bumps the tab's timestamp via `touchTab` and `suspendTab`'s pre-discard recheck reads the bumped timestamp and bails out. New i18n key: `keepAwakeBtn`.
+- **`keepTabAwake` action allowed from content-script senders** in `background.js#onMessage`. The unauthorized-content-script guard still blocks every other action, but `keepTabAwake` is whitelisted because the suspend-warning banner runs in page context. Scoped to the sender's own tab id so a content script can't bump arbitrary tabs.
+- **Pre-discard timestamp recheck inside `suspendTab`.** After the form-check + message round-trips, before calling `chrome.tabs.discard`, the function now re-reads `_timestamps[tabId]` and `tab.lastAccessed` and aborts if either is now within the threshold. Closes the race where the user hits Keep awake during the 2500ms warning window or refocuses the tab via a different code path.
+- **Suspend-timer hint tooltip** on the Settings row (`data-i18n-title="suspendTimerHint"` in `popup.html` and `sidepanel.html`). New users with workflows where they come back to a tab every ~35 min had no hint that 30 was tunable; the tooltip points them at it. New i18n key: `suspendTimerHint`.
+- **Two new onboarding tip cards** addressing the actual top uninstall reasons: "Suspending tabs you still want?" points at the timer + whitelist as fixes for over-aggressive suspends, and "Filling out a form?" points at the `protectForms` setting. Both ship as `data-i18n-html` so the embedded `<strong>` survives translation. New i18n keys: `onboardingTimerTip`, `onboardingFormsTip`.
+- **Windows-specific keyboard shortcut defaults** to avoid Microsoft Office Web access-key collisions:
+  - `suspend-current` on Windows is now `Alt+Shift+Z` (was `Alt+S`). On Windows, `Alt+S` is the access key for **Send** in Outlook Web, Teams, OWA, and most Microsoft 365 surfaces. A user composing an email who hit `Alt+S` to send would instead suspend the compose tab — silently, with potential draft loss. macOS/Linux/ChromeOS keep `Alt+S` since those platforms don't have the conflict (Mac Outlook uses `Cmd+Enter`).
+  - `wake-all` on Windows is now `Alt+Shift+W` (was `Alt+W`). `Alt+W` is the access key for the **View ribbon** in Word, Excel, and PowerPoint Web. Same per-platform override pattern.
+  - `suspend-others` stays at `Alt+Shift+S` everywhere — no known conflict.
+  - Existing users who customized their shortcuts via `chrome://extensions/shortcuts` are unaffected; only new installs and unmodified bindings pick up the new defaults.
+- **Dynamic shortcut display in the onboarding page.** The `Press <kbd>Alt+S</kbd> ...` lines now query `chrome.commands.getAll()` after i18n localization runs and replace each `<kbd>`'s text with the user's actual binding — so Windows users see `Alt+Shift+Z` / `Alt+Shift+W` and any user remap is reflected without re-translating 57 locale files. If a command is unbound, the translated default is left alone.
+- **Forecast stat in the stats strip — adaptive third slot.** The third memory slot now adapts based on state to keep the strip at three items (a fourth would feel cramped). When Drowzy has actually freed memory, it shows that ("saved", blue dot, `ramEstimateTooltip`). Before any tabs have been suspended but eligible tabs exist, it shows the forecast instead ("available", amber dot, `ramForecastTooltip`) — e.g. `~3.4 GB available`. First-session users no longer see "— saved" with no signal anything will happen; they see a real number immediately, addressing the most common uninstall reason ("didn't notice a memory difference"). When neither applies, the slot shows an em-dash with the default "saved" label. Computed in `getStatus` as `(allTabs - protected - discarded) × MB_PER_TAB` and exposed as `eligibleCount` + `estimatedMbForecast`.
+- **`statForecast` and `ramForecastTooltip` i18n keys** in `en/messages.json` for the new strip item label and tooltip.
+- **Quantified toast feedback for Suspend Others and Wake All.** Pre-1.3.3 the buttons flashed `Suspending... → Done → Suspend Others` regardless of whether anything actually happened — a window with zero eligible tabs would still show "Done" and the user would close the popup confused. Now: `suspendAllOthers` and `unsuspendAll` both return their actual count, the popup handlers show `"Suspended N tab(s) · ~M MB freed"` / `"Woke N tab(s)"` toasts on success, and `"No other tabs to suspend"` / `"No suspended tabs to wake"` toasts when the action would have been a no-op. Removed the now-redundant `Done` text-flip and the 400ms timeout since the toast carries the confirmation. New i18n keys: `suspendedToast`, `wokeToast`, `noOthersToSuspend`, `noSuspendedToWake`.
+- **Smarter current-tab status line.** The status under the active tab's domain (e.g. `"Active — won't be suspended"`) used to be hardcoded regardless of why the tab was protected. Now picks the actual reason in priority order: `systemPageCantSuspend` for `chrome://` and other non-http schemes, `pinnedWontSuspend` when the user has Protect Pinned on and the tab is pinned, `audioWontSuspend` when Protect Audio is on and the tab is audible, `whitelistedWontSuspend` when the tab's host matches the whitelist, falling back to the existing `activeWontSuspend`. The whitelist button below already updated correctly; only the status text was stale. New i18n keys: `pinnedWontSuspend`, `audioWontSuspend`, `whitelistedWontSuspend`, `systemPageCantSuspend`.
+- **Onboarding now includes a pin-to-toolbar tip and a one-click link to remap shortcuts.** Two of the most common first-hour confusions: "where is the icon?" and "I don't like the default keys." A subtle accent-bordered tip card sits above the CTA with a tip about pinning Drowzy via the puzzle icon, plus a link that opens `chrome://extensions/shortcuts` directly (`<a href="chrome://...">` is blocked from regular pages, so the click handler uses `chrome.tabs.create`). New i18n keys: `onboardingPinTip`, `onboardingRemapHint`.
+
+### Changed
+- **Strip-stat dot color** for the third slot stays blue (`:last-child`) by default for "saved", and is overridden to amber (`.strip-stat.strip-stat-forecast`) when the slot is rendering the forecast instead. JS toggles the class as the slot's mode flips between saved/forecast/empty.
+- **Suspend Others and Wake All buttons disable themselves when there's nothing to act on.** `renderStatsStrip` now flips `btn.disabled` based on `status.eligibleCount` / `status.suspendedCount` and sets a `title` tooltip explaining why (`noOthersToSuspend` / `noSuspendedToWake`). The existing `.btn:disabled { opacity: 0.5 }` rule already handled the visuals — no CSS change needed. The click handlers also short-circuit on `this.disabled` as belt-and-braces.
+- **Whitelist input placeholder** updated from `"example.com or site.com/path/*"` to `"example.com, full URL, or site.com/path/*"`. The popup's `addFromInput` already strips `http(s)://` and `www.` so users can paste full URLs directly, but the old placeholder didn't say so — users would manually trim URLs first. The 56 non-English locale translations of `whitelistPlaceholder` still say the old wording; semantically equivalent so they stay valid until the next translation pass.
+
+### Fixed
+- **Stale-init of `_timestamps` could give every tab a fresh 30-min timer after a service-worker restart.** Caught in the pre-publish audit. When the worker came up cold and `_timestamps` was empty (browser restart, session-storage cleared, or first install), both `initTimestamps` and the lazy-reload branch in `checkAndSuspendTabs` seeded missing entries with `Date.now()` — so a tab Chrome itself reported as last-accessed 45 minutes ago still got `lastActive = NOW`, and the new `tab.lastAccessed`-aware `shouldSuspend` couldn't help because it took the *max* of the two (NOW vs. 45m-ago = NOW). Fix: seed missing entries from `tab.lastAccessed` when Chrome 121+ reports it, falling back to `Date.now()` only on Chrome 120. Now a service-worker restart recovers the actual idle time instead of resetting it. Same fix applied to the lazy-init in `checkAndSuspendTabs` and the timer countdown in `getTabList` so the popup's "Xm" badge matches the actual eligibility check.
+- **Forecast strip-stat had no visual differentiation from "saved".** The 1.3.3 changelog claimed an amber dot for the third slot when rendering the forecast (vs blue for actual saved memory), but neither `popup.css` nor `popup.js` actually toggled the class — both states rendered with the identical blue dot, so a user reading "~3.4 GB available" had no visual cue that this was a forecast and not a number Drowzy had actually freed. Fixed in three places: `popup.js#renderStatsStrip` now adds/removes `strip-stat-forecast` on the slot, and `popup.css` now has `.strip-stat.strip-stat-forecast .strip-stat-label::before` (amber dot) and `.strip-stat.strip-stat-forecast #statMemoryValue` (amber value color) overrides. The blue stays for `:last-child` by default, so saved still reads as saved. Color transitions added on `.strip-stat-value` and `.strip-stat-label::before` so the saved↔forecast flip animates smoothly instead of snapping.
+- **Suspend warning banner ran on hidden tabs** — pure theater, since the banner was being painted onto a tab the user definitionally wasn't looking at (it had been idle for 30 minutes). `formcheck.js#showSuspendWarning` now early-returns if `document.visibilityState !== 'visible'`, so the banner only renders when there's a chance of being seen and the "Keep awake" button is reachable.
+- **Form-data check missed several common input types.** `hasUnsavedFormData` queried only `text/email/url/tel/password/number/no-type/textarea/contenteditable` — a search input on a long query, a date picker mid-fill, or a `time`/`week`/`month`/`datetime-local`/`color` field would all read clean and the tab would get discarded. Query expanded to cover those types. Also added a separate scan for `input[type="checkbox"]` and `input[type="radio"]` whose `checked` differs from `defaultChecked`, since a half-toggled settings page is just as lost as a typed-but-unsaved input.
+- **`currentTabStatus` initial text** was the literal string `"Loading..."` (via `data-i18n="loading"`) which would stick on screen if `loadAll` threw before the first `renderCurrentTab` ran — the user would see a tab marked "Loading..." indefinitely with no way to know what was wrong. Replaced with an em-dash (matching the `currentTabDomain` initial state). Same change in both `popup.html` and `sidepanel.html`.
+- **Suspend-warning banner "Click to dismiss" tooltip** in `formcheck.js` was hardcoded English; only the banner body text was localized. Wired up via the new `clickToDismiss` i18n key with English fallback for unknown locales.
+
+### Translations
+- **Full localization parity across all 57 locales for all 20 new keys** added in this release (16 from the initial 1.3.3 work + 4 from the pre-publish audit pass: `keepAwakeBtn`, `suspendTimerHint`, `onboardingTimerTip`, `onboardingFormsTip`). 56 locales × 20 keys = 1120 fresh translations. Every locale now has all 175 keys; no English fallback gaps anywhere in the popup, side panel, onboarding, or content scripts. Same approach as the 1.3.2 parity sweep — AI-authored translations preserving the `$COUNT$` / `$RAM$` placeholder structure where applicable and the `<strong>` wrappers in onboarding tips, with native-speaker review welcomed for any awkward phrasing. The `whitelistPlaceholder` rewording is the one exception held back: existing locale translations of the old wording remain semantically valid so they stay until the next translation pass.
+
+### Final QA pass
+- **`changelog.html` body content rewritten for 1.3.3.** The page was still showing the v1.3.2 "Polish & Fixes" cards verbatim, but the dynamic version badge and the "What's new vX" link in Settings would render `v1.3.3` — so a user clicking the link would see a header that says 1.3.3 paired with v1.3.2 changes. Replaced with six v1.3.3-specific cards (forecast stat, Windows-friendly shortcuts, quantified suspend/wake toasts, smart current-tab status, friendlier first-run tips, full translation coverage).
+- **Dead `done` i18n key removed from all 57 locale files.** It was used by the old text-flip pattern on Suspend Others / Wake All (`Suspending... → Done → Suspend Others`); the toast refactor in this release removed every reference. 57 stale entries dropped.
+- **Three review-prompt button `title=` tooltips localized.** The visible button text (`reviewYes`, `reviewNo`) was already i18n'd, but the hover tooltips on the thumbs-up, thumbs-down, and dismiss buttons in `popup.html` / `sidepanel.html` were hardcoded English. Added `data-i18n-title` bindings + three new keys (`reviewLeaveTitle`, `reviewReportTitle`, `reviewDismissTitle`) translated across all 56 non-English locales (168 strings). Low-frequency UI (only shown after 50+ suspensions) but rounds out the parity story.
+
+## [1.3.2] -- 2026-04-24
+
+### Added
+- **`data-i18n-aria` attribute support** in `localizeHtml` so any HTML element carrying `data-i18n-aria="key"` has its `aria-label` populated from `_locales` at init time
+- **`ramEstimateTooltip`** i18n key (was referenced from `popup.html` / `sidepanel.html` but never defined; users previously always saw the hardcoded English fallback)
+- **i18n hooks on the privacy policy "Your data" section and footer** (`privacyYourDataTitle`, `privacyYourDataText`, `privacyFooterText`, `privacyFooterLink`). Those blocks were added in 1.3.1 as hardcoded English and skipped the existing `data-i18n` pass on the rest of the page
+
+### Changed
+- **Sessions section overhaul.**
+  - Delete confirm UX no longer uses the awkward red "Sure?" text. The trash icon now morphs into a check mark with a red filled background and a soft pulsing halo; clicking the check confirms, auto-reverts after 3s.
+  - Newly saved sessions slide in from above with a brief tinted highlight and a subtle scale bounce — only the new card animates, not every existing one.
+  - Deleting a session plays a short slide-out + collapse animation before the row disappears, instead of snapping out.
+  - Action buttons (Open / Replace / Trash) sit at 70% opacity at rest and go to 100% on hover — they're visible without hovering now, so users on touch/no-hover devices can find them.
+  - Removed the redundant inline "Session saved!" feedback below the input on success — the toast already confirms it. Errors still inline for visibility.
+  - Added new i18n key `confirmDeleteTitle` ("Click again to confirm delete") translated into all 57 locales for the trash button's tooltip in confirming state.
+  - Removed the now-dead `confirm` ("Sure?") i18n key from all 57 locales.
+  - Added a `check` icon to `icons.js` for the confirm state.
+- **Changelog now only opens on major version bumps** (e.g. `1.x.x → 2.x.x`). Previously it also opened on minor bumps (`1.2.x → 1.3.x`). The "What's new" link in Settings still takes you to the changelog anytime.
+- **Changelog page content** reframed as a short "Polish & Fixes" section for 1.3.2; previously showed v1.3.1-specific items verbatim
+- **Sleeping-tab text contrast** bumped from `opacity: 0.45` to `0.55` in light mode so suspended titles clear WCAG AA (they scraped the bottom before); dark mode unchanged
+- **Whitelist list** now caps at `max-height: 140px` with internal scroll — a long whitelist no longer stretches the Settings panel
+- **`whatsNewBtn` text** now uses the `whatsNew` i18n key (matching the 1.3.1 intent), not `changelogWhatsNew` — those keys are distinct and had different capitalization
+- **Locale files pretty-printed** via `json.dump(indent=2)` for formatting consistency across all 57 locales (non-en locales were already pretty-printed; `en` now matches)
+
+### Fixed
+- **Tab list recovers from transient load errors.** The `catch` branch in `popup.js#loadAll` replaced the `#tabList` DOM but didn't reset `_tabListSig`. If the next poll returned the same tabs, the signature-dedupe guard would short-circuit the re-render and leave the "Failed to load" state stuck on screen. `_tabListSig` is now reset to `''` in the catch path.
+- **Icon-only toolbar buttons now expose accessible names.** `#btnCloseDuplicates`, `#btnSearchToggle`, and `#btnExportTabs` in both `popup.html` and `sidepanel.html` only carried a `title` attribute; added explicit `aria-label` (plus `data-i18n-aria` so it localizes) so screen readers announce them reliably.
+- **Locale cleanup backport.** The 1.3.1 release stripped 23 orphaned keys from `en/messages.json` only. The other 56 locales still shipped with the dead `changelogA11y*`, `changelogAnimations*`, `changelogBugFixes`, `changelogChangelog*`, `changelogFormCheck*`, `changelogLiveStats*`, `changelogReviewPrompt*`, `changelogSessionOptions*`, `changelogSessionRestore*`, `changelogWhitelistDupes*`, `changelogWhitelistVal*`, `failedToSuspend`, and `suspendThis` keys. Cleaned in this release.
+- **Two more dead i18n keys removed** from every locale: `statRamSaved` (replaced by `statLifetimeRam` in 1.3.1) and `privacyShortTitle` (the privacy policy no longer uses a separate heading for the TL;DR block). Plus `changelogNewFeatures` and `changelogImprovements` which aren't referenced by the simplified 1.3.2 changelog page.
+- **`faviconFallback` hostname regex** hardened from `.replace('www.', '')` (unanchored literal, technically could match `www.` mid-hostname) to `.replace(/^www\./, '')`
+- **`tabListSignature` variable-shadow cleanup** — inner `var t = tabs[i]` was shadowing the outer `t()` i18n helper inside the same function's scope; renamed to `tab` for clarity. No behavior change, lint hygiene.
+- **Safety guard in changelog-open branch:** if `drowzy_lastChangelogVersion` is unexpectedly empty on an `update` event (shouldn't happen but belt-and-suspenders), we now silently update the stored version instead of comparing against an empty string and opening the tab.
+- **Share-stats URL uses canonical slug.** The "Share" button in Stats was copying `https://chromewebstore.google.com/detail/drowzy/oijfnkaakdamnijjgehjpfmclhigmapa` — Chrome Web Store redirects that to the real listing, but fixed to use the canonical `drowzy-tab-suspender-memo` slug so the pasted link doesn't look like an unrelated shortener.
+- **Whitelist input clears its error state on success.** If the user tried an invalid domain (red border + toast), then within 1.5s tried a valid domain, the red border lingered until the original fade-timer fired even though the add had succeeded. The success path now explicitly removes `.input-error`.
+- **`docs/privacy-policy.html` re-synced** with the in-extension copy. The "Your data" section and footer were missing the `data-i18n` hooks added to the extension's `privacy-policy.html`; the GitHub Pages mirror is now byte-identical to the extension copy.
+- **"What's new" link showed double version (`v1.3.1 v1.3.2`) in non-English locales.** 56 of 57 locales had the previous version baked into the translated string (e.g. `de` was `"Neu in v1.3.1"`), and `popup.js` was appending ` v$CURRENT$` on top — producing concatenations like `"Neu in v1.3.1 v1.3.2"`. Fixed by switching `whatsNew` to a `$VERSION$` chrome.i18n placeholder so each locale puts the version in the correct grammatical position natively, then passing the live manifest version as the substitution. Removed `data-i18n="whatsNew"` from `popup.html` / `sidepanel.html` so `localizeHtml` doesn't render the literal placeholder before `attachListeners` substitutes it.
+- **Full localization parity across all 57 locales.** Twelve i18n keys (`changelogVersionLabel`, `copiedStats`, `privacyFooterLink`, `privacyFooterText`, `privacyPermHost`, `privacyPermScripting`, `privacyPermSidePanel`, `privacyYourDataText`, `privacyYourDataTitle`, `ramEstimateTooltip`, `shareStats`, `statLifetimeRam`) had been added to `en` over 1.3.1 / 1.3.2 but never translated to the other 56 locales — non-English users were silently falling back to English text on those strings. Added native translations for all 12 keys × 56 locales (672 strings). Every locale now has all 156 keys.
+- **Reconciled three privacy permission strings** (`privacyPermHost`, `privacyPermScripting`, `privacyPermSidePanel`) where the `en/messages.json` value was older verbose text disagreeing with the concise text in `privacy-policy.html`'s static fallback. `localizeHtml` was overwriting the rendered text with the older copy, causing a flash of wrong content. The `en` values now match the HTML fallbacks exactly.
+- **Reconciled six more privacy strings** (`privacyTitle`, `privacyPermissionsIntro`, `privacyPermTabs`, `privacyPermStorage`, `privacyPermAlarms`, `privacyPermContextMenus`) with the same drift pattern — the `en` values were stale (e.g. `"tabs – listing, suspending, and restoring browser tabs"` redundantly included the permission name and dash that's already rendered separately by the `<code>` element). Updated `en` to the HTML's concise form and re-translated all six keys across the 56 non-English locales (336 fresh translations). Caught by a deeper localization audit that compares static HTML fallback text against the corresponding `en` i18n value.
+
+## [1.3.1] -- 2026-04-19
+
+### Added
+- **Uninstall feedback page** -- on uninstall, Chrome opens a Drowzy-themed feedback page hosted on GitHub Pages (`docs/uninstall.html`) asking what made the user leave, how long they used it, what OS they're on, and an optional comment + follow-up email. Submissions land in a Pageclip dashboard (1000/month free tier). After submit, the page shows a thank-you state with a "Reinstall Drowzy" button that deep-links back to the Chrome Web Store listing and a "Star on GitHub" button, so users who change their mind have a one-click path back. The page is mobile-responsive, has dark/light theme support, no analytics, and no guilt-trippy copy.
+- **`chrome.runtime.setUninstallURL`** wired in `onInstalled` and `onStartup` so the uninstall page is shown every time, including after browser updates that may clear the URL.
+- **Polished empty states** -- the tab list, sessions list, and whitelist all now show a centered icon with the existing copy instead of bare gray text
+- **Animated loading indicator** -- the "Loading tabs..." placeholder shown on popup open now has a gently pulsing moon icon
+- **Persistent section state** -- Sessions, Stats, and Settings sections remember whether you had them open or closed between popup opens (stored locally)
+- **Tab search Escape shortcut** -- pressing Esc in the tab search field clears the query, closes the search, and returns focus to the search toggle button
+- **Cross-window badge accuracy** -- the badge refreshes when you switch between Chrome windows so the count always reflects the window you're looking at
+- **Memory estimate tooltip** -- the "saved" strip stat and the "Lifetime RAM saved" hero card now show a tooltip on hover explaining that the number is based on ~150 MB per suspended tab and actual savings vary by page content. Transparency about what the number means.
+
+### Changed
+- **Current-tab card no longer jitters** -- the domain/favicon area was shifting every few seconds as the 5s poll re-set the favicon `src` and retriggered `onerror`; `renderCurrentTab` now signature-dedupes and only touches the DOM when url, favicon, domain, or whitelist/internal state actually change
+- **Session list no longer rebuilds on every poll** -- added signature dedupe; session cards only re-render when the session data actually changes, eliminating the subtle 5-second flicker
+- **Whitelist list no longer rebuilds on every poll** -- same treatment; remove-buttons don't get recreated between polls unless the whitelist actually changes
+- **Badge clears when Chrome is unfocused** -- previously fell through to counting discarded tabs across every window when no window was focused (e.g. Chrome minimized), giving a misleading cross-window count; now just clears
+- **Save-session feedback timer no longer stacks** -- rapid re-saves were queuing multiple clear timers, which could wipe a fresh message early
+- **Stats section visuals** -- hero card toned down, distinct colored left borders on section cards, cleaner strip label colors (four-commit refinement pass)
+- **Permission surface reduced**
+  - `tabGroups` permission dropped; session save/restore still works without it
+  - Host access moved to `optional_host_permissions`; `protectForms` and `markSuspendedTabs` request `<all_urls>` on toggle and revert if denied
+  - Host-gated settings reset on install/update if host permission is absent
+- **Collapsible sections** animate via `grid-template-rows` so stats/settings no longer snap-scroll on open/close
+- **Popup/sidepanel poll interval** raised to 5s
+- **`suspendTab` hardening** -- rechecks pinned/audio/whitelist status after the 2500ms warning delay so tabs whose state changed mid-warning aren't suspended
+- **Paused-audio tabs get a grace period** -- when a tab's audio stops (pause, mute, call ends), Drowzy treats that as activity and resets the idle timer so the tab gets the full suspend threshold before becoming eligible. Previously, pausing Spotify or ending a Meet call would immediately expose the tab to suspension (since `tab.audible` flipped to false), forcing a full page reload when you came back.
+- **Session restore rollback** -- replace mode now rolls back if any tab fails to create, and the cleanup wraps `chrome.tabs.remove` so a failed cleanup doesn't mask the original error
+- **Tab list rendering** is now idempotent via signature diffing; skip DOM rebuild when tabs unchanged and disable re-entry animations on subsequent renders
+- **Whitelist button hidden** on `chrome://`, `chrome-extension://`, and other non-http pages where it cannot function
+- **Re-check `tab.active`** immediately before `chrome.tabs.discard` so the active tab can't be reloaded after form-check awaits
+- **Privacy policy** wording tightened for `scripting` and host permissions to match actual behavior
+- **Onboarding** "zero RAM" claim corrected
+- **"What's new" link** in settings now shows the live version from `manifest.json` via a single i18n key (`whatsNew`), instead of two keys plus a hardcoded fallback
+- **`changelog.html` content replaced** with v1.3.1-specific items (polished empty states, rock-steady current tab, refined stats, permission surface reduction, 22-fix pass, smarter suspension, safer session restore) so the "What's new" link no longer shows v1.3.0 features
+- **Dead `changelog120*` i18n keys removed** from the English locale (18 orphaned keys) -- they referenced the old v1.3.0 changelog items that no longer exist in the HTML
+
+### Fixed
+
+**Background script**
+- `injectFormCheck` TOCTOU race: add `tabId` to set before `await`
+- `handleSuspendCurrent` compares `tab.index`, not array index
+- `onTabRemoved` flushes timestamps immediately instead of scheduling
+- `onTabRemoved` no longer marks the timestamp store dirty (and triggers a session-storage write) when the removed tab wasn't being tracked
+- `suspendTab` skips tabs still loading in the final recheck and accepts an optional `cachedSettings` param
+- `suspendAllOthers` passes settings to avoid N storage reads
+- `addWhitelist` accepts `localhost` and IP addresses
+- `getTabList` lazily reloads timestamps after service-worker restart
+- `closeDuplicates` URL normalization now lowercases the dedup key so `https://EXAMPLE.com/` and `https://example.com/` collapse correctly
+- `closeDuplicates` never closes a pinned tab even if it's a duplicate, and prefers keeping pinned over active when choosing which copy to keep
+- `_injectedTabs` marker now also clears when the tab starts loading again (covers manual reload / browser restore), not just on URL change
+- `restoreSession` returns the number of tabs actually created, not the input count, so partial-restore toasts report real numbers
+- Fresh install writes `drowzy_lastChangelogVersion` so the changelog doesn't pop on first run
+
+**Popup**
+- `loadAll` catch path null-checks the tab list element
+- `relativeTime` guards for `NaN`/0/string timestamps
+- `addFromInput` has a double-submit guard with disabled state
+- Whitelist toggle accepts `localhost`
+- RAM display drops the stray `~` prefix
+- `formcheck.js` message handler guards against cross-extension senders
+- Session cards defensive-guard against missing `tabs` array or `name` field (no more crash on corrupted storage)
+- Section state restoration now runs synchronously before the first async operation in `init()`, preventing a visible closed-to-open animation on popup open
+
+**Misc**
+- `icon()` trailing space in class attribute
+- Removed spurious `src=""` from favicon `<img>` that triggered an empty request
+- Removed no-op `backdrop-filter` on the opaque toast background
+- `toggleTheme` null-guards `#themeToggle`
+- Dead `badgeStarred` i18n key removed from all locale files
+
+## [1.3.0] -- 2026-04-13
+
+### Added
+- **Close duplicate tabs** -- one-click button to find and close duplicate tabs in the current window (keeps the first occurrence)
+- **Tab search** -- search and filter your tab list by title or URL
+- **Dark / light theme** -- toggle between themes with the button in the header; preference is saved across sessions
+- **Side panel** -- open Drowzy in Chrome's side panel for a persistent, full-height view
+- **Mark suspended tabs** -- optional `[zzz]` prefix on suspended tab titles so you can spot them in the tab bar
+- **Export tab list** -- copy all tab titles and URLs to clipboard with one click
+- **Export sessions as JSON** -- copy all saved sessions for backup or transfer
+- **Suspend warning** -- tabs show a brief "Suspending tab soon..." notice before being auto-suspended
+- **Whitelist import/export** -- copy your whitelist for backup or paste one from another machine
+- **Session replace mode** -- replace current window's tabs with a saved session
+- **`sidePanel` permission** -- enables Chrome side panel integration
+- **`optional_host_permissions`** -- host access for form detection is now optional and requested only when you enable the feature (avoids broad install-time permission prompt)
+- **`scripting` permission** -- programmatic content script injection for form checking (replaces static content scripts)
+
+### Removed
+- **`tabGroups` permission** -- tab group reconstruction on session restore is no longer supported; sessions still save and restore tabs themselves (dropped to minimize permission surface)
+
+### Changed
+- Privacy policy updated with new permissions (April 2026)
+- Changelog page redesigned with feature cards and dark/light theme support
+- Review prompt threshold raised from 10 to 50 suspensions
+- Form check content script now injected on-demand via `chrome.scripting.executeScript` instead of running on every page
+- Formcheck uses `WeakMap` snapshots for contenteditable detection
+- Badge count scoped to current window instead of all windows
+- Stats use local date instead of UTC for "today" tracking
+- Whitelist validation requires domain to contain a dot
+- Session save filters out incognito tabs to prevent privacy leaks
+- Onboarding close uses `chrome.tabs.remove()` instead of `window.close()`
+- All pages set `document.documentElement.lang` dynamically for accessibility
+- All collapsible sections have `aria-controls` and `aria-expanded` attributes
+- Light theme tertiary text darkened for WCAG AA contrast compliance
+- Focus-visible outlines on form inputs (replaces `outline: none`)
+- Review prompt dismiss button enlarged for easier click targets
+- Minimum Chrome version: 120
+
+### Fixed
+- Whitelist import no longer silently drops domains (uses individual `addWhitelist` calls instead of bulk `updateSettings`)
+- Session save no longer crashes on untitled tabs (fixed variable shadowing of i18n function)
+- Protected count no longer includes suspended pinned/audio tabs
+- Startup suspend now correctly records suspensions in stats
+- Port-stripping regex no longer breaks path-containing whitelist entries
+- `isInternalUrl` uses URL parsing instead of fragile prefix matching
+- Alarm creation checks for existing alarm to avoid resetting the period
+- Tab timestamps properly mark dirty flag for flush
+- Duplicate detection strips URL fragments and trailing slashes
+- `[zzz]` prefix cleaned up before tab reload
+- Changelog only opens on major/minor version bumps, not patches
+- Content script has idempotency guard against double-injection
+- Message handler blocks unauthorized content script messages
+
+## [1.2.1] -- 2026-04-12
+
+### Fixed
+- Moved inline scripts to external `.js` files for Manifest V3 CSP compliance
+- Removed broken "Suspend Tab" button from quick actions (redundant with keyboard shortcut)
+- Fixed invalid JSON in several locale translation files
+- Removed dead `suspendCurrentTab` message handler from background.js
+
+## [1.2.0] -- 2026-04-09
+
+### Added
+- **Side panel support** -- Drowzy can now be opened in Chrome's side panel (`sidepanel.html`)
+- **Tab group awareness** -- sessions preserve tab group names and colors on restore
+- **Form data protection** -- content script detects unsaved form data before suspension via `chrome.scripting.executeScript`
+- **`tabGroups` permission** for tab group operations
+- **`scripting` permission** for programmatic content script injection
+
+### Changed
+- Content script injection switched from static `content_scripts` manifest entry to on-demand `chrome.scripting.executeScript`
+- Extended popup UI with additional settings and controls
+
+## [1.1.0] -- 2026-03-17
+
+### Added
+- **57 language translations** -- full i18n support; UI automatically matches browser language
+- **Changelog page** (`changelog.html`) -- in-extension "What's New" page shown after updates
+- **Session management** -- save, name, restore, and delete tab sessions
+- **Stats tracking** -- daily and all-time suspension counts, estimated RAM saved, member-since date
+- **Whitelist management UI** -- add, remove, and view whitelisted sites from the popup
+
+### Changed
+- Popup UI expanded with collapsible sections (Sessions, Stats, Settings)
+- Settings panel moved into the popup (previously separate or minimal)
+- Background script extended with session save/restore, stats recording, and whitelist CRUD
+
+## [1.0.0] -- 2026-02-24
+
+### Added
+- Initial release
+- Auto-suspend inactive tabs using Chrome's native `chrome.tabs.discard()` API
+- Configurable suspend timer (5 minutes to 4 hours, or never)
+- Protect pinned tabs and audio-playing tabs from suspension
+- Site whitelist with pattern matching
+- Keyboard shortcuts: `Alt+S` (suspend current), `Alt+Shift+S` (suspend others), `Alt+W` (wake all)
+- Right-click context menu for quick suspend actions
+- Popup UI with tab list, quick actions, and settings
+- Onboarding page for first-time users
+- Privacy policy page
+- 57 language locale files
+- MIT license

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!--
+  Drowzy uninstall feedback page.
+
+  Submissions go to Pageclip (https://pageclip.co). Responses are viewable
+  in the Pageclip dashboard with CSV export. Free tier: 1000 submissions/mo.
+
+  CONFIG: the form action URL is set in the script block near the bottom
+  (FORM_ACTION). To rotate endpoints (e.g. new Pageclip form, or swap
+  providers entirely), replace that single constant.
+
+  DEPLOY: commit to `main`, enable GitHub Pages in repo Settings -> Pages,
+  Source: Deploy from branch, Branch: `main`, Folder: `/docs`. Page lives
+  at https://ml3dev.github.io/drowzy/uninstall.html
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="robots" content="noindex">
+  <title>Drowzy · Quick feedback</title>
+  <meta name="description" content="Tell us why you uninstalled Drowzy. It helps make the next version better.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a78bfa'%3E%3Cpath d='M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0f0b1a;
+      --bg-surface: #1a1528;
+      --bg-elevated: #241e35;
+      --text: #e8e2f4;
+      --text-dim: #9b8fad;
+      --text-subtle: #6b5f7e;
+      --accent: #a78bfa;
+      --accent-hover: #c4b5fd;
+      --accent-dim: rgba(167, 139, 250, 0.15);
+      --accent-border: rgba(167, 139, 250, 0.4);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.14);
+      --shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+      --danger: #f87171;
+      --radius: 14px;
+      --radius-sm: 8px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8f6fb;
+        --bg-surface: #ffffff;
+        --bg-elevated: #faf8fc;
+        --text: #1a1525;
+        --text-dim: #5c5470;
+        --text-subtle: #8a819c;
+        --accent: #7c3aed;
+        --accent-hover: #6d28d9;
+        --accent-dim: rgba(124, 58, 237, 0.08);
+        --accent-border: rgba(124, 58, 237, 0.3);
+        --border: rgba(0, 0, 0, 0.08);
+        --border-strong: rgba(0, 0, 0, 0.16);
+        --shadow: 0 10px 40px rgba(124, 58, 237, 0.08);
+        --danger: #dc2626;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--bg);
+      background-image:
+        radial-gradient(circle at 15% 10%, rgba(124, 58, 237, 0.14), transparent 55%),
+        radial-gradient(circle at 85% 88%, rgba(167, 139, 250, 0.08), transparent 50%);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      padding: 44px 20px 60px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      animation: fadeUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .hero-logo {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      color: var(--accent);
+      filter: drop-shadow(0 0 16px rgba(167, 139, 250, 0.25));
+    }
+
+    h1 {
+      font-size: clamp(24px, 5vw, 30px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      /* Extra line-height + padding prevents descenders (y, g) from being
+         clipped by the gradient text-fill trick */
+      line-height: 1.3;
+      padding-bottom: 0.08em;
+    }
+
+    .lede {
+      font-size: 15px;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+      max-width: 560px;
+    }
+
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .question {
+      margin-bottom: 24px;
+    }
+
+    .question:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .label-optional {
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--text-subtle);
+      margin-left: 6px;
+    }
+
+    .options {
+      display: grid;
+      gap: 7px;
+    }
+
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 11px 14px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: border-color 150ms ease, background-color 150ms ease, transform 80ms ease;
+      font-size: 14px;
+      color: var(--text);
+      user-select: none;
+    }
+
+    .option:hover {
+      border-color: var(--border-strong);
+    }
+
+    .option:active {
+      transform: scale(0.995);
+    }
+
+    .option input {
+      width: 16px;
+      height: 16px;
+      margin-top: 2px;
+      accent-color: var(--accent);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .option:has(input:checked) {
+      background: var(--accent-dim);
+      border-color: var(--accent-border);
+    }
+
+    .option span {
+      flex: 1;
+    }
+
+    textarea,
+    input[type="email"] {
+      width: 100%;
+      padding: 12px 14px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 1.5;
+      transition: border-color 150ms ease, box-shadow 150ms ease;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 96px;
+    }
+
+    textarea:focus,
+    input[type="email"]:focus {
+      outline: none;
+      border-color: var(--accent-border);
+      box-shadow: 0 0 0 3px var(--accent-dim);
+    }
+
+    textarea::placeholder,
+    input[type="email"]::placeholder {
+      color: var(--text-subtle);
+    }
+
+    .help {
+      font-size: 12px;
+      color: var(--text-subtle);
+      margin-top: 6px;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: inherit;
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: background 150ms ease, border-color 150ms ease, color 150ms ease, transform 80ms ease;
+      text-decoration: none;
+      min-height: 42px;
+    }
+
+    .btn:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px var(--accent-dim), 0 0 0 4px var(--accent-border);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.6;
+      cursor: wait;
+      transform: none;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-dim);
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover {
+      color: var(--text);
+      border-color: var(--border-strong);
+    }
+
+    .skip-note {
+      font-size: 12px;
+      color: var(--text-subtle);
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    .form-error {
+      display: none;
+      margin-top: 14px;
+      padding: 10px 14px;
+      background: rgba(248, 113, 113, 0.08);
+      border: 1px solid rgba(248, 113, 113, 0.25);
+      border-radius: var(--radius-sm);
+      color: var(--danger);
+      font-size: 13px;
+    }
+
+    .form-error.show {
+      display: block;
+    }
+
+    /* Thank you state */
+    .thankyou {
+      text-align: center;
+      padding: 48px 28px;
+      display: none;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .thankyou.show {
+      display: block;
+      animation: fadeUp 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .thankyou-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 18px;
+      color: var(--accent);
+      filter: drop-shadow(0 0 20px rgba(167, 139, 250, 0.35));
+    }
+
+    .thankyou h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+
+    .thankyou p {
+      color: var(--text-dim);
+      font-size: 15px;
+      max-width: 440px;
+      margin: 0 auto 26px;
+    }
+
+    .thankyou-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 26px;
+      font-size: 12px;
+      color: var(--text-subtle);
+      line-height: 1.7;
+    }
+
+    .footer a {
+      color: var(--text-dim);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--border-strong);
+    }
+
+    .footer a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .form-wrap.submitted {
+      display: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    @media (max-width: 560px) {
+      body {
+        padding: 28px 14px 48px;
+      }
+      .card,
+      .thankyou {
+        padding: 22px;
+      }
+      .hero {
+        gap: 12px;
+      }
+      .hero-logo {
+        width: 38px;
+        height: 38px;
+      }
+      .actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 1ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="form-wrap" id="formWrap">
+      <div class="hero">
+        <svg class="hero-logo" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" fill="currentColor"/>
+        </svg>
+        <h1>Thanks for trying Drowzy</h1>
+      </div>
+      <p class="lede">A few quick questions below.</p>
+
+      <form class="card" id="feedbackForm" novalidate>
+        <div class="question">
+          <span class="label" id="q1-label">What made you uninstall?<span class="label-optional">select any that apply</span></span>
+          <div class="options" role="group" aria-labelledby="q1-label">
+            <label class="option"><input type="checkbox" name="reason" value="Didn't notice a memory difference"><span>Didn't notice a memory difference</span></label>
+            <label class="option"><input type="checkbox" name="reason" value="Suspended tabs I was still using"><span>Suspended tabs I was still using</span></label>
+            <label class="option"><input type="checkbox" name="reason" value="Didn't suspend tabs I expected it to"><span>Didn't suspend tabs I expected it to</span></label>
+            <label class="option"><input type="checkbox" name="reason" value="UI was confusing or hard to navigate"><span>UI was confusing or hard to navigate</span></label>
+            <label class="option"><input type="checkbox" name="reason" value="Missing a feature I wanted"><span>Missing a feature I wanted</span></label>
+            <label class="option"><input type="checkbox" name="reason" value="Found an extension I liked better"><span>Found an extension I liked better</span></label>
+            <label class="option"><input type="checkbox" name="reason" value="Asked for too many permissions"><span>Asked for too many permissions</span></label>
+            <label class="option"><input type="checkbox" name="reason" value="Had a bug or caused issues"><span>Had a bug or caused issues</span></label>
+            <label class="option"><input type="checkbox" name="reason" value="Was just trying it out"><span>Was just trying it out</span></label>
+            <label class="option"><input type="checkbox" name="reason" value="Something else"><span>Something else (tell us below)</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <span class="label" id="q2-label">How long did you use Drowzy?<span class="label-optional">optional</span></span>
+          <div class="options" role="radiogroup" aria-labelledby="q2-label">
+            <label class="option"><input type="radio" name="duration" value="Less than a day"><span>Less than a day</span></label>
+            <label class="option"><input type="radio" name="duration" value="A few days"><span>A few days</span></label>
+            <label class="option"><input type="radio" name="duration" value="About a week"><span>About a week</span></label>
+            <label class="option"><input type="radio" name="duration" value="A few weeks"><span>A few weeks</span></label>
+            <label class="option"><input type="radio" name="duration" value="A month or more"><span>A month or more</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <span class="label" id="q3-label">What operating system?<span class="label-optional">optional</span></span>
+          <div class="options" role="radiogroup" aria-labelledby="q3-label">
+            <label class="option"><input type="radio" name="os" value="Windows"><span>Windows</span></label>
+            <label class="option"><input type="radio" name="os" value="macOS"><span>macOS</span></label>
+            <label class="option"><input type="radio" name="os" value="Linux"><span>Linux</span></label>
+            <label class="option"><input type="radio" name="os" value="ChromeOS"><span>ChromeOS</span></label>
+            <label class="option"><input type="radio" name="os" value="Other"><span>Other</span></label>
+          </div>
+        </div>
+
+        <div class="question">
+          <label class="label" for="details">Anything else you want to share?<span class="label-optional">optional</span></label>
+          <textarea id="details" name="details" placeholder="A missing feature, a specific bug, what would've made Drowzy work for you..." maxlength="2000"></textarea>
+        </div>
+
+        <div class="question">
+          <label class="label" for="email">Email<span class="label-optional">optional</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" maxlength="200">
+          <div class="help">Only if you're okay with us reaching out to learn more. We won't add you to anything.</div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            <span class="btn-label">Send feedback</span>
+          </button>
+        </div>
+
+        <div class="form-error" id="formError" role="alert"></div>
+      </form>
+
+      <p class="skip-note">Or just close this tab. Everything here is optional.</p>
+    </div>
+
+    <div class="thankyou" id="thankYou" role="status" aria-live="polite">
+      <svg class="thankyou-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="m8.5 12.5 2.5 2.5 4.5-5"/>
+      </svg>
+      <h2>Thanks for the feedback!</h2>
+      <div class="thankyou-actions">
+        <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa" target="_blank" rel="noopener">
+          Reinstall Drowzy
+        </a>
+        <a class="btn btn-secondary" href="https://github.com/ml3dev/drowzy" target="_blank" rel="noopener">
+          Star on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      Your feedback is sent directly to the developer.<br>
+      No analytics on this page, no cookies, nothing else tracked.<br>
+      <a href="https://github.com/ml3dev/drowzy" target="_blank" rel="noopener">Drowzy on GitHub</a>
+    </div>
+  </main>
+
+  <script>
+    // --- Pageclip endpoint --------------------------------------------------
+    // Dashboard: https://pageclip.co (1000 submissions/mo free tier)
+    var FORM_ACTION = "https://send.pageclip.co/zZeP2acS7vJqLUozK7jUR3Qm0XHs5zcL";
+    // ------------------------------------------------------------------------
+
+    var form = document.getElementById("feedbackForm");
+    var submitBtn = document.getElementById("submitBtn");
+    var btnLabel = submitBtn.querySelector(".btn-label");
+    var errorBox = document.getElementById("formError");
+    var formWrap = document.getElementById("formWrap");
+    var thankYou = document.getElementById("thankYou");
+
+    function showThankYou() {
+      formWrap.classList.add("submitted");
+      thankYou.classList.add("show");
+      thankYou.scrollIntoView({ behavior: "smooth", block: "start" });
+      try { history.replaceState(null, "", "#thanks"); } catch (e) {}
+    }
+
+    function showError(msg) {
+      errorBox.textContent = msg;
+      errorBox.classList.add("show");
+    }
+
+    function clearError() {
+      errorBox.classList.remove("show");
+      errorBox.textContent = "";
+    }
+
+    function collectPayload() {
+      // Pageclip takes standard form-encoded fields. Each distinct name becomes
+      // a column in the dashboard; repeated names collect into arrays.
+      var params = new URLSearchParams();
+      var reasons = form.querySelectorAll('input[name="reason"]:checked');
+      for (var i = 0; i < reasons.length; i++) params.append("reason", reasons[i].value);
+      var duration = form.querySelector('input[name="duration"]:checked');
+      if (duration) params.append("duration", duration.value);
+      var os = form.querySelector('input[name="os"]:checked');
+      if (os) params.append("os", os.value);
+      var detailsVal = form.elements.details.value.trim();
+      if (detailsVal) params.append("details", detailsVal);
+      var email = form.elements.email.value.trim();
+      if (email) params.append("email", email);
+      return params;
+    }
+
+    function hasAnyInput() {
+      if (form.querySelectorAll('input[type="checkbox"]:checked').length) return true;
+      if (form.querySelectorAll('input[type="radio"]:checked').length) return true;
+      if (form.elements.details.value.trim()) return true;
+      if (form.elements.email.value.trim()) return true;
+      return false;
+    }
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      clearError();
+
+      if (!hasAnyInput()) {
+        showError("Pick at least one option or leave a note before sending.");
+        return;
+      }
+
+      var emailVal = form.elements.email.value.trim();
+      if (emailVal && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+        showError("That email doesn't look quite right. Double-check it, or leave the field blank.");
+        form.elements.email.focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      btnLabel.textContent = "Sending...";
+
+      fetch(FORM_ACTION, {
+        method: "POST",
+        body: collectPayload(),
+        // Pageclip redirects to the site URL on success; don't follow the
+        // redirect (GitHub Pages root has no index.html and the cross-origin
+        // hop would be flagged as a CORS failure anyway). An opaqueredirect
+        // response means Pageclip accepted the submission.
+        redirect: "manual"
+      }).then(function(res) {
+        if (res.type === "opaqueredirect" || res.ok) {
+          showThankYou();
+        } else {
+          return res.text().then(function(text) {
+            showError("Feedback server rejected this (" + res.status + "): " + (text || "no details"));
+            submitBtn.disabled = false;
+            btnLabel.textContent = "Send feedback";
+          });
+        }
+      }).catch(function(err) {
+        showError("Couldn't reach the feedback server (" + (err && err.message ? err.message : "network error") + "). Try again.");
+        submitBtn.disabled = false;
+        btnLabel.textContent = "Send feedback";
+      });
+    });
+
+    // Clear validation error as soon as the user starts interacting again
+    form.addEventListener("input", clearError);
+    form.addEventListener("change", clearError);
+  </script>
+</body>
+</html>

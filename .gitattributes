@@ -1,0 +1,4 @@
+# Treat every file in the repo as binary so checkouts byte-match what
+# was committed. This is what makes drowzy-X.Y.Z.zip reproducible from
+# `git checkout vX.Y.Z` regardless of the cloning user's core.autocrlf.
+* -text

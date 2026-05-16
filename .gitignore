@@ -1,0 +1,15 @@
+# Build artifacts / Chrome Web Store upload archives
+drowzy-*.zip
+drowzy.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor cruft
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
