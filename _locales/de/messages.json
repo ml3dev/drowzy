@@ -205,7 +205,7 @@
     "message": "<strong>Tipp:</strong> Klicken Sie in der Chrome-Symbolleiste auf das Puzzleteil-Symbol, um Drowzy für den Schnellzugriff anzuheften."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Tabs, die du noch brauchst, werden suspendiert?</strong> Öffne Drowzy → Einstellungen, um den 30-Minuten-Timer zu erhöhen, oder füge die Seite mit einem Klick zur Whitelist hinzu."
+    "message": "<strong>Tabs, die du noch brauchst, werden suspendiert?</strong> Öffne Drowzy → Einstellungen, um den 15-Minuten-Timer zu erhöhen, oder füge die Seite mit einem Klick zur Whitelist hinzu."
   },
   "onboardingFormsTip": {
     "message": "<strong>Füllst du ein Formular aus?</strong> Aktiviere „Tabs mit Formularen schützen\" in den Einstellungen, damit Tabs mit ungespeicherter Eingabe nicht suspendiert werden."
@@ -462,7 +462,7 @@
     "message": "So funktioniert es"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Tabs, die 30 Minuten inaktiv sind</strong>, werden automatisch suspendiert"
+    "message": "<strong>Tabs, die 15 Minuten inaktiv sind</strong>, werden automatisch suspendiert"
   },
   "featureZeroRam": {
     "message": "<strong>Suspendierte Tabs verwenden null RAM</strong>, bleiben aber in Ihrer Tab-Leiste"

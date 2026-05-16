@@ -210,7 +210,7 @@
     "message": "<strong>Tip:</strong> Click the puzzle icon in your Chrome toolbar to pin Drowzy for one-click access."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Suspending tabs you still want?</strong> Open Drowzy → Settings to bump the 30-minute timer up, or add the site to your whitelist with one click."
+    "message": "<strong>Suspending tabs you still want?</strong> Open Drowzy → Settings to bump the 15-minute timer up, or add the site to your whitelist with one click."
   },
   "onboardingFormsTip": {
     "message": "<strong>Filling out a form?</strong> Enable \"Protect tabs with forms\" in Settings to keep tabs with unsaved input from being suspended."
@@ -235,6 +235,41 @@
   },
   "copiedStats": {
     "message": "Stats copied!"
+  },
+  "shareStatsHeader": {
+    "message": "😴 My Drowzy Stats"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ tabs suspended all time",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ today",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM saved (lifetime)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Using since $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
   },
   "settings": {
     "message": "Settings"
@@ -324,6 +359,30 @@
   },
   "remove": {
     "message": "Remove"
+  },
+  "addedToWhitelist": {
+    "message": "Added $DOMAIN$ to whitelist",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "removedFromWhitelist": {
+    "message": "Removed $DOMAIN$ from whitelist",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ is already in whitelist",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
   },
   "replace": {
     "message": "Replace"
@@ -467,7 +526,7 @@
     "message": "How it works"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Tabs idle for 30 minutes</strong> are automatically suspended"
+    "message": "<strong>Tabs idle for 15 minutes</strong> are automatically suspended"
   },
   "featureZeroRam": {
     "message": "<strong>Suspended tabs release most of their memory</strong> but stay in your tab bar"
@@ -496,8 +555,28 @@
   "actionRightClick": {
     "message": "Right-click on any page for quick suspend options"
   },
+  "keyboardShortcuts": {
+    "message": "Keyboard shortcuts"
+  },
+  "customizeShortcuts": {
+    "message": "Customize"
+  },
+  "shortcutsAllSet": {
+    "message": "All set"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ of $TOTAL$ set",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
   "onboardingCta": {
-    "message": "Drowzy is already running. Open a few tabs and try it out!"
+    "message": "Drowzy is now running. Open it from your toolbar and hit \"Suspend Others\" to try it out."
   },
   "onboardingBtn": {
     "message": "Got it, let's go"

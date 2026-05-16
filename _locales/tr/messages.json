@@ -205,7 +205,7 @@
     "message": "<strong>İpucu:</strong> Tek tıklamayla erişim için Drowzy'yi sabitlemek üzere Chrome araç çubuğundaki yapboz simgesine tıklayın."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Hâlâ kullandığınız sekmeleri askıya mı alıyor?</strong> 30 dakikalık zamanlayıcıyı artırmak veya siteyi tek tıkla beyaz listenize eklemek için Drowzy → Ayarlar'ı açın."
+    "message": "<strong>Hâlâ kullandığınız sekmeleri askıya mı alıyor?</strong> 15 dakikalık zamanlayıcıyı artırmak veya siteyi tek tıkla beyaz listenize eklemek için Drowzy → Ayarlar'ı açın."
   },
   "onboardingFormsTip": {
     "message": "<strong>Form mu dolduruyorsunuz?</strong> Kaydedilmemiş girişi olan sekmelerin askıya alınmaması için Ayarlar'da \"Formu olan sekmeleri koru\"yu etkinleştirin."
@@ -462,7 +462,7 @@
     "message": "Nasıl çalışır"
   },
   "featureAutoSuspend": {
-    "message": "<strong>30 dakika boyunca etkin olmayan sekmeler</strong> otomatik olarak askıya alınır"
+    "message": "<strong>15 dakika boyunca etkin olmayan sekmeler</strong> otomatik olarak askıya alınır"
   },
   "featureZeroRam": {
     "message": "<strong>Askıya alınan sekmeler sıfır RAM kullanır</strong> ancak sekme çubuğunuzda kalır"

@@ -23,7 +23,7 @@ var BADGES = {
   'System page': { icon: 'lock', type: 'system', labelKey: 'badgeSystem' },
   'Pinned': { icon: 'pin', type: 'pinned', labelKey: 'badgePinned' },
   'Audio': { icon: 'volume2', type: 'audio', labelKey: 'badgeAudio' },
-  'Whitelisted': { icon: 'star', type: 'starred', labelKey: 'badgeWhitelisted' },
+  'Whitelisted': { icon: 'shield', type: 'starred', labelKey: 'badgeWhitelisted' },
 };
 
 async function init() {
@@ -158,6 +158,10 @@ async function loadAll() {
     renderSettings(settings);
     renderSessions(sessions);
     renderLifetimeStats(stats);
+    // Re-poll shortcut bindings — user may have edited them in
+    // chrome://extensions/shortcuts via the Customize link without closing
+    // the popup. Cheap call; runs on the same 5s cadence as everything else.
+    renderShortcutsStatus();
     if (scrollEl) scrollEl.scrollTop = savedScroll;
     _loaded = true;
   } catch (e) {
@@ -293,6 +297,7 @@ function renderTabList(tabs) {
       suspendBtn.className = 'tab-suspend-btn';
       suspendBtn.innerHTML = icon('pause', 11);
       suspendBtn.title = t('ctxSuspendThis');
+      suspendBtn.setAttribute('aria-label', t('ctxSuspendThis'));
       (function(tid) {
         suspendBtn.addEventListener('click', async function(e) {
           e.stopPropagation();
@@ -310,11 +315,18 @@ function renderTabList(tabs) {
       return async function() {
         if (tabData.status === 'suspended') {
           await msg({ action: 'wakeTab', tabId: tabData.id });
-          try { await chrome.tabs.update(tabData.id, { active: true }); } catch {}
-          await loadAll();
-        } else {
-          try { await chrome.tabs.update(tabData.id, { active: true }); } catch {}
         }
+        // Activate the tab and focus its window. Without the window focus,
+        // clicking a tab that lives in a non-focused Chrome window updates
+        // its active state but leaves the user looking at the popup's window
+        // — the tab they asked for is "selected" somewhere they can't see.
+        try {
+          var updated = await chrome.tabs.update(tabData.id, { active: true });
+          if (updated && updated.windowId != null) {
+            try { await chrome.windows.update(updated.windowId, { focused: true }); } catch {}
+          }
+        } catch {}
+        if (tabData.status === 'suspended') await loadAll();
       };
     })(tab);
     el.addEventListener('click', tabAction);
@@ -616,6 +628,9 @@ function renderSettings(settings) {
 var _whitelistSig = '';
 function renderWhitelist(list) {
   var el = document.getElementById('whitelistList');
+  // Keep the count badge in sync even when the sig dedupe early-returns.
+  var countEl = document.getElementById('whitelistCount');
+  if (countEl) countEl.textContent = (list && list.length) ? '(' + list.length + ')' : '';
   var sig = list && list.length ? list.join('\u0001') : '__empty__';
   if (sig === _whitelistSig) return;
   _whitelistSig = sig;
@@ -628,17 +643,37 @@ function renderWhitelist(list) {
     var li = document.createElement('li');
     li.className = 'whitelist-item';
     var span = document.createElement('span');
+    span.className = 'whitelist-domain';
     span.textContent = list[i];
+    span.title = list[i];
     var rm = document.createElement('button');
+    rm.type = 'button';
     rm.className = 'whitelist-remove';
-    rm.innerHTML = icon('x', 13);
+    // Plain text label — the previous icon-only X was easy to miss.
+    // The trailing × glyph is a literal character (not an SVG) so it always
+    // renders even if the icons.js bundle hasn't loaded yet.
+    rm.innerHTML = '<span class="whitelist-remove-text">' + esc(t('remove')) + '</span><span class="whitelist-remove-x" aria-hidden="true">×</span>';
     rm.title = t('remove');
-    (function(domain) {
-      rm.onclick = function(e) {
+    rm.setAttribute('aria-label', t('remove') + ': ' + list[i]);
+    (function(domain, listItem) {
+      rm.addEventListener('click', function(e) {
         e.stopPropagation();
+        e.preventDefault();
+        // Optimistic removal — fade the row out immediately so the click
+        // feels instant. The polling timer can race and refresh
+        // _whitelistSig to the post-removal shape before our own loadAll
+        // runs, in which case renderWhitelist's sig dedupe would
+        // early-return and leave the stale DOM untouched. Resetting the
+        // sig forces the next render to execute.
+        listItem.style.transition = 'opacity 140ms ease-out';
+        listItem.style.opacity = '0';
+        setTimeout(function() {
+          if (listItem.parentNode) listItem.parentNode.removeChild(listItem);
+        }, 150);
+        _whitelistSig = '';
         msg({ action: 'removeWhitelist', domain: domain }).then(function() { loadAll(); });
-      };
-    })(list[i]);
+      });
+    })(list[i], li);
     li.appendChild(span);
     li.appendChild(rm);
     el.appendChild(li);
@@ -685,10 +720,47 @@ function attachListeners() {
   });
 
   document.getElementById('btnToggleWhitelist').addEventListener('click', async function() {
+    if (this.disabled) return;
     var d = this.dataset.domain;
     if (!d || d === '\u2014') return;
-    if (!d.includes('.') && d !== 'localhost') return;
-    await msg({ action: this.dataset.whitelisted === '1' ? 'removeWhitelist' : 'addWhitelist', domain: d });
+    // Match background.addWhitelist's accept set: registrable domains, plus
+    // localhost and bare IP literals (IPv4 + IPv6 loopback). Without this the
+    // toggle silently no-ops on http://[::1]/ and similar local-dev URLs even
+    // though the background would have whitelisted them.
+    var isLocal = d === 'localhost' || d === '::1' || /^\d{1,3}(\.\d{1,3}){3}$/.test(d);
+    if (!isLocal && !d.includes('.')) {
+      showToast(t('invalidDomain'));
+      return;
+    }
+    var wasWhitelisted = this.dataset.whitelisted === '1';
+    // Optimistic flip \u2014 switch the button label/state immediately so the
+    // click feels instant. The renderCurrentTab signature dedupe could
+    // otherwise let a polling-timer render run first and leave a stale sig
+    // that early-returns later.
+    var btnText = this.querySelector('.btn-text');
+    var btnIcon = this.querySelector('.btn-icon');
+    if (wasWhitelisted) {
+      if (btnText) btnText.textContent = t('neverSuspendSite');
+      if (btnIcon) btnIcon.innerHTML = icon('shield', 14);
+      this.classList.remove('is-whitelisted');
+      this.dataset.whitelisted = '0';
+    } else {
+      if (btnText) btnText.textContent = t('siteWhitelisted');
+      if (btnIcon) btnIcon.innerHTML = icon('shieldCheck', 14);
+      this.classList.add('is-whitelisted');
+      this.dataset.whitelisted = '1';
+    }
+    // Reset the currentTab signature so the next render is forced to
+    // re-execute (otherwise it could match the now-stale pre-click sig).
+    var section = document.getElementById('currentTabSection');
+    if (section) section.dataset.sig = '';
+    this.disabled = true;
+    try {
+      await msg({ action: wasWhitelisted ? 'removeWhitelist' : 'addWhitelist', domain: d });
+      showToast(wasWhitelisted ? t('removedFromWhitelist', [d]) : t('addedToWhitelist', [d]));
+    } finally {
+      this.disabled = false;
+    }
     await loadAll();
   });
 
@@ -831,23 +903,41 @@ function attachListeners() {
   document.getElementById('btnShareStats').addEventListener('click', async function() {
     var stats = await msg({ action: 'getStats' });
     if (!stats) return;
-    var ram = (stats.totalTabsSuspended || 0) * 150;
+    var total = stats.totalTabsSuspended || 0;
+    var today = stats.totalTabsSuspendedToday || 0;
+    var ram = total * MB_PER_TAB;
     var lines = [
-      '\uD83D\uDE34 My Drowzy Stats',
+      t('shareStatsHeader'),
       '',
-      '\u2022 ' + (stats.totalTabsSuspended || 0) + ' tabs suspended all time',
-      '\u2022 ' + (stats.totalTabsSuspendedToday || 0) + ' today',
-      '\u2022 ' + fmtRam(ram) + ' RAM saved (lifetime)',
+      '\u2022 ' + t('shareStatsLineAllTime', [String(total)]),
+      '\u2022 ' + t('shareStatsLineToday', [String(today)]),
+      '\u2022 ' + t('shareStatsLineRam', [fmtRam(ram)]),
     ];
     if (stats.installDate) {
-      lines.push('\u2022 Using since ' + new Date(stats.installDate).toLocaleDateString(undefined, { month: 'short', year: 'numeric' }));
+      var since = new Date(stats.installDate).toLocaleDateString(undefined, { month: 'short', year: 'numeric' });
+      lines.push('\u2022 ' + t('shareStatsLineSince', [since]));
     }
     lines.push('', 'https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa');
     try {
       await navigator.clipboard.writeText(lines.join('\n'));
-      showToast(t('copiedStats') || 'Stats copied!');
+      showToast(t('copiedStats'));
     } catch { showToast(t('failedToCopy')); }
   });
+
+  // Customize-shortcuts link: opens chrome://extensions/shortcuts. Chrome
+  // forbids extensions from setting shortcuts programmatically (no
+  // chrome.commands.update in Chrome, only in Firefox), so the manual
+  // shortcuts editor is the only path. The status text reflects how many
+  // commands Chrome actually bound, so users with conflicting suggested_keys
+  // can see at a glance that something isn't set.
+  var customizeBtn = document.getElementById('btnCustomizeShortcuts');
+  if (customizeBtn) {
+    customizeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
+    });
+  }
+  renderShortcutsStatus();
 
   var whatsNewBtn = document.getElementById('btnWhatsNew');
   // `whatsNew` uses a $VERSION$ placeholder so each locale puts the version
@@ -984,6 +1074,13 @@ async function addFromInput() {
   input.value = '';
   input.disabled = false;
   _addingWhitelist = false;
+  // Match the toggle button's confirmation toast for consistency. `res.added`
+  // is false when the domain was already in the whitelist — in that case the
+  // user typed a duplicate; tell them rather than silently doing nothing.
+  // Skip the toast entirely if the message round-trip failed (res is null).
+  if (res) {
+    showToast(res.added ? t('addedToWhitelist', [domain]) : t('alreadyWhitelisted', [domain]));
+  }
   await loadAll();
 }
 
@@ -995,8 +1092,30 @@ function showToast(text, dur) {
   _toastTimer = setTimeout(function() { el.classList.remove('show'); }, dur || 2500);
 }
 
+function renderShortcutsStatus() {
+  var el = document.getElementById('shortcutsStatus');
+  if (!el || !chrome.commands || !chrome.commands.getAll) return;
+  chrome.commands.getAll(function(commands) {
+    var total = commands.length;
+    var bound = commands.filter(function(c) { return !!c.shortcut; }).length;
+    // Neutral styling — Drowzy works fine without any shortcuts (popup,
+    // context menu, side panel cover everything), so an amber/warning state
+    // would imply a problem that isn't there. The Customize link next to
+    // this text is invitation enough.
+    if (bound === total) {
+      el.textContent = t('shortcutsAllSet');
+    } else {
+      el.textContent = t('shortcutsSomeUnset', [String(bound), String(total)]);
+    }
+  });
+}
+
 function fmtRam(mb) {
-  return mb >= 1024 ? (mb / 1024).toFixed(1) + ' GB' : mb + ' MB';
+  if (mb < 1024) return mb + ' MB';
+  var gb = mb / 1024;
+  // Drop trailing .0 — "2 GB" reads cleaner than "2.0 GB" for whole values.
+  var rounded = gb.toFixed(1);
+  return (rounded.endsWith('.0') ? rounded.slice(0, -2) : rounded) + ' GB';
 }
 
 function relativeTime(ts) {

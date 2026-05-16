@@ -205,7 +205,7 @@
     "message": "<strong>Vinkki:</strong> Napsauta Chromen työkalupalkin palapelikuvaketta kiinnittääksesi Drowzyn yhden napsautuksen päähän."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Suspendoiko vielä tarvitsemiasi välilehtiä?</strong> Avaa Drowzy → Asetukset ja nosta 30 minuutin ajastinta, tai lisää sivusto valkoiselle listalle yhdellä klikkauksella."
+    "message": "<strong>Suspendoiko vielä tarvitsemiasi välilehtiä?</strong> Avaa Drowzy → Asetukset ja nosta 15 minuutin ajastinta, tai lisää sivusto valkoiselle listalle yhdellä klikkauksella."
   },
   "onboardingFormsTip": {
     "message": "<strong>Täytätkö lomaketta?</strong> Ota käyttöön \"Suojaa lomakkeita sisältävät välilehdet\" Asetuksissa, jotta tallentamattomia syötteitä sisältäviä välilehtiä ei suspendoida."
@@ -462,7 +462,7 @@
     "message": "Miten se toimii"
   },
   "featureAutoSuspend": {
-    "message": "<strong>30 minuuttia käyttämättömät välilehdet</strong> keskeytetään automaattisesti"
+    "message": "<strong>15 minuuttia käyttämättömät välilehdet</strong> keskeytetään automaattisesti"
   },
   "featureZeroRam": {
     "message": "<strong>Keskeytetyt välilehdet eivät käytä RAM-muistia</strong> mutta pysyvät välilehtipalkissa"

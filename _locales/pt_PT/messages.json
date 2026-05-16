@@ -205,7 +205,7 @@
     "message": "<strong>Dica:</strong> Clique no ícone do puzzle na barra de ferramentas do Chrome para fixar o Drowzy para acesso com um clique."
   },
   "onboardingTimerTip": {
-    "message": "<strong>A suspender separadores que ainda usa?</strong> Abra Drowzy → Definições para aumentar o temporizador de 30 minutos, ou adicione o site à sua lista branca com um clique."
+    "message": "<strong>A suspender separadores que ainda usa?</strong> Abra Drowzy → Definições para aumentar o temporizador de 15 minutos, ou adicione o site à sua lista branca com um clique."
   },
   "onboardingFormsTip": {
     "message": "<strong>A preencher um formulário?</strong> Ative \"Proteger separadores com formulários\" nas Definições para que os separadores com entradas não guardadas não sejam suspensos."
@@ -462,7 +462,7 @@
     "message": "Como funciona"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Separadores inativos durante 30 minutos</strong> são automaticamente suspensos"
+    "message": "<strong>Separadores inativos durante 15 minutos</strong> são automaticamente suspensos"
   },
   "featureZeroRam": {
     "message": "<strong>Separadores suspensos usam zero RAM</strong>, mas permanecem na barra de separadores"

@@ -2,7 +2,7 @@
 // all listeners at top level for MV3
 
 const DEFAULT_SETTINGS = {
-  suspendAfterMinutes: 30,
+  suspendAfterMinutes: 15,
   whitelist: [],
   enableAutoSuspend: true,
   protectPinned: true,
@@ -37,7 +37,7 @@ async function injectFormCheck(tabId) {
 }
 
 const ALARM_NAME = 'check-tabs';
-const BADGE_COLOR = '#6C63FF';
+const BADGE_COLOR = '#7c3aed';
 const MB_PER_TAB = 150;
 const MAX_SESSIONS = 20;
 const UNINSTALL_URL = 'https://ml3dev.github.io/drowzy/uninstall.html';
@@ -106,13 +106,13 @@ async function onInstalled(details) {
     await initStats();
     await chrome.storage.local.set({ drowzy_lastChangelogVersion: chrome.runtime.getManifest().version });
     try { chrome.tabs.create({ url: 'onboarding.html' }); } catch {}
-    // first-run quick-suspend: without this the user waits the full 30 min
-    // before anything visibly happens, which is the most common reason cited
-    // for "didn't notice a memory difference" and uninstalling. ~30s after
-    // install, suspend tabs Chrome reports as idle for 10+ minutes — only
-    // the obviously-stale ones, so it doesn't surprise the user with a
-    // recently-used tab going away. Uses chrome.alarms (not setTimeout) so the
-    // pass survives MV3 service-worker termination during the wait.
+    // first-run quick-suspend: without this the user waits the full 15 min
+    // (default) before anything visibly happens, which is the most common
+    // reason cited for "didn't notice a memory difference" and uninstalling.
+    // ~30s after install, suspend tabs Chrome reports as idle for 10+ minutes
+    // — only the obviously-stale ones, so it doesn't surprise the user with
+    // a recently-used tab going away. Uses chrome.alarms (not setTimeout) so
+    // the pass survives MV3 service-worker termination during the wait.
     try { chrome.alarms.create('first-run-suspend', { delayInMinutes: 0.5 }); } catch {}
   } else if (details.reason === 'update') {
     let version = chrome.runtime.getManifest().version;
@@ -526,12 +526,15 @@ async function suspendTab(tabId, cachedSettings, opts) {
     // Discarding an active tab forces a visible reload when the user looks at it.
     try {
       let fresh = await chrome.tabs.get(tabId);
-      if (fresh.active || fresh.discarded || fresh.audible || fresh.status === 'loading') return false;
+      if (fresh.active || fresh.discarded || fresh.audible) return false;
       // for auto-suspend only: if Keep awake bumped the timestamp during the
       // warning window or tab.lastAccessed updated mid-await (user refocused),
-      // bail out. Manual suspends (context menu, Suspend Others, popup button)
-      // pass auto=false because the user has explicit intent — bypass timing.
+      // bail out. Also skip tabs still in 'loading' to avoid discarding mid-navigation.
+      // Manual suspends (context menu, Suspend Others, popup button) pass auto=false
+      // because the user has explicit intent — bypass timing and loading checks, since
+      // SPAs like Reddit can sit in 'loading' indefinitely from background streaming.
       if (opts && opts.auto) {
+        if (fresh.status === 'loading') return false;
         let now = Date.now();
         let threshold = settings.suspendAfterMinutes * 60 * 1000;
         let lastActive = _timestamps[tabId] || 0;
@@ -571,6 +574,12 @@ async function updateBadgeNow() {
     let n = discarded.length;
     await chrome.action.setBadgeText({ text: n > 0 ? String(n) : '' });
     await chrome.action.setBadgeBackgroundColor({ color: BADGE_COLOR });
+    // setBadgeTextColor is Chrome 110+; guard so older Chromes don't throw.
+    // Forcing white guarantees contrast over our brand purple regardless of
+    // what Chrome's auto-contrast heuristic would pick.
+    if (chrome.action.setBadgeTextColor) {
+      try { await chrome.action.setBadgeTextColor({ color: '#ffffff' }); } catch {}
+    }
   } catch {}
 }
 
@@ -684,7 +693,10 @@ async function unsuspendAll(windowId) {
 
 async function addWhitelist(domain) {
   if (!domain || typeof domain !== 'string') return { added: false, error: t('invalidDomain') };
-  let d = domain.toLowerCase().replace(/^www\./, '').trim();
+  // trim() before the www-strip so a leading-whitespace input like "  www.x.com"
+  // still gets normalized (regex anchors to ^, so the leading space would
+  // otherwise prevent the www. strip).
+  let d = domain.trim().toLowerCase().replace(/^www\./, '');
   if (!d) return { added: false, error: t('invalidDomain') };
   // Strip port from domain part before validation
   let domainPart = d.split('/')[0].replace(/:\d+$/, '');
@@ -1003,9 +1015,15 @@ async function handleMessage(msg) {
       }
       for (let url in groups) {
         if (groups[url].length < 2) continue;
-        // Prefer keeping pinned tabs, then the active tab, then the first occurrence
+        // Prefer pinned, then active, then a live (non-discarded) tab, then the
+        // first occurrence. The live-tab tiebreaker matters: without it, when a
+        // group has only one non-discarded duplicate and one or more discarded
+        // shells of the same URL, the [0] fallback could pick a discarded tab,
+        // and we'd close the live one — keeping an empty placeholder. Order:
+        // pinned > active > live > index 0.
         let keep = groups[url].find(tab => tab.pinned)
           || groups[url].find(tab => tab.active)
+          || groups[url].find(tab => !tab.discarded)
           || groups[url][0];
         for (let tab of groups[url]) {
           // Never close pinned tabs (even if not the chosen "keep")

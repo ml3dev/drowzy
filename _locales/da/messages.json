@@ -205,7 +205,7 @@
     "message": "<strong>Tip:</strong> Klik på puslespilsikonet på Chromes værktøjslinje for at fastgøre Drowzy og få adgang med ét klik."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Suspenderer faner, du stadig bruger?</strong> Åbn Drowzy → Indstillinger for at øge 30-minutters-timeren, eller tilføj sitet til whitelisten med ét klik."
+    "message": "<strong>Suspenderer faner, du stadig bruger?</strong> Åbn Drowzy → Indstillinger for at øge 15-minutters-timeren, eller tilføj sitet til whitelisten med ét klik."
   },
   "onboardingFormsTip": {
     "message": "<strong>Udfylder du en formular?</strong> Aktivér \"Beskyt faner med formularer\" i Indstillinger for at forhindre, at faner med ugemte input suspenderes."
@@ -462,7 +462,7 @@
     "message": "Sådan fungerer det"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Faneblade inaktive i 30 minutter</strong> suspenderes automatisk"
+    "message": "<strong>Faneblade inaktive i 15 minutter</strong> suspenderes automatisk"
   },
   "featureZeroRam": {
     "message": "<strong>Suspenderede faneblade bruger nul RAM</strong>, men forbliver i din fanebjælke"

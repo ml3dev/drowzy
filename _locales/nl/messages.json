@@ -205,7 +205,7 @@
     "message": "<strong>Tip:</strong> Klik op het puzzelpictogram in je Chrome-werkbalk om Drowzy vast te zetten voor toegang met één klik."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Schort tabbladen op die je nog wilt?</strong> Open Drowzy → Instellingen om de timer van 30 minuten te verhogen, of voeg de site met één klik toe aan je whitelist."
+    "message": "<strong>Schort tabbladen op die je nog wilt?</strong> Open Drowzy → Instellingen om de timer van 15 minuten te verhogen, of voeg de site met één klik toe aan je whitelist."
   },
   "onboardingFormsTip": {
     "message": "<strong>Een formulier aan het invullen?</strong> Schakel \"Bescherm tabbladen met formulieren\" in bij Instellingen zodat tabbladen met niet-opgeslagen invoer niet worden opgeschort."
@@ -462,7 +462,7 @@
     "message": "Hoe het werkt"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Tabbladen die 30 minuten inactief zijn</strong> worden automatisch opgeschort"
+    "message": "<strong>Tabbladen die 15 minuten inactief zijn</strong> worden automatisch opgeschort"
   },
   "featureZeroRam": {
     "message": "<strong>Opgeschorte tabbladen gebruiken geen RAM</strong> maar blijven in je tabbladbalk"

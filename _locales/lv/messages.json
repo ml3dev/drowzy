@@ -205,7 +205,7 @@
     "message": "<strong>Padoms:</strong> Noklikšķiniet uz puzles ikonas Chrome rīkjoslā, lai piespraustu Drowzy vienas piespiešanas piekļuvei."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Pārtrauc cilnes, kuras vēl izmantojat?</strong> Atveriet Drowzy → Iestatījumi, lai palielinātu 30 minūšu taimeri, vai pievienojiet vietni baltajam sarakstam ar vienu klikšķi."
+    "message": "<strong>Pārtrauc cilnes, kuras vēl izmantojat?</strong> Atveriet Drowzy → Iestatījumi, lai palielinātu 15 minūšu taimeri, vai pievienojiet vietni baltajam sarakstam ar vienu klikšķi."
   },
   "onboardingFormsTip": {
     "message": "<strong>Aizpildāt veidlapu?</strong> Ieslēdziet \"Aizsargāt cilnes ar veidlapām\" sadaļā Iestatījumi, lai cilnes ar nesaglabātu ievadi netiktu pārtrauktas."
@@ -462,7 +462,7 @@
     "message": "Kā tas darbojas"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Cilnes, kas ir neaktīvas 30 minūtes,</strong> tiek automātiski apturētas"
+    "message": "<strong>Cilnes, kas ir neaktīvas 15 minūtes,</strong> tiek automātiski apturētas"
   },
   "featureZeroRam": {
     "message": "<strong>Apturētās cilnes neizmanto RAM,</strong> bet paliek ciļņu joslā"

@@ -205,7 +205,7 @@
     "message": "<strong>提示：</strong>点击 Chrome 工具栏中的拼图图标,固定 Drowzy 以便一键访问。"
   },
   "onboardingTimerTip": {
-    "message": "<strong>挂起您还在使用的标签页?</strong> 打开 Drowzy → 设置,提高 30 分钟计时器,或一键将网站加入白名单。"
+    "message": "<strong>挂起您还在使用的标签页?</strong> 打开 Drowzy → 设置,提高 15 分钟计时器,或一键将网站加入白名单。"
   },
   "onboardingFormsTip": {
     "message": "<strong>正在填写表单?</strong> 在设置中启用\"保护带表单的标签页\",以防止带有未保存输入的标签页被挂起。"
@@ -462,7 +462,7 @@
     "message": "工作原理"
   },
   "featureAutoSuspend": {
-    "message": "<strong>闲置 30 分钟的标签页</strong>将自动被休眠"
+    "message": "<strong>闲置 15 分钟的标签页</strong>将自动被休眠"
   },
   "featureZeroRam": {
     "message": "<strong>已休眠的标签页不占用 RAM</strong>，但仍保留在标签栏中"

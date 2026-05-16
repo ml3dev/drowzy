@@ -205,7 +205,7 @@
     "message": "<strong>Savjet:</strong> Kliknite ikonu slagalice u Chrome alatnoj traci da prikvačite Drowzy za pristup jednim klikom."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Obustavlja kartice koje još koristite?</strong> Otvorite Drowzy → Postavke kako biste povećali timer od 30 minuta, ili dodajte stranicu u bijelu listu jednim klikom."
+    "message": "<strong>Obustavlja kartice koje još koristite?</strong> Otvorite Drowzy → Postavke kako biste povećali timer od 15 minuta, ili dodajte stranicu u bijelu listu jednim klikom."
   },
   "onboardingFormsTip": {
     "message": "<strong>Ispunjavate obrazac?</strong> Omogućite „Zaštita kartica s obrascima\" u Postavkama kako se kartice s nespremljenim unosom ne bi obustavile."
@@ -462,7 +462,7 @@
     "message": "Kako funkcionira"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Kartice neaktivne 30 minuta</strong> automatski se suspendiraju"
+    "message": "<strong>Kartice neaktivne 15 minuta</strong> automatski se suspendiraju"
   },
   "featureZeroRam": {
     "message": "<strong>Suspendirane kartice koriste nula RAM-a</strong> ali ostaju na traci kartica"

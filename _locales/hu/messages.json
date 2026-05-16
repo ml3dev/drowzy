@@ -205,7 +205,7 @@
     "message": "<strong>Tipp:</strong> Kattintson a Chrome eszköztárán a kirakós ikonjára, és rögzítse a Drowzyt az egykattintásos hozzáférésért."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Még használt lapokat függeszt fel?</strong> Nyisd meg a Drowzy → Beállítások menüt a 30 perces időzítő növeléséhez, vagy add hozzá az oldalt a fehérlistádhoz egy kattintással."
+    "message": "<strong>Még használt lapokat függeszt fel?</strong> Nyisd meg a Drowzy → Beállítások menüt a 15 perces időzítő növeléséhez, vagy add hozzá az oldalt a fehérlistádhoz egy kattintással."
   },
   "onboardingFormsTip": {
     "message": "<strong>Űrlapot töltesz ki?</strong> Engedélyezd a „Űrlapokat tartalmazó lapok védelme\" opciót a Beállításokban, hogy a mentetlen bevitelt tartalmazó lapok ne legyenek felfüggesztve."
@@ -462,7 +462,7 @@
     "message": "Hogyan működik"
   },
   "featureAutoSuspend": {
-    "message": "<strong>A 30 perce inaktív lapok</strong> automatikusan felfüggesztésre kerülnek"
+    "message": "<strong>A 15 perce inaktív lapok</strong> automatikusan felfüggesztésre kerülnek"
   },
   "featureZeroRam": {
     "message": "<strong>A felfüggesztett lapok nulla RAM-ot használnak</strong>, de megmaradnak a lapsávban"

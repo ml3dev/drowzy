@@ -462,7 +462,7 @@
     "message": "આ કેવી રીતે કામ કરે છે"
   },
   "featureAutoSuspend": {
-    "message": "<strong>30 મિનિટ નિષ્ક્રિય ટેબ</strong> ઑટોમેટિકલી સસ્પેન્ડ થાય છે"
+    "message": "<strong>15 મિનિટ નિષ્ક્રિય ટેબ</strong> ઑટોમેટિકલી સસ્પેન્ડ થાય છે"
   },
   "featureZeroRam": {
     "message": "<strong>સસ્પેન્ડ થયેલી ટેબ શૂન્ય RAM વાપરે છે</strong> પણ તમારી ટેબ બારમાં રહે છે"

@@ -165,7 +165,7 @@
               </div>
               <div class="stats-grid">
                 <div class="stat-card">
-                  <span class="stat-card-icon" data-icon="moon" data-icon-size="12"></span>
+                  <span class="stat-card-icon" data-icon="calendarDays" data-icon-size="12"></span>
                   <div class="stat-card-content">
                     <span class="stat-card-value" id="statToday">0</span>
                     <span class="stat-card-label" data-i18n="statToday">Today</span>
@@ -238,7 +238,7 @@
                 <label class="switch"><input type="checkbox" id="toggleMarkSuspended"><span class="slider"></span></label>
               </div>
               <div class="setting-row setting-row-block">
-                <label data-i18n="whitelistedSites">Whitelisted sites</label>
+                <label><span data-i18n="whitelistedSites">Whitelisted sites</span> <span class="whitelist-count" id="whitelistCount"></span></label>
                 <div class="whitelist-add">
                   <input type="text" id="whitelistInput" data-i18n-placeholder="whitelistPlaceholder" placeholder="example.com, full URL, or site.com/path/*" class="input">
                   <button class="btn btn-sm" id="btnAddWhitelist">
@@ -257,6 +257,13 @@
                     <span data-i18n="importWhitelist">Import</span>
                   </button>
                 </div>
+              </div>
+              <div class="setting-row">
+                <label data-i18n="keyboardShortcuts">Keyboard shortcuts</label>
+                <span class="shortcuts-row-right">
+                  <span class="shortcuts-status" id="shortcutsStatus"></span>
+                  <a class="settings-link" id="btnCustomizeShortcuts" href="#" data-i18n="customizeShortcuts">Customize</a>
+                </span>
               </div>
               <div class="setting-row">
                 <a class="settings-link" id="btnWhatsNew" href="#">What's new</a>

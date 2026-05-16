@@ -205,7 +205,7 @@
     "message": "<strong>Tips:</strong> Klicka på pusselikonen i Chromes verktygsfält för att fästa Drowzy för åtkomst med ett klick."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Avbryter flikar du fortfarande använder?</strong> Öppna Drowzy → Inställningar för att öka 30-minuterstimern, eller lägg till sidan i din vitlista med ett klick."
+    "message": "<strong>Avbryter flikar du fortfarande använder?</strong> Öppna Drowzy → Inställningar för att öka 15-minuterstimern, eller lägg till sidan i din vitlista med ett klick."
   },
   "onboardingFormsTip": {
     "message": "<strong>Fyller du i ett formulär?</strong> Aktivera \"Skydda flikar med formulär\" i Inställningar så att flikar med osparad inmatning inte avbryts."
@@ -462,7 +462,7 @@
     "message": "Så fungerar det"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Flikar inaktiva i 30 minuter</strong> suspenderas automatiskt"
+    "message": "<strong>Flikar inaktiva i 15 minuter</strong> suspenderas automatiskt"
   },
   "featureZeroRam": {
     "message": "<strong>Suspenderade flikar använder noll RAM</strong> men finns kvar i flikfältet"

@@ -205,7 +205,7 @@
     "message": "<strong>Tip:</strong> Klikněte na ikonu skládačky v panelu nástrojů Chromu a připněte si Drowzy pro rychlý přístup."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Uspávají se karty, které ještě používáte?</strong> Otevřete Drowzy → Nastavení a zvyšte 30minutový časovač, nebo přidejte web do whitelistu jedním klikem."
+    "message": "<strong>Uspávají se karty, které ještě používáte?</strong> Otevřete Drowzy → Nastavení a zvyšte 15minutový časovač, nebo přidejte web do whitelistu jedním klikem."
   },
   "onboardingFormsTip": {
     "message": "<strong>Vyplňujete formulář?</strong> Zapněte „Chránit karty s formuláři\" v Nastavení, aby se karty s neuloženým vstupem neuspávaly."
@@ -462,7 +462,7 @@
     "message": "Jak to funguje"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Karty neaktivní 30 minut</strong> jsou automaticky uspány"
+    "message": "<strong>Karty neaktivní 15 minut</strong> jsou automaticky uspány"
   },
   "featureZeroRam": {
     "message": "<strong>Uspané karty nepoužívají RAM</strong>, ale zůstávají na liště karet"

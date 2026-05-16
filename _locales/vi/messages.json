@@ -205,7 +205,7 @@
     "message": "<strong>Mẹo:</strong> Nhấp vào biểu tượng câu đố trên thanh công cụ Chrome để ghim Drowzy nhằm truy cập một lần nhấp."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Tạm dừng các thẻ bạn vẫn còn dùng?</strong> Mở Drowzy → Cài đặt để tăng bộ hẹn giờ 30 phút, hoặc thêm trang web vào danh sách trắng của bạn chỉ bằng một cú nhấp chuột."
+    "message": "<strong>Tạm dừng các thẻ bạn vẫn còn dùng?</strong> Mở Drowzy → Cài đặt để tăng bộ hẹn giờ 15 phút, hoặc thêm trang web vào danh sách trắng của bạn chỉ bằng một cú nhấp chuột."
   },
   "onboardingFormsTip": {
     "message": "<strong>Đang điền biểu mẫu?</strong> Bật \"Bảo vệ thẻ có biểu mẫu\" trong Cài đặt để các thẻ có nội dung chưa lưu không bị tạm dừng."
@@ -462,7 +462,7 @@
     "message": "Cách hoạt động"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Các tab không hoạt động trong 30 phút</strong> sẽ tự động bị tạm ngưng"
+    "message": "<strong>Các tab không hoạt động trong 15 phút</strong> sẽ tự động bị tạm ngưng"
   },
   "featureZeroRam": {
     "message": "<strong>Các tab đã tạm ngưng không sử dụng RAM</strong> nhưng vẫn hiển thị trên thanh tab"

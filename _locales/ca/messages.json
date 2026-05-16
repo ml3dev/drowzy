@@ -205,7 +205,7 @@
     "message": "<strong>Consell:</strong> Feu clic a la icona del trencaclosques de la barra d'eines de Chrome per fixar Drowzy i accedir-hi amb un sol clic."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Et suspèn pestanyes que encara vols?</strong> Obre Drowzy → Configuració per augmentar el temporitzador de 30 minuts, o afegeix el lloc a la llista blanca amb un clic."
+    "message": "<strong>Et suspèn pestanyes que encara vols?</strong> Obre Drowzy → Configuració per augmentar el temporitzador de 15 minuts, o afegeix el lloc a la llista blanca amb un clic."
   },
   "onboardingFormsTip": {
     "message": "<strong>Omplint un formulari?</strong> Activa \"Protegir pestanyes amb formularis\" a Configuració perquè les pestanyes amb dades sense desar no se suspenguin."
@@ -462,7 +462,7 @@
     "message": "Com funciona"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Les pestanyes inactives durant 30 minuts</strong> se suspenen automàticament"
+    "message": "<strong>Les pestanyes inactives durant 15 minuts</strong> se suspenen automàticament"
   },
   "featureZeroRam": {
     "message": "<strong>Les pestanyes suspeses no utilitzen RAM</strong> però es mantenen a la barra de pestanyes"

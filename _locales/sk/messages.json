@@ -205,7 +205,7 @@
     "message": "<strong>Tip:</strong> Kliknite na ikonu skladačky na paneli s nástrojmi Chrome, aby ste si pripli Drowzy na rýchly prístup."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Uspáva karty, ktoré ešte potrebujete?</strong> Otvorte Drowzy → Nastavenia a zvýšte 30-minútový časovač, alebo pridajte stránku na váš whitelist jedným klikom."
+    "message": "<strong>Uspáva karty, ktoré ešte potrebujete?</strong> Otvorte Drowzy → Nastavenia a zvýšte 15-minútový časovač, alebo pridajte stránku na váš whitelist jedným klikom."
   },
   "onboardingFormsTip": {
     "message": "<strong>Vypĺňate formulár?</strong> Zapnite „Chrániť karty s formulármi\" v Nastaveniach, aby sa karty s neuloženým vstupom nepozastavili."
@@ -462,7 +462,7 @@
     "message": "Ako to funguje"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Karty neaktívne 30 minút</strong> sú automaticky pozastavené"
+    "message": "<strong>Karty neaktívne 15 minút</strong> sú automaticky pozastavené"
   },
   "featureZeroRam": {
     "message": "<strong>Pozastavené karty nepoužívajú RAM</strong>, ale zostávajú na lište kariet"

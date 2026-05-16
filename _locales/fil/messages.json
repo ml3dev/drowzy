@@ -205,7 +205,7 @@
     "message": "<strong>Tip:</strong> I-click ang puzzle icon sa Chrome toolbar mo para i-pin ang Drowzy para sa one-click access."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Sinususpende ang mga tab na ginagamit mo pa?</strong> Buksan ang Drowzy → Mga Setting upang dagdagan ang 30-minutong timer, o idagdag ang site sa iyong whitelist sa isang click."
+    "message": "<strong>Sinususpende ang mga tab na ginagamit mo pa?</strong> Buksan ang Drowzy → Mga Setting upang dagdagan ang 15-minutong timer, o idagdag ang site sa iyong whitelist sa isang click."
   },
   "onboardingFormsTip": {
     "message": "<strong>Pumupuno ng form?</strong> I-enable ang \"Protektahan ang mga tab na may form\" sa Mga Setting upang hindi masuspende ang mga tab na may hindi naka-save na input."
@@ -462,7 +462,7 @@
     "message": "Paano ito gumagana"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Mga tab na idle sa loob ng 30 minuto</strong> ay awtomatikong isu-suspend"
+    "message": "<strong>Mga tab na idle sa loob ng 15 minuto</strong> ay awtomatikong isu-suspend"
   },
   "featureZeroRam": {
     "message": "<strong>Ang mga naka-suspend na tab ay walang ginagamit na RAM</strong> ngunit nananatili sa iyong tab bar"

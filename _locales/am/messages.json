@@ -205,7 +205,7 @@
     "message": "<strong>ጠቃሚ ምክር:</strong> Drowzy ን በአንድ ጠቅታ ለመድረስ በ Chrome መሣሪያ አሞሌዎ ላይ ያለውን የእንቆቅልሽ አዶ ይጫኑ።"
   },
   "onboardingTimerTip": {
-    "message": "<strong>አሁንም የምትፈልገውን ትር እያቆመ ነው?</strong> Drowzy → ቅንብሮች ይክፈቱ የ30 ደቂቃ ሰዓቱን ለማሳደግ፣ ወይም ጣቢያውን በአንድ ጠቅታ ወደ ነጭ ዝርዝርዎ ያክሉ።"
+    "message": "<strong>አሁንም የምትፈልገውን ትር እያቆመ ነው?</strong> Drowzy → ቅንብሮች ይክፈቱ የ15 ደቂቃ ሰዓቱን ለማሳደግ፣ ወይም ጣቢያውን በአንድ ጠቅታ ወደ ነጭ ዝርዝርዎ ያክሉ።"
   },
   "onboardingFormsTip": {
     "message": "<strong>ቅጽ እየሞላህ ነው?</strong> ያልተቀመጡ ግቤቶች ያላቸውን ትሮች ከመታገድ ለመጠበቅ \"ቅጾች ያላቸውን ትሮች ጠብቅ\" ን በቅንብሮች ውስጥ ያንቁ።"
@@ -462,7 +462,7 @@
     "message": "እንዴት እንደሚሰራ"
   },
   "featureAutoSuspend": {
-    "message": "<strong>ለ30 ደቂቃዎች ስራ-ፈት የሆኑ ትሮች</strong> በራስ-ሰር ይቋረጣሉ"
+    "message": "<strong>ለ15 ደቂቃዎች ስራ-ፈት የሆኑ ትሮች</strong> በራስ-ሰር ይቋረጣሉ"
   },
   "featureZeroRam": {
     "message": "<strong>የተቋረጡ ትሮች ዜሮ RAM ይጠቀማሉ</strong> ግን በትር አሞሌዎ ውስጥ ይቆያሉ"

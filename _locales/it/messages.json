@@ -205,7 +205,7 @@
     "message": "<strong>Consiglio:</strong> Fai clic sull'icona del puzzle nella barra degli strumenti di Chrome per fissare Drowzy e accedervi con un clic."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Sospende schede che usi ancora?</strong> Apri Drowzy → Impostazioni per aumentare il timer da 30 minuti, o aggiungi il sito alla whitelist con un clic."
+    "message": "<strong>Sospende schede che usi ancora?</strong> Apri Drowzy → Impostazioni per aumentare il timer da 15 minuti, o aggiungi il sito alla whitelist con un clic."
   },
   "onboardingFormsTip": {
     "message": "<strong>Stai compilando un modulo?</strong> Attiva \"Proteggi le schede con moduli\" nelle Impostazioni per evitare che le schede con dati non salvati vengano sospese."
@@ -462,7 +462,7 @@
     "message": "Come funziona"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Le schede inattive da 30 minuti</strong> vengono sospese automaticamente"
+    "message": "<strong>Le schede inattive da 15 minuti</strong> vengono sospese automaticamente"
   },
   "featureZeroRam": {
     "message": "<strong>Le schede sospese usano zero RAM</strong> ma restano nella barra delle schede"

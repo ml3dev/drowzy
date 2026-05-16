@@ -205,7 +205,7 @@
     "message": "<strong>Astuce :</strong> Cliquez sur l'icône puzzle dans la barre d'outils de Chrome pour épingler Drowzy et y accéder en un clic."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Suspend des onglets que vous utilisez encore ?</strong> Ouvrez Drowzy → Paramètres pour augmenter la minuterie de 30 minutes, ou ajoutez le site à votre liste blanche en un clic."
+    "message": "<strong>Suspend des onglets que vous utilisez encore ?</strong> Ouvrez Drowzy → Paramètres pour augmenter la minuterie de 15 minutes, ou ajoutez le site à votre liste blanche en un clic."
   },
   "onboardingFormsTip": {
     "message": "<strong>Vous remplissez un formulaire ?</strong> Activez « Protéger les onglets avec des formulaires » dans les Paramètres pour que les onglets contenant des saisies non enregistrées ne soient pas suspendus."
@@ -462,7 +462,7 @@
     "message": "Comment ça marche"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Les onglets inactifs pendant 30 minutes</strong> sont automatiquement suspendus"
+    "message": "<strong>Les onglets inactifs pendant 15 minutes</strong> sont automatiquement suspendus"
   },
   "featureZeroRam": {
     "message": "<strong>Les onglets suspendus n'utilisent aucune RAM</strong> mais restent dans votre barre d'onglets"

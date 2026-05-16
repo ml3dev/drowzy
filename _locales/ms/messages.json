@@ -205,7 +205,7 @@
     "message": "<strong>Petua:</strong> Klik ikon teka-teki dalam bar alat Chrome untuk menyemat Drowzy bagi akses satu klik."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Menggantung tab yang masih anda gunakan?</strong> Buka Drowzy → Tetapan untuk menambah pemasa 30 minit, atau tambahkan tapak ke senarai putih anda dengan satu klik."
+    "message": "<strong>Menggantung tab yang masih anda gunakan?</strong> Buka Drowzy → Tetapan untuk menambah pemasa 15 minit, atau tambahkan tapak ke senarai putih anda dengan satu klik."
   },
   "onboardingFormsTip": {
     "message": "<strong>Mengisi borang?</strong> Aktifkan \"Lindungi tab dengan borang\" di Tetapan supaya tab dengan input yang belum disimpan tidak digantung."
@@ -462,7 +462,7 @@
     "message": "Cara ia berfungsi"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Tab yang tidak aktif selama 30 minit</strong> digantung secara automatik"
+    "message": "<strong>Tab yang tidak aktif selama 15 minit</strong> digantung secara automatik"
   },
   "featureZeroRam": {
     "message": "<strong>Tab yang digantung menggunakan sifar RAM</strong> tetapi kekal dalam bar tab anda"

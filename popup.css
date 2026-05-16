@@ -110,9 +110,13 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   width: 340px;
-  max-height: 520px;
+  max-height: 580px;
   overflow: hidden;
   background: var(--bg-base);
   color: var(--color-text);
@@ -363,7 +367,7 @@ body:not(.popup-ready) {
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-height: 520px;
+  max-height: 580px;
 }
 
 .popup-header {
@@ -1092,32 +1096,58 @@ body:not(.popup-ready) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
   padding: 3px 0;
   font-size: 11.5px;
   color: var(--color-text-secondary);
+}
+
+.whitelist-domain {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.whitelist-count {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  font-weight: normal;
 }
 
 .whitelist-remove {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
   background: none;
-  border: none;
-  color: var(--color-text-tertiary);
+  border: 1px solid var(--border-default, rgba(255,255,255,0.1));
+  color: var(--color-text-secondary);
   cursor: pointer;
-  padding: 2px;
-  border-radius: 3px;
-  transition: background-color var(--transition-fast), transform 60ms ease-out;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-family: inherit;
+  line-height: 1;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform 60ms ease-out;
   outline: none;
+}
+
+.whitelist-remove-x {
+  font-size: 13px;
+  line-height: 1;
 }
 
 .whitelist-remove:hover {
   color: var(--color-danger);
   background: var(--color-danger-dim);
+  border-color: var(--color-danger);
 }
 
 .whitelist-remove:active {
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 
 .whitelist-remove:focus-visible {
@@ -1166,6 +1196,17 @@ body:not(.popup-ready) {
 .settings-link:hover {
   color: var(--color-accent-hover);
   text-decoration: underline;
+}
+
+.shortcuts-row-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.shortcuts-status {
+  font-size: 11px;
+  color: var(--color-text-secondary);
 }
 
 /* review prompt banner */

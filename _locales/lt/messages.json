@@ -205,7 +205,7 @@
     "message": "<strong>Patarimas:</strong> Spustelėkite dėlionės piktogramą „Chrome“ įrankių juostoje, kad prisegtumėte „Drowzy“ vienu spustelėjimu."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Sustabdo skirtukus, kurių dar reikia?</strong> Atidarykite Drowzy → Nustatymai, kad padidintumėte 30 minučių laikmatį, arba pridėkite svetainę į baltąjį sąrašą vienu paspaudimu."
+    "message": "<strong>Sustabdo skirtukus, kurių dar reikia?</strong> Atidarykite Drowzy → Nustatymai, kad padidintumėte 15 minučių laikmatį, arba pridėkite svetainę į baltąjį sąrašą vienu paspaudimu."
   },
   "onboardingFormsTip": {
     "message": "<strong>Pildote formą?</strong> Įjunkite „Apsaugoti skirtukus su formomis\" Nustatymuose, kad skirtukai su neišsaugotu įvedimu nebūtų sustabdomi."
@@ -462,7 +462,7 @@
     "message": "Kaip tai veikia"
   },
   "featureAutoSuspend": {
-    "message": "<strong>30 minučių neaktyvios kortelės</strong> automatiškai sustabdomos"
+    "message": "<strong>15 minučių neaktyvios kortelės</strong> automatiškai sustabdomos"
   },
   "featureZeroRam": {
     "message": "<strong>Sustabdytos kortelės nenaudoja RAM</strong>, bet lieka kortelių juostoje"

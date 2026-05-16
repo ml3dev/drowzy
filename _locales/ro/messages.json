@@ -205,7 +205,7 @@
     "message": "<strong>Sfat:</strong> Faceți clic pe pictograma puzzle din bara de instrumente Chrome pentru a fixa Drowzy pentru acces cu un clic."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Suspendă file pe care încă le folosești?</strong> Deschide Drowzy → Setări pentru a mări temporizatorul de 30 de minute, sau adaugă site-ul în lista albă cu un clic."
+    "message": "<strong>Suspendă file pe care încă le folosești?</strong> Deschide Drowzy → Setări pentru a mări temporizatorul de 15 de minute, sau adaugă site-ul în lista albă cu un clic."
   },
   "onboardingFormsTip": {
     "message": "<strong>Completezi un formular?</strong> Activează „Protejează filele cu formulare\" în Setări astfel încât filele cu introduceri nesalvate să nu fie suspendate."
@@ -462,7 +462,7 @@
     "message": "Cum funcționează"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Filele inactive timp de 30 de minute</strong> sunt suspendate automat"
+    "message": "<strong>Filele inactive timp de 15 de minute</strong> sunt suspendate automat"
   },
   "featureZeroRam": {
     "message": "<strong>Filele suspendate nu folosesc RAM</strong> dar rămân în bara de file"

@@ -205,7 +205,7 @@
     "message": "<strong>Nasvet:</strong> Kliknite ikono sestavljanke v orodni vrstici Chrome, da pripnete Drowzy za dostop z enim klikom."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Ustavlja zavihke, ki jih še uporabljate?</strong> Odprite Drowzy → Nastavitve in povečajte 30-minutni časovnik, ali dodajte spletno mesto na beli seznam z enim klikom."
+    "message": "<strong>Ustavlja zavihke, ki jih še uporabljate?</strong> Odprite Drowzy → Nastavitve in povečajte 15-minutni časovnik, ali dodajte spletno mesto na beli seznam z enim klikom."
   },
   "onboardingFormsTip": {
     "message": "<strong>Izpolnjujete obrazec?</strong> Vklopite »Zaščiti zavihke z obrazci« v Nastavitvah, da zavihki z neshranjenim vnosom ne bodo ustavljeni."
@@ -462,7 +462,7 @@
     "message": "Kako deluje"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Zavihki, neaktivni 30 minut</strong>, se samodejno zamrznejo"
+    "message": "<strong>Zavihki, neaktivni 15 minut</strong>, se samodejno zamrznejo"
   },
   "featureZeroRam": {
     "message": "<strong>Zamrznjeni zavihki ne porabljajo RAM</strong>, a ostanejo v vrstici zavihkov"

@@ -205,7 +205,7 @@
     "message": "<strong>Dica:</strong> Clique no ícone de quebra-cabeça na barra de ferramentas do Chrome para fixar o Drowzy e ter acesso com um clique."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Suspendendo guias que você ainda usa?</strong> Abra Drowzy → Configurações para aumentar o cronômetro de 30 minutos, ou adicione o site à sua lista branca com um clique."
+    "message": "<strong>Suspendendo guias que você ainda usa?</strong> Abra Drowzy → Configurações para aumentar o cronômetro de 15 minutos, ou adicione o site à sua lista branca com um clique."
   },
   "onboardingFormsTip": {
     "message": "<strong>Preenchendo um formulário?</strong> Ative \"Proteger guias com formulários\" em Configurações para que guias com entradas não salvas não sejam suspensas."
@@ -462,7 +462,7 @@
     "message": "Como funciona"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Abas inativas por 30 minutos</strong> são suspensas automaticamente"
+    "message": "<strong>Abas inativas por 15 minutos</strong> são suspensas automaticamente"
   },
   "featureZeroRam": {
     "message": "<strong>Abas suspensas usam zero RAM</strong>, mas permanecem na barra de abas"

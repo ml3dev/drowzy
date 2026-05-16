@@ -205,7 +205,7 @@
     "message": "<strong>Kidokezo:</strong> Bofya aikoni ya fumbo katika upau wa zana wa Chrome ili ubandike Drowzy kwa ufikiaji wa mbofyo mmoja."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Vichupo unavyotumia bado vinasimamishwa?</strong> Fungua Drowzy → Mipangilio ili kuongeza kipima muda cha dakika 30, au ongeza tovuti kwenye orodha yako nyeupe kwa mbofyo mmoja."
+    "message": "<strong>Vichupo unavyotumia bado vinasimamishwa?</strong> Fungua Drowzy → Mipangilio ili kuongeza kipima muda cha dakika 15, au ongeza tovuti kwenye orodha yako nyeupe kwa mbofyo mmoja."
   },
   "onboardingFormsTip": {
     "message": "<strong>Unajaza fomu?</strong> Wezesha \"Linda vichupo na fomu\" kwenye Mipangilio ili vichupo vyenye taarifa zisizohifadhiwa visisimamishwe."
@@ -462,7 +462,7 @@
     "message": "Jinsi inavyofanya kazi"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Tabo zisizotumika kwa dakika 30</strong> zinasimamishwa kiotomatiki"
+    "message": "<strong>Tabo zisizotumika kwa dakika 15</strong> zinasimamishwa kiotomatiki"
   },
   "featureZeroRam": {
     "message": "<strong>Tabo zilizosimamishwa hazitumii RAM</strong> lakini zinabaki kwenye upau wa tabo"

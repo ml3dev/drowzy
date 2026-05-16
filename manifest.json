@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extName__",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "__MSG_extDescription__",
   "default_locale": "en",
   "permissions": ["tabs", "storage", "alarms", "contextMenus", "scripting", "sidePanel"],
@@ -27,7 +27,7 @@
     "suspend-current": {
       "suggested_key": {
         "default": "Alt+S",
-        "windows": "Alt+Shift+Z"
+        "windows": "Alt+Shift+P"
       },
       "description": "__MSG_commandSuspendCurrent__"
     },
@@ -38,7 +38,7 @@
     "wake-all": {
       "suggested_key": {
         "default": "Alt+W",
-        "windows": "Alt+Shift+W"
+        "windows": "Alt+Shift+O"
       },
       "description": "__MSG_commandWakeAll__"
     }

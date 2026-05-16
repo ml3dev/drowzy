@@ -205,7 +205,7 @@
     "message": "<strong>Tips:</strong> Klik ikon teka-teki di toolbar Chrome untuk menyematkan Drowzy demi akses sekali klik."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Menangguhkan tab yang masih Anda inginkan?</strong> Buka Drowzy → Pengaturan untuk menambah pengatur waktu 30 menit, atau tambahkan situs ke whitelist Anda dengan satu klik."
+    "message": "<strong>Menangguhkan tab yang masih Anda inginkan?</strong> Buka Drowzy → Pengaturan untuk menambah pengatur waktu 15 menit, atau tambahkan situs ke whitelist Anda dengan satu klik."
   },
   "onboardingFormsTip": {
     "message": "<strong>Mengisi formulir?</strong> Aktifkan \"Lindungi tab dengan formulir\" di Pengaturan agar tab dengan masukan yang belum disimpan tidak ditangguhkan."
@@ -462,7 +462,7 @@
     "message": "Cara kerjanya"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Tab tidak aktif selama 30 menit</strong> secara otomatis ditangguhkan"
+    "message": "<strong>Tab tidak aktif selama 15 menit</strong> secara otomatis ditangguhkan"
   },
   "featureZeroRam": {
     "message": "<strong>Tab yang ditangguhkan menggunakan nol RAM</strong> tetapi tetap ada di bilah tab Anda"

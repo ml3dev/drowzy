@@ -205,7 +205,7 @@
     "message": "<strong>Vihje:</strong> Klõpsa Chromei tööriistaribal pusletükki ikoonil, et kinnitada Drowzy kiireks juurdepääsuks."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Peatab vahekaarte, mida ikka kasutad?</strong> Ava Drowzy → Seaded ja suurenda 30-minutilist taimerit või lisa sait valgesse nimekirja ühe klõpsuga."
+    "message": "<strong>Peatab vahekaarte, mida ikka kasutad?</strong> Ava Drowzy → Seaded ja suurenda 15-minutilist taimerit või lisa sait valgesse nimekirja ühe klõpsuga."
   },
   "onboardingFormsTip": {
     "message": "<strong>Täidad vormi?</strong> Lülita Seadetes sisse „Kaitse vorme sisaldavaid vahekaarte\", et salvestamata sisendiga vahekaarte ei peatataks."
@@ -462,7 +462,7 @@
     "message": "Kuidas see töötab"
   },
   "featureAutoSuspend": {
-    "message": "<strong>30 minutit jõude olnud vahelehed</strong> peatatakse automaatselt"
+    "message": "<strong>15 minutit jõude olnud vahelehed</strong> peatatakse automaatselt"
   },
   "featureZeroRam": {
     "message": "<strong>Peatatud vahelehed ei kasuta RAM-i</strong>, kuid jäävad vahelehtede ribale"

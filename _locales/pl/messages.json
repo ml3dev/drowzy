@@ -205,7 +205,7 @@
     "message": "<strong>Wskazówka:</strong> Kliknij ikonę puzzla na pasku narzędzi Chrome, aby przypiąć Drowzy do dostępu jednym kliknięciem."
   },
   "onboardingTimerTip": {
-    "message": "<strong>Zawiesza karty, których jeszcze potrzebujesz?</strong> Otwórz Drowzy → Ustawienia, aby zwiększyć 30-minutowy licznik, lub dodaj witrynę do białej listy jednym kliknięciem."
+    "message": "<strong>Zawiesza karty, których jeszcze potrzebujesz?</strong> Otwórz Drowzy → Ustawienia, aby zwiększyć 15-minutowy licznik, lub dodaj witrynę do białej listy jednym kliknięciem."
   },
   "onboardingFormsTip": {
     "message": "<strong>Wypełniasz formularz?</strong> Włącz „Chroń karty z formularzami\" w Ustawieniach, aby karty z niezapisanymi danymi nie były zawieszane."
@@ -462,7 +462,7 @@
     "message": "Jak to działa"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Karty nieaktywne przez 30 minut</strong> są automatycznie usypiane"
+    "message": "<strong>Karty nieaktywne przez 15 minut</strong> są automatycznie usypiane"
   },
   "featureZeroRam": {
     "message": "<strong>Uśpione karty nie zużywają RAM</strong>, ale pozostają na pasku kart"

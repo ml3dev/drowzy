@@ -205,7 +205,7 @@
     "message": "<strong>提示：</strong>點擊 Chrome 工具列中的拼圖圖示,釘選 Drowzy 以便一鍵存取。"
   },
   "onboardingTimerTip": {
-    "message": "<strong>掛起您還在使用的分頁?</strong> 開啟 Drowzy → 設定,提高 30 分鐘計時器,或一鍵將網站加入白名單。"
+    "message": "<strong>掛起您還在使用的分頁?</strong> 開啟 Drowzy → 設定,提高 15 分鐘計時器,或一鍵將網站加入白名單。"
   },
   "onboardingFormsTip": {
     "message": "<strong>正在填寫表單?</strong> 在設定中啟用「保護有表單的分頁」,以防止有未儲存輸入的分頁被掛起。"
@@ -462,7 +462,7 @@
     "message": "運作方式"
   },
   "featureAutoSuspend": {
-    "message": "<strong>閒置 30 分鐘的分頁</strong>將自動被休眠"
+    "message": "<strong>閒置 15 分鐘的分頁</strong>將自動被休眠"
   },
   "featureZeroRam": {
     "message": "<strong>已休眠的分頁不佔用 RAM</strong>，但仍保留在分頁列中"

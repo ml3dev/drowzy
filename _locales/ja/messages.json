@@ -205,7 +205,7 @@
     "message": "<strong>ヒント:</strong> Chrome ツールバーのパズルアイコンをクリックして、Drowzy をピン留めし、ワンクリックでアクセスできるようにしましょう。"
   },
   "onboardingTimerTip": {
-    "message": "<strong>まだ使っているタブが停止される?</strong> Drowzy → 設定で30分タイマーを延ばすか、サイトをワンクリックでホワイトリストに追加してください。"
+    "message": "<strong>まだ使っているタブが停止される?</strong> Drowzy → 設定で15分タイマーを延ばすか、サイトをワンクリックでホワイトリストに追加してください。"
   },
   "onboardingFormsTip": {
     "message": "<strong>フォームに入力中?</strong> 設定で「フォームのあるタブを保護」を有効にすると、未保存の入力があるタブが停止されません。"
@@ -462,7 +462,7 @@
     "message": "仕組み"
   },
   "featureAutoSuspend": {
-    "message": "<strong>30分間非アクティブなタブ</strong>は自動的にサスペンドされます"
+    "message": "<strong>15分間非アクティブなタブ</strong>は自動的にサスペンドされます"
   },
   "featureZeroRam": {
     "message": "<strong>サスペンド中のタブはRAMを使用しません</strong>が、タブバーに残ります"

@@ -205,7 +205,7 @@
     "message": "<strong>팁:</strong> Chrome 도구 모음의 퍼즐 아이콘을 클릭하여 Drowzy를 고정하면 한 번의 클릭으로 액세스할 수 있습니다."
   },
   "onboardingTimerTip": {
-    "message": "<strong>아직 사용 중인 탭이 중지되나요?</strong> 30분 타이머를 늘리거나 사이트를 한 번의 클릭으로 화이트리스트에 추가하려면 Drowzy → 설정을 여세요."
+    "message": "<strong>아직 사용 중인 탭이 중지되나요?</strong> 15분 타이머를 늘리거나 사이트를 한 번의 클릭으로 화이트리스트에 추가하려면 Drowzy → 설정을 여세요."
   },
   "onboardingFormsTip": {
     "message": "<strong>양식을 작성 중이신가요?</strong> 저장되지 않은 입력이 있는 탭이 중지되지 않도록 설정에서 \"양식이 있는 탭 보호\"를 활성화하세요."
@@ -462,7 +462,7 @@
     "message": "작동 방식"
   },
   "featureAutoSuspend": {
-    "message": "<strong>30분 동안 비활성인 탭</strong>은 자동으로 일시중지됩니다"
+    "message": "<strong>15분 동안 비활성인 탭</strong>은 자동으로 일시중지됩니다"
   },
   "featureZeroRam": {
     "message": "<strong>일시중지된 탭은 RAM을 사용하지 않지만</strong> 탭 바에 그대로 유지됩니다"

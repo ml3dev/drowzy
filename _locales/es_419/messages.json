@@ -205,7 +205,7 @@
     "message": "<strong>Consejo:</strong> Haz clic en el icono del rompecabezas en la barra de herramientas de Chrome para fijar Drowzy y acceder con un clic."
   },
   "onboardingTimerTip": {
-    "message": "<strong>¿Te suspende pestañas que aún querés?</strong> Abrí Drowzy → Configuración para aumentar el temporizador de 30 minutos, o agregá el sitio a tu lista blanca con un clic."
+    "message": "<strong>¿Te suspende pestañas que aún querés?</strong> Abrí Drowzy → Configuración para aumentar el temporizador de 15 minutos, o agregá el sitio a tu lista blanca con un clic."
   },
   "onboardingFormsTip": {
     "message": "<strong>¿Llenando un formulario?</strong> Activá \"Proteger pestañas con formularios\" en Configuración para que las pestañas con entradas sin guardar no se suspendan."
@@ -462,7 +462,7 @@
     "message": "Cómo funciona"
   },
   "featureAutoSuspend": {
-    "message": "<strong>Las pestañas inactivas durante 30 minutos</strong> se suspenden automáticamente"
+    "message": "<strong>Las pestañas inactivas durante 15 minutos</strong> se suspenden automáticamente"
   },
   "featureZeroRam": {
     "message": "<strong>Las pestañas suspendidas no usan RAM</strong> pero se quedan en la barra de pestañas"
