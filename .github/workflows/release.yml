@@ -1,0 +1,87 @@
+name: Release
+
+# Builds the Chrome Web Store zip on every version tag push and publishes
+# a GitHub Release with the zip + its SHA-256. The zip is built by CI
+# from the tagged commit — anyone can re-run this workflow on a fork and
+# verify the result matches.
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout tagged source
+        uses: actions/checkout@v4
+
+      - name: Verify manifest version matches the tag
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          MANIFEST=$(grep -E '"version"' manifest.json | head -1 | sed -E 's/.*"version"\s*:\s*"([^"]+)".*/\1/')
+          if [ "$TAG" != "$MANIFEST" ]; then
+            echo "Tag $GITHUB_REF_NAME but manifest.json version is $MANIFEST — refusing to release."
+            exit 1
+          fi
+          echo "matched: tag=$GITHUB_REF_NAME, manifest=$MANIFEST"
+
+      - name: Build zip
+        id: build
+        run: |
+          chmod +x scripts/package.sh
+          scripts/package.sh
+          VER="${GITHUB_REF_NAME#v}"
+          SHA=$(sha256sum "drowzy-${VER}.zip" | awk '{print $1}')
+          echo "asset=drowzy-${VER}.zip" >> "$GITHUB_OUTPUT"
+          echo "sha256=$SHA" >> "$GITHUB_OUTPUT"
+
+      - name: Extract changelog section for this version
+        id: notes
+        run: |
+          VER="${GITHUB_REF_NAME#v}"
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import os, re
+          ver = os.environ['GITHUB_REF_NAME'][1:]
+          with open('CHANGELOG.md', encoding='utf-8') as f:
+              md = f.read()
+          m = re.search(r'^## \[' + re.escape(ver) + r'\][^\n]*\n(.*?)(?=^## \[|\Z)', md, re.M | re.S)
+          body = (m.group(1) if m else '').strip()
+          # GitHub Actions multiline output
+          print('body<<__END_NOTES__')
+          print(body)
+          print('__END_NOTES__')
+          PY
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VER="${GITHUB_REF_NAME#v}"
+          NOTES_BODY=$(cat <<'EOF'
+          ${{ steps.notes.outputs.body }}
+          EOF
+          )
+          # Append the verification footer
+          FULL_NOTES=$(cat <<EOF
+          $NOTES_BODY
+
+          ---
+
+          ### Verifying this build
+
+          This zip was built by GitHub Actions from commit \`${GITHUB_SHA}\`. You can re-run the workflow on a fork to verify the output matches.
+
+          \`\`\`
+          sha256: ${{ steps.build.outputs.sha256 }}
+          \`\`\`
+          EOF
+          )
+          gh release create "$GITHUB_REF_NAME" \
+            "${{ steps.build.outputs.asset }}" \
+            --title "$GITHUB_REF_NAME" \
+            --notes "$FULL_NOTES"
