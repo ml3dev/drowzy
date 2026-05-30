@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "ଭିନ୍ନ କୀ-ବୋର୍ଡ୍ ସର୍ଟକଟ୍ ଚାହାଁନ୍ତି? ଏଠାରେ କଷ୍ଟମାଇଜ୍ କରନ୍ତୁ →"
   },
-  "reviewLeaveTitle": {
-    "message": "ଏକ ଶୀଘ୍ର ସମୀକ୍ଷା ଛାଡନ୍ତୁ"
-  },
-  "reviewReportTitle": {
-    "message": "ଏକ ସମସ୍ୟା ରିପୋର୍ଟ କରନ୍ତୁ"
-  },
-  "reviewDismissTitle": {
-    "message": "ଖାରଜ କରନ୍ତୁ"
-  },
   "statMemberSince": {
     "message": "ସଦସ୍ୟ ହୋଇଥିବା ଦିନ"
   },
@@ -289,7 +280,7 @@
     "message": "କୌଣସି ସାଇଟ୍ ହ୍ୱାଇଟଲିଷ୍ଟ ହୋଇନାହିଁ"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, ସମ୍ପୂର୍ଣ୍ଣ URL କିମ୍ବା site.com/path/*"
   },
   "suspending": {
     "message": "ସସ୍ପେଣ୍ଡ ହେଉଛି..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy ପସନ୍ଦ କରୁଛନ୍ତି?"
-  },
-  "reviewYes": {
-    "message": "ହଁ!"
-  },
-  "reviewNo": {
-    "message": "ସେତିକି ନୁହେଁ"
   },
   "whatsNew": {
     "message": "v$VERSION$ ରେ ନୂଆ କଣ",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "ବିଲୋପ ନିଶ୍ଚିତ କରିବାକୁ ପୁଣି କ୍ଲିକ କରନ୍ତୁ"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ ହ୍ୱାଇଟଲିଷ୍ଟରେ ଯୋଡ଼ାଗଲା",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ ପୂର୍ବରୁ ହ୍ୱାଇଟଲିଷ୍ଟରେ ଅଛି",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "କଷ୍ଟମାଇଜ୍ କରନ୍ତୁ"
+  },
+  "keyboardShortcuts": {
+    "message": "କୀବୋର୍ଡ ସର୍ଟକଟ୍"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ ହ୍ୱାଇଟଲିଷ୍ଟରୁ ହଟାଗଲା",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 ମୋର Drowzy ପରିସଂଖ୍ୟାନ"
+  },
+  "shareStatsLineAllTime": {
+    "message": "ସର୍ବମୋଟ $COUNT$ ଟ୍ୟାବ୍ ସସ୍ପେଣ୍ଡ ହେଲା",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM ସଞ୍ଚୟ (ସର୍ବମୋଟ)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$ ଠାରୁ ବ୍ୟବହାରରେ",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "ଆଜି $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "ସବୁ ପ୍ରସ୍ତୁତ"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$ ରୁ $BOUND$ ସେଟ୍",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "ଏକ ସମୀକ୍ଷା ଦିଅନ୍ତୁ"
+  },
+  "reviewMaybeLater": {
+    "message": "ବୋଧହୁଏ ପରେ"
+  },
+  "reviewDontAsk": {
+    "message": "ପୁଣି ପଚାରନ୍ତୁ ନାହିଁ"
+  },
+  "changelog136Title1": {
+    "message": "ବର୍ତ୍ତମାନ ସମସ୍ତ ଭାଷା ସମ୍ପୂର୍ଣ୍ଣ ଅନୁବାଦିତ"
+  },
+  "changelog136Desc1": {
+    "message": "କିଛି ପାଠ୍ୟ (ହ୍ୱାଇଟଲିଷ୍ଟ ବିଜ୍ଞପ୍ତି, କୀବୋର୍ଡ ସର୍ଟକଟ୍ ଧାଡ଼ି ଏବଂ ପରିସଂଖ୍ୟାନ ସେୟାର୍ ପାଠ୍ୟ) ଅନ୍ୟ ଭାଷାରେ ତଥାପି ଇଂରାଜୀରେ ଦେଖାଯାଉଥିଲା। ବର୍ତ୍ତମାନ ସେଗୁଡ଼ିକ ସମସ୍ତ 57 ଭାଷାକୁ ଅନୁବାଦ ହୋଇଛି, ଏବଂ ଆରବୀ ଓ ହିବ୍ରୁ ଭଳି ଡାହାଣରୁ ବାମକୁ ଲେଖାଯାଉଥିବା ଭାଷାଗୁଡ଼ିକ ମଧ୍ୟ ସଠିକ୍ ଭାବେ ଦେଖାଯାଏ।"
+  },
+  "changelog136Title2": {
+    "message": "ଅଧିକ ନମ୍ର ସମୀକ୍ଷା ଅନୁରୋଧ"
+  },
+  "changelog136Desc2": {
+    "message": "\"Drowzy ଭଲ ଲାଗୁଛି?\" ବ୍ୟାନର ବର୍ତ୍ତମାନ ଆପଣ Drowzy କିଛି ସମୟ ବ୍ୟବହାର କଲା ପରେ ହିଁ ଦେଖାଯାଏ, ଇନଷ୍ଟଲ୍ ସମୟରେ କିମ୍ବା ଅପଡେଟ୍ ପରେ ତୁରନ୍ତ କେବେ ନୁହେଁ। ବଟନ୍ ଗୁଡ଼ିକ ହେଉଛି \"ଏକ ସମୀକ୍ଷା ଦିଅନ୍ତୁ\", \"ବୋଧହୁଏ ପରେ\" ଏବଂ \"ପୁଣି ପଚାରନ୍ତୁ ନାହିଁ\"। ଏହା କେବେ ନିର୍ଦ୍ଦିଷ୍ଟ ଷ୍ଟାର୍ ରେଟିଂ ମାଗେ ନାହିଁ ଏବଂ କୌଣସି ପୁରସ୍କାର ଦିଏ ନାହିଁ।"
+  },
+  "changelogReleaseHeading": {
+    "message": "ରେ ନୂଆ କଣ"
+  },
+  "changelog135Title1": {
+    "message": "ଅଧିକ ଦ୍ରୁତ ଓ ସ୍ମାର୍ଟ ସସ୍ପେଣ୍ଡିଂ"
+  },
+  "changelog135Desc1": {
+    "message": "ଡିଫଲ୍ଟ ଟାଇମର ବର୍ତ୍ତମାନ 15 ମିନିଟ୍, ତେଣୁ ଆପଣ ମେମୋରୀ ସଞ୍ଚୟ ଶୀଘ୍ର ଅନୁଭବ କରିବେ, ଏବଂ ଅନ୍ୟ ଟ୍ୟାବ୍ ସସ୍ପେଣ୍ଡ କରିବା ଓ ଡୁପ୍ଲିକେଟ୍ ବନ୍ଦ କରିବା ଅଧିକ ନିର୍ଭରଯୋଗ୍ୟ ହୋଇଛି।"
+  },
+  "changelog135Title2": {
+    "message": "ହ୍ୱାଇଟଲିଷ୍ଟ ପରିଚାଳନା ସହଜ"
+  },
+  "changelog135Desc2": {
+    "message": "ସ୍ପଷ୍ଟ ହଟାଇବା ବଟନ୍, ନିଶ୍ଚିତକରଣ ବାର୍ତ୍ତା ଏବଂ ଗଣନା, ଆଉ ବର୍ତ୍ତମାନ ଏହା localhost ଓ IP ଠିକଣା ପାଇଁ ମଧ୍ୟ କାମ କରେ।"
+  },
+  "changelog135Title3": {
+    "message": "ସେଟିଂସରେ କୀବୋର୍ଡ ସର୍ଟକଟ୍"
+  },
+  "changelog135Desc3": {
+    "message": "ସେଟିଂସରେ ଏକ ନୂଆ ଧାଡ଼ି ସର୍ଟକଟ୍ ସ୍ଥିତି ଦେଖାଏ ଏବଂ ସିଧାସଳଖ ସେଗୁଡ଼ିକୁ କଷ୍ଟମାଇଜ୍ କରିବାକୁ ନେଇଯାଏ।"
+  },
+  "changelog135Title4": {
+    "message": "ପରିସଂଖ୍ୟାନ ଓ ସେୟାରିଂ ଉନ୍ନତି"
+  },
+  "changelog135Desc4": {
+    "message": "ପରିସଂଖ୍ୟାନ ସେୟାର ବର୍ତ୍ତମାନ ଆପଣଙ୍କ ଭାଷାରେ ଦେଖାଯାଏ, ଏବଂ ମେମୋରୀ ମୋଟ ସଫାସୁତୁରା ଦେଖାଯାଏ, ଯେପରି 2.0 GB ବଦଳରେ 2 GB।"
+  },
+  "changelog135Title5": {
+    "message": "ସମାପନ ଓ ଅଭିଗମ୍ୟତା"
+  },
+  "changelog135Desc5": {
+    "message": "ସ୍ପଷ୍ଟ ଆଇକନ୍, ବ୍ରାଣ୍ଡ-ରଙ୍ଗର ଟୁଲବାର ବ୍ୟାଜ୍, ସ୍କ୍ରିନ ରିଡର ପାଇଁ ଭଲ ଲେବଲ୍ ଏବଂ ଅଧିକ ସଫାସୁତୁରା ପପଅପ୍।"
   }
 }

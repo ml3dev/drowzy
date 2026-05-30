@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "অন্য কীবোর্ড শর্টকাট চান? এখানে কাস্টমাইজ করুন →"
   },
-  "reviewLeaveTitle": {
-    "message": "একটি দ্রুত পর্যালোচনা দিন"
-  },
-  "reviewReportTitle": {
-    "message": "একটি সমস্যা রিপোর্ট করুন"
-  },
-  "reviewDismissTitle": {
-    "message": "বরখাস্ত"
-  },
   "statMemberSince": {
     "message": "সদস্য থেকে"
   },
@@ -289,7 +280,7 @@
     "message": "কোনো সাইট হোয়াইটলিস্ট করা নেই"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, সম্পূর্ণ URL বা site.com/path/*"
   },
   "suspending": {
     "message": "সাসপেন্ড হচ্ছে..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy পছন্দ হচ্ছে?"
-  },
-  "reviewYes": {
-    "message": "হ্যাঁ!"
-  },
-  "reviewNo": {
-    "message": "তেমন নয়"
   },
   "whatsNew": {
     "message": "v$VERSION$-এ নতুন কী",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "মুছে ফেলা নিশ্চিত করতে আবার ক্লিক করুন"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ হোয়াইটলিস্টে যোগ করা হয়েছে",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ ইতিমধ্যেই হোয়াইটলিস্টে আছে",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "কাস্টমাইজ করুন"
+  },
+  "keyboardShortcuts": {
+    "message": "কীবোর্ড শর্টকাট"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ হোয়াইটলিস্ট থেকে সরানো হয়েছে",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 আমার Drowzy পরিসংখ্যান"
+  },
+  "shareStatsLineAllTime": {
+    "message": "সর্বমোট $COUNT$টি ট্যাব সাসপেন্ড করা হয়েছে",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM সাশ্রয় (সর্বকালীন)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$ থেকে ব্যবহৃত",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "আজ $COUNT$টি",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "সব সেট"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$টির মধ্যে $BOUND$টি সেট",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "রিভিউ দিন"
+  },
+  "reviewMaybeLater": {
+    "message": "হয়তো পরে"
+  },
+  "reviewDontAsk": {
+    "message": "আর জিজ্ঞাসা করবেন না"
+  },
+  "changelog136Title1": {
+    "message": "এখন প্রতিটি ভাষা সম্পূর্ণরূপে অনূদিত"
+  },
+  "changelog136Desc1": {
+    "message": "কিছু লেখা (হোয়াইটলিস্ট বিজ্ঞপ্তি, কীবোর্ড শর্টকাট সারি এবং পরিসংখ্যান শেয়ার করার লেখা) অন্য ভাষায় তখনও ইংরেজিতে দেখাচ্ছিল। এগুলো এখন সব ৫৭টি ভাষায় অনূদিত হয়েছে, এবং আরবি ও হিব্রুর মতো ডান-থেকে-বাম লেখা ভাষাগুলোও সঠিকভাবে প্রদর্শিত হয়।"
+  },
+  "changelog136Title2": {
+    "message": "আরও বিনয়ী রিভিউ অনুরোধ"
+  },
+  "changelog136Desc2": {
+    "message": "\"Drowzy ভালো লাগছে?\" ব্যানারটি এখন কেবল কিছুক্ষণ Drowzy ব্যবহারের পরেই দেখা যায়, ইনস্টলের সময় বা আপডেটের ঠিক পরে কখনও নয়। বোতামগুলো হলো \"রিভিউ দিন\", \"হয়তো পরে\" এবং \"আর জিজ্ঞাসা করবেন না\"। এটি কখনও নির্দিষ্ট স্টার রেটিং চায় না এবং কোনো পুরস্কার দেয় না।"
+  },
+  "changelogReleaseHeading": {
+    "message": "এ নতুন কী"
+  },
+  "changelog135Title1": {
+    "message": "দ্রুত ও স্মার্ট সাসপেন্ডিং"
+  },
+  "changelog135Desc1": {
+    "message": "ডিফল্ট টাইমার এখন ১৫ মিনিট যাতে আপনি মেমরির সাশ্রয় তাড়াতাড়ি টের পান, এবং অন্য ট্যাব সাসপেন্ড করা ও ডুপ্লিকেট বন্ধ করা আরও নির্ভরযোগ্য হয়েছে।"
+  },
+  "changelog135Title2": {
+    "message": "হোয়াইটলিস্ট পরিচালনা সহজতর"
+  },
+  "changelog135Desc2": {
+    "message": "পরিষ্কার রিমুভ বোতাম, নিশ্চিতকরণ বার্তা ও একটি গণনা, এবং এখন এটি localhost ও IP ঠিকানার জন্যও কাজ করে।"
+  },
+  "changelog135Title3": {
+    "message": "সেটিংসে কীবোর্ড শর্টকাট"
+  },
+  "changelog135Desc3": {
+    "message": "সেটিংসে একটি নতুন সারি শর্টকাটের অবস্থা দেখায় এবং সরাসরি কাস্টমাইজ করার জায়গায় নিয়ে যায়।"
+  },
+  "changelog135Title4": {
+    "message": "পরিসংখ্যান ও শেয়ারিং উন্নতি"
+  },
+  "changelog135Desc4": {
+    "message": "পরিসংখ্যান শেয়ার এখন আপনার ভাষায় দেখায়, এবং মেমরির মোট পরিষ্কারভাবে দেখা যায়, যেমন ২.০ GB-এর বদলে ২ GB।"
+  },
+  "changelog135Title5": {
+    "message": "পরিমার্জন ও অ্যাক্সেসযোগ্যতা"
+  },
+  "changelog135Desc5": {
+    "message": "পরিষ্কার আইকন, ব্র্যান্ড-রঙের টুলবার ব্যাজ, স্ক্রিন রিডারের জন্য উন্নত লেবেল এবং পরিচ্ছন্ন পপআপ।"
   }
 }

@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Želite druge bližnjice na tipkovnici? Prilagodite jih tukaj →"
   },
-  "reviewLeaveTitle": {
-    "message": "Pustite hitro oceno"
-  },
-  "reviewReportTitle": {
-    "message": "Prijavite težavo"
-  },
-  "reviewDismissTitle": {
-    "message": "Zapri"
-  },
   "statMemberSince": {
     "message": "Član od"
   },
@@ -289,7 +280,7 @@
     "message": "Ni strani na belem seznamu"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, celoten URL ali site.com/path/*"
   },
   "suspending": {
     "message": "Zamrzovanje..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Vam je Drowzy všeč?"
-  },
-  "reviewYes": {
-    "message": "Da!"
-  },
-  "reviewNo": {
-    "message": "Ne ravno"
   },
   "whatsNew": {
     "message": "Kaj je novega v v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Znova kliknite za potrditev brisanja"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ dodano na beli seznam",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ je že na belem seznamu",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Prilagodi"
+  },
+  "keyboardShortcuts": {
+    "message": "Bližnjice na tipkovnici"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ odstranjeno z belega seznama",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Moja statistika Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Skupaj zamrznjenih zavihkov: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ prihranjenega RAM-a (skupaj)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "V uporabi od $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ danes",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Vse je pripravljeno"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Nastavljeno $BOUND$ od $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Pustite oceno"
+  },
+  "reviewMaybeLater": {
+    "message": "Morda pozneje"
+  },
+  "reviewDontAsk": {
+    "message": "Ne sprašuj več"
+  },
+  "changelog136Title1": {
+    "message": "Zdaj so vsi jeziki v celoti prevedeni"
+  },
+  "changelog136Desc1": {
+    "message": "Nekatera besedila (obvestila belega seznama, vrstica Bližnjice na tipkovnici in besedilo Deli statistiko) so se v drugih jezikih še vedno prikazovala v angleščini. Zdaj so prevedena v vseh 57 jezikov, jeziki, ki se pišejo od desne proti levi, kot sta arabščina in hebrejščina, pa se prav tako pravilno prikazujejo."
+  },
+  "changelog136Title2": {
+    "message": "Bolj nevsiljiva prošnja za oceno"
+  },
+  "changelog136Desc2": {
+    "message": "Pasica »Vam je Drowzy všeč?« se zdaj prikaže šele, ko Drowzy nekaj časa uporabljate, nikoli ob namestitvi ali takoj po posodobitvi. Gumbi so »Pustite oceno«, »Morda pozneje« in »Ne sprašuj več«. Nikoli ne zahteva določene ocene in nikoli ne ponuja nagrade."
+  },
+  "changelogReleaseHeading": {
+    "message": "Kaj je novega v"
+  },
+  "changelog135Title1": {
+    "message": "Hitrejše in pametnejše zamrzovanje"
+  },
+  "changelog135Desc1": {
+    "message": "Privzeti časovnik je zdaj 15 minut, da prej opaziš prihranek pomnilnika, zamrzovanje drugih zavihkov in zapiranje podvojenih pa sta zanesljivejša."
+  },
+  "changelog135Title2": {
+    "message": "Lažje upravljanje belega seznama"
+  },
+  "changelog135Desc2": {
+    "message": "Jasnejši gumbi za odstranitev, potrditvena sporočila in števec, zdaj pa deluje tudi za localhost in naslove IP."
+  },
+  "changelog135Title3": {
+    "message": "Bližnjice na tipkovnici v Nastavitvah"
+  },
+  "changelog135Desc3": {
+    "message": "Nova vrstica v Nastavitvah prikazuje stanje bližnjic in vodi naravnost do njihove prilagoditve."
+  },
+  "changelog135Title4": {
+    "message": "Izboljšave statistike in deljenja"
+  },
+  "changelog135Desc4": {
+    "message": "Deljenje statistike se zdaj prikaže v tvojem jeziku, vrednosti pomnilnika pa so urejene, na primer 2 GB namesto 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Dodelava in dostopnost"
+  },
+  "changelog135Desc5": {
+    "message": "Jasnejše ikone, značka v orodni vrstici v barvi znamke, boljše oznake za bralnike zaslona in urejenejše pojavno okno."
   }
 }

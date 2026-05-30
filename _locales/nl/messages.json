@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Wil je andere sneltoetsen? Pas ze hier aan →"
   },
-  "reviewLeaveTitle": {
-    "message": "Schrijf een snelle review"
-  },
-  "reviewReportTitle": {
-    "message": "Een probleem melden"
-  },
-  "reviewDismissTitle": {
-    "message": "Sluiten"
-  },
   "statMemberSince": {
     "message": "Lid sinds"
   },
@@ -289,7 +280,7 @@
     "message": "Geen sites op de witte lijst"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, volledige URL of site.com/path/*"
   },
   "suspending": {
     "message": "Opschorten..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Bevalt Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ja!"
-  },
-  "reviewNo": {
-    "message": "Niet echt"
   },
   "whatsNew": {
     "message": "Nieuw in v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Klik nogmaals om verwijdering te bevestigen"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ toegevoegd aan de witte lijst",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ staat al op de witte lijst",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Aanpassen"
+  },
+  "keyboardShortcuts": {
+    "message": "Sneltoetsen"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ verwijderd van de witte lijst",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Mijn Drowzy-statistieken"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ tabbladen opgeschort in totaal",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM bespaard (totaal)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "In gebruik sinds $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ vandaag",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Alles ingesteld"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ van $TOTAL$ ingesteld",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Een review achterlaten"
+  },
+  "reviewMaybeLater": {
+    "message": "Misschien later"
+  },
+  "reviewDontAsk": {
+    "message": "Niet meer vragen"
+  },
+  "changelog136Title1": {
+    "message": "Alle talen zijn nu volledig vertaald"
+  },
+  "changelog136Desc1": {
+    "message": "Een paar teksten (de whitelist-meldingen, de rij Sneltoetsen en de tekst van Statistieken delen) verschenen in andere talen nog in het Engels. Ze zijn nu vertaald in alle 57 talen, en talen die van rechts naar links worden geschreven, zoals Arabisch en Hebreeuws, worden ook correct weergegeven."
+  },
+  "changelog136Title2": {
+    "message": "Een vriendelijkere reviewmelding"
+  },
+  "changelog136Desc2": {
+    "message": "De melding \"Vind je Drowzy leuk?\" verschijnt nu pas nadat je Drowzy een tijdje hebt gebruikt, nooit bij de installatie of vlak na een update. De knoppen zijn \"Een review achterlaten\", \"Misschien later\" en \"Niet meer vragen\". Er wordt nooit om een specifiek aantal sterren gevraagd en nooit een beloning aangeboden."
+  },
+  "changelogReleaseHeading": {
+    "message": "Nieuw in"
+  },
+  "changelog135Title1": {
+    "message": "Sneller, slimmer opschorten"
+  },
+  "changelog135Desc1": {
+    "message": "De standaardtimer staat nu op 15 minuten zodat je de geheugenbesparing eerder merkt, en het opschorten van andere tabbladen en het sluiten van duplicaten zijn betrouwbaarder."
+  },
+  "changelog135Title2": {
+    "message": "Whitelist makkelijker te beheren"
+  },
+  "changelog135Desc2": {
+    "message": "Duidelijkere verwijderknoppen, bevestigingsmeldingen en een teller, en het werkt nu voor localhost en IP-adressen."
+  },
+  "changelog135Title3": {
+    "message": "Sneltoetsen in Instellingen"
+  },
+  "changelog135Desc3": {
+    "message": "Een nieuwe rij in Instellingen toont de status van je sneltoetsen en linkt direct naar waar je ze kunt aanpassen."
+  },
+  "changelog135Title4": {
+    "message": "Verbeteringen aan statistieken en delen"
+  },
+  "changelog135Desc4": {
+    "message": "Statistieken delen verschijnt nu in je taal, en geheugentotalen worden netjes weergegeven, bijvoorbeeld 2 GB in plaats van 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Afwerking en toegankelijkheid"
+  },
+  "changelog135Desc5": {
+    "message": "Duidelijkere pictogrammen, een werkbalkbadge in de huisstijl, betere labels voor schermlezers en een netter popup."
   }
 }

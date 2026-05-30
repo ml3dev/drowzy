@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "வேறு விசைப்பலகை குறுக்குவழிகள் வேண்டுமா? இங்கே தனிப்பயனாக்கவும் →"
   },
-  "reviewLeaveTitle": {
-    "message": "விரைவான மதிப்பாய்வை விடுங்கள்"
-  },
-  "reviewReportTitle": {
-    "message": "சிக்கலைப் புகாரளிக்கவும்"
-  },
-  "reviewDismissTitle": {
-    "message": "நிராகரி"
-  },
   "statMemberSince": {
     "message": "உறுப்பினர் ஆன நாள்"
   },
@@ -289,7 +280,7 @@
     "message": "அனுமதிப்பட்டியலில் தளங்கள் இல்லை"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, முழு URL அல்லது site.com/path/*"
   },
   "suspending": {
     "message": "இடைநிறுத்துகிறது..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy பிடிக்கிறதா?"
-  },
-  "reviewYes": {
-    "message": "ஆமாம்!"
-  },
-  "reviewNo": {
-    "message": "அவ்வளவாக இல்லை"
   },
   "whatsNew": {
     "message": "v$VERSION$ இல் புதியவை",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "நீக்குவதை உறுதிப்படுத்த மீண்டும் கிளிக் செய்யவும்"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ அனுமதிப்பட்டியலில் சேர்க்கப்பட்டது",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ ஏற்கனவே அனுமதிப்பட்டியலில் உள்ளது",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "தனிப்பயனாக்கு"
+  },
+  "keyboardShortcuts": {
+    "message": "விசைப்பலகை குறுக்குவழிகள்"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ அனுமதிப்பட்டியலிலிருந்து அகற்றப்பட்டது",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 எனது Drowzy புள்ளிவிவரம்"
+  },
+  "shareStatsLineAllTime": {
+    "message": "மொத்தம் $COUNT$ தாவல்கள் இடைநிறுத்தப்பட்டன",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM சேமிக்கப்பட்டது (மொத்தம்)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$ முதல் பயன்பாட்டில்",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "இன்று $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "அனைத்தும் தயார்"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$ இல் $BOUND$ அமைக்கப்பட்டது",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "மதிப்பாய்வு எழுதுங்கள்"
+  },
+  "reviewMaybeLater": {
+    "message": "ஒருவேளை பிறகு"
+  },
+  "reviewDontAsk": {
+    "message": "மீண்டும் கேட்க வேண்டாம்"
+  },
+  "changelog136Title1": {
+    "message": "இப்போது அனைத்து மொழிகளும் முழுமையாக மொழிபெயர்க்கப்பட்டுள்ளன"
+  },
+  "changelog136Desc1": {
+    "message": "சில உரைகள் (அனுமதிப்பட்டியல் அறிவிப்புகள், விசைப்பலகை குறுக்குவழிகள் வரிசை மற்றும் புள்ளிவிவரப் பகிர்வு உரை) பிற மொழிகளில் இன்னும் ஆங்கிலத்தில் காட்டப்பட்டன. அவை இப்போது அனைத்து 57 மொழிகளிலும் மொழிபெயர்க்கப்பட்டுள்ளன, மேலும் அரபு, எபிரேயம் போன்ற வலமிருந்து இடமாக எழுதப்படும் மொழிகளும் சரியாகக் காட்டப்படுகின்றன."
+  },
+  "changelog136Title2": {
+    "message": "மென்மையான விமர்சனக் கோரிக்கை"
+  },
+  "changelog136Desc2": {
+    "message": "\"Drowzy பிடித்திருக்கிறதா?\" பேனர் இப்போது நீங்கள் Drowzy-ஐ சிறிது நேரம் பயன்படுத்திய பிறகு மட்டுமே தோன்றும், நிறுவும்போது அல்லது புதுப்பித்த உடனேயே ஒருபோதும் தோன்றாது. பொத்தான்கள் \"மதிப்பாய்வு எழுதுங்கள்\", \"ஒருவேளை பிறகு\" மற்றும் \"மீண்டும் கேட்க வேண்டாம்\". இது குறிப்பிட்ட நட்சத்திர மதிப்பீட்டைக் கேட்பதில்லை, எந்த வெகுமதியையும் வழங்குவதில்லை."
+  },
+  "changelogReleaseHeading": {
+    "message": "இல் புதியவை"
+  },
+  "changelog135Title1": {
+    "message": "வேகமான, புத்திசாலித்தனமான இடைநிறுத்தம்"
+  },
+  "changelog135Desc1": {
+    "message": "இயல்புநிலை டைமர் இப்போது 15 நிமிடங்கள், அதனால் நினைவக சேமிப்பை விரைவில் உணரலாம், மேலும் பிற தாவல்களை இடைநிறுத்துவதும் நகல்களை மூடுவதும் நம்பகமாக உள்ளன."
+  },
+  "changelog135Title2": {
+    "message": "அனுமதிப்பட்டியலை நிர்வகிப்பது எளிது"
+  },
+  "changelog135Desc2": {
+    "message": "தெளிவான அகற்று பொத்தான்கள், உறுதிப்படுத்தல் செய்திகள், ஒரு எண்ணிக்கை, மேலும் இப்போது இது localhost மற்றும் IP முகவரிகளுக்கும் வேலை செய்கிறது."
+  },
+  "changelog135Title3": {
+    "message": "அமைப்புகளில் விசைப்பலகை குறுக்குவழிகள்"
+  },
+  "changelog135Desc3": {
+    "message": "அமைப்புகளில் ஒரு புதிய வரிசை குறுக்குவழிகளின் நிலையைக் காட்டி, நேரடியாக அவற்றைத் தனிப்பயனாக்கச் செல்கிறது."
+  },
+  "changelog135Title4": {
+    "message": "புள்ளிவிவர மற்றும் பகிர்வு மேம்பாடுகள்"
+  },
+  "changelog135Desc4": {
+    "message": "புள்ளிவிவரப் பகிர்வு இப்போது உங்கள் மொழியில் தோன்றுகிறது, நினைவக மொத்தங்கள் சுத்தமாகக் காட்டப்படுகின்றன, எடுத்துக்காட்டாக 2.0 GB-க்கு பதிலாக 2 GB."
+  },
+  "changelog135Title5": {
+    "message": "மெருகூட்டல் மற்றும் அணுகல்தன்மை"
+  },
+  "changelog135Desc5": {
+    "message": "தெளிவான ஐகான்கள், பிராண்டு நிற கருவிப்பட்டை பேட்ஜ், திரை வாசிப்பிற்கு சிறந்த லேபிள்கள், சுத்தமான பாப்அப்."
   }
 }

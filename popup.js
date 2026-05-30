@@ -92,7 +92,14 @@ function localizeHtml() {
   if (footer) footer.textContent = 'Drowzy v' + chrome.runtime.getManifest().version;
 
   // Set lang attribute to match browser locale
-  document.documentElement.lang = chrome.i18n.getUILanguage();
+  var uiLang = chrome.i18n.getUILanguage();
+  document.documentElement.lang = uiLang;
+
+  // Flip the whole UI to right-to-left for RTL languages so layout, alignment
+  // and logical CSS properties mirror correctly (Arabic, Hebrew, Persian, Urdu).
+  var RTL_LANGS = ['ar', 'he', 'iw', 'fa', 'ur'];
+  var base = (uiLang || '').toLowerCase().split('-')[0];
+  document.documentElement.dir = RTL_LANGS.indexOf(base) !== -1 ? 'rtl' : 'ltr';
 }
 
 async function initTheme() {
@@ -1133,19 +1140,72 @@ function relativeTime(ts) {
 }
 
 var REVIEW_URL = 'https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa/reviews';
-var ISSUES_URL = 'https://github.com/ml3dev/drowzy/issues';
 var SEVEN_DAYS = 7 * 24 * 60 * 60 * 1000;
+var FOURTEEN_DAYS = 14 * 24 * 60 * 60 * 1000;
+// "Enough successful suspensions" before we'd consider asking for a review.
+var REVIEW_MIN_SUSPENSIONS = 50;
 
+// Decide whether the review prompt should appear, and wire up its buttons.
+// Runs on every popup/sidepanel open (both load popup.js). The prompt is
+// intentionally low-pressure: it only ever appears once the user has clearly
+// gotten value out of Drowzy, and it never interrupts a core action — it sits
+// as a quiet banner at the top of the main content and can always be ignored.
 async function checkReviewPrompt() {
   try {
-    var data = await chrome.storage.local.get(['drowzy_stats', 'reviewPromptCompleted', 'reviewPromptDismissCount', 'reviewPromptLastDismissed']);
-    var stats = data.drowzy_stats;
-    if (!stats || (stats.totalTabsSuspended || 0) < 50) return;
+    var data = await chrome.storage.local.get([
+      'drowzy_stats', 'reviewPromptCompleted', 'reviewPromptSnoozedUntil', 'reviewPromptOpenCount',
+      'reviewPromptDismissCount', 'reviewPromptLastDismissed'
+    ]);
+
+    // One-time migration from the pre-1.3.6 prompt model, which used
+    // reviewPromptDismissCount (hid permanently at 2 dismissals) and
+    // reviewPromptLastDismissed (a 7-day cooldown). Fold that into the new model
+    // so users who already dismissed the old prompt are never re-pestered.
+    if (data.reviewPromptDismissCount !== undefined || data.reviewPromptLastDismissed !== undefined) {
+      var migrate = {};
+      if (!data.reviewPromptCompleted && (data.reviewPromptDismissCount || 0) >= 2) {
+        // Dismissed the old prompt repeatedly -> treat as "Don't ask again".
+        migrate.reviewPromptCompleted = true;
+      } else if (!data.reviewPromptCompleted && !data.reviewPromptSnoozedUntil && data.reviewPromptLastDismissed) {
+        // A single prior dismissal -> carry it forward as a snooze from that time.
+        migrate.reviewPromptSnoozedUntil = data.reviewPromptLastDismissed + FOURTEEN_DAYS;
+      }
+      if (Object.keys(migrate).length) {
+        chrome.storage.local.set(migrate);
+        Object.assign(data, migrate);
+      }
+      // Drop the obsolete keys so this migration runs only once.
+      chrome.storage.local.remove(['reviewPromptDismissCount', 'reviewPromptLastDismissed']);
+    }
+
+    // "Leave a review" or "Don't ask again" both close the door permanently.
     if (data.reviewPromptCompleted) return;
-    if ((data.reviewPromptDismissCount || 0) >= 2) return;
-    if (data.reviewPromptLastDismissed && (Date.now() - data.reviewPromptLastDismissed < SEVEN_DAYS)) return;
+
+    // Count this open. We use it to guarantee we never prompt on the very first
+    // popup/sidepanel open — only once the user has come back at least once.
+    var opens = (data.reviewPromptOpenCount || 0) + 1;
+    chrome.storage.local.set({ reviewPromptOpenCount: opens });
+
+    var stats = data.drowzy_stats;
+    if (!stats) return;
+
+    // Gate 1: installed at least 7 days. This also covers "never on install"
+    // and "never right after an update" — a fresh install is 0 days old, and
+    // an update doesn't reset installDate so it has no effect here.
+    var installDate = stats.installDate || 0;
+    if (!installDate || (Date.now() - installDate) < SEVEN_DAYS) return;
+
+    // Gate 2: enough successful suspensions that the user has felt the benefit.
+    if ((stats.totalTabsSuspended || 0) < REVIEW_MIN_SUSPENSIONS) return;
+
+    // Gate 3: not on the first ever open — they've opened the UI before.
+    if (opens < 2) return;
+
+    // Gate 4: respect a "Maybe later" cooldown.
+    if (data.reviewPromptSnoozedUntil && Date.now() < data.reviewPromptSnoozedUntil) return;
 
     var banner = document.getElementById('reviewPrompt');
+    if (!banner) return;
     banner.style.display = '';
     banner.classList.add('entering');
 
@@ -1163,30 +1223,23 @@ async function checkReviewPrompt() {
       setTimeout(finish, 500);
     }
 
-    function recordDismiss() {
-      var count = (data.reviewPromptDismissCount || 0) + 1;
-      chrome.storage.local.set({
-        reviewPromptDismissCount: count,
-        reviewPromptLastDismissed: Date.now()
-      });
-    }
-
-    document.getElementById('reviewThumbsUp').addEventListener('click', function() {
+    // Leave a review: open the store review page and never ask again.
+    document.getElementById('reviewLeave').addEventListener('click', function() {
       chrome.storage.local.set({ reviewPromptCompleted: true });
       dismissBanner(function() {
         chrome.tabs.create({ url: REVIEW_URL });
       });
     }, { once: true });
 
-    document.getElementById('reviewThumbsDown').addEventListener('click', function() {
-      recordDismiss();
-      dismissBanner(function() {
-        chrome.tabs.create({ url: ISSUES_URL });
-      });
+    // Maybe later: hide for a 14-day cooldown, then it may reappear.
+    document.getElementById('reviewLater').addEventListener('click', function() {
+      chrome.storage.local.set({ reviewPromptSnoozedUntil: Date.now() + FOURTEEN_DAYS });
+      dismissBanner();
     }, { once: true });
 
-    document.getElementById('reviewDismiss').addEventListener('click', function() {
-      recordDismiss();
+    // Don't ask again: hide permanently.
+    document.getElementById('reviewDontAsk').addEventListener('click', function() {
+      chrome.storage.local.set({ reviewPromptCompleted: true });
       dismissBanner();
     }, { once: true });
   } catch {}

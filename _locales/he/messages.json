@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "רוצה קיצורי מקלדת אחרים? התאם אותם כאן ←"
   },
-  "reviewLeaveTitle": {
-    "message": "השאר ביקורת מהירה"
-  },
-  "reviewReportTitle": {
-    "message": "דווח על בעיה"
-  },
-  "reviewDismissTitle": {
-    "message": "סגור"
-  },
   "statMemberSince": {
     "message": "חבר מאז"
   },
@@ -289,7 +280,7 @@
     "message": "אין אתרים ברשימה הלבנה"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, כתובת URL מלאה או site.com/path/*"
   },
   "suspending": {
     "message": "משעה..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "נהנים מ-Drowzy?"
-  },
-  "reviewYes": {
-    "message": "!כן"
-  },
-  "reviewNo": {
-    "message": "לא ממש"
   },
   "whatsNew": {
     "message": "מה חדש ב-v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "לחץ שוב כדי לאשר מחיקה"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ נוסף לרשימה הלבנה",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ כבר ברשימה הלבנה",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "התאמה אישית"
+  },
+  "keyboardShortcuts": {
+    "message": "קיצורי מקלדת"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ הוסר מהרשימה הלבנה",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 הסטטיסטיקה שלי ב-Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ כרטיסיות הושעו בסך הכול",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ זיכרון RAM נחסך (סך הכול)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "בשימוש מאז $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ היום",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "הכול מוכן"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ מתוך $TOTAL$ הוגדרו",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "השאירו ביקורת"
+  },
+  "reviewMaybeLater": {
+    "message": "אולי מאוחר יותר"
+  },
+  "reviewDontAsk": {
+    "message": "אל תשאל שוב"
+  },
+  "changelog136Title1": {
+    "message": "כעת כל השפות מתורגמות במלואן"
+  },
+  "changelog136Desc1": {
+    "message": "כמה מחרוזות (התראות הרשימה הלבנה, שורת קיצורי המקלדת והטקסט של שיתוף הסטטיסטיקה) עדיין הוצגו באנגלית בשפות אחרות. כעת הן מתורגמות לכל 57 השפות, ושפות הנכתבות מימין לשמאל כמו ערבית ועברית מוצגות גם הן כראוי."
+  },
+  "changelog136Title2": {
+    "message": "בקשת ביקורת עדינה יותר"
+  },
+  "changelog136Desc2": {
+    "message": "הכרזה \"נהנים מ-Drowzy?\" מופיעה כעת רק לאחר שהשתמשת ב-Drowzy זמן מה, לעולם לא בעת ההתקנה או מיד לאחר עדכון. הכפתורים הם \"השאירו ביקורת\", \"אולי מאוחר יותר\" ו\"אל תשאל שוב\". היא לעולם אינה מבקשת דירוג כוכבים מסוים ואינה מציעה תגמול."
+  },
+  "changelogReleaseHeading": {
+    "message": "מה חדש בגרסה"
+  },
+  "changelog135Title1": {
+    "message": "השעיה מהירה וחכמה יותר"
+  },
+  "changelog135Desc1": {
+    "message": "טיימר ברירת המחדל הוא כעת 15 דקות כדי שתבחין בחיסכון בזיכרון מוקדם יותר, והשעיית כרטיסיות אחרות וסגירת כפילויות אמינות יותר."
+  },
+  "changelog135Title2": {
+    "message": "קל יותר לנהל את הרשימה הלבנה"
+  },
+  "changelog135Desc2": {
+    "message": "כפתורי הסרה ברורים יותר, הודעות אישור ומונה, וכעת היא פועלת גם עבור localhost וכתובות IP."
+  },
+  "changelog135Title3": {
+    "message": "קיצורי מקלדת בהגדרות"
+  },
+  "changelog135Desc3": {
+    "message": "שורה חדשה בהגדרות מציגה את מצב הקיצורים ומובילה ישירות להתאמה האישית שלהם."
+  },
+  "changelog135Title4": {
+    "message": "שיפורים בסטטיסטיקה ובשיתוף"
+  },
+  "changelog135Desc4": {
+    "message": "שיתוף סטטיסטיקה מופיע כעת בשפה שלך, וסכומי הזיכרון מוצגים בצורה נקייה, למשל 2 GB במקום 2.0 GB."
+  },
+  "changelog135Title5": {
+    "message": "ליטוש ונגישות"
+  },
+  "changelog135Desc5": {
+    "message": "סמלים ברורים יותר, תג בסרגל הכלים בצבע המותג, תוויות טובות יותר לקוראי מסך וחלון קופץ מסודר יותר."
   }
 }

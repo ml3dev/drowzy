@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Chcete iné klávesové skratky? Prispôsobte si ich tu →"
   },
-  "reviewLeaveTitle": {
-    "message": "Napíšte rýchlu recenziu"
-  },
-  "reviewReportTitle": {
-    "message": "Nahlásiť problém"
-  },
-  "reviewDismissTitle": {
-    "message": "Zavrieť"
-  },
   "statMemberSince": {
     "message": "Členom od"
   },
@@ -289,7 +280,7 @@
     "message": "Žiadne stránky na bielom zozname"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, úplná URL alebo site.com/path/*"
   },
   "suspending": {
     "message": "Pozastavuje sa..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Páči sa vám Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Áno!"
-  },
-  "reviewNo": {
-    "message": "Nie celkom"
   },
   "whatsNew": {
     "message": "Čo je nové vo v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Kliknutím znova potvrďte odstránenie"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ pridaná na biely zoznam",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ je už na bielom zozname",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Prispôsobiť"
+  },
+  "keyboardShortcuts": {
+    "message": "Klávesové skratky"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ odstránená z bieleho zoznamu",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Moje štatistiky Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Celkovo pozastavených kariet: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ ušetrenej RAM (celkovo)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Používa sa od $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ dnes",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Všetko nastavené"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Nastavené $BOUND$ z $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Napísať recenziu"
+  },
+  "reviewMaybeLater": {
+    "message": "Možno neskôr"
+  },
+  "reviewDontAsk": {
+    "message": "Už sa nepýtať"
+  },
+  "changelog136Title1": {
+    "message": "Všetky jazyky sú teraz úplne preložené"
+  },
+  "changelog136Desc1": {
+    "message": "Niektoré texty (oznámenia bieleho zoznamu, riadok Klávesové skratky a text Zdieľať štatistiky) sa v iných jazykoch stále zobrazovali po anglicky. Teraz sú preložené do všetkých 57 jazykov a jazyky písané sprava doľava ako arabčina a hebrejčina sa tiež zobrazujú správne."
+  },
+  "changelog136Title2": {
+    "message": "Nenápadnejšia žiadosť o recenziu"
+  },
+  "changelog136Desc2": {
+    "message": "Banner „Páči sa vám Drowzy?“ sa teraz zobrazí až po tom, čo Drowzy chvíľu používate, nikdy pri inštalácii ani hneď po aktualizácii. Tlačidlá sú „Napísať recenziu“, „Možno neskôr“ a „Už sa nepýtať“. Nikdy nežiada o konkrétne hodnotenie ani neponúka odmenu."
+  },
+  "changelogReleaseHeading": {
+    "message": "Čo je nové vo verzii"
+  },
+  "changelog135Title1": {
+    "message": "Rýchlejšie a inteligentnejšie pozastavovanie"
+  },
+  "changelog135Desc1": {
+    "message": "Predvolený časovač je teraz 15 minút, aby si skôr zaznamenal úsporu pamäte, a pozastavovanie ostatných kariet aj zatváranie duplikátov sú spoľahlivejšie."
+  },
+  "changelog135Title2": {
+    "message": "Jednoduchšia správa bieleho zoznamu"
+  },
+  "changelog135Desc2": {
+    "message": "Prehľadnejšie tlačidlá na odstránenie, potvrdzovacie správy a počet, a teraz funguje aj pre localhost a IP adresy."
+  },
+  "changelog135Title3": {
+    "message": "Klávesové skratky v Nastaveniach"
+  },
+  "changelog135Desc3": {
+    "message": "Nový riadok v Nastaveniach ukazuje stav skratiek a vedie priamo tam, kde si ich prispôsobíš."
+  },
+  "changelog135Title4": {
+    "message": "Vylepšenia štatistík a zdieľania"
+  },
+  "changelog135Desc4": {
+    "message": "Zdieľanie štatistík sa teraz zobrazuje v tvojom jazyku a hodnoty pamäte sú úhľadné, napríklad 2 GB namiesto 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Vyladenie a prístupnosť"
+  },
+  "changelog135Desc5": {
+    "message": "Prehľadnejšie ikony, odznak na lište vo farbe značky, lepšie popisy pre čítačky obrazovky a úhľadnejší popup."
   }
 }

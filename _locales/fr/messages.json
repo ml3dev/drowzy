@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Vous voulez d'autres raccourcis clavier ? Personnalisez-les ici →"
   },
-  "reviewLeaveTitle": {
-    "message": "Laisser un avis rapide"
-  },
-  "reviewReportTitle": {
-    "message": "Signaler un problème"
-  },
-  "reviewDismissTitle": {
-    "message": "Fermer"
-  },
   "statMemberSince": {
     "message": "Membre depuis"
   },
@@ -289,7 +280,7 @@
     "message": "Aucun site en liste blanche"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, URL complète ou site.com/path/*"
   },
   "suspending": {
     "message": "Suspension..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Vous aimez Drowzy ?"
-  },
-  "reviewYes": {
-    "message": "Oui !"
-  },
-  "reviewNo": {
-    "message": "Pas vraiment"
   },
   "whatsNew": {
     "message": "Nouveautés de la v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Cliquez à nouveau pour confirmer la suppression"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ ajouté à la liste blanche",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ est déjà dans la liste blanche",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Personnaliser"
+  },
+  "keyboardShortcuts": {
+    "message": "Raccourcis clavier"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ retiré de la liste blanche",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Mes statistiques Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ onglets suspendus au total",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ de RAM économisée (total)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Utilisé depuis $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ aujourd'hui",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Tout est configuré"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ sur $TOTAL$ configurés",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Laisser un avis"
+  },
+  "reviewMaybeLater": {
+    "message": "Plus tard"
+  },
+  "reviewDontAsk": {
+    "message": "Ne plus demander"
+  },
+  "changelog136Title1": {
+    "message": "Toutes les langues sont désormais entièrement traduites"
+  },
+  "changelog136Desc1": {
+    "message": "Quelques textes (les confirmations de liste blanche, la ligne Raccourcis clavier et le texte de partage des statistiques) s'affichaient encore en anglais dans les autres langues. Ils sont maintenant traduits dans les 57 langues, et les langues qui s'écrivent de droite à gauche comme l'arabe et l'hébreu s'affichent aussi correctement."
+  },
+  "changelog136Title2": {
+    "message": "Une invitation à donner un avis plus discrète"
+  },
+  "changelog136Desc2": {
+    "message": "La bannière « Vous aimez Drowzy ? » n'apparaît plus qu'après un certain temps d'utilisation, jamais à l'installation ni juste après une mise à jour. Les boutons sont « Laisser un avis », « Plus tard » et « Ne plus demander ». Elle ne demande jamais une note précise et n'offre jamais de récompense."
+  },
+  "changelogReleaseHeading": {
+    "message": "Nouveautés de"
+  },
+  "changelog135Title1": {
+    "message": "Suspension plus rapide et plus intelligente"
+  },
+  "changelog135Desc1": {
+    "message": "Le minuteur par défaut est maintenant de 15 minutes pour voir les gains de mémoire plus tôt, et la suspension des autres onglets ainsi que la fermeture des doublons sont plus fiables."
+  },
+  "changelog135Title2": {
+    "message": "Liste blanche plus facile à gérer"
+  },
+  "changelog135Desc2": {
+    "message": "Boutons de suppression plus clairs, messages de confirmation et compteur, et elle fonctionne désormais pour localhost et les adresses IP."
+  },
+  "changelog135Title3": {
+    "message": "Raccourcis clavier dans les Paramètres"
+  },
+  "changelog135Desc3": {
+    "message": "Une nouvelle ligne dans les Paramètres affiche l'état de vos raccourcis et mène directement à leur personnalisation."
+  },
+  "changelog135Title4": {
+    "message": "Améliorations des statistiques et du partage"
+  },
+  "changelog135Desc4": {
+    "message": "Le partage des statistiques s'affiche désormais dans votre langue, et les totaux de mémoire sont nets, par exemple 2 Go au lieu de 2,0 Go."
+  },
+  "changelog135Title5": {
+    "message": "Finitions et accessibilité"
+  },
+  "changelog135Desc5": {
+    "message": "Icônes plus claires, badge de barre d'outils aux couleurs de la marque, meilleurs libellés pour lecteurs d'écran et popup plus net."
   }
 }

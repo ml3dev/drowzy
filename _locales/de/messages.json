@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Möchten Sie andere Tastenkombinationen? Hier anpassen →"
   },
-  "reviewLeaveTitle": {
-    "message": "Schnelle Bewertung abgeben"
-  },
-  "reviewReportTitle": {
-    "message": "Problem melden"
-  },
-  "reviewDismissTitle": {
-    "message": "Schließen"
-  },
   "statMemberSince": {
     "message": "Mitglied seit"
   },
@@ -289,7 +280,7 @@
     "message": "Keine Websites auf der Whitelist"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, vollständige URL oder site.com/path/*"
   },
   "suspending": {
     "message": "Wird suspendiert..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Gefällt Ihnen Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ja!"
-  },
-  "reviewNo": {
-    "message": "Nicht wirklich"
   },
   "whatsNew": {
     "message": "Neu in v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Erneut klicken, um Löschung zu bestätigen"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ zur Whitelist hinzugefügt",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ ist bereits auf der Whitelist",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Anpassen"
+  },
+  "keyboardShortcuts": {
+    "message": "Tastenkürzel"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ von Whitelist entfernt",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Meine Drowzy-Statistik"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Insgesamt $COUNT$ Tabs suspendiert",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM gespart (gesamt)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "In Verwendung seit $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ heute",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Alles eingerichtet"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ von $TOTAL$ festgelegt",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Bewertung schreiben"
+  },
+  "reviewMaybeLater": {
+    "message": "Vielleicht später"
+  },
+  "reviewDontAsk": {
+    "message": "Nicht mehr fragen"
+  },
+  "changelog136Title1": {
+    "message": "Jetzt sind alle Sprachen vollständig übersetzt"
+  },
+  "changelog136Desc1": {
+    "message": "Einige Texte (Whitelist-Meldungen, die Tastenkürzel-Zeile und der Teilen-Statistik-Text) wurden in anderen Sprachen noch auf Englisch angezeigt. Sie sind jetzt in alle 57 Sprachen übersetzt, und Sprachen mit Schreibrichtung von rechts nach links wie Arabisch und Hebräisch werden ebenfalls korrekt dargestellt."
+  },
+  "changelog136Title2": {
+    "message": "Ein dezenterer Bewertungshinweis"
+  },
+  "changelog136Desc2": {
+    "message": "Der Hinweis „Gefällt dir Drowzy?“ erscheint jetzt erst, nachdem du Drowzy eine Weile genutzt hast, nie bei der Installation oder direkt nach einem Update. Die Schaltflächen sind „Bewertung schreiben“, „Vielleicht später“ und „Nicht mehr fragen“. Es wird nie nach einer bestimmten Sternebewertung gefragt und nie eine Belohnung angeboten."
+  },
+  "changelogReleaseHeading": {
+    "message": "Neu in"
+  },
+  "changelog135Title1": {
+    "message": "Schnelleres, intelligenteres Suspendieren"
+  },
+  "changelog135Desc1": {
+    "message": "Der Standard-Timer steht jetzt auf 15 Minuten, sodass du die Speicherersparnis früher bemerkst, und das Suspendieren anderer Tabs sowie das Schließen von Duplikaten sind zuverlässiger."
+  },
+  "changelog135Title2": {
+    "message": "Whitelist leichter zu verwalten"
+  },
+  "changelog135Desc2": {
+    "message": "Klarere Entfernen-Schaltflächen, Bestätigungsmeldungen und eine Anzahl, außerdem funktioniert sie jetzt für localhost und IP-Adressen."
+  },
+  "changelog135Title3": {
+    "message": "Tastenkürzel in den Einstellungen"
+  },
+  "changelog135Desc3": {
+    "message": "Eine neue Zeile in den Einstellungen zeigt den Status deiner Tastenkürzel und führt direkt dorthin, wo du sie anpassen kannst."
+  },
+  "changelog135Title4": {
+    "message": "Verbesserungen bei Statistik und Teilen"
+  },
+  "changelog135Desc4": {
+    "message": "Teilen-Statistik erscheint jetzt in deiner Sprache, und Speicherwerte werden sauber angezeigt, zum Beispiel 2 GB statt 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Feinschliff und Barrierefreiheit"
+  },
+  "changelog135Desc5": {
+    "message": "Klarere Symbole, ein markengerechtes Symbolleisten-Badge, bessere Screenreader-Beschriftungen und ein aufgeräumteres Popup."
   }
 }

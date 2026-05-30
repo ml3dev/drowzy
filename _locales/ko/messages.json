@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "다른 키보드 단축키를 원하시나요? 여기에서 사용자 지정하세요 →"
   },
-  "reviewLeaveTitle": {
-    "message": "빠른 리뷰 남기기"
-  },
-  "reviewReportTitle": {
-    "message": "문제 신고"
-  },
-  "reviewDismissTitle": {
-    "message": "닫기"
-  },
   "statMemberSince": {
     "message": "가입일"
   },
@@ -289,7 +280,7 @@
     "message": "화이트리스트에 등록된 사이트 없음"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, 전체 URL 또는 site.com/path/*"
   },
   "suspending": {
     "message": "일시중지 중..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy가 마음에 드시나요?"
-  },
-  "reviewYes": {
-    "message": "네!"
-  },
-  "reviewNo": {
-    "message": "별로요"
   },
   "whatsNew": {
     "message": "v$VERSION$의 새로운 기능",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "삭제를 확인하려면 다시 클릭하세요"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ 을(를) 화이트리스트에 추가함",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ 은(는) 이미 화이트리스트에 있음",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "사용자 지정"
+  },
+  "keyboardShortcuts": {
+    "message": "키보드 단축키"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ 을(를) 화이트리스트에서 제거함",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 내 Drowzy 통계"
+  },
+  "shareStatsLineAllTime": {
+    "message": "전체 $COUNT$개 탭 일시중지",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM 절약(누적)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$부터 사용 중",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "오늘 $COUNT$개",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "모두 설정됨"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$개 중 $BOUND$개 설정",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "리뷰 남기기"
+  },
+  "reviewMaybeLater": {
+    "message": "나중에"
+  },
+  "reviewDontAsk": {
+    "message": "다시 묻지 않기"
+  },
+  "changelog136Title1": {
+    "message": "이제 모든 언어가 완전히 번역되었습니다"
+  },
+  "changelog136Desc1": {
+    "message": "일부 문자열(화이트리스트 알림, 키보드 단축키 행, 통계 공유 텍스트)이 다른 언어에서도 여전히 영어로 표시되고 있었습니다. 이제 57개 언어 모두로 번역되었으며, 아랍어와 히브리어처럼 오른쪽에서 왼쪽으로 쓰는 언어도 올바르게 표시됩니다."
+  },
+  "changelog136Title2": {
+    "message": "더 부드러운 리뷰 요청"
+  },
+  "changelog136Desc2": {
+    "message": "\"Drowzy가 마음에 드시나요?\" 배너는 이제 Drowzy를 한동안 사용한 후에만 표시되며, 설치 시나 업데이트 직후에는 표시되지 않습니다. 버튼은 \"리뷰 남기기\", \"나중에\", \"다시 묻지 않기\"입니다. 특정 별점을 요구하지 않으며 보상을 제공하지도 않습니다."
+  },
+  "changelogReleaseHeading": {
+    "message": "의 새로운 기능"
+  },
+  "changelog135Title1": {
+    "message": "더 빠르고 똑똑해진 일시중지"
+  },
+  "changelog135Desc1": {
+    "message": "기본 타이머가 이제 15분이라 메모리 절약을 더 빨리 느낄 수 있고, 다른 탭 일시중지와 중복 탭 닫기가 더 안정적입니다."
+  },
+  "changelog135Title2": {
+    "message": "화이트리스트 관리가 더 쉬워짐"
+  },
+  "changelog135Desc2": {
+    "message": "더 명확한 제거 버튼, 확인 메시지, 개수 표시가 추가되었고 이제 localhost와 IP 주소에서도 작동합니다."
+  },
+  "changelog135Title3": {
+    "message": "설정의 키보드 단축키"
+  },
+  "changelog135Desc3": {
+    "message": "설정의 새 행에서 단축키 상태를 보여주고 바로 사용자 지정 화면으로 연결됩니다."
+  },
+  "changelog135Title4": {
+    "message": "통계 및 공유 개선"
+  },
+  "changelog135Desc4": {
+    "message": "통계 공유가 이제 사용자 언어로 표시되고, 메모리 합계가 깔끔하게 표시됩니다(예: 2.0 GB 대신 2 GB)."
+  },
+  "changelog135Title5": {
+    "message": "마무리 및 접근성"
+  },
+  "changelog135Desc5": {
+    "message": "더 명확한 아이콘, 브랜드 색상의 도구 모음 배지, 더 나은 스크린 리더 라벨, 더 깔끔한 팝업."
   }
 }

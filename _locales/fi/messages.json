@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Haluatko muita pikanäppäimiä? Mukauta niitä täältä →"
   },
-  "reviewLeaveTitle": {
-    "message": "Jätä nopea arvio"
-  },
-  "reviewReportTitle": {
-    "message": "Ilmoita ongelmasta"
-  },
-  "reviewDismissTitle": {
-    "message": "Sulje"
-  },
   "statMemberSince": {
     "message": "Jäsen alkaen"
   },
@@ -289,7 +280,7 @@
     "message": "Ei sallittuja sivustoja"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, koko URL tai site.com/path/*"
   },
   "suspending": {
     "message": "Keskeytetään..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Pidätkö Drowzystä?"
-  },
-  "reviewYes": {
-    "message": "Kyllä!"
-  },
-  "reviewNo": {
-    "message": "Ei oikeastaan"
   },
   "whatsNew": {
     "message": "Uutta versiossa 1.1.0 v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Vahvista poisto napsauttamalla uudelleen"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ lisätty sallittujen listalle",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ on jo sallittujen listalla",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Mukauta"
+  },
+  "keyboardShortcuts": {
+    "message": "Pikanäppäimet"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ poistettu sallittujen listalta",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Drowzy-tilastoni"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ välilehteä keskeytetty yhteensä",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM säästetty (yhteensä)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Käytössä alkaen $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ tänään",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Kaikki valmista"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$/$TOTAL$ asetettu",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Jätä arvostelu"
+  },
+  "reviewMaybeLater": {
+    "message": "Ehkä myöhemmin"
+  },
+  "reviewDontAsk": {
+    "message": "Älä kysy uudelleen"
+  },
+  "changelog136Title1": {
+    "message": "Kaikki kielet on nyt käännetty kokonaan"
+  },
+  "changelog136Desc1": {
+    "message": "Muutamat tekstit (sallittujen listan ilmoitukset, Pikanäppäimet-rivi ja Jaa tilastot -teksti) näkyivät muilla kielillä yhä englanniksi. Ne on nyt käännetty kaikille 57 kielelle, ja oikealta vasemmalle kirjoitettavat kielet kuten arabia ja heprea näkyvät myös oikein."
+  },
+  "changelog136Title2": {
+    "message": "Hienovaraisempi arvostelupyyntö"
+  },
+  "changelog136Desc2": {
+    "message": "Palkki \"Pidätkö Drowzysta?\" näkyy nyt vasta, kun olet käyttänyt Drowzya jonkin aikaa, ei koskaan asennuksen yhteydessä tai heti päivityksen jälkeen. Painikkeet ovat \"Jätä arvostelu\", \"Ehkä myöhemmin\" ja \"Älä kysy uudelleen\". Se ei koskaan pyydä tiettyä tähtiarviota eikä tarjoa palkkiota."
+  },
+  "changelogReleaseHeading": {
+    "message": "Mitä uutta versiossa"
+  },
+  "changelog135Title1": {
+    "message": "Nopeampi, älykkäämpi keskeytys"
+  },
+  "changelog135Desc1": {
+    "message": "Oletusajastin on nyt 15 minuuttia, joten huomaat muistinsäästön aiemmin, ja muiden välilehtien keskeytys sekä kaksoiskappaleiden sulkeminen ovat luotettavampia."
+  },
+  "changelog135Title2": {
+    "message": "Sallittujen lista on helpompi hallita"
+  },
+  "changelog135Desc2": {
+    "message": "Selkeämmät poistopainikkeet, vahvistusviestit ja laskuri, ja se toimii nyt localhostille ja IP-osoitteille."
+  },
+  "changelog135Title3": {
+    "message": "Pikanäppäimet asetuksissa"
+  },
+  "changelog135Desc3": {
+    "message": "Uusi rivi asetuksissa näyttää pikanäppäinten tilan ja vie suoraan niiden mukautukseen."
+  },
+  "changelog135Title4": {
+    "message": "Tilastojen ja jakamisen parannuksia"
+  },
+  "changelog135Desc4": {
+    "message": "Jaa tilastot näkyy nyt omalla kielelläsi, ja muistilukemat näkyvät siisteinä, esimerkiksi 2 Gt eikä 2,0 Gt."
+  },
+  "changelog135Title5": {
+    "message": "Viimeistely ja saavutettavuus"
+  },
+  "changelog135Desc5": {
+    "message": "Selkeämmät kuvakkeet, brändinmukainen työkalupalkin merkki, paremmat ruudunlukijoiden tekstit ja siistimpi ponnahdusikkuna."
   }
 }

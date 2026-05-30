@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Želite druge tipkovničke prečace? Prilagodite ih ovdje →"
   },
-  "reviewLeaveTitle": {
-    "message": "Ostavite brzu recenziju"
-  },
-  "reviewReportTitle": {
-    "message": "Prijavite problem"
-  },
-  "reviewDismissTitle": {
-    "message": "Odbaci"
-  },
   "statMemberSince": {
     "message": "Član od"
   },
@@ -289,7 +280,7 @@
     "message": "Nema dopuštenih stranica"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, puni URL ili site.com/path/*"
   },
   "suspending": {
     "message": "Suspendiranje..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Sviđa li vam se Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Da!"
-  },
-  "reviewNo": {
-    "message": "Ne baš"
   },
   "whatsNew": {
     "message": "Što je novo u v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Kliknite ponovno za potvrdu brisanja"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ dodana na popis dopuštenih",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ je već na popisu dopuštenih",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Prilagodi"
+  },
+  "keyboardShortcuts": {
+    "message": "Tipkovni prečaci"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ uklonjena s popisa dopuštenih",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Moja Drowzy statistika"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Ukupno suspendiranih kartica: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ uštede RAM-a (ukupno)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "U upotrebi od $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ danas",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Sve je spremno"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Postavljeno $BOUND$ od $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Ostavi recenziju"
+  },
+  "reviewMaybeLater": {
+    "message": "Možda kasnije"
+  },
+  "reviewDontAsk": {
+    "message": "Ne pitaj ponovno"
+  },
+  "changelog136Title1": {
+    "message": "Svi jezici sada su potpuno prevedeni"
+  },
+  "changelog136Desc1": {
+    "message": "Neki tekstovi (obavijesti popisa dopuštenih, redak Tipkovni prečaci i tekst Podijeli statistiku) i dalje su se na drugim jezicima prikazivali na engleskom. Sada su prevedeni na svih 57 jezika, a jezici koji se pišu zdesna nalijevo poput arapskog i hebrejskog također se ispravno prikazuju."
+  },
+  "changelog136Title2": {
+    "message": "Diskretniji zahtjev za recenziju"
+  },
+  "changelog136Desc2": {
+    "message": "Natpis „Sviđa li vam se Drowzy?“ sada se prikazuje tek nakon što neko vrijeme koristite Drowzy, nikada pri instalaciji ni odmah nakon ažuriranja. Gumbi su „Ostavi recenziju“, „Možda kasnije“ i „Ne pitaj ponovno“. Nikada ne traži određenu ocjenu niti nudi nagradu."
+  },
+  "changelogReleaseHeading": {
+    "message": "Novosti u"
+  },
+  "changelog135Title1": {
+    "message": "Brže i pametnije suspendiranje"
+  },
+  "changelog135Desc1": {
+    "message": "Zadani mjerač vremena sada je 15 minuta da ranije primijetiš uštedu memorije, a suspendiranje drugih kartica i zatvaranje duplikata pouzdaniji su."
+  },
+  "changelog135Title2": {
+    "message": "Lakše upravljanje popisom dopuštenih"
+  },
+  "changelog135Desc2": {
+    "message": "Jasniji gumbi za uklanjanje, poruke potvrde i brojač, a sada radi i za localhost i IP adrese."
+  },
+  "changelog135Title3": {
+    "message": "Tipkovni prečaci u Postavkama"
+  },
+  "changelog135Desc3": {
+    "message": "Novi redak u Postavkama prikazuje status prečaca i vodi izravno do njihove prilagodbe."
+  },
+  "changelog135Title4": {
+    "message": "Poboljšanja statistike i dijeljenja"
+  },
+  "changelog135Desc4": {
+    "message": "Dijeljenje statistike sada se prikazuje na tvom jeziku, a ukupne vrijednosti memorije prikazuju se uredno, primjerice 2 GB umjesto 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Dorada i pristupačnost"
+  },
+  "changelog135Desc5": {
+    "message": "Jasnije ikone, oznaka na alatnoj traci u boji robne marke, bolje oznake za čitače zaslona i uredniji popup."
   }
 }

@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "અલગ કીબોર્ડ શૉર્ટકટ જોઈએ છે? અહીં કસ્ટમાઇઝ કરો →"
   },
-  "reviewLeaveTitle": {
-    "message": "ઝડપી સમીક્ષા છોડો"
-  },
-  "reviewReportTitle": {
-    "message": "સમસ્યાની જાણ કરો"
-  },
-  "reviewDismissTitle": {
-    "message": "બરતરફ કરો"
-  },
   "statMemberSince": {
     "message": "સભ્ય ત્યારથી"
   },
@@ -289,7 +280,7 @@
     "message": "કોઈ સાઇટ વ્હાઇટલિસ્ટમાં નથી"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, સંપૂર્ણ URL અથવા site.com/path/*"
   },
   "suspending": {
     "message": "સસ્પેન્ડ થઈ રહ્યું છે..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy ગમે છે?"
-  },
-  "reviewYes": {
-    "message": "હા!"
-  },
-  "reviewNo": {
-    "message": "ખરેખર નહીં"
   },
   "whatsNew": {
     "message": "v$VERSION$ માં નવું શું છે",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "કાઢી નાખવાની પુષ્ટિ કરવા ફરીથી ક્લિક કરો"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ વ્હાઇટલિસ્ટમાં ઉમેર્યું",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ પહેલેથી જ વ્હાઇટલિસ્ટમાં છે",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "કસ્ટમાઇઝ કરો"
+  },
+  "keyboardShortcuts": {
+    "message": "કીબોર્ડ શૉર્ટકટ્સ"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ વ્હાઇટલિસ્ટમાંથી દૂર કર્યું",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 મારા Drowzy આંકડા"
+  },
+  "shareStatsLineAllTime": {
+    "message": "કુલ $COUNT$ ટેબ સસ્પેન્ડ કરી",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM બચાવી (કુલ)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$ થી વપરાશમાં",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "આજે $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "બધું તૈયાર"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$ માંથી $BOUND$ સેટ",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "સમીક્ષા આપો"
+  },
+  "reviewMaybeLater": {
+    "message": "કદાચ પછી"
+  },
+  "reviewDontAsk": {
+    "message": "ફરી પૂછશો નહીં"
+  },
+  "changelog136Title1": {
+    "message": "હવે દરેક ભાષા સંપૂર્ણ રીતે અનુવાદિત છે"
+  },
+  "changelog136Desc1": {
+    "message": "કેટલાક લખાણ (વ્હાઇટલિસ્ટ સૂચનાઓ, કીબોર્ડ શૉર્ટકટ પંક્તિ અને આંકડા શેર કરવાનું લખાણ) અન્ય ભાષાઓમાં હજુ અંગ્રેજીમાં દેખાતા હતા. હવે તે બધી 57 ભાષાઓમાં અનુવાદિત છે, અને અરબી અને હિબ્રૂ જેવી જમણેથી ડાબે લખાતી ભાષાઓ પણ યોગ્ય રીતે દેખાય છે."
+  },
+  "changelog136Title2": {
+    "message": "વધુ નમ્ર સમીક્ષા વિનંતી"
+  },
+  "changelog136Desc2": {
+    "message": "\"Drowzy ગમે છે?\" બેનર હવે તમે Drowzy થોડો સમય વાપર્યા પછી જ દેખાય છે, ઇન્સ્ટોલ વખતે કે અપડેટ પછી તરત ક્યારેય નહીં. બટનો છે \"સમીક્ષા આપો\", \"કદાચ પછી\" અને \"ફરી પૂછશો નહીં\". તે ક્યારેય ચોક્કસ સ્ટાર રેટિંગ માગતું નથી અને કોઈ ઇનામ આપતું નથી."
+  },
+  "changelogReleaseHeading": {
+    "message": "માં નવું શું છે"
+  },
+  "changelog135Title1": {
+    "message": "ઝડપી અને સ્માર્ટ સસ્પેન્ડિંગ"
+  },
+  "changelog135Desc1": {
+    "message": "ડિફૉલ્ટ ટાઈમર હવે 15 મિનિટ છે જેથી તમે મેમરી બચત વહેલી જોઈ શકો, અને બીજી ટેબ સસ્પેન્ડ કરવી તથા ડુપ્લિકેટ બંધ કરવી વધુ ભરોસાપાત્ર બની છે."
+  },
+  "changelog135Title2": {
+    "message": "વ્હાઇટલિસ્ટ સંભાળવી સરળ"
+  },
+  "changelog135Desc2": {
+    "message": "સ્પષ્ટ રિમૂવ બટન, પુષ્ટિ સંદેશા અને એક ગણતરી, અને હવે તે localhost અને IP સરનામાં માટે પણ કામ કરે છે."
+  },
+  "changelog135Title3": {
+    "message": "સેટિંગ્સમાં કીબોર્ડ શૉર્ટકટ"
+  },
+  "changelog135Desc3": {
+    "message": "સેટિંગ્સમાં નવી પંક્તિ શૉર્ટકટની સ્થિતિ બતાવે છે અને સીધી તેમને કસ્ટમાઇઝ કરવા લઈ જાય છે."
+  },
+  "changelog135Title4": {
+    "message": "આંકડા અને શેરિંગ સુધારા"
+  },
+  "changelog135Desc4": {
+    "message": "આંકડા શેર કરો હવે તમારી ભાષામાં દેખાય છે, અને મેમરી કુલ સ્વચ્છ દેખાય છે, જેમ કે 2.0 GB ને બદલે 2 GB."
+  },
+  "changelog135Title5": {
+    "message": "ફિનિશિંગ અને સુલભતા"
+  },
+  "changelog135Desc5": {
+    "message": "સ્પષ્ટ આઇકન, બ્રાન્ડ-રંગનો ટૂલબાર બેજ, સ્ક્રીન રીડર માટે વધુ સારા લેબલ અને વધુ સુઘડ પોપઅપ."
   }
 }

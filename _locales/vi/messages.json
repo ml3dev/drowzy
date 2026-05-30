@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Muốn phím tắt khác? Tùy chỉnh tại đây →"
   },
-  "reviewLeaveTitle": {
-    "message": "Để lại đánh giá nhanh"
-  },
-  "reviewReportTitle": {
-    "message": "Báo cáo sự cố"
-  },
-  "reviewDismissTitle": {
-    "message": "Đóng"
-  },
   "statMemberSince": {
     "message": "Thành viên từ"
   },
@@ -289,7 +280,7 @@
     "message": "Không có trang nào trong danh sách trắng"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, URL đầy đủ hoặc site.com/path/*"
   },
   "suspending": {
     "message": "Đang tạm ngưng..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Bạn thích Drowzy không?"
-  },
-  "reviewYes": {
-    "message": "Có!"
-  },
-  "reviewNo": {
-    "message": "Không hẳn"
   },
   "whatsNew": {
     "message": "Có gì mới trong v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Nhấp lại để xác nhận xóa"
+  },
+  "addedToWhitelist": {
+    "message": "Đã thêm $DOMAIN$ vào danh sách trắng",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ đã có trong danh sách trắng",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Tùy chỉnh"
+  },
+  "keyboardShortcuts": {
+    "message": "Phím tắt"
+  },
+  "removedFromWhitelist": {
+    "message": "Đã xóa $DOMAIN$ khỏi danh sách trắng",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Thống kê Drowzy của tôi"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ tab đã tạm ngưng tổng cộng",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "Đã tiết kiệm $RAM$ RAM (trọn đời)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Sử dụng từ $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ hôm nay",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Đã xong tất cả"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Đã đặt $BOUND$ trên $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Để lại đánh giá"
+  },
+  "reviewMaybeLater": {
+    "message": "Có thể để sau"
+  },
+  "reviewDontAsk": {
+    "message": "Đừng hỏi lại"
+  },
+  "changelog136Title1": {
+    "message": "Giờ đây mọi ngôn ngữ đã được dịch đầy đủ"
+  },
+  "changelog136Desc1": {
+    "message": "Một số chuỗi văn bản (thông báo danh sách trắng, hàng Phím tắt và văn bản Chia sẻ thống kê) vẫn hiển thị bằng tiếng Anh ở các ngôn ngữ khác. Chúng đã được dịch sang toàn bộ 57 ngôn ngữ, và các ngôn ngữ viết từ phải sang trái như tiếng Ả Rập và tiếng Do Thái cũng hiển thị đúng."
+  },
+  "changelog136Title2": {
+    "message": "Lời mời đánh giá nhẹ nhàng hơn"
+  },
+  "changelog136Desc2": {
+    "message": "Biểu ngữ \"Bạn thích Drowzy chứ?\" giờ chỉ xuất hiện sau khi bạn đã dùng Drowzy một thời gian, không bao giờ khi cài đặt hay ngay sau khi cập nhật. Các nút là \"Để lại đánh giá\", \"Có thể để sau\" và \"Đừng hỏi lại\". Nó không bao giờ yêu cầu một mức sao cụ thể và không bao giờ tặng phần thưởng."
+  },
+  "changelogReleaseHeading": {
+    "message": "Có gì mới trong"
+  },
+  "changelog135Title1": {
+    "message": "Tạm ngưng nhanh hơn, thông minh hơn"
+  },
+  "changelog135Desc1": {
+    "message": "Bộ hẹn giờ mặc định giờ là 15 phút để bạn thấy tiết kiệm bộ nhớ sớm hơn, và việc tạm ngưng các tab khác cùng đóng tab trùng lặp đáng tin cậy hơn."
+  },
+  "changelog135Title2": {
+    "message": "Danh sách trắng dễ quản lý hơn"
+  },
+  "changelog135Desc2": {
+    "message": "Nút xóa rõ ràng hơn, thông báo xác nhận và bộ đếm, và giờ hoạt động với localhost và địa chỉ IP."
+  },
+  "changelog135Title3": {
+    "message": "Phím tắt trong Cài đặt"
+  },
+  "changelog135Desc3": {
+    "message": "Một hàng mới trong Cài đặt hiển thị trạng thái phím tắt và dẫn thẳng tới nơi tùy chỉnh chúng."
+  },
+  "changelog135Title4": {
+    "message": "Cải tiến thống kê và chia sẻ"
+  },
+  "changelog135Desc4": {
+    "message": "Chia sẻ thống kê giờ hiển thị bằng ngôn ngữ của bạn, và tổng bộ nhớ hiển thị gọn gàng, ví dụ 2 GB thay vì 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Hoàn thiện và trợ năng"
+  },
+  "changelog135Desc5": {
+    "message": "Biểu tượng rõ hơn, huy hiệu thanh công cụ theo màu thương hiệu, nhãn trình đọc màn hình tốt hơn và popup gọn hơn."
   }
 }

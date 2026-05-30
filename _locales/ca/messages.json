@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Voleu altres dreceres de teclat? Personalitzeu-les aquí →"
   },
-  "reviewLeaveTitle": {
-    "message": "Deixa una ressenya ràpida"
-  },
-  "reviewReportTitle": {
-    "message": "Informa d'un problema"
-  },
-  "reviewDismissTitle": {
-    "message": "Descarta"
-  },
   "statMemberSince": {
     "message": "Membre des de"
   },
@@ -289,7 +280,7 @@
     "message": "Cap lloc a la llista blanca"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, URL complet o site.com/path/*"
   },
   "suspending": {
     "message": "Suspenent..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "T'agrada Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Sí!"
-  },
-  "reviewNo": {
-    "message": "No gaire"
   },
   "whatsNew": {
     "message": "Novetats a la v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Feu clic de nou per confirmar l'eliminació"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ afegit a la llista blanca",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ ja és a la llista blanca",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Personalitza"
+  },
+  "keyboardShortcuts": {
+    "message": "Dreceres de teclat"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ eliminat de la llista blanca",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Les meves estadístiques de Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ pestanyes suspeses en total",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ de RAM estalviada (total)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "En ús des de $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ avui",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Tot a punt"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ de $TOTAL$ configurades",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Deixa una ressenya"
+  },
+  "reviewMaybeLater": {
+    "message": "Potser més tard"
+  },
+  "reviewDontAsk": {
+    "message": "No ho tornis a preguntar"
+  },
+  "changelog136Title1": {
+    "message": "Ara tots els idiomes estan completament traduïts"
+  },
+  "changelog136Desc1": {
+    "message": "Alguns textos (els avisos de la llista blanca, la fila de Dreceres de teclat i el text de Comparteix les estadístiques) encara apareixien en anglès en altres idiomes. Ara estan traduïts als 57 idiomes, i els idiomes que s'escriuen de dreta a esquerra com l'àrab i l'hebreu també es mostren correctament."
+  },
+  "changelog136Title2": {
+    "message": "Una sol·licitud de ressenya més discreta"
+  },
+  "changelog136Desc2": {
+    "message": "El bàner «T'agrada Drowzy?» ara només apareix després d'haver fet servir Drowzy una estona, mai en instal·lar-lo ni just després d'una actualització. Els botons són «Deixa una ressenya», «Potser més tard» i «No ho tornis a preguntar». Mai no demana una puntuació concreta ni ofereix cap recompensa."
+  },
+  "changelogReleaseHeading": {
+    "message": "Novetats de"
+  },
+  "changelog135Title1": {
+    "message": "Suspensió més ràpida i intel·ligent"
+  },
+  "changelog135Desc1": {
+    "message": "El temporitzador predeterminat ara és de 15 minuts perquè notis abans l'estalvi de memòria, i suspendre altres pestanyes i tancar duplicades són més fiables."
+  },
+  "changelog135Title2": {
+    "message": "La llista blanca és més fàcil de gestionar"
+  },
+  "changelog135Desc2": {
+    "message": "Botons d'eliminar més clars, missatges de confirmació i un recompte, i ara funciona amb localhost i adreces IP."
+  },
+  "changelog135Title3": {
+    "message": "Dreceres de teclat a Configuració"
+  },
+  "changelog135Desc3": {
+    "message": "Una nova fila a Configuració mostra l'estat de les dreceres i porta directament a personalitzar-les."
+  },
+  "changelog135Title4": {
+    "message": "Millores a estadístiques i compartir"
+  },
+  "changelog135Desc4": {
+    "message": "Compartir estadístiques ara apareix en el teu idioma, i els totals de memòria es veuen nets, per exemple 2 GB en lloc de 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Acabats i accessibilitat"
+  },
+  "changelog135Desc5": {
+    "message": "Icones més clares, una insígnia de barra amb els colors de la marca, millors etiquetes per a lectors de pantalla i un popup més endreçat."
   }
 }

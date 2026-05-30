@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Quer outros atalhos de teclado? Personalize aqui →"
   },
-  "reviewLeaveTitle": {
-    "message": "Deixe uma avaliação rápida"
-  },
-  "reviewReportTitle": {
-    "message": "Relatar um problema"
-  },
-  "reviewDismissTitle": {
-    "message": "Dispensar"
-  },
   "statMemberSince": {
     "message": "Membro desde"
   },
@@ -289,7 +280,7 @@
     "message": "Nenhum site na lista de permissões"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, URL completo ou site.com/path/*"
   },
   "suspending": {
     "message": "Suspendendo..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Gostando do Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Sim!"
-  },
-  "reviewNo": {
-    "message": "Não muito"
   },
   "whatsNew": {
     "message": "Novidades na v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Clique novamente para confirmar exclusão"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ adicionado à lista de permissões",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ já está na lista de permissões",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Personalizar"
+  },
+  "keyboardShortcuts": {
+    "message": "Atalhos de teclado"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ removido da lista de permissões",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Minhas estatísticas do Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ abas suspensas no total",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ de RAM economizada (total)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Em uso desde $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ hoje",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Tudo pronto"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ de $TOTAL$ definidos",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Avaliar a extensão"
+  },
+  "reviewMaybeLater": {
+    "message": "Talvez depois"
+  },
+  "reviewDontAsk": {
+    "message": "Não perguntar de novo"
+  },
+  "changelog136Title1": {
+    "message": "Agora todos os idiomas estão totalmente traduzidos"
+  },
+  "changelog136Desc1": {
+    "message": "Alguns textos (os avisos da lista de permissões, a linha de Atalhos de teclado e o texto de Compartilhar estatísticas) ainda apareciam em inglês em outros idiomas. Agora estão traduzidos para os 57 idiomas, e idiomas escritos da direita para a esquerda, como árabe e hebraico, também são exibidos corretamente."
+  },
+  "changelog136Title2": {
+    "message": "Um pedido de avaliação mais discreto"
+  },
+  "changelog136Desc2": {
+    "message": "O aviso \"Curtindo o Drowzy?\" agora só aparece depois de você usar o Drowzy por um tempo, nunca na instalação nem logo após uma atualização. Os botões são \"Avaliar a extensão\", \"Talvez depois\" e \"Não perguntar de novo\". Ele nunca pede uma nota específica nem oferece recompensa."
+  },
+  "changelogReleaseHeading": {
+    "message": "Novidades da"
+  },
+  "changelog135Title1": {
+    "message": "Suspensão mais rápida e inteligente"
+  },
+  "changelog135Desc1": {
+    "message": "O temporizador padrão agora é de 15 minutos para você notar a economia de memória mais cedo, e suspender outras abas e fechar duplicadas ficaram mais confiáveis."
+  },
+  "changelog135Title2": {
+    "message": "Lista de permissões mais fácil de gerenciar"
+  },
+  "changelog135Desc2": {
+    "message": "Botões de remover mais claros, mensagens de confirmação e uma contagem, e agora funciona com localhost e endereços IP."
+  },
+  "changelog135Title3": {
+    "message": "Atalhos de teclado nas Configurações"
+  },
+  "changelog135Desc3": {
+    "message": "Uma nova linha nas Configurações mostra o status dos atalhos e leva direto para onde personalizá-los."
+  },
+  "changelog135Title4": {
+    "message": "Melhorias em estatísticas e compartilhamento"
+  },
+  "changelog135Desc4": {
+    "message": "Compartilhar estatísticas agora aparece no seu idioma, e os totais de memória ficam limpos, por exemplo 2 GB em vez de 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Acabamento e acessibilidade"
+  },
+  "changelog135Desc5": {
+    "message": "Ícones mais claros, um selo de barra na cor da marca, melhores rótulos para leitores de tela e um popup mais organizado."
   }
 }

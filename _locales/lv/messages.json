@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Vēlaties citus tastatūras īsinājumtaustiņus? Pielāgojiet tos šeit →"
   },
-  "reviewLeaveTitle": {
-    "message": "Atstāj ātru atsauksmi"
-  },
-  "reviewReportTitle": {
-    "message": "Ziņot par problēmu"
-  },
-  "reviewDismissTitle": {
-    "message": "Aizvērt"
-  },
   "statMemberSince": {
     "message": "Lietotājs kopš"
   },
@@ -289,7 +280,7 @@
     "message": "Nav vietņu baltajā sarakstā"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, pilns URL vai site.com/path/*"
   },
   "suspending": {
     "message": "Aptur..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Vai Drowzy patīk?"
-  },
-  "reviewYes": {
-    "message": "Jā!"
-  },
-  "reviewNo": {
-    "message": "Ne īsti"
   },
   "whatsNew": {
     "message": "Kas jauns v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Noklikšķiniet vēlreiz, lai apstiprinātu dzēšanu"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ pievienota baltajam sarakstam",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ jau ir baltajā sarakstā",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Pielāgot"
+  },
+  "keyboardShortcuts": {
+    "message": "Tastatūras saīsnes"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ noņemta no baltā saraksta",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Mana Drowzy statistika"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Kopā apturētas cilnes: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ ietaupīts RAM (kopā)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Lietots kopš $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ šodien",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Viss gatavs"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Iestatīts $BOUND$ no $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Atstāt atsauksmi"
+  },
+  "reviewMaybeLater": {
+    "message": "Varbūt vēlāk"
+  },
+  "reviewDontAsk": {
+    "message": "Vairs nejautāt"
+  },
+  "changelog136Title1": {
+    "message": "Tagad visas valodas ir pilnībā iztulkotas"
+  },
+  "changelog136Desc1": {
+    "message": "Daži teksti (baltā saraksta paziņojumi, rinda Tastatūras saīsnes un teksts Kopīgot statistiku) citās valodās joprojām tika rādīti angliski. Tagad tie ir iztulkoti visās 57 valodās, un valodas, kas tiek rakstītas no labās uz kreiso pusi, piemēram, arābu un ebreju, arī tiek attēlotas pareizi."
+  },
+  "changelog136Title2": {
+    "message": "Atturīgāks aicinājums atstāt atsauksmi"
+  },
+  "changelog136Desc2": {
+    "message": "Josla “Vai jums patīk Drowzy?” tagad parādās tikai pēc tam, kad esat kādu laiku lietojis Drowzy, nekad instalēšanas laikā vai tūlīt pēc atjaunināšanas. Pogas ir “Atstāt atsauksmi”, “Varbūt vēlāk” un “Vairs nejautāt”. Tā nekad neprasa konkrētu vērtējumu un nepiedāvā atlīdzību."
+  },
+  "changelogReleaseHeading": {
+    "message": "Kas jauns versijā"
+  },
+  "changelog135Title1": {
+    "message": "Ātrāka un viedāka apturēšana"
+  },
+  "changelog135Desc1": {
+    "message": "Noklusējuma taimeris tagad ir 15 minūtes, lai ātrāk pamanītu atmiņas ietaupījumu, un citu ciļņu apturēšana un dublikātu aizvēršana ir uzticamāka."
+  },
+  "changelog135Title2": {
+    "message": "Vieglāk pārvaldīt balto sarakstu"
+  },
+  "changelog135Desc2": {
+    "message": "Skaidrākas noņemšanas pogas, apstiprinājuma ziņojumi un skaitītājs, un tagad tas darbojas arī ar localhost un IP adresēm."
+  },
+  "changelog135Title3": {
+    "message": "Tastatūras saīsnes iestatījumos"
+  },
+  "changelog135Desc3": {
+    "message": "Jauna rinda iestatījumos rāda saīšņu statusu un ved tieši uz to pielāgošanu."
+  },
+  "changelog135Title4": {
+    "message": "Statistikas un kopīgošanas uzlabojumi"
+  },
+  "changelog135Desc4": {
+    "message": "Statistikas kopīgošana tagad parādās tavā valodā, un atmiņas kopsummas tiek rādītas glīti, piemēram, 2 GB, nevis 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Pieslīpēšana un pieejamība"
+  },
+  "changelog135Desc5": {
+    "message": "Skaidrākas ikonas, rīkjoslas nozīmīte zīmola krāsā, labāki ekrāna lasītāju apzīmējumi un kārtīgāks uznirstošais logs."
   }
 }

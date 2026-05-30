@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "想要其他键盘快捷键？在此自定义 →"
   },
-  "reviewLeaveTitle": {
-    "message": "留下快速评论"
-  },
-  "reviewReportTitle": {
-    "message": "报告问题"
-  },
-  "reviewDismissTitle": {
-    "message": "关闭"
-  },
   "statMemberSince": {
     "message": "使用起始日"
   },
@@ -289,7 +280,7 @@
     "message": "没有白名单网站"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com、完整网址或 site.com/path/*"
   },
   "suspending": {
     "message": "正在休眠..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "喜欢 Drowzy 吗？"
-  },
-  "reviewYes": {
-    "message": "喜欢！"
-  },
-  "reviewNo": {
-    "message": "不太满意"
   },
   "whatsNew": {
     "message": "v$VERSION$ 新功能",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "再次点击以确认删除"
+  },
+  "addedToWhitelist": {
+    "message": "已将 $DOMAIN$ 加入白名单",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ 已在白名单中",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "自定义"
+  },
+  "keyboardShortcuts": {
+    "message": "键盘快捷键"
+  },
+  "removedFromWhitelist": {
+    "message": "已将 $DOMAIN$ 移出白名单",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 我的 Drowzy 统计"
+  },
+  "shareStatsLineAllTime": {
+    "message": "累计休眠 $COUNT$ 个标签页",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "累计节省 $RAM$ RAM",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "自 $DATE$ 起使用",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "今天 $COUNT$ 个",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "全部已设置"
+  },
+  "shortcutsSomeUnset": {
+    "message": "已设置 $TOTAL$ 个中的 $BOUND$ 个",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "写评价"
+  },
+  "reviewMaybeLater": {
+    "message": "以后再说"
+  },
+  "reviewDontAsk": {
+    "message": "不再询问"
+  },
+  "changelog136Title1": {
+    "message": "现在所有语言都已完整翻译"
+  },
+  "changelog136Desc1": {
+    "message": "有几处文字（白名单提示、键盘快捷键一行以及分享统计的文本）在其他语言中仍显示为英文。现已翻译为全部 57 种语言，阿拉伯语、希伯来语等从右到左书写的语言也能正确显示。"
+  },
+  "changelog136Title2": {
+    "message": "更温和的评价提示"
+  },
+  "changelog136Desc2": {
+    "message": "“喜欢 Drowzy 吗？”横幅现在只会在你使用 Drowzy 一段时间后才出现，绝不会在安装时或更新后立即弹出。按钮为“写评价”“以后再说”和“不再询问”。它从不索要特定星级，也从不提供奖励。"
+  },
+  "changelogReleaseHeading": {
+    "message": "的新功能"
+  },
+  "changelog135Title1": {
+    "message": "暂停更快、更智能"
+  },
+  "changelog135Desc1": {
+    "message": "默认计时器现在为 15 分钟,让你更快感受到内存节省,而且暂停其他标签页和关闭重复标签页更可靠了。"
+  },
+  "changelog135Title2": {
+    "message": "白名单更易管理"
+  },
+  "changelog135Desc2": {
+    "message": "移除按钮更清晰,新增确认提示和数量统计,并且现在支持 localhost 和 IP 地址。"
+  },
+  "changelog135Title3": {
+    "message": "设置中加入键盘快捷键"
+  },
+  "changelog135Desc3": {
+    "message": "设置中新增一行显示快捷键状态,并可直接跳转到自定义页面。"
+  },
+  "changelog135Title4": {
+    "message": "统计与分享改进"
+  },
+  "changelog135Desc4": {
+    "message": "分享统计现在以你的语言显示,内存总量显示更清爽,例如 2 GB 而不是 2.0 GB。"
+  },
+  "changelog135Title5": {
+    "message": "打磨与无障碍"
+  },
+  "changelog135Desc5": {
+    "message": "图标更清晰,工具栏徽标采用品牌色,屏幕阅读器标签更完善,弹窗更整洁。"
   }
 }

@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "تريد اختصارات لوحة مفاتيح مختلفة؟ خصّصها هنا ←"
   },
-  "reviewLeaveTitle": {
-    "message": "اكتب مراجعة سريعة"
-  },
-  "reviewReportTitle": {
-    "message": "الإبلاغ عن مشكلة"
-  },
-  "reviewDismissTitle": {
-    "message": "إغلاق"
-  },
   "statMemberSince": {
     "message": "عضو منذ"
   },
@@ -289,7 +280,7 @@
     "message": "لا توجد مواقع في القائمة البيضاء"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com، عنوان URL كامل، أو site.com/path/*"
   },
   "suspending": {
     "message": "جارٍ التعليق..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "هل تستمتع بـ Drowzy؟"
-  },
-  "reviewYes": {
-    "message": "نعم!"
-  },
-  "reviewNo": {
-    "message": "ليس حقًا"
   },
   "whatsNew": {
     "message": "الجديد في v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "انقر مرة أخرى لتأكيد الحذف"
+  },
+  "addedToWhitelist": {
+    "message": "تمت إضافة $DOMAIN$ إلى القائمة البيضاء",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ موجود بالفعل في القائمة البيضاء",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "تخصيص"
+  },
+  "keyboardShortcuts": {
+    "message": "اختصارات لوحة المفاتيح"
+  },
+  "removedFromWhitelist": {
+    "message": "تمت إزالة $DOMAIN$ من القائمة البيضاء",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 إحصاءات Drowzy الخاصة بي"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ تبويبة معلّقة إجمالاً",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ ذاكرة موفّرة (إجمالي)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "قيد الاستخدام منذ $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ اليوم",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "كل شيء جاهز"
+  },
+  "shortcutsSomeUnset": {
+    "message": "تم تعيين $BOUND$ من $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "اترك تقييماً"
+  },
+  "reviewMaybeLater": {
+    "message": "ربما لاحقاً"
+  },
+  "reviewDontAsk": {
+    "message": "لا تسأل مرة أخرى"
+  },
+  "changelog136Title1": {
+    "message": "أصبحت جميع اللغات الآن مترجمة بالكامل"
+  },
+  "changelog136Desc1": {
+    "message": "كانت بعض النصوص (إشعارات القائمة البيضاء، وصف اختصارات لوحة المفاتيح، ونص مشاركة الإحصاءات) لا تزال تظهر بالإنجليزية في لغات أخرى. وقد تُرجمت الآن إلى جميع اللغات الـ57، كما تُعرض اللغات التي تُكتب من اليمين إلى اليسار مثل العربية والعبرية بشكل صحيح."
+  },
+  "changelog136Title2": {
+    "message": "طلب تقييم ألطف"
+  },
+  "changelog136Desc2": {
+    "message": "لم يعد شريط «هل يعجبك Drowzy؟» يظهر إلا بعد استخدامك Drowzy لبعض الوقت، ولا يظهر أبداً عند التثبيت أو بعد التحديث مباشرة. الأزرار هي «اترك تقييماً» و«ربما لاحقاً» و«لا تسأل مرة أخرى». ولا يطلب أبداً تقييماً بعدد نجوم محدد ولا يقدّم أي مكافأة."
+  },
+  "changelogReleaseHeading": {
+    "message": "الجديد في"
+  },
+  "changelog135Title1": {
+    "message": "تعليق أسرع وأذكى"
+  },
+  "changelog135Desc1": {
+    "message": "المؤقّت الافتراضي الآن 15 دقيقة لتلاحظ توفير الذاكرة مبكراً، كما أصبح تعليق التبويبات الأخرى وإغلاق المكرّرة أكثر موثوقية."
+  },
+  "changelog135Title2": {
+    "message": "إدارة القائمة البيضاء أسهل"
+  },
+  "changelog135Desc2": {
+    "message": "أزرار إزالة أوضح ورسائل تأكيد وعدّاد، وأصبحت تعمل الآن مع localhost وعناوين IP."
+  },
+  "changelog135Title3": {
+    "message": "اختصارات لوحة المفاتيح في الإعدادات"
+  },
+  "changelog135Desc3": {
+    "message": "صف جديد في الإعدادات يعرض حالة الاختصارات ويأخذك مباشرةً إلى تخصيصها."
+  },
+  "changelog135Title4": {
+    "message": "تحسينات على الإحصاءات والمشاركة"
+  },
+  "changelog135Desc4": {
+    "message": "تظهر مشاركة الإحصاءات الآن بلغتك، وتُعرض إجماليات الذاكرة بشكل أنيق، مثل 2 غيغابايت بدلاً من 2.0 غيغابايت."
+  },
+  "changelog135Title5": {
+    "message": "صقل وإمكانية وصول"
+  },
+  "changelog135Desc5": {
+    "message": "أيقونات أوضح، وشارة في شريط الأدوات بلون العلامة، وتسميات أفضل لقارئات الشاشة، ونافذة منبثقة أكثر ترتيباً."
   }
 }

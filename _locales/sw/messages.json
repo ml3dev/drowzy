@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Unataka njia za mkato za kibodi tofauti? Zibinafsishe hapa →"
   },
-  "reviewLeaveTitle": {
-    "message": "Acha ukaguzi wa haraka"
-  },
-  "reviewReportTitle": {
-    "message": "Ripoti tatizo"
-  },
-  "reviewDismissTitle": {
-    "message": "Funga"
-  },
   "statMemberSince": {
     "message": "Mwanachama tangu"
   },
@@ -289,7 +280,7 @@
     "message": "Hakuna tovuti kwenye orodha nyeupe"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, URL kamili au site.com/path/*"
   },
   "suspending": {
     "message": "Inasimamisha..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Unafurahia Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ndiyo!"
-  },
-  "reviewNo": {
-    "message": "Si sana"
   },
   "whatsNew": {
     "message": "Nini kipya katika v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Bonyeza tena ili kuthibitisha kufuta"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ imeongezwa kwenye orodha nyeupe",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ tayari iko kwenye orodha nyeupe",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Badilisha"
+  },
+  "keyboardShortcuts": {
+    "message": "Njia za mkato za kibodi"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ imeondolewa kwenye orodha nyeupe",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Takwimu zangu za Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Jumla ya tabo $COUNT$ zimesimamishwa",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM imehifadhiwa (jumla)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Inatumika tangu $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ leo",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Kila kitu kiko tayari"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ kati ya $TOTAL$ zimewekwa",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Acha ukaguzi"
+  },
+  "reviewMaybeLater": {
+    "message": "Labda baadaye"
+  },
+  "reviewDontAsk": {
+    "message": "Usiulize tena"
+  },
+  "changelog136Title1": {
+    "message": "Sasa kila lugha imetafsiriwa kikamilifu"
+  },
+  "changelog136Desc1": {
+    "message": "Baadhi ya maandishi (arifa za orodha nyeupe, safu ya Njia za mkato za kibodi, na maandishi ya Kushiriki takwimu) bado yalionekana kwa Kiingereza katika lugha nyingine. Sasa yametafsiriwa katika lugha zote 57, na lugha zinazoandikwa kutoka kulia kwenda kushoto kama Kiarabu na Kiebrania nazo zinaonekana ipasavyo."
+  },
+  "changelog136Title2": {
+    "message": "Ombi la kupima lililo pole zaidi"
+  },
+  "changelog136Desc2": {
+    "message": "Bango la \"Unafurahia Drowzy?\" sasa linaonekana tu baada ya kutumia Drowzy kwa muda, kamwe wakati wa kusakinisha au mara tu baada ya sasisho. Vitufe ni \"Acha ukaguzi\", \"Labda baadaye\", na \"Usiulize tena\". Kamwe haliombi ukadiriaji maalum wa nyota wala halitoi zawadi."
+  },
+  "changelogReleaseHeading": {
+    "message": "Mpya katika"
+  },
+  "changelog135Title1": {
+    "message": "Kusimamisha kwa kasi na werevu zaidi"
+  },
+  "changelog135Desc1": {
+    "message": "Kipima muda chaguomsingi sasa ni dakika 15 ili uone uhifadhi wa kumbukumbu mapema, na kusimamisha vichupo vingine na kufunga nakala kumekuwa kuaminika zaidi."
+  },
+  "changelog135Title2": {
+    "message": "Orodha nyeupe rahisi kudhibiti"
+  },
+  "changelog135Desc2": {
+    "message": "Vitufe vya kuondoa vilivyo wazi zaidi, ujumbe wa uthibitisho, na hesabu, na sasa inafanya kazi kwa localhost na anwani za IP."
+  },
+  "changelog135Title3": {
+    "message": "Njia za mkato za kibodi katika Mipangilio"
+  },
+  "changelog135Desc3": {
+    "message": "Safu mpya katika Mipangilio inaonyesha hali ya njia za mkato na inakupeleka moja kwa moja kuzibinafsisha."
+  },
+  "changelog135Title4": {
+    "message": "Maboresho ya takwimu na kushiriki"
+  },
+  "changelog135Desc4": {
+    "message": "Shiriki takwimu sasa huonekana kwa lugha yako, na jumla za kumbukumbu huonyeshwa kwa nadhifu, kwa mfano 2 GB badala ya 2.0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Kung'arisha na ufikivu"
+  },
+  "changelog135Desc5": {
+    "message": "Aikoni zilizo wazi zaidi, beji ya upau wa vidhibiti yenye rangi ya chapa, lebo bora kwa visomaji skrini, na popup nadhifu zaidi."
   }
 }

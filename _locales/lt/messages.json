@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Norite kitokių klaviatūros sparčiųjų klavišų? Pritaikykite juos čia →"
   },
-  "reviewLeaveTitle": {
-    "message": "Palikite greitą apžvalgą"
-  },
-  "reviewReportTitle": {
-    "message": "Pranešti apie problemą"
-  },
-  "reviewDismissTitle": {
-    "message": "Uždaryti"
-  },
   "statMemberSince": {
     "message": "Narys nuo"
   },
@@ -289,7 +280,7 @@
     "message": "Baltajame sąraše svetainių nėra"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, visas URL arba site.com/path/*"
   },
   "suspending": {
     "message": "Sustabdoma..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Patinka Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Taip!"
-  },
-  "reviewNo": {
-    "message": "Ne visai"
   },
   "whatsNew": {
     "message": "Kas naujo v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Spustelėkite dar kartą, kad patvirtintumėte ištrynimą"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ įtraukta į baltąjį sąrašą",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ jau yra baltajame sąraše",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Tinkinti"
+  },
+  "keyboardShortcuts": {
+    "message": "Spartieji klavišai"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ pašalinta iš baltojo sąrašo",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Mano Drowzy statistika"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Iš viso sustabdyta kortelių: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ sutaupyta RAM (iš viso)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Naudojama nuo $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ šiandien",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Viskas paruošta"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Nustatyta $BOUND$ iš $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Palikti atsiliepimą"
+  },
+  "reviewMaybeLater": {
+    "message": "Galbūt vėliau"
+  },
+  "reviewDontAsk": {
+    "message": "Daugiau neklausti"
+  },
+  "changelog136Title1": {
+    "message": "Dabar visos kalbos visiškai išverstos"
+  },
+  "changelog136Desc1": {
+    "message": "Kai kurie tekstai (baltojo sąrašo pranešimai, eilutė Spartieji klavišai ir teksto Bendrinti statistiką) kitomis kalbomis vis dar buvo rodomi angliškai. Dabar jie išversti į visas 57 kalbas, o iš dešinės į kairę rašomos kalbos, pavyzdžiui, arabų ir hebrajų, taip pat rodomos teisingai."
+  },
+  "changelog136Title2": {
+    "message": "Subtilesnis prašymas palikti atsiliepimą"
+  },
+  "changelog136Desc2": {
+    "message": "Juosta „Ar jums patinka Drowzy?“ dabar pasirodo tik kurį laiką panaudojus Drowzy, niekada diegimo metu ar iškart po naujinimo. Mygtukai yra „Palikti atsiliepimą“, „Galbūt vėliau“ ir „Daugiau neklausti“. Ji niekada neprašo konkretaus įvertinimo ir nesiūlo atlygio."
+  },
+  "changelogReleaseHeading": {
+    "message": "Kas naujo versijoje"
+  },
+  "changelog135Title1": {
+    "message": "Greitesnis ir išmanesnis stabdymas"
+  },
+  "changelog135Desc1": {
+    "message": "Numatytasis laikmatis dabar yra 15 minučių, kad anksčiau pastebėtum atminties taupymą, o kitų kortelių stabdymas ir dublikatų uždarymas patikimesni."
+  },
+  "changelog135Title2": {
+    "message": "Lengviau tvarkyti baltąjį sąrašą"
+  },
+  "changelog135Desc2": {
+    "message": "Aiškesni šalinimo mygtukai, patvirtinimo pranešimai ir skaitiklis, o dabar veikia ir su localhost bei IP adresais."
+  },
+  "changelog135Title3": {
+    "message": "Spartieji klavišai nustatymuose"
+  },
+  "changelog135Desc3": {
+    "message": "Nauja eilutė nustatymuose rodo sparčiųjų klavišų būseną ir veda tiesiai į jų tinkinimą."
+  },
+  "changelog135Title4": {
+    "message": "Statistikos ir bendrinimo patobulinimai"
+  },
+  "changelog135Desc4": {
+    "message": "Statistikos bendrinimas dabar rodomas tavo kalba, o atminties sumos rodomos tvarkingai, pavyzdžiui 2 GB vietoj 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Šlifavimas ir prieinamumas"
+  },
+  "changelog135Desc5": {
+    "message": "Aiškesnės piktogramos, įrankių juostos ženklelis prekės ženklo spalvomis, geresni ekrano skaitytuvų užrašai ir tvarkingesnis iškylantis langas."
   }
 }

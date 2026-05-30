@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Vil du have andre tastaturgenveje? Tilpas dem her →"
   },
-  "reviewLeaveTitle": {
-    "message": "Skriv en hurtig anmeldelse"
-  },
-  "reviewReportTitle": {
-    "message": "Rapporter et problem"
-  },
-  "reviewDismissTitle": {
-    "message": "Luk"
-  },
   "statMemberSince": {
     "message": "Medlem siden"
   },
@@ -289,7 +280,7 @@
     "message": "Ingen hvidlistede websteder"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, fuld URL eller site.com/path/*"
   },
   "suspending": {
     "message": "Suspenderer..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Kan du lide Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ja!"
-  },
-  "reviewNo": {
-    "message": "Ikke rigtig"
   },
   "whatsNew": {
     "message": "Nyheder i v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Klik igen for at bekræfte sletning"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ tilføjet til hvidlisten",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ er allerede på hvidlisten",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Tilpas"
+  },
+  "keyboardShortcuts": {
+    "message": "Tastaturgenveje"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ fjernet fra hvidlisten",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Min Drowzy-statistik"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ faneblade suspenderet i alt",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM sparet (i alt)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "I brug siden $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ i dag",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Alt er klar"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ af $TOTAL$ angivet",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Skriv en anmeldelse"
+  },
+  "reviewMaybeLater": {
+    "message": "Måske senere"
+  },
+  "reviewDontAsk": {
+    "message": "Spørg ikke igen"
+  },
+  "changelog136Title1": {
+    "message": "Alle sprog er nu fuldt oversat"
+  },
+  "changelog136Desc1": {
+    "message": "Nogle tekster (hvidliste-beskederne, rækken Tastaturgenveje og teksten til Del statistik) blev stadig vist på engelsk på andre sprog. De er nu oversat til alle 57 sprog, og sprog der skrives fra højre mod venstre som arabisk og hebraisk vises også korrekt."
+  },
+  "changelog136Title2": {
+    "message": "En mere diskret anmeldelsesanmodning"
+  },
+  "changelog136Desc2": {
+    "message": "Banneret \"Kan du lide Drowzy?\" vises nu først, når du har brugt Drowzy et stykke tid, aldrig ved installation eller lige efter en opdatering. Knapperne er \"Skriv en anmeldelse\", \"Måske senere\" og \"Spørg ikke igen\". Den beder aldrig om en bestemt bedømmelse og tilbyder aldrig en belønning."
+  },
+  "changelogReleaseHeading": {
+    "message": "Nyt i"
+  },
+  "changelog135Title1": {
+    "message": "Hurtigere, smartere suspendering"
+  },
+  "changelog135Desc1": {
+    "message": "Standardtimeren er nu 15 minutter, så du mærker hukommelsesbesparelsen tidligere, og at suspendere andre faner og lukke dubletter er mere pålideligt."
+  },
+  "changelog135Title2": {
+    "message": "Hvidlisten er nemmere at administrere"
+  },
+  "changelog135Desc2": {
+    "message": "Tydeligere fjern-knapper, bekræftelsesbeskeder og en tæller, og den virker nu for localhost og IP-adresser."
+  },
+  "changelog135Title3": {
+    "message": "Tastaturgenveje i Indstillinger"
+  },
+  "changelog135Desc3": {
+    "message": "En ny række i Indstillinger viser status for dine genveje og linker direkte hen, hvor du tilpasser dem."
+  },
+  "changelog135Title4": {
+    "message": "Forbedringer af statistik og deling"
+  },
+  "changelog135Desc4": {
+    "message": "Del statistik vises nu på dit sprog, og hukommelsestotaler vises pænt, for eksempel 2 GB i stedet for 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Finpudsning og tilgængelighed"
+  },
+  "changelog135Desc5": {
+    "message": "Tydeligere ikoner, et værktøjslinjemærke i brandfarve, bedre etiketter til skærmlæsere og et pænere popup."
   }
 }

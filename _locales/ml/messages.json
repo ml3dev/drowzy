@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "വ്യത്യസ്ത കീബോർഡ് കുറുക്കുവഴികൾ വേണോ? ഇവിടെ ഇഷ്ടാനുസൃതമാക്കുക →"
   },
-  "reviewLeaveTitle": {
-    "message": "ഒരു പെട്ടെന്നുള്ള അവലോകനം നൽകുക"
-  },
-  "reviewReportTitle": {
-    "message": "ഒരു പ്രശ്നം റിപ്പോർട്ട് ചെയ്യുക"
-  },
-  "reviewDismissTitle": {
-    "message": "നിരസിക്കുക"
-  },
   "statMemberSince": {
     "message": "അംഗത്വം മുതൽ"
   },
@@ -289,7 +280,7 @@
     "message": "വൈറ്റ്‌ലിസ്റ്റ് ചെയ്ത സൈറ്റുകൾ ഇല്ല"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, പൂർണ്ണ URL അല്ലെങ്കിൽ site.com/path/*"
   },
   "suspending": {
     "message": "സസ്‌പെൻഡ് ചെയ്യുന്നു..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy ഇഷ്ടമാകുന്നുണ്ടോ?"
-  },
-  "reviewYes": {
-    "message": "അതെ!"
-  },
-  "reviewNo": {
-    "message": "അത്ര ഇല്ല"
   },
   "whatsNew": {
     "message": "v$VERSION$-ൽ പുതിയത്",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "ഇല്ലാതാക്കൽ സ്ഥിരീകരിക്കാൻ വീണ്ടും ക്ലിക്കുചെയ്യുക"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ വൈറ്റ്‌ലിസ്റ്റിൽ ചേർത്തു",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ ഇതിനകം വൈറ്റ്‌ലിസ്റ്റിലുണ്ട്",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "ഇഷ്‌ടാനുസൃതമാക്കുക"
+  },
+  "keyboardShortcuts": {
+    "message": "കീബോർഡ് കുറുക്കുവഴികൾ"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ വൈറ്റ്‌ലിസ്റ്റിൽ നിന്ന് നീക്കി",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 എന്റെ Drowzy സ്ഥിതിവിവരം"
+  },
+  "shareStatsLineAllTime": {
+    "message": "ആകെ $COUNT$ ടാബുകൾ സസ്‌പെൻഡ് ചെയ്തു",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM ലാഭിച്ചു (ആകെ)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$ മുതൽ ഉപയോഗത്തിൽ",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "ഇന്ന് $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "എല്ലാം തയ്യാർ"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$ ൽ $BOUND$ സജ്ജമാക്കി",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "ഒരു അവലോകനം നൽകുക"
+  },
+  "reviewMaybeLater": {
+    "message": "ഒരുപക്ഷേ പിന്നീട്"
+  },
+  "reviewDontAsk": {
+    "message": "വീണ്ടും ചോദിക്കരുത്"
+  },
+  "changelog136Title1": {
+    "message": "ഇപ്പോൾ എല്ലാ ഭാഷകളും പൂർണ്ണമായി വിവർത്തനം ചെയ്തു"
+  },
+  "changelog136Desc1": {
+    "message": "ചില വാചകങ്ങൾ (വൈറ്റ്‌ലിസ്റ്റ് അറിയിപ്പുകൾ, കീബോർഡ് കുറുക്കുവഴികളുടെ വരി, സ്ഥിതിവിവരം പങ്കിടൽ വാചകം) മറ്റ് ഭാഷകളിൽ ഇപ്പോഴും ഇംഗ്ലീഷിൽ കാണിച്ചിരുന്നു. ഇപ്പോൾ അവ എല്ലാ 57 ഭാഷകളിലേക്കും വിവർത്തനം ചെയ്തു, അറബി, ഹീബ്രു പോലുള്ള വലത്തുനിന്ന് ഇടത്തേക്ക് എഴുതുന്ന ഭാഷകളും ശരിയായി കാണിക്കുന്നു."
+  },
+  "changelog136Title2": {
+    "message": "കൂടുതൽ മൃദുവായ അവലോകന അഭ്യർത്ഥന"
+  },
+  "changelog136Desc2": {
+    "message": "\"Drowzy ഇഷ്ടമാണോ?\" ബാനർ ഇപ്പോൾ നിങ്ങൾ Drowzy കുറച്ച് സമയം ഉപയോഗിച്ച ശേഷം മാത്രമേ കാണിക്കൂ, ഇൻസ്റ്റാൾ ചെയ്യുമ്പോഴോ അപ്‌ഡേറ്റിന് തൊട്ടുപിന്നാലെയോ ഒരിക്കലുമില്ല. ബട്ടണുകൾ \"ഒരു അവലോകനം നൽകുക\", \"ഒരുപക്ഷേ പിന്നീട്\", \"വീണ്ടും ചോദിക്കരുത്\" എന്നിവയാണ്. ഇത് ഒരിക്കലും ഒരു പ്രത്യേക സ്റ്റാർ റേറ്റിംഗ് ആവശ്യപ്പെടുന്നില്ല, ഒരു പ്രതിഫലവും വാഗ്ദാനം ചെയ്യുന്നില്ല."
+  },
+  "changelogReleaseHeading": {
+    "message": "ലെ പുതിയത്"
+  },
+  "changelog135Title1": {
+    "message": "വേഗതയും മിടുക്കും കൂടിയ സസ്‌പെൻഡിംഗ്"
+  },
+  "changelog135Desc1": {
+    "message": "ഡിഫോൾട്ട് ടൈമർ ഇപ്പോൾ 15 മിനിറ്റാണ്, അതിനാൽ മെമ്മറി ലാഭം നേരത്തേ ശ്രദ്ധിക്കാം, മറ്റ് ടാബുകൾ സസ്‌പെൻഡ് ചെയ്യലും ഡ്യൂപ്ലിക്കേറ്റുകൾ അടയ്ക്കലും കൂടുതൽ വിശ്വസനീയമായി."
+  },
+  "changelog135Title2": {
+    "message": "വൈറ്റ്‌ലിസ്റ്റ് കൈകാര്യം ചെയ്യൽ എളുപ്പം"
+  },
+  "changelog135Desc2": {
+    "message": "വ്യക്തമായ നീക്കം ബട്ടണുകൾ, സ്ഥിരീകരണ സന്ദേശങ്ങൾ, ഒരു എണ്ണം, കൂടാതെ ഇപ്പോൾ ഇത് localhost-നും IP വിലാസങ്ങൾക്കും പ്രവർത്തിക്കുന്നു."
+  },
+  "changelog135Title3": {
+    "message": "ക്രമീകരണങ്ങളിൽ കീബോർഡ് കുറുക്കുവഴികൾ"
+  },
+  "changelog135Desc3": {
+    "message": "ക്രമീകരണങ്ങളിലെ പുതിയ വരി കുറുക്കുവഴികളുടെ നില കാണിക്കുകയും നേരിട്ട് അവ ഇഷ്ടാനുസൃതമാക്കാൻ കൊണ്ടുപോകുകയും ചെയ്യുന്നു."
+  },
+  "changelog135Title4": {
+    "message": "സ്ഥിതിവിവര, പങ്കിടൽ മെച്ചപ്പെടുത്തലുകൾ"
+  },
+  "changelog135Desc4": {
+    "message": "സ്ഥിതിവിവരം പങ്കിടൽ ഇപ്പോൾ നിങ്ങളുടെ ഭാഷയിൽ കാണിക്കുന്നു, മെമ്മറി ആകെത്തുകകൾ വൃത്തിയായി കാണിക്കുന്നു, ഉദാഹരണത്തിന് 2.0 GB-ന് പകരം 2 GB."
+  },
+  "changelog135Title5": {
+    "message": "മിനുക്കലും പ്രവേശനക്ഷമതയും"
+  },
+  "changelog135Desc5": {
+    "message": "വ്യക്തമായ ഐക്കണുകൾ, ബ്രാൻഡ്-നിറത്തിലുള്ള ടൂൾബാർ ബാഡ്ജ്, സ്ക്രീൻ റീഡറിന് മികച്ച ലേബലുകൾ, വൃത്തിയുള്ള പോപ്പ്അപ്പ്."
   }
 }

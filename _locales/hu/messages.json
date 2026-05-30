@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Más billentyűparancsokat szeretne? Itt testreszabhatja →"
   },
-  "reviewLeaveTitle": {
-    "message": "Írjon egy gyors értékelést"
-  },
-  "reviewReportTitle": {
-    "message": "Probléma jelentése"
-  },
-  "reviewDismissTitle": {
-    "message": "Bezárás"
-  },
   "statMemberSince": {
     "message": "Tag óta"
   },
@@ -289,7 +280,7 @@
     "message": "Nincsenek engedélyezett oldalak"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, teljes URL vagy site.com/path/*"
   },
   "suspending": {
     "message": "Felfüggesztés..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Tetszik a Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Igen!"
-  },
-  "reviewNo": {
-    "message": "Nem igazán"
   },
   "whatsNew": {
     "message": "Újdonságok a v$VERSION$-ban",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Kattintson újra a törlés megerősítéséhez"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ hozzáadva az engedélyezőlistához",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ már az engedélyezőlistán van",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Testreszabás"
+  },
+  "keyboardShortcuts": {
+    "message": "Billentyűparancsok"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ eltávolítva az engedélyezőlistáról",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Drowzy statisztikám"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Összesen $COUNT$ lap felfüggesztve",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ megtakarított RAM (összesen)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Használatban $DATE$ óta",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ ma",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Minden beállítva"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$/$TOTAL$ beállítva",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Értékelés írása"
+  },
+  "reviewMaybeLater": {
+    "message": "Talán később"
+  },
+  "reviewDontAsk": {
+    "message": "Ne kérdezd újra"
+  },
+  "changelog136Title1": {
+    "message": "Most már minden nyelv teljesen le van fordítva"
+  },
+  "changelog136Desc1": {
+    "message": "Néhány szöveg (az engedélyezőlista értesítései, a Billentyűparancsok sor és a Statisztika megosztása szöveg) más nyelveken még angolul jelent meg. Ezek most mind az 57 nyelvre le vannak fordítva, és a jobbról balra író nyelvek, mint az arab és a héber, szintén helyesen jelennek meg."
+  },
+  "changelog136Title2": {
+    "message": "Diszkrétebb értékelési felkérés"
+  },
+  "changelog136Desc2": {
+    "message": "A „Tetszik a Drowzy?” sáv mostantól csak akkor jelenik meg, ha már egy ideje használod a Drowzyt, soha nem a telepítéskor vagy közvetlenül egy frissítés után. A gombok: „Értékelés írása”, „Talán később” és „Ne kérdezd újra”. Soha nem kér meghatározott csillagos értékelést, és soha nem kínál jutalmat."
+  },
+  "changelogReleaseHeading": {
+    "message": "Újdonságok a"
+  },
+  "changelog135Title1": {
+    "message": "Gyorsabb, okosabb felfüggesztés"
+  },
+  "changelog135Desc1": {
+    "message": "Az alapértelmezett időzítő mostantól 15 perc, hogy hamarabb észrevedd a memóriamegtakarítást, és a többi lap felfüggesztése, valamint a duplikátumok bezárása megbízhatóbb."
+  },
+  "changelog135Title2": {
+    "message": "Könnyebben kezelhető engedélyezőlista"
+  },
+  "changelog135Desc2": {
+    "message": "Érthetőbb eltávolítás gombok, megerősítő üzenetek és egy számláló, és mostantól localhostra és IP-címekre is működik."
+  },
+  "changelog135Title3": {
+    "message": "Billentyűparancsok a Beállításokban"
+  },
+  "changelog135Desc3": {
+    "message": "A Beállítások új sora mutatja a billentyűparancsok állapotát, és egyenesen oda visz, ahol testreszabhatod őket."
+  },
+  "changelog135Title4": {
+    "message": "Statisztika és megosztás fejlesztések"
+  },
+  "changelog135Desc4": {
+    "message": "A Statisztika megosztása mostantól a saját nyelveden jelenik meg, és a memóriaösszegek szépen jelennek meg, például 2 GB a 2,0 GB helyett."
+  },
+  "changelog135Title5": {
+    "message": "Csiszolás és akadálymentesség"
+  },
+  "changelog135Desc5": {
+    "message": "Érthetőbb ikonok, márkaszínű eszköztár-jelvény, jobb képernyőolvasó-feliratok és letisztultabb felugró ablak."
   }
 }

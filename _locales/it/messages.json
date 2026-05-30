@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Vuoi altre scorciatoie da tastiera? Personalizzale qui →"
   },
-  "reviewLeaveTitle": {
-    "message": "Lascia una recensione rapida"
-  },
-  "reviewReportTitle": {
-    "message": "Segnala un problema"
-  },
-  "reviewDismissTitle": {
-    "message": "Chiudi"
-  },
   "statMemberSince": {
     "message": "Membro dal"
   },
@@ -289,7 +280,7 @@
     "message": "Nessun sito nella lista bianca"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, URL completo o site.com/path/*"
   },
   "suspending": {
     "message": "Sospensione..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Ti piace Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Sì!"
-  },
-  "reviewNo": {
-    "message": "Non molto"
   },
   "whatsNew": {
     "message": "Novità nella v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Fai clic di nuovo per confermare l'eliminazione"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ aggiunto alla lista bianca",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ è già nella lista bianca",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Personalizza"
+  },
+  "keyboardShortcuts": {
+    "message": "Scorciatoie da tastiera"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ rimosso dalla lista bianca",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Le mie statistiche Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ schede sospese in totale",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ di RAM risparmiata (totale)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "In uso dal $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ oggi",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Tutto pronto"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ di $TOTAL$ impostate",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Lascia una recensione"
+  },
+  "reviewMaybeLater": {
+    "message": "Forse più tardi"
+  },
+  "reviewDontAsk": {
+    "message": "Non chiedere più"
+  },
+  "changelog136Title1": {
+    "message": "Ora tutte le lingue sono completamente tradotte"
+  },
+  "changelog136Desc1": {
+    "message": "Alcuni testi (gli avvisi della lista bianca, la riga Scorciatoie da tastiera e il testo di Condividi statistiche) comparivano ancora in inglese nelle altre lingue. Ora sono tradotti in tutte le 57 lingue, e le lingue che si scrivono da destra a sinistra come l'arabo e l'ebraico vengono visualizzate correttamente."
+  },
+  "changelog136Title2": {
+    "message": "Un invito alla recensione più discreto"
+  },
+  "changelog136Desc2": {
+    "message": "Il banner «Ti piace Drowzy?» ora compare solo dopo aver usato Drowzy per un po', mai all'installazione né subito dopo un aggiornamento. I pulsanti sono «Lascia una recensione», «Forse più tardi» e «Non chiedere più». Non chiede mai un punteggio specifico e non offre mai ricompense."
+  },
+  "changelogReleaseHeading": {
+    "message": "Novità di"
+  },
+  "changelog135Title1": {
+    "message": "Sospensione più rapida e intelligente"
+  },
+  "changelog135Desc1": {
+    "message": "Il timer predefinito ora è di 15 minuti per notare prima il risparmio di memoria, e sospendere le altre schede e chiudere i duplicati sono più affidabili."
+  },
+  "changelog135Title2": {
+    "message": "Lista bianca più facile da gestire"
+  },
+  "changelog135Desc2": {
+    "message": "Pulsanti di rimozione più chiari, messaggi di conferma e un conteggio, e ora funziona con localhost e indirizzi IP."
+  },
+  "changelog135Title3": {
+    "message": "Scorciatoie da tastiera nelle Impostazioni"
+  },
+  "changelog135Desc3": {
+    "message": "Una nuova riga nelle Impostazioni mostra lo stato delle scorciatoie e porta direttamente dove personalizzarle."
+  },
+  "changelog135Title4": {
+    "message": "Miglioramenti a statistiche e condivisione"
+  },
+  "changelog135Desc4": {
+    "message": "Condividi statistiche ora appare nella tua lingua, e i totali di memoria sono puliti, ad esempio 2 GB invece di 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Rifiniture e accessibilità"
+  },
+  "changelog135Desc5": {
+    "message": "Icone più chiare, un badge della barra in linea col marchio, etichette migliori per screen reader e un popup più ordinato."
   }
 }

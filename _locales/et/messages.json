@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Soovid teisi klaviatuuri otseteid? Kohanda neid siin →"
   },
-  "reviewLeaveTitle": {
-    "message": "Jäta kiire arvustus"
-  },
-  "reviewReportTitle": {
-    "message": "Teata probleemist"
-  },
-  "reviewDismissTitle": {
-    "message": "Sulge"
-  },
   "statMemberSince": {
     "message": "Liige alates"
   },
@@ -289,7 +280,7 @@
     "message": "Lubatud saite pole"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, täielik URL või site.com/path/*"
   },
   "suspending": {
     "message": "Peatamine..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Kas Drowzy meeldib?"
-  },
-  "reviewYes": {
-    "message": "Jah!"
-  },
-  "reviewNo": {
-    "message": "Mitte eriti"
   },
   "whatsNew": {
     "message": "Mis on uut versioonis 1.1.0 v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Klõpsake uuesti, et kustutamist kinnitada"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ lisati lubatud nimekirja",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ on juba lubatud nimekirjas",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Kohanda"
+  },
+  "keyboardShortcuts": {
+    "message": "Klaviatuuri otseteed"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ eemaldati lubatud nimekirjast",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Minu Drowzy statistika"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Kokku peatatud vahelehti: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ säästetud RAM-i (kokku)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Kasutusel alates $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ täna",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Kõik on valmis"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ / $TOTAL$ määratud",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Jäta arvustus"
+  },
+  "reviewMaybeLater": {
+    "message": "Võib-olla hiljem"
+  },
+  "reviewDontAsk": {
+    "message": "Ära küsi uuesti"
+  },
+  "changelog136Title1": {
+    "message": "Nüüd on kõik keeled täielikult tõlgitud"
+  },
+  "changelog136Desc1": {
+    "message": "Mõned tekstid (lubatud nimekirja teated, rida Klaviatuuri otseteed ja Jaga statistikat tekst) kuvati teistes keeltes endiselt inglise keeles. Need on nüüd tõlgitud kõigisse 57 keelde ning paremalt vasakule kirjutatavad keeled nagu araabia ja heebrea keel kuvatakse samuti õigesti."
+  },
+  "changelog136Title2": {
+    "message": "Tagasihoidlikum arvustuse küsimine"
+  },
+  "changelog136Desc2": {
+    "message": "Riba „Kas Drowzy meeldib?“ ilmub nüüd alles siis, kui oled Drowzyt mõnda aega kasutanud, mitte kunagi paigaldamisel ega kohe pärast värskendust. Nupud on „Jäta arvustus“, „Võib-olla hiljem“ ja „Ära küsi uuesti“. See ei küsi kunagi kindlat hinnangut ega paku tasu."
+  },
+  "changelogReleaseHeading": {
+    "message": "Mis on uut versioonis"
+  },
+  "changelog135Title1": {
+    "message": "Kiirem ja nutikam peatamine"
+  },
+  "changelog135Desc1": {
+    "message": "Vaiketaimer on nüüd 15 minutit, et märkaksid mälusäästu varem, ning teiste vahelehtede peatamine ja duplikaatide sulgemine on töökindlamad."
+  },
+  "changelog135Title2": {
+    "message": "Lubatud nimekirja on lihtsam hallata"
+  },
+  "changelog135Desc2": {
+    "message": "Selgemad eemaldusnupud, kinnitusteated ja loendur, ning nüüd töötab see ka localhosti ja IP-aadressidega."
+  },
+  "changelog135Title3": {
+    "message": "Klaviatuuri otseteed seadetes"
+  },
+  "changelog135Desc3": {
+    "message": "Uus rida seadetes näitab otseteede olekut ja viib otse nende kohandamiseni."
+  },
+  "changelog135Title4": {
+    "message": "Statistika ja jagamise täiustused"
+  },
+  "changelog135Desc4": {
+    "message": "Statistika jagamine kuvatakse nüüd sinu keeles ja mälu kogusummad on korralikud, näiteks 2 GB asemel 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Viimistlus ja juurdepääsetavus"
+  },
+  "changelog135Desc5": {
+    "message": "Selgemad ikoonid, brändivärvides tööriistariba märk, paremad ekraanilugeja sildid ja korralikum hüpikaken."
   }
 }

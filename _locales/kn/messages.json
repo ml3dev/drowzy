@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "ಬೇರೆ ಕೀಬೋರ್ಡ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳು ಬೇಕೇ? ಇಲ್ಲಿ ಕಸ್ಟಮೈಜ್ ಮಾಡಿ →"
   },
-  "reviewLeaveTitle": {
-    "message": "ತ್ವರಿತ ವಿಮರ್ಶೆಯನ್ನು ಬಿಡಿ"
-  },
-  "reviewReportTitle": {
-    "message": "ಸಮಸ್ಯೆಯನ್ನು ವರದಿ ಮಾಡಿ"
-  },
-  "reviewDismissTitle": {
-    "message": "ವಜಾಗೊಳಿಸು"
-  },
   "statMemberSince": {
     "message": "ಸದಸ್ಯರಾದ ದಿನಾಂಕ"
   },
@@ -289,7 +280,7 @@
     "message": "ಯಾವುದೇ ಸೈಟ್‌ಗಳನ್ನು ಶ್ವೇತಪಟ್ಟಿಗೆ ಸೇರಿಸಿಲ್ಲ"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, ಪೂರ್ಣ URL ಅಥವಾ site.com/path/*"
   },
   "suspending": {
     "message": "ಸಸ್ಪೆಂಡ್ ಆಗುತ್ತಿದೆ..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy ಇಷ್ಟವಾಗುತ್ತಿದೆಯೇ?"
-  },
-  "reviewYes": {
-    "message": "ಹೌದು!"
-  },
-  "reviewNo": {
-    "message": "ಅಷ್ಟಾಗಿ ಇಲ್ಲ"
   },
   "whatsNew": {
     "message": "v$VERSION$ ರಲ್ಲಿ ಹೊಸದೇನು",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "ಅಳಿಸಲು ದೃಢೀಕರಿಸಲು ಮತ್ತೊಮ್ಮೆ ಕ್ಲಿಕ್ ಮಾಡಿ"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ ಶ್ವೇತಪಟ್ಟಿಗೆ ಸೇರಿಸಲಾಗಿದೆ",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ ಈಗಾಗಲೇ ಶ್ವೇತಪಟ್ಟಿಯಲ್ಲಿದೆ",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "ಕಸ್ಟಮೈಸ್ ಮಾಡಿ"
+  },
+  "keyboardShortcuts": {
+    "message": "ಕೀಬೋರ್ಡ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳು"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ ಶ್ವೇತಪಟ್ಟಿಯಿಂದ ತೆಗೆದುಹಾಕಲಾಗಿದೆ",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 ನನ್ನ Drowzy ಅಂಕಿಅಂಶಗಳು"
+  },
+  "shareStatsLineAllTime": {
+    "message": "ಒಟ್ಟು $COUNT$ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡಲಾಗಿದೆ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM ಉಳಿತಾಯ (ಒಟ್ಟು)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$ ರಿಂದ ಬಳಕೆಯಲ್ಲಿದೆ",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "ಇಂದು $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "ಎಲ್ಲವೂ ಸಿದ್ಧ"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$ ರಲ್ಲಿ $BOUND$ ಹೊಂದಿಸಲಾಗಿದೆ",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "ವಿಮರ್ಶೆ ಬರೆಯಿರಿ"
+  },
+  "reviewMaybeLater": {
+    "message": "ಬಹುಶಃ ನಂತರ"
+  },
+  "reviewDontAsk": {
+    "message": "ಮತ್ತೆ ಕೇಳಬೇಡಿ"
+  },
+  "changelog136Title1": {
+    "message": "ಈಗ ಎಲ್ಲಾ ಭಾಷೆಗಳು ಸಂಪೂರ್ಣವಾಗಿ ಅನುವಾದಗೊಂಡಿವೆ"
+  },
+  "changelog136Desc1": {
+    "message": "ಕೆಲವು ಪಠ್ಯಗಳು (ಶ್ವೇತಪಟ್ಟಿ ಅಧಿಸೂಚನೆಗಳು, ಕೀಬೋರ್ಡ್ ಶಾರ್ಟ್‌ಕಟ್ ಸಾಲು ಮತ್ತು ಅಂಕಿಅಂಶ ಹಂಚಿಕೆ ಪಠ್ಯ) ಇತರ ಭಾಷೆಗಳಲ್ಲಿ ಇನ್ನೂ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ ಕಾಣಿಸುತ್ತಿದ್ದವು. ಈಗ ಅವು ಎಲ್ಲಾ 57 ಭಾಷೆಗಳಿಗೆ ಅನುವಾದಗೊಂಡಿವೆ, ಮತ್ತು ಅರೇಬಿಕ್ ಹಾಗೂ ಹೀಬ್ರೂ ಮುಂತಾದ ಬಲದಿಂದ ಎಡಕ್ಕೆ ಬರೆಯುವ ಭಾಷೆಗಳೂ ಸರಿಯಾಗಿ ಕಾಣಿಸುತ್ತವೆ."
+  },
+  "changelog136Title2": {
+    "message": "ಹೆಚ್ಚು ಸೌಮ್ಯವಾದ ವಿಮರ್ಶೆ ವಿನಂತಿ"
+  },
+  "changelog136Desc2": {
+    "message": "\"Drowzy ಇಷ್ಟವಾಗಿದೆಯೇ?\" ಬ್ಯಾನರ್ ಈಗ ನೀವು Drowzy ಅನ್ನು ಸ್ವಲ್ಪ ಕಾಲ ಬಳಸಿದ ನಂತರವೇ ಕಾಣಿಸುತ್ತದೆ, ಸ್ಥಾಪನೆಯ ಸಮಯದಲ್ಲಿ ಅಥವಾ ನವೀಕರಣದ ತಕ್ಷಣ ಎಂದಿಗೂ ಇಲ್ಲ. ಬಟನ್‌ಗಳು \"ವಿಮರ್ಶೆ ಬರೆಯಿರಿ\", \"ಬಹುಶಃ ನಂತರ\" ಮತ್ತು \"ಮತ್ತೆ ಕೇಳಬೇಡಿ\". ಇದು ಎಂದಿಗೂ ನಿರ್ದಿಷ್ಟ ಸ್ಟಾರ್ ರೇಟಿಂಗ್ ಕೇಳುವುದಿಲ್ಲ ಮತ್ತು ಯಾವುದೇ ಬಹುಮಾನ ನೀಡುವುದಿಲ್ಲ."
+  },
+  "changelogReleaseHeading": {
+    "message": "ನಲ್ಲಿ ಹೊಸದೇನು"
+  },
+  "changelog135Title1": {
+    "message": "ವೇಗದ ಮತ್ತು ಚುರುಕಾದ ಸಸ್ಪೆಂಡಿಂಗ್"
+  },
+  "changelog135Desc1": {
+    "message": "ಡೀಫಾಲ್ಟ್ ಟೈಮರ್ ಈಗ 15 ನಿಮಿಷ, ಆದ್ದರಿಂದ ನೀವು ಮೆಮೊರಿ ಉಳಿತಾಯವನ್ನು ಬೇಗ ಗಮನಿಸುತ್ತೀರಿ, ಮತ್ತು ಇತರ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸಸ್ಪೆಂಡ್ ಮಾಡುವುದು ಹಾಗೂ ನಕಲಿಗಳನ್ನು ಮುಚ್ಚುವುದು ಹೆಚ್ಚು ವಿಶ್ವಾಸಾರ್ಹ."
+  },
+  "changelog135Title2": {
+    "message": "ಶ್ವೇತಪಟ್ಟಿ ನಿರ್ವಹಣೆ ಸುಲಭ"
+  },
+  "changelog135Desc2": {
+    "message": "ಸ್ಪಷ್ಟ ತೆಗೆದುಹಾಕುವ ಬಟನ್‌ಗಳು, ದೃಢೀಕರಣ ಸಂದೇಶಗಳು ಮತ್ತು ಎಣಿಕೆ, ಮತ್ತು ಈಗ ಇದು localhost ಮತ್ತು IP ವಿಳಾಸಗಳಿಗೂ ಕೆಲಸ ಮಾಡುತ್ತದೆ."
+  },
+  "changelog135Title3": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಕೀಬೋರ್ಡ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳು"
+  },
+  "changelog135Desc3": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಹೊಸ ಸಾಲು ಶಾರ್ಟ್‌ಕಟ್ ಸ್ಥಿತಿಯನ್ನು ತೋರಿಸುತ್ತದೆ ಮತ್ತು ನೇರವಾಗಿ ಅವುಗಳ ಕಸ್ಟಮೈಸ್‌ಗೆ ಕೊಂಡೊಯ್ಯುತ್ತದೆ."
+  },
+  "changelog135Title4": {
+    "message": "ಅಂಕಿಅಂಶ ಮತ್ತು ಹಂಚಿಕೆ ಸುಧಾರಣೆಗಳು"
+  },
+  "changelog135Desc4": {
+    "message": "ಅಂಕಿಅಂಶ ಹಂಚಿಕೆ ಈಗ ನಿಮ್ಮ ಭಾಷೆಯಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ, ಮತ್ತು ಮೆಮೊರಿ ಒಟ್ಟುಗಳು ಅಚ್ಚುಕಟ್ಟಾಗಿ ಕಾಣಿಸುತ್ತವೆ, ಉದಾಹರಣೆಗೆ 2.0 GB ಬದಲಿಗೆ 2 GB."
+  },
+  "changelog135Title5": {
+    "message": "ಪರಿಷ್ಕರಣೆ ಮತ್ತು ಪ್ರವೇಶಾರ್ಹತೆ"
+  },
+  "changelog135Desc5": {
+    "message": "ಸ್ಪಷ್ಟ ಐಕಾನ್‌ಗಳು, ಬ್ರಾಂಡ್-ಬಣ್ಣದ ಟೂಲ್‌ಬಾರ್ ಬ್ಯಾಡ್ಜ್, ಸ್ಕ್ರೀನ್ ರೀಡರ್‌ಗಾಗಿ ಉತ್ತಮ ಲೇಬಲ್‌ಗಳು ಮತ್ತು ಅಚ್ಚುಕಟ್ಟಾದ ಪಾಪ್‌ಅಪ್."
   }
 }

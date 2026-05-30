@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "వేరే కీబోర్డ్ షార్ట్‌కట్‌లు కావాలా? వాటిని ఇక్కడ అనుకూలీకరించండి →"
   },
-  "reviewLeaveTitle": {
-    "message": "త్వరిత సమీక్షను వదిలివేయండి"
-  },
-  "reviewReportTitle": {
-    "message": "సమస్యను నివేదించండి"
-  },
-  "reviewDismissTitle": {
-    "message": "మూసివేయి"
-  },
   "statMemberSince": {
     "message": "సభ్యుడు ఎప్పటి నుండి"
   },
@@ -289,7 +280,7 @@
     "message": "వైట్‌లిస్ట్ చేసిన సైట్‌లు లేవు"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, పూర్తి URL లేదా site.com/path/*"
   },
   "suspending": {
     "message": "సస్పెండ్ చేస్తోంది..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy నచ్చుతోందా?"
-  },
-  "reviewYes": {
-    "message": "అవును!"
-  },
-  "reviewNo": {
-    "message": "అంతగా కాదు"
   },
   "whatsNew": {
     "message": "v$VERSION$ లో కొత్తవి",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "తొలగింపును నిర్ధారించడానికి మళ్లీ క్లిక్ చేయండి"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ వైట్‌లిస్ట్‌కు జోడించబడింది",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ ఇప్పటికే వైట్‌లిస్ట్‌లో ఉంది",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "అనుకూలీకరించు"
+  },
+  "keyboardShortcuts": {
+    "message": "కీబోర్డ్ షార్ట్‌కట్‌లు"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ వైట్‌లిస్ట్ నుండి తీసివేయబడింది",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 నా Drowzy గణాంకాలు"
+  },
+  "shareStatsLineAllTime": {
+    "message": "మొత్తం $COUNT$ ట్యాబ్‌లు సస్పెండ్ చేయబడ్డాయి",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM ఆదా చేయబడింది (మొత్తం)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$ నుండి వాడుకలో",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "ఈ రోజు $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "అన్నీ సిద్ధం"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$ లో $BOUND$ సెట్ చేయబడింది",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "సమీక్ష రాయండి"
+  },
+  "reviewMaybeLater": {
+    "message": "బహుశా తర్వాత"
+  },
+  "reviewDontAsk": {
+    "message": "మళ్లీ అడగవద్దు"
+  },
+  "changelog136Title1": {
+    "message": "ఇప్పుడు అన్ని భాషలూ పూర్తిగా అనువదించబడ్డాయి"
+  },
+  "changelog136Desc1": {
+    "message": "కొన్ని వచనాలు (వైట్‌లిస్ట్ నోటిఫికేషన్‌లు, కీబోర్డ్ షార్ట్‌కట్‌ల వరుస మరియు గణాంకాలను షేర్ చేసే వచనం) ఇతర భాషల్లో ఇంకా ఇంగ్లిష్‌లో కనిపిస్తున్నాయి. ఇప్పుడు అవి మొత్తం 57 భాషల్లోకి అనువదించబడ్డాయి, మరియు అరబిక్, హిబ్రూ వంటి కుడి-నుంచి-ఎడమకు రాసే భాషలూ సరిగ్గా కనిపిస్తాయి."
+  },
+  "changelog136Title2": {
+    "message": "మరింత మృదువైన సమీక్ష అభ్యర్థన"
+  },
+  "changelog136Desc2": {
+    "message": "\"Drowzy నచ్చిందా?\" బ్యానర్ ఇప్పుడు మీరు Drowzyని కొంతకాలం ఉపయోగించిన తర్వాతే కనిపిస్తుంది, ఇన్‌స్టాల్ చేసేటప్పుడు లేదా అప్‌డేట్ అయిన వెంటనే ఎప్పుడూ కాదు. బటన్‌లు \"సమీక్ష రాయండి\", \"బహుశా తర్వాత\" మరియు \"మళ్లీ అడగవద్దు\". ఇది ఎప్పుడూ నిర్దిష్ట స్టార్ రేటింగ్ అడగదు, ఎలాంటి బహుమతీ ఇవ్వదు."
+  },
+  "changelogReleaseHeading": {
+    "message": "లో కొత్తది"
+  },
+  "changelog135Title1": {
+    "message": "వేగవంతమైన, తెలివైన సస్పెండింగ్"
+  },
+  "changelog135Desc1": {
+    "message": "డిఫాల్ట్ టైమర్ ఇప్పుడు 15 నిమిషాలు, కాబట్టి మెమరీ ఆదాను త్వరగా గమనిస్తారు, మరియు ఇతర ట్యాబ్‌లను సస్పెండ్ చేయడం, నకిళ్లను మూసివేయడం మరింత నమ్మదగినవి."
+  },
+  "changelog135Title2": {
+    "message": "వైట్‌లిస్ట్ నిర్వహణ సులభం"
+  },
+  "changelog135Desc2": {
+    "message": "స్పష్టమైన తొలగింపు బటన్‌లు, నిర్ధారణ సందేశాలు, ఒక లెక్కింపు, మరియు ఇప్పుడు ఇది localhost, IP చిరునామాలకు కూడా పనిచేస్తుంది."
+  },
+  "changelog135Title3": {
+    "message": "సెట్టింగ్‌లలో కీబోర్డ్ షార్ట్‌కట్‌లు"
+  },
+  "changelog135Desc3": {
+    "message": "సెట్టింగ్‌లలో కొత్త వరుస షార్ట్‌కట్‌ల స్థితిని చూపుతుంది, నేరుగా వాటిని అనుకూలీకరించడానికి తీసుకెళ్తుంది."
+  },
+  "changelog135Title4": {
+    "message": "గణాంకాలు, షేరింగ్ మెరుగుదలలు"
+  },
+  "changelog135Desc4": {
+    "message": "గణాంకాలను షేర్ చేయడం ఇప్పుడు మీ భాషలో కనిపిస్తుంది, మెమరీ మొత్తాలు శుభ్రంగా కనిపిస్తాయి, ఉదాహరణకు 2.0 GB బదులు 2 GB."
+  },
+  "changelog135Title5": {
+    "message": "మెరుగుదల, ప్రాప్యత"
+  },
+  "changelog135Desc5": {
+    "message": "స్పష్టమైన చిహ్నాలు, బ్రాండ్-రంగు టూల్‌బార్ బ్యాడ్జ్, స్క్రీన్ రీడర్‌కు మెరుగైన లేబుళ్లు, శుభ్రమైన పాప్‌అప్."
   }
 }

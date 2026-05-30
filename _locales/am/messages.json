@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "ሌሎች የቁልፍ ሰሌዳ አቋራጮች ይፈልጋሉ? እዚህ ያብጇቸው →"
   },
-  "reviewLeaveTitle": {
-    "message": "ፈጣን ግምገማ ይተዉ"
-  },
-  "reviewReportTitle": {
-    "message": "ችግር ሪፖርት ያድርጉ"
-  },
-  "reviewDismissTitle": {
-    "message": "አስወግድ"
-  },
   "statMemberSince": {
     "message": "አባል ከ"
   },
@@ -289,7 +280,7 @@
     "message": "በነጭ ዝርዝር ውስጥ ያሉ ጣቢያዎች የሉም"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com፣ ሙሉ URL ወይም site.com/path/*"
   },
   "suspending": {
     "message": "በማቋረጥ ላይ..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy ይወዳሉ?"
-  },
-  "reviewYes": {
-    "message": "አዎ!"
-  },
-  "reviewNo": {
-    "message": "ብዙም አይደለም"
   },
   "whatsNew": {
     "message": "በ v$VERSION$ ውስጥ አዲስ",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "እንደገና ጠቅ ያድርጉ ለማረጋገጥ መሰረዝ"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ ወደ ነጭ ዝርዝር ታክሏል",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ አስቀድሞ በነጭ ዝርዝር ውስጥ ነው",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "አብጅ"
+  },
+  "keyboardShortcuts": {
+    "message": "የቁልፍ ሰሌዳ አቋራጮች"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ ከነጭ ዝርዝር ተወግዷል",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 የእኔ Drowzy ስታቲስቲክስ"
+  },
+  "shareStatsLineAllTime": {
+    "message": "በአጠቃላይ $COUNT$ ትሮች ተቋርጠዋል",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM ተቆጥቧል (የእድሜ ልክ)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "ከ$DATE$ ጀምሮ ጥቅም ላይ ውሏል",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "ዛሬ $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "ሁሉም ተዘጋጅቷል"
+  },
+  "shortcutsSomeUnset": {
+    "message": "ከ$TOTAL$ ውስጥ $BOUND$ ተዘጋጅቷል",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "ግምገማ ይተዉ"
+  },
+  "reviewMaybeLater": {
+    "message": "ምናልባት በኋላ"
+  },
+  "reviewDontAsk": {
+    "message": "ዳግመኛ አትጠይቅ"
+  },
+  "changelog136Title1": {
+    "message": "አሁን ሁሉም ቋንቋዎች ሙሉ በሙሉ ተተርጉመዋል"
+  },
+  "changelog136Desc1": {
+    "message": "አንዳንድ ጽሑፎች (የነጭ ዝርዝር ማሳወቂያዎች፣ የቁልፍ ሰሌዳ አቋራጮች ረድፍ እና የስታቲስቲክስ ማጋሪያ ጽሑፍ) በሌሎች ቋንቋዎች አሁንም በእንግሊዝኛ ይታዩ ነበር። አሁን ወደ ሁሉም 57 ቋንቋዎች ተተርጉመዋል፣ እንዲሁም እንደ ዓረብኛ እና ዕብራይስጥ ካለ ቀኝ-ወደ-ግራ የሚጻፉ ቋንቋዎች በትክክል ይታያሉ።"
+  },
+  "changelog136Title2": {
+    "message": "ይበልጥ ለስለስ ያለ የግምገማ ጥያቄ"
+  },
+  "changelog136Desc2": {
+    "message": "«Drowzy ያስደስትዎታል?» የሚለው ባነር አሁን Drowzy ለተወሰነ ጊዜ ከተጠቀሙ በኋላ ብቻ ይታያል፣ በመጫን ጊዜ ወይም ወዲያው ከዝማኔ በኋላ ፈጽሞ አይታይም። አዝራሮቹ «ግምገማ ይተዉ»፣ «ምናልባት በኋላ» እና «ዳግመኛ አትጠይቅ» ናቸው። ፈጽሞ የተወሰነ የኮከብ ደረጃ አይጠይቅም ሽልማትም አያቀርብም።"
+  },
+  "changelogReleaseHeading": {
+    "message": "አዲስ ነገር በ"
+  },
+  "changelog135Title1": {
+    "message": "ፈጣን እና ብልጥ ማቋረጥ"
+  },
+  "changelog135Desc1": {
+    "message": "ነባሪው ሰዓት ቆጣሪ አሁን 15 ደቂቃ ነው ስለዚህ የማስታወሻ ቁጠባን ቀድመው ያስተውላሉ፣ ሌሎች ትሮችን ማቋረጥ እና ድግግሞሽ ትሮችን መዝጋት የበለጠ አስተማማኝ ሆኗል።"
+  },
+  "changelog135Title2": {
+    "message": "ነጭ ዝርዝርን ማስተዳደር ቀለለ"
+  },
+  "changelog135Desc2": {
+    "message": "ይበልጥ ግልጽ የማስወገጃ አዝራሮች፣ የማረጋገጫ መልዕክቶች እና ቆጠራ፣ እንዲሁም አሁን ለlocalhost እና ለIP አድራሻዎች ይሰራል።"
+  },
+  "changelog135Title3": {
+    "message": "በቅንብሮች ውስጥ የቁልፍ ሰሌዳ አቋራጮች"
+  },
+  "changelog135Desc3": {
+    "message": "በቅንብሮች ውስጥ አዲስ ረድፍ የአቋራጮችን ሁኔታ ያሳያል እና በቀጥታ ወደ ማበጀቻቸው ይወስዳል።"
+  },
+  "changelog135Title4": {
+    "message": "የስታቲስቲክስ እና የማጋራት ማሻሻያዎች"
+  },
+  "changelog135Desc4": {
+    "message": "ስታቲስቲክስ አጋራ አሁን በቋንቋዎ ይታያል፣ የማስታወሻ ድምሮችም በንጹህ ይታያሉ፣ ለምሳሌ ከ2.0 ጊባ ይልቅ 2 ጊባ።"
+  },
+  "changelog135Title5": {
+    "message": "ማሳመር እና ተደራሽነት"
+  },
+  "changelog135Desc5": {
+    "message": "ይበልጥ ግልጽ አዶዎች፣ ከብራንዱ ቀለም ጋር የሚስማማ የመሣሪያ አሞሌ ባጅ፣ ለስክሪን አንባቢ የተሻሉ መለያዎች እና ይበልጥ የተስተካከለ ብቅ-ባይ።"
   }
 }

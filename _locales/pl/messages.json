@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Chcesz innych skrótów klawiszowych? Dostosuj je tutaj →"
   },
-  "reviewLeaveTitle": {
-    "message": "Zostaw szybką recenzję"
-  },
-  "reviewReportTitle": {
-    "message": "Zgłoś problem"
-  },
-  "reviewDismissTitle": {
-    "message": "Zamknij"
-  },
   "statMemberSince": {
     "message": "Użytkownik od"
   },
@@ -289,7 +280,7 @@
     "message": "Brak stron na białej liście"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, pełny URL lub site.com/path/*"
   },
   "suspending": {
     "message": "Usypiam..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Podoba Ci się Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Tak!"
-  },
-  "reviewNo": {
-    "message": "Nie bardzo"
   },
   "whatsNew": {
     "message": "Co nowego w v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Kliknij ponownie, aby potwierdzić usunięcie"
+  },
+  "addedToWhitelist": {
+    "message": "Dodano $DOMAIN$ do białej listy",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ jest już na białej liście",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Dostosuj"
+  },
+  "keyboardShortcuts": {
+    "message": "Skróty klawiszowe"
+  },
+  "removedFromWhitelist": {
+    "message": "Usunięto $DOMAIN$ z białej listy",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Moje statystyki Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Łącznie uśpiono kart: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ zaoszczędzonej pamięci RAM (łącznie)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Używane od $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ dzisiaj",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Wszystko gotowe"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Ustawiono $BOUND$ z $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Napisz opinię"
+  },
+  "reviewMaybeLater": {
+    "message": "Może później"
+  },
+  "reviewDontAsk": {
+    "message": "Nie pytaj ponownie"
+  },
+  "changelog136Title1": {
+    "message": "Wszystkie języki są teraz w pełni przetłumaczone"
+  },
+  "changelog136Desc1": {
+    "message": "Kilka tekstów (powiadomienia białej listy, wiersz Skróty klawiszowe i tekst Udostępnij statystyki) wciąż wyświetlało się po angielsku w innych językach. Są teraz przetłumaczone na wszystkie 57 języków, a języki pisane od prawej do lewej, takie jak arabski i hebrajski, również wyświetlają się poprawnie."
+  },
+  "changelog136Title2": {
+    "message": "Delikatniejsza prośba o opinię"
+  },
+  "changelog136Desc2": {
+    "message": "Baner „Podoba Ci się Drowzy?” pojawia się teraz dopiero po pewnym czasie korzystania z Drowzy, nigdy przy instalacji ani zaraz po aktualizacji. Przyciski to „Napisz opinię”, „Może później” i „Nie pytaj ponownie”. Nigdy nie prosi o konkretną ocenę w gwiazdkach ani nie oferuje nagrody."
+  },
+  "changelogReleaseHeading": {
+    "message": "Co nowego w"
+  },
+  "changelog135Title1": {
+    "message": "Szybsze, inteligentniejsze usypianie"
+  },
+  "changelog135Desc1": {
+    "message": "Domyślny licznik to teraz 15 minut, więc szybciej zauważysz oszczędność pamięci, a usypianie innych kart i zamykanie duplikatów są bardziej niezawodne."
+  },
+  "changelog135Title2": {
+    "message": "Łatwiejsze zarządzanie białą listą"
+  },
+  "changelog135Desc2": {
+    "message": "Czytelniejsze przyciski usuwania, komunikaty potwierdzenia i licznik, a teraz działa też dla localhost i adresów IP."
+  },
+  "changelog135Title3": {
+    "message": "Skróty klawiszowe w Ustawieniach"
+  },
+  "changelog135Desc3": {
+    "message": "Nowy wiersz w Ustawieniach pokazuje stan skrótów i prowadzi prosto tam, gdzie można je dostosować."
+  },
+  "changelog135Title4": {
+    "message": "Ulepszenia statystyk i udostępniania"
+  },
+  "changelog135Desc4": {
+    "message": "Udostępnianie statystyk pojawia się teraz w Twoim języku, a sumy pamięci wyświetlają się czysto, na przykład 2 GB zamiast 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Dopracowanie i dostępność"
+  },
+  "changelog135Desc5": {
+    "message": "Czytelniejsze ikony, plakietka na pasku w kolorze marki, lepsze etykiety dla czytników ekranu i schludniejszy popup."
   }
 }

@@ -1211,15 +1211,19 @@ body:not(.popup-ready) {
 
 /* review prompt banner */
 .review-prompt {
+  /* Stacked layout: question on its own row, action buttons wrapping below.
+     This keeps the prompt readable in long languages (de, ru, fr, pt) and in
+     RTL without the buttons overflowing the ~360px popup width. */
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
-  padding: 9px 10px 9px 12px;
+  padding: 10px 12px;
   background: var(--color-accent-dim);
   border-bottom: 1px solid var(--border-accent);
   border-left: 2px solid var(--color-accent);
   overflow: hidden;
-  max-height: 50px;
+  max-height: 160px;
   opacity: 1;
   transition: max-height 250ms ease-out, opacity 200ms ease-out, padding 250ms ease-out, border-width 250ms ease-out;
 }
@@ -1234,54 +1238,50 @@ body:not(.popup-ready) {
   padding-top: 0;
   padding-bottom: 0;
   border-bottom-width: 0;
+  /* Block further clicks while sliding away so a second button (e.g. "Don't
+     ask again" right after "Maybe later") can't fire a conflicting action. */
+  pointer-events: none;
 }
 
 .review-prompt-text {
   font-family: var(--font-sans);
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--color-text);
-  white-space: nowrap;
-  flex-shrink: 0;
+  white-space: normal;
+  line-height: 1.35;
 }
 
 .review-prompt-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 4px;
-  margin-left: auto;
+  gap: 6px;
+  width: 100%;
 }
 
 .review-prompt-btn {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 3px 8px;
+  justify-content: center;
+  padding: 5px 10px;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   background: var(--bg-elevated);
   color: var(--color-text-secondary);
   cursor: pointer;
   font-family: var(--font-sans);
-  font-size: 10.5px;
+  font-size: 11px;
   font-weight: 500;
   line-height: 1.4;
   white-space: nowrap;
+  max-width: 100%;
   transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform 60ms ease-out;
   outline: none;
 }
 
-.review-prompt-btn svg {
-  flex-shrink: 0;
-}
-
-.review-prompt-btn:hover {
-  color: var(--color-text);
-  background: var(--bg-overlay);
-}
-
 .review-prompt-btn:active {
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
 .review-prompt-btn:focus-visible {
@@ -1289,48 +1289,31 @@ body:not(.popup-ready) {
   outline-offset: 1px;
 }
 
-.review-prompt-yes:hover {
-  color: var(--color-green);
-  border-color: var(--color-green-border);
-  background: var(--color-green-dim);
+/* Primary action — leave a review. Uses the same gradient + white text as
+   .btn-primary so contrast holds in both light and dark themes. */
+.review-prompt-leave {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: var(--shadow-glow-sm);
 }
 
-.review-prompt-no:hover {
-  color: var(--color-text-tertiary);
+.review-prompt-leave:hover {
+  filter: brightness(1.06);
+}
+
+/* Secondary actions — maybe later / don't ask again. */
+.review-prompt-later:hover,
+.review-prompt-never:hover {
+  color: var(--color-text);
   background: var(--bg-overlay);
   border-color: var(--border-default);
 }
 
-.review-prompt-dismiss {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border: none;
-  border-radius: 3px;
-  background: transparent;
-  color: var(--color-text-tertiary);
-  cursor: pointer;
-  flex-shrink: 0;
-  padding: 0;
-  transition: background var(--transition-fast), color var(--transition-fast);
-  outline: none;
-}
-
-.review-prompt-dismiss:hover {
-  color: var(--color-text);
-  background: var(--bg-overlay);
-}
-
-.review-prompt-dismiss:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 1px;
-}
-
 @keyframes reviewSlideIn {
   from { max-height: 0; opacity: 0; padding-top: 0; padding-bottom: 0; }
-  to { max-height: 50px; opacity: 1; padding-top: 7px; padding-bottom: 7px; }
+  to { max-height: 160px; opacity: 1; padding-top: 10px; padding-bottom: 10px; }
 }
 
 .popup-footer {
@@ -1420,4 +1403,28 @@ body:not(.popup-ready) {
     animation-delay: 0ms !important;
     transition-duration: 1ms !important;
   }
+}
+
+/* ---- Right-to-left languages (ar, he, fa, ur) ----
+   Flexbox and text alignment mirror automatically from the html[dir="rtl"]
+   attribute set in popup.js. These overrides fix the few places that use
+   physical (non-logical) properties so the accent rail and overlapping
+   favicons sit on the correct side. */
+[dir="rtl"] .current-tab {
+  border-left: none;
+  border-right: 2px solid var(--color-accent);
+}
+
+[dir="rtl"] .review-prompt {
+  border-left: none;
+  border-right: 2px solid var(--color-accent);
+}
+
+[dir="rtl"] .session-favicon-stack img {
+  margin-left: 0;
+  margin-right: -4px;
+}
+
+[dir="rtl"] .session-favicon-stack img:first-child {
+  margin-right: 0;
 }

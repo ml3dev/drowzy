@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Искате различни клавишни комбинации? Персонализирайте ги тук →"
   },
-  "reviewLeaveTitle": {
-    "message": "Оставете кратък отзив"
-  },
-  "reviewReportTitle": {
-    "message": "Докладвайте проблем"
-  },
-  "reviewDismissTitle": {
-    "message": "Затваряне"
-  },
   "statMemberSince": {
     "message": "Член от"
   },
@@ -289,7 +280,7 @@
     "message": "Няма сайтове в белия списък"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, пълен URL или site.com/path/*"
   },
   "suspending": {
     "message": "Спиране..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Харесва ли ви Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Да!"
-  },
-  "reviewNo": {
-    "message": "Не особено"
   },
   "whatsNew": {
     "message": "Какво ново в v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Кликнете отново, за да потвърдите изтриването"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ е добавен към белия списък",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ вече е в белия списък",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Персонализиране"
+  },
+  "keyboardShortcuts": {
+    "message": "Клавишни комбинации"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ е премахнат от белия списък",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Моята статистика за Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Общо спрени табове: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ спестена RAM (общо)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Използва се от $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ днес",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Всичко е готово"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Зададени $BOUND$ от $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Оставете отзив"
+  },
+  "reviewMaybeLater": {
+    "message": "Може би по-късно"
+  },
+  "reviewDontAsk": {
+    "message": "Не питай отново"
+  },
+  "changelog136Title1": {
+    "message": "Вече всички езици са преведени напълно"
+  },
+  "changelog136Desc1": {
+    "message": "Няколко текста (известията на белия списък, редът „Клавишни комбинации“ и текстът „Споделяне на статистика“) все още се показваха на английски на други езици. Сега са преведени на всичките 57 езика, а езиците, които се пишат отдясно наляво, като арабски и иврит, също се показват правилно."
+  },
+  "changelog136Title2": {
+    "message": "По-деликатна покана за отзив"
+  },
+  "changelog136Desc2": {
+    "message": "Лентата „Харесвате ли Drowzy?“ вече се показва само след като използвате Drowzy известно време, никога при инсталиране или веднага след актуализация. Бутоните са „Оставете отзив“, „Може би по-късно“ и „Не питай отново“. Никога не иска конкретна оценка и не предлага награда."
+  },
+  "changelogReleaseHeading": {
+    "message": "Какво е новото във"
+  },
+  "changelog135Title1": {
+    "message": "По-бързо и по-умно спиране"
+  },
+  "changelog135Desc1": {
+    "message": "Стандартният таймер вече е 15 минути, за да забележите по-рано спестяването на памет, а спирането на други табове и затварянето на дубликати са по-надеждни."
+  },
+  "changelog135Title2": {
+    "message": "Белият списък се управлява по-лесно"
+  },
+  "changelog135Desc2": {
+    "message": "По-ясни бутони за премахване, съобщения за потвърждение и брояч, а сега работи и за localhost и IP адреси."
+  },
+  "changelog135Title3": {
+    "message": "Клавишни комбинации в Настройки"
+  },
+  "changelog135Desc3": {
+    "message": "Нов ред в Настройки показва състоянието на комбинациите и води директно към персонализирането им."
+  },
+  "changelog135Title4": {
+    "message": "Подобрения в статистиката и споделянето"
+  },
+  "changelog135Desc4": {
+    "message": "Споделяне на статистика вече е на вашия език, а стойностите на паметта се показват чисто, например 2 ГБ вместо 2,0 ГБ."
+  },
+  "changelog135Title5": {
+    "message": "Изглаждане и достъпност"
+  },
+  "changelog135Desc5": {
+    "message": "По-ясни икони, значка в лентата в цвета на марката, по-добри етикети за екранни четци и по-подреден изскачащ прозорец."
   }
 }

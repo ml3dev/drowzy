@@ -131,6 +131,7 @@
       line-height: 1.6;
     }
     .tip + .tip { margin-top: 8px; }
+    [dir="rtl"] .tips { border-left: none; border-right: 2px solid var(--color-accent); }
     .tip strong { color: var(--color-text); }
     .tip a {
       color: var(--color-accent);
@@ -203,13 +204,13 @@
         <span class="feat-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </span>
-        <span data-i18n-html="featureAutoSuspend"><strong>Tabs idle for 30 minutes</strong> are automatically suspended</span>
+        <span data-i18n-html="featureAutoSuspend"><strong>Tabs idle for 15 minutes</strong> are automatically suspended</span>
       </li>
       <li>
         <span class="feat-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
         </span>
-        <span data-i18n-html="featureZeroRam"><strong>Suspended tabs use zero RAM</strong> but stay in your tab bar</span>
+        <span data-i18n-html="featureZeroRam"><strong>Suspended tabs release most of their memory</strong> but stay in your tab bar</span>
       </li>
       <li>
         <span class="feat-icon">
@@ -236,7 +237,7 @@
 
     <div class="tips">
       <p class="tip" data-i18n-html="onboardingPinTip"><strong>Tip:</strong> Click the puzzle icon in your Chrome toolbar to pin Drowzy for one-click access.</p>
-      <p class="tip" data-i18n-html="onboardingTimerTip"><strong>Suspending tabs you still want?</strong> Open Drowzy → Settings to bump the 30-minute timer up, or add the site to your whitelist with one click.</p>
+      <p class="tip" data-i18n-html="onboardingTimerTip"><strong>Suspending tabs you still want?</strong> Open Drowzy → Settings to bump the 15-minute timer up, or add the site to your whitelist with one click.</p>
       <p class="tip" data-i18n-html="onboardingFormsTip"><strong>Filling out a form?</strong> Enable "Protect tabs with forms" in Settings to keep tabs with unsaved input from being suspended.</p>
     </div>
 

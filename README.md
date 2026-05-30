@@ -71,7 +71,7 @@ On top of that, Drowzy is fully open source, collects zero data, and runs entire
 - **Suspend indicator** -- optional `[zzz]` prefix on suspended tab titles
 - **Suspend warning** -- brief notification before a tab is auto-suspended
 - **Stats dashboard** -- track how many tabs you've suspended and how much memory you've saved
-- **Review prompt** -- a gentle, dismissable nudge after 50+ suspensions (never annoying, never repeated)
+- **Review prompt** -- a gentle, dismissable nudge that only appears after about a week of real use, with "Maybe later" and "Don't ask again" options (never on install, never pushy)
 
 ## How It Works
 

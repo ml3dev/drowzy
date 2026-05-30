@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Gusto ng ibang keyboard shortcut? I-customize dito →"
   },
-  "reviewLeaveTitle": {
-    "message": "Mag-iwan ng mabilis na review"
-  },
-  "reviewReportTitle": {
-    "message": "Mag-ulat ng isyu"
-  },
-  "reviewDismissTitle": {
-    "message": "I-dismiss"
-  },
   "statMemberSince": {
     "message": "Miyembro mula"
   },
@@ -289,7 +280,7 @@
     "message": "Walang naka-whitelist na site"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, buong URL, o site.com/path/*"
   },
   "suspending": {
     "message": "Nag-su-suspend..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Nae-enjoy mo ba ang Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Oo!"
-  },
-  "reviewNo": {
-    "message": "Hindi naman"
   },
   "whatsNew": {
     "message": "Ano ang bago sa v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "I-click muli upang kumpirmahin ang pagtanggal"
+  },
+  "addedToWhitelist": {
+    "message": "Idinagdag ang $DOMAIN$ sa whitelist",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "Nasa whitelist na ang $DOMAIN$",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "I-customize"
+  },
+  "keyboardShortcuts": {
+    "message": "Mga keyboard shortcut"
+  },
+  "removedFromWhitelist": {
+    "message": "Inalis ang $DOMAIN$ sa whitelist",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Aking Drowzy Stats"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ tab ang na-suspend sa kabuuan",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM ang natipid (lifetime)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Ginagamit simula $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ ngayon",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Handa na lahat"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ sa $TOTAL$ ang nakatakda",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Mag-iwan ng review"
+  },
+  "reviewMaybeLater": {
+    "message": "Sa susunod na lang"
+  },
+  "reviewDontAsk": {
+    "message": "Huwag nang magtanong"
+  },
+  "changelog136Title1": {
+    "message": "Ganap nang naisalin ang bawat wika"
+  },
+  "changelog136Desc1": {
+    "message": "May ilang teksto (mga abiso ng whitelist, ang hilera ng Mga keyboard shortcut, at ang teksto ng Pagbabahagi ng stats) na nananatiling Ingles pa rin sa ibang wika. Naisalin na ang mga ito sa lahat ng 57 wika, at tama na ring lumalabas ang mga wikang isinusulat mula kanan pakaliwa tulad ng Arabic at Hebrew."
+  },
+  "changelog136Title2": {
+    "message": "Mas magaan na paghingi ng review"
+  },
+  "changelog136Desc2": {
+    "message": "Ang banner na \"Nagustuhan ang Drowzy?\" ay lalabas na lamang pagkatapos mong magamit ang Drowzy nang ilang panahon, hindi kailanman sa pag-install o kaagad pagkatapos ng update. Ang mga button ay \"Mag-iwan ng review\", \"Sa susunod na lang\", at \"Huwag nang magtanong\". Hindi ito kailanman humihingi ng partikular na star rating at hindi nag-aalok ng gantimpala."
+  },
+  "changelogReleaseHeading": {
+    "message": "Bago sa"
+  },
+  "changelog135Title1": {
+    "message": "Mas mabilis, mas matalinong pag-suspend"
+  },
+  "changelog135Desc1": {
+    "message": "15 minuto na ang default timer para mas maaga mong mapansin ang memory savings, at mas maaasahan na ang pag-suspend ng ibang tab at pagsara ng mga duplicate."
+  },
+  "changelog135Title2": {
+    "message": "Mas madaling pamahalaan ang whitelist"
+  },
+  "changelog135Desc2": {
+    "message": "Mas malinaw na remove button, mga mensahe ng kumpirmasyon, at bilang, at gumagana na ito ngayon para sa localhost at mga IP address."
+  },
+  "changelog135Title3": {
+    "message": "Keyboard shortcut sa Settings"
+  },
+  "changelog135Desc3": {
+    "message": "May bagong row sa Settings na nagpapakita ng status ng shortcut at dumiretso kung saan mo ito ic-customize."
+  },
+  "changelog135Title4": {
+    "message": "Pagpapahusay sa stats at pagbabahagi"
+  },
+  "changelog135Desc4": {
+    "message": "Lumalabas na sa iyong wika ang Share Stats, at malinis na ipinapakita ang kabuuang memory, halimbawa 2 GB sa halip na 2.0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Pagpapakinis at accessibility"
+  },
+  "changelog135Desc5": {
+    "message": "Mas malinaw na mga icon, toolbar badge na tugma sa brand, mas mahusay na label para sa screen reader, at mas malinis na popup."
   }
 }

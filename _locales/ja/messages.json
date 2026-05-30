@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "別のキーボードショートカットがいいですか？ こちらでカスタマイズ →"
   },
-  "reviewLeaveTitle": {
-    "message": "簡単なレビューを残す"
-  },
-  "reviewReportTitle": {
-    "message": "問題を報告"
-  },
-  "reviewDismissTitle": {
-    "message": "閉じる"
-  },
   "statMemberSince": {
     "message": "利用開始日"
   },
@@ -289,7 +280,7 @@
     "message": "ホワイトリストに登録されたサイトはありません"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com、完全な URL、または site.com/path/*"
   },
   "suspending": {
     "message": "サスペンド中..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzyは気に入りましたか？"
-  },
-  "reviewYes": {
-    "message": "はい！"
-  },
-  "reviewNo": {
-    "message": "いいえ"
   },
   "whatsNew": {
     "message": "v$VERSION$の新機能",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "もう一度クリックして削除を確認"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ をホワイトリストに追加しました",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ はすでにホワイトリストにあります",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "カスタマイズ"
+  },
+  "keyboardShortcuts": {
+    "message": "キーボードショートカット"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ をホワイトリストから削除しました",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 私の Drowzy 統計"
+  },
+  "shareStatsLineAllTime": {
+    "message": "累計 $COUNT$ 個のタブをサスペンド",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ の RAM を節約（累計）",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$ から使用中",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "本日 $COUNT$ 個",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "すべて設定済み"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$ 個中 $BOUND$ 個を設定",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "レビューを書く"
+  },
+  "reviewMaybeLater": {
+    "message": "後で"
+  },
+  "reviewDontAsk": {
+    "message": "今後表示しない"
+  },
+  "changelog136Title1": {
+    "message": "すべての言語が完全に翻訳されました"
+  },
+  "changelog136Desc1": {
+    "message": "一部の文字列（ホワイトリストの通知、キーボードショートカットの行、統計を共有のテキスト）は、他の言語でも英語のまま表示されていました。これらは57言語すべてに翻訳され、アラビア語やヘブライ語のような右から左へ書く言語も正しく表示されるようになりました。"
+  },
+  "changelog136Title2": {
+    "message": "より控えめなレビュー依頼"
+  },
+  "changelog136Desc2": {
+    "message": "「Drowzy は気に入りましたか?」のバナーは、Drowzy をしばらく使った後にのみ表示されるようになり、インストール時や更新直後には表示されません。ボタンは「レビューを書く」「後で」「今後表示しない」です。特定の星評価を求めることはなく、報酬を提供することもありません。"
+  },
+  "changelogReleaseHeading": {
+    "message": "の新機能"
+  },
+  "changelog135Title1": {
+    "message": "より速く、より賢いサスペンド"
+  },
+  "changelog135Desc1": {
+    "message": "既定のタイマーが15分になり、メモリ節約をより早く実感できます。また、他のタブのサスペンドや重複タブを閉じる動作がより安定しました。"
+  },
+  "changelog135Title2": {
+    "message": "ホワイトリストの管理がより簡単に"
+  },
+  "changelog135Desc2": {
+    "message": "削除ボタンがわかりやすくなり、確認メッセージと件数が追加され、localhost や IP アドレスにも対応しました。"
+  },
+  "changelog135Title3": {
+    "message": "設定にキーボードショートカット"
+  },
+  "changelog135Desc3": {
+    "message": "設定の新しい行にショートカットの状態が表示され、カスタマイズ画面へ直接移動できます。"
+  },
+  "changelog135Title4": {
+    "message": "統計と共有の改善"
+  },
+  "changelog135Desc4": {
+    "message": "統計を共有があなたの言語で表示され、メモリの合計が見やすくなりました(例: 2.0 GB ではなく 2 GB)。"
+  },
+  "changelog135Title5": {
+    "message": "仕上げとアクセシビリティ"
+  },
+  "changelog135Desc5": {
+    "message": "アイコンがわかりやすくなり、ツールバーのバッジがブランドカラーに、スクリーンリーダー用ラベルが改善し、ポップアップがすっきりしました。"
   }
 }

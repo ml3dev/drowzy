@@ -2,6 +2,34 @@
 
 All notable changes to Drowzy are documented here.
 
+## [1.3.6] -- 2026-05-29
+
+Localization and polish release. No new permissions; the suspension pipeline is untouched (the only `background.js` change is rebuilding the context menus on startup).
+
+### Fixed
+- **`whitelistPlaceholder` was untranslated — and stale — in all 56 non-English locales.** Every locale showed the old English `example.com or site.com/path/*` (also missing the `full URL` hint that was added to `en`). Now localized across all 57; the `example.com` / `site.com/path/*` example tokens stay literal, only the connectors are translated.
+- **Onboarding inline fallbacks still read "30 minutes" and "zero RAM"** after 1.3.5 changed the default timer and reworded the feature. Synced the static HTML to the current `en` values (`featureAutoSuspend`, `featureZeroRam`, `onboardingTimerTip`) so a failed i18n pass no longer shows stale copy.
+- **Context menus didn't follow a Chrome UI-language change.** They're created once at install in the then-current language; `createContextMenus()` (which `removeAll`s then recreates and re-reads `chrome.i18n`) now also runs in `onStartup`, so a language change applies on the next launch instead of staying stale.
+- **`privacyFooterText` left "open source" in Latin script mid-sentence in `ru` / `uk`** while the other Cyrillic locales had translated it. Now uses native terms (`открытый исходный код` / `відкритий вихідний код`).
+
+### Changed
+- **Review prompt reworked end to end** (`popup.js`, shared by popup + side panel). It now appears only once the install is at least 7 days old (`drowzy_stats.installDate`), at least 50 tabs have been suspended, and the UI has been opened before (`reviewPromptOpenCount` >= 2) — so never on install, never on first open, never right after an update. Buttons are now **Leave a review** / **Maybe later** / **Don't ask again**: "Maybe later" snoozes for 14 days (`reviewPromptSnoozedUntil`), while "Leave a review" and "Don't ask again" both set `reviewPromptCompleted`. No star-rating ask, no reward. A one-time migration folds the old `reviewPromptDismissCount` / `reviewPromptLastDismissed` state into the new model so prior dismissers are never re-prompted. New keys `reviewLeave`, `reviewMaybeLater`, `reviewDontAsk`; removed the now-dead `reviewYes` / `reviewNo` / `reviewLeaveTitle` / `reviewReportTitle` / `reviewDismissTitle` from all locales.
+
+### Added
+- **The 12 keys that shipped untranslated in 1.3.4/1.3.5 are now translated in all 57 locales** — they had been falling back to English everywhere: the whitelist toasts (`addedToWhitelist`, `removedFromWhitelist`, `alreadyWhitelisted`), the Keyboard Shortcuts row (`keyboardShortcuts`, `customizeShortcuts`, `shortcutsAllSet`, `shortcutsSomeUnset`), and the Share Stats text (`shareStatsHeader`, `shareStatsLineAllTime` / `Today` / `Ram` / `Since`).
+- **Right-to-left layout.** `popup.js`, `onboarding.js`, and `changelog.js` set `document.documentElement.dir` for `ar` / `he` / `fa` / `ur`, and CSS mirrors the accent rail and the overlapping favicon stack. Popup, side panel, onboarding, and changelog now render correctly right-to-left.
+- **Uninstall feedback page is now localized.** It's a standalone GitHub Pages page with no `chrome.i18n`, so it self-detects `navigator.language` (with region handling for `pt-BR`, `zh-CN`/`zh-TW`, `es-419`, `en-GB`, `he`) and translates the visible text inline, falling back to English. The submitted form `value`s stay English so the feedback dashboard stays consistent across languages.
+- **In-app "What's New" page localized** — the section headings (`changelogReleaseHeading`), the 1.3.6 entries, and a condensed set of 1.3.5 highlights. The full technical history stays in this file.
+
+### Polish
+- Review prompt stacks the question above wrapped buttons so long languages (German, Russian, French, Portuguese) don't overflow or clip the banner; "Leave a review" uses `--gradient-primary` for readable contrast in both light and dark themes.
+- 11 less-common languages (Amharic, Bengali, Gujarati, Kannada, Malayalam, Marathi, Odia, Tamil, Telugu, Filipino, Swahili) use best-effort machine translations for the new strings and are flagged for a future native-speaker pass.
+
+### Audit
+- **All 57 locale files validated:** JSON validity, key parity against `en` (200 keys, no missing or extra keys in any locale), placeholder integrity (every `$DOMAIN$` / `$COUNT$` / `$RAM$` / `$DATE$` / `$BOUND$` / `$TOTAL$` token present), and no empty values.
+- **No English left behind:** every `data-i18n*` attribute and `chrome.i18n.getMessage` / `t(...)` call resolves to a real key, and a script-integrity scan of all keys across the non-Latin locales confirmed correct scripts, no mojibake, and no untranslated-English values.
+- **Changelog auto-open** still fires only on major version bumps, so updating to 1.3.6 does not pop the What's New tab.
+
 ## [1.3.5] -- 2026-05-15
 
 ### Fixed

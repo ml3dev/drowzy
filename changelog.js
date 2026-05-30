@@ -1,5 +1,7 @@
 try {
-  document.documentElement.lang = chrome.i18n.getUILanguage();
+  var uiLang = chrome.i18n.getUILanguage();
+  document.documentElement.lang = uiLang;
+  document.documentElement.dir = ['ar', 'he', 'iw', 'fa', 'ur'].indexOf((uiLang || '').toLowerCase().split('-')[0]) !== -1 ? 'rtl' : 'ltr';
   document.querySelectorAll('[data-i18n]').forEach(function(el) {
     var msg = chrome.i18n.getMessage(el.getAttribute('data-i18n'));
     if (msg) el.textContent = msg;

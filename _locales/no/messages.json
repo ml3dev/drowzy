@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Vil du ha andre tastatursnarveier? Tilpass dem her →"
   },
-  "reviewLeaveTitle": {
-    "message": "Skriv en rask anmeldelse"
-  },
-  "reviewReportTitle": {
-    "message": "Rapporter et problem"
-  },
-  "reviewDismissTitle": {
-    "message": "Lukk"
-  },
   "statMemberSince": {
     "message": "Medlem siden"
   },
@@ -289,7 +280,7 @@
     "message": "Ingen nettsteder hvitelistet"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, full URL eller site.com/path/*"
   },
   "suspending": {
     "message": "Suspenderer..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Liker du Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ja!"
-  },
-  "reviewNo": {
-    "message": "Ikke egentlig"
   },
   "whatsNew": {
     "message": "Hva er nytt i v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Klikk igjen for å bekrefte sletting"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ lagt til i hvitelisten",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ er allerede i hvitelisten",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Tilpass"
+  },
+  "keyboardShortcuts": {
+    "message": "Hurtigtaster"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ fjernet fra hvitelisten",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Min Drowzy-statistikk"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ faner suspendert totalt",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM spart (totalt)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "I bruk siden $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ i dag",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Alt klart"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ av $TOTAL$ angitt",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Legg igjen en vurdering"
+  },
+  "reviewMaybeLater": {
+    "message": "Kanskje senere"
+  },
+  "reviewDontAsk": {
+    "message": "Ikke spør igjen"
+  },
+  "changelog136Title1": {
+    "message": "Alle språk er nå fullstendig oversatt"
+  },
+  "changelog136Desc1": {
+    "message": "Noen tekster (hvitelistevarslene, raden Hurtigtaster og teksten for Del statistikk) ble fortsatt vist på engelsk på andre språk. De er nå oversatt til alle 57 språk, og språk som skrives fra høyre til venstre som arabisk og hebraisk vises også riktig."
+  },
+  "changelog136Title2": {
+    "message": "En mer diskret vurderingsforespørsel"
+  },
+  "changelog136Desc2": {
+    "message": "Banneret \"Liker du Drowzy?\" vises nå først etter at du har brukt Drowzy en stund, aldri ved installasjon eller rett etter en oppdatering. Knappene er \"Legg igjen en vurdering\", \"Kanskje senere\" og \"Ikke spør igjen\". Den ber aldri om en bestemt vurdering og tilbyr aldri en belønning."
+  },
+  "changelogReleaseHeading": {
+    "message": "Nytt i"
+  },
+  "changelog135Title1": {
+    "message": "Raskere, smartere suspendering"
+  },
+  "changelog135Desc1": {
+    "message": "Standardtidtakeren er nå 15 minutter så du merker minnebesparelsen tidligere, og å suspendere andre faner og lukke duplikater er mer pålitelig."
+  },
+  "changelog135Title2": {
+    "message": "Hvitelisten er enklere å håndtere"
+  },
+  "changelog135Desc2": {
+    "message": "Tydeligere fjern-knapper, bekreftelsesmeldinger og en teller, og den fungerer nå for localhost og IP-adresser."
+  },
+  "changelog135Title3": {
+    "message": "Hurtigtaster i Innstillinger"
+  },
+  "changelog135Desc3": {
+    "message": "En ny rad i Innstillinger viser statusen for hurtigtastene og lenker rett dit du tilpasser dem."
+  },
+  "changelog135Title4": {
+    "message": "Forbedringer av statistikk og deling"
+  },
+  "changelog135Desc4": {
+    "message": "Del statistikk vises nå på språket ditt, og minnesummer vises ryddig, for eksempel 2 GB i stedet for 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Finpuss og tilgjengelighet"
+  },
+  "changelog135Desc5": {
+    "message": "Tydeligere ikoner, et verktøylinjemerke i merkevarefarge, bedre etiketter for skjermlesere og et ryddigere popup."
   }
 }

@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Желите друге пречице на тастатури? Прилагодите их овде →"
   },
-  "reviewLeaveTitle": {
-    "message": "Оставите брзу рецензију"
-  },
-  "reviewReportTitle": {
-    "message": "Пријавите проблем"
-  },
-  "reviewDismissTitle": {
-    "message": "Затвори"
-  },
   "statMemberSince": {
     "message": "Члан од"
   },
@@ -289,7 +280,7 @@
     "message": "Нема сајтова на белој листи"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, пун URL или site.com/path/*"
   },
   "suspending": {
     "message": "Суспендовање..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Свиђа ли вам се Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Да!"
-  },
-  "reviewNo": {
-    "message": "Не баш"
   },
   "whatsNew": {
     "message": "Шта је ново у v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Кликните поново за потврду брисања"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ додат на белу листу",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ је већ на белој листи",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Прилагоди"
+  },
+  "keyboardShortcuts": {
+    "message": "Пречице на тастатури"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ уклоњен са беле листе",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Моја Drowzy статистика"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Укупно суспендованих картица: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ уштеђене RAM меморије (укупно)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "У употреби од $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ данас",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Све је спремно"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Подешено $BOUND$ од $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Оставите рецензију"
+  },
+  "reviewMaybeLater": {
+    "message": "Можда касније"
+  },
+  "reviewDontAsk": {
+    "message": "Не питај поново"
+  },
+  "changelog136Title1": {
+    "message": "Сада су сви језици потпуно преведени"
+  },
+  "changelog136Desc1": {
+    "message": "Неки текстови (обавештења беле листе, ред „Пречице на тастатури“ и текст „Подели статистику“) и даље су се на другим језицима приказивали на енглеском. Сада су преведени на свих 57 језика, а језици који се пишу здесна налево попут арапског и хебрејског такође се исправно приказују."
+  },
+  "changelog136Title2": {
+    "message": "Дискретнији захтев за рецензију"
+  },
+  "changelog136Desc2": {
+    "message": "Трака „Свиђа ли вам се Drowzy?“ сада се приказује тек након што неко време користите Drowzy, никада при инсталацији ни одмах након ажурирања. Дугмад су „Оставите рецензију“, „Можда касније“ и „Не питај поново“. Никада не тражи одређену оцену нити нуди награду."
+  },
+  "changelogReleaseHeading": {
+    "message": "Шта је ново у"
+  },
+  "changelog135Title1": {
+    "message": "Брже и паметније суспендовање"
+  },
+  "changelog135Desc1": {
+    "message": "Подразумевани тајмер је сада 15 минута да раније приметите уштеду меморије, а суспендовање других картица и затварање дупликата су поузданији."
+  },
+  "changelog135Title2": {
+    "message": "Лакше управљање белом листом"
+  },
+  "changelog135Desc2": {
+    "message": "Јаснија дугмад за уклањање, поруке потврде и бројач, а сада ради и за localhost и IP адресе."
+  },
+  "changelog135Title3": {
+    "message": "Пречице на тастатури у Подешавањима"
+  },
+  "changelog135Desc3": {
+    "message": "Нови ред у Подешавањима приказује статус пречица и води директно до њиховог прилагођавања."
+  },
+  "changelog135Title4": {
+    "message": "Побољшања статистике и дељења"
+  },
+  "changelog135Desc4": {
+    "message": "Дељење статистике се сада приказује на вашем језику, а укупне вредности меморије приказују се уредно, на пример 2 GB уместо 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Дорада и приступачност"
+  },
+  "changelog135Desc5": {
+    "message": "Јасније иконе, ознака на траци у боји бренда, боље ознаке за читаче екрана и уреднији попап."
   }
 }

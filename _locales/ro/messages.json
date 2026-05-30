@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Doriți alte comenzi rapide de la tastatură? Personalizați-le aici →"
   },
-  "reviewLeaveTitle": {
-    "message": "Lăsați o recenzie rapidă"
-  },
-  "reviewReportTitle": {
-    "message": "Raportați o problemă"
-  },
-  "reviewDismissTitle": {
-    "message": "Închide"
-  },
   "statMemberSince": {
     "message": "Membru din"
   },
@@ -289,7 +280,7 @@
     "message": "Niciun site pe lista albă"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, URL complet sau site.com/path/*"
   },
   "suspending": {
     "message": "Se suspendă..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Îți place Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Da!"
-  },
-  "reviewNo": {
-    "message": "Nu prea"
   },
   "whatsNew": {
     "message": "Ce e nou în v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Faceți clic din nou pentru a confirma ștergerea"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ adăugat pe lista albă",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ este deja pe lista albă",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Personalizează"
+  },
+  "keyboardShortcuts": {
+    "message": "Comenzi rapide de la tastatură"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ eliminat de pe lista albă",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Statisticile mele Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ file suspendate în total",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM economisit (total)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "În uz din $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ astăzi",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Totul este gata"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ din $TOTAL$ setate",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Lasă o recenzie"
+  },
+  "reviewMaybeLater": {
+    "message": "Poate mai târziu"
+  },
+  "reviewDontAsk": {
+    "message": "Nu mai întreba"
+  },
+  "changelog136Title1": {
+    "message": "Acum toate limbile sunt traduse complet"
+  },
+  "changelog136Desc1": {
+    "message": "Câteva texte (notificările listei albe, rândul Comenzi rapide de la tastatură și textul Distribuie statisticile) apăreau încă în engleză în alte limbi. Acum sunt traduse în toate cele 57 de limbi, iar limbile scrise de la dreapta la stânga precum araba și ebraica se afișează de asemenea corect."
+  },
+  "changelog136Title2": {
+    "message": "O solicitare de recenzie mai discretă"
+  },
+  "changelog136Desc2": {
+    "message": "Bannerul „Îți place Drowzy?” apare acum doar după ce folosești Drowzy o vreme, niciodată la instalare sau imediat după o actualizare. Butoanele sunt „Lasă o recenzie”, „Poate mai târziu” și „Nu mai întreba”. Nu cere niciodată un anumit număr de stele și nu oferă recompense."
+  },
+  "changelogReleaseHeading": {
+    "message": "Noutăți în"
+  },
+  "changelog135Title1": {
+    "message": "Suspendare mai rapidă și mai inteligentă"
+  },
+  "changelog135Desc1": {
+    "message": "Cronometrul implicit este acum de 15 minute ca să observi mai devreme economia de memorie, iar suspendarea celorlalte file și închiderea duplicatelor sunt mai fiabile."
+  },
+  "changelog135Title2": {
+    "message": "Lista albă e mai ușor de gestionat"
+  },
+  "changelog135Desc2": {
+    "message": "Butoane de eliminare mai clare, mesaje de confirmare și un contor, iar acum funcționează pentru localhost și adrese IP."
+  },
+  "changelog135Title3": {
+    "message": "Comenzi rapide de tastatură în Setări"
+  },
+  "changelog135Desc3": {
+    "message": "Un rând nou în Setări arată starea comenzilor rapide și duce direct la personalizarea lor."
+  },
+  "changelog135Title4": {
+    "message": "Îmbunătățiri la statistici și partajare"
+  },
+  "changelog135Desc4": {
+    "message": "Partajarea statisticilor apare acum în limba ta, iar totalurile de memorie se afișează curat, de exemplu 2 GB în loc de 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Finisaje și accesibilitate"
+  },
+  "changelog135Desc5": {
+    "message": "Pictograme mai clare, o insignă de bară în culoarea mărcii, etichete mai bune pentru cititoare de ecran și un popup mai ordonat."
   }
 }

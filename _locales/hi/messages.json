@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "अलग कीबोर्ड शॉर्टकट चाहिए? यहाँ अनुकूलित करें →"
   },
-  "reviewLeaveTitle": {
-    "message": "एक त्वरित समीक्षा छोड़ें"
-  },
-  "reviewReportTitle": {
-    "message": "समस्या की रिपोर्ट करें"
-  },
-  "reviewDismissTitle": {
-    "message": "बंद करें"
-  },
   "statMemberSince": {
     "message": "सदस्य तब से"
   },
@@ -289,7 +280,7 @@
     "message": "कोई साइट श्वेतसूचीबद्ध नहीं"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, पूरा URL या site.com/path/*"
   },
   "suspending": {
     "message": "सस्पेंड हो रहा है..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy पसंद आ रहा है?"
-  },
-  "reviewYes": {
-    "message": "हाँ!"
-  },
-  "reviewNo": {
-    "message": "नहीं"
   },
   "whatsNew": {
     "message": "v$VERSION$ में नया",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "हटाने की पुष्टि के लिए फिर से क्लिक करें"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ श्वेतसूची में जोड़ा गया",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ पहले से श्वेतसूची में है",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "कस्टमाइज़ करें"
+  },
+  "keyboardShortcuts": {
+    "message": "कीबोर्ड शॉर्टकट"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ श्वेतसूची से हटाया गया",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 मेरे Drowzy आँकड़े"
+  },
+  "shareStatsLineAllTime": {
+    "message": "कुल $COUNT$ टैब सस्पेंड किए गए",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM बचाई गई (कुल)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$ से उपयोग में",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "आज $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "सब सेट है"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$ में से $BOUND$ सेट",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "समीक्षा लिखें"
+  },
+  "reviewMaybeLater": {
+    "message": "शायद बाद में"
+  },
+  "reviewDontAsk": {
+    "message": "दोबारा न पूछें"
+  },
+  "changelog136Title1": {
+    "message": "अब हर भाषा पूरी तरह अनूदित है"
+  },
+  "changelog136Desc1": {
+    "message": "कुछ टेक्स्ट (श्वेतसूची सूचनाएँ, कीबोर्ड शॉर्टकट पंक्ति और आँकड़े साझा करने वाला टेक्स्ट) अन्य भाषाओं में अब भी अंग्रेज़ी में दिख रहे थे। अब वे सभी 57 भाषाओं में अनूदित हैं, और अरबी व हिब्रू जैसी दाएँ-से-बाएँ लिखी जाने वाली भाषाएँ भी सही ढंग से दिखती हैं।"
+  },
+  "changelog136Title2": {
+    "message": "अधिक विनम्र समीक्षा अनुरोध"
+  },
+  "changelog136Desc2": {
+    "message": "\"Drowzy पसंद आ रहा है?\" बैनर अब तभी दिखता है जब आप Drowzy को कुछ समय इस्तेमाल कर लें, इंस्टॉल के समय या अपडेट के तुरंत बाद कभी नहीं। बटन हैं \"समीक्षा लिखें\", \"शायद बाद में\" और \"दोबारा न पूछें\"। यह कभी किसी खास स्टार रेटिंग के लिए नहीं कहता और कोई इनाम नहीं देता।"
+  },
+  "changelogReleaseHeading": {
+    "message": "में नया क्या है"
+  },
+  "changelog135Title1": {
+    "message": "तेज़ और स्मार्ट सस्पेंडिंग"
+  },
+  "changelog135Desc1": {
+    "message": "डिफ़ॉल्ट टाइमर अब 15 मिनट है ताकि आप मेमोरी की बचत जल्दी महसूस करें, और अन्य टैब सस्पेंड करना तथा डुप्लिकेट बंद करना अधिक भरोसेमंद हो गए हैं।"
+  },
+  "changelog135Title2": {
+    "message": "श्वेतसूची प्रबंधित करना आसान"
+  },
+  "changelog135Desc2": {
+    "message": "साफ़ हटाने वाले बटन, पुष्टि संदेश और एक गिनती, और अब यह localhost व IP पतों के लिए भी काम करता है।"
+  },
+  "changelog135Title3": {
+    "message": "सेटिंग्स में कीबोर्ड शॉर्टकट"
+  },
+  "changelog135Desc3": {
+    "message": "सेटिंग्स में एक नई पंक्ति शॉर्टकट की स्थिति दिखाती है और सीधे उन्हें कस्टमाइज़ करने ले जाती है।"
+  },
+  "changelog135Title4": {
+    "message": "आँकड़े और साझा करने में सुधार"
+  },
+  "changelog135Desc4": {
+    "message": "आँकड़े साझा करना अब आपकी भाषा में दिखता है, और मेमोरी कुल साफ़-सुथरे दिखते हैं, जैसे 2.0 GB के बजाय 2 GB।"
+  },
+  "changelog135Title5": {
+    "message": "परिष्करण और सुलभता"
+  },
+  "changelog135Desc5": {
+    "message": "साफ़ आइकन, ब्रांड-रंग वाला टूलबार बैज, स्क्रीन रीडर के लिए बेहतर लेबल, और साफ़-सुथरा पॉपअप।"
   }
 }

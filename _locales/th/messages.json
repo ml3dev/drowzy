@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "ต้องการแป้นพิมพ์ลัดที่แตกต่าง? ปรับแต่งที่นี่ →"
   },
-  "reviewLeaveTitle": {
-    "message": "เขียนรีวิวสั้นๆ"
-  },
-  "reviewReportTitle": {
-    "message": "รายงานปัญหา"
-  },
-  "reviewDismissTitle": {
-    "message": "ปิด"
-  },
   "statMemberSince": {
     "message": "เป็นสมาชิกตั้งแต่"
   },
@@ -289,7 +280,7 @@
     "message": "ไม่มีเว็บไซต์ในรายการที่อนุญาต"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, URL เต็ม หรือ site.com/path/*"
   },
   "suspending": {
     "message": "กำลังระงับ..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "ชอบ Drowzy ไหม?"
-  },
-  "reviewYes": {
-    "message": "ใช่!"
-  },
-  "reviewNo": {
-    "message": "ไม่เชิง"
   },
   "whatsNew": {
     "message": "มีอะไรใหม่ใน v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "คลิกอีกครั้งเพื่อยืนยันการลบ"
+  },
+  "addedToWhitelist": {
+    "message": "เพิ่ม $DOMAIN$ ลงในรายการที่อนุญาตแล้ว",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ อยู่ในรายการที่อนุญาตอยู่แล้ว",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "ปรับแต่ง"
+  },
+  "keyboardShortcuts": {
+    "message": "แป้นพิมพ์ลัด"
+  },
+  "removedFromWhitelist": {
+    "message": "นำ $DOMAIN$ ออกจากรายการที่อนุญาตแล้ว",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 สถิติ Drowzy ของฉัน"
+  },
+  "shareStatsLineAllTime": {
+    "message": "ระงับแท็บทั้งหมด $COUNT$ แท็บ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "ประหยัด RAM ได้ $RAM$ (ตลอดอายุการใช้งาน)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "ใช้งานตั้งแต่ $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ วันนี้",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "พร้อมทั้งหมด"
+  },
+  "shortcutsSomeUnset": {
+    "message": "ตั้งค่าแล้ว $BOUND$ จาก $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "เขียนรีวิว"
+  },
+  "reviewMaybeLater": {
+    "message": "ไว้ทีหลัง"
+  },
+  "reviewDontAsk": {
+    "message": "ไม่ต้องถามอีก"
+  },
+  "changelog136Title1": {
+    "message": "ตอนนี้ทุกภาษาได้รับการแปลครบถ้วนแล้ว"
+  },
+  "changelog136Desc1": {
+    "message": "ข้อความบางส่วน (การแจ้งเตือนรายการที่อนุญาต แถวแป้นพิมพ์ลัด และข้อความแชร์สถิติ) ยังคงแสดงเป็นภาษาอังกฤษในภาษาอื่น ตอนนี้ได้รับการแปลครบทั้ง 57 ภาษาแล้ว และภาษาที่เขียนจากขวาไปซ้ายอย่างภาษาอาหรับและฮีบรูก็แสดงผลได้อย่างถูกต้องเช่นกัน"
+  },
+  "changelog136Title2": {
+    "message": "คำขอรีวิวที่นุ่มนวลขึ้น"
+  },
+  "changelog136Desc2": {
+    "message": "แบนเนอร์ \"ชอบ Drowzy ไหม?\" ตอนนี้จะปรากฏหลังจากที่คุณใช้ Drowzy มาสักระยะเท่านั้น ไม่ปรากฏตอนติดตั้งหรือทันทีหลังอัปเดต ปุ่มต่าง ๆ ได้แก่ \"เขียนรีวิว\" \"ไว้ทีหลัง\" และ \"ไม่ต้องถามอีก\" โดยจะไม่ขอคะแนนดาวที่เจาะจงและไม่เสนอรางวัลใด ๆ"
+  },
+  "changelogReleaseHeading": {
+    "message": "มีอะไรใหม่ใน"
+  },
+  "changelog135Title1": {
+    "message": "ระงับได้เร็วและฉลาดขึ้น"
+  },
+  "changelog135Desc1": {
+    "message": "ตัวจับเวลาเริ่มต้นตอนนี้คือ 15 นาที เพื่อให้คุณเห็นการประหยัดหน่วยความจำเร็วขึ้น และการระงับแท็บอื่นกับการปิดแท็บซ้ำก็เชื่อถือได้มากขึ้น"
+  },
+  "changelog135Title2": {
+    "message": "จัดการรายการที่อนุญาตได้ง่ายขึ้น"
+  },
+  "changelog135Desc2": {
+    "message": "ปุ่มลบชัดเจนขึ้น ข้อความยืนยัน และตัวนับจำนวน อีกทั้งตอนนี้ใช้ได้กับ localhost และที่อยู่ IP"
+  },
+  "changelog135Title3": {
+    "message": "แป้นพิมพ์ลัดในการตั้งค่า"
+  },
+  "changelog135Desc3": {
+    "message": "แถวใหม่ในการตั้งค่าจะแสดงสถานะแป้นพิมพ์ลัดและพาไปยังที่ปรับแต่งได้โดยตรง"
+  },
+  "changelog135Title4": {
+    "message": "การปรับปรุงสถิติและการแชร์"
+  },
+  "changelog135Desc4": {
+    "message": "แชร์สถิติตอนนี้แสดงเป็นภาษาของคุณ และผลรวมหน่วยความจำแสดงอย่างสะอาดตา เช่น 2 GB แทน 2.0 GB"
+  },
+  "changelog135Title5": {
+    "message": "ขัดเกลาและการเข้าถึง"
+  },
+  "changelog135Desc5": {
+    "message": "ไอคอนชัดเจนขึ้น ป้ายแถบเครื่องมือตามสีแบรนด์ ป้ายกำกับสำหรับโปรแกรมอ่านหน้าจอที่ดีขึ้น และป๊อปอัปที่เป็นระเบียบขึ้น"
   }
 }

@@ -218,15 +218,6 @@
   "onboardingRemapHint": {
     "message": "Want different keyboard shortcuts? Customize them here →"
   },
-  "reviewLeaveTitle": {
-    "message": "Leave a quick review"
-  },
-  "reviewReportTitle": {
-    "message": "Report an issue"
-  },
-  "reviewDismissTitle": {
-    "message": "Dismiss"
-  },
   "statMemberSince": {
     "message": "Since"
   },
@@ -432,12 +423,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Enjoying Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Yes!"
-  },
-  "reviewNo": {
-    "message": "Not really"
   },
   "whatsNew": {
     "message": "What's new in v$VERSION$",
@@ -681,5 +666,59 @@
   },
   "confirmDeleteTitle": {
     "message": "Click again to confirm delete"
+  },
+  "reviewLeave": {
+    "message": "Leave a review"
+  },
+  "reviewMaybeLater": {
+    "message": "Maybe later"
+  },
+  "reviewDontAsk": {
+    "message": "Don't ask again"
+  },
+  "changelog136Title1": {
+    "message": "Every language is now fully translated"
+  },
+  "changelog136Desc1": {
+    "message": "A few strings (whitelist toasts, the Keyboard Shortcuts row, and the Share Stats text) were still showing in English in other languages. They are now translated across all 57 languages, and right-to-left languages like Arabic and Hebrew lay out correctly too."
+  },
+  "changelog136Title2": {
+    "message": "A gentler review prompt"
+  },
+  "changelog136Desc2": {
+    "message": "The \"Enjoying Drowzy?\" banner now appears only after you've used Drowzy for a while, never on install or right after an update. The buttons are Leave a review, Maybe later, and Don't ask again. It never asks for a specific star rating and never offers a reward."
+  },
+  "changelogReleaseHeading": {
+    "message": "What's new in"
+  },
+  "changelog135Title1": {
+    "message": "Faster, smarter suspending"
+  },
+  "changelog135Desc1": {
+    "message": "The default timer is now 15 minutes so you notice the memory savings sooner, and suspending other tabs and closing duplicates are more reliable."
+  },
+  "changelog135Title2": {
+    "message": "Whitelist is easier to manage"
+  },
+  "changelog135Desc2": {
+    "message": "Clearer remove buttons, confirmation messages, and a site count, plus it now works for localhost and IP addresses."
+  },
+  "changelog135Title3": {
+    "message": "Keyboard shortcuts in Settings"
+  },
+  "changelog135Desc3": {
+    "message": "A new Settings row shows your shortcut status and links straight to where you can customize them."
+  },
+  "changelog135Title4": {
+    "message": "Stats and sharing improvements"
+  },
+  "changelog135Desc4": {
+    "message": "Share Stats now appears in your language, and memory totals read cleanly, for example 2 GB instead of 2.0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Polish and accessibility"
+  },
+  "changelog135Desc5": {
+    "message": "Clearer icons, a brand-matched toolbar badge, better screen-reader labels, and a tidier popup."
   }
 }

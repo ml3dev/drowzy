@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Θέλετε διαφορετικές συντομεύσεις πληκτρολογίου; Προσαρμόστε τις εδώ →"
   },
-  "reviewLeaveTitle": {
-    "message": "Αφήστε μια σύντομη αξιολόγηση"
-  },
-  "reviewReportTitle": {
-    "message": "Αναφορά προβλήματος"
-  },
-  "reviewDismissTitle": {
-    "message": "Απόρριψη"
-  },
   "statMemberSince": {
     "message": "Μέλος από"
   },
@@ -289,7 +280,7 @@
     "message": "Κανένας ιστότοπος στη λευκή λίστα"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, πλήρες URL ή site.com/path/*"
   },
   "suspending": {
     "message": "Αναστολή..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Σας αρέσει το Drowzy;"
-  },
-  "reviewYes": {
-    "message": "Ναι!"
-  },
-  "reviewNo": {
-    "message": "Όχι ιδιαίτερα"
   },
   "whatsNew": {
     "message": "Τι νέο στη v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Κάντε ξανά κλικ για επιβεβαίωση διαγραφής"
+  },
+  "addedToWhitelist": {
+    "message": "Το $DOMAIN$ προστέθηκε στη λευκή λίστα",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "Το $DOMAIN$ βρίσκεται ήδη στη λευκή λίστα",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Προσαρμογή"
+  },
+  "keyboardShortcuts": {
+    "message": "Συντομεύσεις πληκτρολογίου"
+  },
+  "removedFromWhitelist": {
+    "message": "Το $DOMAIN$ αφαιρέθηκε από τη λευκή λίστα",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Τα στατιστικά μου στο Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ καρτέλες σε αναστολή συνολικά",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM εξοικονομήθηκε (σύνολο)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Σε χρήση από $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ σήμερα",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Όλα έτοιμα"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ από $TOTAL$ ορίστηκαν",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Αφήστε μια κριτική"
+  },
+  "reviewMaybeLater": {
+    "message": "Ίσως αργότερα"
+  },
+  "reviewDontAsk": {
+    "message": "Να μην ξαναρωτηθώ"
+  },
+  "changelog136Title1": {
+    "message": "Τώρα όλες οι γλώσσες είναι πλήρως μεταφρασμένες"
+  },
+  "changelog136Desc1": {
+    "message": "Μερικά κείμενα (οι ειδοποιήσεις της λευκής λίστας, η γραμμή Συντομεύσεις πληκτρολογίου και το κείμενο Κοινή χρήση στατιστικών) εμφανίζονταν ακόμη στα αγγλικά σε άλλες γλώσσες. Τώρα είναι μεταφρασμένα και στις 57 γλώσσες, ενώ οι γλώσσες που γράφονται από δεξιά προς τα αριστερά όπως τα αραβικά και τα εβραϊκά εμφανίζονται επίσης σωστά."
+  },
+  "changelog136Title2": {
+    "message": "Πιο διακριτικό αίτημα αξιολόγησης"
+  },
+  "changelog136Desc2": {
+    "message": "Το πλαίσιο «Σας αρέσει το Drowzy;» εμφανίζεται πλέον μόνο αφού χρησιμοποιήσετε το Drowzy για λίγο, ποτέ κατά την εγκατάσταση ή αμέσως μετά από μια ενημέρωση. Τα κουμπιά είναι «Αφήστε μια κριτική», «Ίσως αργότερα» και «Να μην ξαναρωτηθώ». Δεν ζητά ποτέ συγκεκριμένη βαθμολογία και δεν προσφέρει ποτέ ανταμοιβή."
+  },
+  "changelogReleaseHeading": {
+    "message": "Τι νέο υπάρχει στην"
+  },
+  "changelog135Title1": {
+    "message": "Ταχύτερη, εξυπνότερη αναστολή"
+  },
+  "changelog135Desc1": {
+    "message": "Το προεπιλεγμένο χρονόμετρο είναι τώρα 15 λεπτά ώστε να παρατηρείς νωρίτερα την εξοικονόμηση μνήμης, ενώ η αναστολή άλλων καρτελών και το κλείσιμο διπλότυπων είναι πιο αξιόπιστα."
+  },
+  "changelog135Title2": {
+    "message": "Πιο εύκολη διαχείριση λευκής λίστας"
+  },
+  "changelog135Desc2": {
+    "message": "Πιο ξεκάθαρα κουμπιά αφαίρεσης, μηνύματα επιβεβαίωσης και μετρητής, ενώ τώρα λειτουργεί για localhost και διευθύνσεις IP."
+  },
+  "changelog135Title3": {
+    "message": "Συντομεύσεις πληκτρολογίου στις Ρυθμίσεις"
+  },
+  "changelog135Desc3": {
+    "message": "Μια νέα γραμμή στις Ρυθμίσεις δείχνει την κατάσταση των συντομεύσεων και οδηγεί κατευθείαν στην προσαρμογή τους."
+  },
+  "changelog135Title4": {
+    "message": "Βελτιώσεις στα στατιστικά και την κοινή χρήση"
+  },
+  "changelog135Desc4": {
+    "message": "Η κοινή χρήση στατιστικών εμφανίζεται τώρα στη γλώσσα σου, και τα σύνολα μνήμης εμφανίζονται καθαρά, για παράδειγμα 2 GB αντί για 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Φινίρισμα και προσβασιμότητα"
+  },
+  "changelog135Desc5": {
+    "message": "Πιο ξεκάθαρα εικονίδια, σήμα γραμμής εργαλείων στα χρώματα της μάρκας, καλύτερες ετικέτες για αναγνώστες οθόνης και πιο τακτοποιημένο popup."
   }
 }

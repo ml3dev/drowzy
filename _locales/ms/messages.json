@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Mahukan pintasan papan kekunci yang berbeza? Sesuaikan di sini →"
   },
-  "reviewLeaveTitle": {
-    "message": "Tinggalkan ulasan pantas"
-  },
-  "reviewReportTitle": {
-    "message": "Laporkan isu"
-  },
-  "reviewDismissTitle": {
-    "message": "Tutup"
-  },
   "statMemberSince": {
     "message": "Ahli sejak"
   },
@@ -289,7 +280,7 @@
     "message": "Tiada laman dalam senarai putih"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, URL penuh atau site.com/path/*"
   },
   "suspending": {
     "message": "Menggantung..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Suka Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ya!"
-  },
-  "reviewNo": {
-    "message": "Tidak juga"
   },
   "whatsNew": {
     "message": "Apa yang baharu dalam v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Klik sekali lagi untuk mengesahkan pemadaman"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ ditambah ke senarai putih",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ sudah ada dalam senarai putih",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Sesuaikan"
+  },
+  "keyboardShortcuts": {
+    "message": "Pintasan papan kekunci"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ dibuang daripada senarai putih",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Statistik Drowzy saya"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ tab digantung sepanjang masa",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM dijimatkan (jumlah)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Digunakan sejak $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ hari ini",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Semua sedia"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ daripada $TOTAL$ ditetapkan",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Tinggalkan ulasan"
+  },
+  "reviewMaybeLater": {
+    "message": "Mungkin nanti"
+  },
+  "reviewDontAsk": {
+    "message": "Jangan tanya lagi"
+  },
+  "changelog136Title1": {
+    "message": "Kini semua bahasa diterjemahkan sepenuhnya"
+  },
+  "changelog136Desc1": {
+    "message": "Beberapa teks (pemberitahuan senarai putih, baris Pintasan papan kekunci dan teks Kongsi statistik) masih dipaparkan dalam bahasa Inggeris dalam bahasa lain. Kini semuanya diterjemahkan ke dalam kesemua 57 bahasa, dan bahasa yang ditulis dari kanan ke kiri seperti Arab dan Ibrani turut dipaparkan dengan betul."
+  },
+  "changelog136Title2": {
+    "message": "Permintaan ulasan yang lebih halus"
+  },
+  "changelog136Desc2": {
+    "message": "Sepanduk \"Menyukai Drowzy?\" kini hanya muncul selepas anda menggunakan Drowzy seketika, tidak pernah semasa pemasangan atau sebaik selepas kemas kini. Butangnya ialah \"Tinggalkan ulasan\", \"Mungkin nanti\" dan \"Jangan tanya lagi\". Ia tidak pernah meminta penilaian bintang tertentu dan tidak pernah menawarkan ganjaran."
+  },
+  "changelogReleaseHeading": {
+    "message": "Yang baharu dalam"
+  },
+  "changelog135Title1": {
+    "message": "Penggantungan lebih pantas dan bijak"
+  },
+  "changelog135Desc1": {
+    "message": "Pemasa lalai kini 15 minit supaya anda lebih cepat perasan penjimatan memori, dan menggantung tab lain serta menutup pendua menjadi lebih boleh dipercayai."
+  },
+  "changelog135Title2": {
+    "message": "Senarai putih lebih mudah diurus"
+  },
+  "changelog135Desc2": {
+    "message": "Butang buang lebih jelas, mesej pengesahan dan kiraan, dan kini berfungsi untuk localhost dan alamat IP."
+  },
+  "changelog135Title3": {
+    "message": "Pintasan papan kekunci dalam Tetapan"
+  },
+  "changelog135Desc3": {
+    "message": "Baris baharu dalam Tetapan menunjukkan status pintasan dan terus ke tempat anda menyesuaikannya."
+  },
+  "changelog135Title4": {
+    "message": "Penambahbaikan statistik dan perkongsian"
+  },
+  "changelog135Desc4": {
+    "message": "Kongsi statistik kini muncul dalam bahasa anda, dan jumlah memori dipaparkan kemas, contohnya 2 GB dan bukan 2.0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Pengilatan dan kebolehcapaian"
+  },
+  "changelog135Desc5": {
+    "message": "Ikon lebih jelas, lencana bar alat mengikut jenama, label pembaca skrin lebih baik dan popup lebih kemas."
   }
 }

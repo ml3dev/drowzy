@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Mau pintasan keyboard yang berbeda? Kustomisasi di sini →"
   },
-  "reviewLeaveTitle": {
-    "message": "Tinggalkan ulasan singkat"
-  },
-  "reviewReportTitle": {
-    "message": "Laporkan masalah"
-  },
-  "reviewDismissTitle": {
-    "message": "Tutup"
-  },
   "statMemberSince": {
     "message": "Anggota sejak"
   },
@@ -289,7 +280,7 @@
     "message": "Tidak ada situs di daftar putih"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, URL lengkap atau site.com/path/*"
   },
   "suspending": {
     "message": "Menangguhkan..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Menyukai Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ya!"
-  },
-  "reviewNo": {
-    "message": "Tidak juga"
   },
   "whatsNew": {
     "message": "Yang baru di v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Klik lagi untuk mengonfirmasi penghapusan"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ ditambahkan ke daftar putih",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ sudah ada di daftar putih",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Sesuaikan"
+  },
+  "keyboardShortcuts": {
+    "message": "Pintasan keyboard"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ dihapus dari daftar putih",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Statistik Drowzy saya"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ tab ditangguhkan sepanjang waktu",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM dihemat (total)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Digunakan sejak $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ hari ini",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Semua siap"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ dari $TOTAL$ disetel",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Beri ulasan"
+  },
+  "reviewMaybeLater": {
+    "message": "Mungkin nanti"
+  },
+  "reviewDontAsk": {
+    "message": "Jangan tanya lagi"
+  },
+  "changelog136Title1": {
+    "message": "Kini semua bahasa diterjemahkan sepenuhnya"
+  },
+  "changelog136Desc1": {
+    "message": "Beberapa teks (notifikasi daftar putih, baris Pintasan keyboard, dan teks Bagikan statistik) masih muncul dalam bahasa Inggris di bahasa lain. Kini semuanya diterjemahkan ke seluruh 57 bahasa, dan bahasa yang ditulis dari kanan ke kiri seperti Arab dan Ibrani juga tampil dengan benar."
+  },
+  "changelog136Title2": {
+    "message": "Permintaan ulasan yang lebih halus"
+  },
+  "changelog136Desc2": {
+    "message": "Banner \"Menyukai Drowzy?\" kini hanya muncul setelah Anda menggunakan Drowzy beberapa waktu, tidak pernah saat pemasangan atau tepat setelah pembaruan. Tombolnya adalah \"Beri ulasan\", \"Mungkin nanti\", dan \"Jangan tanya lagi\". Ini tidak pernah meminta rating bintang tertentu dan tidak pernah menawarkan hadiah."
+  },
+  "changelogReleaseHeading": {
+    "message": "Yang baru di"
+  },
+  "changelog135Title1": {
+    "message": "Penangguhan lebih cepat dan cerdas"
+  },
+  "changelog135Desc1": {
+    "message": "Timer default kini 15 menit agar kamu lebih cepat melihat penghematan memori, dan menangguhkan tab lain serta menutup duplikat jadi lebih andal."
+  },
+  "changelog135Title2": {
+    "message": "Daftar putih lebih mudah dikelola"
+  },
+  "changelog135Desc2": {
+    "message": "Tombol hapus lebih jelas, pesan konfirmasi, dan penghitung, dan kini berfungsi untuk localhost dan alamat IP."
+  },
+  "changelog135Title3": {
+    "message": "Pintasan keyboard di Pengaturan"
+  },
+  "changelog135Desc3": {
+    "message": "Baris baru di Pengaturan menampilkan status pintasan dan langsung menuju tempat menyesuaikannya."
+  },
+  "changelog135Title4": {
+    "message": "Peningkatan statistik dan berbagi"
+  },
+  "changelog135Desc4": {
+    "message": "Bagikan statistik kini muncul dalam bahasamu, dan total memori tampil rapi, misalnya 2 GB alih-alih 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Pemolesan dan aksesibilitas"
+  },
+  "changelog135Desc5": {
+    "message": "Ikon lebih jelas, lencana bilah alat sesuai merek, label pembaca layar lebih baik, dan popup lebih rapi."
   }
 }

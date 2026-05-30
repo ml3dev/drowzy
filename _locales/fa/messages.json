@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "میانبرهای صفحه‌کلید دیگری می‌خواهید؟ آنها را اینجا سفارشی کنید ←"
   },
-  "reviewLeaveTitle": {
-    "message": "نظر سریع بدهید"
-  },
-  "reviewReportTitle": {
-    "message": "گزارش مشکل"
-  },
-  "reviewDismissTitle": {
-    "message": "رد کردن"
-  },
   "statMemberSince": {
     "message": "عضو از"
   },
@@ -289,7 +280,7 @@
     "message": "سایتی در لیست سفید نیست"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com، نشانی کامل یا site.com/path/*"
   },
   "suspending": {
     "message": "در حال تعلیق..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "از Drowzy لذت می‌برید؟"
-  },
-  "reviewYes": {
-    "message": "بله!"
-  },
-  "reviewNo": {
-    "message": "نه واقعاً"
   },
   "whatsNew": {
     "message": "تازه‌ها در v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "برای تأیید حذف دوباره کلیک کنید"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ به لیست سفید افزوده شد",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ از قبل در لیست سفید است",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "سفارشی‌سازی"
+  },
+  "keyboardShortcuts": {
+    "message": "میان‌برهای صفحه‌کلید"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ از لیست سفید حذف شد",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 آمار Drowzy من"
+  },
+  "shareStatsLineAllTime": {
+    "message": "در مجموع $COUNT$ زبانه معلق شد",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ حافظه RAM ذخیره شد (کل)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "در حال استفاده از $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ امروز",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "همه چیز آماده است"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ از $TOTAL$ تنظیم شد",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "ثبت نظر"
+  },
+  "reviewMaybeLater": {
+    "message": "شاید بعداً"
+  },
+  "reviewDontAsk": {
+    "message": "دیگر نپرس"
+  },
+  "changelog136Title1": {
+    "message": "اکنون همه زبان‌ها به‌طور کامل ترجمه شده‌اند"
+  },
+  "changelog136Desc1": {
+    "message": "چند رشته (اعلان‌های لیست سفید، ردیف میان‌برهای صفحه‌کلید و متن اشتراک‌گذاری آمار) هنوز در زبان‌های دیگر به انگلیسی نمایش داده می‌شدند. اکنون به هر ۵۷ زبان ترجمه شده‌اند و زبان‌هایی که از راست به چپ نوشته می‌شوند مانند عربی و عبری نیز به‌درستی نمایش داده می‌شوند."
+  },
+  "changelog136Title2": {
+    "message": "درخواست نظر ملایم‌تر"
+  },
+  "changelog136Desc2": {
+    "message": "نوار «از Drowzy لذت می‌برید؟» اکنون فقط پس از مدتی استفاده از Drowzy نمایش داده می‌شود، هرگز هنگام نصب یا درست پس از به‌روزرسانی. دکمه‌ها عبارت‌اند از «ثبت نظر»، «شاید بعداً» و «دیگر نپرس». هرگز امتیاز ستاره‌ای خاصی نمی‌خواهد و هیچ پاداشی ارائه نمی‌دهد."
+  },
+  "changelogReleaseHeading": {
+    "message": "تازه‌های نسخهٔ"
+  },
+  "changelog135Title1": {
+    "message": "تعلیق سریع‌تر و هوشمندتر"
+  },
+  "changelog135Desc1": {
+    "message": "زمان‌سنج پیش‌فرض اکنون ۱۵ دقیقه است تا صرفه‌جویی حافظه را زودتر ببینید، و تعلیق زبانه‌های دیگر و بستن زبانه‌های تکراری مطمئن‌تر شده‌اند."
+  },
+  "changelog135Title2": {
+    "message": "مدیریت آسان‌تر لیست سفید"
+  },
+  "changelog135Desc2": {
+    "message": "دکمه‌های حذف واضح‌تر، پیام‌های تأیید و یک شمارنده، و اکنون برای localhost و نشانی‌های IP هم کار می‌کند."
+  },
+  "changelog135Title3": {
+    "message": "میان‌برهای صفحه‌کلید در تنظیمات"
+  },
+  "changelog135Desc3": {
+    "message": "ردیف جدیدی در تنظیمات وضعیت میان‌برها را نشان می‌دهد و مستقیم به سفارشی‌سازی آن‌ها می‌برد."
+  },
+  "changelog135Title4": {
+    "message": "بهبود آمار و اشتراک‌گذاری"
+  },
+  "changelog135Desc4": {
+    "message": "اشتراک‌گذاری آمار اکنون به زبان شما نمایش داده می‌شود و مجموع حافظه تمیز نشان داده می‌شود، برای مثال ۲ گیگابایت به‌جای ۲٫۰ گیگابایت."
+  },
+  "changelog135Title5": {
+    "message": "پرداخت و دسترس‌پذیری"
+  },
+  "changelog135Desc5": {
+    "message": "نمادهای واضح‌تر، نشان نوار ابزار با رنگ برند، برچسب‌های بهتر برای صفحه‌خوان‌ها و پنجرهٔ بازشوی مرتب‌تر."
   }
 }

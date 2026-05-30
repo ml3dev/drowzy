@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Vill du ha andra kortkommandon? Anpassa dem här →"
   },
-  "reviewLeaveTitle": {
-    "message": "Skriv en snabb recension"
-  },
-  "reviewReportTitle": {
-    "message": "Rapportera ett problem"
-  },
-  "reviewDismissTitle": {
-    "message": "Stäng"
-  },
   "statMemberSince": {
     "message": "Medlem sedan"
   },
@@ -289,7 +280,7 @@
     "message": "Inga webbplatser vitlistade"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, fullständig URL eller site.com/path/*"
   },
   "suspending": {
     "message": "Suspenderar..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Gillar du Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Ja!"
-  },
-  "reviewNo": {
-    "message": "Inte riktigt"
   },
   "whatsNew": {
     "message": "Nyheter i v$VERSION$",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Klicka igen för att bekräfta borttagning"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ lades till i vitlistan",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ finns redan i vitlistan",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Anpassa"
+  },
+  "keyboardShortcuts": {
+    "message": "Kortkommandon"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ togs bort från vitlistan",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Min Drowzy-statistik"
+  },
+  "shareStatsLineAllTime": {
+    "message": "$COUNT$ flikar suspenderade totalt",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM sparat (totalt)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Används sedan $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ idag",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Allt klart"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$BOUND$ av $TOTAL$ inställda",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Lämna ett omdöme"
+  },
+  "reviewMaybeLater": {
+    "message": "Kanske senare"
+  },
+  "reviewDontAsk": {
+    "message": "Fråga inte igen"
+  },
+  "changelog136Title1": {
+    "message": "Alla språk är nu fullständigt översatta"
+  },
+  "changelog136Desc1": {
+    "message": "Några texter (vitlistmeddelandena, raden Kortkommandon och texten för Dela statistik) visades fortfarande på engelska på andra språk. De är nu översatta till alla 57 språk, och språk som skrivs från höger till vänster som arabiska och hebreiska visas också korrekt."
+  },
+  "changelog136Title2": {
+    "message": "En mer diskret omdömesfråga"
+  },
+  "changelog136Desc2": {
+    "message": "Rutan \"Gillar du Drowzy?\" visas nu först efter att du använt Drowzy ett tag, aldrig vid installation eller direkt efter en uppdatering. Knapparna är \"Lämna ett omdöme\", \"Kanske senare\" och \"Fråga inte igen\". Den ber aldrig om ett visst betyg och erbjuder aldrig någon belöning."
+  },
+  "changelogReleaseHeading": {
+    "message": "Nyheter i"
+  },
+  "changelog135Title1": {
+    "message": "Snabbare, smartare pausning"
+  },
+  "changelog135Desc1": {
+    "message": "Standardtimern är nu 15 minuter så att du märker minnesbesparingen tidigare, och att pausa andra flikar och stänga dubbletter är mer tillförlitligt."
+  },
+  "changelog135Title2": {
+    "message": "Vitlistan är enklare att hantera"
+  },
+  "changelog135Desc2": {
+    "message": "Tydligare borttagningsknappar, bekräftelsemeddelanden och en räknare, och den fungerar nu för localhost och IP-adresser."
+  },
+  "changelog135Title3": {
+    "message": "Kortkommandon i Inställningar"
+  },
+  "changelog135Desc3": {
+    "message": "En ny rad i Inställningar visar status för dina kortkommandon och länkar direkt dit du anpassar dem."
+  },
+  "changelog135Title4": {
+    "message": "Förbättringar av statistik och delning"
+  },
+  "changelog135Desc4": {
+    "message": "Dela statistik visas nu på ditt språk, och minnessummor visas snyggt, till exempel 2 GB i stället för 2,0 GB."
+  },
+  "changelog135Title5": {
+    "message": "Finputsning och tillgänglighet"
+  },
+  "changelog135Desc5": {
+    "message": "Tydligare ikoner, en verktygsfältsbricka i varumärkesfärg, bättre etiketter för skärmläsare och ett snyggare popup."
   }
 }

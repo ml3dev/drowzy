@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Хочете інші клавіатурні скорочення? Налаштуйте їх тут →"
   },
-  "reviewLeaveTitle": {
-    "message": "Залишити швидкий відгук"
-  },
-  "reviewReportTitle": {
-    "message": "Повідомити про проблему"
-  },
-  "reviewDismissTitle": {
-    "message": "Закрити"
-  },
   "statMemberSince": {
     "message": "Учасник з"
   },
@@ -289,7 +280,7 @@
     "message": "Немає сайтів у білому списку"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, повний URL або site.com/path/*"
   },
   "suspending": {
     "message": "Призупинення..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Подобається Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Так!"
-  },
-  "reviewNo": {
-    "message": "Не дуже"
   },
   "whatsNew": {
     "message": "Що нового у v$VERSION$",
@@ -552,7 +537,7 @@
     "message": "Оскільки нічого не залишає ваш браузер, немає панелі керування, облікового запису, і немає способу для нас побачити, що ви робили з Drowzy. Якщо ви видалите Drowzy, Chrome пропонує вам можливість надіслати додатковий відгук (причина видалення, браузер, ОС) через окрему веб-сторінку; це надсилання є явним і йде до анонімної форми. Ви можете пропустити це, закривши вкладку."
   },
   "privacyFooterText": {
-    "message": "Drowzy — open source."
+    "message": "Drowzy має відкритий вихідний код."
   },
   "privacyFooterLink": {
     "message": "Переглянути код на GitHub"
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Натисніть ще раз, щоб підтвердити видалення"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ додано до білого списку",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ вже в білому списку",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Налаштувати"
+  },
+  "keyboardShortcuts": {
+    "message": "Комбінації клавіш"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ видалено з білого списку",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Моя статистика Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Усього призупинено вкладок: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ ОЗП збережено (за весь час)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Використовується з $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ сьогодні",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Усе налаштовано"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Налаштовано $BOUND$ з $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Залишити відгук"
+  },
+  "reviewMaybeLater": {
+    "message": "Можливо, пізніше"
+  },
+  "reviewDontAsk": {
+    "message": "Більше не запитувати"
+  },
+  "changelog136Title1": {
+    "message": "Тепер усі мови перекладено повністю"
+  },
+  "changelog136Desc1": {
+    "message": "Кілька рядків (сповіщення білого списку, рядок «Комбінації клавіш» і текст «Поділитися статистикою») усе ще показувалися англійською в інших мовах. Тепер їх перекладено всіма 57 мовами, а мови з письмом справа наліво, як-от арабська та іврит, також відображаються правильно."
+  },
+  "changelog136Title2": {
+    "message": "Делікатніше прохання про відгук"
+  },
+  "changelog136Desc2": {
+    "message": "Банер «Подобається Drowzy?» тепер з'являється лише після того, як ви певний час користуєтеся Drowzy, і ніколи під час встановлення чи одразу після оновлення. Кнопки: «Залишити відгук», «Можливо, пізніше» та «Більше не запитувати». Він ніколи не просить певну оцінку й не пропонує винагороду."
+  },
+  "changelogReleaseHeading": {
+    "message": "Що нового у"
+  },
+  "changelog135Title1": {
+    "message": "Швидше й розумніше призупинення"
+  },
+  "changelog135Desc1": {
+    "message": "Стандартний таймер тепер 15 хвилин, щоб ви раніше помітили економію пам'яті, а призупинення інших вкладок і закриття дублікатів стали надійнішими."
+  },
+  "changelog135Title2": {
+    "message": "Білим списком простіше керувати"
+  },
+  "changelog135Desc2": {
+    "message": "Зрозуміліші кнопки видалення, повідомлення про підтвердження та лічильник, і тепер він працює з localhost та IP-адресами."
+  },
+  "changelog135Title3": {
+    "message": "Комбінації клавіш у налаштуваннях"
+  },
+  "changelog135Desc3": {
+    "message": "Новий рядок у налаштуваннях показує стан комбінацій клавіш і веде прямо туди, де їх можна налаштувати."
+  },
+  "changelog135Title4": {
+    "message": "Покращення статистики та поширення"
+  },
+  "changelog135Desc4": {
+    "message": "«Поділитися статистикою» тепер вашою мовою, а значення пам'яті відображаються охайно, наприклад 2 ГБ замість 2,0 ГБ."
+  },
+  "changelog135Title5": {
+    "message": "Доопрацювання та доступність"
+  },
+  "changelog135Desc5": {
+    "message": "Зрозуміліші значки, значок на панелі у фірмовому кольорі, кращі підписи для зчитувачів екрана та охайніше спливне вікно."
   }
 }

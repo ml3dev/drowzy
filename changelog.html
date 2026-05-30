@@ -300,150 +300,73 @@
       <span class="version-label"></span>
     </div>
 
-    <div class="section-label">What's new in 1.3.5</div>
+    <div class="section-label"><span data-i18n="changelogReleaseHeading">What's new in</span> 1.3.6</div>
+    <ul class="change-list">
+      <li class="change-item">
+        <div class="change-icon feature">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title" data-i18n="changelog136Title1">Every language is now fully translated</div>
+          <div class="change-desc" data-i18n="changelog136Desc1">A few strings (whitelist toasts, the Keyboard Shortcuts row, and the Share Stats text) were still showing in English in other languages. They are now translated across all 57 languages, and right-to-left languages like Arabic and Hebrew lay out correctly too.</div>
+        </div>
+      </li>
+      <li class="change-item">
+        <div class="change-icon meta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title" data-i18n="changelog136Title2">A gentler review prompt</div>
+          <div class="change-desc" data-i18n="changelog136Desc2">The "Enjoying Drowzy?" banner now appears only after you've used Drowzy for a while, never on install or right after an update. The buttons are Leave a review, Maybe later, and Don't ask again. It never asks for a specific star rating and never offers a reward.</div>
+        </div>
+      </li>
+    </ul>
+
+        <div class="section-label"><span data-i18n="changelogReleaseHeading">What's new in</span> 1.3.5</div>
     <ul class="change-list">
       <li class="change-item">
         <div class="change-icon feature">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title">Default suspend timer is now 15 minutes (was 30)</div>
-          <div class="change-desc">After looking at what every other tab suspender does and what users actually complain about, 30 minutes turned out to be on the long end — most popular suspenders default to 10–20 min, and the biggest reason people uninstall a tab suspender is "I didn't notice any memory savings." 15 min is short enough that you'll see Drowzy doing its job within a normal browsing session, but long enough that you're unlikely to be coming back to a tab you were just using. Drowzy's existing protections (active tab, pinned, playing audio, unsaved forms, whitelist) keep the more aggressive timer safe. <strong>If you've already changed your timer, nothing happens to your setting</strong> — only fresh installs pick up the new default.</div>
+          <div class="change-title" data-i18n="changelog135Title1">Faster, smarter suspending</div>
+          <div class="change-desc" data-i18n="changelog135Desc1">The default timer is now 15 minutes so you notice the memory savings sooner, and Suspend Others and Close Duplicates are more reliable.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon fix">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title">"Suspend Others" no longer skips tabs with a countdown timer</div>
-          <div class="change-desc"><strong>Suspend Others</strong> was skipping any tab Chrome still flagged as <code>loading</code> — which on sites like Reddit, Twitter, or YouTube can be most of the time, thanks to background streams. The skip is now scoped to automatic timer-based suspends only; clicking the button (or hitting the shortcut) suspends every non-protected tab regardless.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon fix">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">Welcome page no longer lies about your keyboard shortcuts</div>
-          <div class="change-desc">When Chrome can't auto-assign a suggested shortcut — because another extension or a system binding already claims the keys — the command stays unbound and shows up as "Not set" in <code>chrome://extensions/shortcuts</code>. The welcome page used to ignore that and confidently tell you to press the suggested shortcut anyway, even though nothing would happen. Now the list only shows shortcuts that actually work; unbound commands are hidden, and the existing <em>"Want different keyboard shortcuts? Customize them here →"</em> link below the list jumps straight to the Chrome shortcuts editor so you can set the missing ones yourself.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon fix">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">"Close duplicates" can no longer close a live tab while keeping an empty one</div>
-          <div class="change-desc">When you had two copies of the same URL open and one of them had already been suspended into an empty shell, the duplicate-closer could decide to keep the empty shell and close the live tab — leaving you with the wrong one. The pick order now prefers a live (non-suspended) tab over a suspended one when neither copy is pinned or active.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">Share Stats now respects your language</div>
-          <div class="change-desc">The Share button in the Stats panel was copying its text in English no matter what language Drowzy was running in. The header, the bullet lines, and the "Using since …" footer now go through translation like the rest of the extension. (English fallback for any locale that hasn't translated the new strings yet.)</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon fix">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">Whitelist toggle now works for localhost &amp; IP-only URLs</div>
-          <div class="change-desc">If your current tab was <code>http://127.0.0.1:3000</code> or <code>http://[::1]</code>, clicking <em>"Never suspend this site"</em> did nothing — the popup quietly rejected anything that wasn't a normal domain or the literal string <code>localhost</code>. The toggle now accepts IPv4 addresses and the IPv6 loopback alongside regular domains, matching what the rest of the extension already allowed.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">Clicking a sleeping tab in the popup now jumps to its window</div>
-          <div class="change-desc">If a tab you clicked in the popup lived in a Chrome window other than the one currently in front, Drowzy would activate the tab without bringing that window forward — so the tab was "selected" somewhere you couldn't see. The popup now also focuses the destination window so the click actually takes you there.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="m16.24 16.24 2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="m16.24 7.76 2.83-2.83"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">Whole-gigabyte RAM values no longer render as "2.0 GB"</div>
-          <div class="change-desc">Stats now read "2 GB" instead of "2.0 GB" when the value is a clean gigabyte. Fractional values like "2.3 GB" are unchanged. Cosmetic — affects the stats strip, the lifetime card, suspend toasts, and the share text.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon a11y">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">Per-tab suspend button is now properly labeled for screen readers</div>
-          <div class="change-desc">The small pause button on each tab row had a hover tooltip but no <code>aria-label</code>, so screen readers announced it as "button" with no purpose. It now reads as "Suspend this tab" — matching the visible tooltip.</div>
+          <div class="change-title" data-i18n="changelog135Title2">Whitelist is easier to manage</div>
+          <div class="change-desc" data-i18n="changelog135Desc2">Clearer remove buttons, confirmation messages, and a site count, plus it now works for localhost and IP addresses.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title">Settings now has a "Keyboard shortcuts" row</div>
-          <div class="change-desc">A new row in Settings shows the status of your shortcuts ("All set" or "1 of 3 set") and a <em>Customize →</em> link that opens Chrome's shortcuts editor in one click. The welcome page is only shown once, so this was the missing in-app path back to the editor for anyone who hit a key conflict. Heads up: Chrome doesn't let extensions set shortcuts for you — even though we'd love to. The editor is the only place that can.</div>
+          <div class="change-title" data-i18n="changelog135Title3">Keyboard shortcuts in Settings</div>
+          <div class="change-desc" data-i18n="changelog135Desc3">A new Settings row shows your shortcut status and links straight to where you can customize them.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title">Default Windows shortcuts changed to less-conflicting keys</div>
-          <div class="change-desc">The Windows defaults for <em>Suspend current</em> and <em>Wake all</em> moved from <kbd>Alt+Shift+Z</kbd> / <kbd>Alt+Shift+W</kbd> to <kbd>Alt+Shift+P</kbd> / <kbd>Alt+Shift+O</kbd>. The old combos turned out to collide with Zoom (<kbd>Alt+Shift+Z</kbd> toggles video) and a handful of common extensions, leaving the commands unbound out of the box. <strong>Existing installs aren't affected</strong> — Chrome won't redo the auto-bind on update, so if your shortcuts already work, nothing changes. If you'd like to switch to the new defaults (or pick your own), use the new <em>Customize</em> link in Settings.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon fix">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">Whitelist is easier to manage</div>
-          <div class="change-desc">Removing a site is now a clearly-labeled <em>Remove ×</em> pill instead of a tiny icon-only X that was easy to miss. Adding or removing a site shows a toast confirming what happened, and the section heading shows a count — <em>Whitelisted sites (5)</em> — so you can tell at a glance how many you have. Long subdomain names truncate cleanly so the remove button stays inside the row.</div>
+          <div class="change-title" data-i18n="changelog135Title4">Stats and sharing improvements</div>
+          <div class="change-desc" data-i18n="changelog135Desc4">Share Stats now appears in your language, and memory totals read cleanly, for example 2 GB instead of 2.0 GB.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title">Two small icon swaps for clearer meaning</div>
-          <div class="change-desc">The <em>Whitelisted</em> badge on a tab now shows a shield (was a star) to match the rest of the whitelist UI — star reads as "bookmark", shield reads as "protected from suspension". The <em>Today</em> stat card swaps the moon for a calendar — moon's the right icon for sleeping tabs, but didn't connect for "today". Both are cosmetic; nothing functional changed.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">Toolbar badge color matches the brand</div>
-          <div class="change-desc">The little number badge on the toolbar icon (it shows how many tabs are sleeping in the current window) was a slightly-off indigo. Now uses the same purple as the rest of Drowzy, with white text forced for contrast.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">Welcome page CTA points you at a button that actually works instantly</div>
-          <div class="change-desc">The old "open a few tabs and try it out!" message was misleading at the new 15-minute default — opening tabs and waiting 15 minutes isn't really trying it. The page now tells you to open Drowzy from the toolbar and hit <em>Suspend Others</em> for an instant demo.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon fix">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title">Popup no longer shows a near-useless scrollbar</div>
-          <div class="change-desc">With three or more visible tabs, content sometimes nudged just past the popup's height and surfaced a ~20-pixel scroll range — visible scrollbar with almost nothing to scroll. The popup now uses a bit more vertical space (580px instead of 520) so that marginal case doesn't trigger.</div>
+          <div class="change-title" data-i18n="changelog135Title5">Polish and accessibility</div>
+          <div class="change-desc" data-i18n="changelog135Desc5">Clearer icons, a brand-matched toolbar badge, better screen-reader labels, and a tidier popup.</div>
         </div>
       </li>
     </ul>

@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Хотите другие сочетания клавиш? Настройте их здесь →"
   },
-  "reviewLeaveTitle": {
-    "message": "Оставить быстрый отзыв"
-  },
-  "reviewReportTitle": {
-    "message": "Сообщить о проблеме"
-  },
-  "reviewDismissTitle": {
-    "message": "Закрыть"
-  },
   "statMemberSince": {
     "message": "Участник с"
   },
@@ -289,7 +280,7 @@
     "message": "Нет сайтов в белом списке"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, полный URL или site.com/path/*"
   },
   "suspending": {
     "message": "Приостановка..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Нравится Drowzy?"
-  },
-  "reviewYes": {
-    "message": "Да!"
-  },
-  "reviewNo": {
-    "message": "Не очень"
   },
   "whatsNew": {
     "message": "Что нового в v$VERSION$",
@@ -552,7 +537,7 @@
     "message": "Поскольку ничего не покидает ваш браузер, нет панели управления, нет учётной записи и нет способа узнать, что вы делали с Drowzy. Если вы удалите Drowzy, Chrome предложит вам возможность отправить дополнительный отзыв (причина удаления, браузер, ОС) через отдельную веб-страницу; эта отправка явная и идёт в анонимную форму. Вы можете пропустить её, закрыв вкладку."
   },
   "privacyFooterText": {
-    "message": "Drowzy — open source."
+    "message": "Drowzy имеет открытый исходный код."
   },
   "privacyFooterLink": {
     "message": "Просмотреть код на GitHub"
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Нажмите снова для подтверждения удаления"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ добавлен в белый список",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ уже в белом списке",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Настроить"
+  },
+  "keyboardShortcuts": {
+    "message": "Сочетания клавиш"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ удалён из белого списка",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Моя статистика Drowzy"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Всего приостановлено вкладок: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ ОЗУ сэкономлено (за всё время)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "Используется с $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "$COUNT$ сегодня",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Всё настроено"
+  },
+  "shortcutsSomeUnset": {
+    "message": "Настроено $BOUND$ из $TOTAL$",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Оставить отзыв"
+  },
+  "reviewMaybeLater": {
+    "message": "Возможно, позже"
+  },
+  "reviewDontAsk": {
+    "message": "Больше не спрашивать"
+  },
+  "changelog136Title1": {
+    "message": "Теперь все языки переведены полностью"
+  },
+  "changelog136Desc1": {
+    "message": "Несколько строк (уведомления белого списка, строка «Сочетания клавиш» и текст «Поделиться статистикой») всё ещё показывались на английском в других языках. Теперь они переведены на все 57 языков, а языки с письмом справа налево, такие как арабский и иврит, также отображаются правильно."
+  },
+  "changelog136Title2": {
+    "message": "Более деликатная просьба об отзыве"
+  },
+  "changelog136Desc2": {
+    "message": "Баннер «Нравится Drowzy?» теперь появляется только после того, как вы какое-то время пользуетесь Drowzy, и никогда при установке или сразу после обновления. Кнопки: «Оставить отзыв», «Возможно, позже» и «Больше не спрашивать». Он никогда не просит конкретную оценку и не предлагает вознаграждение."
+  },
+  "changelogReleaseHeading": {
+    "message": "Что нового в"
+  },
+  "changelog135Title1": {
+    "message": "Быстрее и умнее приостановка"
+  },
+  "changelog135Desc1": {
+    "message": "Таймер по умолчанию теперь 15 минут, чтобы вы раньше заметили экономию памяти, а приостановка других вкладок и закрытие дубликатов стали надёжнее."
+  },
+  "changelog135Title2": {
+    "message": "Белым списком проще управлять"
+  },
+  "changelog135Desc2": {
+    "message": "Понятнее кнопки удаления, подтверждающие сообщения и счётчик, и теперь он работает с localhost и IP-адресами."
+  },
+  "changelog135Title3": {
+    "message": "Сочетания клавиш в настройках"
+  },
+  "changelog135Desc3": {
+    "message": "Новая строка в настройках показывает статус сочетаний клавиш и ведёт прямо туда, где их можно настроить."
+  },
+  "changelog135Title4": {
+    "message": "Улучшения статистики и обмена"
+  },
+  "changelog135Desc4": {
+    "message": "«Поделиться статистикой» теперь на вашем языке, а значения памяти отображаются аккуратно, например 2 ГБ вместо 2,0 ГБ."
+  },
+  "changelog135Title5": {
+    "message": "Доработка и доступность"
+  },
+  "changelog135Desc5": {
+    "message": "Понятнее значки, значок на панели в фирменном цвете, лучше подписи для скринридеров и аккуратнее всплывающее окно."
   }
 }

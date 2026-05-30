@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "Farklı klavye kısayolları mı istiyorsunuz? Buradan özelleştirin →"
   },
-  "reviewLeaveTitle": {
-    "message": "Hızlı bir inceleme bırakın"
-  },
-  "reviewReportTitle": {
-    "message": "Sorun bildir"
-  },
-  "reviewDismissTitle": {
-    "message": "Kapat"
-  },
   "statMemberSince": {
     "message": "Üyelik başlangıcı"
   },
@@ -289,7 +280,7 @@
     "message": "Beyaz listede site yok"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com, tam URL veya site.com/path/*"
   },
   "suspending": {
     "message": "Askıya alınıyor..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "Drowzy'dan memnun musunuz?"
-  },
-  "reviewYes": {
-    "message": "Evet!"
-  },
-  "reviewNo": {
-    "message": "Pek değil"
   },
   "whatsNew": {
     "message": "v$VERSION$'daki yenilikler",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "Silmeyi onaylamak için tekrar tıklayın"
+  },
+  "addedToWhitelist": {
+    "message": "$DOMAIN$ beyaz listeye eklendi",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ zaten beyaz listede",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "Özelleştir"
+  },
+  "keyboardShortcuts": {
+    "message": "Klavye kısayolları"
+  },
+  "removedFromWhitelist": {
+    "message": "$DOMAIN$ beyaz listeden kaldırıldı",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 Drowzy istatistiklerim"
+  },
+  "shareStatsLineAllTime": {
+    "message": "Toplam $COUNT$ sekme askıya alındı",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "$RAM$ RAM tasarrufu (toplam)",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "$DATE$ tarihinden beri kullanımda",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "Bugün $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "Her şey hazır"
+  },
+  "shortcutsSomeUnset": {
+    "message": "$TOTAL$ kısayoldan $BOUND$ tanesi ayarlandı",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "Değerlendirme bırak"
+  },
+  "reviewMaybeLater": {
+    "message": "Belki sonra"
+  },
+  "reviewDontAsk": {
+    "message": "Bir daha sorma"
+  },
+  "changelog136Title1": {
+    "message": "Artık tüm diller tamamen çevrildi"
+  },
+  "changelog136Desc1": {
+    "message": "Bazı metinler (beyaz liste bildirimleri, Klavye kısayolları satırı ve İstatistikleri paylaş metni) diğer dillerde hâlâ İngilizce görünüyordu. Bunlar artık 57 dilin tamamına çevrildi ve Arapça ile İbranice gibi sağdan sola yazılan diller de doğru biçimde görüntüleniyor."
+  },
+  "changelog136Title2": {
+    "message": "Daha nazik bir değerlendirme isteği"
+  },
+  "changelog136Desc2": {
+    "message": "\"Drowzy'yi beğendiniz mi?\" bandı artık yalnızca Drowzy'yi bir süre kullandıktan sonra görünüyor; asla kurulumda veya bir güncellemenin hemen ardından çıkmıyor. Düğmeler \"Değerlendirme bırak\", \"Belki sonra\" ve \"Bir daha sorma\". Asla belirli bir yıldız puanı istemiyor ve asla ödül sunmuyor."
+  },
+  "changelogReleaseHeading": {
+    "message": "Yenilikler:"
+  },
+  "changelog135Title1": {
+    "message": "Daha hızlı, daha akıllı askıya alma"
+  },
+  "changelog135Desc1": {
+    "message": "Varsayılan zamanlayıcı artık 15 dakika, böylece bellek tasarrufunu daha erken fark edersin; diğer sekmeleri askıya alma ve yinelenenleri kapatma daha güvenilir."
+  },
+  "changelog135Title2": {
+    "message": "Beyaz listeyi yönetmek daha kolay"
+  },
+  "changelog135Desc2": {
+    "message": "Daha net kaldırma düğmeleri, onay mesajları ve bir sayaç; ayrıca artık localhost ve IP adresleriyle de çalışıyor."
+  },
+  "changelog135Title3": {
+    "message": "Ayarlar'da klavye kısayolları"
+  },
+  "changelog135Desc3": {
+    "message": "Ayarlar'daki yeni bir satır kısayollarının durumunu gösterir ve doğrudan özelleştirebileceğin yere götürür."
+  },
+  "changelog135Title4": {
+    "message": "İstatistik ve paylaşım iyileştirmeleri"
+  },
+  "changelog135Desc4": {
+    "message": "İstatistikleri paylaş artık kendi dilinde görünüyor ve bellek toplamları temiz görünüyor, örneğin 2,0 GB yerine 2 GB."
+  },
+  "changelog135Title5": {
+    "message": "İnce ayar ve erişilebilirlik"
+  },
+  "changelog135Desc5": {
+    "message": "Daha net simgeler, markaya uygun araç çubuğu rozeti, ekran okuyucular için daha iyi etiketler ve daha derli toplu bir açılır pencere."
   }
 }

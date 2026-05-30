@@ -133,6 +133,12 @@ async function onInstalled(details) {
 
 async function onStartup() {
   await createAlarm();
+  // Rebuild context menus on every startup. They're created once at install in
+  // the then-current UI language and don't otherwise refresh, so a user who
+  // changes Chrome's display language would keep stale-language menu items
+  // until the next reload. createContextMenus() removes-all-then-recreates and
+  // re-reads chrome.i18n, so this picks up a language change on next launch.
+  createContextMenus();
   await initTimestamps();
   await updateBadgeNow();
   // Re-affirm in case it was cleared or we updated the URL since install

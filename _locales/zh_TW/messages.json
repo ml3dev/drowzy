@@ -213,15 +213,6 @@
   "onboardingRemapHint": {
     "message": "想要其他鍵盤快速鍵？在此自訂 →"
   },
-  "reviewLeaveTitle": {
-    "message": "留下快速評論"
-  },
-  "reviewReportTitle": {
-    "message": "回報問題"
-  },
-  "reviewDismissTitle": {
-    "message": "關閉"
-  },
   "statMemberSince": {
     "message": "使用起始日"
   },
@@ -289,7 +280,7 @@
     "message": "沒有白名單網站"
   },
   "whitelistPlaceholder": {
-    "message": "example.com or site.com/path/*"
+    "message": "example.com、完整網址或 site.com/path/*"
   },
   "suspending": {
     "message": "正在休眠..."
@@ -368,12 +359,6 @@
   },
   "enjoyingDrowzy": {
     "message": "喜歡 Drowzy 嗎？"
-  },
-  "reviewYes": {
-    "message": "喜歡！"
-  },
-  "reviewNo": {
-    "message": "不太滿意"
   },
   "whatsNew": {
     "message": "v$VERSION$ 新功能",
@@ -597,5 +582,138 @@
   },
   "confirmDeleteTitle": {
     "message": "再次點擊以確認刪除"
+  },
+  "addedToWhitelist": {
+    "message": "已將 $DOMAIN$ 加入白名單",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "alreadyWhitelisted": {
+    "message": "$DOMAIN$ 已在白名單中",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "customizeShortcuts": {
+    "message": "自訂"
+  },
+  "keyboardShortcuts": {
+    "message": "鍵盤快速鍵"
+  },
+  "removedFromWhitelist": {
+    "message": "已將 $DOMAIN$ 移出白名單",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsHeader": {
+    "message": "😴 我的 Drowzy 統計"
+  },
+  "shareStatsLineAllTime": {
+    "message": "累計休眠 $COUNT$ 個分頁",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineRam": {
+    "message": "累計節省 $RAM$ RAM",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineSince": {
+    "message": "自 $DATE$ 起使用",
+    "placeholders": {
+      "date": {
+        "content": "$1"
+      }
+    }
+  },
+  "shareStatsLineToday": {
+    "message": "今天 $COUNT$ 個",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "shortcutsAllSet": {
+    "message": "全部已設定"
+  },
+  "shortcutsSomeUnset": {
+    "message": "已設定 $TOTAL$ 個中的 $BOUND$ 個",
+    "placeholders": {
+      "bound": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "reviewLeave": {
+    "message": "撰寫評論"
+  },
+  "reviewMaybeLater": {
+    "message": "稍後再說"
+  },
+  "reviewDontAsk": {
+    "message": "不再詢問"
+  },
+  "changelog136Title1": {
+    "message": "現在所有語言都已完整翻譯"
+  },
+  "changelog136Desc1": {
+    "message": "有幾處文字（白名單提示、鍵盤快速鍵那一列以及分享統計的文字）在其他語言中仍顯示為英文。現已翻譯為全部 57 種語言，阿拉伯文、希伯來文等從右到左書寫的語言也能正確顯示。"
+  },
+  "changelog136Title2": {
+    "message": "更溫和的評論提示"
+  },
+  "changelog136Desc2": {
+    "message": "「喜歡 Drowzy 嗎？」橫幅現在只會在你使用 Drowzy 一段時間後才出現，絕不會在安裝時或更新後立即彈出。按鈕為「撰寫評論」「稍後再說」和「不再詢問」。它從不索取特定星級，也從不提供獎勵。"
+  },
+  "changelogReleaseHeading": {
+    "message": "的新功能"
+  },
+  "changelog135Title1": {
+    "message": "暫停更快、更聰明"
+  },
+  "changelog135Desc1": {
+    "message": "預設計時器現在為 15 分鐘,讓你更快感受到記憶體節省,而且暫停其他分頁和關閉重複分頁更可靠了。"
+  },
+  "changelog135Title2": {
+    "message": "白名單更易管理"
+  },
+  "changelog135Desc2": {
+    "message": "移除按鈕更清楚,新增確認提示和數量統計,而且現在支援 localhost 和 IP 位址。"
+  },
+  "changelog135Title3": {
+    "message": "設定中加入鍵盤快速鍵"
+  },
+  "changelog135Desc3": {
+    "message": "設定中新增一列顯示快速鍵狀態,並可直接前往自訂頁面。"
+  },
+  "changelog135Title4": {
+    "message": "統計與分享改進"
+  },
+  "changelog135Desc4": {
+    "message": "分享統計現在以你的語言顯示,記憶體總量顯示更清爽,例如 2 GB 而不是 2.0 GB。"
+  },
+  "changelog135Title5": {
+    "message": "打磨與無障礙"
+  },
+  "changelog135Desc5": {
+    "message": "圖示更清楚,工具列標記採用品牌色,螢幕閱讀器標籤更完善,彈出視窗更整潔。"
   }
 }
