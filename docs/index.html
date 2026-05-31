@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Drowzy · The open-source tab suspender for Chrome</title>
+<meta name="description" content="Drowzy puts the tabs you are not using to sleep and frees the memory they were taking up. Save up to 80% of Chrome's memory. No tracking, open source.">
+<link rel="canonical" href="https://ml3dev.github.io/drowzy/">
+<link rel="icon" href="icon-128.png">
+
+<!-- social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Drowzy · The open-source tab suspender for Chrome">
+<meta property="og:description" content="Put idle tabs to sleep and get your memory back. Save up to 80% of Chrome's memory. No tracking, open source.">
+<meta property="og:url" content="https://ml3dev.github.io/drowzy/">
+<meta name="twitter:card" content="summary">
+
+<style>
+:root{
+  --bg:#0c0817;
+  --surface:#16112a;
+  --surface-2:#1d1733;
+
+  --text:#ece7f6;
+  --text-dim:#a99fc0;
+  --text-faint:#7a6f93;
+
+  --accent:#a78bfa;
+  --accent-bright:#c4b5fd;
+  --accent-deep:#8b5cf6;
+  --green:#6ee7b7;
+  --amber:#fbbf24;
+  --blue:#60a5fa;
+
+  --border:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.14);
+  --grad:linear-gradient(135deg,#b89cfd 0%,#8b5cf6 100%);
+  --grad-hover:linear-gradient(135deg,#c4b5fd 0%,#a78bfa 100%);
+
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+
+  --shell:1120px;
+  --r:18px;
+  --r-sm:11px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+
+body{
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+
+svg{display:block}
+
+/* nocturnal atmosphere ---------------------------------------------------- */
+.sky{position:fixed;inset:0;z-index:-3;pointer-events:none;
+  background:
+    radial-gradient(120% 90% at 78% -8%, rgba(139,92,246,.30), transparent 55%),
+    radial-gradient(90% 70% at 8% 8%, rgba(96,165,250,.12), transparent 50%),
+    radial-gradient(120% 80% at 50% 120%, rgba(110,231,183,.07), transparent 55%),
+    linear-gradient(180deg,#0c0817 0%, #0b0716 60%, #0a0614 100%);
+}
+.sky::before{
+  content:"";position:absolute;inset:0;opacity:.5;
+  background-image:radial-gradient(rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size:32px 32px;
+  -webkit-mask-image:radial-gradient(120% 90% at 50% 0%, #000 30%, transparent 78%);
+          mask-image:radial-gradient(120% 90% at 50% 0%, #000 30%, transparent 78%);
+}
+.grain{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+.stars{position:fixed;inset:0;z-index:-2;pointer-events:none}
+.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;
+  box-shadow:0 0 6px 1px rgba(255,255,255,.6);animation:twinkle 4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:.85}}
+
+/* layout ------------------------------------------------------------------ */
+.shell{max-width:var(--shell);margin:0 auto;padding:0 24px}
+section{position:relative}
+.eyebrow{font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);display:inline-flex;align-items:center;gap:9px;margin-bottom:18px}
+.eyebrow::before{content:"";width:22px;height:1px;background:linear-gradient(90deg,var(--accent),transparent)}
+h2{font-weight:700;font-size:clamp(27px,4.2vw,44px);line-height:1.1;
+  letter-spacing:-.025em;margin-bottom:18px}
+h2 em{font-style:normal;color:var(--accent-bright)}
+.lead{color:var(--text-dim);font-size:clamp(15.5px,1.7vw,18px);max-width:60ch}
+
+/* logo image -------------------------------------------------------------- */
+.logo{display:block;flex:none;object-fit:contain}
+
+/* nav --------------------------------------------------------------------- */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:rgba(12,8,23,.55);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+nav.scrolled{border-bottom-color:var(--border);background:rgba(12,8,23,.78)}
+.nav-in{max-width:var(--shell);margin:0 auto;padding:13px 24px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:-.02em;text-decoration:none;color:var(--text)}
+.brand .logo{width:30px;height:30px}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:28px}
+.nav-links a{color:var(--text-dim);text-decoration:none;font-size:14.5px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{padding:9px 17px;border-radius:var(--r-sm);background:var(--grad);color:#fff !important;font-weight:600;
+  box-shadow:0 6px 18px -6px rgba(139,92,246,.7);transition:transform .2s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 10px 26px -6px rgba(139,92,246,.85)}
+@media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
+
+/* buttons ----------------------------------------------------------------- */
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font);font-weight:600;font-size:15.5px;
+  padding:14px 26px;border-radius:13px;text-decoration:none;cursor:pointer;border:1px solid transparent;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s,border-color .2s}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 30px -8px rgba(139,92,246,.75),0 0 0 1px rgba(255,255,255,.06) inset}
+.btn-primary:hover{transform:translateY(-2px);background:var(--grad-hover);box-shadow:0 18px 44px -10px rgba(139,92,246,.9),0 0 0 1px rgba(255,255,255,.1) inset}
+.btn-ghost{background:rgba(255,255,255,.03);color:var(--text);border-color:var(--border-strong)}
+.btn-ghost:hover{transform:translateY(-2px);border-color:var(--accent);background:rgba(167,139,250,.08)}
+.btn svg{width:18px;height:18px}
+
+/* hero -------------------------------------------------------------------- */
+.hero{padding:70px 0 86px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-pill{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:var(--text-dim);letter-spacing:.01em;
+  padding:7px 15px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.025);margin-bottom:26px}
+.hero-pill .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 7px rgba(167,139,250,.55)}
+.hero h1{font-weight:700;font-size:clamp(38px,6vw,62px);line-height:1.04;
+  letter-spacing:-.035em;margin-bottom:24px}
+.hero h1 .soft{display:block;color:var(--accent-bright)}
+.hero p.sub{font-size:clamp(16px,1.9vw,19px);color:var(--text-dim);max-width:46ch;margin-bottom:34px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-note{margin-top:20px;font-size:13.5px;color:var(--text-faint);display:flex;align-items:center;gap:8px}
+.hero-note b{color:var(--text-dim);font-weight:600}
+
+/* device: the REAL popup in an iframe (kept static + layer-promoted) ------ */
+.device{position:relative;justify-self:center}
+.device .moonglow{position:absolute;inset:-70px -50px -50px;z-index:-1;border-radius:50%;
+  background:radial-gradient(58% 52% at 58% 32%, rgba(139,92,246,.45), transparent 70%);
+  filter:blur(22px)}
+.popup-frame{width:340px;height:642px;display:block;border-radius:20px;background:#0f0b1a;
+  border:1px solid var(--border-strong);pointer-events:none;
+  box-shadow:0 1px 0 rgba(255,255,255,.07) inset, 0 40px 90px -20px rgba(4,2,14,.85), 0 16px 40px -22px rgba(0,0,0,.7);
+  transform:translateZ(0);backface-visibility:hidden}
+
+/* trust strip ------------------------------------------------------------- */
+.trust{padding:6px 0 8px}
+.trust-row{display:flex;flex-wrap:wrap;gap:14px 34px;align-items:center;justify-content:center;
+  color:var(--text-faint);font-size:13.5px;font-weight:500}
+.trust-row span{display:inline-flex;align-items:center;gap:9px}
+.trust-row svg{width:16px;height:16px;color:var(--accent)}
+
+/* section spacing --------------------------------------------------------- */
+.band{padding:90px 0}
+
+/* why / discard ----------------------------------------------------------- */
+.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
+.why-card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
+  border:1px solid var(--border);border-radius:var(--r);padding:8px;position:relative;overflow:hidden}
+.why-card::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 90% 0%,rgba(139,92,246,.16),transparent 60%);pointer-events:none}
+.diff{list-style:none;display:flex;flex-direction:column;gap:2px}
+.diff li{display:flex;gap:15px;padding:18px;border-radius:14px;transition:background .2s}
+.diff li:hover{background:rgba(255,255,255,.03)}
+.diff .ic{width:38px;height:38px;flex:none;border-radius:11px;display:grid;place-items:center;
+  background:rgba(167,139,250,.13);border:1px solid rgba(167,139,250,.22);color:var(--accent)}
+.diff .ic svg{width:19px;height:19px}
+.diff h4{font-size:15.5px;font-weight:600;margin-bottom:3px;letter-spacing:-.01em}
+.diff p{font-size:14px;color:var(--text-dim);line-height:1.55}
+.callout{font-size:clamp(15.5px,1.7vw,18px);color:var(--text-dim);max-width:60ch;margin-top:16px}
+.callout code{font-family:var(--mono);font-size:.85em;color:var(--accent-bright);
+  background:rgba(167,139,250,.12);padding:2px 7px;border-radius:6px}
+
+/* memory meter ------------------------------------------------------------ */
+.mem{text-align:center}
+.mem .lead{margin:0 auto}
+.meter{max-width:720px;margin:46px auto 0;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
+  border:1px solid var(--border);border-radius:22px;padding:32px 34px}
+.meter-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;font-size:13.5px;color:var(--text-faint)}
+.meter-top b{color:var(--text);font-weight:600}
+.bar{margin-bottom:22px;text-align:left}
+.bar-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.bar-head .name{font-size:13.5px;font-weight:500;color:var(--text-dim)}
+.bar-head .val{font-family:var(--mono);font-weight:600;font-size:16px}
+.track{height:16px;border-radius:999px;background:rgba(255,255,255,.05);overflow:hidden;position:relative}
+.fill{height:100%;border-radius:999px;transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.fill.bad{background:linear-gradient(90deg,#e8675d,#dd5249)}
+.fill.good{background:linear-gradient(90deg,#6ee7b7,#34d399)}
+.in-view .fill.bad{transform:scaleX(1)}
+.in-view .fill.good{transform:scaleX(.262)}
+.saved-tag{display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-size:15px;font-weight:600;color:var(--green);
+  background:rgba(110,231,183,.1);border:1px solid rgba(110,231,183,.25);padding:9px 18px;border-radius:999px}
+.saved-tag svg{width:18px;height:18px}
+.mem-note{margin-top:18px;font-size:13px;color:var(--text-faint)}
+
+/* features ---------------------------------------------------------------- */
+.feat-head{text-align:center;margin-bottom:50px}
+.feat-head .lead{margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
+  border:1px solid var(--border);border-radius:var(--r);padding:26px 24px;transition:transform .25s,border-color .25s,background .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--border-strong);background:linear-gradient(180deg,rgba(167,139,250,.07),rgba(255,255,255,.01))}
+.card .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+  background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.2);color:var(--accent)}
+.card .ic svg{width:21px;height:21px}
+.card h3{font-size:16px;font-weight:600;margin-bottom:7px;letter-spacing:-.01em}
+.card p{font-size:14px;color:var(--text-dim);line-height:1.55}
+@media(max-width:880px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+
+/* showcase: the real Settings / Sessions / Stats screens ------------------ */
+.showcase .feat-head{margin-bottom:44px}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:start;justify-items:center}
+.shot{display:flex;flex-direction:column;align-items:center;gap:18px;margin:0;position:relative}
+.shot-glow{position:absolute;inset:-26px -12px 30px;z-index:-1;border-radius:50%;
+  background:radial-gradient(58% 46% at 50% 32%,rgba(139,92,246,.3),transparent 70%);filter:blur(20px)}
+.shot-frame{width:340px;height:560px;zoom:.86;display:block;border-radius:18px;background:#0f0b1a;
+  border:1px solid var(--border-strong);pointer-events:none;
+  box-shadow:0 26px 60px -22px rgba(4,2,14,.82),0 10px 26px -18px rgba(0,0,0,.6);
+  transform:translateZ(0);backface-visibility:hidden}
+.shot figcaption{display:flex;align-items:center;gap:10px;font-size:14.5px;font-weight:600;color:var(--text)}
+.shot figcaption .chip-ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.2);color:var(--accent)}
+.shot figcaption .chip-ic svg{width:16px;height:16px}
+.shot figcaption small{display:block;font-size:12.5px;font-weight:400;color:var(--text-faint);margin-top:1px}
+@media(max-width:860px){
+  .shots{grid-template-columns:1fr;gap:46px}
+  .shot-frame{zoom:1}
+}
+
+/* privacy ----------------------------------------------------------------- */
+.privacy{background:radial-gradient(70% 120% at 50% 0%, rgba(139,92,246,.12), transparent 60%);}
+.priv-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.priv-chips{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+.chip{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border-radius:999px;font-size:14px;font-weight:500;
+  border:1px solid var(--border-strong);background:rgba(255,255,255,.03)}
+.chip svg{width:16px;height:16px;color:var(--green)}
+.vault{position:relative;justify-self:center;width:100%;max-width:360px;display:flex;flex-direction:column;align-items:center}
+.vault .cloud{display:flex;flex-direction:column;align-items:center;gap:9px}
+.vault .cloud .cic{position:relative;width:56px;height:56px;border-radius:16px;display:grid;place-items:center;
+  border:1px dashed rgba(255,255,255,.16);background:rgba(255,255,255,.02);color:var(--text-faint)}
+.vault .cloud .cic>svg{width:27px;height:27px}
+.vault .cloud .cic .ban{position:absolute;inset:0;display:grid;place-items:center;color:#e08a8a}
+.vault .cloud .cic .ban svg{width:54px;height:54px}
+.vault .cloud b{font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--text-faint)}
+.vault .conn{width:0;height:32px;border-left:2px dashed rgba(255,255,255,.16)}
+.vault .dev{width:100%;border:1px solid var(--border-strong);border-radius:18px;padding:16px;position:relative;
+  background:linear-gradient(180deg,rgba(167,139,250,.09),rgba(255,255,255,.015));
+  box-shadow:0 36px 80px -34px rgba(139,92,246,.55),0 0 0 1px rgba(255,255,255,.03) inset}
+.vault .dev .top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.vault .dev .top .dvic{width:28px;height:28px;flex:none;border-radius:8px;display:grid;place-items:center;background:rgba(167,139,250,.13);border:1px solid rgba(167,139,250,.2);color:var(--accent)}
+.vault .dev .top .dvic svg{width:16px;height:16px}
+.vault .dev .top b{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-faint)}
+.vault .row{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:11px;background:rgba(255,255,255,.03);border:1px solid var(--border)}
+.vault .row+.row{margin-top:8px}
+.vault .row .ic{width:30px;height:30px;flex:none;border-radius:9px;display:grid;place-items:center;background:rgba(167,139,250,.13);border:1px solid rgba(167,139,250,.2);color:var(--accent)}
+.vault .row .ic svg{width:16px;height:16px}
+.vault .row .t{font-size:13.5px;font-weight:500;color:var(--text)}
+.vault .row .lk{margin-left:auto;color:var(--green);display:flex}
+.vault .row .lk svg{width:15px;height:15px}
+
+/* open source ------------------------------------------------------------- */
+.os-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+  border:1px solid var(--border);border-radius:24px;padding:50px;text-align:center;position:relative;overflow:hidden}
+.os-card::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 100% at 50% 0%,rgba(139,92,246,.14),transparent 60%);pointer-events:none}
+.os-meta{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center;margin-top:26px;color:var(--text-faint);font-size:13.5px;font-family:var(--mono)}
+.os-meta span{display:inline-flex;align-items:center;gap:8px}
+.os-meta svg{width:15px;height:15px;color:var(--accent)}
+
+/* final cta --------------------------------------------------------------- */
+.final{text-align:center;padding:96px 0}
+.final h2{font-size:clamp(32px,5.2vw,54px);margin-bottom:14px}
+.final .lead{margin:0 auto 34px}
+.final-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* footer ------------------------------------------------------------------ */
+footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-faint)}
+.foot-in{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.foot-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);font-size:16px;text-decoration:none}
+.foot-brand .logo{width:26px;height:26px}
+.foot-links{display:flex;flex-wrap:wrap;gap:24px}
+.foot-links a{color:var(--text-dim);text-decoration:none;font-size:14px;transition:color .2s}
+.foot-links a:hover{color:var(--accent-bright)}
+.foot-note{width:100%;font-size:13px;color:var(--text-faint);margin-top:10px}
+
+/* reveal (transform + opacity only = compositor friendly) ----------------- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .42s ease,transform .42s ease}
+.reveal.show{opacity:1;transform:none}
+
+@media(max-width:880px){
+  .hero-grid,.why-grid,.priv-grid{grid-template-columns:1fr;gap:48px}
+  .device{order:-1}
+  .why-grid .why-card{order:-1}
+  .band{padding:70px 0}
+}
+@media(max-width:480px){
+  .popup-frame,.shot-frame{zoom:.82}
+  .shell{padding:0 18px}
+  .os-card{padding:36px 22px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important;scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .fill{transition:none;transform:scaleX(var(--rm,1))}
+}
+</style>
+</head>
+<body>
+
+<div class="sky"></div>
+<div class="grain"></div>
+<div class="stars" aria-hidden="true">
+  <i class="star" style="top:12%;left:18%;animation-delay:0s"></i>
+  <i class="star" style="top:22%;left:72%;animation-delay:1.2s"></i>
+  <i class="star" style="top:38%;left:30%;animation-delay:2.4s"></i>
+  <i class="star" style="top:8%;left:54%;animation-delay:.6s"></i>
+  <i class="star" style="top:30%;left:88%;animation-delay:3.1s"></i>
+  <i class="star" style="top:46%;left:8%;animation-delay:1.8s"></i>
+  <i class="star" style="top:16%;left:42%;animation-delay:2.9s"></i>
+  <i class="star" style="top:52%;left:62%;animation-delay:.3s"></i>
+</div>
+
+<!-- nav --------------------------------------------------------------------->
+<nav id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top">
+      <img class="logo" src="icon-512.png" alt="Drowzy logo" width="30" height="30">
+      Drowzy
+    </a>
+    <div class="nav-links">
+      <a href="#why">Why Drowzy</a>
+      <a href="#features">Features</a>
+      <a href="#screens">Screens</a>
+      <a href="#privacy">Privacy</a>
+      <a href="https://github.com/ml3dev/drowzy">GitHub</a>
+      <a class="nav-cta" href="https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa">Add to Chrome</a>
+    </div>
+  </div>
+</nav>
+
+<!-- hero -------------------------------------------------------------------->
+<header class="hero" id="top">
+  <div class="shell hero-grid">
+    <div>
+      <span class="hero-pill reveal"><span class="dot"></span>Free · Open source · No tracking</span>
+      <h1 class="reveal">Put idle tabs to sleep and <span class="soft">get your memory back.</span></h1>
+      <p class="sub reveal">Drowzy puts the tabs you are not using to sleep and frees the memory they were taking up. They stay in your tab bar and wake the moment you click them.</p>
+      <div class="hero-cta reveal">
+        <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" x2="12" y1="8" y2="8"/><line x1="3.95" x2="8.54" y1="6.06" y2="14"/><line x1="10.88" x2="15.46" y1="21.94" y2="8"/></svg>
+          Add to Chrome
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/ml3dev/drowzy">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+      <p class="hero-note reveal"><b>Works in Chrome 120 and up.</b> Free, and open source under MIT.</p>
+    </div>
+
+    <!-- the REAL Drowzy popup, rendered live from popup.css + icons.js -->
+    <div class="device">
+      <div class="moonglow"></div>
+      <iframe id="popupFrame" class="popup-frame" src="demo-popup.html" title="The Drowzy popup" scrolling="no" loading="lazy" frameborder="0"></iframe>
+    </div>
+  </div>
+</header>
+
+<!-- trust strip ------------------------------------------------------------->
+<section class="trust shell reveal">
+  <div class="trust-row">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Built on Chrome's native discard API</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Zero data collected</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>50+ languages</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>MIT licensed</span>
+  </div>
+</section>
+
+<!-- why / discard ----------------------------------------------------------->
+<section class="band" id="why">
+  <div class="shell why-grid">
+    <div class="reveal">
+      <span class="eyebrow">Why Drowzy</span>
+      <h2>Most suspenders <em>gamble</em> with your tabs.</h2>
+      <p class="lead">They swap each tab for a placeholder page of their own. If that extension breaks, gets pulled from the store, or you remove it, those tabs can disappear right along with it.</p>
+      <p class="callout">Instead, Drowzy uses the <code>chrome.tabs.discard()</code> API that Chrome relies on to free memory itself.</p>
+    </div>
+
+    <div class="why-card reveal">
+      <ul class="diff">
+        <li>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+          <div><h4>Chrome owns the sleeping tab</h4><p>Drowzy hands suspension to Chrome's own engine, so a tab survives restarts, crashes, and even removing the extension.</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg></span>
+          <div><h4>Everything stays intact</h4><p>Full history, scroll position, and anything typed into a form is exactly where you left it when the tab wakes.</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+          <div><h4>No placeholder pages</h4><p>No redirects, no fake "this tab is suspended" screens, and no chrome-extension URLs cluttering your tab bar.</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>
+          <div><h4>Instant to wake</h4><p>Click the tab and Chrome reloads it on the spot. No extra step, no in-between page to click through.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- memory ------------------------------------------------------------------>
+<section class="band mem" id="memory">
+  <div class="shell reveal">
+    <span class="eyebrow" style="justify-content:center">The whole point</span>
+    <h2>Up to <em>80% less memory</em>, automatically.</h2>
+    <p class="lead">Open tabs you forgot about quietly eat RAM. Drowzy puts them to sleep and gives Chrome that memory back, so the tabs you are actually using stay fast.</p>
+
+    <div class="meter" id="meter">
+      <div class="meter-top"><span><b>47 tabs</b> open, a typical afternoon</span><span>Chrome memory in use</span></div>
+      <div class="bar">
+        <div class="bar-head"><span class="name">Without Drowzy</span><span class="val" style="color:#e8675d">4.2 GB</span></div>
+        <div class="track"><div class="fill bad"></div></div>
+      </div>
+      <div class="bar">
+        <div class="bar-head"><span class="name">With Drowzy</span><span class="val" style="color:var(--green)">1.1 GB</span></div>
+        <div class="track"><div class="fill good"></div></div>
+      </div>
+      <div style="text-align:center">
+        <span class="saved-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          about 74% lighter
+        </span>
+      </div>
+      <p class="mem-note">Figures vary with what you have open. Drowzy estimates roughly 150 MB freed per suspended tab.</p>
+    </div>
+  </div>
+</section>
+
+<!-- features ---------------------------------------------------------------->
+<section class="band" id="features">
+  <div class="shell">
+    <div class="feat-head reveal">
+      <span class="eyebrow" style="justify-content:center">Everything it does</span>
+      <h2>Everything you need, <em>nothing in your way</em>.</h2>
+      <p class="lead">A complete set of controls that stays quiet until you want it. Set your timer once and let it run, or take over by hand whenever you like.</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="10" x2="10" y1="15" y2="9"/><line x1="14" x2="14" y1="15" y2="9"/></svg></span>
+        <h3>Auto-suspend</h3>
+        <p>Puts inactive tabs to sleep after a timer you choose, anywhere from 5 minutes to 4 hours, or manual only.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <h3>Smart protection</h3>
+        <p>Pinned tabs, tabs playing audio, and tabs with unsaved form text are never touched.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+        <h3>Whitelist</h3>
+        <p>Keep any site awake with simple wildcard patterns like github.com/ml3dev/*.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg></span>
+        <h3>Sessions</h3>
+        <p>Save a whole window and reopen it later, with tab groups, names, and colors preserved.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg></span>
+        <h3>Side panel</h3>
+        <p>Pin Drowzy to Chrome's side panel for a persistent, full-height view of everything.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></svg></span>
+        <h3>Keyboard and menu</h3>
+        <p>Suspend or wake with a keystroke, or right-click any page for quick actions.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v1"/><path d="M12 20v1"/><path d="M3 12h1"/><path d="M20 12h1"/><path d="m18.364 5.636-.707.707"/><path d="m6.343 17.657-.707.707"/><path d="m5.636 5.636.707.707"/><path d="m17.657 17.657.707.707"/></svg></span>
+        <h3>Dark and light</h3>
+        <p>Toggle the theme from the header. Your preference is remembered next time.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+        <h3>50+ languages</h3>
+        <p>The entire interface follows your browser language, automatically.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
+        <h3>Stats dashboard</h3>
+        <p>See how many tabs you have suspended and how much memory Drowzy has saved you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- showcase: real screens ------------------------------------------------->
+<section class="band showcase" id="screens">
+  <div class="shell">
+    <div class="feat-head reveal">
+      <span class="eyebrow" style="justify-content:center">See it in action</span>
+      <h2>Every screen, <em>clean and out of the way</em>.</h2>
+      <p class="lead">The same popup opens to settings you tune once, sessions you can bring back, and stats that show exactly what Drowzy has saved you. This is the real interface, not a mockup.</p>
+    </div>
+    <div class="shots">
+      <figure class="shot reveal">
+        <div class="shot-stage"><div class="shot-glow"></div>
+          <iframe class="shot-frame" src="screen-settings.html" title="Drowzy settings" scrolling="no" loading="lazy" frameborder="0"></iframe>
+        </div>
+        <figcaption>
+          <span class="chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span>Settings<small>Timer, protections, and your whitelist</small></span>
+        </figcaption>
+      </figure>
+
+      <figure class="shot reveal">
+        <div class="shot-stage"><div class="shot-glow"></div>
+          <iframe class="shot-frame" src="screen-sessions.html" title="Drowzy sessions" scrolling="no" loading="lazy" frameborder="0"></iframe>
+        </div>
+        <figcaption>
+          <span class="chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg></span>
+          <span>Sessions<small>Save a window, reopen it whole later</small></span>
+        </figcaption>
+      </figure>
+
+      <figure class="shot reveal">
+        <div class="shot-stage"><div class="shot-glow"></div>
+          <iframe class="shot-frame" src="screen-stats.html" title="Drowzy stats" scrolling="no" loading="lazy" frameborder="0"></iframe>
+        </div>
+        <figcaption>
+          <span class="chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
+          <span>Stats<small>Tabs suspended and memory reclaimed</small></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- privacy ----------------------------------------------------------------->
+<section class="band privacy" id="privacy">
+  <div class="shell priv-grid">
+    <div class="reveal">
+      <span class="eyebrow">Private by design</span>
+      <h2>Drowzy never sends <em>your data</em> anywhere.</h2>
+      <p class="lead">Drowzy has no servers, no accounts, and no third-party tracking. Your settings, sessions, and stats are all counted and kept on your own machine, and none of it is ever uploaded anywhere, not even to us. The stats you see are simply your own numbers, shown back to you.</p>
+      <p class="lead" style="margin-top:16px">Tab suspenders have a history of being quietly sold and turned into trackers. Drowzy is built so that cannot happen in the dark: the code is public, and there is no server for it to send anything to.</p>
+      <div class="priv-chips">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No servers</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No tracking</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No accounts</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>On-device only</span>
+      </div>
+    </div>
+
+    <div class="vault reveal" aria-hidden="true">
+      <div class="cloud">
+        <div class="cic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          <span class="ban"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg></span>
+        </div>
+        <b>Never uploaded</b>
+      </div>
+      <div class="conn"></div>
+      <div class="dev">
+        <div class="top"><span class="dvic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span><b>On your device</b></div>
+        <div class="row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg></span>
+          <span class="t">Tabs &amp; sessions</span>
+          <span class="lk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+        </div>
+        <div class="row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
+          <span class="t">Saved stats</span>
+          <span class="lk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+        </div>
+        <div class="row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span class="t">Settings</span>
+          <span class="lk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- open source ------------------------------------------------------------->
+<section class="band" id="open-source">
+  <div class="shell">
+    <div class="os-card reveal">
+      <span class="eyebrow" style="justify-content:center">Open source</span>
+      <h2>See exactly <em>what it does</em>.</h2>
+      <p class="lead" style="margin:0 auto">Vanilla JavaScript with no build step, no dependencies, and no node_modules. Every release on GitHub ships the exact zip uploaded to the Web Store, with a SHA-256 you can check yourself.</p>
+      <div class="os-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>MIT licensed</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>No build, no deps</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>SHA-256 verified releases</span>
+      </div>
+      <div style="margin-top:30px">
+        <a class="btn btn-ghost" href="https://github.com/ml3dev/drowzy">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          Read the source
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- final cta --------------------------------------------------------------->
+<section class="final">
+  <div class="shell reveal">
+    <h2>Try Drowzy <em>for free</em>.</h2>
+    <p class="lead">Add Drowzy, set your timer once, and let your forgotten tabs rest. Free, open source, and yours.</p>
+    <div class="final-cta">
+      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" x2="12" y1="8" y2="8"/><line x1="3.95" x2="8.54" y1="6.06" y2="14"/><line x1="10.88" x2="15.46" y1="21.94" y2="8"/></svg>
+        Add to Chrome
+      </a>
+      <a class="btn btn-ghost" href="https://github.com/ml3dev/drowzy">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        Star on GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- footer ------------------------------------------------------------------>
+<footer>
+  <div class="shell foot-in">
+    <a class="foot-brand" href="#top">
+      <img class="logo" src="icon-512.png" alt="Drowzy logo" width="26" height="26">
+      Drowzy
+    </a>
+    <div class="foot-links">
+      <a href="https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa">Chrome Web Store</a>
+      <a href="https://github.com/ml3dev/drowzy">GitHub</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="https://github.com/ml3dev/drowzy/blob/main/CHANGELOG.md">Changelog</a>
+      <a href="https://github.com/ml3dev/drowzy/blob/main/LICENSE">License</a>
+    </div>
+    <p class="foot-note">Drowzy is free and open source under the MIT license. Built by <a href="https://github.com/ml3dev" style="color:var(--text-dim)">ml3dev</a>.</p>
+  </div>
+</footer>
+
+<script>
+// sticky nav shadow
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>8),{passive:true});
+
+// auto-size every embedded popup/screen from the height it reports
+addEventListener('message',(e)=>{
+  if(!e.data||typeof e.data.drowzyHeight!=='number') return;
+  document.querySelectorAll('#popupFrame,.shot-frame').forEach((f)=>{
+    if(f.contentWindow===e.source) f.style.height=(e.data.drowzyHeight)+'px';
+  });
+});
+
+// staggered reveal on scroll (toggles a class -> only transform/opacity animate)
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
+},{threshold:.05,rootMargin:'0px 0px -2% 0px'});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  el.style.transitionDelay=(Math.min(i,3)*40)+'ms';
+  io.observe(el);
+});
+// reveal the hero immediately
+document.querySelectorAll('.hero .reveal').forEach(el=>el.classList.add('show'));
+
+// fire the memory meter when it scrolls into view
+const meter=document.getElementById('meter');
+const mio=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ meter.classList.add('in-view'); mio.disconnect(); } });
+},{threshold:.4});
+mio.observe(meter);
+</script>
+</body>
+</html>

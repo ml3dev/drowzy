@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Focused SNIPPET: just the Drowzy Sessions panel (real popup.css + icons.js). -->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="popup.css">
+<style>
+  html,body{margin:0}
+  body{background:transparent;opacity:1;max-height:none;overflow:visible}
+  .popup-container{height:auto;max-height:none}
+  .session-favicon-stack img{background:transparent;object-fit:contain}
+  /* show the row actions at full strength for the static shot (hover-dimmed live) */
+  .session-actions{opacity:1}
+</style>
+</head>
+<body inert>
+  <div class="popup-container">
+    <div class="main-content">
+      <div class="sections-area">
+        <div class="collapsible-section">
+          <button class="section-toggle" aria-expanded="true"><span class="section-toggle-left"><span data-icon="folderOpen"></span><span>Sessions</span></span><span class="section-chevron" data-icon="chevronRight"></span></button>
+          <div class="section-body open">
+            <div class="section-body-inner">
+              <div class="session-save-row">
+                <input type="text" class="input" placeholder="Session name (optional)">
+                <button class="btn btn-sm"><span data-icon="save"></span><span>Save</span></button>
+                <button class="btn btn-sm" title="Copy all sessions as JSON"><span data-icon="clipboard"></span></button>
+              </div>
+              <div class="session-list">
+                <div class="session-card">
+                  <div class="session-favicon-stack">
+                    <img src="https://www.google.com/s2/favicons?domain=slack.com&sz=64" width="16" height="16" alt="">
+                    <img src="https://www.google.com/s2/favicons?domain=discord.com&sz=64" width="16" height="16" alt="">
+                    <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=64" width="16" height="16" alt="">
+                    <img src="https://www.google.com/s2/favicons?domain=google.com&sz=64" width="16" height="16" alt="">
+                  </div>
+                  <div class="session-info">
+                    <div class="session-name">Work</div>
+                    <div class="session-meta">12 tabs · 2 days ago</div>
+                  </div>
+                  <div class="session-actions">
+                    <button class="btn btn-sm"><span data-icon="download" data-icon-size="12"></span><span>Open</span></button>
+                    <button class="btn btn-sm btn-ghost-danger"><span data-icon="trash2" data-icon-size="13"></span></button>
+                  </div>
+                </div>
+                <div class="session-card">
+                  <div class="session-favicon-stack">
+                    <img src="https://www.google.com/s2/favicons?domain=en.wikipedia.org&sz=64" width="16" height="16" alt="">
+                    <img src="https://www.google.com/s2/favicons?domain=google.com&sz=64" width="16" height="16" alt="">
+                    <img src="https://www.google.com/s2/favicons?domain=reddit.com&sz=64" width="16" height="16" alt="">
+                    <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" width="16" height="16" alt="">
+                  </div>
+                  <div class="session-info">
+                    <div class="session-name">Research</div>
+                    <div class="session-meta">8 tabs · 5 days ago</div>
+                  </div>
+                  <div class="session-actions">
+                    <button class="btn btn-sm"><span data-icon="download" data-icon-size="12"></span><span>Open</span></button>
+                    <button class="btn btn-sm btn-ghost-danger"><span data-icon="trash2" data-icon-size="13"></span></button>
+                  </div>
+                </div>
+                <div class="session-card">
+                  <div class="session-favicon-stack">
+                    <img src="https://www.google.com/s2/favicons?domain=netflix.com&sz=64" width="16" height="16" alt="">
+                    <img src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64" width="16" height="16" alt="">
+                    <img src="https://www.google.com/s2/favicons?domain=twitch.tv&sz=64" width="16" height="16" alt="">
+                    <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" width="16" height="16" alt="">
+                  </div>
+                  <div class="session-info">
+                    <div class="session-name">Watch later</div>
+                    <div class="session-meta">6 tabs · 1 week ago</div>
+                  </div>
+                  <div class="session-actions">
+                    <button class="btn btn-sm"><span data-icon="download" data-icon-size="12"></span><span>Open</span></button>
+                    <button class="btn btn-sm btn-ghost-danger"><span data-icon="trash2" data-icon-size="13"></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="icons.js"></script>
+  <script>
+    document.querySelectorAll('[data-icon]').forEach(function(el){ el.innerHTML = icon(el.dataset.icon, parseInt(el.dataset.iconSize || '14', 10)); });
+    (function(){
+      function report(){ var el = document.querySelector('.popup-container'); if(el && parent !== window) parent.postMessage({drowzyHeight: Math.ceil(el.getBoundingClientRect().height)}, '*'); }
+      window.addEventListener('load', report); setTimeout(report, 80); setTimeout(report, 350);
+    })();
+  </script>
+</body>
+</html>

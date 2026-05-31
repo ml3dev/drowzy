@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Focused SNIPPET: just the Drowzy Stats panel (real popup.css + icons.js). -->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="popup.css">
+<style>
+  html,body{margin:0}
+  body{background:transparent;opacity:1;max-height:none;overflow:visible}
+  .popup-container{height:auto;max-height:none}
+</style>
+</head>
+<body inert>
+  <div class="popup-container">
+    <div class="main-content">
+      <div class="sections-area">
+        <div class="collapsible-section">
+          <button class="section-toggle" aria-expanded="true"><span class="section-toggle-left"><span data-icon="barChart3"></span><span>Stats</span></span><span class="section-chevron" data-icon="chevronRight"></span></button>
+          <div class="section-body open">
+            <div class="section-body-inner">
+              <div class="stat-hero">
+                <span class="stat-hero-icon" data-icon="zap"></span>
+                <div class="stat-hero-content">
+                  <span class="stat-hero-value">175.8 GB</span>
+                  <span class="stat-hero-label">Lifetime RAM saved</span>
+                </div>
+              </div>
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <span class="stat-card-icon" data-icon="calendarDays" data-icon-size="12"></span>
+                  <div class="stat-card-content"><span class="stat-card-value">18</span><span class="stat-card-label">Today</span></div>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-card-icon" data-icon="barChart3" data-icon-size="12"></span>
+                  <div class="stat-card-content"><span class="stat-card-value">1200</span><span class="stat-card-label">All time</span></div>
+                </div>
+              </div>
+              <div class="stats-footer">
+                <span class="stat-member">Since March 9, 2026</span>
+                <button class="btn btn-sm"><span data-icon="clipboard" data-icon-size="11"></span><span>Share</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="icons.js"></script>
+  <script>
+    document.querySelectorAll('[data-icon]').forEach(function(el){ el.innerHTML = icon(el.dataset.icon, parseInt(el.dataset.iconSize || '14', 10)); });
+    (function(){
+      function report(){ var el = document.querySelector('.popup-container'); if(el && parent !== window) parent.postMessage({drowzyHeight: Math.ceil(el.getBoundingClientRect().height)}, '*'); }
+      window.addEventListener('load', report); setTimeout(report, 80); setTimeout(report, 350);
+    })();
+  </script>
+</body>
+</html>

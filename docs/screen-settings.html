@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- Focused SNIPPET: just the Drowzy Settings panel (real popup.css + icons.js). -->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="popup.css">
+<style>
+  html,body{margin:0}
+  body{background:transparent;opacity:1;max-height:none;overflow:visible}
+  .popup-container{height:auto;max-height:none}
+</style>
+</head>
+<body inert>
+  <div class="popup-container">
+    <div class="main-content">
+      <div class="sections-area">
+        <div class="collapsible-section">
+          <button class="section-toggle" aria-expanded="true"><span class="section-toggle-left"><span data-icon="settings"></span><span>Settings</span></span><span class="section-chevron" data-icon="chevronRight"></span></button>
+          <div class="section-body open">
+            <div class="section-body-inner">
+              <div class="setting-row">
+                <label for="suspendTimer">Auto-suspend after</label>
+                <select id="suspendTimer" class="select">
+                  <option value="5">5 minutes</option>
+                  <option value="15" selected>15 minutes</option>
+                  <option value="30">30 minutes</option>
+                  <option value="60">1 hour</option>
+                </select>
+              </div>
+              <div class="setting-row"><label for="togglePinned">Protect pinned tabs</label><label class="switch"><input type="checkbox" id="togglePinned" checked><span class="slider"></span></label></div>
+              <div class="setting-row"><label for="toggleAudio">Protect audio tabs</label><label class="switch"><input type="checkbox" id="toggleAudio" checked><span class="slider"></span></label></div>
+              <div class="setting-row"><label for="toggleForms">Protect tabs with forms</label><label class="switch"><input type="checkbox" id="toggleForms" checked><span class="slider"></span></label></div>
+              <div class="setting-row"><label for="toggleAutoSuspend">Enable auto-suspend</label><label class="switch"><input type="checkbox" id="toggleAutoSuspend" checked><span class="slider"></span></label></div>
+              <div class="setting-row"><label for="toggleMarkSuspended">Mark suspended tabs</label><label class="switch"><input type="checkbox" id="toggleMarkSuspended" checked><span class="slider"></span></label></div>
+              <div class="setting-row setting-row-block">
+                <label><span>Whitelisted sites</span> <span class="whitelist-count">(3)</span></label>
+                <div class="whitelist-add">
+                  <input type="text" class="input" placeholder="example.com, full URL, or site.com/path/*">
+                  <button class="btn btn-sm"><span data-icon="plus"></span><span>Add</span></button>
+                </div>
+                <ul class="whitelist-list">
+                  <li class="whitelist-item"><span class="whitelist-domain">github.com</span><button type="button" class="whitelist-remove"><span class="whitelist-remove-text">Remove</span><span class="whitelist-remove-x" aria-hidden="true">×</span></button></li>
+                  <li class="whitelist-item"><span class="whitelist-domain">figma.com</span><button type="button" class="whitelist-remove"><span class="whitelist-remove-text">Remove</span><span class="whitelist-remove-x" aria-hidden="true">×</span></button></li>
+                  <li class="whitelist-item"><span class="whitelist-domain">notion.so</span><button type="button" class="whitelist-remove"><span class="whitelist-remove-text">Remove</span><span class="whitelist-remove-x" aria-hidden="true">×</span></button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="icons.js"></script>
+  <script>
+    document.querySelectorAll('[data-icon]').forEach(function(el){ el.innerHTML = icon(el.dataset.icon, parseInt(el.dataset.iconSize || '14', 10)); });
+    (function(){
+      function report(){ var el = document.querySelector('.popup-container'); if(el && parent !== window) parent.postMessage({drowzyHeight: Math.ceil(el.getBoundingClientRect().height)}, '*'); }
+      window.addEventListener('load', report); setTimeout(report, 80); setTimeout(report, 350);
+    })();
+  </script>
+</body>
+</html>

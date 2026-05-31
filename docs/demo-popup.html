@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+  Live render of the REAL Drowzy popup using the actual popup.css + icons.js.
+  Embedded by index.html in an auto-sized iframe. Expanded fully (no fade, no
+  height cap, no internal scroll) so the whole window shows at once.
+-->
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="popup.css">
+<style>
+  body{background:transparent;margin:0;opacity:1;max-height:none;overflow:visible}
+  .popup-container{height:auto;max-height:none}
+  .main-content{overflow:visible}
+  .favicon{object-fit:contain;background:transparent}
+</style>
+</head>
+<body inert>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="header-left">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" fill="currentColor" opacity="0.9"/></svg>
+        <span class="header-title">Drowzy</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn-icon-only" id="themeToggle" aria-label="Toggle theme"></button>
+      </div>
+    </header>
+
+    <div class="stats-strip">
+      <div class="strip-stat"><span class="strip-stat-value" id="statSleepingValue">3</span><span class="strip-stat-label">sleeping</span></div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat"><span class="strip-stat-value" id="statProtectedValue">3</span><span class="strip-stat-label">protected</span></div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat"><span class="strip-stat-value" id="statMemoryValue">450 MB</span><span class="strip-stat-label">saved</span></div>
+    </div>
+
+    <div class="quick-actions">
+      <button class="btn btn-primary" id="btnSuspendOthers"><span class="btn-icon" data-icon="pauseCircle"></span><span class="btn-text">Suspend Others</span></button>
+      <button class="btn" id="btnWakeAll"><span class="btn-icon" data-icon="playCircle"></span><span class="btn-text">Wake All</span></button>
+    </div>
+
+    <div class="main-content">
+      <div class="current-tab" id="currentTabSection">
+        <div class="current-tab-info">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=google.com&sz=64" alt="">
+          <div class="current-tab-details">
+            <div class="current-tab-domain">google.com</div>
+            <div class="current-tab-status">Active, won't be suspended</div>
+          </div>
+        </div>
+        <button class="btn btn-whitelist" id="btnToggleWhitelist"><span class="btn-icon" data-icon="shield"></span><span class="btn-text">Never suspend this site</span></button>
+      </div>
+
+      <div class="tab-list-header">
+        <span class="section-label">Tabs in this window</span>
+        <div class="tab-list-header-actions">
+          <button class="btn-icon-only" title="Close duplicate tabs"><span data-icon="copy"></span></button>
+          <button class="btn-icon-only" title="Search tabs"><span data-icon="search"></span></button>
+          <button class="btn-icon-only" title="Copy tab list"><span data-icon="clipboard"></span></button>
+        </div>
+      </div>
+
+      <div class="tab-list" id="tabList">
+        <div class="tab-item" role="button" tabindex="0">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=google.com&sz=64" alt="">
+          <span class="tab-title">why is Chrome using 4 GB of RAM</span>
+          <span class="tab-meta"><span class="badge badge-active"><span data-icon="eye" data-icon-size="11"></span> Active</span></span>
+        </div>
+        <div class="tab-item" role="button" tabindex="0">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=discord.com&sz=64" alt="">
+          <span class="tab-title">#dev-chat, Discord</span>
+          <span class="tab-meta"><span class="badge badge-timer"><span data-icon="clock" data-icon-size="11"></span> 12m</span></span>
+          <button class="tab-suspend-btn" title="Suspend this tab"><span data-icon="pause" data-icon-size="11"></span></button>
+        </div>
+        <div class="tab-item" role="button" tabindex="0">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=youtube.com&sz=64" alt="">
+          <span class="tab-title">lofi hip hop radio, beats to relax/study to</span>
+          <span class="tab-meta"><span class="badge badge-audio"><span data-icon="volume2" data-icon-size="11"></span> Audio</span></span>
+        </div>
+        <div class="tab-item" role="button" tabindex="0">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=spotify.com&sz=64" alt="">
+          <span class="tab-title">Deep Focus, Spotify</span>
+          <span class="tab-meta"><span class="badge badge-pinned"><span data-icon="pin" data-icon-size="11"></span> Pinned</span></span>
+        </div>
+        <div class="tab-item sleeping" role="button" tabindex="0">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=64" alt="">
+          <span class="tab-title">r/chrome • best tab suspender?</span>
+          <span class="tab-meta"><span class="badge badge-sleeping"><span data-icon="moon" data-icon-size="11"></span> zzz</span></span>
+        </div>
+        <div class="tab-item sleeping" role="button" tabindex="0">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=en.wikipedia.org&sz=64" alt="">
+          <span class="tab-title">Sleep, Wikipedia</span>
+          <span class="tab-meta"><span class="badge badge-sleeping"><span data-icon="moon" data-icon-size="11"></span> zzz</span></span>
+        </div>
+        <div class="tab-item sleeping" role="button" tabindex="0">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=netflix.com&sz=64" alt="">
+          <span class="tab-title">Continue watching, Netflix</span>
+          <span class="tab-meta"><span class="badge badge-sleeping"><span data-icon="moon" data-icon-size="11"></span> zzz</span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="icons.js"></script>
+  <script>
+    document.querySelectorAll('[data-icon]').forEach(function(el){
+      el.innerHTML = icon(el.dataset.icon, parseInt(el.dataset.iconSize || '14', 10));
+    });
+    var tt = document.getElementById('themeToggle');
+    if (tt) tt.innerHTML = icon('sunMedium', 16);
+    (function(){
+      function report(){ var el = document.querySelector('.popup-container'); if(el && parent !== window) parent.postMessage({drowzyHeight: Math.ceil(el.getBoundingClientRect().height)}, '*'); }
+      window.addEventListener('load', report); setTimeout(report, 80); setTimeout(report, 350);
+    })();
+  </script>
+</body>
+</html>
