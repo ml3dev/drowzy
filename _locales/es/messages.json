@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Iconos más claros, una insignia de barra acorde a la marca, mejores etiquetas para lectores de pantalla y un popup más ordenado."
+  },
+  "suspendThisTabHint": {
+    "message": "Cambia a otra pestaña y suspende esta"
+  },
+  "changelog137Title1": {
+    "message": "Vuelve a suspender una sola pestaña"
+  },
+  "changelog137Desc1": {
+    "message": "Después de despertar una pestaña suspendida para verla, el nuevo botón Suspender esta pestaña en la ventana emergente y el panel lateral vuelve a suspender solo esa pestaña. Primero te cambia a otra pestaña, porque la pestaña que estás viendo no se puede suspender."
   }
 }

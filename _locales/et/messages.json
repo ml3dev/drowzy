@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Selgemad ikoonid, brändivärvides tööriistariba märk, paremad ekraanilugeja sildid ja korralikum hüpikaken."
+  },
+  "suspendThisTabHint": {
+    "message": "Mine teisele kaardile ja pane see uinakule"
+  },
+  "changelog137Title1": {
+    "message": "Pane üks kaart uuesti uinakule"
+  },
+  "changelog137Desc1": {
+    "message": "Kui oled uinunud kaardi vaatamiseks äratanud, paneb hüpikaknas ja külgpaneelil olev uus nupp Pane see kaart uinakule ainult selle kaardi uuesti uinakule. Esmalt lülitab see sind teisele kaardile, sest vaadatavat kaarti ei saa uinakule panna."
   }
 }

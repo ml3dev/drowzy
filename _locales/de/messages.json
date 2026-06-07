@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Klarere Symbole, ein markengerechtes Symbolleisten-Badge, bessere Screenreader-Beschriftungen und ein aufgeräumteres Popup."
+  },
+  "suspendThisTabHint": {
+    "message": "Zu anderem Tab wechseln und diesen schlafen legen"
+  },
+  "changelog137Title1": {
+    "message": "Einen einzelnen Tab wieder schlafen legen"
+  },
+  "changelog137Desc1": {
+    "message": "Nachdem du einen schlafenden Tab zum Ansehen aufgeweckt hast, legt die neue Schaltfläche „Diesen Tab schlafen legen\" im Popup und in der Seitenleiste genau diesen Tab wieder schlafen. Zuerst wird zu einem anderen Tab gewechselt, da der gerade angezeigte Tab nicht schlafen gelegt werden kann."
   }
 }

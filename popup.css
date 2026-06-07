@@ -531,6 +531,21 @@ body:not(.popup-ready) {
   margin-top: 1px;
 }
 
+.btn-suspend-current {
+  width: 100%;
+  margin-bottom: 6px;
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+  border-color: var(--border-accent);
+  box-shadow: none;
+}
+
+.btn-suspend-current:hover {
+  background: var(--color-accent-hover-dim);
+  color: var(--color-accent-hover);
+  box-shadow: var(--shadow-glow-sm);
+}
+
 .btn-whitelist {
   width: 100%;
   background: var(--color-accent-dim);

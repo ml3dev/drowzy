@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Érthetőbb ikonok, márkaszínű eszköztár-jelvény, jobb képernyőolvasó-feliratok és letisztultabb felugró ablak."
+  },
+  "suspendThisTabHint": {
+    "message": "Váltás másik lapra, és ennek altatása"
+  },
+  "changelog137Title1": {
+    "message": "Altass el újra egyetlen lapot"
+  },
+  "changelog137Desc1": {
+    "message": "Miután felébresztesz egy alvó lapot, hogy megnézd, az előugró ablakban és az oldalsávban lévő új „Lap altatása\" gomb csak azt a lapot altatja el újra. Először átvált egy másik lapra, mivel az éppen megtekintett lap nem altatható el."
   }
 }

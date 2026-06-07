@@ -2,6 +2,23 @@
 
 All notable changes to Drowzy are documented here.
 
+## [1.3.7] -- 2026-06-07
+
+Small, additive fix. No new permissions, and the core suspension pipeline is unchanged.
+
+### Added
+- **"Suspend this tab" button in the current-tab section** (popup and side panel). After you wake a sleeping tab to look at it, you can now put just that one tab back to sleep straight from the UI. It switches you to another open tab first, since Chrome cannot suspend the tab you are currently viewing, then suspends the one you left. The button shows only when the active tab can actually be suspended (a normal page that is not pinned, playing audio, whitelisted, or a system page) and there is another awake tab to switch to.
+
+### Fixed
+- **Could not re-suspend a single woken tab from the popup.** Waking a tab from the list activates it, and an active tab has no suspend control, so a woken tab could only be put back to sleep with the Alt+Shift+P shortcut or the right-click menu. The new button closes that loop, reusing the same proven suspend-current path as those two entry points.
+
+### i18n
+- New keys translated across all 57 locales: `suspendThisTabHint` (the button's tooltip) and the in-app "What's New" 1.3.7 entry (`changelog137Title1`, `changelog137Desc1`). The visible button label reuses the existing `ctxSuspendThis`. The 11 best-effort locales (Amharic, Bengali, Gujarati, Kannada, Malayalam, Marathi, Odia, Tamil, Telugu, Filipino, Swahili) use machine translations flagged for a future native-speaker pass.
+- **In-app "What's New" page updated to 1.3.7** (`changelog.html`) so it leads with this release instead of 1.3.6. As before, the page only auto-opens on major version bumps, so updating to 1.3.7 does not pop the What's New tab.
+
+### Audit
+- All 57 locale files validated: JSON validity, key parity against `en` (203 keys, no missing or extra keys), no empty values, no untranslated-English left in non-English locales for the new keys, and no unexpected placeholder tokens. `background.js`, `popup.js`, and `changelog.js` pass `node --check`, and every `data-i18n*` reference in `popup.html` / `sidepanel.html` / `changelog.html` resolves to a real key. Permissions are unchanged from 1.3.6.
+
 ## [1.3.6] -- 2026-05-29
 
 Localization and polish release. No new permissions; the suspension pipeline is untouched (the only `background.js` change is rebuilding the context menus on startup).

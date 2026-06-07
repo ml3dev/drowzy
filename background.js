@@ -973,6 +973,19 @@ async function handleMessage(msg) {
     }
 
     case 'suspendTab': return { success: await suspendTab(msg.tabId) };
+    case 'suspendCurrent': {
+      // Re-suspend the active tab (e.g. one the user just woke). Reuses the
+      // proven handleSuspendCurrent path, which activates a neighbour first
+      // (Chrome can't discard the active tab) and then discards this one.
+      let [at] = await chrome.tabs.query({ active: true, currentWindow: true });
+      if (!at) return { success: false };
+      await handleSuspendCurrent(at);
+      // Confirm by re-reading discard state rather than trusting the call —
+      // handleSuspendCurrent no-ops if the tab is protected or has no neighbour.
+      let after = await chrome.tabs.get(at.id).catch(() => null);
+      let ok = !!(after && after.discarded);
+      return { success: ok, mbFreed: ok ? MB_PER_TAB : 0 };
+    }
     case 'suspendOthers': {
       let [at] = await chrome.tabs.query({ active: true, currentWindow: true });
       let count = await suspendAllOthers(at?.windowId);

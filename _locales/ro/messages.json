@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Pictograme mai clare, o insignă de bară în culoarea mărcii, etichete mai bune pentru cititoare de ecran și un popup mai ordonat."
+  },
+  "suspendThisTabHint": {
+    "message": "Comută la altă filă și suspend-o pe aceasta"
+  },
+  "changelog137Title1": {
+    "message": "Repune o singură filă în repaus"
+  },
+  "changelog137Desc1": {
+    "message": "După ce trezești o filă în repaus ca să o vezi, noul buton Suspendă această filă din fereastra pop-up și panoul lateral repune în repaus doar acea filă. Te comută mai întâi la altă filă, deoarece fila pe care o vezi nu poate fi suspendată."
   }
 }

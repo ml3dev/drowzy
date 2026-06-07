@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Ícones mais claros, um emblema de barra na cor da marca, melhores etiquetas para leitores de ecrã e um popup mais organizado."
+  },
+  "suspendThisTabHint": {
+    "message": "Mude para outro separador e suspenda este"
+  },
+  "changelog137Title1": {
+    "message": "Volte a suspender um único separador"
+  },
+  "changelog137Desc1": {
+    "message": "Depois de acordar um separador suspenso para o ver, o novo botão Suspender este separador no popup e no painel lateral volta a suspender apenas esse separador. Muda primeiro para outro separador, porque o separador que está a ver não pode ser suspenso."
   }
 }

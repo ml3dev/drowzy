@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Icone più chiare, un badge della barra in linea col marchio, etichette migliori per screen reader e un popup più ordinato."
+  },
+  "suspendThisTabHint": {
+    "message": "Passa a un'altra scheda e sospendi questa"
+  },
+  "changelog137Title1": {
+    "message": "Rimetti a dormire una singola scheda"
+  },
+  "changelog137Desc1": {
+    "message": "Dopo aver riattivato una scheda sospesa per guardarla, il nuovo pulsante Sospendi questa scheda nel popup e nel pannello laterale rimette a dormire solo quella scheda. Prima ti porta su un'altra scheda, perché la scheda che stai guardando non può essere sospesa."
   }
 }

@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Tydligare ikoner, en verktygsfältsbricka i varumärkesfärg, bättre etiketter för skärmläsare och ett snyggare popup."
+  },
+  "suspendThisTabHint": {
+    "message": "Byt till en annan flik och försätt denna i viloläge"
+  },
+  "changelog137Title1": {
+    "message": "Söv om en enda flik"
+  },
+  "changelog137Desc1": {
+    "message": "När du har väckt en sovande flik för att titta på den sätter den nya knappen Försätt denna flik i viloläge i popupen och sidopanelen bara den fliken i viloläge igen. Den växlar dig först till en annan flik, eftersom fliken du tittar på inte kan försättas i viloläge."
   }
 }

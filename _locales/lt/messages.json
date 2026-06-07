@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Aiškesnės piktogramos, įrankių juostos ženklelis prekės ženklo spalvomis, geresni ekrano skaitytuvų užrašai ir tvarkingesnis iškylantis langas."
+  },
+  "suspendThisTabHint": {
+    "message": "Perjungti į kitą kortelę ir užmigdyti šią"
+  },
+  "changelog137Title1": {
+    "message": "Vėl užmigdykite vieną kortelę"
+  },
+  "changelog137Desc1": {
+    "message": "Pažadinę užmigdytą kortelę, kad ją peržiūrėtumėte, naujas mygtukas Užmigdyti šią kortelę iškylančiajame lange ir šoniniame skydelyje vėl užmigdo tik tą kortelę. Pirmiausia jus perjungia į kitą kortelę, nes peržiūrimos kortelės užmigdyti negalima."
   }
 }

@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Ícones mais claros, um selo de barra na cor da marca, melhores rótulos para leitores de tela e um popup mais organizado."
+  },
+  "suspendThisTabHint": {
+    "message": "Mude para outra aba e suspenda esta"
+  },
+  "changelog137Title1": {
+    "message": "Coloque uma única aba para dormir de novo"
+  },
+  "changelog137Desc1": {
+    "message": "Depois de acordar uma aba suspensa para vê-la, o novo botão Suspender esta aba no popup e no painel lateral coloca somente essa aba para dormir de novo. Ele troca você para outra aba primeiro, porque a aba que você está vendo não pode ser suspensa."
   }
 }

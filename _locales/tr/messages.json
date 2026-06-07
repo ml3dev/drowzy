@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Daha net simgeler, markaya uygun araç çubuğu rozeti, ekran okuyucular için daha iyi etiketler ve daha derli toplu bir açılır pencere."
+  },
+  "suspendThisTabHint": {
+    "message": "Başka bir sekmeye geç ve bunu uykuya al"
+  },
+  "changelog137Title1": {
+    "message": "Tek bir sekmeyi yeniden uykuya al"
+  },
+  "changelog137Desc1": {
+    "message": "Uykudaki bir sekmeyi bakmak için uyandırdıktan sonra, açılır penceredeki ve yan paneldeki yeni Bu sekmeyi uykuya al düğmesi yalnızca o sekmeyi yeniden uykuya alır. Görüntülediğiniz sekme uykuya alınamayacağı için önce sizi başka bir sekmeye geçirir."
   }
 }

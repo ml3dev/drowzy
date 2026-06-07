@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Tydeligere ikoner, et værktøjslinjemærke i brandfarve, bedre etiketter til skærmlæsere og et pænere popup."
+  },
+  "suspendThisTabHint": {
+    "message": "Skift til en anden fane, og sæt denne i dvale"
+  },
+  "changelog137Title1": {
+    "message": "Sæt en enkelt fane i dvale igen"
+  },
+  "changelog137Desc1": {
+    "message": "Når du har vækket en sovende fane for at se den, sætter den nye knap Sæt denne fane i dvale i pop op-vinduet og sidepanelet kun den fane i dvale igen. Den skifter dig først til en anden fane, fordi den fane, du ser på, ikke kan sættes i dvale."
   }
 }

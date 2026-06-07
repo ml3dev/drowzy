@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Jasnije ikone, oznaka na alatnoj traci u boji robne marke, bolje oznake za čitače zaslona i uredniji popup."
+  },
+  "suspendThisTabHint": {
+    "message": "Prebaci se na drugu karticu i uspavaj ovu"
+  },
+  "changelog137Title1": {
+    "message": "Ponovno uspavaj jednu karticu"
+  },
+  "changelog137Desc1": {
+    "message": "Nakon što probudiš uspavanu karticu da je pogledaš, novi gumb Uspavaj ovu karticu u skočnom prozoru i bočnoj ploči ponovno uspavljuje samo tu karticu. Najprije te prebacuje na drugu karticu jer se kartica koju gledaš ne može uspavati."
   }
 }

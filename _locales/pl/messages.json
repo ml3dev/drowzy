@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Czytelniejsze ikony, plakietka na pasku w kolorze marki, lepsze etykiety dla czytników ekranu i schludniejszy popup."
+  },
+  "suspendThisTabHint": {
+    "message": "Przełącz na inną kartę i uśpij tę"
+  },
+  "changelog137Title1": {
+    "message": "Uśpij ponownie pojedynczą kartę"
+  },
+  "changelog137Desc1": {
+    "message": "Po wybudzeniu uśpionej karty, aby ją obejrzeć, nowy przycisk Uśpij tę kartę w okienku i panelu bocznym usypia ponownie tylko tę kartę. Najpierw przełącza Cię na inną kartę, ponieważ karty, którą oglądasz, nie można uśpić."
   }
 }

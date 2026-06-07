@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Clearer icons, a brand-matched toolbar badge, better screen-reader labels, and a tidier popup."
+  },
+  "suspendThisTabHint": {
+    "message": "Switch away and put this tab to sleep"
+  },
+  "changelog137Title1": {
+    "message": "Put a single tab back to sleep"
+  },
+  "changelog137Desc1": {
+    "message": "After you wake a sleeping tab to look at it, the new Suspend this tab button in the popup and side panel sends just that tab back to sleep. It switches you to another tab first, because the tab you're viewing can't be suspended."
   }
 }

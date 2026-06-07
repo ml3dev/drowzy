@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Selkeämmät kuvakkeet, brändinmukainen työkalupalkin merkki, paremmat ruudunlukijoiden tekstit ja siistimpi ponnahdusikkuna."
+  },
+  "suspendThisTabHint": {
+    "message": "Vaihda toiseen välilehteen ja laita tämä lepotilaan"
+  },
+  "changelog137Title1": {
+    "message": "Laita yksittäinen välilehti takaisin lepotilaan"
+  },
+  "changelog137Desc1": {
+    "message": "Kun olet herättänyt lepotilassa olevan välilehden katsoaksesi sitä, uusi Laita tämä välilehti lepotilaan -painike ponnahdusikkunassa ja sivupaneelissa palauttaa vain sen välilehden lepotilaan. Se vaihtaa sinut ensin toiseen välilehteen, koska katselemaasi välilehteä ei voi laittaa lepotilaan."
   }
 }

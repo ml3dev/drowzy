@@ -414,13 +414,30 @@ function renderCurrentTab(tabList, settings) {
   else if (settings.protectAudio && active.audible) statusKey = 'audioWontSuspend';
   else if (whitelisted) statusKey = 'whitelistedWontSuspend';
 
+  // "Suspend this tab" only makes sense when the active tab is itself
+  // suspendable (a normal http(s) page that isn't pinned/audio/whitelisted —
+  // i.e. statusKey is the plain 'activeWontSuspend') AND there's another awake,
+  // non-system tab to switch to first, since Chrome can't discard the active
+  // tab. Mirrors handleSuspendCurrent's candidate filter (not discarded, not
+  // an internal page) so the button never offers an action that would no-op.
+  // Also gate on !audible directly: suspendTab refuses an audible tab even when
+  // protectAudio is off (statusKey would still be 'activeWontSuspend' then), so
+  // without this the button could switch away yet fail to suspend.
+  var hasSwitchTarget = (tabList || []).some(function(tt) {
+    return tt.id !== active.id && tt.status !== 'suspended' && tt.protectReason !== 'System page';
+  });
+  var showSuspendCurrent = (statusKey === 'activeWontSuspend') && !active.audible && hasSwitchTarget;
+
   // Signature-dedupe: the polling loop runs every 5s; skip DOM writes when
   // nothing changed. Prevents the favicon/domain flicker from re-setting
   // img.src and retriggering onerror on every poll.
   var section = document.getElementById('currentTabSection');
-  var sig = (active.url || '') + '|' + (active.favIconUrl || '') + '|' + domain + '|' + (whitelisted ? 1 : 0) + '|' + (isInternal ? 1 : 0) + '|' + statusKey;
+  var sig = (active.url || '') + '|' + (active.favIconUrl || '') + '|' + domain + '|' + (whitelisted ? 1 : 0) + '|' + (isInternal ? 1 : 0) + '|' + statusKey + '|' + (showSuspendCurrent ? 1 : 0);
   if (section && section.dataset.sig === sig) return;
   if (section) section.dataset.sig = sig;
+
+  var suspendCurrentBtn = document.getElementById('btnSuspendCurrent');
+  if (suspendCurrentBtn) suspendCurrentBtn.style.display = showSuspendCurrent ? '' : 'none';
 
   document.getElementById('currentTabDomain').textContent = domain;
 
@@ -723,6 +740,24 @@ function attachListeners() {
     }
     text.textContent = origLabel;
     this.disabled = false;
+    await loadAll();
+  });
+
+  document.getElementById('btnSuspendCurrent').addEventListener('click', async function() {
+    if (this.disabled) return;
+    this.disabled = true;
+    try {
+      // Re-suspends the active tab via the shared suspend-current path, which
+      // switches to a neighbour first. In the popup this usually closes the
+      // popup as focus moves to the newly-activated tab; in the side panel the
+      // toast + refresh are visible.
+      var res = await msg({ action: 'suspendCurrent' });
+      if (res && res.success) {
+        showToast(t('suspendedToast', [String(1), fmtRam(res.mbFreed || MB_PER_TAB)]));
+      }
+    } finally {
+      this.disabled = false;
+    }
     await loadAll();
   });
 

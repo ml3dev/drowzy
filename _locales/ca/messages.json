@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Icones més clares, una insígnia de barra amb els colors de la marca, millors etiquetes per a lectors de pantalla i un popup més endreçat."
+  },
+  "suspendThisTabHint": {
+    "message": "Canvia a una altra pestanya i adorm aquesta"
+  },
+  "changelog137Title1": {
+    "message": "Torna a suspendre una sola pestanya"
+  },
+  "changelog137Desc1": {
+    "message": "Després de despertar una pestanya suspesa per veure-la, el nou botó Suspèn aquesta pestanya a la finestra emergent i al tauler lateral torna a suspendre només aquesta pestanya. Primer et canvia a una altra pestanya, perquè la pestanya que estàs veient no es pot suspendre."
   }
 }

@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Jasnejše ikone, značka v orodni vrstici v barvi znamke, boljše oznake za bralnike zaslona in urejenejše pojavno okno."
+  },
+  "suspendThisTabHint": {
+    "message": "Preklopi na drug zavihek in uspavaj tega"
+  },
+  "changelog137Title1": {
+    "message": "Znova uspavaj en sam zavihek"
+  },
+  "changelog137Desc1": {
+    "message": "Ko zbudiš uspavani zavihek, da si ga ogledaš, nov gumb Uspavaj ta zavihek v pojavnem oknu in stranski vrstici znova uspava samo ta zavihek. Najprej te preklopi na drug zavihek, ker zavihka, ki ga gledaš, ni mogoče uspavati."
   }
 }

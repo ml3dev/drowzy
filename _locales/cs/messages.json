@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Přehlednější ikony, odznak na liště v barvě značky, lepší popisky pro čtečky obrazovky a úhlednější popup."
+  },
+  "suspendThisTabHint": {
+    "message": "Přepnout na jinou kartu a uspat tuto"
+  },
+  "changelog137Title1": {
+    "message": "Uspěte jednu kartu zpět"
+  },
+  "changelog137Desc1": {
+    "message": "Když probudíte uspanou kartu, abyste se na ni podívali, nové tlačítko Uspat tuto kartu ve vyskakovacím okně a postranním panelu uspí zpět jen tuto kartu. Nejdřív vás přepne na jinou kartu, protože kartu, kterou si prohlížíte, uspat nelze."
   }
 }

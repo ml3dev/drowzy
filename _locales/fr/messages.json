@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Icônes plus claires, badge de barre d'outils aux couleurs de la marque, meilleurs libellés pour lecteurs d'écran et popup plus net."
+  },
+  "suspendThisTabHint": {
+    "message": "Basculer vers un autre onglet et mettre celui-ci en veille"
+  },
+  "changelog137Title1": {
+    "message": "Remettez en veille un seul onglet"
+  },
+  "changelog137Desc1": {
+    "message": "Après avoir réveillé un onglet en veille pour le consulter, le nouveau bouton Mettre cet onglet en veille, dans la fenêtre contextuelle et le panneau latéral, remet en veille uniquement cet onglet. Il vous bascule d'abord vers un autre onglet, car l'onglet que vous consultez ne peut pas être mis en veille."
   }
 }

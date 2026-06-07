@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Duidelijkere pictogrammen, een werkbalkbadge in de huisstijl, betere labels voor schermlezers en een netter popup."
+  },
+  "suspendThisTabHint": {
+    "message": "Schakel naar een ander tabblad en zet dit in slaap"
+  },
+  "changelog137Title1": {
+    "message": "Zet één tabblad weer in slaapstand"
+  },
+  "changelog137Desc1": {
+    "message": "Nadat je een slapend tabblad hebt gewekt om te bekijken, zet de nieuwe knop Dit tabblad in slaapstand in de pop-up en het zijpaneel alleen dat tabblad weer in slaapstand. Je schakelt eerst naar een ander tabblad, omdat het tabblad dat je bekijkt niet in slaapstand kan."
   }
 }

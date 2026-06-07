@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Biểu tượng rõ hơn, huy hiệu thanh công cụ theo màu thương hiệu, nhãn trình đọc màn hình tốt hơn và popup gọn hơn."
+  },
+  "suspendThisTabHint": {
+    "message": "Chuyển sang thẻ khác và cho thẻ này ngủ"
+  },
+  "changelog137Title1": {
+    "message": "Cho một thẻ ngủ lại"
+  },
+  "changelog137Desc1": {
+    "message": "Sau khi bạn đánh thức một thẻ đang ngủ để xem, nút mới Cho thẻ này ngủ trong cửa sổ bật lên và bảng bên sẽ cho riêng thẻ đó ngủ lại. Nó chuyển bạn sang thẻ khác trước, vì thẻ bạn đang xem không thể cho ngủ."
   }
 }

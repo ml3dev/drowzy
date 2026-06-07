@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Ikon lebih jelas, lencana bar alat mengikut jenama, label pembaca skrin lebih baik dan popup lebih kemas."
+  },
+  "suspendThisTabHint": {
+    "message": "Tukar ke tab lain dan tidurkan tab ini"
+  },
+  "changelog137Title1": {
+    "message": "Tidurkan semula satu tab"
+  },
+  "changelog137Desc1": {
+    "message": "Selepas anda mengejutkan tab yang tidur untuk melihatnya, butang baharu Tidurkan tab ini dalam pop timbul dan panel sisi menidurkan semula tab itu sahaja. Ia menukar anda ke tab lain dahulu, kerana tab yang sedang anda lihat tidak boleh ditidurkan."
   }
 }

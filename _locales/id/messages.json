@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Ikon lebih jelas, lencana bilah alat sesuai merek, label pembaca layar lebih baik, dan popup lebih rapi."
+  },
+  "suspendThisTabHint": {
+    "message": "Beralih ke tab lain dan tidurkan tab ini"
+  },
+  "changelog137Title1": {
+    "message": "Tidurkan kembali satu tab"
+  },
+  "changelog137Desc1": {
+    "message": "Setelah membangunkan tab yang tertidur untuk melihatnya, tombol baru Tidurkan tab ini di popup dan panel samping menidurkan kembali hanya tab itu. Tombol ini memindahkanmu ke tab lain dulu, karena tab yang sedang kamu lihat tidak bisa ditidurkan."
   }
 }

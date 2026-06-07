@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Skaidrākas ikonas, rīkjoslas nozīmīte zīmola krāsā, labāki ekrāna lasītāju apzīmējumi un kārtīgāks uznirstošais logs."
+  },
+  "suspendThisTabHint": {
+    "message": "Pārslēgties uz citu cilni un iemidzināt šo"
+  },
+  "changelog137Title1": {
+    "message": "Atkārtoti iemidziniet vienu cilni"
+  },
+  "changelog137Desc1": {
+    "message": "Pēc tam, kad pamodināt iemidzinātu cilni, lai to apskatītu, jaunā poga Iemidzināt šo cilni uznirstošajā logā un sānu panelī atkārtoti iemidzina tikai šo cilni. Vispirms tā pārslēdz jūs uz citu cilni, jo cilni, ko skatāties, nevar iemidzināt."
   }
 }

@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Mas malinaw na mga icon, toolbar badge na tugma sa brand, mas mahusay na label para sa screen reader, at mas malinis na popup."
+  },
+  "suspendThisTabHint": {
+    "message": "Lumipat sa ibang tab at idlip ang tab na ito"
+  },
+  "changelog137Title1": {
+    "message": "Patulugin muli ang isang tab"
+  },
+  "changelog137Desc1": {
+    "message": "Pagkatapos mong gisingin ang isang natutulog na tab para tingnan ito, ang bagong button na Idlip ang tab na ito sa popup at side panel ay muling magpapatulog lamang sa tab na iyon. Ililipat ka muna nito sa ibang tab, dahil hindi maipapatulog ang tab na tinitingnan mo."
   }
 }

@@ -715,5 +715,14 @@
   },
   "changelog135Desc5": {
     "message": "Tydeligere ikoner, et verktøylinjemerke i merkevarefarge, bedre etiketter for skjermlesere og et ryddigere popup."
+  },
+  "suspendThisTabHint": {
+    "message": "Bytt til en annen fane og sett denne i dvale"
+  },
+  "changelog137Title1": {
+    "message": "Sett én enkelt fane i dvale igjen"
+  },
+  "changelog137Desc1": {
+    "message": "Når du har vekket en sovende fane for å se på den, setter den nye knappen Sett denne fanen i dvale i popup-vinduet og sidepanelet bare den fanen i dvale igjen. Den bytter deg først til en annen fane, fordi fanen du ser på, ikke kan settes i dvale."
   }
 }
