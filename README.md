@@ -20,7 +20,7 @@
     <img src="https://img.shields.io/chrome-web-store/rating/oijfnkaakdamnijjgehjpfmclhigmapa?style=flat-square&color=facc15" alt="Chrome Web Store Rating">
   </a>
   <a href="https://github.com/ml3dev/drowzy/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/ml3dev/drowzy?style=flat-square&color=60a5fa" alt="MIT License">
+    <img src="https://img.shields.io/badge/license-MIT-60a5fa?style=flat-square" alt="MIT License">
   </a>
   <a href="https://github.com/ml3dev/drowzy/stargazers">
     <img src="https://img.shields.io/github/stars/ml3dev/drowzy?style=flat-square&color=f59e0b" alt="GitHub Stars">
@@ -37,40 +37,40 @@
 
 ## Why Drowzy?
 
-Most tab suspenders replace your tabs with custom placeholder pages. If the extension breaks, gets removed, or Chrome updates -- your tabs are gone.
+Most tab suspenders replace your tabs with custom placeholder pages. If the extension breaks, gets removed, or Chrome updates - your tabs are gone.
 
 **Drowzy is different.** It uses Chrome's built-in `chrome.tabs.discard()` API, which means:
 
-- Suspended tabs are **managed by Chrome itself** -- they survive restarts, crashes, and even uninstalling Drowzy
-- Tabs keep their **place in the tab bar and full back/forward history** -- waking reloads the live page
+- Suspended tabs are **managed by Chrome itself** - they survive restarts, crashes, and even uninstalling Drowzy
+- Tabs keep their **place in the tab bar and full back/forward history** - waking reloads the live page
 - **No custom pages**, no redirects, no `chrome-extension://` URLs in your tab bar
-- Waking a tab is instant -- just click it
+- Waking a tab is instant - just click it
 
 On top of that, Drowzy is fully open source, collects zero data, and runs entirely in your browser. No servers, no analytics, no accounts. Your tabs are yours.
 
 ## Features
 
 ### Core
-- **Auto-suspend** inactive tabs after a configurable timer (5 min -- 4 hours, or manual only)
-- **Smart protection** -- pinned, audio-playing, and whitelisted tabs are never suspended; optional form-data protection also skips tabs with unsaved input (off by default, requires granting page access)
+- **Auto-suspend** inactive tabs after a configurable timer (5 min - 4 hours, or manual only)
+- **Smart protection** - pinned, audio-playing, and whitelisted tabs are never suspended; optional form-data protection also skips tabs with unsaved input (off by default, requires granting page access)
 - **Whitelist** sites with pattern matching and wildcards (e.g., `github.com/ml3dev/*`)
-- **Keyboard shortcuts** -- `Alt+S` suspend current, `Alt+Shift+S` suspend others, `Alt+W` wake all
-- **Context menu** -- right-click any page for quick suspend options
+- **Keyboard shortcuts** - `Alt+S` suspend current, `Alt+Shift+S` suspend others, `Alt+W` wake all
+- **Context menu** - right-click any page for quick suspend options
 
 ### Sessions & Organization
-- **Save and restore sessions** -- bookmark your entire window state and reopen it later
-- **Close duplicate tabs** -- one click to deduplicate your window
-- **Tab search** -- filter your tab list by title or URL
-- **Export** -- copy your tab list or sessions as JSON for backup
+- **Save and restore sessions** - bookmark your entire window state and reopen it later
+- **Close duplicate tabs** - one click to deduplicate your window
+- **Tab search** - filter your tab list by title or URL
+- **Export** - copy your tab list or sessions as JSON for backup
 
 ### Polish
-- **Dark and light theme** -- toggle in the header, preference is saved
-- **Side panel** -- pin Drowzy to Chrome's side panel for a persistent full-height view
-- **57 languages** -- UI automatically matches your browser language
-- **Suspend indicator** -- optional `[zzz]` prefix on suspended tab titles (requires granting page access)
-- **Suspend warning** -- optional on-page notice before a tab is auto-suspended (requires granting page access)
-- **Stats dashboard** -- track how many tabs you've suspended and how much memory you've saved
-- **Review prompt** -- a gentle, dismissable nudge that only appears after about a week of real use, with "Maybe later" and "Don't ask again" options (never on install, never pushy)
+- **Dark and light theme** - toggle in the header, preference is saved
+- **Side panel** - pin Drowzy to Chrome's side panel for a persistent full-height view
+- **57 languages** - UI automatically matches your browser language
+- **Suspend indicator** - optional `[zzz]` prefix on suspended tab titles (requires granting page access)
+- **Suspend warning** - optional on-page notice before a tab is auto-suspended (requires granting page access)
+- **Stats dashboard** - track how many tabs you've suspended and how much memory you've saved
+- **Review prompt** - a gentle, dismissable nudge that only appears after about a week of real use, with "Maybe later" and "Don't ask again" options (never on install, never pushy)
 
 ## How It Works
 
@@ -85,7 +85,7 @@ Tab inactive for 15 min ──> Drowzy calls chrome.tabs.discard()
                               User clicks tab ──> Chrome reloads it
 ```
 
-Drowzy runs a lightweight alarm every 60 seconds. It checks each tab's last-active timestamp and suspends any that exceed your chosen threshold. Protected tabs (pinned, audible, whitelisted, active, or containing forms) are always skipped. That's it -- no background pages, no content scripts running on every page, no idle CPU usage.
+Drowzy runs a lightweight alarm every 60 seconds. It checks each tab's last-active timestamp and suspends any that exceed your chosen threshold. Protected tabs (pinned, audible, whitelisted, active, or containing forms) are always skipped. That's it - no background pages, no content scripts running on every page, no idle CPU usage.
 
 ## Permissions
 
@@ -105,7 +105,7 @@ Full details in the [Privacy Policy](https://github.com/ml3dev/drowzy/blob/main/
 
 ## Development
 
-Drowzy is vanilla JavaScript -- no build tools, no dependencies, no `node_modules`. Clone and load:
+Drowzy is vanilla JavaScript - no build tools, no dependencies, no `node_modules`. Clone and load:
 
 ```bash
 git clone https://github.com/ml3dev/drowzy.git
@@ -115,7 +115,7 @@ cd drowzy
 1. Open `chrome://extensions` in Chrome
 2. Enable **Developer mode** (top right)
 3. Click **Load unpacked** and select the `drowzy` folder
-4. The extension icon appears in your toolbar -- you're running from source
+4. The extension icon appears in your toolbar - you're running from source
 
 ### Project structure
 
@@ -131,6 +131,9 @@ drowzy/
   privacy-policy.html  Privacy policy
   _locales/            57 language translations
   icons/               Extension icons (16-512px)
+  scripts/             package.sh builds the release zip
+  docs/                GitHub Pages site (landing page, uninstall feedback)
+  .github/             CI: release workflow runs on every version tag
 ```
 
 ### Contributing
@@ -153,7 +156,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full version history.
 
 ## License
 
-[MIT](LICENSE) -- use it, fork it, learn from it.
+[MIT](LICENSE) - use it, fork it, learn from it.
 
 ---
 <p align="center">
