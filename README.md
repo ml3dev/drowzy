@@ -42,7 +42,7 @@ Most tab suspenders replace your tabs with custom placeholder pages. If the exte
 **Drowzy is different.** It uses Chrome's built-in `chrome.tabs.discard()` API, which means:
 
 - Suspended tabs are **managed by Chrome itself** -- they survive restarts, crashes, and even uninstalling Drowzy
-- Tabs keep their **full history, scroll position, and form data**
+- Tabs keep their **place in the tab bar and full back/forward history** -- waking reloads the live page
 - **No custom pages**, no redirects, no `chrome-extension://` URLs in your tab bar
 - Waking a tab is instant -- just click it
 
@@ -52,14 +52,13 @@ On top of that, Drowzy is fully open source, collects zero data, and runs entire
 
 ### Core
 - **Auto-suspend** inactive tabs after a configurable timer (5 min -- 4 hours, or manual only)
-- **Smart protection** -- pinned tabs, audio-playing tabs, and tabs with unsaved form data are never suspended
+- **Smart protection** -- pinned, audio-playing, and whitelisted tabs are never suspended; optional form-data protection also skips tabs with unsaved input (off by default, requires granting page access)
 - **Whitelist** sites with pattern matching and wildcards (e.g., `github.com/ml3dev/*`)
 - **Keyboard shortcuts** -- `Alt+S` suspend current, `Alt+Shift+S` suspend others, `Alt+W` wake all
 - **Context menu** -- right-click any page for quick suspend options
 
 ### Sessions & Organization
 - **Save and restore sessions** -- bookmark your entire window state and reopen it later
-- **Tab group support** -- session restore preserves tab groups with names and colors
 - **Close duplicate tabs** -- one click to deduplicate your window
 - **Tab search** -- filter your tab list by title or URL
 - **Export** -- copy your tab list or sessions as JSON for backup
@@ -68,8 +67,8 @@ On top of that, Drowzy is fully open source, collects zero data, and runs entire
 - **Dark and light theme** -- toggle in the header, preference is saved
 - **Side panel** -- pin Drowzy to Chrome's side panel for a persistent full-height view
 - **57 languages** -- UI automatically matches your browser language
-- **Suspend indicator** -- optional `[zzz]` prefix on suspended tab titles
-- **Suspend warning** -- brief notification before a tab is auto-suspended
+- **Suspend indicator** -- optional `[zzz]` prefix on suspended tab titles (requires granting page access)
+- **Suspend warning** -- optional on-page notice before a tab is auto-suspended (requires granting page access)
 - **Stats dashboard** -- track how many tabs you've suspended and how much memory you've saved
 - **Review prompt** -- a gentle, dismissable nudge that only appears after about a week of real use, with "Maybe later" and "Don't ask again" options (never on install, never pushy)
 
@@ -87,25 +86,6 @@ Tab inactive for 15 min ──> Drowzy calls chrome.tabs.discard()
 ```
 
 Drowzy runs a lightweight alarm every 60 seconds. It checks each tab's last-active timestamp and suspends any that exceed your chosen threshold. Protected tabs (pinned, audible, whitelisted, active, or containing forms) are always skipped. That's it -- no background pages, no content scripts running on every page, no idle CPU usage.
-
-## Comparison
-
-| | Drowzy | Marvellous Suspender | Tab Suspender Pro | Chrome Memory Saver |
-|---|:---:|:---:|:---:|:---:|
-| Open source | **Yes** | Yes | No | N/A |
-| Native discard API | **Yes** | No | No | Yes |
-| Zero tracking | **Yes** | Yes | No | Yes |
-| Tab sessions | **Yes** | No | No | No |
-| Tab search | **Yes** | No | No | No |
-| Duplicate cleanup | **Yes** | No | No | No |
-| Whitelist wildcards | **Yes** | Yes | Yes | Limited |
-| Tab group restore | **Yes** | No | No | No |
-| Side panel | **Yes** | No | No | No |
-| Dark mode | **Yes** | No | No | N/A |
-| i18n languages | **57** | 1 | 6 | Varies |
-| Export/backup | **Yes** | No | No | No |
-| Size | **~1.3 MB** | ~2 MB | ~1.5 MB | Built-in |
-| Tabs survive uninstall | **Yes** | No | No | Yes |
 
 ## Permissions
 
@@ -176,11 +156,6 @@ See [CHANGELOG.md](CHANGELOG.md) for the full version history.
 [MIT](LICENSE) -- use it, fork it, learn from it.
 
 ---
-<p align="center">
-  <a href="https://sellwithboost.com" target="_blank" rel="noopener noreferrer">
-    <img src="https://sellwithboost.com/badge/listing.svg" alt="Listed on Sell With Boost" style="height: 40px; width: auto;" />
-  </a>
-</p>
 <p align="center">
   <sub>Built by <a href="https://github.com/ml3dev">ml3dev</a></sub>
 </p>
