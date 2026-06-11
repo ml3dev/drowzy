@@ -1,23 +1,57 @@
 # Contributing to Drowzy
 
-Thanks for your interest in contributing. Drowzy is a small project and contributions of all sizes are welcome -- bug fixes, new features, translations, documentation, or just reporting issues.
+Thanks for your interest in contributing. Drowzy is a small project and contributions of all sizes are welcome - bug fixes, new features, translations, documentation, or just reporting issues.
 
 ## Getting started
 
 1. Fork the repo and clone your fork
 2. Load the extension in Chrome (see [README](README.md#development))
 3. Make your changes
-4. Test manually in Chrome -- there's no build step or test suite
+4. Test manually in Chrome - there's no build step or test suite
 5. Open a pull request
 
 ## Guidelines
 
 ### Code style
 
-- Drowzy is **vanilla JavaScript** -- no frameworks, no transpilers, no build tools
-- Use `let`/`const`, not `var`
+- Drowzy is **vanilla JavaScript** - no frameworks, no transpilers, no build tools
+- Match the style of the file you're editing: `background.js` leans `let`/`const`, `popup.js` and `formcheck.js` use `var` and classic functions. Consistency within a file beats consistency across the repo
 - Keep functions short and focused
 - Follow the existing patterns in the codebase (message passing, storage access, DOM manipulation)
+- No em dashes or en dashes anywhere (code comments, docs, commit messages). Use a plain hyphen instead
+
+## Code map
+
+Where things live and what owns what:
+
+| File | Owns |
+|---|---|
+| `background.js` | Service worker. The suspension pipeline (`checkAndSuspendTabs` -> `shouldSuspend` -> `suspendTab`), `DEFAULT_SETTINGS` and `getSettings()`, sessions (`drowzy_sessions`), stats (`drowzy_stats`), whitelist matching, context menus, keyboard commands, and the `handleMessage` dispatcher |
+| `popup.js` / `popup.html` / `popup.css` | All popup UI. Talks to the background only through `chrome.runtime.sendMessage({ action: ... })` |
+| `sidepanel.html` | The side panel shell. It loads the same `popup.js` and `popup.css`, so UI markup changes usually need the same edit in both `popup.html` and `sidepanel.html` |
+| `formcheck.js` | Content script, injected on demand. Form-data detection, the suspend-warning banner, and the `[zzz]` title prefix |
+| `icons.js` | Lucide SVG icon map. `icon(name, size)` returns markup; `injectIcons()` fills every `[data-icon]` element |
+| `onboarding.*`, `changelog.*`, `privacy-policy.*` | Standalone extension pages |
+| `_locales/` | 57 locales. `en/messages.json` is the source of truth; every other locale must have exactly the same keys |
+| `scripts/package.sh` | Builds the release zip (used locally and by CI) |
+| `.github/workflows/release.yml` | Creates the GitHub Release when a `vX.Y.Z` tag is pushed |
+
+## Common recipes
+
+**Adding a setting:**
+
+1. Add the default to `DEFAULT_SETTINGS` in `background.js` (it merges over stored settings, so old installs pick it up automatically)
+2. Read it wherever the behavior lives (usually inside the suspension pipeline)
+3. Add the toggle row to **both** `popup.html` and `sidepanel.html`, and wire it in `popup.js` (load in `loadAll`, save on change)
+4. Add the label key to `_locales/en/messages.json` and reference it with `data-i18n`
+
+**Adding a popup action:**
+
+1. Button in `popup.html` + `sidepanel.html` with a `data-i18n` label (and `data-icon` if it needs one)
+2. Click handler in `popup.js` that sends `chrome.runtime.sendMessage({ action: 'yourAction' })`
+3. A case in `handleMessage` in `background.js` that does the work and returns `{ success: ... }`
+
+**Adding a user-facing string:** add the key to `_locales/en/messages.json` first; `en` is the fallback for every locale, so the extension works immediately. Translating it into the other 56 locales is appreciated but not required for a PR.
 
 ### Commit style
 
@@ -47,16 +81,16 @@ Keep commits small and focused. One concern per commit; the PR can have many com
 
 ### What makes a good PR
 
-- **One thing per PR** -- a bug fix, a feature, a refactor. Not all three
-- **Test it** -- load the extension and verify your change works in both popup and side panel
-- **Describe what and why** -- the PR description should explain what changed and why
+- **One thing per PR** - a bug fix, a feature, a refactor. Not all three
+- **Test it** - load the extension and verify your change works in both popup and side panel
+- **Describe what and why** - the PR description should explain what changed and why
 
 ### i18n
 
 If you add user-facing strings:
 
 1. Add the key to `_locales/en/messages.json`
-2. The English value is the fallback for all languages -- non-English translations are appreciated but not required for a PR to be merged
+2. The English value is the fallback for all languages - non-English translations are appreciated but not required for a PR to be merged
 
 ### Things to avoid
 
