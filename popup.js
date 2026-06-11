@@ -154,7 +154,7 @@ async function loadAll() {
     ]);
     _allTabs = tabList;
     var scrollEl = document.querySelector('.main-content');
-    // In sidepanel, .main-content doesn't scroll (body does) — detect correct container
+    // In sidepanel, .main-content doesn't scroll (body does) - detect correct container
     if (!scrollEl || scrollEl.scrollHeight <= scrollEl.clientHeight) {
       scrollEl = document.documentElement;
     }
@@ -165,7 +165,7 @@ async function loadAll() {
     renderSettings(settings);
     renderSessions(sessions);
     renderLifetimeStats(stats);
-    // Re-poll shortcut bindings — user may have edited them in
+    // Re-poll shortcut bindings - user may have edited them in
     // chrome://extensions/shortcuts via the Customize link without closing
     // the popup. Cheap call; runs on the same 5s cadence as everything else.
     renderShortcutsStatus();
@@ -326,7 +326,7 @@ function renderTabList(tabs) {
         // Activate the tab and focus its window. Without the window focus,
         // clicking a tab that lives in a non-focused Chrome window updates
         // its active state but leaves the user looking at the popup's window
-        // — the tab they asked for is "selected" somewhere they can't see.
+        // - the tab they asked for is "selected" somewhere they can't see.
         try {
           var updated = await chrome.tabs.update(tabData.id, { active: true });
           if (updated && updated.windowId != null) {
@@ -407,7 +407,7 @@ function renderCurrentTab(tabList, settings) {
 
   // Pick the status line based on why this tab is/isn't suspendable. Active
   // is the fallback; the more specific reasons take priority since a pinned
-  // active tab is "active AND pinned" — the pin is the actually informative bit.
+  // active tab is "active AND pinned" - the pin is the actually informative bit.
   var statusKey = 'activeWontSuspend';
   if (isInternal) statusKey = 'systemPageCantSuspend';
   else if (settings.protectPinned && active.pinned) statusKey = 'pinnedWontSuspend';
@@ -415,7 +415,7 @@ function renderCurrentTab(tabList, settings) {
   else if (whitelisted) statusKey = 'whitelistedWontSuspend';
 
   // "Suspend this tab" only makes sense when the active tab is itself
-  // suspendable (a normal http(s) page that isn't pinned/audio/whitelisted —
+  // suspendable (a normal http(s) page that isn't pinned/audio/whitelisted - 
   // i.e. statusKey is the plain 'activeWontSuspend') AND there's another awake,
   // non-system tab to switch to first, since Chrome can't discard the active
   // tab. Mirrors handleSuspendCurrent's candidate filter (not discarded, not
@@ -673,7 +673,7 @@ function renderWhitelist(list) {
     var rm = document.createElement('button');
     rm.type = 'button';
     rm.className = 'whitelist-remove';
-    // Plain text label — the previous icon-only X was easy to miss.
+    // Plain text label - the previous icon-only X was easy to miss.
     // The trailing × glyph is a literal character (not an SVG) so it always
     // renders even if the icons.js bundle hasn't loaded yet.
     rm.innerHTML = '<span class="whitelist-remove-text">' + esc(t('remove')) + '</span><span class="whitelist-remove-x" aria-hidden="true">×</span>';
@@ -683,7 +683,7 @@ function renderWhitelist(list) {
       rm.addEventListener('click', function(e) {
         e.stopPropagation();
         e.preventDefault();
-        // Optimistic removal — fade the row out immediately so the click
+        // Optimistic removal - fade the row out immediately so the click
         // feels instant. The polling timer can race and refresh
         // _whitelistSig to the post-removal shape before our own loadAll
         // runs, in which case renderWhitelist's sig dedupe would
@@ -1117,7 +1117,7 @@ async function addFromInput() {
   input.disabled = false;
   _addingWhitelist = false;
   // Match the toggle button's confirmation toast for consistency. `res.added`
-  // is false when the domain was already in the whitelist — in that case the
+  // is false when the domain was already in the whitelist - in that case the
   // user typed a duplicate; tell them rather than silently doing nothing.
   // Skip the toast entirely if the message round-trip failed (res is null).
   if (res) {
@@ -1140,7 +1140,7 @@ function renderShortcutsStatus() {
   chrome.commands.getAll(function(commands) {
     var total = commands.length;
     var bound = commands.filter(function(c) { return !!c.shortcut; }).length;
-    // Neutral styling — Drowzy works fine without any shortcuts (popup,
+    // Neutral styling - Drowzy works fine without any shortcuts (popup,
     // context menu, side panel cover everything), so an amber/warning state
     // would imply a problem that isn't there. The Customize link next to
     // this text is invitation enough.
@@ -1155,7 +1155,7 @@ function renderShortcutsStatus() {
 function fmtRam(mb) {
   if (mb < 1024) return mb + ' MB';
   var gb = mb / 1024;
-  // Drop trailing .0 — "2 GB" reads cleaner than "2.0 GB" for whole values.
+  // Drop trailing .0 - "2 GB" reads cleaner than "2.0 GB" for whole values.
   var rounded = gb.toFixed(1);
   return (rounded.endsWith('.0') ? rounded.slice(0, -2) : rounded) + ' GB';
 }
@@ -1183,7 +1183,7 @@ var REVIEW_MIN_SUSPENSIONS = 50;
 // Decide whether the review prompt should appear, and wire up its buttons.
 // Runs on every popup/sidepanel open (both load popup.js). The prompt is
 // intentionally low-pressure: it only ever appears once the user has clearly
-// gotten value out of Drowzy, and it never interrupts a core action — it sits
+// gotten value out of Drowzy, and it never interrupts a core action - it sits
 // as a quiet banner at the top of the main content and can always be ignored.
 async function checkReviewPrompt() {
   try {
@@ -1217,7 +1217,7 @@ async function checkReviewPrompt() {
     if (data.reviewPromptCompleted) return;
 
     // Count this open. We use it to guarantee we never prompt on the very first
-    // popup/sidepanel open — only once the user has come back at least once.
+    // popup/sidepanel open - only once the user has come back at least once.
     var opens = (data.reviewPromptOpenCount || 0) + 1;
     chrome.storage.local.set({ reviewPromptOpenCount: opens });
 
@@ -1225,7 +1225,7 @@ async function checkReviewPrompt() {
     if (!stats) return;
 
     // Gate 1: installed at least 7 days. This also covers "never on install"
-    // and "never right after an update" — a fresh install is 0 days old, and
+    // and "never right after an update" - a fresh install is 0 days old, and
     // an update doesn't reset installDate so it has no effect here.
     var installDate = stats.installDate || 0;
     if (!installDate || (Date.now() - installDate) < SEVEN_DAYS) return;
@@ -1233,7 +1233,7 @@ async function checkReviewPrompt() {
     // Gate 2: enough successful suspensions that the user has felt the benefit.
     if ((stats.totalTabsSuspended || 0) < REVIEW_MIN_SUSPENSIONS) return;
 
-    // Gate 3: not on the first ever open — they've opened the UI before.
+    // Gate 3: not on the first ever open - they've opened the UI before.
     if (opens < 2) return;
 
     // Gate 4: respect a "Maybe later" cooldown.

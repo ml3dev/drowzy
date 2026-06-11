@@ -95,7 +95,7 @@ function hasUnsavedFormData() {
     if (el.isContentEditable) {
       var original = _ceSnapshots ? _ceSnapshots.get(el) : undefined;
       if (original === undefined) {
-        // Element added after snapshot — treat as dirty if non-empty
+        // Element added after snapshot - treat as dirty if non-empty
         if (el.textContent.trim()) return true;
       } else if (el.textContent !== original) {
         return true;

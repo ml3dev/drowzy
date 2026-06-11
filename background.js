@@ -62,7 +62,7 @@ chrome.runtime.onMessage.addListener(onMessage);
 
 // Refresh the badge when the user switches between Chrome windows, so the
 // window-scoped count reflects the focused window. WINDOW_ID_NONE means focus
-// moved out of Chrome entirely — let updateBadgeNow clear the badge.
+// moved out of Chrome entirely - let updateBadgeNow clear the badge.
 try {
   if (chrome.windows && chrome.windows.onFocusChanged) {
     chrome.windows.onFocusChanged.addListener(function() {
@@ -110,7 +110,7 @@ async function onInstalled(details) {
     // (default) before anything visibly happens, which is the most common
     // reason cited for "didn't notice a memory difference" and uninstalling.
     // ~30s after install, suspend tabs Chrome reports as idle for 10+ minutes
-    // — only the obviously-stale ones, so it doesn't surprise the user with
+    // - only the obviously-stale ones, so it doesn't surprise the user with
     // a recently-used tab going away. Uses chrome.alarms (not setTimeout) so
     // the pass survives MV3 service-worker termination during the wait.
     try { chrome.alarms.create('first-run-suspend', { delayInMinutes: 0.5 }); } catch {}
@@ -158,7 +158,7 @@ async function onStartup() {
 async function firstRunQuickSuspend() {
   // Conservative first-run pass. Uses tab.lastAccessed (Chrome 121+) so we
   // only touch tabs Chrome itself confirms have been idle for a while; on
-  // 120 (no lastAccessed), we skip — better to miss the boost than surprise
+  // 120 (no lastAccessed), we skip - better to miss the boost than surprise
   // a fresh installer with a tab they were just using.
   try {
     let settings = await getSettings();
@@ -191,7 +191,7 @@ async function suspendAllOnStartup(settings) {
       if (settings.protectPinned && tab.pinned) continue;
       if (settings.protectAudio && tab.audible) continue;
       if (isWhitelisted(tab.url, settings.whitelist)) continue;
-      // Skip form check and title marking at startup — content scripts aren't reliably loaded
+      // Skip form check and title marking at startup - content scripts aren't reliably loaded
       // and the tab is about to be discarded anyway (title resets on reload)
       try {
         let result = await chrome.tabs.discard(tab.id);
@@ -216,7 +216,7 @@ async function initTimestamps() {
 
     // Add missing tabs. Seed from tab.lastAccessed (Chrome 121+) when available
     // so a service-worker restart with cleared session storage doesn't reset
-    // the apparent idle time of long-untouched tabs to NOW — that would silently
+    // the apparent idle time of long-untouched tabs to NOW - that would silently
     // give every tab a fresh 30-min timer on restart, which is the wrong behavior.
     for (let tab of tabs) {
       if (!(tab.id in _timestamps)) {
@@ -382,12 +382,12 @@ async function onTabCreated(tab) { await touchTab(tab.id); }
 
 async function onTabRemoved(tabId) {
   _injectedTabs.delete(tabId);
-  // Only mark dirty if we actually removed a tracked timestamp — avoids
+  // Only mark dirty if we actually removed a tracked timestamp - avoids
   // flushing session storage when the tab wasn't being tracked.
   if (tabId in _timestamps) {
     delete _timestamps[tabId];
     _tsDirty = true;
-    // Flush immediately — worker may be killed before a scheduled flush runs
+    // Flush immediately - worker may be killed before a scheduled flush runs
     await flushTimestamps();
   }
   debouncedBadgeUpdate();
@@ -527,7 +527,7 @@ async function suspendTab(tabId, cachedSettings, opts) {
       try { await chrome.tabs.sendMessage(tabId, { action: 'markSuspended' }); } catch {}
     }
 
-    // Final recheck immediately before discard — user may have switched to
+    // Final recheck immediately before discard - user may have switched to
     // this tab during the preceding awaits (form check, message round-trips).
     // Discarding an active tab forces a visible reload when the user looks at it.
     try {
@@ -537,7 +537,7 @@ async function suspendTab(tabId, cachedSettings, opts) {
       // warning window or tab.lastAccessed updated mid-await (user refocused),
       // bail out. Also skip tabs still in 'loading' to avoid discarding mid-navigation.
       // Manual suspends (context menu, Suspend Others, popup button) pass auto=false
-      // because the user has explicit intent — bypass timing and loading checks, since
+      // because the user has explicit intent - bypass timing and loading checks, since
       // SPAs like Reddit can sit in 'loading' indefinitely from background streaming.
       if (opts && opts.auto) {
         if (fresh.status === 'loading') return false;
@@ -570,7 +570,7 @@ async function updateBadgeNow() {
   try {
     let [active] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
     // If no window is focused (e.g., Chrome minimized or focus in another app),
-    // clear the badge rather than counting discarded tabs across every window —
+    // clear the badge rather than counting discarded tabs across every window - 
     // a cross-window count is misleading in a window-scoped badge.
     if (!active) {
       await chrome.action.setBadgeText({ text: '' });
@@ -887,7 +887,7 @@ async function getTabList(windowId) {
       protectReason = 'Whitelisted';
     } else if (settings.enableAutoSuspend && threshold > 0) {
       // mirror shouldSuspend's logic so the displayed timer matches what
-      // actually happens — max of our timestamp and Chrome's lastAccessed
+      // actually happens - max of our timestamp and Chrome's lastAccessed
       let lastActive = _timestamps[tab.id] || 0;
       if (typeof tab.lastAccessed === 'number' && tab.lastAccessed > lastActive) {
         lastActive = tab.lastAccessed;
@@ -945,7 +945,7 @@ async function handleMessage(msg) {
           isWhitelisted(tab.url, settings.whitelist)
         )
       ).length;
-      // Tabs that aren't already discarded and aren't protected — i.e. the
+      // Tabs that aren't already discarded and aren't protected - i.e. the
       // ones Drowzy will eventually suspend. Used for the forecast stat so
       // first-session users see a non-zero number before the suspend timer fires.
       let eligibleCount = Math.max(0, allTabs.length - protectedCount - discardedTabs.length);
@@ -980,7 +980,7 @@ async function handleMessage(msg) {
       let [at] = await chrome.tabs.query({ active: true, currentWindow: true });
       if (!at) return { success: false };
       await handleSuspendCurrent(at);
-      // Confirm by re-reading discard state rather than trusting the call —
+      // Confirm by re-reading discard state rather than trusting the call - 
       // handleSuspendCurrent no-ops if the tab is protected or has no neighbour.
       let after = await chrome.tabs.get(at.id).catch(() => null);
       let ok = !!(after && after.discarded);
@@ -1007,7 +1007,7 @@ async function handleMessage(msg) {
     }
     case 'wakeTab':
       try {
-        // Tab is discarded — can't inject scripts or send messages.
+        // Tab is discarded - can't inject scripts or send messages.
         // Just reload; the page title resets naturally (no [zzz] prefix).
         await chrome.tabs.reload(msg.tabId);
         _injectedTabs.delete(msg.tabId);
@@ -1038,7 +1038,7 @@ async function handleMessage(msg) {
         // first occurrence. The live-tab tiebreaker matters: without it, when a
         // group has only one non-discarded duplicate and one or more discarded
         // shells of the same URL, the [0] fallback could pick a discarded tab,
-        // and we'd close the live one — keeping an empty placeholder. Order:
+        // and we'd close the live one - keeping an empty placeholder. Order:
         // pinned > active > live > index 0.
         let keep = groups[url].find(tab => tab.pinned)
           || groups[url].find(tab => tab.active)

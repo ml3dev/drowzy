@@ -1289,7 +1289,7 @@ body:not(.popup-ready) {
   outline-offset: 1px;
 }
 
-/* Primary action — leave a review. Uses the same gradient + white text as
+/* Primary action - leave a review. Uses the same gradient + white text as
    .btn-primary so contrast holds in both light and dark themes. */
 .review-prompt-leave {
   background: var(--gradient-primary);
@@ -1303,7 +1303,7 @@ body:not(.popup-ready) {
   filter: brightness(1.06);
 }
 
-/* Secondary actions — maybe later / don't ask again. */
+/* Secondary actions - maybe later / don't ask again. */
 .review-prompt-later:hover,
 .review-prompt-never:hover {
   color: var(--color-text);

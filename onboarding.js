@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Reflect the user's actual key bindings (handles per-platform manifest
   // defaults and user remaps). When a command is bound, swap the embedded
-  // <kbd> text with the real binding. When it's unbound — Chrome couldn't
+  // <kbd> text with the real binding. When it's unbound - Chrome couldn't
   // auto-assign the suggested key because of a conflict with another
-  // extension or a system shortcut — hide the entire <li>. The tip below
+  // extension or a system shortcut - hide the entire <li>. The tip below
   // ("Want different keyboard shortcuts? Customize them here →") routes
   // users to chrome://extensions/shortcuts where they can set the unbound
   // ones; we don't need to litter the quick-actions list with stub rows.
