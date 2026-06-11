@@ -33,6 +33,9 @@ jobs:
       - name: Build zip
         id: build
         run: |
+          # The repo pins * -text in .gitattributes (CRLF preserved as committed),
+          # so strip any CR that sneaks into the script - the linux runner needs LF.
+          sed -i 's/\r$//' scripts/package.sh
           chmod +x scripts/package.sh
           scripts/package.sh
           VER="${GITHUB_REF_NAME#v}"
