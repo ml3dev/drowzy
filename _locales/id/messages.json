@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Mengisi formulir?</strong> Aktifkan \"Lindungi tab dengan formulir\" di Pengaturan agar tab dengan masukan yang belum disimpan tidak ditangguhkan."
   },
-  "onboardingRemapHint": {
-    "message": "Mau pintasan keyboard yang berbeda? Kustomisasi di sini →"
-  },
   "statMemberSince": {
     "message": "Anggota sejak"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Setelah membangunkan tab yang tertidur untuk melihatnya, tombol baru Tidurkan tab ini di popup dan panel samping menidurkan kembali hanya tab itu. Tombol ini memindahkanmu ke tab lain dulu, karena tab yang sedang kamu lihat tidak bisa ditidurkan."
+  },
+  "reportBug": {
+    "message": "Laporkan bug"
+  },
+  "clickToWake": {
+    "message": "Klik untuk membangunkan tab ini"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Sudah memakai Penghemat Memori browser Anda?</strong> Biarkan aktif jika Anda menyukainya. Ia membebaskan memori secara otomatis di latar belakang; Drowzy menambahkan kendali di atasnya: daftar langsung tab yang tidur, penangguhan sekali klik, dan daftar putih untuk situs yang tidak boleh tidur."
+  },
+  "changelog138Title1": {
+    "message": "Tab yang dipulihkan kembali tidur lebih cepat"
+  },
+  "changelog138Desc1": {
+    "message": "Setelah browser dimulai ulang, Drowzy kini terus mengawasi tab yang dipulihkan browser terlambat dan menidurkannya kembali dalam waktu sekitar satu menit. Tab yang sudah Anda lihat tidak disentuh."
+  },
+  "changelog138Title2": {
+    "message": "Laporkan bug dari Pengaturan"
+  },
+  "changelog138Desc2": {
+    "message": "Tautan baru Laporkan bug di Pengaturan membuka pelacak masalah publik Drowzy di tab baru. Tidak ada yang pernah dikirim secara otomatis."
+  },
+  "changelog138Title3": {
+    "message": "Sentuhan kejelasan kecil"
+  },
+  "changelog138Desc3": {
+    "message": "Tab yang tidur kini menampilkan petunjuk klik untuk membangunkan, dan halaman sambutan menjelaskan cara Drowzy bekerja berdampingan dengan Penghemat Memori bawaan browser Anda."
   }
 }

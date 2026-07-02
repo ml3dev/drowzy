@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Űrlapot töltesz ki?</strong> Engedélyezd a „Űrlapokat tartalmazó lapok védelme\" opciót a Beállításokban, hogy a mentetlen bevitelt tartalmazó lapok ne legyenek felfüggesztve."
   },
-  "onboardingRemapHint": {
-    "message": "Más billentyűparancsokat szeretne? Itt testreszabhatja →"
-  },
   "statMemberSince": {
     "message": "Tag óta"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Miután felébresztesz egy alvó lapot, hogy megnézd, az előugró ablakban és az oldalsávban lévő új „Lap altatása\" gomb csak azt a lapot altatja el újra. Először átvált egy másik lapra, mivel az éppen megtekintett lap nem altatható el."
+  },
+  "reportBug": {
+    "message": "Hiba jelentése"
+  },
+  "clickToWake": {
+    "message": "Kattints a lap felébresztéséhez"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Már használod a böngésző memóriatakarékos módját?</strong> Hagyd bekapcsolva, ha bevált. Automatikusan szabadít fel memóriát a háttérben; a Drowzy irányítást ad hozzá: élő listát az alvó lapokról, felfüggesztést egy kattintással és engedélyezett listát azoknak az oldalaknak, amelyek soha nem aludhatnak el."
+  },
+  "changelog138Title1": {
+    "message": "A visszaállított lapok hamarabb alszanak el újra"
+  },
+  "changelog138Desc1": {
+    "message": "A böngésző újraindítása után a Drowzy mostantól folyamatosan figyeli a későn visszaállított lapokat, és nagyjából egy percen belül újra elaltatja őket. A megtekintett lapokhoz nem nyúl."
+  },
+  "changelog138Title2": {
+    "message": "Hibajelentés a beállításokból"
+  },
+  "changelog138Desc2": {
+    "message": "Az új Hiba jelentése link a beállításokban a Drowzy nyilvános hibakövetőjét nyitja meg új lapon. Semmi sem kerül elküldésre automatikusan."
+  },
+  "changelog138Title3": {
+    "message": "Apró érthetőségi finomítások"
+  },
+  "changelog138Desc3": {
+    "message": "Az alvó lapok most kattints a felébresztéshez tippet mutatnak, az üdvözlőoldal pedig elmagyarázza, hogyan működik a Drowzy a böngésző beépített memóriatakarékos módja mellett."
   }
 }

@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Täytätkö lomaketta?</strong> Ota käyttöön \"Suojaa lomakkeita sisältävät välilehdet\" Asetuksissa, jotta tallentamattomia syötteitä sisältäviä välilehtiä ei suspendoida."
   },
-  "onboardingRemapHint": {
-    "message": "Haluatko muita pikanäppäimiä? Mukauta niitä täältä →"
-  },
   "statMemberSince": {
     "message": "Jäsen alkaen"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Kun olet herättänyt lepotilassa olevan välilehden katsoaksesi sitä, uusi Laita tämä välilehti lepotilaan -painike ponnahdusikkunassa ja sivupaneelissa palauttaa vain sen välilehden lepotilaan. Se vaihtaa sinut ensin toiseen välilehteen, koska katselemaasi välilehteä ei voi laittaa lepotilaan."
+  },
+  "reportBug": {
+    "message": "Ilmoita virheestä"
+  },
+  "clickToWake": {
+    "message": "Herätä välilehti napsauttamalla"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Käytätkö jo selaimen muistinsäästäjää?</strong> Pidä se päällä, jos pidät siitä. Se vapauttaa muistia automaattisesti taustalla; Drowzy lisää hallintaa sen päälle: reaaliaikaisen luettelon nukkuvista välilehdistä, keskeytyksen yhdellä napsautuksella ja sallittujen luettelon sivustoille, joiden ei pidä koskaan nukahtaa."
+  },
+  "changelog138Title1": {
+    "message": "Palautetut välilehdet nukahtavat taas nopeammin"
+  },
+  "changelog138Desc1": {
+    "message": "Selaimen uudelleenkäynnistyksen jälkeen Drowzy tarkkailee nyt jatkuvasti välilehtiä, jotka selain palauttaa myöhässä, ja nukuttaa ne uudelleen noin minuutissa. Katsomiisi välilehtiin ei kosketa."
+  },
+  "changelog138Title2": {
+    "message": "Ilmoita virheestä asetuksista"
+  },
+  "changelog138Desc2": {
+    "message": "Uusi Ilmoita virheestä -linkki asetuksissa avaa Drowzyn julkisen ongelmaseurannan uuteen välilehteen. Mitään ei koskaan lähetetä automaattisesti."
+  },
+  "changelog138Title3": {
+    "message": "Pieniä selkeysparannuksia"
+  },
+  "changelog138Desc3": {
+    "message": "Nukkuvat välilehdet näyttävät nyt herätä napsauttamalla -vihjeen, ja tervetulosivu selittää, miten Drowzy toimii selaimen sisäänrakennetun muistinsäästäjän rinnalla."
   }
 }

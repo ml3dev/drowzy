@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Completezi un formular?</strong> Activează „Protejează filele cu formulare\" în Setări astfel încât filele cu introduceri nesalvate să nu fie suspendate."
   },
-  "onboardingRemapHint": {
-    "message": "Doriți alte comenzi rapide de la tastatură? Personalizați-le aici →"
-  },
   "statMemberSince": {
     "message": "Membru din"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "După ce trezești o filă în repaus ca să o vezi, noul buton Suspendă această filă din fereastra pop-up și panoul lateral repune în repaus doar acea filă. Te comută mai întâi la altă filă, deoarece fila pe care o vezi nu poate fi suspendată."
+  },
+  "reportBug": {
+    "message": "Raportează o eroare"
+  },
+  "clickToWake": {
+    "message": "Click pentru a trezi această filă"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Folosești deja economisirea memoriei din browser?</strong> Las-o pornită dacă îți place. Eliberează memoria automat în fundal; Drowzy adaugă control peste ea: o listă live a filelor adormite, suspendare cu un click și o listă albă pentru site-urile care nu trebuie să adoarmă niciodată."
+  },
+  "changelog138Title1": {
+    "message": "Filele restaurate adorm din nou mai repede"
+  },
+  "changelog138Desc1": {
+    "message": "După o repornire a browserului, Drowzy urmărește acum continuu filele pe care browserul le restaurează cu întârziere și le adoarme din nou în aproximativ un minut. Filele pe care le-ați vizualizat nu sunt atinse."
+  },
+  "changelog138Title2": {
+    "message": "Raportați o eroare din Setări"
+  },
+  "changelog138Desc2": {
+    "message": "Un nou link Raportează o eroare în Setări deschide registrul public de probleme al Drowzy într-o filă nouă. Nimic nu este trimis vreodată automat."
+  },
+  "changelog138Title3": {
+    "message": "Mici retușuri de claritate"
+  },
+  "changelog138Desc3": {
+    "message": "Filele adormite afișează acum indiciul click pentru a trezi, iar pagina de bun venit explică cum funcționează Drowzy alături de economisirea memoriei încorporată în browser."
   }
 }

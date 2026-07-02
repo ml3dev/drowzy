@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>正在填寫表單?</strong> 在設定中啟用「保護有表單的分頁」,以防止有未儲存輸入的分頁被掛起。"
   },
-  "onboardingRemapHint": {
-    "message": "想要其他鍵盤快速鍵？在此自訂 →"
-  },
   "statMemberSince": {
     "message": "使用起始日"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "喚醒一個休眠的分頁查看後，彈出視窗和側邊欄中新增的「讓此分頁休眠」按鈕可只讓該分頁重新休眠。它會先切換到另一個分頁，因為正在查看的分頁無法休眠。"
+  },
+  "reportBug": {
+    "message": "回報問題"
+  },
+  "clickToWake": {
+    "message": "點擊喚醒此分頁"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>已經在用瀏覽器的記憶體節省模式？</strong> 喜歡就繼續開著。它會在背景自動釋放記憶體；Drowzy 在此之上增加控制：休眠分頁的即時清單、一鍵休眠，以及永不休眠網站的白名單。"
+  },
+  "changelog138Title1": {
+    "message": "還原的分頁更快重新休眠"
+  },
+  "changelog138Desc1": {
+    "message": "瀏覽器重新啟動後，Drowzy 現在會持續留意瀏覽器較晚還原的分頁，並在大約一分鐘內讓它們重新休眠。你看過的分頁不會被動到。"
+  },
+  "changelog138Title2": {
+    "message": "從設定中回報問題"
+  },
+  "changelog138Desc2": {
+    "message": "設定中新增的回報問題連結會在新分頁開啟 Drowzy 的公開問題追蹤器。任何內容都不會自動傳送。"
+  },
+  "changelog138Title3": {
+    "message": "小幅清晰度改進"
+  },
+  "changelog138Desc3": {
+    "message": "休眠的分頁現在會顯示點擊喚醒提示，歡迎頁面也說明 Drowzy 如何與瀏覽器內建的記憶體節省模式協同運作。"
   }
 }

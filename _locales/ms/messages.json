@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Mengisi borang?</strong> Aktifkan \"Lindungi tab dengan borang\" di Tetapan supaya tab dengan input yang belum disimpan tidak digantung."
   },
-  "onboardingRemapHint": {
-    "message": "Mahukan pintasan papan kekunci yang berbeza? Sesuaikan di sini →"
-  },
   "statMemberSince": {
     "message": "Ahli sejak"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Selepas anda mengejutkan tab yang tidur untuk melihatnya, butang baharu Tidurkan tab ini dalam pop timbul dan panel sisi menidurkan semula tab itu sahaja. Ia menukar anda ke tab lain dahulu, kerana tab yang sedang anda lihat tidak boleh ditidurkan."
+  },
+  "reportBug": {
+    "message": "Laporkan pepijat"
+  },
+  "clickToWake": {
+    "message": "Klik untuk membangunkan tab ini"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Sudah menggunakan Penjimat Memori pelayar anda?</strong> Biarkan ia dihidupkan jika anda menyukainya. Ia membebaskan memori secara automatik di latar belakang; Drowzy menambah kawalan di atasnya: senarai langsung tab yang tidur, penggantungan satu klik dan senarai putih untuk laman yang tidak sepatutnya tidur."
+  },
+  "changelog138Title1": {
+    "message": "Tab yang dipulihkan tidur semula lebih cepat"
+  },
+  "changelog138Desc1": {
+    "message": "Selepas pelayar dimulakan semula, Drowzy kini terus memantau tab yang dipulihkan pelayar lewat dan menidurkannya semula dalam masa kira-kira seminit. Tab yang telah anda lihat tidak disentuh."
+  },
+  "changelog138Title2": {
+    "message": "Laporkan pepijat dari Tetapan"
+  },
+  "changelog138Desc2": {
+    "message": "Pautan baharu Laporkan pepijat dalam Tetapan membuka penjejak isu awam Drowzy dalam tab baharu. Tiada apa-apa yang dihantar secara automatik."
+  },
+  "changelog138Title3": {
+    "message": "Sentuhan kejelasan kecil"
+  },
+  "changelog138Desc3": {
+    "message": "Tab yang tidur kini memaparkan petunjuk klik untuk bangunkan, dan halaman aluan menerangkan cara Drowzy berfungsi bersama Penjimat Memori terbina dalam pelayar anda."
   }
 }

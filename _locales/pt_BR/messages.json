@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Preenchendo um formulário?</strong> Ative \"Proteger guias com formulários\" em Configurações para que guias com entradas não salvas não sejam suspensas."
   },
-  "onboardingRemapHint": {
-    "message": "Quer outros atalhos de teclado? Personalize aqui →"
-  },
   "statMemberSince": {
     "message": "Membro desde"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Depois de acordar uma aba suspensa para vê-la, o novo botão Suspender esta aba no popup e no painel lateral coloca somente essa aba para dormir de novo. Ele troca você para outra aba primeiro, porque a aba que você está vendo não pode ser suspensa."
+  },
+  "reportBug": {
+    "message": "Relatar um bug"
+  },
+  "clickToWake": {
+    "message": "Clique para despertar esta aba"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Já usa a Economia de memória do seu navegador?</strong> Deixe-a ligada se você gosta dela. Ela libera memória automaticamente em segundo plano; o Drowzy adiciona controle por cima: uma lista ao vivo das abas dormindo, suspensão com um clique e uma lista de permissões para sites que nunca devem dormir."
+  },
+  "changelog138Title1": {
+    "message": "Abas restauradas voltam a dormir mais cedo"
+  },
+  "changelog138Desc1": {
+    "message": "Após reiniciar o navegador, o Drowzy agora fica de olho nas abas que o navegador restaura tarde e as coloca para dormir de novo em cerca de um minuto. As abas que você visualizou não são tocadas."
+  },
+  "changelog138Title2": {
+    "message": "Relate um bug pelas Configurações"
+  },
+  "changelog138Desc2": {
+    "message": "Um novo link Relatar um bug nas Configurações abre o rastreador público de problemas do Drowzy em uma nova aba. Nada é enviado automaticamente."
+  },
+  "changelog138Title3": {
+    "message": "Pequenos toques de clareza"
+  },
+  "changelog138Desc3": {
+    "message": "As abas dormindo agora mostram uma dica de clique para despertar, e a página de boas-vindas explica como o Drowzy funciona junto com a Economia de memória integrada do navegador."
   }
 }

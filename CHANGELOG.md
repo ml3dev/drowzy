@@ -2,6 +2,29 @@
 
 All notable changes to Drowzy are documented here.
 
+## [1.3.8] - 2026-07-02
+
+Faster memory recovery after a browser restart, plus small clarity touches. No new permissions, no telemetry, and the native `chrome.tabs.discard` approach is unchanged.
+
+### Added
+- **"Report a bug" link** in the popup and side panel Settings section, on the same row as "What's new". It opens the public GitHub issue tracker in a new tab - reporting is always an explicit user action; nothing is ever sent automatically.
+- **Memory Saver tip on the welcome page.** A fourth onboarding tip explains honestly how Drowzy relates to the browser's built-in Memory Saver: keep it on if you like it, it frees memory automatically, and Drowzy adds control on top (live list of sleeping tabs, one-click suspend, whitelist). No claim that Drowzy saves more per tab.
+- **"Click to wake" tooltip on sleeping tab rows.** Clicking a sleeping row has always woken the tab, but nothing said so; sleeping rows now carry a tooltip (title attribute only - an `aria-label` would have replaced the row's accessible name and hidden the tab title from screen readers).
+
+### Fixed
+- **Restored tabs are re-suspended within about a minute of appearing, however slowly Chrome restores them.** Chrome restores large sessions progressively (deferred windows, staggered background tab loading), so tabs that appeared or finished restoring after the old one-shot ~30s startup pass used to sit in RAM until the full auto-suspend timer (default 15 min) caught them - the "Chrome restores my tabs, RAM spikes, Drowzy only suspends them later" report. Restore artifacts are now **tagged** (every non-active tab present at startup, plus any tab later born in the background in Chrome's `unloaded` state - the shape only restored/reopened tabs have, since user-opened background tabs start loading immediately) and one guarded sweep drains the tag set: fired once by the existing ~30s `startup-suspend` alarm and then by the per-minute `check-tabs` tick until no tags remain. A session that takes ten minutes to restore is covered minute by minute with zero new alarms, and still-`unloaded` tabs are discarded before Chrome's tab loader ever loads them, preventing the RAM spike instead of recovering from it. Guards: tabs the user has actually **viewed this session** are skipped (tracked from activation events in `chrome.storage.session`, which Chrome clears on restart - a time-based guard would wrongly treat late-restored tabs as "recently touched", since restore itself bumps timestamps); tabs mid-load stay tagged and retry next tick, enforced again by a fresh pre-discard recheck (discarding an uncommitted navigation can revert the tab to a stale URL); every other outcome untags - including *before* Drowzy's own discards, so a woken tab is never re-swept - and the sweep converges to a no-op; each discard goes through `suspendTab` so form protection, the pre-discard active/audible recheck, and the standard exclusions (active, pinned, audio, whitelist, internal pages - shared via `shouldSuspend`, not a copy) apply. Gated on the same **Suspend tabs on startup** setting, re-read every tick; tags accumulated while the setting is off are dropped so toggling it on can't mass-discard. Works even when auto-suspend is off or the timer is set to Never. The old raw 30s pass (which ignored viewed and mid-load tabs) is replaced by this sweep - same timing, stronger protections. Session-set loads are single-flight and tag writes are coalesced, so a 200-tab restore doesn't thrash `storage.session`.
+
+### Changed
+- **Store summary (`extDescription`) reworded** in `en`, `en_GB`, and `en_US`: now "Auto-suspend inactive tabs to save up to 80% RAM. Lightweight, private, no tracking, and open source." - drops the "Tabs are never lost." line and adds the open-source mention `en_GB` / `en_US` were missing. Store-listing copy only; no behavior change.
+
+### i18n
+- New keys translated across all 57 locales: `reportBug` (the Settings link), `clickToWake` (the sleeping-row tooltip), `onboardingMemorySaverTip` (the welcome-page tip), and the in-app "What's New" 1.3.8 entries (`changelog138Title1-3` / `changelog138Desc1-3`). The 11 best-effort locales (Amharic, Bengali, Gujarati, Kannada, Malayalam, Marathi, Odia, Tamil, Telugu, Filipino, Swahili) use machine translations flagged for a future native-speaker pass.
+- In-app "What's New" page updated to 1.3.8 (`changelog.html`) so it leads with this release, above the existing 1.3.7 section. As before, the page only auto-opens on major version bumps, so updating to 1.3.8 does not pop the What's New tab.
+- Removed the dead `onboardingRemapHint` key from all 57 locales (referenced nowhere since the onboarding shortcut-hint rework).
+
+### Audit
+- All 57 locale files validated: JSON validity, key parity against `en` (211 keys, no missing or extra keys), no empty values, placeholder integrity, balanced `<strong>` tags in every HTML-injected key, and no untranslated-English left in non-English locales for the new keys. `background.js`, `popup.js`, `onboarding.js`, and `changelog.js` pass `node --check`, and every `data-i18n*` / `getMessage` / dynamic (`labelKey` / `statusKey`) / manifest `__MSG__` reference resolves to a real key. The suspension changes went through two multi-agent adversarial review rounds plus independent re-verification of every fix. Permissions are unchanged from 1.3.7.
+
 ## [1.3.7] - 2026-06-07
 
 Small, additive fix. No new permissions, and the core suspension pipeline is unchanged.

@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Fyller du ut et skjema?</strong> Slå på \"Beskytt faner med skjemaer\" i Innstillinger så faner med ulagret inndata ikke suspenderes."
   },
-  "onboardingRemapHint": {
-    "message": "Vil du ha andre tastatursnarveier? Tilpass dem her →"
-  },
   "statMemberSince": {
     "message": "Medlem siden"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Når du har vekket en sovende fane for å se på den, setter den nye knappen Sett denne fanen i dvale i popup-vinduet og sidepanelet bare den fanen i dvale igjen. Den bytter deg først til en annen fane, fordi fanen du ser på, ikke kan settes i dvale."
+  },
+  "reportBug": {
+    "message": "Rapporter en feil"
+  },
+  "clickToWake": {
+    "message": "Klikk for å vekke denne fanen"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Bruker du allerede nettleserens minnesparing?</strong> La den stå på hvis du liker den. Den frigjør minne automatisk i bakgrunnen; Drowzy legger til kontroll på toppen: en sanntidsliste over sovende faner, suspendering med ett klikk og en hviteliste for nettsteder som aldri skal sove."
+  },
+  "changelog138Title1": {
+    "message": "Gjenopprettede faner sovner raskere igjen"
+  },
+  "changelog138Desc1": {
+    "message": "Etter en omstart av nettleseren følger Drowzy nå med på faner nettleseren gjenoppretter sent, og legger dem i søvn igjen innen omtrent ett minutt. Faner du har sett på, røres ikke."
+  },
+  "changelog138Title2": {
+    "message": "Rapporter en feil fra Innstillinger"
+  },
+  "changelog138Desc2": {
+    "message": "En ny Rapporter en feil-lenke i Innstillinger åpner Drowzys offentlige feilsporing i en ny fane. Ingenting sendes noensinne automatisk."
+  },
+  "changelog138Title3": {
+    "message": "Små klarhetsforbedringer"
+  },
+  "changelog138Desc3": {
+    "message": "Sovende faner viser nå et klikk for å vekke-hint, og velkomstsiden forklarer hvordan Drowzy fungerer sammen med nettleserens innebygde minnesparing."
   }
 }

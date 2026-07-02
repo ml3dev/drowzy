@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Fyller du i ett formulär?</strong> Aktivera \"Skydda flikar med formulär\" i Inställningar så att flikar med osparad inmatning inte avbryts."
   },
-  "onboardingRemapHint": {
-    "message": "Vill du ha andra kortkommandon? Anpassa dem här →"
-  },
   "statMemberSince": {
     "message": "Medlem sedan"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "När du har väckt en sovande flik för att titta på den sätter den nya knappen Försätt denna flik i viloläge i popupen och sidopanelen bara den fliken i viloläge igen. Den växlar dig först till en annan flik, eftersom fliken du tittar på inte kan försättas i viloläge."
+  },
+  "reportBug": {
+    "message": "Rapportera ett fel"
+  },
+  "clickToWake": {
+    "message": "Klicka för att väcka den här fliken"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Använder du redan webbläsarens minnessparare?</strong> Låt den vara på om du gillar den. Den frigör minne automatiskt i bakgrunden; Drowzy lägger till kontroll ovanpå: en lista i realtid över sovande flikar, suspendering med ett klick och en vitlista för webbplatser som aldrig ska sova."
+  },
+  "changelog138Title1": {
+    "message": "Återställda flikar somnar om snabbare"
+  },
+  "changelog138Desc1": {
+    "message": "Efter en omstart av webbläsaren håller Drowzy nu koll på flikar som webbläsaren återställer sent och söver dem igen inom ungefär en minut. Flikar du har tittat på rörs inte."
+  },
+  "changelog138Title2": {
+    "message": "Rapportera ett fel från Inställningar"
+  },
+  "changelog138Desc2": {
+    "message": "En ny länk Rapportera ett fel i Inställningar öppnar Drowzys offentliga ärendespårare i en ny flik. Inget skickas någonsin automatiskt."
+  },
+  "changelog138Title3": {
+    "message": "Små tydlighetsförbättringar"
+  },
+  "changelog138Desc3": {
+    "message": "Sovande flikar visar nu tipset klicka för att väcka, och välkomstsidan förklarar hur Drowzy fungerar tillsammans med webbläsarens inbyggda minnessparare."
   }
 }

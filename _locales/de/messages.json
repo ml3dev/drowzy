@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Füllst du ein Formular aus?</strong> Aktiviere „Tabs mit Formularen schützen\" in den Einstellungen, damit Tabs mit ungespeicherter Eingabe nicht suspendiert werden."
   },
-  "onboardingRemapHint": {
-    "message": "Möchten Sie andere Tastenkombinationen? Hier anpassen →"
-  },
   "statMemberSince": {
     "message": "Mitglied seit"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Nachdem du einen schlafenden Tab zum Ansehen aufgeweckt hast, legt die neue Schaltfläche „Diesen Tab schlafen legen\" im Popup und in der Seitenleiste genau diesen Tab wieder schlafen. Zuerst wird zu einem anderen Tab gewechselt, da der gerade angezeigte Tab nicht schlafen gelegt werden kann."
+  },
+  "reportBug": {
+    "message": "Fehler melden"
+  },
+  "clickToWake": {
+    "message": "Klicken, um diesen Tab aufzuwecken"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Nutzen Sie bereits den Speichersparmodus Ihres Browsers?</strong> Lassen Sie ihn an, wenn er Ihnen gefällt. Er gibt Speicher automatisch im Hintergrund frei; Drowzy ergänzt ihn um Kontrolle: eine Live-Liste schlafender Tabs, Suspendieren mit einem Klick und eine Whitelist für Websites, die nie schlafen sollen."
+  },
+  "changelog138Title1": {
+    "message": "Wiederhergestellte Tabs schlafen schneller wieder ein"
+  },
+  "changelog138Desc1": {
+    "message": "Nach einem Browser-Neustart behält Drowzy jetzt Tabs im Blick, die der Browser verspätet wiederherstellt, und legt sie innerhalb von etwa einer Minute wieder schlafen. Tabs, die Sie angesehen haben, bleiben unangetastet."
+  },
+  "changelog138Title2": {
+    "message": "Fehler direkt aus den Einstellungen melden"
+  },
+  "changelog138Desc2": {
+    "message": "Ein neuer Link „Fehler melden“ in den Einstellungen öffnet Drowzys öffentlichen Issue-Tracker in einem neuen Tab. Es wird nie etwas automatisch gesendet."
+  },
+  "changelog138Title3": {
+    "message": "Kleine Klarheitsverbesserungen"
+  },
+  "changelog138Desc3": {
+    "message": "Schlafende Tabs zeigen jetzt einen Hinweis „Klicken zum Aufwecken“, und die Willkommensseite erklärt, wie Drowzy mit dem integrierten Speichersparmodus des Browsers zusammenarbeitet."
   }
 }

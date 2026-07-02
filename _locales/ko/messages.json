@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>양식을 작성 중이신가요?</strong> 저장되지 않은 입력이 있는 탭이 중지되지 않도록 설정에서 \"양식이 있는 탭 보호\"를 활성화하세요."
   },
-  "onboardingRemapHint": {
-    "message": "다른 키보드 단축키를 원하시나요? 여기에서 사용자 지정하세요 →"
-  },
   "statMemberSince": {
     "message": "가입일"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "절전된 탭을 보려고 깨운 뒤, 팝업과 사이드 패널의 새 '이 탭 절전' 버튼으로 그 탭만 다시 절전할 수 있습니다. 보고 있는 탭은 절전할 수 없으므로 먼저 다른 탭으로 전환됩니다."
+  },
+  "reportBug": {
+    "message": "버그 신고"
+  },
+  "clickToWake": {
+    "message": "클릭하여 이 탭 깨우기"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>이미 브라우저의 메모리 절약 모드를 사용 중이신가요?</strong> 마음에 들면 그대로 켜 두세요. 백그라운드에서 자동으로 메모리를 확보합니다. Drowzy는 그 위에 제어 기능을 더합니다: 잠자는 탭의 실시간 목록, 원클릭 일시중지, 절대 잠들면 안 되는 사이트의 화이트리스트."
+  },
+  "changelog138Title1": {
+    "message": "복원된 탭이 더 빨리 다시 잠듭니다"
+  },
+  "changelog138Desc1": {
+    "message": "브라우저 재시작 후 Drowzy는 이제 브라우저가 늦게 복원하는 탭을 계속 지켜보다가 약 1분 안에 다시 재웁니다. 사용자가 본 탭은 건드리지 않습니다."
+  },
+  "changelog138Title2": {
+    "message": "설정에서 버그 신고"
+  },
+  "changelog138Desc2": {
+    "message": "설정의 새 버그 신고 링크는 Drowzy의 공개 이슈 트래커를 새 탭에서 엽니다. 어떤 것도 자동으로 전송되지 않습니다."
+  },
+  "changelog138Title3": {
+    "message": "작은 명확성 개선"
+  },
+  "changelog138Desc3": {
+    "message": "잠자는 탭에 클릭하여 깨우기 힌트가 표시되고, 환영 페이지에 Drowzy가 브라우저 내장 메모리 절약 모드와 어떻게 함께 작동하는지 설명을 추가했습니다."
   }
 }

@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Vyplňujete formulář?</strong> Zapněte „Chránit karty s formuláři\" v Nastavení, aby se karty s neuloženým vstupem neuspávaly."
   },
-  "onboardingRemapHint": {
-    "message": "Chcete jiné klávesové zkratky? Přizpůsobte si je zde →"
-  },
   "statMemberSince": {
     "message": "Členem od"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Když probudíte uspanou kartu, abyste se na ni podívali, nové tlačítko Uspat tuto kartu ve vyskakovacím okně a postranním panelu uspí zpět jen tuto kartu. Nejdřív vás přepne na jinou kartu, protože kartu, kterou si prohlížíte, uspat nelze."
+  },
+  "reportBug": {
+    "message": "Nahlásit chybu"
+  },
+  "clickToWake": {
+    "message": "Kliknutím probudíte tuto kartu"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Už používáte úsporu paměti v prohlížeči?</strong> Pokud vám vyhovuje, nechte ji zapnutou. Uvolňuje paměť automaticky na pozadí; Drowzy k ní přidává kontrolu: živý seznam uspaných karet, uspání jedním kliknutím a seznam povolených webů, které nikdy nemají usnout."
+  },
+  "changelog138Title1": {
+    "message": "Obnovené karty usínají znovu rychleji"
+  },
+  "changelog138Desc1": {
+    "message": "Po restartu prohlížeče teď Drowzy průběžně hlídá karty, které prohlížeč obnoví se zpožděním, a do zhruba minuty je znovu uspí. Karty, které jste si prohlédli, zůstávají netknuté."
+  },
+  "changelog138Title2": {
+    "message": "Nahlaste chybu z Nastavení"
+  },
+  "changelog138Desc2": {
+    "message": "Nový odkaz Nahlásit chybu v Nastavení otevře veřejný přehled problémů Drowzy v nové kartě. Nikdy se nic neodesílá automaticky."
+  },
+  "changelog138Title3": {
+    "message": "Drobná vylepšení srozumitelnosti"
+  },
+  "changelog138Desc3": {
+    "message": "Uspané karty teď zobrazují nápovědu kliknutím probudíte a uvítací stránka vysvětluje, jak Drowzy funguje vedle vestavěné úspory paměti prohlížeče."
   }
 }

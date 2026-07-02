@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Izpolnjujete obrazec?</strong> Vklopite »Zaščiti zavihke z obrazci« v Nastavitvah, da zavihki z neshranjenim vnosom ne bodo ustavljeni."
   },
-  "onboardingRemapHint": {
-    "message": "Želite druge bližnjice na tipkovnici? Prilagodite jih tukaj →"
-  },
   "statMemberSince": {
     "message": "Član od"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Ko zbudiš uspavani zavihek, da si ga ogledaš, nov gumb Uspavaj ta zavihek v pojavnem oknu in stranski vrstici znova uspava samo ta zavihek. Najprej te preklopi na drug zavihek, ker zavihka, ki ga gledaš, ni mogoče uspavati."
+  },
+  "reportBug": {
+    "message": "Prijavi napako"
+  },
+  "clickToWake": {
+    "message": "Klikni, da zbudiš ta zavihek"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Že uporabljate brskalnikov varčevalnik pomnilnika?</strong> Pustite ga vklopljenega, če vam ustreza. Samodejno sprošča pomnilnik v ozadju; Drowzy mu dodaja nadzor: seznam spečih zavihkov v živo, zamrznitev z enim klikom in beli seznam za strani, ki ne smejo nikoli zaspati."
+  },
+  "changelog138Title1": {
+    "message": "Obnovljeni zavihki hitreje spet zaspijo"
+  },
+  "changelog138Desc1": {
+    "message": "Po ponovnem zagonu brskalnika Drowzy zdaj stalno spremlja zavihke, ki jih brskalnik obnovi z zamudo, in jih v približno minuti spet uspava. Zavihkov, ki ste si jih ogledali, se ne dotika."
+  },
+  "changelog138Title2": {
+    "message": "Prijavite napako iz nastavitev"
+  },
+  "changelog138Desc2": {
+    "message": "Nova povezava Prijavi napako v nastavitvah odpre javni sledilnik težav Drowzy v novem zavihku. Nič se nikoli ne pošlje samodejno."
+  },
+  "changelog138Title3": {
+    "message": "Majhne izboljšave jasnosti"
+  },
+  "changelog138Desc3": {
+    "message": "Speči zavihki zdaj prikazujejo namig klikni za prebujanje, stran dobrodošlice pa pojasnjuje, kako Drowzy deluje ob vgrajenem varčevalniku pomnilnika brskalnika."
   }
 }

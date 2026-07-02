@@ -152,6 +152,31 @@ async function onStartup() {
     // worker death. 0.1 min gets clamped to ~30s in production, which is also
     // enough delay for Chrome to finish restoring saved tabs.
     try { chrome.alarms.create('startup-suspend', { delayInMinutes: 0.1 }); } catch {}
+
+    // Chrome restores big sessions progressively (deferred windows, staggered
+    // background loading), so tabs can keep materializing long after startup.
+    // Instead of stacking one-shot alarms, tag everything that is a restore
+    // artifact right now; restoredCatchupSweep drains the tag set from the
+    // 30s alarm above and then the per-minute check-tabs tick, so even a
+    // session that takes ten minutes to restore is fully covered. Tabs
+    // restored later still are tagged as they appear (onTabCreated). Each
+    // window's startup-active tab is instead seeded as viewed - it is on the
+    // user's screen right now, and without this a tab they look at and then
+    // switch away from before the sweep runs would be swept.
+    try {
+      let all = await chrome.tabs.query({});
+      let pending = await loadRestoredPending();
+      let added = false;
+      for (let tab of all) {
+        if (tab.active) {
+          await markActivated(tab.id);
+          continue;
+        }
+        if (tab.discarded) continue;
+        if (!pending.has(tab.id)) { pending.add(tab.id); added = true; }
+      }
+      if (added) await persistRestoredPending();
+    } catch {}
   }
 }
 
@@ -182,23 +207,192 @@ async function firstRunQuickSuspend() {
   } catch {}
 }
 
-async function suspendAllOnStartup(settings) {
+// Tab ids that are session-restore artifacts still owed a re-suspend: seeded
+// at startup (everything non-active), extended as late-restored tabs appear
+// (onTabCreated), and drained by restoredCatchupSweep. Backed by
+// chrome.storage.session - cleared on browser restart, survives MV3
+// service-worker restarts in between.
+//
+// Both session sets memoize the IN-FLIGHT PROMISE, not the resolved value:
+// concurrent first callers (onStartup seeding vs an onTabCreated burst) must
+// share one Set. Caching the value would let a second caller's storage read
+// clobber a Set the first caller already mutated, silently dropping tags.
+let _restoredPendingPromise = null;
+let _restoredPersistTimer = null;
+
+function loadRestoredPending() {
+  if (!_restoredPendingPromise) {
+    _restoredPendingPromise = chrome.storage.session.get('restoredTabIds')
+      .then(function(data) { return new Set(data.restoredTabIds || []); })
+      .catch(function() { return new Set(); });
+  }
+  return _restoredPendingPromise;
+}
+
+async function persistRestoredPending() {
   try {
+    let set = await loadRestoredPending();
+    await chrome.storage.session.set({ restoredTabIds: [...set] });
+  } catch {}
+}
+
+function scheduleRestoredPersist() {
+  // restores create tabs in bursts; rewriting the whole array per tab would
+  // be O(n^2) during the exact burst this feature targets - coalesce writes.
+  // A write lost to worker death degrades gracefully: an untagged tab just
+  // falls back to the normal idle timer.
+  if (_restoredPersistTimer) return;
+  _restoredPersistTimer = setTimeout(function() {
+    _restoredPersistTimer = null;
+    persistRestoredPending();
+  }, 1000);
+}
+
+async function tagRestored(tabId) {
+  let set = await loadRestoredPending();
+  if (set.has(tabId)) return;
+  set.add(tabId);
+  scheduleRestoredPersist();
+}
+
+async function untagRestored(tabId) {
+  let set = await loadRestoredPending();
+  if (!set.has(tabId)) return;
+  set.delete(tabId);
+  await persistRestoredPending();
+}
+
+async function clearRestoredPending() {
+  let set = await loadRestoredPending();
+  if (!set.size) return;
+  set.clear();
+  await persistRestoredPending();
+}
+
+let _sweeping = false;
+
+async function restoredCatchupSweep(settings) {
+  // startup catch-up: re-suspend restore-tagged tabs the user hasn't viewed.
+  // Runs from the 30s startup-suspend alarm AND the existing per-minute tick
+  // until the tag set drains, so a session that restores slowly is covered
+  // minute by minute rather than by fixed-delay passes. Guards:
+  //   1. tabs the user has actually VIEWED this session are left alone (see
+  //      the activated set). A time-based guard would misfire here: restore
+  //      itself bumps timestamps, so late-restored tabs - the exact
+  //      stragglers this sweep targets - would look "recently touched".
+  //   2. tabs still mid-load stay tagged and are retried next tick;
+  //      discarding a tab whose navigation hasn't committed can revert it to
+  //      a stale URL. suspendTab gets skipLoading so its FRESH pre-discard
+  //      recheck enforces this too - the snapshot alone could miss a load
+  //      that started mid-sweep. Still-unloaded tabs ARE swept - discarding
+  //      them before Chrome's tab loader gets to them prevents the RAM
+  //      spike entirely.
+  //   3. every other outcome untags: suspended, closed, viewed, or protected
+  //      (pinned/audio/whitelist/internal via shouldSuspend). From then on
+  //      the tab belongs to the normal idle timer, so the sweep converges
+  //      to a no-op instead of re-checking the same tabs forever.
+  // Suspends go through suspendTab, so protectForms / markSuspendedTabs and
+  // the final pre-discard recheck all apply.
+  if (_sweeping) return; // the 30s alarm and the per-minute tick can overlap
+  _sweeping = true;
+  try {
+    let pending = await loadRestoredPending();
+    if (!pending.size) return;
+    let activated = await loadActivatedSet();
     let tabs = await chrome.tabs.query({});
-    for (let tab of tabs) {
-      if (tab.active || tab.discarded) continue;
-      if (isInternalUrl(tab.url)) continue;
-      if (settings.protectPinned && tab.pinned) continue;
-      if (settings.protectAudio && tab.audible) continue;
-      if (isWhitelisted(tab.url, settings.whitelist)) continue;
-      // Skip form check and title marking at startup - content scripts aren't reliably loaded
-      // and the tab is about to be discarded anyway (title resets on reload)
-      try {
-        let result = await chrome.tabs.discard(tab.id);
-        if (result) await recordSuspension();
-      } catch {}
+    let now = Date.now();
+    let byId = new Map();
+    for (let tab of tabs) byId.set(tab.id, tab);
+    let dirty = false;
+    for (let id of [...pending]) {
+      let tab = byId.get(id);
+      if (!tab) {
+        // absent from the snapshot: usually closed - but a tab created and
+        // tagged during this sweep's own awaits is also absent, so confirm
+        // it is truly gone before untagging (it sweeps next tick otherwise)
+        try {
+          await chrome.tabs.get(id);
+        } catch {
+          pending.delete(id);
+          dirty = true;
+        }
+        continue;
+      }
+      if (tab.discarded || tab.active || activated.has(id)) {
+        pending.delete(id); dirty = true; continue;
+      }
+      if (tab.status === 'loading') continue;
+      seedTimestamp(tab, now);
+      // untag BEFORE the discard: a discard swaps the tab id via onReplaced,
+      // and the tag must not outlive the suspend - a tab Drowzy just put to
+      // sleep is done, and re-tagging its new id would let the sweep discard
+      // it again right after a Wake All reloads it in the background.
+      pending.delete(id);
+      dirty = true;
+      // threshold 0 = shouldSuspend's eligibility checks only (active,
+      // discarded, internal, pinned, audio, whitelist) with no idle
+      // requirement - the idle rule for this sweep is the activated-set guard
+      if (shouldSuspend(tab, settings, _timestamps, now, 0)) {
+        let suspended = await suspendTab(tab.id, settings, { skipLoading: true });
+        if (!suspended) {
+          // suspendTab's fresh recheck may have refused because a load
+          // started after our snapshot - re-tag that one case so it retries
+          // next tick, same as a load that was visible in the snapshot.
+          // Other refusals (activated, audible, form data) stay untagged.
+          try {
+            let fresh = await chrome.tabs.get(id);
+            if (fresh.status === 'loading' && !fresh.active && !fresh.discarded) {
+              pending.add(id);
+            }
+          } catch {}
+        }
+      }
     }
-    await updateBadgeNow();
+    if (dirty) await persistRestoredPending();
+    if (_tsDirty) scheduleFlush();
+  } catch {} finally {
+    _sweeping = false;
+  }
+}
+
+// Tab ids the user has actually activated (viewed) this browser session.
+// Backed by chrome.storage.session, which Chrome clears on browser restart -
+// exactly the "this session" lifetime we want - and which survives MV3
+// service-worker restarts in between. Same in-flight-promise memoization as
+// the restored-pending set, for the same clobbering reason.
+let _activatedPromise = null;
+
+function loadActivatedSet() {
+  if (!_activatedPromise) {
+    _activatedPromise = chrome.storage.session.get('activatedTabIds')
+      .then(function(data) { return new Set(data.activatedTabIds || []); })
+      .catch(function() { return new Set(); });
+  }
+  return _activatedPromise;
+}
+
+async function persistActivatedSet() {
+  try {
+    let set = await loadActivatedSet();
+    await chrome.storage.session.set({ activatedTabIds: [...set] });
+  } catch {}
+}
+
+async function markActivated(tabId) {
+  try {
+    let set = await loadActivatedSet();
+    if (set.has(tabId)) return;
+    set.add(tabId);
+    await persistActivatedSet();
+  } catch {}
+}
+
+async function unmarkActivated(tabId) {
+  try {
+    let set = await loadActivatedSet();
+    if (!set.has(tabId)) return;
+    set.delete(tabId);
+    await persistActivatedSet();
   } catch {}
 }
 
@@ -214,15 +408,9 @@ async function initTimestamps() {
     let now = Date.now();
     let liveIds = new Set(tabs.map(tab => tab.id));
 
-    // Add missing tabs. Seed from tab.lastAccessed (Chrome 121+) when available
-    // so a service-worker restart with cleared session storage doesn't reset
-    // the apparent idle time of long-untouched tabs to NOW - that would silently
-    // give every tab a fresh 30-min timer on restart, which is the wrong behavior.
+    // Add missing tabs (see seedTimestamp for the lastAccessed reasoning)
     for (let tab of tabs) {
-      if (!(tab.id in _timestamps)) {
-        _timestamps[tab.id] = (typeof tab.lastAccessed === 'number') ? tab.lastAccessed : now;
-        _tsDirty = true;
-      }
+      seedTimestamp(tab, now);
     }
 
     // Prune stale tab IDs that no longer exist
@@ -235,6 +423,16 @@ async function initTimestamps() {
 
     await flushTimestamps();
   } catch {}
+}
+
+function seedTimestamp(tab, now) {
+  // Seed an untracked tab from Chrome's own tab.lastAccessed (121+) when
+  // available, so a service-worker restart with cleared session storage
+  // doesn't reset the apparent idle time of long-untouched tabs to NOW -
+  // that would silently grant every tab a fresh full timer on restart.
+  if (tab.id in _timestamps) return;
+  _timestamps[tab.id] = (typeof tab.lastAccessed === 'number') ? tab.lastAccessed : now;
+  _tsDirty = true;
 }
 
 function scheduleFlush() {
@@ -346,13 +544,20 @@ async function onAlarm(alarm) {
   if (alarm.name === ALARM_NAME) await checkAndSuspendTabs();
   else if (alarm.name === 'first-run-suspend') await firstRunQuickSuspend();
   else if (alarm.name === 'startup-suspend') {
+    // same guarded sweep the per-minute tick runs - one mechanism, fired
+    // early. (Before 1.3.8 this pass was a raw discard-everything loop that
+    // ignored viewed and mid-load tabs; the sweep keeps its speed but adds
+    // those protections.)
     let settings = await getSettings();
-    if (settings.suspendOnStartup) await suspendAllOnStartup(settings);
+    if (settings.suspendOnStartup) await restoredCatchupSweep(settings);
   }
 }
 
 async function onTabActivated(activeInfo) {
   await touchTab(activeInfo.tabId);
+  await markActivated(activeInfo.tabId);
+  // the user is looking at it now - it is no longer the startup sweep's business
+  await untagRestored(activeInfo.tabId);
   // Flush immediately on activation since worker is alive during this event
   await flushTimestamps();
   debouncedBadgeUpdate();
@@ -378,10 +583,26 @@ async function onTabUpdated(tabId, changeInfo) {
   if (changeInfo.discarded !== undefined) debouncedBadgeUpdate();
 }
 
-async function onTabCreated(tab) { await touchTab(tab.id); }
+async function onTabCreated(tab) {
+  await touchTab(tab.id);
+  if (tab.active) {
+    // born on the user's screen (new tab, or the active tab of a late-restored
+    // window that onStartup's seeding query ran too early to see) - count it
+    // as viewed so the startup catch-up sweep leaves it alone
+    await markActivated(tab.id);
+  } else if (tab.status === 'unloaded' || tab.discarded) {
+    // born in the background with no content: that's the shape of a
+    // session-restored (or reopened) tab, not one the user opened - tabs a
+    // user opens in the background (middle-click, "open in new tab") start
+    // loading immediately. Tag it for the startup catch-up sweep.
+    await tagRestored(tab.id);
+  }
+}
 
 async function onTabRemoved(tabId) {
   _injectedTabs.delete(tabId);
+  await untagRestored(tabId);
+  await unmarkActivated(tabId);
   // Only mark dirty if we actually removed a tracked timestamp - avoids
   // flushing session storage when the tab wasn't being tracked.
   if (tabId in _timestamps) {
@@ -398,6 +619,21 @@ async function onTabReplaced(addedTabId, removedTabId) {
   delete _timestamps[removedTabId];
   _tsDirty = true;
   scheduleFlush();
+  // a discard swaps the tab id - carry viewed-this-session membership over
+  // so the sweep still recognizes the tab under its new id. The restore tag
+  // is deliberately NOT transferred: onReplaced here means the tab was just
+  // discarded (usually by Drowzy itself), so the sweep's job for it is done.
+  // Carrying the tag would let the sweep re-discard the tab right after a
+  // Wake All reloads it in the background without activating it.
+  try {
+    let set = await loadActivatedSet();
+    if (set.has(removedTabId)) {
+      set.delete(removedTabId);
+      set.add(addedTabId);
+      await persistActivatedSet();
+    }
+    await untagRestored(removedTabId);
+  } catch {}
 }
 
 async function touchTab(tabId) {
@@ -417,6 +653,20 @@ async function checkAndSuspendTabs() {
     }
 
     let settings = await getSettings();
+
+    // startup catch-up runs before (and independently of) the auto-suspend
+    // gates below: "Suspend tabs on startup" works even when auto-suspend is
+    // off or the timer is set to Never. The sweep queries tabs itself only
+    // while tags are pending, so the steady state adds no work here.
+    if (settings.suspendOnStartup) {
+      await restoredCatchupSweep(settings);
+    } else {
+      // feature off: drop any tags onTabCreated accumulated, so toggling it
+      // on later can't trigger a surprise mass discard of tabs reopened
+      // while it was off
+      await clearRestoredPending();
+    }
+
     if (!settings.enableAutoSuspend) return;
 
     let minutes = Number(settings.suspendAfterMinutes);
@@ -428,12 +678,7 @@ async function checkAndSuspendTabs() {
 
     let toSuspend = [];
     for (let tab of tabs) {
-      if (!(tab.id in _timestamps)) {
-        // Same reasoning as initTimestamps: prefer Chrome's lastAccessed when
-        // available so a stale-init doesn't grant a fresh 30-min timer.
-        _timestamps[tab.id] = (typeof tab.lastAccessed === 'number') ? tab.lastAccessed : now;
-        _tsDirty = true;
-      }
+      seedTimestamp(tab, now);
       if (shouldSuspend(tab, settings, _timestamps, now, threshold)) {
         toSuspend.push(tab.id);
       }
@@ -539,8 +784,14 @@ async function suspendTab(tabId, cachedSettings, opts) {
       // Manual suspends (context menu, Suspend Others, popup button) pass auto=false
       // because the user has explicit intent - bypass timing and loading checks, since
       // SPAs like Reddit can sit in 'loading' indefinitely from background streaming.
-      if (opts && opts.auto) {
+      // skipLoading gives the same fresh mid-navigation guard without the
+      // idle-threshold check - used by the startup catch-up sweep, which is
+      // automatic (so it must not discard an uncommitted navigation) but
+      // sweeps tabs that are by definition younger than the idle threshold.
+      if (opts && (opts.auto || opts.skipLoading)) {
         if (fresh.status === 'loading') return false;
+      }
+      if (opts && opts.auto) {
         let now = Date.now();
         let threshold = settings.suspendAfterMinutes * 60 * 1000;
         let lastActive = _timestamps[tabId] || 0;

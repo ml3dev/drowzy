@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Een formulier aan het invullen?</strong> Schakel \"Bescherm tabbladen met formulieren\" in bij Instellingen zodat tabbladen met niet-opgeslagen invoer niet worden opgeschort."
   },
-  "onboardingRemapHint": {
-    "message": "Wil je andere sneltoetsen? Pas ze hier aan →"
-  },
   "statMemberSince": {
     "message": "Lid sinds"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Nadat je een slapend tabblad hebt gewekt om te bekijken, zet de nieuwe knop Dit tabblad in slaapstand in de pop-up en het zijpaneel alleen dat tabblad weer in slaapstand. Je schakelt eerst naar een ander tabblad, omdat het tabblad dat je bekijkt niet in slaapstand kan."
+  },
+  "reportBug": {
+    "message": "Een bug melden"
+  },
+  "clickToWake": {
+    "message": "Klik om dit tabblad te activeren"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Gebruik je al de geheugenbesparing van je browser?</strong> Laat die gerust aan staan. Die maakt automatisch geheugen vrij op de achtergrond; Drowzy voegt er controle aan toe: een live lijst van slapende tabbladen, opschorten met één klik en een witte lijst voor sites die nooit mogen slapen."
+  },
+  "changelog138Title1": {
+    "message": "Herstelde tabbladen vallen sneller weer in slaap"
+  },
+  "changelog138Desc1": {
+    "message": "Na een herstart van de browser houdt Drowzy nu tabbladen in de gaten die de browser laat herstelt en laat ze binnen ongeveer een minuut weer slapen. Tabbladen die je hebt bekeken, blijven ongemoeid."
+  },
+  "changelog138Title2": {
+    "message": "Een bug melden vanuit Instellingen"
+  },
+  "changelog138Desc2": {
+    "message": "Een nieuwe link Een bug melden in Instellingen opent de openbare issue-tracker van Drowzy in een nieuw tabblad. Er wordt nooit iets automatisch verstuurd."
+  },
+  "changelog138Title3": {
+    "message": "Kleine duidelijkheidsverbeteringen"
+  },
+  "changelog138Desc3": {
+    "message": "Slapende tabbladen tonen nu een hint klik om te activeren, en de welkomstpagina legt uit hoe Drowzy samenwerkt met de ingebouwde geheugenbesparing van je browser."
   }
 }

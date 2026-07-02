@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Omplint un formulari?</strong> Activa \"Protegir pestanyes amb formularis\" a Configuració perquè les pestanyes amb dades sense desar no se suspenguin."
   },
-  "onboardingRemapHint": {
-    "message": "Voleu altres dreceres de teclat? Personalitzeu-les aquí →"
-  },
   "statMemberSince": {
     "message": "Membre des de"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Després de despertar una pestanya suspesa per veure-la, el nou botó Suspèn aquesta pestanya a la finestra emergent i al tauler lateral torna a suspendre només aquesta pestanya. Primer et canvia a una altra pestanya, perquè la pestanya que estàs veient no es pot suspendre."
+  },
+  "reportBug": {
+    "message": "Informa d'un error"
+  },
+  "clickToWake": {
+    "message": "Fes clic per despertar aquesta pestanya"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Ja utilitzes l'estalvi de memòria del navegador?</strong> Deixa'l activat si t'agrada. Allibera memòria automàticament en segon pla; Drowzy hi afegeix control: una llista en directe de les pestanyes adormides, suspensió amb un clic i una llista blanca per als llocs que mai no s'han d'adormir."
+  },
+  "changelog138Title1": {
+    "message": "Les pestanyes restaurades es tornen a adormir abans"
+  },
+  "changelog138Desc1": {
+    "message": "Després de reiniciar el navegador, Drowzy ara continua vigilant les pestanyes que el navegador restaura tard i les torna a adormir en aproximadament un minut. Les pestanyes que has vist no es toquen."
+  },
+  "changelog138Title2": {
+    "message": "Informa d'un error des de la configuració"
+  },
+  "changelog138Desc2": {
+    "message": "Un nou enllaç Informa d'un error a la configuració obre el seguiment públic d'incidències de Drowzy en una pestanya nova. Mai no s'envia res automàticament."
+  },
+  "changelog138Title3": {
+    "message": "Petits tocs de claredat"
+  },
+  "changelog138Desc3": {
+    "message": "Les pestanyes adormides ara mostren una pista de fes clic per despertar, i la pàgina de benvinguda explica com Drowzy funciona al costat de l'estalvi de memòria integrat del navegador."
   }
 }

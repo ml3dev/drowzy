@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Đang điền biểu mẫu?</strong> Bật \"Bảo vệ thẻ có biểu mẫu\" trong Cài đặt để các thẻ có nội dung chưa lưu không bị tạm dừng."
   },
-  "onboardingRemapHint": {
-    "message": "Muốn phím tắt khác? Tùy chỉnh tại đây →"
-  },
   "statMemberSince": {
     "message": "Thành viên từ"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Sau khi bạn đánh thức một thẻ đang ngủ để xem, nút mới Cho thẻ này ngủ trong cửa sổ bật lên và bảng bên sẽ cho riêng thẻ đó ngủ lại. Nó chuyển bạn sang thẻ khác trước, vì thẻ bạn đang xem không thể cho ngủ."
+  },
+  "reportBug": {
+    "message": "Báo lỗi"
+  },
+  "clickToWake": {
+    "message": "Nhấp để đánh thức tab này"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Bạn đã dùng trình tiết kiệm bộ nhớ của trình duyệt?</strong> Cứ bật nếu bạn thấy hữu ích. Nó tự động giải phóng bộ nhớ trong nền; Drowzy bổ sung khả năng kiểm soát: danh sách trực tiếp các tab đang ngủ, tạm ngưng chỉ với một cú nhấp và danh sách trắng cho những trang không bao giờ được ngủ."
+  },
+  "changelog138Title1": {
+    "message": "Các tab được khôi phục ngủ lại nhanh hơn"
+  },
+  "changelog138Desc1": {
+    "message": "Sau khi khởi động lại trình duyệt, Drowzy giờ liên tục theo dõi các tab mà trình duyệt khôi phục muộn và đưa chúng trở lại giấc ngủ trong khoảng một phút. Các tab bạn đã xem không bị đụng đến."
+  },
+  "changelog138Title2": {
+    "message": "Báo lỗi từ Cài đặt"
+  },
+  "changelog138Desc2": {
+    "message": "Liên kết Báo lỗi mới trong Cài đặt mở trình theo dõi vấn đề công khai của Drowzy trong tab mới. Không có gì được gửi tự động."
+  },
+  "changelog138Title3": {
+    "message": "Những cải thiện nhỏ về độ rõ ràng"
+  },
+  "changelog138Desc3": {
+    "message": "Các tab đang ngủ giờ hiển thị gợi ý nhấp để đánh thức, và trang chào mừng giải thích cách Drowzy hoạt động cùng trình tiết kiệm bộ nhớ tích hợp của trình duyệt."
   }
 }

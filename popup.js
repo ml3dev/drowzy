@@ -292,6 +292,13 @@ function renderTabList(tabs) {
 
     if (tab.status === 'suspended') {
       meta.innerHTML = '<span class="badge badge-sleeping">' + icon('moon', 11) + ' ' + esc(t('badgeZzz')) + '</span>';
+      // clicking a sleeping row wakes it, but nothing in the UI said so -
+      // surface the affordance with a tooltip (title only; an aria-label here
+      // would replace the row's accessible name, hiding the tab title).
+      // The .tab-title span has its own tooltip that masks the row's over
+      // most of its width, so append the hint there on a second line too.
+      el.title = t('clickToWake');
+      title.title = tab.title + '\n' + t('clickToWake');
     } else if (tab.status === 'protected' || tab.status === 'active') {
       var info = BADGES[tab.protectReason] || { icon: 'shield', type: 'system', labelKey: 'badgeProtected' };
       meta.innerHTML = '<span class="badge badge-' + info.type + '" title="' + esc(t(info.labelKey)) + '">' + icon(info.icon, 11) + ' ' + esc(t(info.labelKey)) + '</span>';
@@ -989,6 +996,16 @@ function attachListeners() {
     e.preventDefault();
     chrome.tabs.create({ url: 'changelog.html' });
   });
+
+  // report-a-bug link - plain link to the public issue tracker. Nothing is
+  // sent automatically; reporting a bug is always an explicit user action.
+  var feedbackLink = document.getElementById('btnFeedback');
+  if (feedbackLink) {
+    feedbackLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      chrome.tabs.create({ url: 'https://github.com/ml3dev/drowzy/issues' });
+    });
+  }
 }
 
 function bindToggle(id, key) {

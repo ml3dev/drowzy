@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Pumupuno ng form?</strong> I-enable ang \"Protektahan ang mga tab na may form\" sa Mga Setting upang hindi masuspende ang mga tab na may hindi naka-save na input."
   },
-  "onboardingRemapHint": {
-    "message": "Gusto ng ibang keyboard shortcut? I-customize dito →"
-  },
   "statMemberSince": {
     "message": "Miyembro mula"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Pagkatapos mong gisingin ang isang natutulog na tab para tingnan ito, ang bagong button na Idlip ang tab na ito sa popup at side panel ay muling magpapatulog lamang sa tab na iyon. Ililipat ka muna nito sa ibang tab, dahil hindi maipapatulog ang tab na tinitingnan mo."
+  },
+  "reportBug": {
+    "message": "Mag-ulat ng bug"
+  },
+  "clickToWake": {
+    "message": "I-click para gisingin ang tab na ito"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Gumagamit ka na ba ng Memory Saver ng browser mo?</strong> Panatilihin itong naka-on kung gusto mo ito. Awtomatiko nitong pinapalaya ang memory sa background; nagdaragdag ang Drowzy ng kontrol: live na listahan ng mga natutulog na tab, one-click na pag-suspend, at whitelist para sa mga site na hindi dapat matulog kailanman."
+  },
+  "changelog138Title1": {
+    "message": "Mas mabilis nang nakakatulog muli ang mga na-restore na tab"
+  },
+  "changelog138Desc1": {
+    "message": "Pagkatapos i-restart ang browser, patuloy na ngayong binabantayan ng Drowzy ang mga tab na huling na-restore ng browser at ibinabalik sila sa pagtulog sa loob ng humigit-kumulang isang minuto. Hindi ginagalaw ang mga tab na natingnan mo."
+  },
+  "changelog138Title2": {
+    "message": "Mag-ulat ng bug mula sa Settings"
+  },
+  "changelog138Desc2": {
+    "message": "Ang bagong link na Mag-ulat ng bug sa Settings ay nagbubukas ng pampublikong issue tracker ng Drowzy sa bagong tab. Walang ipinapadala nang awtomatiko kailanman."
+  },
+  "changelog138Title3": {
+    "message": "Maliliit na pagpapalinaw"
+  },
+  "changelog138Desc3": {
+    "message": "Ang mga natutulog na tab ay nagpapakita na ngayon ng pahiwatig na i-click para gisingin, at ipinapaliwanag ng welcome page kung paano gumagana ang Drowzy kasama ng built-in na Memory Saver ng browser mo."
   }
 }

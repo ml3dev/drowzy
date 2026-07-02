@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Unajaza fomu?</strong> Wezesha \"Linda vichupo na fomu\" kwenye Mipangilio ili vichupo vyenye taarifa zisizohifadhiwa visisimamishwe."
   },
-  "onboardingRemapHint": {
-    "message": "Unataka njia za mkato za kibodi tofauti? Zibinafsishe hapa →"
-  },
   "statMemberSince": {
     "message": "Mwanachama tangu"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Baada ya kuamsha kichupo kilicholala ili kukiangalia, kitufe kipya cha Sitisha kichupo hiki kwenye popup na paneli ya kando husitisha tena kichupo hicho pekee. Hukuhamishia kwanza kwenye kichupo kingine, kwa sababu kichupo unachokitazama hakiwezi kusitishwa."
+  },
+  "reportBug": {
+    "message": "Ripoti hitilafu"
+  },
+  "clickToWake": {
+    "message": "Bofya kuamsha tabo hii"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Tayari unatumia Memory Saver ya kivinjari chako?</strong> Iache iwashwe ukiipenda. Inaachilia kumbukumbu kiotomatiki chinichini; Drowzy inaongeza udhibiti juu yake: orodha ya moja kwa moja ya tabo zinazolala, kusimamisha kwa mbofyo mmoja, na orodha nyeupe kwa tovuti ambazo hazipaswi kulala kamwe."
+  },
+  "changelog138Title1": {
+    "message": "Tabo zilizorejeshwa zinalala tena haraka zaidi"
+  },
+  "changelog138Desc1": {
+    "message": "Baada ya kuwasha upya kivinjari, Drowzy sasa huendelea kufuatilia tabo ambazo kivinjari hurejesha kwa kuchelewa na kuzirudisha usingizini ndani ya takriban dakika moja. Tabo ulizotazama haziguswi."
+  },
+  "changelog138Title2": {
+    "message": "Ripoti hitilafu kutoka Mipangilio"
+  },
+  "changelog138Desc2": {
+    "message": "Kiungo kipya cha Ripoti hitilafu katika Mipangilio hufungua kifuatiliaji cha umma cha matatizo cha Drowzy katika tabo mpya. Hakuna kinachotumwa kiotomatiki kamwe."
+  },
+  "changelog138Title3": {
+    "message": "Maboresho madogo ya uwazi"
+  },
+  "changelog138Desc3": {
+    "message": "Tabo zinazolala sasa zinaonyesha dokezo la bofya kuamsha, na ukurasa wa karibu unaeleza jinsi Drowzy inavyofanya kazi pamoja na Memory Saver iliyojengwa ndani ya kivinjari chako."
   }
 }

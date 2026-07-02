@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Form mu dolduruyorsunuz?</strong> Kaydedilmemiş girişi olan sekmelerin askıya alınmaması için Ayarlar'da \"Formu olan sekmeleri koru\"yu etkinleştirin."
   },
-  "onboardingRemapHint": {
-    "message": "Farklı klavye kısayolları mı istiyorsunuz? Buradan özelleştirin →"
-  },
   "statMemberSince": {
     "message": "Üyelik başlangıcı"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Uykudaki bir sekmeyi bakmak için uyandırdıktan sonra, açılır penceredeki ve yan paneldeki yeni Bu sekmeyi uykuya al düğmesi yalnızca o sekmeyi yeniden uykuya alır. Görüntülediğiniz sekme uykuya alınamayacağı için önce sizi başka bir sekmeye geçirir."
+  },
+  "reportBug": {
+    "message": "Hata bildir"
+  },
+  "clickToWake": {
+    "message": "Bu sekmeyi uyandırmak için tıklayın"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Zaten tarayıcınızın bellek tasarrufu özelliğini mi kullanıyorsunuz?</strong> Beğeniyorsanız açık bırakın. Arka planda belleği otomatik olarak boşaltır; Drowzy üzerine kontrol ekler: uyuyan sekmelerin canlı listesi, tek tıkla askıya alma ve asla uyumaması gereken siteler için beyaz liste."
+  },
+  "changelog138Title1": {
+    "message": "Geri yüklenen sekmeler daha hızlı yeniden uyur"
+  },
+  "changelog138Desc1": {
+    "message": "Tarayıcı yeniden başlatıldıktan sonra Drowzy artık tarayıcının geç geri yüklediği sekmeleri izlemeye devam eder ve yaklaşık bir dakika içinde onları yeniden uyutur. Baktığınız sekmelere dokunulmaz."
+  },
+  "changelog138Title2": {
+    "message": "Ayarlardan hata bildirin"
+  },
+  "changelog138Desc2": {
+    "message": "Ayarlardaki yeni Hata bildir bağlantısı, Drowzy'nin herkese açık sorun izleyicisini yeni sekmede açar. Hiçbir şey asla otomatik gönderilmez."
+  },
+  "changelog138Title3": {
+    "message": "Küçük netlik dokunuşları"
+  },
+  "changelog138Desc3": {
+    "message": "Uyuyan sekmeler artık uyandırmak için tıklayın ipucu gösteriyor ve karşılama sayfası Drowzy'nin tarayıcınızın yerleşik bellek tasarrufuyla nasıl birlikte çalıştığını açıklıyor."
   }
 }

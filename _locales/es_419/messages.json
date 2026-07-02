@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>¿Llenando un formulario?</strong> Activá \"Proteger pestañas con formularios\" en Configuración para que las pestañas con entradas sin guardar no se suspendan."
   },
-  "onboardingRemapHint": {
-    "message": "¿Quieres otros atajos de teclado? Personalízalos aquí →"
-  },
   "statMemberSince": {
     "message": "Miembro desde"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Después de despertar una pestaña suspendida para verla, el nuevo botón Suspender esta pestaña en la ventana emergente y el panel lateral vuelve a suspender solo esa pestaña. Primero te cambia a otra pestaña, porque la pestaña que estás viendo no se puede suspender."
+  },
+  "reportBug": {
+    "message": "Reportar un error"
+  },
+  "clickToWake": {
+    "message": "Haz clic para despertar esta pestaña"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>¿Ya usas el ahorro de memoria de tu navegador?</strong> Déjalo activado si te gusta. Libera memoria automáticamente en segundo plano; Drowzy agrega control encima: una lista en vivo de las pestañas dormidas, suspensión con un clic y una lista blanca para los sitios que nunca deben dormirse."
+  },
+  "changelog138Title1": {
+    "message": "Las pestañas restauradas vuelven a dormirse antes"
+  },
+  "changelog138Desc1": {
+    "message": "Tras reiniciar el navegador, Drowzy ahora sigue vigilando las pestañas que el navegador restaura tarde y las vuelve a dormir en aproximadamente un minuto. Las pestañas que has visto no se tocan."
+  },
+  "changelog138Title2": {
+    "message": "Reporta un error desde Ajustes"
+  },
+  "changelog138Desc2": {
+    "message": "Un nuevo enlace Reportar un error en Ajustes abre el registro público de incidencias de Drowzy en una pestaña nueva. Nunca se envía nada automáticamente."
+  },
+  "changelog138Title3": {
+    "message": "Pequeños toques de claridad"
+  },
+  "changelog138Desc3": {
+    "message": "Las pestañas dormidas ahora muestran una pista de clic para despertar, y la página de bienvenida explica cómo Drowzy funciona junto al ahorro de memoria integrado de tu navegador."
   }
 }

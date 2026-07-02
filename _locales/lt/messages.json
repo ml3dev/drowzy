@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Pildote formą?</strong> Įjunkite „Apsaugoti skirtukus su formomis\" Nustatymuose, kad skirtukai su neišsaugotu įvedimu nebūtų sustabdomi."
   },
-  "onboardingRemapHint": {
-    "message": "Norite kitokių klaviatūros sparčiųjų klavišų? Pritaikykite juos čia →"
-  },
   "statMemberSince": {
     "message": "Narys nuo"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Pažadinę užmigdytą kortelę, kad ją peržiūrėtumėte, naujas mygtukas Užmigdyti šią kortelę iškylančiajame lange ir šoniniame skydelyje vėl užmigdo tik tą kortelę. Pirmiausia jus perjungia į kitą kortelę, nes peržiūrimos kortelės užmigdyti negalima."
+  },
+  "reportBug": {
+    "message": "Pranešti apie klaidą"
+  },
+  "clickToWake": {
+    "message": "Spustelėkite, kad pažadintumėte šią kortelę"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Jau naudojate naršyklės atminties taupymą?</strong> Palikite jį įjungtą, jei patinka. Jis automatiškai atlaisvina atmintį fone; Drowzy prideda valdymą: tiesioginį miegančių kortelių sąrašą, sustabdymą vienu spustelėjimu ir baltąjį sąrašą svetainėms, kurios niekada neturi užmigti."
+  },
+  "changelog138Title1": {
+    "message": "Atkurtos kortelės greičiau vėl užmiega"
+  },
+  "changelog138Desc1": {
+    "message": "Po naršyklės paleidimo iš naujo Drowzy dabar nuolat stebi korteles, kurias naršyklė atkuria vėluodama, ir per maždaug minutę vėl jas užmigdo. Kortelės, kurias peržiūrėjote, neliečiamos."
+  },
+  "changelog138Title2": {
+    "message": "Praneškite apie klaidą iš nustatymų"
+  },
+  "changelog138Desc2": {
+    "message": "Nauja nuoroda Pranešti apie klaidą nustatymuose atveria viešą Drowzy problemų sekiklį naujoje kortelėje. Niekas niekada nesiunčiama automatiškai."
+  },
+  "changelog138Title3": {
+    "message": "Smulkūs aiškumo patobulinimai"
+  },
+  "changelog138Desc3": {
+    "message": "Miegančios kortelės dabar rodo užuominą spustelėkite, kad pažadintumėte, o pasveikinimo puslapis paaiškina, kaip Drowzy veikia šalia naršyklės įtaisytojo atminties taupymo."
   }
 }

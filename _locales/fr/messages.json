@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Vous remplissez un formulaire ?</strong> Activez « Protéger les onglets avec des formulaires » dans les Paramètres pour que les onglets contenant des saisies non enregistrées ne soient pas suspendus."
   },
-  "onboardingRemapHint": {
-    "message": "Vous voulez d'autres raccourcis clavier ? Personnalisez-les ici →"
-  },
   "statMemberSince": {
     "message": "Membre depuis"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Après avoir réveillé un onglet en veille pour le consulter, le nouveau bouton Mettre cet onglet en veille, dans la fenêtre contextuelle et le panneau latéral, remet en veille uniquement cet onglet. Il vous bascule d'abord vers un autre onglet, car l'onglet que vous consultez ne peut pas être mis en veille."
+  },
+  "reportBug": {
+    "message": "Signaler un bug"
+  },
+  "clickToWake": {
+    "message": "Cliquez pour réveiller cet onglet"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Vous utilisez déjà l'économiseur de mémoire de votre navigateur ?</strong> Laissez-le activé s'il vous convient. Il libère la mémoire automatiquement en arrière-plan ; Drowzy y ajoute du contrôle : une liste en direct des onglets endormis, la suspension en un clic et une liste blanche pour les sites qui ne doivent jamais s'endormir."
+  },
+  "changelog138Title1": {
+    "message": "Les onglets restaurés se rendorment plus vite"
+  },
+  "changelog138Desc1": {
+    "message": "Après un redémarrage du navigateur, Drowzy surveille désormais en continu les onglets restaurés tardivement et les rendort en une minute environ. Les onglets que vous avez consultés ne sont pas touchés."
+  },
+  "changelog138Title2": {
+    "message": "Signaler un bug depuis les réglages"
+  },
+  "changelog138Desc2": {
+    "message": "Un nouveau lien « Signaler un bug » dans les réglages ouvre le suivi public des problèmes de Drowzy dans un nouvel onglet. Rien n'est jamais envoyé automatiquement."
+  },
+  "changelog138Title3": {
+    "message": "Petites touches de clarté"
+  },
+  "changelog138Desc3": {
+    "message": "Les onglets endormis affichent désormais une astuce « cliquer pour réveiller », et la page de bienvenue explique comment Drowzy fonctionne aux côtés de l'économiseur de mémoire intégré de votre navigateur."
   }
 }

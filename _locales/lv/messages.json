@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Aizpildāt veidlapu?</strong> Ieslēdziet \"Aizsargāt cilnes ar veidlapām\" sadaļā Iestatījumi, lai cilnes ar nesaglabātu ievadi netiktu pārtrauktas."
   },
-  "onboardingRemapHint": {
-    "message": "Vēlaties citus tastatūras īsinājumtaustiņus? Pielāgojiet tos šeit →"
-  },
   "statMemberSince": {
     "message": "Lietotājs kopš"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Pēc tam, kad pamodināt iemidzinātu cilni, lai to apskatītu, jaunā poga Iemidzināt šo cilni uznirstošajā logā un sānu panelī atkārtoti iemidzina tikai šo cilni. Vispirms tā pārslēdz jūs uz citu cilni, jo cilni, ko skatāties, nevar iemidzināt."
+  },
+  "reportBug": {
+    "message": "Ziņot par kļūdu"
+  },
+  "clickToWake": {
+    "message": "Noklikšķiniet, lai pamodinātu šo cilni"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Jau izmantojat pārlūka atmiņas taupīšanu?</strong> Atstājiet to ieslēgtu, ja tā jums patīk. Tā automātiski atbrīvo atmiņu fonā; Drowzy tai pievieno kontroli: guļošo ciļņu sarakstu reāllaikā, apturēšanu ar vienu klikšķi un balto sarakstu vietnēm, kas nekad nedrīkst aizmigt."
+  },
+  "changelog138Title1": {
+    "message": "Atjaunotās cilnes ātrāk atkal aizmieg"
+  },
+  "changelog138Desc1": {
+    "message": "Pēc pārlūka restartēšanas Drowzy tagad turpina uzraudzīt cilnes, ko pārlūks atjauno ar kavēšanos, un aptuveni minūtes laikā tās atkal iemidzina. Cilnes, kuras esat apskatījis, netiek aiztiktas."
+  },
+  "changelog138Title2": {
+    "message": "Ziņojiet par kļūdu no iestatījumiem"
+  },
+  "changelog138Desc2": {
+    "message": "Jauna saite Ziņot par kļūdu iestatījumos atver Drowzy publisko problēmu sekotāju jaunā cilnē. Nekas nekad netiek sūtīts automātiski."
+  },
+  "changelog138Title3": {
+    "message": "Mazi skaidrības uzlabojumi"
+  },
+  "changelog138Desc3": {
+    "message": "Guļošās cilnes tagad rāda norādi noklikšķiniet, lai pamodinātu, un sveiciena lapa skaidro, kā Drowzy darbojas kopā ar pārlūka iebūvēto atmiņas taupīšanu."
   }
 }

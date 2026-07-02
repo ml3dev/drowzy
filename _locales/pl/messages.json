@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Wypełniasz formularz?</strong> Włącz „Chroń karty z formularzami\" w Ustawieniach, aby karty z niezapisanymi danymi nie były zawieszane."
   },
-  "onboardingRemapHint": {
-    "message": "Chcesz innych skrótów klawiszowych? Dostosuj je tutaj →"
-  },
   "statMemberSince": {
     "message": "Użytkownik od"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Po wybudzeniu uśpionej karty, aby ją obejrzeć, nowy przycisk Uśpij tę kartę w okienku i panelu bocznym usypia ponownie tylko tę kartę. Najpierw przełącza Cię na inną kartę, ponieważ karty, którą oglądasz, nie można uśpić."
+  },
+  "reportBug": {
+    "message": "Zgłoś błąd"
+  },
+  "clickToWake": {
+    "message": "Kliknij, aby obudzić tę kartę"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Korzystasz już z oszczędzania pamięci w przeglądarce?</strong> Zostaw je włączone, jeśli Ci odpowiada. Automatycznie zwalnia pamięć w tle; Drowzy dodaje do niego kontrolę: podgląd uśpionych kart na żywo, usypianie jednym kliknięciem i białą listę stron, które nigdy nie powinny zasnąć."
+  },
+  "changelog138Title1": {
+    "message": "Przywrócone karty szybciej zasypiają ponownie"
+  },
+  "changelog138Desc1": {
+    "message": "Po ponownym uruchomieniu przeglądarki Drowzy stale pilnuje kart przywracanych przez przeglądarkę z opóźnieniem i usypia je ponownie w ciągu około minuty. Karty, które przeglądano, nie są ruszane."
+  },
+  "changelog138Title2": {
+    "message": "Zgłoś błąd z Ustawień"
+  },
+  "changelog138Desc2": {
+    "message": "Nowy odnośnik Zgłoś błąd w Ustawieniach otwiera publiczny rejestr problemów Drowzy w nowej karcie. Nic nigdy nie jest wysyłane automatycznie."
+  },
+  "changelog138Title3": {
+    "message": "Drobne poprawki czytelności"
+  },
+  "changelog138Desc3": {
+    "message": "Uśpione karty pokazują teraz podpowiedź kliknij, aby obudzić, a strona powitalna wyjaśnia, jak Drowzy współdziała z wbudowanym oszczędzaniem pamięci przeglądarki."
   }
 }

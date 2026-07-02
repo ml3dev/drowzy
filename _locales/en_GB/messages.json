@@ -3,7 +3,7 @@
     "message": "Drowzy - Tab Suspender & Memory Saver"
   },
   "extDescription": {
-    "message": "Auto-suspend inactive tabs to save up to 80% RAM. Lightweight, private, no tracking. Tabs are never lost."
+    "message": "Auto-suspend inactive tabs to save up to 80% RAM. Lightweight, private, no tracking, and open source."
   },
   "commandSuspendCurrent": {
     "message": "Suspend current tab"
@@ -209,9 +209,6 @@
   },
   "onboardingFormsTip": {
     "message": "<strong>Filling out a form?</strong> Enable \"Protect tabs with forms\" in Settings to keep tabs with unsaved input from being suspended."
-  },
-  "onboardingRemapHint": {
-    "message": "Want different keyboard shortcuts? Customise them here →"
   },
   "statMemberSince": {
     "message": "Member since"
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "After you wake a sleeping tab to look at it, the new Suspend this tab button in the popup and side panel sends just that tab back to sleep. It switches you to another tab first, because the tab you're viewing can't be suspended."
+  },
+  "reportBug": {
+    "message": "Report a bug"
+  },
+  "clickToWake": {
+    "message": "Click to wake this tab"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Already using your browser's Memory Saver?</strong> Keep it on if you like it. It frees memory automatically in the background; Drowzy adds control on top: a live list of sleeping tabs, one-click suspend, and a whitelist for sites that should never sleep."
+  },
+  "changelog138Title1": {
+    "message": "Restored tabs go back to sleep sooner"
+  },
+  "changelog138Desc1": {
+    "message": "After a browser restart, Drowzy now keeps watching for tabs your browser restores late and puts them back to sleep within about a minute. Tabs you've viewed are left alone."
+  },
+  "changelog138Title2": {
+    "message": "Report a bug from Settings"
+  },
+  "changelog138Desc2": {
+    "message": "A new Report a bug link in Settings opens Drowzy's public issue tracker in a new tab. Nothing is ever sent automatically."
+  },
+  "changelog138Title3": {
+    "message": "Small clarity touches"
+  },
+  "changelog138Desc3": {
+    "message": "Sleeping tabs now show a click-to-wake hint, and the welcome page explains how Drowzy works alongside your browser's built-in Memory Saver."
   }
 }

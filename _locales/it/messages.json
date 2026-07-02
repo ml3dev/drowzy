@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Stai compilando un modulo?</strong> Attiva \"Proteggi le schede con moduli\" nelle Impostazioni per evitare che le schede con dati non salvati vengano sospese."
   },
-  "onboardingRemapHint": {
-    "message": "Vuoi altre scorciatoie da tastiera? Personalizzale qui →"
-  },
   "statMemberSince": {
     "message": "Membro dal"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Dopo aver riattivato una scheda sospesa per guardarla, il nuovo pulsante Sospendi questa scheda nel popup e nel pannello laterale rimette a dormire solo quella scheda. Prima ti porta su un'altra scheda, perché la scheda che stai guardando non può essere sospesa."
+  },
+  "reportBug": {
+    "message": "Segnala un bug"
+  },
+  "clickToWake": {
+    "message": "Clicca per riattivare questa scheda"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Usi già il risparmio memoria del browser?</strong> Tienilo attivo se ti trovi bene. Libera memoria automaticamente in background; Drowzy vi aggiunge controllo: un elenco in tempo reale delle schede addormentate, sospensione con un clic e una lista bianca per i siti che non devono mai addormentarsi."
+  },
+  "changelog138Title1": {
+    "message": "Le schede ripristinate si riaddormentano prima"
+  },
+  "changelog138Desc1": {
+    "message": "Dopo un riavvio del browser, Drowzy ora continua a sorvegliare le schede che il browser ripristina in ritardo e le riaddormenta entro circa un minuto. Le schede che hai visto non vengono toccate."
+  },
+  "changelog138Title2": {
+    "message": "Segnala un bug dalle Impostazioni"
+  },
+  "changelog138Desc2": {
+    "message": "Un nuovo link Segnala un bug nelle Impostazioni apre il tracker pubblico dei problemi di Drowzy in una nuova scheda. Nulla viene mai inviato automaticamente."
+  },
+  "changelog138Title3": {
+    "message": "Piccoli ritocchi di chiarezza"
+  },
+  "changelog138Desc3": {
+    "message": "Le schede addormentate mostrano ora il suggerimento clicca per riattivare, e la pagina di benvenuto spiega come Drowzy funziona accanto al risparmio memoria integrato del browser."
   }
 }

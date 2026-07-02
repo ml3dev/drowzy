@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Ispunjavate obrazac?</strong> Omogućite „Zaštita kartica s obrascima\" u Postavkama kako se kartice s nespremljenim unosom ne bi obustavile."
   },
-  "onboardingRemapHint": {
-    "message": "Želite druge tipkovničke prečace? Prilagodite ih ovdje →"
-  },
   "statMemberSince": {
     "message": "Član od"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Nakon što probudiš uspavanu karticu da je pogledaš, novi gumb Uspavaj ovu karticu u skočnom prozoru i bočnoj ploči ponovno uspavljuje samo tu karticu. Najprije te prebacuje na drugu karticu jer se kartica koju gledaš ne može uspavati."
+  },
+  "reportBug": {
+    "message": "Prijavi grešku"
+  },
+  "clickToWake": {
+    "message": "Kliknite da probudite ovu karticu"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Već koristite preglednikovu štednju memorije?</strong> Ostavite je uključenom ako vam odgovara. Automatski oslobađa memoriju u pozadini; Drowzy dodaje kontrolu povrh nje: popis uspavanih kartica uživo, suspendiranje jednim klikom i popis dopuštenih stranica koje nikad ne smiju zaspati."
+  },
+  "changelog138Title1": {
+    "message": "Obnovljene kartice brže ponovno zaspu"
+  },
+  "changelog138Desc1": {
+    "message": "Nakon ponovnog pokretanja preglednika Drowzy sada stalno prati kartice koje preglednik obnavlja sa zakašnjenjem i ponovno ih uspavljuje unutar otprilike minute. Kartice koje ste pogledali ne diraju se."
+  },
+  "changelog138Title2": {
+    "message": "Prijavite grešku iz Postavki"
+  },
+  "changelog138Desc2": {
+    "message": "Nova poveznica Prijavi grešku u Postavkama otvara javni popis problema Drowzyja u novoj kartici. Ništa se nikada ne šalje automatski."
+  },
+  "changelog138Title3": {
+    "message": "Male dorade jasnoće"
+  },
+  "changelog138Desc3": {
+    "message": "Uspavane kartice sada prikazuju savjet kliknite za buđenje, a stranica dobrodošlice objašnjava kako Drowzy radi uz ugrađenu štednju memorije preglednika."
   }
 }

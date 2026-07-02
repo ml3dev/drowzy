@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>A preencher um formulário?</strong> Ative \"Proteger separadores com formulários\" nas Definições para que os separadores com entradas não guardadas não sejam suspensos."
   },
-  "onboardingRemapHint": {
-    "message": "Quer outros atalhos de teclado? Personalize aqui →"
-  },
   "statMemberSince": {
     "message": "Membro desde"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Depois de acordar um separador suspenso para o ver, o novo botão Suspender este separador no popup e no painel lateral volta a suspender apenas esse separador. Muda primeiro para outro separador, porque o separador que está a ver não pode ser suspenso."
+  },
+  "reportBug": {
+    "message": "Comunicar um erro"
+  },
+  "clickToWake": {
+    "message": "Clique para acordar este separador"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Já usa a poupança de memória do seu navegador?</strong> Mantenha-a ligada se gostar dela. Liberta memória automaticamente em segundo plano; o Drowzy acrescenta-lhe controlo: uma lista em direto dos separadores a dormir, suspensão com um clique e uma lista branca para sites que nunca devem adormecer."
+  },
+  "changelog138Title1": {
+    "message": "Os separadores restaurados voltam a adormecer mais cedo"
+  },
+  "changelog138Desc1": {
+    "message": "Após reiniciar o navegador, o Drowzy fica agora atento aos separadores que o navegador restaura tarde e volta a adormecê-los em cerca de um minuto. Os separadores que visualizou não são tocados."
+  },
+  "changelog138Title2": {
+    "message": "Comunique um erro a partir das Definições"
+  },
+  "changelog138Desc2": {
+    "message": "Uma nova ligação Comunicar um erro nas Definições abre o registo público de problemas do Drowzy num novo separador. Nada é alguma vez enviado automaticamente."
+  },
+  "changelog138Title3": {
+    "message": "Pequenos toques de clareza"
+  },
+  "changelog138Desc3": {
+    "message": "Os separadores a dormir mostram agora uma dica de clique para acordar, e a página de boas-vindas explica como o Drowzy funciona lado a lado com a poupança de memória integrada do navegador."
   }
 }

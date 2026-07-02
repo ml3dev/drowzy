@@ -210,9 +210,6 @@
   "onboardingFormsTip": {
     "message": "<strong>Täidad vormi?</strong> Lülita Seadetes sisse „Kaitse vorme sisaldavaid vahekaarte\", et salvestamata sisendiga vahekaarte ei peatataks."
   },
-  "onboardingRemapHint": {
-    "message": "Soovid teisi klaviatuuri otseteid? Kohanda neid siin →"
-  },
   "statMemberSince": {
     "message": "Liige alates"
   },
@@ -724,5 +721,32 @@
   },
   "changelog137Desc1": {
     "message": "Kui oled uinunud kaardi vaatamiseks äratanud, paneb hüpikaknas ja külgpaneelil olev uus nupp Pane see kaart uinakule ainult selle kaardi uuesti uinakule. Esmalt lülitab see sind teisele kaardile, sest vaadatavat kaarti ei saa uinakule panna."
+  },
+  "reportBug": {
+    "message": "Teata veast"
+  },
+  "clickToWake": {
+    "message": "Klõpsa selle vahelehe äratamiseks"
+  },
+  "onboardingMemorySaverTip": {
+    "message": "<strong>Kas kasutad juba brauseri mälusäästjat?</strong> Kui see meeldib, jäta sisse. See vabastab mälu taustal automaatselt; Drowzy lisab sellele kontrolli: reaalajas nimekirja magavatest vahelehtedest, peatamise ühe klõpsuga ja lubatud saitide nimekirja, mis ei tohi kunagi magama jääda."
+  },
+  "changelog138Title1": {
+    "message": "Taastatud vahelehed uinuvad kiiremini"
+  },
+  "changelog138Desc1": {
+    "message": "Pärast brauseri taaskäivitust jälgib Drowzy nüüd pidevalt vahelehti, mille brauser taastab hilinemisega, ja uinutab need umbes minuti jooksul uuesti. Vahelehti, mida oled vaadanud, ei puututa."
+  },
+  "changelog138Title2": {
+    "message": "Teata veast seadetest"
+  },
+  "changelog138Desc2": {
+    "message": "Uus link Teata veast seadetes avab Drowzy avaliku probleemijälgija uuel vahelehel. Midagi ei saadeta kunagi automaatselt."
+  },
+  "changelog138Title3": {
+    "message": "Väikesed selguse täiendused"
+  },
+  "changelog138Desc3": {
+    "message": "Magavad vahelehed näitavad nüüd vihjet klõpsa äratamiseks ja tervitusleht selgitab, kuidas Drowzy töötab koos brauseri sisseehitatud mälusäästjaga."
   }
 }
