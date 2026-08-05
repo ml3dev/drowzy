@@ -39,7 +39,7 @@
     "message": "El lloc és a la llista blanca (feu clic per eliminar)"
   },
   "activeWontSuspend": {
-    "message": "Activa – no se suspendrà"
+    "message": "Activa - no se suspendrà"
   },
   "loading": {
     "message": "Carregant..."
@@ -181,22 +181,19 @@
     "message": "No hi ha pestanyes suspeses per despertar"
   },
   "pinnedWontSuspend": {
-    "message": "Fixada — no se suspendrà"
+    "message": "Fixada - no se suspendrà"
   },
   "audioWontSuspend": {
-    "message": "Reproduint àudio — no se suspendrà"
+    "message": "Reproduint àudio - no se suspendrà"
   },
   "whitelistedWontSuspend": {
-    "message": "A la llista blanca — no se suspendrà"
+    "message": "A la llista blanca - no se suspendrà"
   },
   "systemPageCantSuspend": {
-    "message": "Pàgina del sistema — no es pot suspendre"
+    "message": "Pàgina del sistema - no es pot suspendre"
   },
   "clickToDismiss": {
     "message": "Feu clic per descartar"
-  },
-  "keepAwakeBtn": {
-    "message": "Mantén actiu"
   },
   "suspendTimerHint": {
     "message": "Les pestanyes que has deixat se suspenen després d'aquest temps. Augmenta'l si tornes a pestanyes després de pauses llargues."
@@ -394,7 +391,7 @@
     "message": "No hi ha pestanyes restaurables en aquesta sessió."
   },
   "sessionDefaultName": {
-    "message": "Sessió – $DATE$",
+    "message": "Sessió - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Benvingut a Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy estalvia memòria posant les pestanyes inactives a dormir. Les teves pestanyes sempre estan segures – utilitzem l'API nativa de descart de Chrome, de manera que sobreviuen fins i tot si desinstal·leu Drowzy."
+    "message": "Drowzy estalvia memòria posant les pestanyes inactives a dormir. Les teves pestanyes sempre estan segures - utilitzem l'API nativa de descart de Chrome, de manera que sobreviuen fins i tot si desinstal·leu Drowzy."
   },
   "howItWorks": {
     "message": "Com funciona"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Les pestanyes adormides ara mostren una pista de fes clic per despertar, i la pàgina de benvinguda explica com Drowzy funciona al costat de l'estalvi de memòria integrat del navegador."
+  },
+  "keepThisTabAwake": {
+    "message": "Mantén aquesta pestanya desperta"
+  },
+  "allowSleep": {
+    "message": "Permet que dormi"
+  },
+  "keptAwakeHint": {
+    "message": "Evita que aquesta pestanya s'adormi fins que ho desactivis o la tanquis"
+  },
+  "allowSleepHint": {
+    "message": "Deixa que aquesta pestanya torni a adormir-se amb normalitat"
+  },
+  "keptAwakeToast": {
+    "message": "Aquesta pestanya es mantindrà desperta"
+  },
+  "allowSleepToast": {
+    "message": "Aquesta pestanya ja pot adormir-se"
+  },
+  "badgeAwake": {
+    "message": "Desperta"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Mantinguda desperta - no se suspendrà"
+  },
+  "cantSuspendPinned": {
+    "message": "Les pestanyes fixades estan protegides. Desactiva \"Protegeix les pestanyes fixades\" per suspendre aquesta."
+  },
+  "cantSuspendAudio": {
+    "message": "Les pestanyes amb àudio estan protegides. Desactiva \"Protegeix les pestanyes amb àudio\" per suspendre aquesta."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Aquest lloc és a la teva llista de no suspendre mai. Treu-lo per suspendre aquesta pestanya."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Cal una altra pestanya oberta a la qual canviar. Chrome no pot suspendre la pestanya que estàs mirant."
+  },
+  "openSettingsAction": {
+    "message": "Obre la configuració"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome no ha volgut suspendre aquesta pestanya"
+  },
+  "suspendFailedLoading": {
+    "message": "Encara s'està carregant - torna-ho a provar d'aquí a un moment"
+  },
+  "suspendFailedForm": {
+    "message": "No suspesa - aquesta pestanya té text sense desar"
+  },
+  "bannerNotNow": {
+    "message": "Ara no"
+  },
+  "changelog140Title1": {
+    "message": "Mantén aquesta pestanya desperta"
+  },
+  "changelog140Desc1": {
+    "message": "Mantén desperta una sola pestanya sense afegir tot el lloc a la llista blanca. Drowzy no l'adormirà fins que premis \"Permet que dormi\" o la tanquis. La retenció s'esborra en reiniciar el navegador."
+  },
+  "changelog140Title2": {
+    "message": "\"Protegeix les pestanyes amb àudio\" ara funciona en tots dos sentits"
+  },
+  "changelog140Desc2": {
+    "message": "Desactivar \"Protegeix les pestanyes amb àudio\" ara sí que deixa adormir les pestanyes de vídeo i música en segon pla. Abans es rebutjaven fins i tot amb l'opció desactivada. Amb l'opció activada no canvia res."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy et diu per què una pestanya no s'adorm"
+  },
+  "changelog140Desc3": {
+    "message": "\"Suspèn aquesta pestanya\" ja no desapareix sense explicació. Quan una pestanya no pot adormir-se, tens el motiu i un accés directe a la configuració que ho canviaria."
+  },
+  "changelog140Title4": {
+    "message": "Icones de llocs que realment apareixen"
+  },
+  "changelog140Desc4": {
+    "message": "Les icones de les pestanyes ara vénen de la memòria cau del navegador, així que els llocs que abans mostraven una lletra grisa ensenyen la seva icona real, fins i tot mentre dormen. Les icones que desapareixerien amb el tema que fas servir s'ajusten perquè continuïn veient-se."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Compta uns 150 MB per cada pestanya que Drowzy ha adormit. És un total acumulat en el temps, no memòria lliure ara mateix."
+  },
+  "privacyPermFavicon": {
+    "message": "Llegir la memòria cau local de favicons de Chrome perquè les icones dels llocs es vegin bé a la llista de pestanyes. Llegeix una memòria cau que ja és al teu ordinador i no fa cap petició de xarxa."
+  },
+  "changelog140Title5": {
+    "message": "Més tranquil, i xifres fiables"
+  },
+  "changelog140Desc5": {
+    "message": "Adormir pestanyes ja no fa saltar tota la llista. Aquesta pàgina i la de benvinguda segueixen ara el tema clar o fosc que has triat a Drowzy. I tornar a adormir la mateixa pestanya un cop i un altre ja no infla les teves estadístiques."
   }
 }

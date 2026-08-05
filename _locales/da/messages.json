@@ -39,7 +39,7 @@
     "message": "Webstedet er hvidlistet (klik for at fjerne)"
   },
   "activeWontSuspend": {
-    "message": "Aktivt – vil ikke blive suspenderet"
+    "message": "Aktivt - vil ikke blive suspenderet"
   },
   "loading": {
     "message": "Indlæser..."
@@ -181,22 +181,19 @@
     "message": "Ingen suspenderede faner at vække"
   },
   "pinnedWontSuspend": {
-    "message": "Fastgjort — vil ikke blive suspenderet"
+    "message": "Fastgjort - vil ikke blive suspenderet"
   },
   "audioWontSuspend": {
-    "message": "Afspiller lyd — vil ikke blive suspenderet"
+    "message": "Afspiller lyd - vil ikke blive suspenderet"
   },
   "whitelistedWontSuspend": {
-    "message": "På hvidlisten — vil ikke blive suspenderet"
+    "message": "På hvidlisten - vil ikke blive suspenderet"
   },
   "systemPageCantSuspend": {
-    "message": "Systemside — kan ikke suspenderes"
+    "message": "Systemside - kan ikke suspenderes"
   },
   "clickToDismiss": {
     "message": "Klik for at lukke"
-  },
-  "keepAwakeBtn": {
-    "message": "Hold vågen"
   },
   "suspendTimerHint": {
     "message": "Faner, du har skiftet væk fra, suspenderes efter denne tid. Øg den, hvis du ofte vender tilbage til faner efter lange pauser."
@@ -394,7 +391,7 @@
     "message": "Ingen faneblade at gendanne i denne session."
   },
   "sessionDefaultName": {
-    "message": "Session – $DATE$",
+    "message": "Session - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Velkommen til Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy sparer hukommelse ved at sætte inaktive faneblade i dvale. Dine faneblade er altid sikre – vi bruger Chromes native discard-API, så de overlever selv hvis du afinstallerer Drowzy."
+    "message": "Drowzy sparer hukommelse ved at sætte inaktive faneblade i dvale. Dine faneblade er altid sikre - vi bruger Chromes native discard-API, så de overlever selv hvis du afinstallerer Drowzy."
   },
   "howItWorks": {
     "message": "Sådan fungerer det"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Sovende faneblade viser nu et klik for at vække-hint, og velkomstsiden forklarer, hvordan Drowzy fungerer sammen med browserens indbyggede hukommelsessparer."
+  },
+  "keepThisTabAwake": {
+    "message": "Hold denne fane vågen"
+  },
+  "allowSleep": {
+    "message": "Tillad dvale"
+  },
+  "keptAwakeHint": {
+    "message": "Forhindrer denne fane i at gå i dvale, indtil du slår det fra eller lukker fanen"
+  },
+  "allowSleepHint": {
+    "message": "Lad denne fane gå i dvale normalt igen"
+  },
+  "keptAwakeToast": {
+    "message": "Denne fane forbliver vågen"
+  },
+  "allowSleepToast": {
+    "message": "Denne fane må gå i dvale igen"
+  },
+  "badgeAwake": {
+    "message": "Vågen"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Holdes vågen - vil ikke gå i dvale"
+  },
+  "cantSuspendPinned": {
+    "message": "Fastgjorte faner er beskyttet. Slå \"Beskyt fastgjorte faner\" fra for at sætte denne i dvale."
+  },
+  "cantSuspendAudio": {
+    "message": "Faner der afspiller lyd er beskyttet. Slå \"Beskyt lydfaner\" fra for at sætte denne i dvale."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Dette websted står på din aldrig-dvale-liste. Fjern det for at sætte fanen i dvale."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Der skal være en anden åben fane at skifte til først. Chrome kan ikke sætte den fane du kigger på i dvale."
+  },
+  "openSettingsAction": {
+    "message": "Åbn indstillinger"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome ville ikke sætte denne fane i dvale"
+  },
+  "suspendFailedLoading": {
+    "message": "Indlæser stadig - prøv igen om et øjeblik"
+  },
+  "suspendFailedForm": {
+    "message": "Ikke sat i dvale - fanen har ugemt indtastning"
+  },
+  "bannerNotNow": {
+    "message": "Ikke nu"
+  },
+  "changelog140Title1": {
+    "message": "Hold denne fane vågen"
+  },
+  "changelog140Desc1": {
+    "message": "Hold en enkelt fane vågen uden at hvidliste hele webstedet. Drowzy sætter den ikke i dvale, før du trykker \"Tillad dvale\" eller lukker fanen. Det ophæves, når du genstarter browseren."
+  },
+  "changelog140Title2": {
+    "message": "\"Beskyt lydfaner\" virker nu begge veje"
+  },
+  "changelog140Desc2": {
+    "message": "Slår du \"Beskyt lydfaner\" fra, må video- og musikfaner i baggrunden nu faktisk gå i dvale. Før blev de afvist, selv når indstillingen var slået fra. Med den slået til ændrer intet sig."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy fortæller dig, hvorfor en fane ikke går i dvale"
+  },
+  "changelog140Desc3": {
+    "message": "\"Sæt denne fane i dvale\" forsvinder ikke længere uden forklaring. Når en fane ikke kan gå i dvale, får du årsagen og en genvej direkte til den indstilling, der ville ændre det."
+  },
+  "changelog140Title4": {
+    "message": "Webstedsikoner der faktisk vises"
+  },
+  "changelog140Desc4": {
+    "message": "Faneikoner kommer nu fra browserens egen cache, så websteder der før kun viste et gråt bogstav, viser deres rigtige ikon, også mens de er i dvale. Ikoner der ville forsvinde i det tema du bruger, justeres så du stadig kan se dem."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Tæller cirka 150 MB for hver fane, Drowzy har sat i dvale. Det er en løbende sum over tid, ikke hukommelse der er ledig lige nu."
+  },
+  "privacyPermFavicon": {
+    "message": "Læsning af Chromes lokale favicon-cache, så webstedsikoner vises korrekt i fanelisten. Det læser en cache, der allerede findes på din computer, og foretager ingen netværksanmodning."
+  },
+  "changelog140Title5": {
+    "message": "Roligere, og tal du kan stole på"
+  },
+  "changelog140Desc5": {
+    "message": "At sætte faner i dvale får ikke længere hele listen til at hoppe. Denne side og velkomstsiden følger nu det lyse eller mørke tema du valgte i Drowzy. Og at sætte den samme fane i dvale igen og igen oppuster ikke længere dine statistikker."
   }
 }

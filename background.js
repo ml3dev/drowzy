@@ -41,6 +41,9 @@ const BADGE_COLOR = '#7c3aed';
 const MB_PER_TAB = 150;
 const MAX_SESSIONS = 20;
 const UNINSTALL_URL = 'https://ml3dev.github.io/drowzy/uninstall.html';
+// Versions that open What's New on update despite not being a major bump.
+// See onInstalled for why this exists and why it should stay short.
+const SHOW_CHANGELOG_VERSIONS = ['1.4.0'];
 
 let badgeTimer = null;
 
@@ -120,9 +123,17 @@ async function onInstalled(details) {
     let lastVer = data.drowzy_lastChangelogVersion || '';
     // Only show changelog on MAJOR version bumps (e.g. 1.x.x → 2.x.x).
     // Minor and patch bumps silently update the stored version.
+    //
+    // SHOW_CHANGELOG_VERSIONS is a narrow opt-in for releases where the whole
+    // point is telling people what changed. 1.4.0 adds a per-tab hold and
+    // explains why tabs are protected, both of which are invisible unless you
+    // go looking. Keep this list short - a What's New tab that opens for every
+    // release is just noise, which is why the major-bump rule is still the
+    // default for everything not listed here.
     let curMajor = version.split('.')[0];
     let lastMajor = lastVer.split('.')[0];
-    if (lastVer && curMajor !== lastMajor) {
+    let forced = SHOW_CHANGELOG_VERSIONS.includes(version) && lastVer !== version;
+    if (lastVer && (forced || curMajor !== lastMajor)) {
       await chrome.storage.local.set({ drowzy_lastChangelogVersion: version });
       try { chrome.tabs.create({ url: 'changelog.html' }); } catch {}
     } else if (lastVer !== version) {
@@ -188,10 +199,15 @@ async function firstRunQuickSuspend() {
   try {
     let settings = await getSettings();
     if (!settings.enableAutoSuspend) return;
+    // this pass discards directly rather than through suspendTab, so it needs
+    // its own Keep-awake check. In practice no hold can exist 30s after
+    // install, but the bypass should not be the one path that ignores it.
+    await loadKeptAwake();
     let tabs = await chrome.tabs.query({});
     let staleBefore = Date.now() - 10 * 60 * 1000;
     for (let tab of tabs) {
       if (tab.active || tab.discarded) continue;
+      if (_keptAwake.has(tab.id)) continue;
       if (typeof tab.lastAccessed !== 'number') continue;
       if (tab.lastAccessed > staleBefore) continue;
       if (isInternalUrl(tab.url)) continue;
@@ -200,7 +216,7 @@ async function firstRunQuickSuspend() {
       if (isWhitelisted(tab.url, settings.whitelist)) continue;
       try {
         let result = await chrome.tabs.discard(tab.id);
-        if (result) await recordSuspension();
+        if (result) await recordSuspension(tab.id);
       } catch {}
     }
     await updateBadgeNow();
@@ -396,6 +412,141 @@ async function unmarkActivated(tabId) {
   } catch {}
 }
 
+// Tab ids the user has explicitly held awake ("Keep this tab awake"). Same
+// chrome.storage.session backing and in-flight-promise memoization as the two
+// sets above, for the same clobbering reason. Clearing on browser restart is
+// the point, not a limitation: a hold is a "not right now" decision about one
+// tab in front of you. The whitelist stays the permanent, per-site tool.
+//
+// Unlike the other two, the Set is also exposed as a module-level mirror,
+// because shouldSuspend is synchronous and cannot await. Every caller of
+// shouldSuspend awaits loadKeptAwake() first, so the mirror is warm by then;
+// suspendTab does its own await and is the authoritative gate.
+let _keptAwakePromise = null;
+let _keptAwake = new Set();
+
+function loadKeptAwake() {
+  if (!_keptAwakePromise) {
+    // fill the existing Set in place rather than replacing it - the mirror
+    // and the promised value must stay the same object, or a mutation made
+    // through one would be invisible to the other
+    _keptAwakePromise = chrome.storage.session.get('keptAwakeTabIds')
+      .then(function(data) {
+        for (let id of (data.keptAwakeTabIds || [])) _keptAwake.add(id);
+        return _keptAwake;
+      })
+      .catch(function() { return _keptAwake; });
+  }
+  return _keptAwakePromise;
+}
+
+async function persistKeptAwake() {
+  try {
+    let set = await loadKeptAwake();
+    await chrome.storage.session.set({ keptAwakeTabIds: [...set] });
+  } catch {}
+}
+
+async function setKeptAwake(tabId, on) {
+  try {
+    let set = await loadKeptAwake();
+    if (on === set.has(tabId)) return on;
+    if (on) set.add(tabId); else set.delete(tabId);
+    // persist immediately, no debounce: these are one-at-a-time user actions,
+    // and a hold lost to worker death would silently suspend a tab the user
+    // just asked to keep
+    await persistKeptAwake();
+    return on;
+  } catch { return false; }
+}
+
+async function isKeptAwake(tabId) {
+  try {
+    let set = await loadKeptAwake();
+    return set.has(tabId);
+  } catch { return false; }
+}
+
+// Chrome drops tab.favIconUrl once a tab is discarded, so the moment you hit
+// Suspend Others the list turns into a wall of anonymous letter circles - the
+// icons vanish exactly when the tab list matters most. Remember the last icon
+// we saw per tab and serve it back when Chrome has none. Same session backing
+// and memoization as the sets above; cleared on browser restart, which is
+// fine because Chrome re-reports favicons as tabs reload.
+let _faviconsPromise = null;
+let _favicons = {};
+let _favDirty = false;
+let _favTimer = null;
+
+function loadFavicons() {
+  if (!_faviconsPromise) {
+    _faviconsPromise = chrome.storage.session.get('tabFavicons')
+      .then(function(data) {
+        let stored = data.tabFavicons || {};
+        // fill in place, never replace: a favicon remembered before the read
+        // resolved must not be lost (same reasoning as the sets above)
+        for (let id in stored) if (!(id in _favicons)) _favicons[id] = stored[id];
+        return _favicons;
+      })
+      .catch(function() { return _favicons; });
+  }
+  return _faviconsPromise;
+}
+
+function rememberFavicon(tabId, url) {
+  // chrome:// icons are not renderable from the popup, so caching them would
+  // just reintroduce the broken-image path buildFavicon already guards against
+  if (!url || url.indexOf('chrome://') === 0) return;
+  if (_favicons[tabId] === url) return;
+  _favicons[tabId] = url;
+  _favDirty = true;
+  // debounced: navigation churn would otherwise rewrite the whole map per hop
+  if (_favTimer) return;
+  _favTimer = setTimeout(function() { _favTimer = null; flushFavicons(); }, 3000);
+}
+
+async function flushFavicons() {
+  if (!_favDirty) return;
+  try {
+    await chrome.storage.session.set({ tabFavicons: _favicons });
+    _favDirty = false;
+  } catch {}
+}
+
+// Why a suspend was refused, for the failure toast. Called ONLY after a
+// suspend attempt already returned false, so it costs nothing on the happy
+// path and cannot influence whether a tab is discarded. Returns an i18n key
+// or null when we genuinely do not know (Chrome refused for its own reasons).
+async function explainSuspendFailure(tabId, cachedSettings) {
+  try {
+    let tab = await chrome.tabs.get(tabId);
+    // Already asleep: auto-suspend beat the click, or the tab was discarded
+    // between render and click. The user got what they asked for, so the
+    // caller must report success rather than an error toast.
+    if (tab.discarded) return 'ALREADY_ASLEEP';
+    if (isInternalUrl(tab.url)) return 'systemPageCantSuspend';
+    if (await isKeptAwake(tabId)) return 'keptAwakeWontSuspend';
+    let settings = cachedSettings || await getSettings();
+    if (settings.protectPinned && tab.pinned) return 'pinnedWontSuspend';
+    if (settings.protectAudio && tab.audible) return 'audioWontSuspend';
+    if (isWhitelisted(tab.url, settings.whitelist)) return 'whitelistedWontSuspend';
+    if (tab.active) return 'cantSuspendNoOtherTab';
+    if (tab.status === 'loading') return 'suspendFailedLoading';
+    // form data is the only remaining reason we can still ask about, and only
+    // when the setting that would have blocked it is actually on
+    if (settings.protectForms) {
+      try {
+        let resp = await Promise.race([
+          chrome.tabs.sendMessage(tabId, { action: 'checkFormData' }),
+          new Promise(resolve => setTimeout(() => resolve(null), 500))
+        ]);
+        if (resp && resp.hasFormData) return 'suspendFailedForm';
+      } catch {}
+    }
+    return null;
+  } catch { return null; }
+}
+
 let _timestamps = {};
 let _tsDirty = false;
 let _tsFlushTimer = null;
@@ -420,6 +571,26 @@ async function initTimestamps() {
         _tsDirty = true;
       }
     }
+
+    // Same prune for Keep-awake holds. onTabRemoved normally clears these, but
+    // a removal that lands while the worker is down would leave the id behind
+    // forever. Harmless today (Chrome does not recycle tab ids within a
+    // session) but it would quietly grow the stored array.
+    try {
+      let held = await loadKeptAwake();
+      let stale = [...held].filter(id => !liveIds.has(id));
+      if (stale.length) {
+        for (let id of stale) held.delete(id);
+        await persistKeptAwake();
+      }
+      // same prune for the remembered favicons, which would otherwise be the
+      // one session map that grows for the whole browser session
+      await loadFavicons();
+      for (let id in _favicons) {
+        if (!liveIds.has(Number(id))) { delete _favicons[id]; _favDirty = true; }
+      }
+      await flushFavicons();
+    } catch {}
 
     await flushTimestamps();
   } catch {}
@@ -504,7 +675,33 @@ function _defaultStats() {
   };
 }
 
-async function recordSuspension() {
+// Stats are meant to count tabs going to sleep, not button presses. Suspend
+// Others followed by Wake All, in a loop, otherwise inflates the lifetime
+// figures without limit: the numbers stop meaning anything and the stat cards
+// fill with absurd values. A tab re-slept within a minute of last being
+// counted does not count again. Genuine use is unaffected - nobody legitimately
+// wakes and re-sleeps the same tab twice inside sixty seconds.
+//
+// In memory on purpose: it only has to outlive a burst of clicking, and the
+// worker is alive throughout one.
+const RECOUNT_COOLDOWN_MS = 60 * 1000;
+let _lastCounted = new Map();
+
+function countsAsNewSuspension(tabId) {
+  let now = Date.now();
+  let prev = _lastCounted.get(tabId);
+  if (prev && now - prev < RECOUNT_COOLDOWN_MS) return false;
+  _lastCounted.set(tabId, now);
+  if (_lastCounted.size > 500) {
+    for (let [id, ts] of _lastCounted) {
+      if (now - ts > RECOUNT_COOLDOWN_MS) _lastCounted.delete(id);
+    }
+  }
+  return true;
+}
+
+async function recordSuspension(tabId) {
+  if (typeof tabId === 'number' && !countsAsNewSuspension(tabId)) return;
   try {
     let data = await chrome.storage.local.get('drowzy_stats');
     let stats = data.drowzy_stats || _defaultStats();
@@ -549,6 +746,11 @@ async function onAlarm(alarm) {
     // ignored viewed and mid-load tabs; the sweep keeps its speed but adds
     // those protections.)
     let settings = await getSettings();
+    // warm the Keep-awake mirror here too, so "loaded before any shouldSuspend
+    // call" holds on every path rather than only on the per-minute tick. At
+    // startup the set is always empty (session storage is cleared on restart),
+    // but relying on that is a reasoning trap the next change would fall into.
+    await loadKeptAwake();
     if (settings.suspendOnStartup) await restoredCatchupSweep(settings);
   }
 }
@@ -563,7 +765,10 @@ async function onTabActivated(activeInfo) {
   debouncedBadgeUpdate();
 }
 
-async function onTabUpdated(tabId, changeInfo) {
+async function onTabUpdated(tabId, changeInfo, tab) {
+  // capture the icon while the tab still has one - after a discard it is gone
+  if (changeInfo.favIconUrl) rememberFavicon(tabId, changeInfo.favIconUrl);
+  else if (tab && tab.favIconUrl && !tab.discarded) rememberFavicon(tabId, tab.favIconUrl);
   if (changeInfo.status === 'complete' || changeInfo.url) {
     await touchTab(tabId);
   }
@@ -603,6 +808,11 @@ async function onTabRemoved(tabId) {
   _injectedTabs.delete(tabId);
   await untagRestored(tabId);
   await unmarkActivated(tabId);
+  // a hold dies with its tab - ids get recycled, and inheriting a stranger's
+  // hold would keep a brand new tab awake for no visible reason
+  await setKeptAwake(tabId, false);
+  if (tabId in _favicons) { delete _favicons[tabId]; _favDirty = true; }
+  _lastCounted.delete(tabId);
   // Only mark dirty if we actually removed a tracked timestamp - avoids
   // flushing session storage when the tab wasn't being tracked.
   if (tabId in _timestamps) {
@@ -633,6 +843,22 @@ async function onTabReplaced(addedTabId, removedTabId) {
       await persistActivatedSet();
     }
     await untagRestored(removedTabId);
+    // a discard swaps the id, and the discarded tab has no favicon of its own -
+    // carrying the remembered one across is the whole point of the cache
+    if (removedTabId in _favicons) {
+      _favicons[addedTabId] = _favicons[removedTabId];
+      delete _favicons[removedTabId];
+      _favDirty = true;
+      await flushFavicons();
+    }
+    // carry the hold across the id swap. The user held the page, not the id,
+    // and a prerender/discard swap is invisible to them.
+    let held = await loadKeptAwake();
+    if (held.has(removedTabId)) {
+      held.delete(removedTabId);
+      held.add(addedTabId);
+      await persistKeptAwake();
+    }
   } catch {}
 }
 
@@ -653,6 +879,9 @@ async function checkAndSuspendTabs() {
     }
 
     let settings = await getSettings();
+    // warm the Keep-awake mirror before anything calls shouldSuspend, which
+    // reads it synchronously. Cheap after the first tick: memoized promise.
+    await loadKeptAwake();
 
     // startup catch-up runs before (and independently of) the auto-suspend
     // gates below: "Suspend tabs on startup" works even when auto-suspend is
@@ -703,6 +932,10 @@ async function checkAndSuspendTabs() {
 
 function shouldSuspend(tab, settings, timestamps, now, threshold) {
   if (tab.active || tab.discarded) return false;
+  // Reads the sync mirror. suspendTab re-checks authoritatively, so this is
+  // not the gate that keeps the tab alive - it is here so a held tab never
+  // gets a "Suspending tab soon..." banner for a suspend that cannot happen.
+  if (_keptAwake.has(tab.id)) return false;
   if (isInternalUrl(tab.url)) return false;
   if (settings.protectPinned && tab.pinned) return false;
   if (settings.protectAudio && tab.audible) return false;
@@ -753,6 +986,13 @@ async function suspendTab(tabId, cachedSettings, opts) {
     if (settings.protectPinned && tab.pinned) return false;
     if (settings.protectAudio && tab.audible) return false;
     if (isWhitelisted(tab.url, settings.whitelist)) return false;
+    // The authoritative Keep-awake gate. Every suspend path except
+    // firstRunQuickSuspend funnels through here, including the startup catch-up
+    // sweep, so this one await covers auto-suspend, Suspend Others, Suspend
+    // this tab, the context menu, the shortcut, and the sweep. Checked before
+    // injectFormCheck so a held tab never gets a content script injected for a
+    // suspend that will not happen.
+    if (await isKeptAwake(tabId)) return false;
 
     if (settings.protectForms || settings.markSuspendedTabs) {
       await injectFormCheck(tabId);
@@ -777,7 +1017,13 @@ async function suspendTab(tabId, cachedSettings, opts) {
     // Discarding an active tab forces a visible reload when the user looks at it.
     try {
       let fresh = await chrome.tabs.get(tabId);
-      if (fresh.active || fresh.discarded || fresh.audible) return false;
+      if (fresh.active || fresh.discarded) return false;
+      // Audio is rechecked against the setting, not unconditionally. The fresh
+      // read still matters (a tab can start playing during the awaits above),
+      // but refusing here regardless of protectAudio made the setting a no-op:
+      // every suspend path funnels through this function, so a user who turned
+      // "Protect audio tabs" off still could not sleep a background video tab.
+      if (settings.protectAudio && fresh.audible) return false;
       // for auto-suspend only: if Keep awake bumped the timestamp during the
       // warning window or tab.lastAccessed updated mid-await (user refocused),
       // bail out. Also skip tabs still in 'loading' to avoid discarding mid-navigation.
@@ -805,7 +1051,7 @@ async function suspendTab(tabId, cachedSettings, opts) {
     let result = await chrome.tabs.discard(tabId);
     if (result) {
       debouncedBadgeUpdate();
-      await recordSuspension();
+      await recordSuspension(tabId);
       return true;
     }
     return false;
@@ -891,6 +1137,9 @@ async function onCommand(command) {
 
 async function handleSuspendCurrent(activeTab) {
   if (activeTab.discarded || isInternalUrl(activeTab.url)) return;
+  // bail before the neighbour switch below. suspendTab would refuse a held tab
+  // anyway, but only after we had already yanked the user to another tab.
+  if (await isKeptAwake(activeTab.id)) return;
 
   let settings = await getSettings();
   if (settings.protectPinned && activeTab.pinned) return;
@@ -992,6 +1241,7 @@ async function saveSession(name) {
   }
 
   let tabs = await chrome.tabs.query({ currentWindow: true });
+  let sessionIcons = await loadFavicons();
   let valid = tabs.filter(tab => tab.url && !isInternalUrl(tab.url) && !tab.incognito);
   if (!valid.length) {
     return { success: false, error: t('noSaveableTabs') };
@@ -1017,7 +1267,9 @@ async function saveSession(name) {
     tabs: valid.map(tab => ({
       url: tab.url,
       title: tab.title || t('tabUntitled'),
-      favIconUrl: tab.favIconUrl || '',
+      // same discard fallback as getTabList: saving a session while tabs are
+      // asleep would otherwise store a session with no icons at all
+      favIconUrl: tab.favIconUrl || sessionIcons[tab.id] || '',
       pinned: tab.pinned || false,
       groupId: tab.groupId != null ? tab.groupId : -1
     }))
@@ -1110,6 +1362,8 @@ async function getTabList(windowId) {
   // Lazy-reload timestamps if service worker restarted
   if (Object.keys(_timestamps).length === 0) await initTimestamps();
   let settings = await getSettings();
+  let held = await loadKeptAwake();
+  let icons = await loadFavicons();
   let tabs = await chrome.tabs.query(windowId ? { windowId } : {});
   let now = Date.now();
   let threshold = settings.suspendAfterMinutes * 60 * 1000;
@@ -1118,12 +1372,18 @@ async function getTabList(windowId) {
     let status = 'idle';
     let protectReason = null;
     let timeLeft = null;
+    let keptAwake = held.has(tab.id);
 
+    // The active tab keeps status 'active' even when held - the popup finds it
+    // by that status, and it renders the hold from the keptAwake field below.
     if (tab.active) {
       status = 'active';
       protectReason = 'Active tab';
     } else if (tab.discarded) {
       status = 'suspended';
+    } else if (keptAwake) {
+      status = 'protected';
+      protectReason = 'Kept awake';
     } else if (isInternalUrl(tab.url)) {
       status = 'protected';
       protectReason = 'System page';
@@ -1153,8 +1413,9 @@ async function getTabList(windowId) {
       id: tab.id,
       title: tab.title || t('tabUntitled'),
       url: tab.url || '',
-      favIconUrl: tab.favIconUrl || '',
-      status, protectReason, timeLeft,
+      // fall back to the icon we saw before Chrome dropped it on discard
+      favIconUrl: tab.favIconUrl || icons[tab.id] || '',
+      status, protectReason, timeLeft, keptAwake,
       pinned: tab.pinned,
       audible: tab.audible
     };
@@ -1188,9 +1449,13 @@ async function handleMessage(msg) {
         chrome.tabs.query({ discarded: true, currentWindow: true })
       ]);
       let settings = await getSettings();
+      let held = await loadKeptAwake();
+      // Keep this in step with getTabList's protection chain. A held tab shows
+      // as protected in the list, so counting it as eligible here would make
+      // the strip contradict the list directly above it.
       let protectedCount = allTabs.filter(tab =>
         !tab.discarded && (
-          tab.active || isInternalUrl(tab.url) ||
+          tab.active || isInternalUrl(tab.url) || held.has(tab.id) ||
           (settings.protectPinned && tab.pinned) ||
           (settings.protectAudio && tab.audible) ||
           isWhitelisted(tab.url, settings.whitelist)
@@ -1223,7 +1488,35 @@ async function handleMessage(msg) {
       return { success: true };
     }
 
-    case 'suspendTab': return { success: await suspendTab(msg.tabId) };
+    case 'suspendTab': {
+      let ok = await suspendTab(msg.tabId);
+      if (ok) return { success: true };
+      let why = await explainSuspendFailure(msg.tabId);
+      // treat "it was already asleep" as the success the user perceives
+      if (why === 'ALREADY_ASLEEP') return { success: true };
+      return { success: false, reasonKey: why };
+    }
+    case 'setKeepAwake': {
+      let tabId = msg.tabId;
+      if (typeof tabId !== 'number') {
+        let [at] = await chrome.tabs.query({ active: true, currentWindow: true });
+        if (!at) return { success: false };
+        tabId = at.id;
+      }
+      let on = !!msg.on;
+      // holding a system page is meaningless - it can never be discarded
+      if (on) {
+        let tab = await chrome.tabs.get(tabId).catch(() => null);
+        if (!tab || isInternalUrl(tab.url)) return { success: false };
+      }
+      await setKeptAwake(tabId, on);
+      // Releasing restarts the idle clock. Without this a tab held for longer
+      // than the threshold is already overdue the moment it is released and
+      // vanishes on the next tick - "Allow sleep" means back to normal, not
+      // sleep right now. ("Suspend this tab" is there for sleep right now.)
+      if (!on) await touchTab(tabId);
+      return { success: true, keptAwake: on };
+    }
     case 'suspendCurrent': {
       // Re-suspend the active tab (e.g. one the user just woke). Reuses the
       // proven handleSuspendCurrent path, which activates a neighbour first
@@ -1235,7 +1528,10 @@ async function handleMessage(msg) {
       // handleSuspendCurrent no-ops if the tab is protected or has no neighbour.
       let after = await chrome.tabs.get(at.id).catch(() => null);
       let ok = !!(after && after.discarded);
-      return { success: ok, mbFreed: ok ? MB_PER_TAB : 0 };
+      if (ok) return { success: true, mbFreed: MB_PER_TAB };
+      let why = await explainSuspendFailure(at.id);
+      if (why === 'ALREADY_ASLEEP') return { success: true, mbFreed: MB_PER_TAB };
+      return { success: false, mbFreed: 0, reasonKey: why };
     }
     case 'suspendOthers': {
       let [at] = await chrome.tabs.query({ active: true, currentWindow: true });

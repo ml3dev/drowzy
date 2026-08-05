@@ -39,7 +39,7 @@
     "message": "网站已加入白名单（点击移除）"
   },
   "activeWontSuspend": {
-    "message": "活跃中 – 不会被休眠"
+    "message": "活跃中，不会被休眠"
   },
   "loading": {
     "message": "加载中..."
@@ -181,22 +181,19 @@
     "message": "没有已休眠的标签页可唤醒"
   },
   "pinnedWontSuspend": {
-    "message": "已固定 — 不会被休眠"
+    "message": "已固定，不会被休眠"
   },
   "audioWontSuspend": {
-    "message": "正在播放音频 — 不会被休眠"
+    "message": "正在播放音频，不会被休眠"
   },
   "whitelistedWontSuspend": {
-    "message": "在白名单中 — 不会被休眠"
+    "message": "在白名单中，不会被休眠"
   },
   "systemPageCantSuspend": {
-    "message": "系统页面 — 无法休眠"
+    "message": "系统页面，无法休眠"
   },
   "clickToDismiss": {
     "message": "点击关闭"
-  },
-  "keepAwakeBtn": {
-    "message": "保持唤醒"
   },
   "suspendTimerHint": {
     "message": "您切换离开的标签页将在这段时间后被挂起。如果您经常长时间后返回标签页,请增加此时间。"
@@ -394,7 +391,7 @@
     "message": "此会话中没有可恢复的标签页。"
   },
   "sessionDefaultName": {
-    "message": "会话 – $DATE$",
+    "message": "会话 - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "欢迎使用 Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy 通过将不活跃的标签页置于休眠状态来节省内存。您的标签页始终安全 – 我们使用 Chrome 的原生丢弃 API，因此即使您卸载 Drowzy，标签页也不会丢失。"
+    "message": "Drowzy 通过将不活跃的标签页置于休眠状态来节省内存。您的标签页始终安全，我们使用 Chrome 的原生丢弃 API，因此即使您卸载 Drowzy，标签页也不会丢失。"
   },
   "howItWorks": {
     "message": "工作原理"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "休眠的标签页现在会显示点击唤醒提示，欢迎页面也说明了 Drowzy 如何与浏览器内置的内存节省程序协同工作。"
+  },
+  "keepThisTabAwake": {
+    "message": "保持此标签页唤醒"
+  },
+  "allowSleep": {
+    "message": "允许休眠"
+  },
+  "keptAwakeHint": {
+    "message": "在你关闭此选项或关闭标签页之前，阻止该标签页休眠"
+  },
+  "allowSleepHint": {
+    "message": "让此标签页恢复正常休眠"
+  },
+  "keptAwakeToast": {
+    "message": "此标签页将保持唤醒"
+  },
+  "allowSleepToast": {
+    "message": "此标签页可以再次休眠"
+  },
+  "badgeAwake": {
+    "message": "唤醒中"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "保持唤醒，不会被休眠"
+  },
+  "cantSuspendPinned": {
+    "message": "固定标签页受保护。关闭“保护固定标签页”即可休眠此标签页。"
+  },
+  "cantSuspendAudio": {
+    "message": "正在播放声音的标签页受保护。关闭“保护音频标签页”即可休眠此标签页。"
+  },
+  "cantSuspendWhitelisted": {
+    "message": "该网站在你的永不休眠列表中。移除后即可休眠此标签页。"
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "需要另一个打开的标签页可供切换。Chrome 无法休眠你正在查看的标签页。"
+  },
+  "openSettingsAction": {
+    "message": "打开设置"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome 未能休眠此标签页"
+  },
+  "suspendFailedLoading": {
+    "message": "仍在加载，请稍后重试"
+  },
+  "suspendFailedForm": {
+    "message": "未休眠，此标签页有未保存的输入"
+  },
+  "bannerNotNow": {
+    "message": "暂不"
+  },
+  "changelog140Title1": {
+    "message": "保持此标签页唤醒"
+  },
+  "changelog140Desc1": {
+    "message": "无需把整个网站加入白名单，就能让单个标签页保持唤醒。在你按下“允许休眠”或关闭标签页之前，Drowzy 不会让它休眠。重启浏览器后该状态会清除。"
+  },
+  "changelog140Title2": {
+    "message": "“保护音频标签页”现在双向生效"
+  },
+  "changelog140Desc2": {
+    "message": "关闭“保护音频标签页”后，后台的视频和音乐标签页现在真的可以休眠了。此前即使关闭该选项它们仍会被拒绝。保持开启则行为不变。"
+  },
+  "changelog140Title3": {
+    "message": "Drowzy 会告诉你标签页为何不休眠"
+  },
+  "changelog140Desc3": {
+    "message": "“休眠此标签页”不再无故消失。当标签页无法休眠时，你会看到原因，以及直达对应设置的快捷入口。"
+  },
+  "changelog140Title4": {
+    "message": "真正显示出来的网站图标"
+  },
+  "changelog140Desc4": {
+    "message": "标签页图标现在来自浏览器自身的缓存，以前只显示灰色字母的网站会显示真实图标，休眠时也一样。在当前主题下会看不见的图标会被调整，让你依然能看清。"
+  },
+  "ramLifetimeTooltip": {
+    "message": "按 Drowzy 曾休眠过的每个标签页约 150 MB 累加。这是长期累计值，不是当前空闲的内存。"
+  },
+  "privacyPermFavicon": {
+    "message": "读取 Chrome 本地的网站图标缓存，让标签页列表中的图标正确显示。这只是读取你电脑上已有的缓存，不会发起任何网络请求。"
+  },
+  "changelog140Title5": {
+    "message": "更安静，数字也更可信"
+  },
+  "changelog140Desc5": {
+    "message": "休眠标签页时整个列表不再跳动。本页和欢迎页现在会跟随你在 Drowzy 中选择的浅色或深色主题。反复休眠同一个标签页也不会再虚增累计统计。"
   }
 }

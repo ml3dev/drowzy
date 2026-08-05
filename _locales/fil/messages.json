@@ -39,7 +39,7 @@
     "message": "Naka-whitelist ang site (i-click para tanggalin)"
   },
   "activeWontSuspend": {
-    "message": "Aktibo – hindi i-su-suspend"
+    "message": "Aktibo - hindi i-su-suspend"
   },
   "loading": {
     "message": "Naglo-load..."
@@ -181,22 +181,19 @@
     "message": "Walang naka-suspende na tab na maaaring gisingin"
   },
   "pinnedWontSuspend": {
-    "message": "Naka-pin — hindi isa-suspende"
+    "message": "Naka-pin - hindi isa-suspende"
   },
   "audioWontSuspend": {
-    "message": "May tumutugtog na audio — hindi isa-suspende"
+    "message": "May tumutugtog na audio - hindi isa-suspende"
   },
   "whitelistedWontSuspend": {
-    "message": "Nasa whitelist — hindi isa-suspende"
+    "message": "Nasa whitelist - hindi isa-suspende"
   },
   "systemPageCantSuspend": {
-    "message": "Pahina ng system — hindi maaaring i-suspende"
+    "message": "Pahina ng system - hindi maaaring i-suspende"
   },
   "clickToDismiss": {
     "message": "I-click para isara"
-  },
-  "keepAwakeBtn": {
-    "message": "Panatilihing aktibo"
   },
   "suspendTimerHint": {
     "message": "Ang mga tab na inilipat mo ay sususpindihin pagkatapos ng oras na ito. Dagdagan kung madalas kang bumabalik sa mga tab pagkatapos ng mahabang puwang."
@@ -394,7 +391,7 @@
     "message": "Walang ma-restore na tab sa session na ito."
   },
   "sessionDefaultName": {
-    "message": "Session – $DATE$",
+    "message": "Session - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Maligayang pagdating sa Drowzy"
   },
   "onboardingIntro": {
-    "message": "Nakakatipid ng memory ang Drowzy sa pamamagitan ng pagpapatulog ng mga hindi aktibong tab. Palaging ligtas ang iyong mga tab – ginagamit namin ang native na discard API ng Chrome, kaya mananatili ang mga ito kahit i-uninstall mo ang Drowzy."
+    "message": "Nakakatipid ng memory ang Drowzy sa pamamagitan ng pagpapatulog ng mga hindi aktibong tab. Palaging ligtas ang iyong mga tab - ginagamit namin ang native na discard API ng Chrome, kaya mananatili ang mga ito kahit i-uninstall mo ang Drowzy."
   },
   "howItWorks": {
     "message": "Paano ito gumagana"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Ang mga natutulog na tab ay nagpapakita na ngayon ng pahiwatig na i-click para gisingin, at ipinapaliwanag ng welcome page kung paano gumagana ang Drowzy kasama ng built-in na Memory Saver ng browser mo."
+  },
+  "keepThisTabAwake": {
+    "message": "Panatilihing gising ang tab na ito"
+  },
+  "allowSleep": {
+    "message": "Payagang matulog"
+  },
+  "keptAwakeHint": {
+    "message": "Pinipigilan ang tab na ito na matulog hanggang i-off mo ito o isara ang tab"
+  },
+  "allowSleepHint": {
+    "message": "Hayaang matulog nang normal muli ang tab na ito"
+  },
+  "keptAwakeToast": {
+    "message": "Mananatiling gising ang tab na ito"
+  },
+  "allowSleepToast": {
+    "message": "Maaari nang matulog muli ang tab na ito"
+  },
+  "badgeAwake": {
+    "message": "Gising"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Pinananatiling gising - hindi ito ipapatulog"
+  },
+  "cantSuspendPinned": {
+    "message": "Protektado ang mga naka-pin na tab. I-off ang \"Protektahan ang mga naka-pin na tab\" para patulugin ito."
+  },
+  "cantSuspendAudio": {
+    "message": "Protektado ang mga tab na may tunog. I-off ang \"Protektahan ang mga audio tab\" para patulugin ito."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Nasa listahan mo ng huwag kailanman patulugin ang site na ito. Alisin ito para patulugin ang tab."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Kailangan ng ibang bukas na tab na malilipatan muna. Hindi mapapatulog ng Chrome ang tab na tinitingnan mo."
+  },
+  "openSettingsAction": {
+    "message": "Buksan ang mga setting"
+  },
+  "suspendFailedGeneric": {
+    "message": "Hindi pinatulog ng Chrome ang tab na ito"
+  },
+  "suspendFailedLoading": {
+    "message": "Naglo-load pa - subukan muli mamaya"
+  },
+  "suspendFailedForm": {
+    "message": "Hindi pinatulog - may hindi pa nase-save na input ang tab na ito"
+  },
+  "bannerNotNow": {
+    "message": "Hindi ngayon"
+  },
+  "changelog140Title1": {
+    "message": "Panatilihing gising ang tab na ito"
+  },
+  "changelog140Desc1": {
+    "message": "Panatilihing gising ang isang tab nang hindi isinasama ang buong site sa whitelist. Hindi ito patutulugin ng Drowzy hanggang pindutin mo ang \"Payagang matulog\" o isara ang tab. Nawawala ito kapag nag-restart ka ng browser."
+  },
+  "changelog140Title2": {
+    "message": "Gumagana na sa dalawang direksyon ang \"Protektahan ang mga audio tab\""
+  },
+  "changelog140Desc2": {
+    "message": "Kapag ini-off mo ang \"Protektahan ang mga audio tab\", talagang natutulog na ngayon ang mga video at music tab sa background. Dati, tinatanggihan pa rin kahit naka-off ang setting. Kapag naka-on, walang pagbabago."
+  },
+  "changelog140Title3": {
+    "message": "Sinasabi ng Drowzy kung bakit hindi natutulog ang isang tab"
+  },
+  "changelog140Desc3": {
+    "message": "Hindi na basta nawawala ang \"Patulugin ang tab na ito\" nang walang paliwanag. Kapag hindi makatulog ang isang tab, makikita mo ang dahilan at isang shortcut diretso sa setting na magbabago nito."
+  },
+  "changelog140Title4": {
+    "message": "Mga icon ng site na talagang lumalabas"
+  },
+  "changelog140Desc4": {
+    "message": "Ang mga icon ng tab ay galing na sa sariling cache ng browser mo, kaya ang mga site na dating letrang kulay abo lang ay ipinapakita na ang tunay nilang icon, pati habang natutulog. Ang mga icon na mawawala sa temang ginagamit mo ay ina-adjust para makita mo pa rin."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Nagbibilang ng humigit-kumulang 150 MB para sa bawat tab na napatulog na ng Drowzy. Tumatakbong kabuuan ito sa paglipas ng panahon, hindi memory na bakante ngayon."
+  },
+  "privacyPermFavicon": {
+    "message": "Pagbabasa ng lokal na favicon cache ng Chrome para tama ang pagpapakita ng mga icon ng site sa listahan ng tab. Binabasa nito ang cache na nasa computer mo na at walang ginagawang network request."
+  },
+  "changelog140Title5": {
+    "message": "Mas kalmado, at bilang na mapagkakatiwalaan"
+  },
+  "changelog140Desc5": {
+    "message": "Hindi na tumatalbog ang buong listahan kapag nagpatulog ka ng mga tab. Ang page na ito at ang welcome page ay sumusunod na sa light o dark theme na pinili mo sa Drowzy. At ang paulit-ulit na pagpapatulog sa parehong tab ay hindi na nagpapalobo ng stats mo."
   }
 }

@@ -39,7 +39,7 @@
     "message": "Sito nella lista bianca (clicca per rimuovere)"
   },
   "activeWontSuspend": {
-    "message": "Attiva – non verrà sospesa"
+    "message": "Attiva - non verrà sospesa"
   },
   "loading": {
     "message": "Caricamento..."
@@ -181,22 +181,19 @@
     "message": "Nessuna scheda sospesa da riattivare"
   },
   "pinnedWontSuspend": {
-    "message": "Fissata — non verrà sospesa"
+    "message": "Fissata - non verrà sospesa"
   },
   "audioWontSuspend": {
-    "message": "Audio in riproduzione — non verrà sospesa"
+    "message": "Audio in riproduzione - non verrà sospesa"
   },
   "whitelistedWontSuspend": {
-    "message": "In whitelist — non verrà sospesa"
+    "message": "In whitelist - non verrà sospesa"
   },
   "systemPageCantSuspend": {
-    "message": "Pagina di sistema — non può essere sospesa"
+    "message": "Pagina di sistema - non può essere sospesa"
   },
   "clickToDismiss": {
     "message": "Fai clic per chiudere"
-  },
-  "keepAwakeBtn": {
-    "message": "Mantieni attiva"
   },
   "suspendTimerHint": {
     "message": "Le schede da cui ti sei allontanato vengono sospese dopo questo tempo. Aumentalo se torni alle schede dopo lunghe pause."
@@ -394,7 +391,7 @@
     "message": "Nessuna scheda ripristinabile in questa sessione."
   },
   "sessionDefaultName": {
-    "message": "Sessione – $DATE$",
+    "message": "Sessione - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Benvenuto in Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy risparmia memoria mettendo a riposo le schede inattive. Le tue schede sono sempre al sicuro – utilizziamo l'API discard nativa di Chrome, quindi sopravvivono anche se disinstalli Drowzy."
+    "message": "Drowzy risparmia memoria mettendo a riposo le schede inattive. Le tue schede sono sempre al sicuro - utilizziamo l'API discard nativa di Chrome, quindi sopravvivono anche se disinstalli Drowzy."
   },
   "howItWorks": {
     "message": "Come funziona"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Le schede addormentate mostrano ora il suggerimento clicca per riattivare, e la pagina di benvenuto spiega come Drowzy funziona accanto al risparmio memoria integrato del browser."
+  },
+  "keepThisTabAwake": {
+    "message": "Tieni sveglia questa scheda"
+  },
+  "allowSleep": {
+    "message": "Consenti la sospensione"
+  },
+  "keptAwakeHint": {
+    "message": "Impedisce a questa scheda di addormentarsi finché non lo disattivi o chiudi la scheda"
+  },
+  "allowSleepHint": {
+    "message": "Lascia che questa scheda torni a sospendersi normalmente"
+  },
+  "keptAwakeToast": {
+    "message": "Questa scheda resterà sveglia"
+  },
+  "allowSleepToast": {
+    "message": "Questa scheda può tornare a dormire"
+  },
+  "badgeAwake": {
+    "message": "Sveglia"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Tenuta sveglia - non verrà sospesa"
+  },
+  "cantSuspendPinned": {
+    "message": "Le schede fissate sono protette. Disattiva \"Proteggi schede fissate\" per sospendere questa."
+  },
+  "cantSuspendAudio": {
+    "message": "Le schede che riproducono audio sono protette. Disattiva \"Proteggi schede con audio\" per sospendere questa."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Questo sito è nella tua lista \"non sospendere mai\". Rimuovilo per sospendere questa scheda."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Serve un'altra scheda aperta su cui passare. Chrome non può sospendere la scheda che stai guardando."
+  },
+  "openSettingsAction": {
+    "message": "Apri impostazioni"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome non ha voluto sospendere questa scheda"
+  },
+  "suspendFailedLoading": {
+    "message": "Ancora in caricamento - riprova tra un momento"
+  },
+  "suspendFailedForm": {
+    "message": "Non sospesa - questa scheda contiene testo non salvato"
+  },
+  "bannerNotNow": {
+    "message": "Non ora"
+  },
+  "changelog140Title1": {
+    "message": "Tieni sveglia questa scheda"
+  },
+  "changelog140Desc1": {
+    "message": "Tieni sveglia una singola scheda senza mettere l'intero sito in whitelist. Drowzy non la sospenderà finché non premi \"Consenti la sospensione\" o chiudi la scheda. Il blocco si azzera al riavvio del browser."
+  },
+  "changelog140Title2": {
+    "message": "\"Proteggi schede con audio\" ora funziona in entrambi i sensi"
+  },
+  "changelog140Desc2": {
+    "message": "Disattivare \"Proteggi schede con audio\" ora lascia davvero sospendere le schede di video e musica in secondo piano. Prima venivano rifiutate anche con l'opzione disattivata. Con l'opzione attiva non cambia nulla."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy ti dice perché una scheda non si sospende"
+  },
+  "changelog140Desc3": {
+    "message": "\"Sospendi questa scheda\" non sparisce più senza spiegazioni. Quando una scheda non può sospendersi, ottieni il motivo e una scorciatoia diretta all'impostazione che lo cambierebbe."
+  },
+  "changelog140Title4": {
+    "message": "Icone dei siti che si vedono davvero"
+  },
+  "changelog140Desc4": {
+    "message": "Le icone delle schede ora arrivano dalla cache del browser, così i siti che prima mostravano solo una lettera grigia hanno la loro icona vera, anche mentre dormono. Le icone che sparirebbero con il tema in uso vengono adattate per restare visibili."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Conta circa 150 MB per ogni scheda che Drowzy ha sospeso. È un totale cumulativo nel tempo, non memoria libera in questo momento."
+  },
+  "privacyPermFavicon": {
+    "message": "Legge la cache locale delle favicon di Chrome perché le icone dei siti appaiano correttamente nell'elenco delle schede. Legge una cache già presente sul tuo computer e non effettua alcuna richiesta di rete."
+  },
+  "changelog140Title5": {
+    "message": "Più calmo, e numeri affidabili"
+  },
+  "changelog140Desc5": {
+    "message": "Sospendere le schede non fa più sobbalzare tutta la lista. Questa pagina e quella di benvenuto seguono ora il tema chiaro o scuro scelto in Drowzy. E rimettere a dormire la stessa scheda di continuo non gonfia più le statistiche."
   }
 }

@@ -52,7 +52,9 @@ On top of that, Drowzy is fully open source, collects zero data, and runs entire
 
 ### Core
 - **Auto-suspend** inactive tabs after a configurable timer (5 min - 4 hours, or manual only)
-- **Smart protection** - pinned, audio-playing, and whitelisted tabs are never suspended; optional form-data protection also skips tabs with unsaved input (off by default, requires granting page access)
+- **Smart protection** - pinned, audio-playing, and whitelisted tabs are skipped by default; the pinned and audio protections are toggles you can turn off if you want those tabs to sleep too. Optional form-data protection also skips tabs with unsaved input (off by default, requires granting page access)
+- **Keep this tab awake** - hold a single tab awake without whitelisting the whole site. Nothing in Drowzy will sleep it until you press "Allow sleep" or close the tab; the hold clears when you restart your browser
+- **Tells you why** - when a tab can't sleep, Drowzy says which protection is stopping it and links straight to the setting that would change it, instead of quietly hiding the button
 - **Whitelist** sites with pattern matching and wildcards (e.g., `github.com/ml3dev/*`)
 - **Keyboard shortcuts** - `Alt+S` suspend current, `Alt+Shift+S` suspend others, `Alt+W` wake all
 - **Context menu** - right-click any page for quick suspend options
@@ -99,6 +101,7 @@ Drowzy requests only what it needs. Nothing is sent to external servers.
 | `contextMenus` | Right-click menu: suspend, whitelist |
 | `scripting` | Detect unsaved form data before suspending a tab |
 | `sidePanel` | Display Drowzy in Chrome's side panel |
+| `favicon` | Read Chrome's own local favicon cache so site icons show correctly. No network request is made, and Chrome shows no permission warning for it |
 | `optional_host_permissions` | Requested only if you enable form protection or tab marking |
 
 Full details in the [Privacy Policy](https://github.com/ml3dev/drowzy/blob/main/privacy-policy.html).

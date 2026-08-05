@@ -39,7 +39,7 @@
     "message": "화이트리스트에 등록된 사이트 (클릭하여 제거)"
   },
   "activeWontSuspend": {
-    "message": "활성 – 일시중지되지 않음"
+    "message": "활성 - 일시중지되지 않음"
   },
   "loading": {
     "message": "로딩 중..."
@@ -181,22 +181,19 @@
     "message": "깨울 일시 중단된 탭이 없습니다"
   },
   "pinnedWontSuspend": {
-    "message": "고정됨 — 일시 중단되지 않음"
+    "message": "고정됨 - 일시 중단되지 않음"
   },
   "audioWontSuspend": {
-    "message": "오디오 재생 중 — 일시 중단되지 않음"
+    "message": "오디오 재생 중 - 일시 중단되지 않음"
   },
   "whitelistedWontSuspend": {
-    "message": "허용 목록에 있음 — 일시 중단되지 않음"
+    "message": "허용 목록에 있음 - 일시 중단되지 않음"
   },
   "systemPageCantSuspend": {
-    "message": "시스템 페이지 — 일시 중단할 수 없음"
+    "message": "시스템 페이지 - 일시 중단할 수 없음"
   },
   "clickToDismiss": {
     "message": "클릭하여 닫기"
-  },
-  "keepAwakeBtn": {
-    "message": "활성 유지"
   },
   "suspendTimerHint": {
     "message": "전환한 탭은 이 시간이 지나면 일시 중지됩니다. 긴 간격 후 탭으로 돌아오는 경우 시간을 늘리세요."
@@ -394,7 +391,7 @@
     "message": "이 세션에 복원 가능한 탭이 없습니다."
   },
   "sessionDefaultName": {
-    "message": "세션 – $DATE$",
+    "message": "세션 - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "잠자는 탭에 클릭하여 깨우기 힌트가 표시되고, 환영 페이지에 Drowzy가 브라우저 내장 메모리 절약 모드와 어떻게 함께 작동하는지 설명을 추가했습니다."
+  },
+  "keepThisTabAwake": {
+    "message": "이 탭 깨워두기"
+  },
+  "allowSleep": {
+    "message": "절전 허용"
+  },
+  "keptAwakeHint": {
+    "message": "끄거나 탭을 닫을 때까지 이 탭이 절전되지 않도록 합니다"
+  },
+  "allowSleepHint": {
+    "message": "이 탭이 다시 정상적으로 절전되도록 합니다"
+  },
+  "keptAwakeToast": {
+    "message": "이 탭은 계속 켜져 있습니다"
+  },
+  "allowSleepToast": {
+    "message": "이 탭은 다시 절전될 수 있습니다"
+  },
+  "badgeAwake": {
+    "message": "활성"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "깨워둠 - 절전되지 않습니다"
+  },
+  "cantSuspendPinned": {
+    "message": "고정된 탭은 보호됩니다. 이 탭을 절전하려면 \"고정 탭 보호\"를 끄세요."
+  },
+  "cantSuspendAudio": {
+    "message": "소리를 재생 중인 탭은 보호됩니다. 이 탭을 절전하려면 \"오디오 탭 보호\"를 끄세요."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "이 사이트는 절전 제외 목록에 있습니다. 목록에서 제거하면 절전할 수 있습니다."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "먼저 전환할 다른 탭이 필요합니다. Chrome은 보고 있는 탭을 절전할 수 없습니다."
+  },
+  "openSettingsAction": {
+    "message": "설정 열기"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome이 이 탭을 절전하지 못했습니다"
+  },
+  "suspendFailedLoading": {
+    "message": "아직 로딩 중입니다. 잠시 후 다시 시도하세요"
+  },
+  "suspendFailedForm": {
+    "message": "저장하지 않은 입력이 있어 절전하지 않았습니다"
+  },
+  "bannerNotNow": {
+    "message": "나중에"
+  },
+  "changelog140Title1": {
+    "message": "이 탭 깨워두기"
+  },
+  "changelog140Desc1": {
+    "message": "사이트 전체를 예외 목록에 넣지 않고 탭 하나만 깨워 둘 수 있습니다. \"절전 허용\"을 누르거나 탭을 닫기 전까지 Drowzy는 절전하지 않습니다. 브라우저를 다시 시작하면 해제됩니다."
+  },
+  "changelog140Title2": {
+    "message": "\"오디오 탭 보호\"가 이제 양방향으로 동작합니다"
+  },
+  "changelog140Desc2": {
+    "message": "\"오디오 탭 보호\"를 끄면 이제 백그라운드의 동영상과 음악 탭이 실제로 절전됩니다. 이전에는 꺼도 거부되었습니다. 켜 두면 달라지는 것은 없습니다."
+  },
+  "changelog140Title3": {
+    "message": "탭이 절전되지 않는 이유를 알려줍니다"
+  },
+  "changelog140Desc3": {
+    "message": "\"이 탭 절전\"이 설명 없이 사라지지 않습니다. 탭이 절전될 수 없으면 이유와 그것을 바꿀 설정으로 가는 바로가기를 보여줍니다."
+  },
+  "changelog140Title4": {
+    "message": "제대로 보이는 사이트 아이콘"
+  },
+  "changelog140Desc4": {
+    "message": "탭 아이콘을 브라우저 캐시에서 가져옵니다. 예전에는 회색 글자만 보이던 사이트도 절전 중을 포함해 실제 아이콘이 표시됩니다. 현재 테마에서 보이지 않게 될 아이콘은 보이도록 조정합니다."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Drowzy가 지금까지 절전한 탭 하나당 약 150 MB로 계산한 값입니다. 시간에 따른 누적 합계이며, 지금 비어 있는 메모리가 아닙니다."
+  },
+  "privacyPermFavicon": {
+    "message": "탭 목록에 사이트 아이콘이 제대로 표시되도록 Chrome의 로컬 파비콘 캐시를 읽습니다. 이미 컴퓨터에 있는 캐시를 읽을 뿐이며 네트워크 요청은 하지 않습니다."
+  },
+  "changelog140Title5": {
+    "message": "차분해진 화면, 믿을 수 있는 수치"
+  },
+  "changelog140Desc5": {
+    "message": "탭을 절전해도 목록 전체가 튀지 않습니다. 이 페이지와 시작 페이지도 Drowzy에서 고른 밝은/어두운 테마를 따릅니다. 또한 같은 탭을 반복해서 절전해도 누적 통계가 부풀지 않습니다."
   }
 }

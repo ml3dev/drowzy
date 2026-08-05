@@ -39,7 +39,7 @@
     "message": "Site-ul este pe lista albă (click pentru a elimina)"
   },
   "activeWontSuspend": {
-    "message": "Activ – nu va fi suspendat"
+    "message": "Activ - nu va fi suspendat"
   },
   "loading": {
     "message": "Se încarcă..."
@@ -181,22 +181,19 @@
     "message": "Nu există file suspendate de trezit"
   },
   "pinnedWontSuspend": {
-    "message": "Fixată — nu va fi suspendată"
+    "message": "Fixată - nu va fi suspendată"
   },
   "audioWontSuspend": {
-    "message": "Redă audio — nu va fi suspendată"
+    "message": "Redă audio - nu va fi suspendată"
   },
   "whitelistedWontSuspend": {
-    "message": "În lista albă — nu va fi suspendată"
+    "message": "În lista albă - nu va fi suspendată"
   },
   "systemPageCantSuspend": {
-    "message": "Pagină de sistem — nu poate fi suspendată"
+    "message": "Pagină de sistem - nu poate fi suspendată"
   },
   "clickToDismiss": {
     "message": "Faceți clic pentru a închide"
-  },
-  "keepAwakeBtn": {
-    "message": "Menține activă"
   },
   "suspendTimerHint": {
     "message": "Filele de la care ai plecat sunt suspendate după acest timp. Mărește-l dacă te întorci la file după pauze lungi."
@@ -394,7 +391,7 @@
     "message": "Nu există file restaurabile în această sesiune."
   },
   "sessionDefaultName": {
-    "message": "Sesiune – $DATE$",
+    "message": "Sesiune - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Bun venit la Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy economisește memorie punând filele inactive în repaus. Filele tale sunt mereu în siguranță – folosim API-ul nativ de renunțare al Chrome, astfel că supraviețuiesc chiar dacă dezinstalezi Drowzy."
+    "message": "Drowzy economisește memorie punând filele inactive în repaus. Filele tale sunt mereu în siguranță - folosim API-ul nativ de renunțare al Chrome, astfel că supraviețuiesc chiar dacă dezinstalezi Drowzy."
   },
   "howItWorks": {
     "message": "Cum funcționează"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Filele adormite afișează acum indiciul click pentru a trezi, iar pagina de bun venit explică cum funcționează Drowzy alături de economisirea memoriei încorporată în browser."
+  },
+  "keepThisTabAwake": {
+    "message": "Ține fila asta trează"
+  },
+  "allowSleep": {
+    "message": "Permite adormirea"
+  },
+  "keptAwakeHint": {
+    "message": "Împiedică fila asta să adoarmă până o dezactivezi sau închizi fila"
+  },
+  "allowSleepHint": {
+    "message": "Lasă fila asta să adoarmă din nou normal"
+  },
+  "keptAwakeToast": {
+    "message": "Fila asta va rămâne trează"
+  },
+  "allowSleepToast": {
+    "message": "Fila asta poate adormi din nou"
+  },
+  "badgeAwake": {
+    "message": "Trează"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Ținută trează - nu va fi suspendată"
+  },
+  "cantSuspendPinned": {
+    "message": "Filele fixate sunt protejate. Dezactivează \"Protejează filele fixate\" ca să o suspenzi pe asta."
+  },
+  "cantSuspendAudio": {
+    "message": "Filele care redau sunet sunt protejate. Dezactivează \"Protejează filele cu sunet\" ca să o suspenzi pe asta."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Site-ul ăsta e pe lista ta de nesuspendat niciodată. Scoate-l ca să suspenzi fila."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "E nevoie de altă filă deschisă la care să comuți întâi. Chrome nu poate suspenda fila la care te uiți."
+  },
+  "openSettingsAction": {
+    "message": "Deschide setările"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome nu a suspendat fila asta"
+  },
+  "suspendFailedLoading": {
+    "message": "Încă se încarcă - încearcă din nou peste puțin"
+  },
+  "suspendFailedForm": {
+    "message": "Nu a fost suspendată - fila are text nesalvat"
+  },
+  "bannerNotNow": {
+    "message": "Nu acum"
+  },
+  "changelog140Title1": {
+    "message": "Ține fila asta trează"
+  },
+  "changelog140Desc1": {
+    "message": "Ține o singură filă trează fără să pui tot site-ul pe lista albă. Drowzy nu o adoarme până nu apeși \"Permite adormirea\" sau nu închizi fila. La repornirea browserului se șterge."
+  },
+  "changelog140Title2": {
+    "message": "\"Protejează filele cu sunet\" funcționează acum în ambele sensuri"
+  },
+  "changelog140Desc2": {
+    "message": "Dacă dezactivezi \"Protejează filele cu sunet\", filele cu video și muzică din fundal chiar pot adormi acum. Înainte erau refuzate chiar și cu setarea oprită. Cu ea pornită nu se schimbă nimic."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy îți spune de ce nu adoarme o filă"
+  },
+  "changelog140Desc3": {
+    "message": "\"Suspendă fila asta\" nu mai dispare fără explicație. Când o filă nu poate adormi, primești motivul și o scurtătură direct la setarea care ar schimba asta."
+  },
+  "changelog140Title4": {
+    "message": "Pictograme de site care chiar apar"
+  },
+  "changelog140Desc4": {
+    "message": "Pictogramele filelor vin acum din memoria cache a browserului, așa că site-urile care înainte arătau doar o literă gri își afișează pictograma reală, inclusiv cât dorm. Pictogramele care ar dispărea pe tema folosită sunt ajustate ca să rămână vizibile."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Numără aproximativ 150 MB pentru fiecare filă pe care Drowzy a adormit-o. E un total cumulat în timp, nu memorie liberă chiar acum."
+  },
+  "privacyPermFavicon": {
+    "message": "Citirea memoriei cache locale de favicon a Chrome pentru ca pictogramele site-urilor să apară corect în lista de file. Citește o memorie cache aflată deja pe computerul tău și nu face nicio cerere de rețea."
+  },
+  "changelog140Title5": {
+    "message": "Mai calm, și cifre în care poți avea încredere"
+  },
+  "changelog140Desc5": {
+    "message": "Adormirea filelor nu mai face toată lista să sară. Această pagină și cea de bun venit urmează acum tema deschisă sau întunecată aleasă în Drowzy. Iar readormirea aceleiași file la nesfârșit nu mai umflă statisticile."
   }
 }

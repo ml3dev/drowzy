@@ -39,7 +39,7 @@
     "message": "網站已加入白名單（點擊移除）"
   },
   "activeWontSuspend": {
-    "message": "使用中 – 不會被休眠"
+    "message": "使用中，不會被休眠"
   },
   "loading": {
     "message": "載入中..."
@@ -181,22 +181,19 @@
     "message": "沒有已休眠的分頁可喚醒"
   },
   "pinnedWontSuspend": {
-    "message": "已釘選 — 不會被休眠"
+    "message": "已釘選，不會被休眠"
   },
   "audioWontSuspend": {
-    "message": "正在播放音訊 — 不會被休眠"
+    "message": "正在播放音訊，不會被休眠"
   },
   "whitelistedWontSuspend": {
-    "message": "在白名單中 — 不會被休眠"
+    "message": "在白名單中，不會被休眠"
   },
   "systemPageCantSuspend": {
-    "message": "系統頁面 — 無法休眠"
+    "message": "系統頁面，無法休眠"
   },
   "clickToDismiss": {
     "message": "點擊關閉"
-  },
-  "keepAwakeBtn": {
-    "message": "保持喚醒"
   },
   "suspendTimerHint": {
     "message": "您切換離開的分頁將在這段時間後被掛起。如果您經常長時間後返回分頁,請增加此時間。"
@@ -394,7 +391,7 @@
     "message": "此工作階段中沒有可恢復的分頁。"
   },
   "sessionDefaultName": {
-    "message": "工作階段 – $DATE$",
+    "message": "工作階段 - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "歡迎使用 Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy 透過將不活躍的分頁置於休眠狀態來節省記憶體。您的分頁始終安全 – 我們使用 Chrome 的原生捨棄 API，因此即使您解除安裝 Drowzy，分頁也不會遺失。"
+    "message": "Drowzy 透過將不活躍的分頁置於休眠狀態來節省記憶體。您的分頁始終安全，我們使用 Chrome 的原生捨棄 API，因此即使您解除安裝 Drowzy，分頁也不會遺失。"
   },
   "howItWorks": {
     "message": "運作方式"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "休眠的分頁現在會顯示點擊喚醒提示，歡迎頁面也說明 Drowzy 如何與瀏覽器內建的記憶體節省模式協同運作。"
+  },
+  "keepThisTabAwake": {
+    "message": "保持此分頁喚醒"
+  },
+  "allowSleep": {
+    "message": "允許休眠"
+  },
+  "keptAwakeHint": {
+    "message": "在你關閉此選項或關閉分頁之前，防止該分頁休眠"
+  },
+  "allowSleepHint": {
+    "message": "讓此分頁恢復正常休眠"
+  },
+  "keptAwakeToast": {
+    "message": "此分頁將保持喚醒"
+  },
+  "allowSleepToast": {
+    "message": "此分頁可以再次休眠"
+  },
+  "badgeAwake": {
+    "message": "喚醒中"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "保持喚醒，不會被休眠"
+  },
+  "cantSuspendPinned": {
+    "message": "釘選的分頁受保護。關閉「保護釘選分頁」即可休眠此分頁。"
+  },
+  "cantSuspendAudio": {
+    "message": "正在播放聲音的分頁受保護。關閉「保護音訊分頁」即可休眠此分頁。"
+  },
+  "cantSuspendWhitelisted": {
+    "message": "該網站在你的永不休眠清單中。移除後即可休眠此分頁。"
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "需要另一個開啟的分頁可供切換。Chrome 無法休眠你正在檢視的分頁。"
+  },
+  "openSettingsAction": {
+    "message": "開啟設定"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome 未能休眠此分頁"
+  },
+  "suspendFailedLoading": {
+    "message": "仍在載入，請稍後再試"
+  },
+  "suspendFailedForm": {
+    "message": "未休眠，此分頁有未儲存的輸入"
+  },
+  "bannerNotNow": {
+    "message": "暫不"
+  },
+  "changelog140Title1": {
+    "message": "保持此分頁喚醒"
+  },
+  "changelog140Desc1": {
+    "message": "不必把整個網站加入白名單，就能讓單一分頁保持喚醒。在你按下「允許休眠」或關閉分頁之前，Drowzy 不會讓它休眠。重新啟動瀏覽器後該狀態會清除。"
+  },
+  "changelog140Title2": {
+    "message": "「保護音訊分頁」現在雙向生效"
+  },
+  "changelog140Desc2": {
+    "message": "關閉「保護音訊分頁」後，背景的影片和音樂分頁現在真的可以休眠了。先前即使關閉該選項它們仍會被拒絕。保持開啟則行為不變。"
+  },
+  "changelog140Title3": {
+    "message": "Drowzy 會告訴你分頁為何不休眠"
+  },
+  "changelog140Desc3": {
+    "message": "「休眠此分頁」不再無故消失。當分頁無法休眠時，你會看到原因，以及直達對應設定的捷徑。"
+  },
+  "changelog140Title4": {
+    "message": "真正顯示出來的網站圖示"
+  },
+  "changelog140Desc4": {
+    "message": "分頁圖示現在來自瀏覽器本身的快取，以前只顯示灰色字母的網站會顯示真正的圖示，休眠時也一樣。在目前主題下會看不見的圖示會被調整，讓你仍然看得清楚。"
+  },
+  "ramLifetimeTooltip": {
+    "message": "按 Drowzy 曾休眠過的每個分頁約 150 MB 累加。這是長期累計值，不是目前空閒的記憶體。"
+  },
+  "privacyPermFavicon": {
+    "message": "讀取 Chrome 本機的網站圖示快取，讓分頁清單中的圖示正確顯示。這只是讀取你電腦上已有的快取，不會發出任何網路請求。"
+  },
+  "changelog140Title5": {
+    "message": "更安靜，數字也更可信"
+  },
+  "changelog140Desc5": {
+    "message": "休眠分頁時整個清單不再跳動。本頁和歡迎頁現在會跟隨你在 Drowzy 中選擇的淺色或深色主題。反覆休眠同一個分頁也不會再虛增累計統計。"
   }
 }

@@ -44,7 +44,11 @@ function showSuspendWarning() {
   bannerText.addEventListener('click', function() { if (el.parentNode) el.remove(); });
 
   var keepBtn = document.createElement('button');
-  keepBtn.textContent = chrome.i18n.getMessage('keepAwakeBtn') || 'Keep awake';
+  // "Not now", not "Keep awake": this only defers the one imminent suspend by
+  // bumping the tab's idle timer. The real open-ended hold is "Keep this tab
+  // awake" in the popup, and two controls with the same name doing different
+  // things is exactly the confusion this release is trying to remove.
+  keepBtn.textContent = chrome.i18n.getMessage('bannerNotNow') || 'Not now';
   keepBtn.style.cssText = 'background:#fff;color:#7c3aed;border:none;padding:4px 12px;border-radius:4px;font:600 12px -apple-system,system-ui,sans-serif;cursor:pointer;';
   keepBtn.addEventListener('click', function(e) {
     e.stopPropagation();

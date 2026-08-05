@@ -39,7 +39,7 @@
     "message": "サイトはホワイトリストに登録済み（クリックで解除）"
   },
   "activeWontSuspend": {
-    "message": "アクティブ – サスペンドされません"
+    "message": "アクティブ、サスペンドされません"
   },
   "loading": {
     "message": "読み込み中..."
@@ -181,22 +181,19 @@
     "message": "復帰できる休止中のタブがありません"
   },
   "pinnedWontSuspend": {
-    "message": "ピン留め済み — 休止されません"
+    "message": "ピン留め済み、休止されません"
   },
   "audioWontSuspend": {
-    "message": "音声再生中 — 休止されません"
+    "message": "音声再生中、休止されません"
   },
   "whitelistedWontSuspend": {
-    "message": "ホワイトリスト登録済み — 休止されません"
+    "message": "ホワイトリスト登録済み、休止されません"
   },
   "systemPageCantSuspend": {
-    "message": "システムページ — 休止できません"
+    "message": "システムページ、休止できません"
   },
   "clickToDismiss": {
     "message": "クリックで閉じる"
-  },
-  "keepAwakeBtn": {
-    "message": "起こしておく"
   },
   "suspendTimerHint": {
     "message": "切り替えたタブはこの時間が経過すると停止されます。長時間経ってからタブに戻る場合は時間を延ばしてください。"
@@ -394,7 +391,7 @@
     "message": "このセッションに復元可能なタブがありません。"
   },
   "sessionDefaultName": {
-    "message": "セッション – $DATE$",
+    "message": "セッション - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "休眠中のタブに「クリックして復帰」のヒントが表示されるようになり、ようこそページにはブラウザ内蔵のメモリセーバーと Drowzy がどう共存するかの説明を追加しました。"
+  },
+  "keepThisTabAwake": {
+    "message": "このタブをスリープさせない"
+  },
+  "allowSleep": {
+    "message": "スリープを許可"
+  },
+  "keptAwakeHint": {
+    "message": "オフにするかタブを閉じるまで、このタブをスリープさせません"
+  },
+  "allowSleepHint": {
+    "message": "このタブを通常どおりスリープさせます"
+  },
+  "keptAwakeToast": {
+    "message": "このタブはスリープしません"
+  },
+  "allowSleepToast": {
+    "message": "このタブはまたスリープできます"
+  },
+  "badgeAwake": {
+    "message": "起動中"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "スリープさせない設定です"
+  },
+  "cantSuspendPinned": {
+    "message": "固定タブは保護されています。「固定タブを保護」をオフにするとスリープできます。"
+  },
+  "cantSuspendAudio": {
+    "message": "音声を再生中のタブは保護されています。「音声タブを保護」をオフにするとスリープできます。"
+  },
+  "cantSuspendWhitelisted": {
+    "message": "このサイトはスリープ除外リストに入っています。削除するとスリープできます。"
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "先に切り替える別のタブが必要です。Chrome は表示中のタブをスリープできません。"
+  },
+  "openSettingsAction": {
+    "message": "設定を開く"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome がこのタブをスリープできませんでした"
+  },
+  "suspendFailedLoading": {
+    "message": "読み込み中です。少し待ってからもう一度お試しください"
+  },
+  "suspendFailedForm": {
+    "message": "未保存の入力があるため休止しませんでした"
+  },
+  "bannerNotNow": {
+    "message": "今はしない"
+  },
+  "changelog140Title1": {
+    "message": "このタブをスリープさせない"
+  },
+  "changelog140Desc1": {
+    "message": "サイト全体を除外リストに入れずに、1 つのタブだけを起動したままにできます。「スリープを許可」を押すかタブを閉じるまで Drowzy はスリープさせません。ブラウザを再起動すると解除されます。"
+  },
+  "changelog140Title2": {
+    "message": "「音声タブを保護」が両方向で機能するように"
+  },
+  "changelog140Desc2": {
+    "message": "「音声タブを保護」をオフにすると、背面の動画や音楽のタブが実際にスリープするようになりました。以前はオフにしても拒否されていました。オンのままなら動作は変わりません。"
+  },
+  "changelog140Title3": {
+    "message": "タブがスリープしない理由を表示"
+  },
+  "changelog140Desc3": {
+    "message": "「このタブをスリープ」が説明なく消えることはなくなりました。スリープできない場合は理由と、それを変える設定への近道が表示されます。"
+  },
+  "changelog140Title4": {
+    "message": "サイトのアイコンがちゃんと出るように"
+  },
+  "changelog140Desc4": {
+    "message": "タブのアイコンをブラウザのキャッシュから取得するようになりました。これまで灰色の文字だけだったサイトも、スリープ中も含めて本来のアイコンが表示されます。今のテーマで見えなくなるアイコンは、見えるように調整します。"
+  },
+  "ramLifetimeTooltip": {
+    "message": "Drowzy がこれまでにスリープさせたタブ 1 つあたり約 150 MB として合計しています。時間をかけた累計であり、今空いているメモリではありません。"
+  },
+  "privacyPermFavicon": {
+    "message": "タブ一覧でサイトのアイコンを正しく表示するため、Chrome のローカルなファビコンキャッシュを読み取ります。すでにお使いの端末にあるキャッシュを読むだけで、ネットワーク通信は行いません。"
+  },
+  "changelog140Title5": {
+    "message": "動きは控えめに、数字は正確に"
+  },
+  "changelog140Desc5": {
+    "message": "スリープさせてもリスト全体が跳ねなくなりました。このページとようこそページも、Drowzy で選んだライト／ダークのテーマに従います。また、同じタブを何度もスリープさせても累計の統計が水増しされなくなりました。"
   }
 }

@@ -12,6 +12,10 @@ var _tabListSig = '';
 var _sessionListSig = '';
 var _renderedSessionIds = null;
 var _pollTimer = null;
+// loadAll restores scrollTop after every render so the 5s poll doesn't jump
+// the list under you. That fights any deliberate programmatic scroll, so
+// "Open settings" sets a short window during which the restore is skipped.
+var _scrollLockUntil = 0;
 
 function t(key, subs) {
   var val = chrome.i18n.getMessage(key, subs);
@@ -24,6 +28,7 @@ var BADGES = {
   'Pinned': { icon: 'pin', type: 'pinned', labelKey: 'badgePinned' },
   'Audio': { icon: 'volume2', type: 'audio', labelKey: 'badgeAudio' },
   'Whitelisted': { icon: 'shield', type: 'starred', labelKey: 'badgeWhitelisted' },
+  'Kept awake': { icon: 'coffee', type: 'awake', labelKey: 'badgeAwake' },
 };
 
 async function init() {
@@ -119,6 +124,9 @@ function toggleTheme() {
   document.documentElement.setAttribute('data-theme', next);
   chrome.storage.local.set({ theme: next });
   updateThemeIcon();
+  // which favicons blend depends on the panel background, so the verdicts
+  // have to be recomputed against the theme we just switched to
+  retuneAllFavicons();
 
   var btn = document.getElementById('themeToggle');
   if (!btn) return;
@@ -169,7 +177,9 @@ async function loadAll() {
     // chrome://extensions/shortcuts via the Customize link without closing
     // the popup. Cheap call; runs on the same 5s cadence as everything else.
     renderShortcutsStatus();
-    if (scrollEl) scrollEl.scrollTop = savedScroll;
+    // Skip the restore while a deliberate scroll is in flight, otherwise a
+    // poll landing mid-animation snaps the user back where they started.
+    if (scrollEl && Date.now() > _scrollLockUntil) scrollEl.scrollTop = savedScroll;
     _loaded = true;
   } catch (e) {
     var list = document.getElementById('tabList');
@@ -250,7 +260,7 @@ function tabListSignature(tabs) {
   for (var i = 0; i < tabs.length; i++) {
     // Don't shadow the outer `t()` i18n helper
     var tab = tabs[i];
-    parts.push(tab.id + '|' + tab.status + '|' + (tab.title || '') + '|' + (tab.timeLeft == null ? '' : tab.timeLeft) + '|' + (tab.protectReason || '') + '|' + (tab.favIconUrl || ''));
+    parts.push(tab.id + '|' + tab.status + '|' + (tab.title || '') + '|' + (tab.timeLeft == null ? '' : tab.timeLeft) + '|' + (tab.protectReason || '') + '|' + (tab.favIconUrl || '') + '|' + (tab.keptAwake ? 1 : 0));
   }
   return parts.join('\u0001');
 }
@@ -300,7 +310,11 @@ function renderTabList(tabs) {
       el.title = t('clickToWake');
       title.title = tab.title + '\n' + t('clickToWake');
     } else if (tab.status === 'protected' || tab.status === 'active') {
-      var info = BADGES[tab.protectReason] || { icon: 'shield', type: 'system', labelKey: 'badgeProtected' };
+      // a held tab reports status 'active' when it's the one you're looking at,
+      // so prefer the hold over the reason - otherwise the row says "Active"
+      // while the panel above it says "Kept awake"
+      var reason = tab.keptAwake ? 'Kept awake' : tab.protectReason;
+      var info = BADGES[reason] || { icon: 'shield', type: 'system', labelKey: 'badgeProtected' };
       meta.innerHTML = '<span class="badge badge-' + info.type + '" title="' + esc(t(info.labelKey)) + '">' + icon(info.icon, 11) + ' ' + esc(t(info.labelKey)) + '</span>';
     } else if (tab.status === 'idle' && tab.timeLeft !== null) {
       var timeText = tab.timeLeft > 0 ? esc(String(tab.timeLeft)) + 'm' : esc(t('suspendingSoon'));
@@ -315,7 +329,10 @@ function renderTabList(tabs) {
       (function(tid) {
         suspendBtn.addEventListener('click', async function(e) {
           e.stopPropagation();
-          await msg({ action: 'suspendTab', tabId: tid });
+          var res = await msg({ action: 'suspendTab', tabId: tid });
+          if (!res || !res.success) {
+            showToast(res && res.reasonKey ? t(res.reasonKey) : t('suspendFailedGeneric'));
+          }
           await loadAll();
         });
       })(tab.id);
@@ -354,24 +371,172 @@ function renderTabList(tabs) {
   }
 }
 
-function buildFavicon(tab) {
-  if (tab.favIconUrl && !tab.favIconUrl.startsWith('chrome://')) {
-    var img = document.createElement('img');
-    img.className = 'favicon';
-    img.src = tab.favIconUrl;
-    img.alt = '';
-    img.onerror = function() { img.replaceWith(faviconFallback(tab.url)); };
-    return img;
-  }
-  return faviconFallback(tab.url);
+// Chrome's own favicon cache, via the "favicon" permission. This is the only
+// reliable source: loading a site's favicon URL directly from an extension
+// page is a cross-origin request with no cookies, and anything behind
+// Cloudflare (claude.ai among many) answers it with a challenge instead of an
+// image, so the icon silently fails and we fall back to a letter. Reading
+// Chrome's cache makes no network request at all and works for sites that
+// refuse us, for sleeping tabs, and for extension and system pages.
+function faviconUrl(pageUrl, size) {
+  if (!pageUrl) return '';
+  try {
+    var u = new URL(chrome.runtime.getURL('/_favicon/'));
+    u.searchParams.set('pageUrl', pageUrl);
+    u.searchParams.set('size', String(size || 32));
+    return u.toString();
+  } catch { return ''; }
 }
+
+// Favicons are images, so they cannot follow the theme the way our own icons
+// do. A black glyph vanishes on the dark panel and a white one vanishes on
+// the light panel. Rather than putting a plate behind every icon - which is
+// heavy-handed and looks worse than the problem - measure each icon once and
+// outline only the ones that would actually disappear.
+//
+// Readback works because _favicon/ is served from our own extension origin,
+// so the canvas is not tainted. The https fallback path IS cross-origin and
+// throws on getImageData; that is caught and the icon is left alone.
+var _contrastCache = new Map();   // src -> boolean (needs an outline)
+var _contrastCanvas = null;
+
+// Returns 'none', 'invert' or 'outline'.
+//
+// Plenty of sites ship a monochrome mark and publish both a light and a dark
+// version of it (GitHub is the obvious one). Chrome caches whichever one it
+// saw, so we get a single fixed image that is right for one theme and
+// invisible in the other. For a monochrome glyph on a transparent background
+// we can just produce the other version ourselves: inverting near-black gives
+// near-white and vice versa, which is exactly what the site's own alternate
+// asset looks like. Only icons with actual colour fall back to an outline,
+// because inverting a coloured logo would change its hue and look wrong.
+function faviconTreatment(img) {
+  if (!_contrastCanvas) {
+    _contrastCanvas = document.createElement('canvas');
+    _contrastCanvas.width = _contrastCanvas.height = 16;
+  }
+  var ctx = _contrastCanvas.getContext('2d', { willReadFrequently: true });
+  ctx.clearRect(0, 0, 16, 16);
+  ctx.drawImage(img, 0, 0, 16, 16);
+  var px = ctx.getImageData(0, 0, 16, 16).data;
+
+  var sum = 0, chroma = 0, count = 0;
+  for (var i = 0; i < px.length; i += 4) {
+    if (px[i + 3] < 40) continue;               // effectively transparent
+    var r = px[i], g = px[i + 1], b = px[i + 2];
+    // Rec. 601 luma, good enough and cheap
+    sum += (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    chroma += (Math.max(r, g, b) - Math.min(r, g, b)) / 255;
+    count++;
+  }
+  if (!count) return 'none';                    // nothing to render either way
+
+  var avg = sum / count;
+  var light = document.documentElement.getAttribute('data-theme') === 'light';
+  var bg = light ? 0.98 : 0.06;
+  // 0.30 keeps mid-tone and colourful icons untouched; only near-white on
+  // light and near-black on dark cross the line
+  if (Math.abs(avg - bg) >= 0.30) return 'none';
+
+  // 0.08, not something looser: a very dark navy like #0d1b2a still carries
+  // ~0.11 of chroma, and inverting it produces a warm cream - a visible brand
+  // colour shift. Anything with even that much hue takes the outline instead.
+  var grey = (chroma / count) < 0.08;
+  var glyph = (count / 256) <= 0.85;            // sits on transparency, not a
+                                                // solid tile we would flip
+  return (grey && glyph) ? 'invert' : 'outline';
+}
+
+function setFaviconTreatment(img, how) {
+  img.classList.toggle('needs-contrast', how === 'outline');
+  img.classList.toggle('needs-invert', how === 'invert');
+}
+
+function tuneFaviconContrast(img) {
+  var src = img.getAttribute('src') || '';
+  if (!src) return;
+  if (_contrastCache.has(src)) {
+    setFaviconTreatment(img, _contrastCache.get(src));
+    return;
+  }
+  var apply = function() {
+    var how;
+    try { how = faviconTreatment(img); }
+    catch { return; }                            // cross-origin, cannot measure
+    _contrastCache.set(src, how);
+    setFaviconTreatment(img, how);
+  };
+  if (img.complete && img.naturalWidth > 0) apply();
+  else img.addEventListener('load', apply, { once: true });
+}
+
+// Theme changes flip which icons blend, and the verdict is cached per src, so
+// both the cache and every icon on screen have to be re-evaluated.
+function retuneAllFavicons() {
+  _contrastCache.clear();
+  // every favicon in the UI carries .favicon, so this cannot miss a surface
+  var imgs = document.querySelectorAll('img.favicon');
+  for (var i = 0; i < imgs.length; i++) tuneFaviconContrast(imgs[i]);
+}
+
+function buildFavicon(tab) {
+  // 32px for a 16px slot so it stays crisp on high-DPI screens
+  var primary = faviconUrl(tab.url, 32);
+  var reported = (tab.favIconUrl && tab.favIconUrl.indexOf('chrome://') !== 0) ? tab.favIconUrl : '';
+  var src = primary || reported;
+  if (!src) return faviconFallback(tab.url);
+
+  var img = document.createElement('img');
+  img.className = 'favicon';
+  img.src = src;
+  img.alt = '';
+  img.onerror = function() {
+    // Chrome had nothing cached: try the icon the page itself reported, then
+    // give up and draw a typed placeholder rather than a broken image.
+    if (reported && img.src !== reported) {
+      img.src = reported;
+      img.onerror = function() { img.replaceWith(faviconFallback(tab.url)); };
+      img.onload = function() { tuneFaviconContrast(img); };
+      return;
+    }
+    img.replaceWith(faviconFallback(tab.url));
+  };
+  tuneFaviconContrast(img);
+  return img;
+}
+
+// Pages Chrome never gives us a usable favicon for. A first-letter circle is
+// meaningless for these: an extension page yields a letter from its random id,
+// and a chrome:// page yields whatever the internal hostname starts with.
+var FALLBACK_ICONS = [
+  [/^chrome-extension:|^moz-extension:/, 'puzzle'],
+  [/^chrome:|^edge:|^about:|^brave:/,    'lock'],
+  [/^file:/,                             'fileText'],
+  [/^view-source:/,                      'fileText'],
+  [/^data:|^blob:/,                      'globe']
+];
 
 function faviconFallback(url) {
   var span = document.createElement('span');
   span.className = 'favicon-fallback';
+  var u = url || '';
+  for (var i = 0; i < FALLBACK_ICONS.length; i++) {
+    if (FALLBACK_ICONS[i][0].test(u)) {
+      span.classList.add('favicon-fallback-icon');
+      span.innerHTML = icon(FALLBACK_ICONS[i][1], 11);
+      return span;
+    }
+  }
   try {
-    span.textContent = new URL(url).hostname.replace(/^www\./, '').charAt(0).toUpperCase();
-  } catch { span.textContent = '?'; }
+    var host = new URL(u).hostname.replace(/^www\./, '');
+    if (host) {
+      span.textContent = host.charAt(0).toUpperCase();
+      return span;
+    }
+  } catch {}
+  // no host to letter it with (blank tab, malformed url) - a globe beats "?"
+  span.classList.add('favicon-fallback-icon');
+  span.innerHTML = icon('globe', 11);
   return span;
 }
 
@@ -415,45 +580,119 @@ function renderCurrentTab(tabList, settings) {
   // Pick the status line based on why this tab is/isn't suspendable. Active
   // is the fallback; the more specific reasons take priority since a pinned
   // active tab is "active AND pinned" - the pin is the actually informative bit.
+  // Kept awake outranks everything except a system page: it's the one the user
+  // set themselves, and it's the one with a control sitting right below it.
+  var keptAwake = !!active.keptAwake;
   var statusKey = 'activeWontSuspend';
   if (isInternal) statusKey = 'systemPageCantSuspend';
+  else if (keptAwake) statusKey = 'keptAwakeWontSuspend';
   else if (settings.protectPinned && active.pinned) statusKey = 'pinnedWontSuspend';
   else if (settings.protectAudio && active.audible) statusKey = 'audioWontSuspend';
   else if (whitelisted) statusKey = 'whitelistedWontSuspend';
 
-  // "Suspend this tab" only makes sense when the active tab is itself
-  // suspendable (a normal http(s) page that isn't pinned/audio/whitelisted - 
-  // i.e. statusKey is the plain 'activeWontSuspend') AND there's another awake,
-  // non-system tab to switch to first, since Chrome can't discard the active
-  // tab. Mirrors handleSuspendCurrent's candidate filter (not discarded, not
-  // an internal page) so the button never offers an action that would no-op.
-  // Also gate on !audible directly: suspendTab refuses an audible tab even when
-  // protectAudio is off (statusKey would still be 'activeWontSuspend' then), so
-  // without this the button could switch away yet fail to suspend.
+  // Chrome cannot discard the tab you are looking at, so "Suspend this tab"
+  // switches to a neighbour first. Mirrors handleSuspendCurrent's candidate
+  // filter (not discarded, not an internal page) so the button never claims an
+  // action the background would refuse. A held tab still counts as a target:
+  // we only activate it, we do not sleep it.
   var hasSwitchTarget = (tabList || []).some(function(tt) {
     return tt.id !== active.id && tt.status !== 'suspended' && tt.protectReason !== 'System page';
   });
-  var showSuspendCurrent = (statusKey === 'activeWontSuspend') && !active.audible && hasSwitchTarget;
+  // Show the button whenever the control belongs here and explain when it
+  // cannot act, instead of vanishing. Two separate uninstall notes said Drowzy
+  // had no suspend button, on tabs where we had silently hidden it. It is
+  // hidden in exactly two cases: a system page (nothing to suspend, ever) and
+  // a held tab, where "Allow sleep" takes its place so the two can never both
+  // be on screen contradicting each other.
+  var showSuspendCurrent = !isInternal && !keptAwake;
+  var suspendBlockedKey = null;
+  if (showSuspendCurrent) {
+    if (statusKey === 'pinnedWontSuspend') suspendBlockedKey = 'cantSuspendPinned';
+    else if (statusKey === 'audioWontSuspend') suspendBlockedKey = 'cantSuspendAudio';
+    else if (statusKey === 'whitelistedWontSuspend') suspendBlockedKey = 'cantSuspendWhitelisted';
+    else if (!hasSwitchTarget) suspendBlockedKey = 'cantSuspendNoOtherTab';
+  }
+
+  // Inline fix-it action, shown only when the blocker is something the user
+  // can actually change from here. Whitelist is deliberately excluded: the
+  // "Whitelisted" button directly below is already that control.
+  var fixKey = null;
+  if (statusKey === 'pinnedWontSuspend') fixKey = 'togglePinned';
+  else if (statusKey === 'audioWontSuspend') fixKey = 'toggleAudio';
 
   // Signature-dedupe: the polling loop runs every 5s; skip DOM writes when
   // nothing changed. Prevents the favicon/domain flicker from re-setting
   // img.src and retriggering onerror on every poll.
   var section = document.getElementById('currentTabSection');
-  var sig = (active.url || '') + '|' + (active.favIconUrl || '') + '|' + domain + '|' + (whitelisted ? 1 : 0) + '|' + (isInternal ? 1 : 0) + '|' + statusKey + '|' + (showSuspendCurrent ? 1 : 0);
+  // active.id leads the signature: the Keep awake button stores a tab id in a
+  // dataset, and two tabs on the same URL produce an otherwise identical
+  // signature - without the id the dedupe would skip the re-render and leave
+  // the button pointed at the tab the user just switched away from.
+  var sig = active.id + '|' + (active.url || '') + '|' + (active.favIconUrl || '') + '|' + domain + '|' + (whitelisted ? 1 : 0) + '|' + (isInternal ? 1 : 0) + '|' + statusKey + '|' + (showSuspendCurrent ? 1 : 0) + '|' + (keptAwake ? 1 : 0) + '|' + (suspendBlockedKey || '') + '|' + (fixKey || '');
   if (section && section.dataset.sig === sig) return;
   if (section) section.dataset.sig = sig;
 
   var suspendCurrentBtn = document.getElementById('btnSuspendCurrent');
-  if (suspendCurrentBtn) suspendCurrentBtn.style.display = showSuspendCurrent ? '' : 'none';
+  if (suspendCurrentBtn) {
+    suspendCurrentBtn.style.display = showSuspendCurrent ? '' : 'none';
+    suspendCurrentBtn.disabled = !!suspendBlockedKey;
+    suspendCurrentBtn.title = suspendBlockedKey ? t(suspendBlockedKey) : t('suspendThisTabHint');
+  }
+
+  var fixBtn = document.getElementById('btnCurrentTabFix');
+  if (fixBtn) {
+    fixBtn.style.display = fixKey ? '' : 'none';
+    fixBtn.textContent = fixKey ? t('openSettingsAction') : '';
+    fixBtn.dataset.target = fixKey || '';
+  }
+
+  // Keep awake / Allow sleep. Hidden on system pages, which can never be
+  // discarded, so a hold there would be a control that does nothing. While a
+  // hold is on, this button IS the suspend control's replacement - statusKey
+  // is 'keptAwakeWontSuspend' by then, so showSuspendCurrent is already false
+  // and the two buttons can never both be visible.
+  var keepBtn = document.getElementById('btnKeepAwake');
+  if (keepBtn) {
+    keepBtn.style.display = isInternal ? 'none' : '';
+    var keepText = keepBtn.querySelector('.btn-text');
+    var keepIcon = keepBtn.querySelector('.btn-icon');
+    if (keptAwake) {
+      if (keepText) keepText.textContent = t('allowSleep');
+      if (keepIcon) keepIcon.innerHTML = icon('moon', 14);
+      keepBtn.title = t('allowSleepHint');
+      keepBtn.classList.add('is-kept-awake');
+    } else {
+      if (keepText) keepText.textContent = t('keepThisTabAwake');
+      if (keepIcon) keepIcon.innerHTML = icon('coffee', 14);
+      keepBtn.title = t('keptAwakeHint');
+      keepBtn.classList.remove('is-kept-awake');
+    }
+    keepBtn.dataset.keptAwake = keptAwake ? '1' : '0';
+    keepBtn.dataset.tabId = String(active.id);
+  }
 
   document.getElementById('currentTabDomain').textContent = domain;
 
   var fav = document.getElementById('currentTabFavicon');
-  if (active.favIconUrl) {
-    if (fav.getAttribute('src') !== active.favIconUrl) {
+  // same Chrome-cache source as the tab list, falling back to whatever the
+  // page reported if Chrome has nothing for this URL
+  var favSrc = faviconUrl(active.url, 32) || active.favIconUrl;
+  if (favSrc) {
+    if (fav.getAttribute('src') !== favSrc) {
       fav.style.display = '';
-      fav.onerror = function() { fav.style.display = 'none'; };
-      fav.src = active.favIconUrl;
+      fav.onerror = function() {
+        if (active.favIconUrl && fav.src !== active.favIconUrl) {
+          fav.onerror = function() { fav.style.display = 'none'; };
+          fav.src = active.favIconUrl;
+          // the fallback image needs measuring too, or a mark that blends
+          // slips through whenever Chrome's cache misses
+          tuneFaviconContrast(fav);
+          return;
+        }
+        fav.style.display = 'none';
+      };
+      fav.src = favSrc;
+      tuneFaviconContrast(fav);
     } else if (fav.style.display === 'none' && fav.complete && fav.naturalWidth > 0) {
       fav.style.display = '';
     }
@@ -524,13 +763,21 @@ function renderSessions(sessions) {
     stack.className = 'session-favicon-stack';
     var icons = (s.tabs || []).slice(0, 4);
     for (var j = 0; j < icons.length; j++) {
-      if (icons[j].favIconUrl) {
+      // sessions store the page URL, so Chrome's cache can render an icon even
+      // for a session saved months ago whose stored favicon URL has rotted
+      var siSrc = faviconUrl(icons[j].url, 32) || icons[j].favIconUrl;
+      if (siSrc) {
         var fi = document.createElement('img');
-        fi.src = icons[j].favIconUrl;
+        // shares the .favicon class so one CSS rule and one retune selector
+        // cover every favicon in the UI; the stack's own rule still wins on
+        // size because it is the more specific selector
+        fi.className = 'favicon';
+        fi.src = siSrc;
         fi.alt = '';
         fi.width = 16;
         fi.height = 16;
         fi.onerror = function() { this.style.display = 'none'; };
+        tuneFaviconContrast(fi);
         stack.appendChild(fi);
       }
     }
@@ -624,8 +871,8 @@ function renderSessions(sessions) {
 
 function renderLifetimeStats(stats) {
   if (!stats) return;
-  animateStat(document.getElementById('statToday'), stats.totalTabsSuspendedToday || 0);
-  animateStat(document.getElementById('statAllTime'), stats.totalTabsSuspended || 0);
+  animateStat(document.getElementById('statToday'), fmtCount(stats.totalTabsSuspendedToday || 0));
+  animateStat(document.getElementById('statAllTime'), fmtCount(stats.totalTabsSuspended || 0));
 
   var ram = (stats.totalTabsSuspended || 0) * MB_PER_TAB;
   animateStat(document.getElementById('statRamAllTime'), ram ? fmtRam(ram) : '\u2014');
@@ -761,10 +1008,82 @@ function attachListeners() {
       var res = await msg({ action: 'suspendCurrent' });
       if (res && res.success) {
         showToast(t('suspendedToast', [String(1), fmtRam(res.mbFreed || MB_PER_TAB)]));
+      } else {
+        // never fail silently - "I clicked it and nothing happened" was a
+        // recurring uninstall note
+        showToast(res && res.reasonKey ? t(res.reasonKey) : t('suspendFailedGeneric'));
       }
     } finally {
       this.disabled = false;
     }
+    await loadAll();
+  });
+
+  // "Open settings" next to a protection reason: expand the Settings section,
+  // scroll the relevant toggle into view and flash it, so the user lands on
+  // the exact switch instead of a wall of options they have to scan.
+  document.getElementById('btnCurrentTabFix').addEventListener('click', function() {
+    var targetId = this.dataset.target;
+    if (!targetId) return;
+    var body = document.getElementById('settingsBody');
+    var toggle = document.getElementById('settingsToggle');
+    if (!body) return;
+    var justOpened = !body.classList.contains('open');
+    if (justOpened) {
+      body.classList.add('open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'true');
+      try { localStorage.setItem('drowzy_section_settingsToggle', '1'); } catch {}
+    }
+    var target = document.getElementById(targetId);
+    var row = target && target.closest ? target.closest('.setting-row') : null;
+    if (!row) return;
+
+    function reveal() {
+      // cover the smooth-scroll animation plus a margin, so a poll that lands
+      // mid-flight cannot restore the pre-click scroll position
+      _scrollLockUntil = Date.now() + 900;
+      try { row.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch { row.scrollIntoView(); }
+      row.classList.remove('setting-row-flash');
+      void row.offsetWidth;
+      row.classList.add('setting-row-flash');
+      setTimeout(function() { row.classList.remove('setting-row-flash'); }, 1600);
+    }
+
+    // .section-body opens on a 220ms grid-template-rows transition. Scrolling
+    // before it finishes measures a row that is still collapsed and lands in
+    // the wrong place, which defeats the point of the shortcut. Wait for the
+    // transition when we opened it; a timeout backs up transitionend, which
+    // does not fire under prefers-reduced-motion (transitions are 1ms there)
+    // and would otherwise leave the scroll hanging.
+    if (!justOpened) { requestAnimationFrame(reveal); return; }
+    var done = false;
+    function finish(e) {
+      if (done || (e && e.target !== body)) return;
+      done = true;
+      body.removeEventListener('transitionend', finish);
+      reveal();
+    }
+    body.addEventListener('transitionend', finish);
+    setTimeout(finish, 300);
+  });
+
+  document.getElementById('btnKeepAwake').addEventListener('click', async function() {
+    if (this.disabled) return;
+    var turningOn = this.dataset.keptAwake !== '1';
+    var tabId = Number(this.dataset.tabId);
+    this.disabled = true;
+    try {
+      var res = await msg({ action: 'setKeepAwake', tabId: isNaN(tabId) ? undefined : tabId, on: turningOn });
+      if (res && res.success) {
+        showToast(t(turningOn ? 'keptAwakeToast' : 'allowSleepToast'));
+      }
+    } finally {
+      this.disabled = false;
+    }
+    // force the current-tab block to re-render: the signature dedupe would
+    // otherwise skip it if the poll lands before the background write settles
+    var section = document.getElementById('currentTabSection');
+    if (section) section.dataset.sig = '';
     await loadAll();
   });
 
@@ -1169,12 +1488,31 @@ function renderShortcutsStatus() {
   });
 }
 
+function trimZero(s) {
+  return s.endsWith('.0') ? s.slice(0, -2) : s;
+}
+
 function fmtRam(mb) {
   if (mb < 1024) return mb + ' MB';
   var gb = mb / 1024;
   // Drop trailing .0 - "2 GB" reads cleaner than "2.0 GB" for whole values.
-  var rounded = gb.toFixed(1);
-  return (rounded.endsWith('.0') ? rounded.slice(0, -2) : rounded) + ' GB';
+  if (gb < 1024) return trimZero(gb.toFixed(1)) + ' GB';
+  // A long-running install genuinely reaches terabytes of cumulative total,
+  // and four-digit GB overflows the stat card.
+  return trimZero((gb / 1024).toFixed(1)) + ' TB';
+}
+
+// Counters are unbounded over an install's lifetime, so past a few thousand
+// they stop fitting the card. Compact them rather than letting the layout
+// break or the digits shrink to nothing.
+function fmtCount(n) {
+  n = Number(n) || 0;
+  if (n < 10000) return String(n);
+  if (n < 100000) return trimZero((n / 1000).toFixed(1)) + 'k';
+  // 999500 rather than 1000000: rounding 999999 to the nearest thousand would
+  // otherwise print "1000k" instead of "1M"
+  if (n < 999500) return Math.round(n / 1000) + 'k';
+  return trimZero((n / 1000000).toFixed(1)) + 'M';
 }
 
 function relativeTime(ts) {

@@ -39,7 +39,7 @@
     "message": "Site staat op de witte lijst (klik om te verwijderen)"
   },
   "activeWontSuspend": {
-    "message": "Actief – wordt niet opgeschort"
+    "message": "Actief - wordt niet opgeschort"
   },
   "loading": {
     "message": "Laden..."
@@ -181,22 +181,19 @@
     "message": "Geen opgeschorte tabbladen om te wekken"
   },
   "pinnedWontSuspend": {
-    "message": "Vastgezet — wordt niet opgeschort"
+    "message": "Vastgezet - wordt niet opgeschort"
   },
   "audioWontSuspend": {
-    "message": "Audio speelt — wordt niet opgeschort"
+    "message": "Audio speelt - wordt niet opgeschort"
   },
   "whitelistedWontSuspend": {
-    "message": "Op witte lijst — wordt niet opgeschort"
+    "message": "Op witte lijst - wordt niet opgeschort"
   },
   "systemPageCantSuspend": {
-    "message": "Systeempagina — kan niet worden opgeschort"
+    "message": "Systeempagina - kan niet worden opgeschort"
   },
   "clickToDismiss": {
     "message": "Klik om te sluiten"
-  },
-  "keepAwakeBtn": {
-    "message": "Wakker houden"
   },
   "suspendTimerHint": {
     "message": "Tabbladen die je hebt verlaten worden na deze tijd opgeschort. Verhoog dit als je na lange pauzes terugkomt naar tabbladen."
@@ -394,7 +391,7 @@
     "message": "Geen herstelbare tabbladen in deze sessie."
   },
   "sessionDefaultName": {
-    "message": "Sessie – $DATE$",
+    "message": "Sessie - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Welkom bij Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy bespaart geheugen door inactieve tabbladen in slaapstand te zetten. Je tabbladen zijn altijd veilig – we gebruiken Chrome's native discard-API, dus ze blijven behouden, zelfs als je Drowzy verwijdert."
+    "message": "Drowzy bespaart geheugen door inactieve tabbladen in slaapstand te zetten. Je tabbladen zijn altijd veilig - we gebruiken Chrome's native discard-API, dus ze blijven behouden, zelfs als je Drowzy verwijdert."
   },
   "howItWorks": {
     "message": "Hoe het werkt"
@@ -534,7 +531,7 @@
     "message": "Omdat niets uw browser verlaat, is er geen dashboard, geen account en geen manier waarop wij kunnen zien wat u met Drowzy hebt gedaan. Als u Drowzy verwijdert, biedt Chrome u de mogelijkheid om optionele feedback (reden voor verwijdering, browser, OS) te sturen via een aparte webpagina; die inzending is expliciet en gaat naar een anoniem formulier. U kunt het overslaan door het tabblad te sluiten."
   },
   "privacyFooterText": {
-    "message": "Drowzy is open source."
+    "message": "Drowzy is opensource."
   },
   "privacyFooterLink": {
     "message": "Bekijk de code op GitHub"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Slapende tabbladen tonen nu een hint klik om te activeren, en de welkomstpagina legt uit hoe Drowzy samenwerkt met de ingebouwde geheugenbesparing van je browser."
+  },
+  "keepThisTabAwake": {
+    "message": "Dit tabblad wakker houden"
+  },
+  "allowSleep": {
+    "message": "Slapen toestaan"
+  },
+  "keptAwakeHint": {
+    "message": "Voorkomt dat dit tabblad gaat slapen totdat je het uitschakelt of het tabblad sluit"
+  },
+  "allowSleepHint": {
+    "message": "Dit tabblad weer normaal laten slapen"
+  },
+  "keptAwakeToast": {
+    "message": "Dit tabblad blijft wakker"
+  },
+  "allowSleepToast": {
+    "message": "Dit tabblad mag weer slapen"
+  },
+  "badgeAwake": {
+    "message": "Wakker"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Wakker gehouden - wordt niet geslapen"
+  },
+  "cantSuspendPinned": {
+    "message": "Vastgezette tabbladen zijn beschermd. Zet \"Vastgezette tabbladen beschermen\" uit om dit tabblad te laten slapen."
+  },
+  "cantSuspendAudio": {
+    "message": "Tabbladen met geluid zijn beschermd. Zet \"Tabbladen met geluid beschermen\" uit om dit tabblad te laten slapen."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Deze site staat op je nooit-slapen-lijst. Verwijder hem om dit tabblad te laten slapen."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Er moet een ander tabblad open zijn om naartoe te schakelen. Chrome kan het tabblad dat je bekijkt niet laten slapen."
+  },
+  "openSettingsAction": {
+    "message": "Instellingen openen"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome wilde dit tabblad niet laten slapen"
+  },
+  "suspendFailedLoading": {
+    "message": "Nog aan het laden - probeer het zo nog eens"
+  },
+  "suspendFailedForm": {
+    "message": "Niet geslapen - dit tabblad heeft niet-opgeslagen invoer"
+  },
+  "bannerNotNow": {
+    "message": "Niet nu"
+  },
+  "changelog140Title1": {
+    "message": "Dit tabblad wakker houden"
+  },
+  "changelog140Desc1": {
+    "message": "Houd één tabblad wakker zonder de hele site op de witte lijst te zetten. Drowzy laat het niet slapen totdat je op \"Slapen toestaan\" drukt of het tabblad sluit. Bij het herstarten van je browser vervalt het."
+  },
+  "changelog140Title2": {
+    "message": "\"Tabbladen met geluid beschermen\" werkt nu beide kanten op"
+  },
+  "changelog140Desc2": {
+    "message": "Als je \"Tabbladen met geluid beschermen\" uitzet, mogen video- en muziektabbladen op de achtergrond nu echt slapen. Eerder werden ze zelfs met de instelling uit geweigerd. Met de instelling aan verandert er niets."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy vertelt je waarom een tabblad niet slaapt"
+  },
+  "changelog140Desc3": {
+    "message": "\"Dit tabblad laten slapen\" verdwijnt niet meer zonder uitleg. Als een tabblad niet kan slapen, krijg je de reden en een snelkoppeling naar de instelling die dat zou veranderen."
+  },
+  "changelog140Title4": {
+    "message": "Site-iconen die echt verschijnen"
+  },
+  "changelog140Desc4": {
+    "message": "Tabblad-iconen komen nu uit de cache van je browser, dus sites die eerst een grijze letter toonden laten hun echte icoon zien, ook terwijl ze slapen. Iconen die zouden wegvallen in het thema dat je gebruikt worden aangepast zodat je ze blijft zien."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Telt ongeveer 150 MB voor elk tabblad dat Drowzy ooit heeft laten slapen. Het is een doorlopend totaal, geen geheugen dat nu vrij is."
+  },
+  "privacyPermFavicon": {
+    "message": "Het lokale favicon-cachegeheugen van Chrome lezen zodat site-iconen goed worden weergegeven in de tabbladlijst. Dit leest een cache die al op je computer staat en doet geen netwerkverzoek."
+  },
+  "changelog140Title5": {
+    "message": "Rustiger, en cijfers die kloppen"
+  },
+  "changelog140Desc5": {
+    "message": "Tabbladen laten slapen laat niet meer de hele lijst stuiteren. Deze pagina en de welkomstpagina volgen nu het lichte of donkere thema dat je in Drowzy koos. En hetzelfde tabblad steeds opnieuw laten slapen blaast je statistieken niet meer op."
   }
 }

@@ -39,7 +39,7 @@
     "message": "Svetainė yra baltajame sąraše (spustelėkite, kad pašalintumėte)"
   },
   "activeWontSuspend": {
-    "message": "Aktyvi – nebus sustabdyta"
+    "message": "Aktyvi - nebus sustabdyta"
   },
   "loading": {
     "message": "Kraunama..."
@@ -181,22 +181,19 @@
     "message": "Nėra sustabdytų skirtukų pažadinti"
   },
   "pinnedWontSuspend": {
-    "message": "Prisegta — nebus sustabdyta"
+    "message": "Prisegta - nebus sustabdyta"
   },
   "audioWontSuspend": {
-    "message": "Grojama garsas — nebus sustabdyta"
+    "message": "Grojama garsas - nebus sustabdyta"
   },
   "whitelistedWontSuspend": {
-    "message": "Baltajame sąraše — nebus sustabdyta"
+    "message": "Baltajame sąraše - nebus sustabdyta"
   },
   "systemPageCantSuspend": {
-    "message": "Sistemos puslapis — negali būti sustabdytas"
+    "message": "Sistemos puslapis - negali būti sustabdytas"
   },
   "clickToDismiss": {
     "message": "Spustelėkite norėdami uždaryti"
-  },
-  "keepAwakeBtn": {
-    "message": "Palikti aktyvią"
   },
   "suspendTimerHint": {
     "message": "Skirtukai, nuo kurių perėjote, sustabdomi po šio laiko. Padidinkite jį, jei prie skirtukų grįžtate po ilgų pertraukų."
@@ -394,7 +391,7 @@
     "message": "Šioje sesijoje nėra atkurtinų kortelių."
   },
   "sessionDefaultName": {
-    "message": "Sesija – $DATE$",
+    "message": "Sesija - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Sveiki atvykę į Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy taupo atmintį užmigdydamas neaktyvias korteles. Jūsų kortelės visada saugios – naudojame Chrome integruotą atmetimo API, todėl jos išlieka net pašalinus Drowzy."
+    "message": "Drowzy taupo atmintį užmigdydamas neaktyvias korteles. Jūsų kortelės visada saugios - naudojame Chrome integruotą atmetimo API, todėl jos išlieka net pašalinus Drowzy."
   },
   "howItWorks": {
     "message": "Kaip tai veikia"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Miegančios kortelės dabar rodo užuominą spustelėkite, kad pažadintumėte, o pasveikinimo puslapis paaiškina, kaip Drowzy veikia šalia naršyklės įtaisytojo atminties taupymo."
+  },
+  "keepThisTabAwake": {
+    "message": "Laikyti šią kortelę pabudusią"
+  },
+  "allowSleep": {
+    "message": "Leisti užmigti"
+  },
+  "keptAwakeHint": {
+    "message": "Neleidžia šiai kortelei užmigti, kol to neišjungsi arba neuždarysi kortelės"
+  },
+  "allowSleepHint": {
+    "message": "Leisk šiai kortelei vėl įprastai užmigti"
+  },
+  "keptAwakeToast": {
+    "message": "Ši kortelė liks pabudusi"
+  },
+  "allowSleepToast": {
+    "message": "Ši kortelė vėl gali užmigti"
+  },
+  "badgeAwake": {
+    "message": "Pabudusi"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Laikoma pabudusi - nebus užmigdyta"
+  },
+  "cantSuspendPinned": {
+    "message": "Prisegtos kortelės apsaugotos. Išjunk \"Apsaugoti prisegtas korteles\", kad ši užmigtų."
+  },
+  "cantSuspendAudio": {
+    "message": "Garsą grojančios kortelės apsaugotos. Išjunk \"Apsaugoti korteles su garsu\", kad ši užmigtų."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Ši svetainė yra tavo niekada neužmigdyti sąraše. Pašalink ją, kad ši kortelė užmigtų."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Reikia kitos atidarytos kortelės, į kurią būtų galima pereiti. Chrome negali užmigdyti kortelės, kurią žiūri."
+  },
+  "openSettingsAction": {
+    "message": "Atidaryti nustatymus"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome neužmigdė šios kortelės"
+  },
+  "suspendFailedLoading": {
+    "message": "Vis dar kraunasi - pabandyk po akimirkos"
+  },
+  "suspendFailedForm": {
+    "message": "Neužmigdyta - kortelėje yra neišsaugota įvestis"
+  },
+  "bannerNotNow": {
+    "message": "Ne dabar"
+  },
+  "changelog140Title1": {
+    "message": "Laikyti šią kortelę pabudusią"
+  },
+  "changelog140Desc1": {
+    "message": "Laikyk vieną kortelę pabudusią neįtraukdamas visos svetainės į baltąjį sąrašą. Drowzy jos neužmigdys, kol nepaspausi \"Leisti užmigti\" arba neuždarysi kortelės. Paleidus naršyklę iš naujo tai išnyksta."
+  },
+  "changelog140Title2": {
+    "message": "\"Apsaugoti korteles su garsu\" dabar veikia abiem kryptimis"
+  },
+  "changelog140Desc2": {
+    "message": "Išjungus \"Apsaugoti korteles su garsu\", fone esančios vaizdo ir muzikos kortelės dabar tikrai gali užmigti. Anksčiau jos būdavo atmetamos net išjungus nustatymą. Įjungus niekas nesikeičia."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy pasako, kodėl kortelė neužmiega"
+  },
+  "changelog140Desc3": {
+    "message": "\"Užmigdyti šią kortelę\" nebedingsta be paaiškinimo. Kai kortelė negali užmigti, gauni priežastį ir nuorodą tiesiai į nustatymą, kuris tai pakeistų."
+  },
+  "changelog140Title4": {
+    "message": "Svetainių piktogramos, kurios tikrai matomos"
+  },
+  "changelog140Desc4": {
+    "message": "Kortelių piktogramos dabar imamos iš naršyklės talpyklos, todėl svetainės, anksčiau rodžiusios tik pilką raidę, rodo tikrą piktogramą, taip pat ir miegodamos. Piktogramos, kurios naudojamoje temoje išnyktų, pritaikomos, kad liktų matomos."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Skaičiuoja apie 150 MB kiekvienai kortelei, kurią Drowzy kada nors užmigdė. Tai laikui bėgant kaupiama suma, o ne dabar laisva atmintis."
+  },
+  "privacyPermFavicon": {
+    "message": "Skaityti vietinę Chrome svetainių piktogramų talpyklą, kad piktogramos kortelių sąraše būtų rodomos teisingai. Skaitoma talpykla, jau esanti tavo kompiuteryje, ir neatliekama jokia tinklo užklausa."
+  },
+  "changelog140Title5": {
+    "message": "Ramiau ir skaičiai, kuriais galima pasitikėti"
+  },
+  "changelog140Desc5": {
+    "message": "Kortelių užmigdymas nebeverčia viso sąrašo šokinėti. Šis puslapis ir pasisveikinimo puslapis dabar seka Drowzy pasirinktą šviesią ar tamsią temą. O tos pačios kortelės užmigdymas vėl ir vėl nebepučia tavo statistikos."
   }
 }

@@ -39,7 +39,7 @@
     "message": "Web je na seznamu povolených (klikněte pro odebrání)"
   },
   "activeWontSuspend": {
-    "message": "Aktivní – nebude uspána"
+    "message": "Aktivní - nebude uspána"
   },
   "loading": {
     "message": "Načítání..."
@@ -181,22 +181,19 @@
     "message": "Žádné pozastavené karty k probuzení"
   },
   "pinnedWontSuspend": {
-    "message": "Připnuto — nebude pozastaveno"
+    "message": "Připnuto - nebude pozastaveno"
   },
   "audioWontSuspend": {
-    "message": "Přehrává zvuk — nebude pozastaveno"
+    "message": "Přehrává zvuk - nebude pozastaveno"
   },
   "whitelistedWontSuspend": {
-    "message": "Na bílé listině — nebude pozastaveno"
+    "message": "Na bílé listině - nebude pozastaveno"
   },
   "systemPageCantSuspend": {
-    "message": "Systémová stránka — nelze pozastavit"
+    "message": "Systémová stránka - nelze pozastavit"
   },
   "clickToDismiss": {
     "message": "Klikněte pro zavření"
-  },
-  "keepAwakeBtn": {
-    "message": "Ponechat aktivní"
   },
   "suspendTimerHint": {
     "message": "Karty, ze kterých jste přepnuli, se uspí po této době. Zvyšte ji, pokud se ke kartám vracíte po delších pauzách."
@@ -394,7 +391,7 @@
     "message": "V této relaci nejsou žádné karty k obnovení."
   },
   "sessionDefaultName": {
-    "message": "Relace – $DATE$",
+    "message": "Relace - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Vítejte v Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy šetří paměť uspáváním neaktivních karet. Vaše karty jsou vždy v bezpečí – používáme nativní API pro zahození karet v Chrome, takže přežijí i odinstalaci Drowzy."
+    "message": "Drowzy šetří paměť uspáváním neaktivních karet. Vaše karty jsou vždy v bezpečí - používáme nativní API pro zahození karet v Chrome, takže přežijí i odinstalaci Drowzy."
   },
   "howItWorks": {
     "message": "Jak to funguje"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Uspané karty teď zobrazují nápovědu kliknutím probudíte a uvítací stránka vysvětluje, jak Drowzy funguje vedle vestavěné úspory paměti prohlížeče."
+  },
+  "keepThisTabAwake": {
+    "message": "Nechat tuto kartu vzhůru"
+  },
+  "allowSleep": {
+    "message": "Povolit uspání"
+  },
+  "keptAwakeHint": {
+    "message": "Zabrání uspání této karty, dokud to nevypnete nebo kartu nezavřete"
+  },
+  "allowSleepHint": {
+    "message": "Nechat tuto kartu zase normálně usínat"
+  },
+  "keptAwakeToast": {
+    "message": "Tato karta zůstane vzhůru"
+  },
+  "allowSleepToast": {
+    "message": "Tato karta může zase usnout"
+  },
+  "badgeAwake": {
+    "message": "Vzhůru"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Držena vzhůru - nebude uspána"
+  },
+  "cantSuspendPinned": {
+    "message": "Připnuté karty jsou chráněné. Vypněte \"Chránit připnuté karty\", abyste uspali tuto."
+  },
+  "cantSuspendAudio": {
+    "message": "Karty přehrávající zvuk jsou chráněné. Vypněte \"Chránit karty se zvukem\", abyste uspali tuto."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Tento web je na vašem seznamu nikdy neuspávat. Odeberte ho, abyste tuto kartu uspali."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Je potřeba jiná otevřená karta, na kterou se dá přepnout. Chrome nemůže uspat kartu, na kterou se právě díváte."
+  },
+  "openSettingsAction": {
+    "message": "Otevřít nastavení"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome tuto kartu neuspal"
+  },
+  "suspendFailedLoading": {
+    "message": "Ještě se načítá - zkuste to za chvíli"
+  },
+  "suspendFailedForm": {
+    "message": "Neuspáno - karta obsahuje neuložený text"
+  },
+  "bannerNotNow": {
+    "message": "Teď ne"
+  },
+  "changelog140Title1": {
+    "message": "Nechat tuto kartu vzhůru"
+  },
+  "changelog140Desc1": {
+    "message": "Nechte vzhůru jedinou kartu bez přidání celého webu na bílou listinu. Drowzy ji neuspí, dokud nestisknete \"Povolit uspání\" nebo kartu nezavřete. Při restartu prohlížeče se to zruší."
+  },
+  "changelog140Title2": {
+    "message": "\"Chránit karty se zvukem\" teď funguje oběma směry"
+  },
+  "changelog140Desc2": {
+    "message": "Vypnutí \"Chránit karty se zvukem\" teď opravdu nechá karty s videem a hudbou na pozadí usnout. Dřív byly odmítnuty i s vypnutým nastavením. Se zapnutým se nic nemění."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy vám řekne, proč karta neusíná"
+  },
+  "changelog140Desc3": {
+    "message": "\"Uspat tuto kartu\" už nemizí bez vysvětlení. Když karta nemůže usnout, dostanete důvod a zkratku přímo k nastavení, které by to změnilo."
+  },
+  "changelog140Title4": {
+    "message": "Ikony webů, které se opravdu zobrazí"
+  },
+  "changelog140Desc4": {
+    "message": "Ikony karet teď pocházejí z mezipaměti prohlížeče, takže weby, které dřív ukazovaly jen šedé písmeno, mají svou skutečnou ikonu, i když spí. Ikony, které by v použitém motivu zmizely, se upraví, abyste je stále viděli."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Počítá zhruba 150 MB za každou kartu, kterou Drowzy kdy uspal. Je to průběžný součet v čase, ne paměť volná právě teď."
+  },
+  "privacyPermFavicon": {
+    "message": "Čtení místní mezipaměti ikon webů v Chrome, aby se ikony správně zobrazovaly v seznamu karet. Čte mezipaměť, která už je ve vašem počítači, a neprovádí žádný síťový požadavek."
+  },
+  "changelog140Title5": {
+    "message": "Klidnější a čísla, kterým lze věřit"
+  },
+  "changelog140Desc5": {
+    "message": "Uspávání karet už nerozhoupe celý seznam. Tato stránka i uvítací stránka teď respektují světlý nebo tmavý motiv zvolený v Drowzy. A opakované uspávání téže karty už nenafukuje vaše celkové statistiky."
   }
 }

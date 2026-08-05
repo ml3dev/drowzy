@@ -39,7 +39,7 @@
     "message": "Site is whitelisted (click to remove)"
   },
   "activeWontSuspend": {
-    "message": "Active – won't be suspended"
+    "message": "Active - won't be suspended"
   },
   "loading": {
     "message": "Loading..."
@@ -181,22 +181,19 @@
     "message": "No suspended tabs to wake"
   },
   "pinnedWontSuspend": {
-    "message": "Pinned — won't be suspended"
+    "message": "Pinned - won't be suspended"
   },
   "audioWontSuspend": {
-    "message": "Audio playing — won't be suspended"
+    "message": "Audio playing - won't be suspended"
   },
   "whitelistedWontSuspend": {
-    "message": "Whitelisted — won't be suspended"
+    "message": "Whitelisted - won't be suspended"
   },
   "systemPageCantSuspend": {
-    "message": "System page — can't be suspended"
+    "message": "System page - can't be suspended"
   },
   "clickToDismiss": {
     "message": "Click to dismiss"
-  },
-  "keepAwakeBtn": {
-    "message": "Keep awake"
   },
   "suspendTimerHint": {
     "message": "Tabs you switched away from are suspended after this long. Increase if you find yourself coming back to tabs after long gaps."
@@ -394,7 +391,7 @@
     "message": "No restorable tabs in this session."
   },
   "sessionDefaultName": {
-    "message": "Session – $DATE$",
+    "message": "Session - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Welcome to Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy saves memory by putting inactive tabs to sleep. Your tabs are always safe – we use Chrome's native discard API, so they survive even if you uninstall Drowzy."
+    "message": "Drowzy saves memory by putting inactive tabs to sleep. Your tabs are always safe - we use Chrome's native discard API, so they survive even if you uninstall Drowzy."
   },
   "howItWorks": {
     "message": "How it works"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Sleeping tabs now show a click-to-wake hint, and the welcome page explains how Drowzy works alongside your browser's built-in Memory Saver."
+  },
+  "keepThisTabAwake": {
+    "message": "Keep this tab awake"
+  },
+  "allowSleep": {
+    "message": "Allow sleep"
+  },
+  "keptAwakeHint": {
+    "message": "Stop this tab from sleeping until you turn it off or close it"
+  },
+  "allowSleepHint": {
+    "message": "Let this tab sleep normally again"
+  },
+  "keptAwakeToast": {
+    "message": "This tab will stay awake"
+  },
+  "allowSleepToast": {
+    "message": "This tab can sleep again"
+  },
+  "badgeAwake": {
+    "message": "Awake"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Kept awake - won't be suspended"
+  },
+  "cantSuspendPinned": {
+    "message": "Pinned tabs are protected. Turn off Protect pinned tabs to sleep this one."
+  },
+  "cantSuspendAudio": {
+    "message": "Tabs playing audio are protected. Turn off Protect audio tabs to sleep this one."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "This site is on your never-suspend list. Remove it to sleep this tab."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Needs another open tab to switch to first. Chrome cannot sleep the tab you are looking at."
+  },
+  "openSettingsAction": {
+    "message": "Open settings"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome wouldn't put this tab to sleep"
+  },
+  "suspendFailedLoading": {
+    "message": "Still loading - try again in a moment"
+  },
+  "suspendFailedForm": {
+    "message": "Not suspended - this tab has unsaved input"
+  },
+  "bannerNotNow": {
+    "message": "Not now"
+  },
+  "changelog140Title1": {
+    "message": "Keep this tab awake"
+  },
+  "changelog140Desc1": {
+    "message": "Hold a single tab awake without whitelisting the whole site. Drowzy won't sleep it until you press Allow sleep or close the tab. The hold clears when you restart your browser."
+  },
+  "changelog140Title2": {
+    "message": "Protect audio tabs now works both ways"
+  },
+  "changelog140Desc2": {
+    "message": "Turning off Protect audio tabs really does let background video and music tabs sleep now. Before, they were refused even with the setting off. With it on, nothing changes."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy tells you why a tab won't sleep"
+  },
+  "changelog140Desc3": {
+    "message": "Suspend this tab no longer disappears without explanation. When a tab can't sleep, you get the reason, and a shortcut straight to the setting that would change it."
+  },
+  "changelog140Title4": {
+    "message": "Site icons that actually show up"
+  },
+  "changelog140Desc4": {
+    "message": "Tab icons now come from your browser's own cache, so sites that used to fall back to a gray letter show their real icon, including while they are asleep. Icons that would vanish against the theme you are using are adjusted so you can still see them."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Counts about 150 MB for every tab Drowzy has ever put to sleep. It is a running total over time, not memory that is free right now."
+  },
+  "privacyPermFavicon": {
+    "message": "Reading Chrome's own local favicon cache so site icons show correctly in the tab list. This reads a cache already on your computer and makes no network request."
+  },
+  "changelog140Title5": {
+    "message": "Calmer, and counts you can trust"
+  },
+  "changelog140Desc5": {
+    "message": "Suspending tabs no longer makes the whole list bounce. This page and the welcome page now follow the light or dark theme you picked in Drowzy. And re-sleeping the same tab over and over no longer inflates your lifetime stats."
   }
 }

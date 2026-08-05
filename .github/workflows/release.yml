@@ -2,7 +2,7 @@ name: Release
 
 # Builds the Chrome Web Store zip on every version tag push and publishes
 # a GitHub Release with the zip + its SHA-256. The zip is built by CI
-# from the tagged commit — anyone can re-run this workflow on a fork and
+# from the tagged commit - anyone can re-run this workflow on a fork and
 # verify the result matches.
 
 on:
@@ -25,10 +25,24 @@ jobs:
           TAG="${GITHUB_REF_NAME#v}"
           MANIFEST=$(grep -E '"version"' manifest.json | head -1 | sed -E 's/.*"version"\s*:\s*"([^"]+)".*/\1/')
           if [ "$TAG" != "$MANIFEST" ]; then
-            echo "Tag $GITHUB_REF_NAME but manifest.json version is $MANIFEST — refusing to release."
+            echo "Tag $GITHUB_REF_NAME but manifest.json version is $MANIFEST - refusing to release."
             exit 1
           fi
           echo "matched: tag=$GITHUB_REF_NAME, manifest=$MANIFEST"
+
+      - name: Validate locales, i18n references and markup
+        run: |
+          # Fails the release before anything is published. A missing key in one
+          # of 57 locales is invisible at runtime (Chrome silently falls back to
+          # English), so it has to be caught here rather than by a user.
+          node scripts/validate.js
+
+      - name: Syntax-check shipped JavaScript
+        run: |
+          for f in background.js popup.js icons.js formcheck.js onboarding.js changelog.js privacy-policy.js; do
+            node --check "$f"
+          done
+          echo "all shipped JS parses"
 
       - name: Build zip
         id: build

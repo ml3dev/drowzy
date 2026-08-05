@@ -39,7 +39,7 @@
     "message": "Webbplatsen är vitlistad (klicka för att ta bort)"
   },
   "activeWontSuspend": {
-    "message": "Aktiv – kommer inte att suspenderas"
+    "message": "Aktiv - kommer inte att suspenderas"
   },
   "loading": {
     "message": "Laddar..."
@@ -181,22 +181,19 @@
     "message": "Inga pausade flikar att väcka"
   },
   "pinnedWontSuspend": {
-    "message": "Fäst — kommer inte att pausas"
+    "message": "Fäst - kommer inte att pausas"
   },
   "audioWontSuspend": {
-    "message": "Spelar ljud — kommer inte att pausas"
+    "message": "Spelar ljud - kommer inte att pausas"
   },
   "whitelistedWontSuspend": {
-    "message": "På vitlistan — kommer inte att pausas"
+    "message": "På vitlistan - kommer inte att pausas"
   },
   "systemPageCantSuspend": {
-    "message": "Systemsida — kan inte pausas"
+    "message": "Systemsida - kan inte pausas"
   },
   "clickToDismiss": {
     "message": "Klicka för att stänga"
-  },
-  "keepAwakeBtn": {
-    "message": "Håll vaken"
   },
   "suspendTimerHint": {
     "message": "Flikar som du har bytt från avbryts efter denna tid. Öka den om du återkommer till flikar efter långa pauser."
@@ -394,7 +391,7 @@
     "message": "Inga flikar att återställa i denna session."
   },
   "sessionDefaultName": {
-    "message": "Session – $DATE$",
+    "message": "Session - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Välkommen till Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy sparar minne genom att lägga inaktiva flikar i viloläge. Dina flikar är alltid säkra – vi använder Chromes inbyggda API för att kassera flikar, så de överlever även om du avinstallerar Drowzy."
+    "message": "Drowzy sparar minne genom att lägga inaktiva flikar i viloläge. Dina flikar är alltid säkra - vi använder Chromes inbyggda API för att kassera flikar, så de överlever även om du avinstallerar Drowzy."
   },
   "howItWorks": {
     "message": "Så fungerar det"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Sovande flikar visar nu tipset klicka för att väcka, och välkomstsidan förklarar hur Drowzy fungerar tillsammans med webbläsarens inbyggda minnessparare."
+  },
+  "keepThisTabAwake": {
+    "message": "Håll den här fliken vaken"
+  },
+  "allowSleep": {
+    "message": "Tillåt vila"
+  },
+  "keptAwakeHint": {
+    "message": "Hindrar den här fliken från att somna tills du stänger av det eller stänger fliken"
+  },
+  "allowSleepHint": {
+    "message": "Låt den här fliken somna normalt igen"
+  },
+  "keptAwakeToast": {
+    "message": "Den här fliken hålls vaken"
+  },
+  "allowSleepToast": {
+    "message": "Den här fliken får somna igen"
+  },
+  "badgeAwake": {
+    "message": "Vaken"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Hålls vaken - kommer inte att vila"
+  },
+  "cantSuspendPinned": {
+    "message": "Fästa flikar är skyddade. Stäng av \"Skydda fästa flikar\" för att låta den här vila."
+  },
+  "cantSuspendAudio": {
+    "message": "Flikar som spelar ljud är skyddade. Stäng av \"Skydda ljudflikar\" för att låta den här vila."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Den här webbplatsen finns på din aldrig-vila-lista. Ta bort den för att låta fliken vila."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Det behövs en annan öppen flik att växla till först. Chrome kan inte låta fliken du tittar på vila."
+  },
+  "openSettingsAction": {
+    "message": "Öppna inställningar"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome ville inte låta den här fliken vila"
+  },
+  "suspendFailedLoading": {
+    "message": "Läser fortfarande in - försök igen om en stund"
+  },
+  "suspendFailedForm": {
+    "message": "Inte satt i vila - fliken har osparad inmatning"
+  },
+  "bannerNotNow": {
+    "message": "Inte nu"
+  },
+  "changelog140Title1": {
+    "message": "Håll den här fliken vaken"
+  },
+  "changelog140Desc1": {
+    "message": "Håll en enda flik vaken utan att vitlista hela webbplatsen. Drowzy låter den inte vila förrän du trycker på \"Tillåt vila\" eller stänger fliken. Det nollställs när du startar om webbläsaren."
+  },
+  "changelog140Title2": {
+    "message": "\"Skydda ljudflikar\" fungerar nu åt båda hållen"
+  },
+  "changelog140Desc2": {
+    "message": "Om du stänger av \"Skydda ljudflikar\" får video- och musikflikar i bakgrunden nu faktiskt vila. Tidigare nekades de även med inställningen av. Med den på ändras ingenting."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy berättar varför en flik inte vilar"
+  },
+  "changelog140Desc3": {
+    "message": "\"Låt den här fliken vila\" försvinner inte längre utan förklaring. När en flik inte kan vila får du orsaken och en genväg direkt till inställningen som skulle ändra det."
+  },
+  "changelog140Title4": {
+    "message": "Webbplatsikoner som faktiskt syns"
+  },
+  "changelog140Desc4": {
+    "message": "Flikikoner hämtas nu från webbläsarens egen cache, så webbplatser som förut bara visade en grå bokstav visar sin riktiga ikon, även när de vilar. Ikoner som skulle försvinna i temat du använder justeras så att du fortfarande ser dem."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Räknar cirka 150 MB för varje flik som Drowzy har låtit vila. Det är en löpande summa över tid, inte minne som är ledigt just nu."
+  },
+  "privacyPermFavicon": {
+    "message": "Läser Chromes lokala favicon-cache så att webbplatsikoner visas korrekt i fliklistan. Detta läser en cache som redan finns på din dator och gör ingen nätverksbegäran."
+  },
+  "changelog140Title5": {
+    "message": "Lugnare, och siffror du kan lita på"
+  },
+  "changelog140Desc5": {
+    "message": "Att låta flikar vila får inte längre hela listan att studsa. Den här sidan och välkomstsidan följer nu det ljusa eller mörka temat du valde i Drowzy. Och att låta samma flik vila om och om igen blåser inte längre upp din statistik."
   }
 }

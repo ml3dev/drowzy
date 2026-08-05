@@ -39,7 +39,7 @@
     "message": "Sitio en lista blanca (clic para quitar)"
   },
   "activeWontSuspend": {
-    "message": "Activa – no se va a suspender"
+    "message": "Activa - no se va a suspender"
   },
   "loading": {
     "message": "Cargando..."
@@ -181,22 +181,19 @@
     "message": "No hay pestañas suspendidas para reactivar"
   },
   "pinnedWontSuspend": {
-    "message": "Fijada — no se suspenderá"
+    "message": "Fijada - no se suspenderá"
   },
   "audioWontSuspend": {
-    "message": "Reproduciendo audio — no se suspenderá"
+    "message": "Reproduciendo audio - no se suspenderá"
   },
   "whitelistedWontSuspend": {
-    "message": "En la lista blanca — no se suspenderá"
+    "message": "En la lista blanca - no se suspenderá"
   },
   "systemPageCantSuspend": {
-    "message": "Página del sistema — no se puede suspender"
+    "message": "Página del sistema - no se puede suspender"
   },
   "clickToDismiss": {
     "message": "Clic para cerrar"
-  },
-  "keepAwakeBtn": {
-    "message": "Mantener activa"
   },
   "suspendTimerHint": {
     "message": "Las pestañas de las que te alejaste se suspenden tras este tiempo. Auméntalo si volvés a pestañas tras largas pausas."
@@ -394,7 +391,7 @@
     "message": "No hay pestañas restaurables en esta sesión."
   },
   "sessionDefaultName": {
-    "message": "Sesión – $DATE$",
+    "message": "Sesión - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Las pestañas dormidas ahora muestran una pista de clic para despertar, y la página de bienvenida explica cómo Drowzy funciona junto al ahorro de memoria integrado de tu navegador."
+  },
+  "keepThisTabAwake": {
+    "message": "Mantener esta pestaña despierta"
+  },
+  "allowSleep": {
+    "message": "Permitir que duerma"
+  },
+  "keptAwakeHint": {
+    "message": "Evita que esta pestaña se duerma hasta que lo desactives o la cierres"
+  },
+  "allowSleepHint": {
+    "message": "Dejar que esta pestaña vuelva a dormirse con normalidad"
+  },
+  "keptAwakeToast": {
+    "message": "Esta pestaña se mantendrá despierta"
+  },
+  "allowSleepToast": {
+    "message": "Esta pestaña ya puede dormirse"
+  },
+  "badgeAwake": {
+    "message": "Despierta"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Mantenida despierta - no se suspenderá"
+  },
+  "cantSuspendPinned": {
+    "message": "Las pestañas fijadas están protegidas. Desactiva \"Proteger pestañas fijadas\" para suspender esta."
+  },
+  "cantSuspendAudio": {
+    "message": "Las pestañas con audio están protegidas. Desactiva \"Proteger pestañas con audio\" para suspender esta."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Este sitio está en tu lista de nunca suspender. Quítalo para suspender esta pestaña."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Se necesita otra pestaña abierta a la cual cambiar. Chrome no puede suspender la pestaña que estás viendo."
+  },
+  "openSettingsAction": {
+    "message": "Abrir configuración"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome no quiso suspender esta pestaña"
+  },
+  "suspendFailedLoading": {
+    "message": "Aún se está cargando - inténtalo en un momento"
+  },
+  "suspendFailedForm": {
+    "message": "No suspendida - esta pestaña tiene texto sin guardar"
+  },
+  "bannerNotNow": {
+    "message": "Ahora no"
+  },
+  "changelog140Title1": {
+    "message": "Mantener esta pestaña despierta"
+  },
+  "changelog140Desc1": {
+    "message": "Mantén despierta una sola pestaña sin agregar todo el sitio a la lista blanca. Drowzy no la dormirá hasta que presiones \"Permitir que duerma\" o la cierres. La retención se borra al reiniciar el navegador."
+  },
+  "changelog140Title2": {
+    "message": "\"Proteger pestañas con audio\" ahora funciona en ambos sentidos"
+  },
+  "changelog140Desc2": {
+    "message": "Desactivar \"Proteger pestañas con audio\" ahora sí deja dormir las pestañas de video y música en segundo plano. Antes se rechazaban incluso con la opción desactivada. Con la opción activada no cambia nada."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy te dice por qué una pestaña no se duerme"
+  },
+  "changelog140Desc3": {
+    "message": "\"Suspender esta pestaña\" ya no desaparece sin explicación. Cuando una pestaña no puede dormirse, te damos el motivo y un acceso directo a la configuración que lo cambiaría."
+  },
+  "changelog140Title4": {
+    "message": "Iconos de sitios que sí aparecen"
+  },
+  "changelog140Desc4": {
+    "message": "Los iconos de las pestañas ahora vienen de la caché de tu navegador, así que los sitios que antes mostraban una letra gris muestran su icono real, incluso mientras duermen. Los iconos que desaparecerían con el tema que usas se ajustan para que sigan viéndose."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Cuenta unos 150 MB por cada pestaña que Drowzy ha dormido. Es un total acumulado en el tiempo, no memoria libre en este momento."
+  },
+  "privacyPermFavicon": {
+    "message": "Leer la caché local de favicons de Chrome para que los iconos de los sitios se vean bien en la lista de pestañas. Lee una caché que ya está en tu equipo y no hace ninguna petición de red."
+  },
+  "changelog140Title5": {
+    "message": "Más tranquilo, y cifras confiables"
+  },
+  "changelog140Desc5": {
+    "message": "Dormir pestañas ya no hace saltar toda la lista. Esta página y la de bienvenida ahora siguen el tema claro u oscuro que elegiste en Drowzy. Y volver a dormir la misma pestaña una y otra vez ya no infla tus estadísticas."
   }
 }

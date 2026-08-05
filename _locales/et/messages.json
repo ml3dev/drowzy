@@ -39,7 +39,7 @@
     "message": "Sait on lubatud nimekirjas (klõpsa eemaldamiseks)"
   },
   "activeWontSuspend": {
-    "message": "Aktiivne – ei peatata"
+    "message": "Aktiivne - ei peatata"
   },
   "loading": {
     "message": "Laadimine..."
@@ -181,22 +181,19 @@
     "message": "Pole peatatud vahekaarte äratamiseks"
   },
   "pinnedWontSuspend": {
-    "message": "Kinnitatud — ei peatata"
+    "message": "Kinnitatud - ei peatata"
   },
   "audioWontSuspend": {
-    "message": "Mängib heli — ei peatata"
+    "message": "Mängib heli - ei peatata"
   },
   "whitelistedWontSuspend": {
-    "message": "Lubatud nimekirjas — ei peatata"
+    "message": "Lubatud nimekirjas - ei peatata"
   },
   "systemPageCantSuspend": {
-    "message": "Süsteemileht — ei saa peatada"
+    "message": "Süsteemileht - ei saa peatada"
   },
   "clickToDismiss": {
     "message": "Klõpsa sulgemiseks"
-  },
-  "keepAwakeBtn": {
-    "message": "Hoia ärkvel"
   },
   "suspendTimerHint": {
     "message": "Vahekaardid, millelt eemaldusid, peatatakse selle aja möödudes. Suurenda seda, kui pöördud vahekaartide juurde tagasi pikkade vahedega."
@@ -394,7 +391,7 @@
     "message": "Selles seansis pole taastatavaid vahelehti."
   },
   "sessionDefaultName": {
-    "message": "Seanss – $DATE$",
+    "message": "Seanss - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Tere tulemast Drowzy-sse"
   },
   "onboardingIntro": {
-    "message": "Drowzy säästab mälu, pannes mitteaktiivsed vahelehed magama. Sinu vahelehed on alati turvalised – me kasutame Chrome'i natiivset tühistamise API-t, nii et need jäävad alles isegi siis, kui Drowzy desinstallid."
+    "message": "Drowzy säästab mälu, pannes mitteaktiivsed vahelehed magama. Sinu vahelehed on alati turvalised - me kasutame Chrome'i natiivset tühistamise API-t, nii et need jäävad alles isegi siis, kui Drowzy desinstallid."
   },
   "howItWorks": {
     "message": "Kuidas see töötab"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Magavad vahelehed näitavad nüüd vihjet klõpsa äratamiseks ja tervitusleht selgitab, kuidas Drowzy töötab koos brauseri sisseehitatud mälusäästjaga."
+  },
+  "keepThisTabAwake": {
+    "message": "Hoia see kaart ärkvel"
+  },
+  "allowSleep": {
+    "message": "Luba uinuda"
+  },
+  "keptAwakeHint": {
+    "message": "Takistab selle kaardi uinumist, kuni sa selle välja lülitad või kaardi sulged"
+  },
+  "allowSleepHint": {
+    "message": "Lase sellel kaardil taas tavapäraselt uinuda"
+  },
+  "keptAwakeToast": {
+    "message": "See kaart jääb ärkvele"
+  },
+  "allowSleepToast": {
+    "message": "See kaart võib jälle uinuda"
+  },
+  "badgeAwake": {
+    "message": "Ärkvel"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Hoitakse ärkvel - ei peatata"
+  },
+  "cantSuspendPinned": {
+    "message": "Kinnitatud kaardid on kaitstud. Lülita välja \"Kaitse kinnitatud kaarte\", et see uinuks."
+  },
+  "cantSuspendAudio": {
+    "message": "Heli esitavad kaardid on kaitstud. Lülita välja \"Kaitse heliga kaarte\", et see uinuks."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "See sait on sinu mitte kunagi peatada loendis. Eemalda see, et kaart uinuks."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Vaja on teist avatud kaarti, kuhu esmalt lülituda. Chrome ei saa peatada kaarti, mida sa parasjagu vaatad."
+  },
+  "openSettingsAction": {
+    "message": "Ava seaded"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome ei pannud seda kaarti magama"
+  },
+  "suspendFailedLoading": {
+    "message": "Laeb veel - proovi hetke pärast uuesti"
+  },
+  "suspendFailedForm": {
+    "message": "Ei pandud magama - kaardil on salvestamata sisestus"
+  },
+  "bannerNotNow": {
+    "message": "Mitte praegu"
+  },
+  "changelog140Title1": {
+    "message": "Hoia see kaart ärkvel"
+  },
+  "changelog140Desc1": {
+    "message": "Hoia üksikut kaarti ärkvel ilma kogu saiti valgesse nimekirja lisamata. Drowzy ei pane seda magama enne, kui vajutad \"Luba uinuda\" või sulged kaardi. Brauseri taaskäivitamisel see tühistub."
+  },
+  "changelog140Title2": {
+    "message": "\"Kaitse heliga kaarte\" toimib nüüd mõlemas suunas"
+  },
+  "changelog140Desc2": {
+    "message": "Kui lülitad välja \"Kaitse heliga kaarte\", saavad taustal olevad video- ja muusikakaardid nüüd tõesti uinuda. Varem keelduti neist ka siis, kui säte oli välja lülitatud. Sisselülitatuna ei muutu midagi."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy ütleb, miks kaart ei uinu"
+  },
+  "changelog140Desc3": {
+    "message": "\"Peata see kaart\" ei kao enam seletuseta. Kui kaart ei saa uinuda, saad põhjuse ja otsetee seadeni, mis seda muudaks."
+  },
+  "changelog140Title4": {
+    "message": "Saidiikoonid, mis tõesti ilmuvad"
+  },
+  "changelog140Desc4": {
+    "message": "Kaartide ikoonid tulevad nüüd brauseri enda vahemälust, nii et saidid, mis varem näitasid vaid halli tähte, kuvavad oma tegeliku ikooni, ka magades. Ikoone, mis praeguses teemas kaoksid, kohandatakse, et need jääksid nähtavaks."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Arvestab umbes 150 MB iga kaardi kohta, mille Drowzy on magama pannud. See on ajas kogunev summa, mitte praegu vaba mälu."
+  },
+  "privacyPermFavicon": {
+    "message": "Chrome'i kohaliku ikoonivahemälu lugemine, et saidiikoonid kuvataks kaartide loendis õigesti. See loeb vahemälu, mis on juba sinu arvutis, ega tee ühtegi võrgupäringut."
+  },
+  "changelog140Title5": {
+    "message": "Rahulikum ja arvud, mida usaldada"
+  },
+  "changelog140Desc5": {
+    "message": "Kaartide magamapanek ei pane enam kogu loendit hüppama. See leht ja tervituse leht järgivad nüüd Drowzys valitud heledat või tumedat teemat. Ja sama kaardi korduv magamapanek ei paisuta enam su koondstatistikat."
   }
 }

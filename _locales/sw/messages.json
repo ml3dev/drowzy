@@ -39,7 +39,7 @@
     "message": "Tovuti iko kwenye orodha nyeupe (bofya kuondoa)"
   },
   "activeWontSuspend": {
-    "message": "Inatumika – haitasimamishwa"
+    "message": "Inatumika - haitasimamishwa"
   },
   "loading": {
     "message": "Inapakia..."
@@ -181,22 +181,19 @@
     "message": "Hakuna vichupo vilivyosimamishwa vya kuamsha"
   },
   "pinnedWontSuspend": {
-    "message": "Imebandikwa — haitasimamishwa"
+    "message": "Imebandikwa - haitasimamishwa"
   },
   "audioWontSuspend": {
-    "message": "Sauti inacheza — haitasimamishwa"
+    "message": "Sauti inacheza - haitasimamishwa"
   },
   "whitelistedWontSuspend": {
-    "message": "Imeruhusiwa — haitasimamishwa"
+    "message": "Imeruhusiwa - haitasimamishwa"
   },
   "systemPageCantSuspend": {
-    "message": "Ukurasa wa mfumo — hauwezi kusimamishwa"
+    "message": "Ukurasa wa mfumo - hauwezi kusimamishwa"
   },
   "clickToDismiss": {
     "message": "Bofya ili kufunga"
-  },
-  "keepAwakeBtn": {
-    "message": "Endelea kuwa hai"
   },
   "suspendTimerHint": {
     "message": "Vichupo ulivyobadilisha kutoka humo vinasimamishwa baada ya muda huu. Ongeza ikiwa unarejea kwenye vichupo baada ya mapumziko marefu."
@@ -394,7 +391,7 @@
     "message": "Hakuna tabo za kurejesha katika kikao hiki."
   },
   "sessionDefaultName": {
-    "message": "Kikao – $DATE$",
+    "message": "Kikao - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Karibu kwenye Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy inaokoa kumbukumbu kwa kulaza tabo zisizotumika. Tabo zako ni salama kila wakati – tunatumia API asilia ya Chrome ya kutupa, hivyo zinaendelea hata ukiondoa Drowzy."
+    "message": "Drowzy inaokoa kumbukumbu kwa kulaza tabo zisizotumika. Tabo zako ni salama kila wakati - tunatumia API asilia ya Chrome ya kutupa, hivyo zinaendelea hata ukiondoa Drowzy."
   },
   "howItWorks": {
     "message": "Jinsi inavyofanya kazi"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Tabo zinazolala sasa zinaonyesha dokezo la bofya kuamsha, na ukurasa wa karibu unaeleza jinsi Drowzy inavyofanya kazi pamoja na Memory Saver iliyojengwa ndani ya kivinjari chako."
+  },
+  "keepThisTabAwake": {
+    "message": "Weka kichupo hiki macho"
+  },
+  "allowSleep": {
+    "message": "Ruhusu kulala"
+  },
+  "keptAwakeHint": {
+    "message": "Huzuia kichupo hiki kulala hadi uzime au ufunge kichupo"
+  },
+  "allowSleepHint": {
+    "message": "Ruhusu kichupo hiki kulala kama kawaida tena"
+  },
+  "keptAwakeToast": {
+    "message": "Kichupo hiki kitabaki macho"
+  },
+  "allowSleepToast": {
+    "message": "Kichupo hiki kinaweza kulala tena"
+  },
+  "badgeAwake": {
+    "message": "Macho"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Kimewekwa macho - hakitalazwa"
+  },
+  "cantSuspendPinned": {
+    "message": "Vichupo vilivyobandikwa vinalindwa. Zima \"Linda vichupo vilivyobandikwa\" ili kulaza hiki."
+  },
+  "cantSuspendAudio": {
+    "message": "Vichupo vinavyocheza sauti vinalindwa. Zima \"Linda vichupo vya sauti\" ili kulaza hiki."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Tovuti hii iko kwenye orodha yako ya kutolaza kamwe. Iondoe ili kulaza kichupo hiki."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Kunahitajika kichupo kingine kilicho wazi cha kubadilishia kwanza. Chrome haiwezi kulaza kichupo unachokitazama."
+  },
+  "openSettingsAction": {
+    "message": "Fungua mipangilio"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome haikulaza kichupo hiki"
+  },
+  "suspendFailedLoading": {
+    "message": "Bado kinapakia - jaribu tena baada ya muda kidogo"
+  },
+  "suspendFailedForm": {
+    "message": "Hakikulazwa - kichupo hiki kina maandishi ambayo hayajahifadhiwa"
+  },
+  "bannerNotNow": {
+    "message": "Si sasa"
+  },
+  "changelog140Title1": {
+    "message": "Weka kichupo hiki macho"
+  },
+  "changelog140Desc1": {
+    "message": "Weka kichupo kimoja macho bila kuweka tovuti nzima kwenye orodha nyeupe. Drowzy haitakilaza hadi ubonyeze \"Ruhusu kulala\" au ufunge kichupo. Hufutwa unapoanzisha upya kivinjari."
+  },
+  "changelog140Title2": {
+    "message": "\"Linda vichupo vya sauti\" sasa hufanya kazi pande zote mbili"
+  },
+  "changelog140Desc2": {
+    "message": "Kuzima \"Linda vichupo vya sauti\" sasa kunaruhusu kweli vichupo vya video na muziki vya nyuma kulala. Awali vilikataliwa hata mpangilio ukiwa umezimwa. Ukiwa umewashwa, hakuna kinachobadilika."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy hukuambia kwa nini kichupo hakilali"
+  },
+  "changelog140Desc3": {
+    "message": "\"Laza kichupo hiki\" hakitoweki tena bila maelezo. Kichupo kisipoweza kulala, unapata sababu na njia ya moja kwa moja hadi mpangilio unaoweza kubadilisha hilo."
+  },
+  "changelog140Title4": {
+    "message": "Nembo za tovuti zinazoonekana kweli"
+  },
+  "changelog140Desc4": {
+    "message": "Nembo za vichupo sasa hutoka kwenye akiba ya kivinjari chako, hivyo tovuti zilizokuwa zikionyesha herufi ya kijivu tu huonyesha nembo yao halisi, hata zikiwa zimelala. Nembo ambazo zingepotea kwenye mandhari unayotumia hurekebishwa ili uendelee kuziona."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Huhesabu takriban MB 150 kwa kila kichupo ambacho Drowzy amewahi kulaza. Ni jumla inayoongezeka kwa muda, si kumbukumbu iliyo huru sasa hivi."
+  },
+  "privacyPermFavicon": {
+    "message": "Kusoma akiba ya nembo za tovuti iliyo ndani ya Chrome ili nembo zionekane sawa kwenye orodha ya vichupo. Hii husoma akiba iliyopo tayari kwenye kompyuta yako na haifanyi ombi lolote la mtandao."
+  },
+  "changelog140Title5": {
+    "message": "Tulivu zaidi, na namba za kuaminika"
+  },
+  "changelog140Desc5": {
+    "message": "Kulaza vichupo hakufanyi tena orodha nzima iruke. Ukurasa huu na ukurasa wa karibu sasa hufuata mandhari nyepesi au nyeusi uliyochagua katika Drowzy. Na kulaza kichupo kilekile mara kwa mara hakuvimbishi tena takwimu zako."
   }
 }

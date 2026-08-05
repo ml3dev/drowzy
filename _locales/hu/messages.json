@@ -39,7 +39,7 @@
     "message": "Az oldal engedélyezőlistán van (kattints az eltávolításhoz)"
   },
   "activeWontSuspend": {
-    "message": "Aktív – nem lesz felfüggesztve"
+    "message": "Aktív - nem lesz felfüggesztve"
   },
   "loading": {
     "message": "Betöltés..."
@@ -181,22 +181,19 @@
     "message": "Nincs felébresztendő felfüggesztett lap"
   },
   "pinnedWontSuspend": {
-    "message": "Rögzítve — nem lesz felfüggesztve"
+    "message": "Rögzítve - nem lesz felfüggesztve"
   },
   "audioWontSuspend": {
-    "message": "Hang szól — nem lesz felfüggesztve"
+    "message": "Hang szól - nem lesz felfüggesztve"
   },
   "whitelistedWontSuspend": {
-    "message": "Engedélyezve — nem lesz felfüggesztve"
+    "message": "Engedélyezve - nem lesz felfüggesztve"
   },
   "systemPageCantSuspend": {
-    "message": "Rendszeroldal — nem függeszthető fel"
+    "message": "Rendszeroldal - nem függeszthető fel"
   },
   "clickToDismiss": {
     "message": "Kattintson a bezáráshoz"
-  },
-  "keepAwakeBtn": {
-    "message": "Tartsd ébren"
   },
   "suspendTimerHint": {
     "message": "Az elhagyott lapok ennyi idő után felfüggesztésre kerülnek. Növeld, ha hosszabb szünetek után térsz vissza lapokhoz."
@@ -394,7 +391,7 @@
     "message": "Nincsenek visszaállítható lapok ebben a munkamenetben."
   },
   "sessionDefaultName": {
-    "message": "Munkamenet – $DATE$",
+    "message": "Munkamenet - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Üdvözöl a Drowzy"
   },
   "onboardingIntro": {
-    "message": "A Drowzy memóriát takarít meg az inaktív lapok elaltatásával. A lapjaid mindig biztonságban vannak – a Chrome natív discard API-ját használjuk, így még a Drowzy eltávolítása után is megmaradnak."
+    "message": "A Drowzy memóriát takarít meg az inaktív lapok elaltatásával. A lapjaid mindig biztonságban vannak - a Chrome natív discard API-ját használjuk, így még a Drowzy eltávolítása után is megmaradnak."
   },
   "howItWorks": {
     "message": "Hogyan működik"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Az alvó lapok most kattints a felébresztéshez tippet mutatnak, az üdvözlőoldal pedig elmagyarázza, hogyan működik a Drowzy a böngésző beépített memóriatakarékos módja mellett."
+  },
+  "keepThisTabAwake": {
+    "message": "Tartsd ébren ezt a lapot"
+  },
+  "allowSleep": {
+    "message": "Alvás engedélyezése"
+  },
+  "keptAwakeHint": {
+    "message": "Megakadályozza, hogy ez a lap elaludjon, amíg ki nem kapcsolod vagy be nem zárod a lapot"
+  },
+  "allowSleepHint": {
+    "message": "Hagyd, hogy ez a lap újra a szokásos módon elaludjon"
+  },
+  "keptAwakeToast": {
+    "message": "Ez a lap ébren marad"
+  },
+  "allowSleepToast": {
+    "message": "Ez a lap újra elalhat"
+  },
+  "badgeAwake": {
+    "message": "Ébren"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Ébren tartva - nem lesz felfüggesztve"
+  },
+  "cantSuspendPinned": {
+    "message": "A rögzített lapok védettek. Kapcsold ki a \"Rögzített lapok védelme\" beállítást, hogy ez elaludhasson."
+  },
+  "cantSuspendAudio": {
+    "message": "A hangot lejátszó lapok védettek. Kapcsold ki a \"Hangot lejátszó lapok védelme\" beállítást, hogy ez elaludhasson."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Ez az oldal a soha ne függessze fel listádon van. Távolítsd el, hogy ez a lap elaludhasson."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Szükség van egy másik nyitott lapra, amelyre át lehet váltani. A Chrome nem tudja felfüggeszteni azt a lapot, amelyet éppen nézel."
+  },
+  "openSettingsAction": {
+    "message": "Beállítások megnyitása"
+  },
+  "suspendFailedGeneric": {
+    "message": "A Chrome nem függesztette fel ezt a lapot"
+  },
+  "suspendFailedLoading": {
+    "message": "Még tölt - próbáld újra egy pillanat múlva"
+  },
+  "suspendFailedForm": {
+    "message": "Nem lett felfüggesztve - a lapon mentetlen beírás van"
+  },
+  "bannerNotNow": {
+    "message": "Most nem"
+  },
+  "changelog140Title1": {
+    "message": "Tartsd ébren ezt a lapot"
+  },
+  "changelog140Desc1": {
+    "message": "Tarts ébren egyetlen lapot anélkül, hogy az egész oldalt fehérlistára tennéd. A Drowzy nem altatja el, amíg meg nem nyomod az \"Alvás engedélyezése\" gombot, vagy be nem zárod a lapot. A böngésző újraindításakor törlődik."
+  },
+  "changelog140Title2": {
+    "message": "A \"Hangot lejátszó lapok védelme\" mostantól mindkét irányban működik"
+  },
+  "changelog140Desc2": {
+    "message": "Ha kikapcsolod a \"Hangot lejátszó lapok védelme\" beállítást, a háttérben futó videós és zenés lapok mostantól tényleg elalszanak. Korábban akkor is elutasította őket, ha a beállítás ki volt kapcsolva. Bekapcsolva semmi nem változik."
+  },
+  "changelog140Title3": {
+    "message": "A Drowzy megmondja, miért nem alszik el egy lap"
+  },
+  "changelog140Desc3": {
+    "message": "A \"Lap felfüggesztése\" már nem tűnik el magyarázat nélkül. Ha egy lap nem tud elaludni, megkapod az okát és egy közvetlen utat ahhoz a beállításhoz, amely ezt megváltoztatná."
+  },
+  "changelog140Title4": {
+    "message": "Webhelyikonok, amelyek tényleg megjelennek"
+  },
+  "changelog140Desc4": {
+    "message": "A lapikonok mostantól a böngésző saját gyorsítótárából jönnek, így azok a webhelyek, amelyek korábban csak egy szürke betűt mutattak, a valódi ikonjukat mutatják, alvás közben is. Az olyan ikonokat, amelyek eltűnnének a használt témában, láthatóvá igazítjuk."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Körülbelül 150 MB-ot számol minden laphoz, amelyet a Drowzy valaha elaltatott. Ez idővel gyűlő összeg, nem éppen most szabad memória."
+  },
+  "privacyPermFavicon": {
+    "message": "A Chrome helyi favicon-gyorsítótárának olvasása, hogy a webhelyikonok helyesen jelenjenek meg a laplistában. Egy már a gépeden lévő gyorsítótárat olvas, és nem küld hálózati kérést."
+  },
+  "changelog140Title5": {
+    "message": "Nyugodtabb, és megbízható számok"
+  },
+  "changelog140Desc5": {
+    "message": "A lapok elaltatása már nem ugráltatja meg az egész listát. Ez az oldal és az üdvözlő oldal mostantól a Drowzyban választott világos vagy sötét témát követi. És ugyanannak a lapnak az ismételt elaltatása már nem fújja fel a statisztikáidat."
   }
 }

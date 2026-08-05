@@ -39,7 +39,7 @@
     "message": "Laman dalam senarai putih (klik untuk membuang)"
   },
   "activeWontSuspend": {
-    "message": "Aktif – tidak akan digantung"
+    "message": "Aktif - tidak akan digantung"
   },
   "loading": {
     "message": "Memuatkan..."
@@ -181,22 +181,19 @@
     "message": "Tiada tab digantung untuk dikejutkan"
   },
   "pinnedWontSuspend": {
-    "message": "Disemat — tidak akan digantung"
+    "message": "Disemat - tidak akan digantung"
   },
   "audioWontSuspend": {
-    "message": "Audio dimainkan — tidak akan digantung"
+    "message": "Audio dimainkan - tidak akan digantung"
   },
   "whitelistedWontSuspend": {
-    "message": "Dalam senarai putih — tidak akan digantung"
+    "message": "Dalam senarai putih - tidak akan digantung"
   },
   "systemPageCantSuspend": {
-    "message": "Halaman sistem — tidak boleh digantung"
+    "message": "Halaman sistem - tidak boleh digantung"
   },
   "clickToDismiss": {
     "message": "Klik untuk menutup"
-  },
-  "keepAwakeBtn": {
-    "message": "Kekalkan aktif"
   },
   "suspendTimerHint": {
     "message": "Tab yang anda tinggalkan akan digantung selepas tempoh ini. Tingkatkan jika anda kembali ke tab selepas jeda yang lama."
@@ -394,7 +391,7 @@
     "message": "Tiada tab yang boleh dipulihkan dalam sesi ini."
   },
   "sessionDefaultName": {
-    "message": "Sesi – $DATE$",
+    "message": "Sesi - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Selamat datang ke Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy menjimatkan memori dengan menidurkan tab yang tidak aktif. Tab anda sentiasa selamat – kami menggunakan API buang asli Chrome, jadi ia kekal walaupun anda menyahpasang Drowzy."
+    "message": "Drowzy menjimatkan memori dengan menidurkan tab yang tidak aktif. Tab anda sentiasa selamat - kami menggunakan API buang asli Chrome, jadi ia kekal walaupun anda menyahpasang Drowzy."
   },
   "howItWorks": {
     "message": "Cara ia berfungsi"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Tab yang tidur kini memaparkan petunjuk klik untuk bangunkan, dan halaman aluan menerangkan cara Drowzy berfungsi bersama Penjimat Memori terbina dalam pelayar anda."
+  },
+  "keepThisTabAwake": {
+    "message": "Kekalkan tab ini terjaga"
+  },
+  "allowSleep": {
+    "message": "Benarkan tidur"
+  },
+  "keptAwakeHint": {
+    "message": "Menghalang tab ini daripada tidur sehingga anda mematikannya atau menutup tab"
+  },
+  "allowSleepHint": {
+    "message": "Biarkan tab ini tidur seperti biasa semula"
+  },
+  "keptAwakeToast": {
+    "message": "Tab ini akan kekal terjaga"
+  },
+  "allowSleepToast": {
+    "message": "Tab ini boleh tidur semula"
+  },
+  "badgeAwake": {
+    "message": "Terjaga"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Dikekalkan terjaga - tidak akan ditidurkan"
+  },
+  "cantSuspendPinned": {
+    "message": "Tab yang disematkan dilindungi. Matikan \"Lindungi tab yang disematkan\" untuk menidurkan tab ini."
+  },
+  "cantSuspendAudio": {
+    "message": "Tab yang memainkan audio dilindungi. Matikan \"Lindungi tab audio\" untuk menidurkan tab ini."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Laman ini ada dalam senarai jangan sesekali tidurkan anda. Buang ia untuk menidurkan tab ini."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Perlukan tab lain yang terbuka untuk bertukar dahulu. Chrome tidak boleh menidurkan tab yang sedang anda lihat."
+  },
+  "openSettingsAction": {
+    "message": "Buka tetapan"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome tidak menidurkan tab ini"
+  },
+  "suspendFailedLoading": {
+    "message": "Masih memuatkan - cuba lagi sebentar"
+  },
+  "suspendFailedForm": {
+    "message": "Tidak ditidurkan - tab ini ada input yang belum disimpan"
+  },
+  "bannerNotNow": {
+    "message": "Bukan sekarang"
+  },
+  "changelog140Title1": {
+    "message": "Kekalkan tab ini terjaga"
+  },
+  "changelog140Desc1": {
+    "message": "Kekalkan satu tab terjaga tanpa memasukkan seluruh laman ke senarai putih. Drowzy tidak akan menidurkannya sehingga anda menekan \"Benarkan tidur\" atau menutup tab. Ia hilang apabila pelayar dimulakan semula."
+  },
+  "changelog140Title2": {
+    "message": "\"Lindungi tab audio\" kini berfungsi dua hala"
+  },
+  "changelog140Desc2": {
+    "message": "Mematikan \"Lindungi tab audio\" kini benar-benar membenarkan tab video dan muzik di latar belakang tidur. Sebelum ini ia ditolak walaupun tetapan dimatikan. Jika dihidupkan, tiada apa berubah."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy memberitahu anda kenapa tab tidak tidur"
+  },
+  "changelog140Desc3": {
+    "message": "\"Tidurkan tab ini\" tidak lagi hilang tanpa penjelasan. Apabila tab tidak boleh tidur, anda dapat sebabnya dan pintasan terus ke tetapan yang akan mengubahnya."
+  },
+  "changelog140Title4": {
+    "message": "Ikon tapak yang benar-benar muncul"
+  },
+  "changelog140Desc4": {
+    "message": "Ikon tab kini datang daripada cache pelayar anda, jadi tapak yang dahulu hanya menunjukkan huruf kelabu memaparkan ikon sebenarnya, termasuk semasa tidur. Ikon yang akan hilang pada tema yang anda guna dilaraskan supaya kekal kelihatan."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Mengira kira-kira 150 MB bagi setiap tab yang pernah ditidurkan Drowzy. Ini jumlah terkumpul dari masa ke masa, bukan memori yang kosong sekarang."
+  },
+  "privacyPermFavicon": {
+    "message": "Membaca cache favicon tempatan Chrome supaya ikon tapak dipaparkan dengan betul dalam senarai tab. Ini membaca cache yang sudah ada pada komputer anda dan tidak membuat sebarang permintaan rangkaian."
+  },
+  "changelog140Title5": {
+    "message": "Lebih tenang, dan angka yang boleh dipercayai"
+  },
+  "changelog140Desc5": {
+    "message": "Menidurkan tab tidak lagi membuat seluruh senarai melantun. Halaman ini dan halaman aluan kini mengikut tema cerah atau gelap yang anda pilih dalam Drowzy. Dan menidurkan tab yang sama berulang kali tidak lagi membesarkan statistik anda."
   }
 }

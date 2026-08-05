@@ -1,3 +1,13 @@
+// Honour the theme chosen with the popup's toggle; the CSS falls back to the
+// OS preference only when no explicit choice is stored. This page auto-opens
+// on the 1.4.0 update, so getting it wrong would be the first thing users see.
+try {
+  chrome.storage.local.get('theme', function(res) {
+    var t = res && res.theme;
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  });
+} catch (e) {}
+
 try {
   var uiLang = chrome.i18n.getUILanguage();
   document.documentElement.lang = uiLang;

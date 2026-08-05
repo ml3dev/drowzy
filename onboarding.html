@@ -164,8 +164,10 @@
     .cta-btn:hover { background: var(--color-accent-hover); }
     .cta-btn:active { transform: scale(0.98); }
 
+    /* OS preference, but only when the user has not chosen a theme in the popup.
+       Without the :not() this would override an explicit choice. */
     @media (prefers-color-scheme: light) {
-      :root {
+      :root:not([data-theme]) {
         --bg-base: #f8f6fb;
         --bg-surface: #ffffff;
         --bg-elevated: #f0edf5;
@@ -176,6 +178,19 @@
         --color-accent-hover: #6d28d9;
         --border-subtle: rgba(0, 0, 0, 0.08);
       }
+    }
+
+    /* explicit choice from the popup toggle, applied by the page script */
+    :root[data-theme="light"] {
+        --bg-base: #f8f6fb;
+        --bg-surface: #ffffff;
+        --bg-elevated: #f0edf5;
+        --color-text: #1a1525;
+        --color-text-secondary: #5c5470;
+        --color-text-tertiary: #8a819c;
+        --color-accent: #7c3aed;
+        --color-accent-hover: #6d28d9;
+        --border-subtle: rgba(0, 0, 0, 0.08);
     }
 
     @media (prefers-reduced-motion: reduce) {

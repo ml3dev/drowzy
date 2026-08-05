@@ -39,7 +39,7 @@
     "message": "Trang nằm trong danh sách trắng (nhấp để xóa)"
   },
   "activeWontSuspend": {
-    "message": "Đang hoạt động – sẽ không bị tạm ngưng"
+    "message": "Đang hoạt động - sẽ không bị tạm ngưng"
   },
   "loading": {
     "message": "Đang tải..."
@@ -181,22 +181,19 @@
     "message": "Không có tab tạm dừng nào để đánh thức"
   },
   "pinnedWontSuspend": {
-    "message": "Đã ghim — sẽ không bị tạm dừng"
+    "message": "Đã ghim - sẽ không bị tạm dừng"
   },
   "audioWontSuspend": {
-    "message": "Đang phát âm thanh — sẽ không bị tạm dừng"
+    "message": "Đang phát âm thanh - sẽ không bị tạm dừng"
   },
   "whitelistedWontSuspend": {
-    "message": "Trong danh sách trắng — sẽ không bị tạm dừng"
+    "message": "Trong danh sách trắng - sẽ không bị tạm dừng"
   },
   "systemPageCantSuspend": {
-    "message": "Trang hệ thống — không thể tạm dừng"
+    "message": "Trang hệ thống - không thể tạm dừng"
   },
   "clickToDismiss": {
     "message": "Nhấp để đóng"
-  },
-  "keepAwakeBtn": {
-    "message": "Giữ thức"
   },
   "suspendTimerHint": {
     "message": "Các thẻ bạn đã chuyển khỏi sẽ bị tạm dừng sau khoảng thời gian này. Tăng thời gian này nếu bạn thường quay lại các thẻ sau những khoảng nghỉ dài."
@@ -394,7 +391,7 @@
     "message": "Không có tab nào có thể khôi phục trong phiên này."
   },
   "sessionDefaultName": {
-    "message": "Phiên – $DATE$",
+    "message": "Phiên - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Chào mừng đến với Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy tiết kiệm bộ nhớ bằng cách đưa các tab không hoạt động vào chế độ ngủ. Tab của bạn luôn an toàn – chúng tôi sử dụng API loại bỏ gốc của Chrome, vì vậy chúng vẫn tồn tại ngay cả khi bạn gỡ cài đặt Drowzy."
+    "message": "Drowzy tiết kiệm bộ nhớ bằng cách đưa các tab không hoạt động vào chế độ ngủ. Tab của bạn luôn an toàn - chúng tôi sử dụng API loại bỏ gốc của Chrome, vì vậy chúng vẫn tồn tại ngay cả khi bạn gỡ cài đặt Drowzy."
   },
   "howItWorks": {
     "message": "Cách hoạt động"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Các tab đang ngủ giờ hiển thị gợi ý nhấp để đánh thức, và trang chào mừng giải thích cách Drowzy hoạt động cùng trình tiết kiệm bộ nhớ tích hợp của trình duyệt."
+  },
+  "keepThisTabAwake": {
+    "message": "Giữ thẻ này thức"
+  },
+  "allowSleep": {
+    "message": "Cho phép ngủ"
+  },
+  "keptAwakeHint": {
+    "message": "Ngăn thẻ này ngủ cho đến khi bạn tắt tùy chọn hoặc đóng thẻ"
+  },
+  "allowSleepHint": {
+    "message": "Để thẻ này ngủ bình thường trở lại"
+  },
+  "keptAwakeToast": {
+    "message": "Thẻ này sẽ luôn thức"
+  },
+  "allowSleepToast": {
+    "message": "Thẻ này có thể ngủ trở lại"
+  },
+  "badgeAwake": {
+    "message": "Đang thức"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Được giữ thức - sẽ không bị tạm dừng"
+  },
+  "cantSuspendPinned": {
+    "message": "Thẻ đã ghim được bảo vệ. Tắt \"Bảo vệ thẻ đã ghim\" để cho thẻ này ngủ."
+  },
+  "cantSuspendAudio": {
+    "message": "Thẻ đang phát âm thanh được bảo vệ. Tắt \"Bảo vệ thẻ có âm thanh\" để cho thẻ này ngủ."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Trang này nằm trong danh sách không bao giờ tạm dừng của bạn. Xóa nó đi để cho thẻ này ngủ."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Cần một thẻ đang mở khác để chuyển sang trước. Chrome không thể cho thẻ bạn đang xem ngủ."
+  },
+  "openSettingsAction": {
+    "message": "Mở cài đặt"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome đã không cho thẻ này ngủ"
+  },
+  "suspendFailedLoading": {
+    "message": "Vẫn đang tải - thử lại sau giây lát"
+  },
+  "suspendFailedForm": {
+    "message": "Chưa tạm dừng - thẻ này có nội dung nhập chưa lưu"
+  },
+  "bannerNotNow": {
+    "message": "Để sau"
+  },
+  "changelog140Title1": {
+    "message": "Giữ thẻ này thức"
+  },
+  "changelog140Desc1": {
+    "message": "Giữ một thẻ duy nhất luôn thức mà không cần đưa cả trang web vào danh sách trắng. Drowzy sẽ không cho nó ngủ cho đến khi bạn nhấn \"Cho phép ngủ\" hoặc đóng thẻ. Trạng thái này mất khi bạn khởi động lại trình duyệt."
+  },
+  "changelog140Title2": {
+    "message": "\"Bảo vệ thẻ có âm thanh\" giờ có tác dụng cả hai chiều"
+  },
+  "changelog140Desc2": {
+    "message": "Tắt \"Bảo vệ thẻ có âm thanh\" giờ thực sự cho phép các thẻ video và nhạc chạy nền được ngủ. Trước đây chúng vẫn bị từ chối ngay cả khi tùy chọn đã tắt. Nếu bật, không có gì thay đổi."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy cho bạn biết vì sao một thẻ không ngủ"
+  },
+  "changelog140Desc3": {
+    "message": "\"Tạm dừng thẻ này\" không còn biến mất mà không giải thích. Khi một thẻ không thể ngủ, bạn sẽ thấy lý do và lối tắt đi thẳng tới cài đặt có thể thay đổi điều đó."
+  },
+  "changelog140Title4": {
+    "message": "Biểu tượng trang web thực sự hiện ra"
+  },
+  "changelog140Desc4": {
+    "message": "Biểu tượng thẻ giờ lấy từ bộ nhớ đệm của trình duyệt, nên những trang trước đây chỉ hiện một chữ cái xám sẽ hiện biểu tượng thật, kể cả khi đang ngủ. Biểu tượng có thể chìm mất trong giao diện bạn đang dùng sẽ được chỉnh để vẫn nhìn rõ."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Tính khoảng 150 MB cho mỗi thẻ mà Drowzy từng cho ngủ. Đây là tổng cộng dồn theo thời gian, không phải bộ nhớ đang trống lúc này."
+  },
+  "privacyPermFavicon": {
+    "message": "Đọc bộ nhớ đệm favicon cục bộ của Chrome để biểu tượng trang web hiển thị đúng trong danh sách thẻ. Việc này đọc bộ nhớ đệm đã có sẵn trên máy bạn và không thực hiện yêu cầu mạng nào."
+  },
+  "changelog140Title5": {
+    "message": "Êm hơn, và những con số đáng tin"
+  },
+  "changelog140Desc5": {
+    "message": "Cho thẻ ngủ không còn làm cả danh sách nảy lên. Trang này và trang chào mừng giờ theo giao diện sáng hoặc tối bạn chọn trong Drowzy. Và cho cùng một thẻ ngủ đi ngủ lại không còn thổi phồng thống kê của bạn."
   }
 }

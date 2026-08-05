@@ -39,7 +39,7 @@
     "message": "Site beyaz listede (kaldırmak için tıklayın)"
   },
   "activeWontSuspend": {
-    "message": "Etkin – askıya alınmayacak"
+    "message": "Etkin - askıya alınmayacak"
   },
   "loading": {
     "message": "Yükleniyor..."
@@ -181,22 +181,19 @@
     "message": "Uyandırılacak askıya alınmış sekme yok"
   },
   "pinnedWontSuspend": {
-    "message": "Sabitlendi — askıya alınmayacak"
+    "message": "Sabitlendi - askıya alınmayacak"
   },
   "audioWontSuspend": {
-    "message": "Ses çalıyor — askıya alınmayacak"
+    "message": "Ses çalıyor - askıya alınmayacak"
   },
   "whitelistedWontSuspend": {
-    "message": "Beyaz listede — askıya alınmayacak"
+    "message": "Beyaz listede - askıya alınmayacak"
   },
   "systemPageCantSuspend": {
-    "message": "Sistem sayfası — askıya alınamaz"
+    "message": "Sistem sayfası - askıya alınamaz"
   },
   "clickToDismiss": {
     "message": "Kapatmak için tıklayın"
-  },
-  "keepAwakeBtn": {
-    "message": "Uyanık tut"
   },
   "suspendTimerHint": {
     "message": "Geçtiğiniz sekmeler bu süreden sonra askıya alınır. Uzun aralardan sonra sekmelere döndüğünüzü fark ederseniz bunu artırın."
@@ -394,7 +391,7 @@
     "message": "Bu oturumda geri yüklenebilir sekme yok."
   },
   "sessionDefaultName": {
-    "message": "Oturum – $DATE$",
+    "message": "Oturum - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Drowzy'ye Hoş Geldiniz"
   },
   "onboardingIntro": {
-    "message": "Drowzy, etkin olmayan sekmeleri uyku moduna alarak bellek tasarrufu sağlar. Sekmeleriniz her zaman güvendedir – Chrome'un yerel discard API'sini kullanırız, böylece Drowzy'yi kaldırsanız bile sekmeler kaybolmaz."
+    "message": "Drowzy, etkin olmayan sekmeleri uyku moduna alarak bellek tasarrufu sağlar. Sekmeleriniz her zaman güvendedir - Chrome'un yerel discard API'sini kullanırız, böylece Drowzy'yi kaldırsanız bile sekmeler kaybolmaz."
   },
   "howItWorks": {
     "message": "Nasıl çalışır"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Uyuyan sekmeler artık uyandırmak için tıklayın ipucu gösteriyor ve karşılama sayfası Drowzy'nin tarayıcınızın yerleşik bellek tasarrufuyla nasıl birlikte çalıştığını açıklıyor."
+  },
+  "keepThisTabAwake": {
+    "message": "Bu sekmeyi uyanık tut"
+  },
+  "allowSleep": {
+    "message": "Uyumasına izin ver"
+  },
+  "keptAwakeHint": {
+    "message": "Sen kapatana ya da sekmeyi kapatana kadar bu sekmenin uyumasını engeller"
+  },
+  "allowSleepHint": {
+    "message": "Bu sekmenin yeniden normal şekilde uyumasına izin ver"
+  },
+  "keptAwakeToast": {
+    "message": "Bu sekme uyanık kalacak"
+  },
+  "allowSleepToast": {
+    "message": "Bu sekme yeniden uyuyabilir"
+  },
+  "badgeAwake": {
+    "message": "Uyanık"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Uyanık tutuluyor - askıya alınmayacak"
+  },
+  "cantSuspendPinned": {
+    "message": "Sabitlenmiş sekmeler korunuyor. Bunu uyutmak için \"Sabitlenmiş sekmeleri koru\" seçeneğini kapat."
+  },
+  "cantSuspendAudio": {
+    "message": "Ses çalan sekmeler korunuyor. Bunu uyutmak için \"Sesli sekmeleri koru\" seçeneğini kapat."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Bu site asla askıya alma listende. Bu sekmeyi uyutmak için listeden çıkar."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Önce geçilecek başka bir açık sekme gerekiyor. Chrome baktığın sekmeyi uyutamaz."
+  },
+  "openSettingsAction": {
+    "message": "Ayarları aç"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome bu sekmeyi uyutmadı"
+  },
+  "suspendFailedLoading": {
+    "message": "Hâlâ yükleniyor - birazdan tekrar dene"
+  },
+  "suspendFailedForm": {
+    "message": "Askıya alınmadı - bu sekmede kaydedilmemiş girdi var"
+  },
+  "bannerNotNow": {
+    "message": "Şimdi değil"
+  },
+  "changelog140Title1": {
+    "message": "Bu sekmeyi uyanık tut"
+  },
+  "changelog140Desc1": {
+    "message": "Tüm siteyi beyaz listeye almadan tek bir sekmeyi uyanık tut. \"Uyumasına izin ver\" düğmesine basana ya da sekmeyi kapatana kadar Drowzy onu uyutmaz. Tarayıcıyı yeniden başlatınca kalkar."
+  },
+  "changelog140Title2": {
+    "message": "\"Sesli sekmeleri koru\" artık iki yönlü çalışıyor"
+  },
+  "changelog140Desc2": {
+    "message": "\"Sesli sekmeleri koru\" seçeneğini kapatmak artık arka plandaki video ve müzik sekmelerinin gerçekten uyumasını sağlıyor. Önceden ayar kapalıyken bile reddediliyorlardı. Açıkken hiçbir şey değişmiyor."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy bir sekmenin neden uyumadığını söylüyor"
+  },
+  "changelog140Desc3": {
+    "message": "\"Bu sekmeyi askıya al\" artık açıklamasız kaybolmuyor. Bir sekme uyuyamadığında nedenini ve bunu değiştirecek ayara giden kısayolu görüyorsun."
+  },
+  "changelog140Title4": {
+    "message": "Gerçekten görünen site simgeleri"
+  },
+  "changelog140Desc4": {
+    "message": "Sekme simgeleri artık tarayıcının kendi önbelleğinden geliyor; eskiden yalnızca gri bir harf gösteren siteler, uykudayken bile gerçek simgesini gösteriyor. Kullandığın temada kaybolacak simgeler görünür kalsın diye ayarlanıyor."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Drowzy'nin şimdiye kadar uyuttuğu her sekme için yaklaşık 150 MB sayar. Zaman içinde biriken bir toplamdır, şu anda boş olan bellek değil."
+  },
+  "privacyPermFavicon": {
+    "message": "Sekme listesinde site simgelerinin doğru görünmesi için Chrome'un yerel favicon önbelleğini okumak. Bu, bilgisayarınızda zaten bulunan bir önbelleği okur ve hiçbir ağ isteği yapmaz."
+  },
+  "changelog140Title5": {
+    "message": "Daha sakin ve güvenilir sayılar"
+  },
+  "changelog140Desc5": {
+    "message": "Sekmeleri uyutmak artık tüm listeyi zıplatmıyor. Bu sayfa ve karşılama sayfası artık Drowzy'de seçtiğin açık veya koyu temayı izliyor. Ayrıca aynı sekmeyi tekrar tekrar uyutmak toplam istatistiklerini şişirmiyor."
   }
 }

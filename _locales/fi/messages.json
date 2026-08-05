@@ -39,7 +39,7 @@
     "message": "Sivusto on sallittujen listalla (poista napsauttamalla)"
   },
   "activeWontSuspend": {
-    "message": "Aktiivinen – ei keskeytetä"
+    "message": "Aktiivinen - ei keskeytetä"
   },
   "loading": {
     "message": "Ladataan..."
@@ -181,22 +181,19 @@
     "message": "Ei pysäytettyjä välilehtiä herätettäväksi"
   },
   "pinnedWontSuspend": {
-    "message": "Kiinnitetty — ei pysäytetä"
+    "message": "Kiinnitetty - ei pysäytetä"
   },
   "audioWontSuspend": {
-    "message": "Ääni soi — ei pysäytetä"
+    "message": "Ääni soi - ei pysäytetä"
   },
   "whitelistedWontSuspend": {
-    "message": "Sallittujen luettelossa — ei pysäytetä"
+    "message": "Sallittujen luettelossa - ei pysäytetä"
   },
   "systemPageCantSuspend": {
-    "message": "Järjestelmäsivu — ei voi pysäyttää"
+    "message": "Järjestelmäsivu - ei voi pysäyttää"
   },
   "clickToDismiss": {
     "message": "Sulje napsauttamalla"
-  },
-  "keepAwakeBtn": {
-    "message": "Pidä hereillä"
   },
   "suspendTimerHint": {
     "message": "Välilehdet, joista vaihdoit pois, suspendataan tämän ajan kuluttua. Lisää aikaa, jos palaat välilehtiin pitkien taukojen jälkeen."
@@ -394,7 +391,7 @@
     "message": "Tässä istunnossa ei ole palautettavia välilehtiä."
   },
   "sessionDefaultName": {
-    "message": "Istunto – $DATE$",
+    "message": "Istunto - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Tervetuloa Drowzyyn"
   },
   "onboardingIntro": {
-    "message": "Drowzy säästää muistia laittamalla käyttämättömät välilehdet nukkumaan. Välilehtesi ovat aina turvassa – käytämme Chromen natiivihylkäys-API:a, joten ne säilyvät vaikka poistaisit Drowzyn."
+    "message": "Drowzy säästää muistia laittamalla käyttämättömät välilehdet nukkumaan. Välilehtesi ovat aina turvassa - käytämme Chromen natiivihylkäys-API:a, joten ne säilyvät vaikka poistaisit Drowzyn."
   },
   "howItWorks": {
     "message": "Miten se toimii"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Nukkuvat välilehdet näyttävät nyt herätä napsauttamalla -vihjeen, ja tervetulosivu selittää, miten Drowzy toimii selaimen sisäänrakennetun muistinsäästäjän rinnalla."
+  },
+  "keepThisTabAwake": {
+    "message": "Pidä tämä välilehti hereillä"
+  },
+  "allowSleep": {
+    "message": "Salli nukkuminen"
+  },
+  "keptAwakeHint": {
+    "message": "Estää tätä välilehteä nukahtamasta, kunnes poistat asetuksen tai suljet välilehden"
+  },
+  "allowSleepHint": {
+    "message": "Anna tämän välilehden taas nukahtaa normaalisti"
+  },
+  "keptAwakeToast": {
+    "message": "Tämä välilehti pysyy hereillä"
+  },
+  "allowSleepToast": {
+    "message": "Tämä välilehti voi taas nukahtaa"
+  },
+  "badgeAwake": {
+    "message": "Hereillä"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Pidetään hereillä - ei nukuteta"
+  },
+  "cantSuspendPinned": {
+    "message": "Kiinnitetyt välilehdet on suojattu. Poista käytöstä \"Suojaa kiinnitetyt välilehdet\" nukuttaaksesi tämän."
+  },
+  "cantSuspendAudio": {
+    "message": "Ääntä toistavat välilehdet on suojattu. Poista käytöstä \"Suojaa äänivälilehdet\" nukuttaaksesi tämän."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Tämä sivusto on älä koskaan nukuta -listallasi. Poista se nukuttaaksesi tämän välilehden."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Tarvitaan toinen avoin välilehti, johon vaihtaa ensin. Chrome ei voi nukuttaa välilehteä, jota katsot."
+  },
+  "openSettingsAction": {
+    "message": "Avaa asetukset"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome ei nukuttanut tätä välilehteä"
+  },
+  "suspendFailedLoading": {
+    "message": "Latautuu vielä - yritä hetken kuluttua uudelleen"
+  },
+  "suspendFailedForm": {
+    "message": "Ei nukutettu - välilehdellä on tallentamatonta syötettä"
+  },
+  "bannerNotNow": {
+    "message": "Ei nyt"
+  },
+  "changelog140Title1": {
+    "message": "Pidä tämä välilehti hereillä"
+  },
+  "changelog140Desc1": {
+    "message": "Pidä yksittäinen välilehti hereillä lisäämättä koko sivustoa sallittujen listalle. Drowzy ei nukuta sitä, ennen kuin painat \"Salli nukkuminen\" tai suljet välilehden. Selaimen uudelleenkäynnistys poistaa sen."
+  },
+  "changelog140Title2": {
+    "message": "\"Suojaa äänivälilehdet\" toimii nyt molempiin suuntiin"
+  },
+  "changelog140Desc2": {
+    "message": "Kun poistat \"Suojaa äänivälilehdet\" käytöstä, taustalla olevat video- ja musiikkivälilehdet todella nukahtavat nyt. Aiemmin ne hylättiin, vaikka asetus oli pois päältä. Päällä ollessa mikään ei muutu."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy kertoo, miksi välilehti ei nukahda"
+  },
+  "changelog140Desc3": {
+    "message": "\"Nukuta tämä välilehti\" ei enää katoa selittämättä. Kun välilehti ei voi nukahtaa, saat syyn ja oikotien suoraan asetukseen, joka muuttaisi sen."
+  },
+  "changelog140Title4": {
+    "message": "Sivustokuvakkeet, jotka oikeasti näkyvät"
+  },
+  "changelog140Desc4": {
+    "message": "Välilehtien kuvakkeet tulevat nyt selaimen omasta välimuistista, joten sivustot, jotka ennen näyttivät vain harmaan kirjaimen, näyttävät oikean kuvakkeensa, myös nukkuessaan. Kuvakkeet, jotka katoaisivat käyttämääsi teemaan, säädetään näkyviksi."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Laskee noin 150 Mt jokaista Drowzyn nukuttamaa välilehteä kohden. Se on ajan myötä kertyvä summa, ei juuri nyt vapaana oleva muisti."
+  },
+  "privacyPermFavicon": {
+    "message": "Chromen paikallisen kuvakevälimuistin lukeminen, jotta sivustojen kuvakkeet näkyvät oikein välilehtiluettelossa. Tämä lukee tietokoneellasi jo olevaa välimuistia eikä tee verkkopyyntöjä."
+  },
+  "changelog140Title5": {
+    "message": "Rauhallisempi, ja luvut joihin voi luottaa"
+  },
+  "changelog140Desc5": {
+    "message": "Välilehtien nukuttaminen ei enää saa koko listaa pomppimaan. Tämä sivu ja tervetulosivu noudattavat nyt Drowzyssa valitsemaasi vaaleaa tai tummaa teemaa. Eikä saman välilehden toistuva nukuttaminen enää paisuta tilastojasi."
   }
 }

@@ -39,7 +39,7 @@
     "message": "Website ist auf der Whitelist (klicken zum Entfernen)"
   },
   "activeWontSuspend": {
-    "message": "Aktiv – wird nicht suspendiert"
+    "message": "Aktiv - wird nicht suspendiert"
   },
   "loading": {
     "message": "Wird geladen..."
@@ -181,22 +181,19 @@
     "message": "Keine suspendierten Tabs zum Aufwecken"
   },
   "pinnedWontSuspend": {
-    "message": "Angeheftet — wird nicht suspendiert"
+    "message": "Angeheftet - wird nicht suspendiert"
   },
   "audioWontSuspend": {
-    "message": "Audio läuft — wird nicht suspendiert"
+    "message": "Audio läuft - wird nicht suspendiert"
   },
   "whitelistedWontSuspend": {
-    "message": "Auf der Whitelist — wird nicht suspendiert"
+    "message": "Auf der Whitelist - wird nicht suspendiert"
   },
   "systemPageCantSuspend": {
-    "message": "Systemseite — kann nicht suspendiert werden"
+    "message": "Systemseite - kann nicht suspendiert werden"
   },
   "clickToDismiss": {
     "message": "Zum Schließen klicken"
-  },
-  "keepAwakeBtn": {
-    "message": "Aktiv halten"
   },
   "suspendTimerHint": {
     "message": "Tabs, von denen du weggewechselt hast, werden nach dieser Zeit suspendiert. Erhöhe sie, wenn du nach längeren Pausen zu Tabs zurückkehrst."
@@ -394,7 +391,7 @@
     "message": "Keine wiederherstellbaren Tabs in dieser Sitzung."
   },
   "sessionDefaultName": {
-    "message": "Sitzung – $DATE$",
+    "message": "Sitzung - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Willkommen bei Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy spart Arbeitsspeicher, indem inaktive Tabs in den Schlafmodus versetzt werden. Ihre Tabs sind immer sicher – wir verwenden Chromes native Discard-API, sodass sie auch nach der Deinstallation von Drowzy erhalten bleiben."
+    "message": "Drowzy spart Arbeitsspeicher, indem inaktive Tabs in den Schlafmodus versetzt werden. Ihre Tabs sind immer sicher - wir verwenden Chromes native Discard-API, sodass sie auch nach der Deinstallation von Drowzy erhalten bleiben."
   },
   "howItWorks": {
     "message": "So funktioniert es"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Schlafende Tabs zeigen jetzt einen Hinweis „Klicken zum Aufwecken“, und die Willkommensseite erklärt, wie Drowzy mit dem integrierten Speichersparmodus des Browsers zusammenarbeitet."
+  },
+  "keepThisTabAwake": {
+    "message": "Diesen Tab wach halten"
+  },
+  "allowSleep": {
+    "message": "Schlafen erlauben"
+  },
+  "keptAwakeHint": {
+    "message": "Verhindert, dass dieser Tab schlafen geht, bis du es ausschaltest oder den Tab schließt"
+  },
+  "allowSleepHint": {
+    "message": "Diesen Tab wieder normal schlafen lassen"
+  },
+  "keptAwakeToast": {
+    "message": "Dieser Tab bleibt wach"
+  },
+  "allowSleepToast": {
+    "message": "Dieser Tab darf wieder schlafen"
+  },
+  "badgeAwake": {
+    "message": "Wach"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Wach gehalten - wird nicht schlafen gelegt"
+  },
+  "cantSuspendPinned": {
+    "message": "Angeheftete Tabs sind geschützt. Schalte \"Angeheftete Tabs schützen\" aus, um diesen schlafen zu legen."
+  },
+  "cantSuspendAudio": {
+    "message": "Tabs mit Ton sind geschützt. Schalte \"Tabs mit Ton schützen\" aus, um diesen schlafen zu legen."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Diese Seite steht auf deiner Nie-schlafen-Liste. Entferne sie, um den Tab schlafen zu legen."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Es muss ein anderer Tab offen sein, zu dem gewechselt werden kann. Chrome kann den Tab, den du gerade ansiehst, nicht schlafen legen."
+  },
+  "openSettingsAction": {
+    "message": "Einstellungen öffnen"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome konnte diesen Tab nicht schlafen legen"
+  },
+  "suspendFailedLoading": {
+    "message": "Lädt noch - versuche es gleich noch einmal"
+  },
+  "suspendFailedForm": {
+    "message": "Nicht schlafen gelegt - dieser Tab hat nicht gespeicherte Eingaben"
+  },
+  "bannerNotNow": {
+    "message": "Jetzt nicht"
+  },
+  "changelog140Title1": {
+    "message": "Diesen Tab wach halten"
+  },
+  "changelog140Desc1": {
+    "message": "Halte einen einzelnen Tab wach, ohne die ganze Seite auf die Whitelist zu setzen. Drowzy legt ihn nicht schlafen, bis du \"Schlafen erlauben\" drückst oder den Tab schließt. Beim Neustart des Browsers wird die Sperre aufgehoben."
+  },
+  "changelog140Title2": {
+    "message": "\"Tabs mit Ton schützen\" wirkt jetzt in beide Richtungen"
+  },
+  "changelog140Desc2": {
+    "message": "Wenn du \"Tabs mit Ton schützen\" ausschaltest, dürfen Video- und Musik-Tabs im Hintergrund jetzt wirklich schlafen. Vorher wurden sie auch bei ausgeschalteter Option abgelehnt. Bei eingeschalteter Option ändert sich nichts."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy sagt dir, warum ein Tab nicht schläft"
+  },
+  "changelog140Desc3": {
+    "message": "\"Diesen Tab schlafen legen\" verschwindet nicht mehr kommentarlos. Wenn ein Tab nicht schlafen kann, bekommst du den Grund und einen direkten Weg zu der Einstellung, die das ändern würde."
+  },
+  "changelog140Title4": {
+    "message": "Website-Symbole, die wirklich erscheinen"
+  },
+  "changelog140Desc4": {
+    "message": "Tab-Symbole kommen jetzt aus dem Cache deines Browsers. Seiten, die vorher nur einen grauen Buchstaben zeigten, haben nun ihr echtes Symbol, auch im Schlafmodus. Symbole, die im aktuellen Design untergehen würden, werden angepasst, damit du sie noch siehst."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Rechnet etwa 150 MB für jeden Tab, den Drowzy je schlafen gelegt hat. Das ist eine laufende Summe über die Zeit, kein aktuell freier Speicher."
+  },
+  "privacyPermFavicon": {
+    "message": "Liest den lokalen Favicon-Cache von Chrome, damit Website-Symbole in der Tab-Liste korrekt angezeigt werden. Das liest einen Cache, der bereits auf deinem Rechner liegt, und stellt keine Netzwerkanfrage."
+  },
+  "changelog140Title5": {
+    "message": "Ruhiger, und Zahlen, denen du trauen kannst"
+  },
+  "changelog140Desc5": {
+    "message": "Beim Schlafenlegen hüpft nicht mehr die ganze Liste. Diese Seite und die Willkommensseite folgen jetzt dem hellen oder dunklen Design, das du in Drowzy gewählt hast. Und denselben Tab immer wieder schlafen zu legen bläht deine Gesamtstatistik nicht mehr auf."
   }
 }

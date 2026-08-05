@@ -39,7 +39,7 @@
     "message": "Site na lista de permissões (clique para remover)"
   },
   "activeWontSuspend": {
-    "message": "Ativa – não será suspensa"
+    "message": "Ativa - não será suspensa"
   },
   "loading": {
     "message": "Carregando..."
@@ -181,22 +181,19 @@
     "message": "Sem guias suspensas para reativar"
   },
   "pinnedWontSuspend": {
-    "message": "Fixada — não será suspensa"
+    "message": "Fixada - não será suspensa"
   },
   "audioWontSuspend": {
-    "message": "Reproduzindo áudio — não será suspensa"
+    "message": "Reproduzindo áudio - não será suspensa"
   },
   "whitelistedWontSuspend": {
-    "message": "Na lista branca — não será suspensa"
+    "message": "Na lista branca - não será suspensa"
   },
   "systemPageCantSuspend": {
-    "message": "Página do sistema — não pode ser suspensa"
+    "message": "Página do sistema - não pode ser suspensa"
   },
   "clickToDismiss": {
     "message": "Clique para fechar"
-  },
-  "keepAwakeBtn": {
-    "message": "Manter ativa"
   },
   "suspendTimerHint": {
     "message": "As guias das quais você saiu são suspensas após este tempo. Aumente-o se você volta às guias após longas pausas."
@@ -394,7 +391,7 @@
     "message": "Nenhuma aba restaurável nesta sessão."
   },
   "sessionDefaultName": {
-    "message": "Sessão – $DATE$",
+    "message": "Sessão - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Bem-vindo ao Drowzy"
   },
   "onboardingIntro": {
-    "message": "O Drowzy economiza memória colocando abas inativas para dormir. Suas abas estão sempre seguras – usamos a API nativa de descarte do Chrome, então elas sobrevivem mesmo se você desinstalar o Drowzy."
+    "message": "O Drowzy economiza memória colocando abas inativas para dormir. Suas abas estão sempre seguras - usamos a API nativa de descarte do Chrome, então elas sobrevivem mesmo se você desinstalar o Drowzy."
   },
   "howItWorks": {
     "message": "Como funciona"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "As abas dormindo agora mostram uma dica de clique para despertar, e a página de boas-vindas explica como o Drowzy funciona junto com a Economia de memória integrada do navegador."
+  },
+  "keepThisTabAwake": {
+    "message": "Manter esta aba acordada"
+  },
+  "allowSleep": {
+    "message": "Permitir dormir"
+  },
+  "keptAwakeHint": {
+    "message": "Impede que esta aba durma até você desativar ou fechá-la"
+  },
+  "allowSleepHint": {
+    "message": "Deixar esta aba voltar a dormir normalmente"
+  },
+  "keptAwakeToast": {
+    "message": "Esta aba vai ficar acordada"
+  },
+  "allowSleepToast": {
+    "message": "Esta aba já pode dormir"
+  },
+  "badgeAwake": {
+    "message": "Acordada"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Mantida acordada - não será suspensa"
+  },
+  "cantSuspendPinned": {
+    "message": "Abas fixadas estão protegidas. Desative \"Proteger abas fixadas\" para suspender esta."
+  },
+  "cantSuspendAudio": {
+    "message": "Abas com áudio estão protegidas. Desative \"Proteger abas com áudio\" para suspender esta."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Este site está na sua lista de nunca suspender. Remova-o para suspender esta aba."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "É preciso outra aba aberta para trocar antes. O Chrome não consegue suspender a aba que você está vendo."
+  },
+  "openSettingsAction": {
+    "message": "Abrir configurações"
+  },
+  "suspendFailedGeneric": {
+    "message": "O Chrome não quis suspender esta aba"
+  },
+  "suspendFailedLoading": {
+    "message": "Ainda carregando - tente de novo daqui a pouco"
+  },
+  "suspendFailedForm": {
+    "message": "Não suspensa - esta aba tem texto não salvo"
+  },
+  "bannerNotNow": {
+    "message": "Agora não"
+  },
+  "changelog140Title1": {
+    "message": "Manter esta aba acordada"
+  },
+  "changelog140Desc1": {
+    "message": "Mantenha uma única aba acordada sem colocar o site inteiro na lista branca. O Drowzy não vai suspendê-la até você apertar \"Permitir dormir\" ou fechar a aba. A retenção some quando você reinicia o navegador."
+  },
+  "changelog140Title2": {
+    "message": "\"Proteger abas com áudio\" agora funciona nos dois sentidos"
+  },
+  "changelog140Desc2": {
+    "message": "Desativar \"Proteger abas com áudio\" agora realmente deixa abas de vídeo e música em segundo plano dormirem. Antes elas eram recusadas mesmo com a opção desligada. Com a opção ligada, nada muda."
+  },
+  "changelog140Title3": {
+    "message": "O Drowzy diz por que uma aba não dorme"
+  },
+  "changelog140Desc3": {
+    "message": "\"Suspender esta aba\" não some mais sem explicação. Quando uma aba não pode dormir, você recebe o motivo e um atalho direto para a configuração que mudaria isso."
+  },
+  "changelog140Title4": {
+    "message": "Ícones de sites que realmente aparecem"
+  },
+  "changelog140Desc4": {
+    "message": "Os ícones das abas agora vêm do cache do seu navegador, então sites que antes mostravam só uma letra cinza exibem o ícone real, mesmo dormindo. Ícones que sumiriam no tema que você usa são ajustados para continuarem visíveis."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Conta cerca de 150 MB para cada aba que o Drowzy já suspendeu. É um total acumulado ao longo do tempo, não memória livre agora."
+  },
+  "privacyPermFavicon": {
+    "message": "Ler o cache local de favicons do Chrome para que os ícones dos sites apareçam corretamente na lista de abas. Isso lê um cache que já está no seu computador e não faz nenhuma requisição de rede."
+  },
+  "changelog140Title5": {
+    "message": "Mais calmo, e números confiáveis"
+  },
+  "changelog140Desc5": {
+    "message": "Suspender abas não faz mais a lista inteira pular. Esta página e a de boas-vindas agora seguem o tema claro ou escuro que você escolheu no Drowzy. E dormir a mesma aba repetidamente não infla mais suas estatísticas."
   }
 }

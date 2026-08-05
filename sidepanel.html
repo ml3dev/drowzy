@@ -74,11 +74,16 @@
           <div class="current-tab-details">
             <div class="current-tab-domain" id="currentTabDomain">&mdash;</div>
             <div class="current-tab-status" id="currentTabStatus">&mdash;</div>
+            <button class="current-tab-fix" id="btnCurrentTabFix" type="button" style="display:none;"></button>
           </div>
         </div>
         <button class="btn btn-suspend-current" id="btnSuspendCurrent" data-i18n-title="suspendThisTabHint" style="display:none;">
           <span class="btn-icon" data-icon="moon"></span>
           <span class="btn-text" data-i18n="ctxSuspendThis">Suspend this tab</span>
+        </button>
+        <button class="btn btn-keep-awake" id="btnKeepAwake" data-i18n-title="keptAwakeHint" style="display:none;">
+          <span class="btn-icon" data-icon="coffee"></span>
+          <span class="btn-text" data-i18n="keepThisTabAwake">Keep this tab awake</span>
         </button>
         <button class="btn btn-whitelist" id="btnToggleWhitelist">
           <span class="btn-icon" data-icon="shield"></span>
@@ -152,7 +157,7 @@
           </button>
           <div class="section-body" id="statsBody">
             <div class="section-body-inner">
-              <div class="stat-hero" data-i18n-title="ramEstimateTooltip" title="Estimated using ~150 MB per suspended tab. Actual savings vary by page.">
+              <div class="stat-hero" data-i18n-title="ramLifetimeTooltip" title="Counts about 150 MB for every tab Drowzy has ever put to sleep. It is a running total over time, not memory that is free right now.">
                 <span class="stat-hero-icon" data-icon="zap"></span>
                 <div class="stat-hero-content">
                   <span class="stat-hero-value" id="statRamAllTime">&mdash;</span>

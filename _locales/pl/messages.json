@@ -39,7 +39,7 @@
     "message": "Strona jest na białej liście (kliknij, aby usunąć)"
   },
   "activeWontSuspend": {
-    "message": "Aktywna – nie zostanie uśpiona"
+    "message": "Aktywna - nie zostanie uśpiona"
   },
   "loading": {
     "message": "Ładowanie..."
@@ -181,22 +181,19 @@
     "message": "Brak zawieszonych kart do wybudzenia"
   },
   "pinnedWontSuspend": {
-    "message": "Przypięta — nie zostanie zawieszona"
+    "message": "Przypięta - nie zostanie zawieszona"
   },
   "audioWontSuspend": {
-    "message": "Odtwarza dźwięk — nie zostanie zawieszona"
+    "message": "Odtwarza dźwięk - nie zostanie zawieszona"
   },
   "whitelistedWontSuspend": {
-    "message": "Na białej liście — nie zostanie zawieszona"
+    "message": "Na białej liście - nie zostanie zawieszona"
   },
   "systemPageCantSuspend": {
-    "message": "Strona systemowa — nie można zawiesić"
+    "message": "Strona systemowa - nie można zawiesić"
   },
   "clickToDismiss": {
     "message": "Kliknij, aby zamknąć"
-  },
-  "keepAwakeBtn": {
-    "message": "Pozostaw aktywną"
   },
   "suspendTimerHint": {
     "message": "Karty, z których przeszedłeś, są zawieszane po tym czasie. Zwiększ go, jeśli wracasz do kart po dłuższych przerwach."
@@ -394,7 +391,7 @@
     "message": "Brak kart do przywrócenia w tej sesji."
   },
   "sessionDefaultName": {
-    "message": "Sesja – $DATE$",
+    "message": "Sesja - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Witaj w Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy oszczędza pamięć, usypiając nieaktywne karty. Twoje karty są zawsze bezpieczne – używamy natywnego API odrzucania Chrome, więc przetrwają nawet po odinstalowaniu Drowzy."
+    "message": "Drowzy oszczędza pamięć, usypiając nieaktywne karty. Twoje karty są zawsze bezpieczne - używamy natywnego API odrzucania Chrome, więc przetrwają nawet po odinstalowaniu Drowzy."
   },
   "howItWorks": {
     "message": "Jak to działa"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Uśpione karty pokazują teraz podpowiedź kliknij, aby obudzić, a strona powitalna wyjaśnia, jak Drowzy współdziała z wbudowanym oszczędzaniem pamięci przeglądarki."
+  },
+  "keepThisTabAwake": {
+    "message": "Nie usypiaj tej karty"
+  },
+  "allowSleep": {
+    "message": "Pozwól zasnąć"
+  },
+  "keptAwakeHint": {
+    "message": "Zapobiega uśpieniu tej karty, dopóki tego nie wyłączysz lub nie zamkniesz karty"
+  },
+  "allowSleepHint": {
+    "message": "Pozwól tej karcie znowu zasypiać normalnie"
+  },
+  "keptAwakeToast": {
+    "message": "Ta karta pozostanie aktywna"
+  },
+  "allowSleepToast": {
+    "message": "Ta karta może znowu zasnąć"
+  },
+  "badgeAwake": {
+    "message": "Aktywna"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Utrzymywana aktywna - nie zostanie uśpiona"
+  },
+  "cantSuspendPinned": {
+    "message": "Przypięte karty są chronione. Wyłącz \"Chroń przypięte karty\", aby uśpić tę kartę."
+  },
+  "cantSuspendAudio": {
+    "message": "Karty odtwarzające dźwięk są chronione. Wyłącz \"Chroń karty z dźwiękiem\", aby uśpić tę kartę."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Ta witryna jest na liście \"nigdy nie usypiaj\". Usuń ją, aby uśpić tę kartę."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Potrzebna jest inna otwarta karta, na którą można przełączyć. Chrome nie może uśpić karty, którą właśnie oglądasz."
+  },
+  "openSettingsAction": {
+    "message": "Otwórz ustawienia"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome nie uśpił tej karty"
+  },
+  "suspendFailedLoading": {
+    "message": "Wciąż się wczytuje - spróbuj za chwilę"
+  },
+  "suspendFailedForm": {
+    "message": "Nie uśpiono - ta karta ma niezapisane dane"
+  },
+  "bannerNotNow": {
+    "message": "Nie teraz"
+  },
+  "changelog140Title1": {
+    "message": "Nie usypiaj tej karty"
+  },
+  "changelog140Desc1": {
+    "message": "Utrzymaj jedną kartę aktywną bez dodawania całej witryny do białej listy. Drowzy jej nie uśpi, dopóki nie naciśniesz \"Pozwól zasnąć\" lub nie zamkniesz karty. Blokada znika po ponownym uruchomieniu przeglądarki."
+  },
+  "changelog140Title2": {
+    "message": "\"Chroń karty z dźwiękiem\" działa teraz w obie strony"
+  },
+  "changelog140Desc2": {
+    "message": "Wyłączenie \"Chroń karty z dźwiękiem\" naprawdę pozwala teraz uśpić karty z wideo i muzyką w tle. Wcześniej były odrzucane nawet przy wyłączonej opcji. Przy włączonej nic się nie zmienia."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy mówi, dlaczego karta nie zasypia"
+  },
+  "changelog140Desc3": {
+    "message": "\"Uśpij tę kartę\" nie znika już bez wyjaśnienia. Gdy karta nie może zasnąć, dostajesz powód i skrót prosto do ustawienia, które by to zmieniło."
+  },
+  "changelog140Title4": {
+    "message": "Ikony witryn, które naprawdę się pokazują"
+  },
+  "changelog140Desc4": {
+    "message": "Ikony kart pochodzą teraz z pamięci podręcznej przeglądarki, więc witryny, które wcześniej pokazywały tylko szarą literę, mają swoją prawdziwą ikonę, także gdy śpią. Ikony, które zniknęłyby w używanym motywie, są dostosowywane, byś nadal je widział."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Liczy około 150 MB za każdą kartę, którą Drowzy kiedykolwiek uśpił. To suma narastająca w czasie, a nie pamięć wolna w tej chwili."
+  },
+  "privacyPermFavicon": {
+    "message": "Odczyt lokalnej pamięci podręcznej faviconów Chrome, aby ikony witryn wyświetlały się poprawnie na liście kart. Odczytuje pamięć podręczną już obecną na Twoim komputerze i nie wykonuje żadnego zapytania sieciowego."
+  },
+  "changelog140Title5": {
+    "message": "Spokojniej i liczby, którym można ufać"
+  },
+  "changelog140Desc5": {
+    "message": "Usypianie kart nie sprawia już, że cała lista podskakuje. Ta strona i strona powitalna podążają teraz za jasnym lub ciemnym motywem wybranym w Drowzy. A ponowne usypianie tej samej karty w kółko nie zawyża już statystyk."
   }
 }

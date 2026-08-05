@@ -257,8 +257,10 @@
       color: var(--color-text-tertiary);
     }
 
+    /* OS preference, but only when the user has not picked a theme in the
+       popup. Without the :not() this would override an explicit choice. */
     @media (prefers-color-scheme: light) {
-      :root {
+      :root:not([data-theme]) {
         --bg-base: #f8f6fb;
         --bg-surface: #ffffff;
         --bg-elevated: #f0edf5;
@@ -279,7 +281,30 @@
         --border-default: rgba(0, 0, 0, 0.12);
         --border-accent: rgba(124, 58, 237, 0.25);
       }
-    }
+      }
+
+    /* explicit choice from the popup toggle, applied by the page script */
+    :root[data-theme="light"] {
+        --bg-base: #f8f6fb;
+        --bg-surface: #ffffff;
+        --bg-elevated: #f0edf5;
+        --bg-overlay: #e0dcea;
+        --color-text: #1a1525;
+        --color-text-secondary: #5c5470;
+        --color-text-tertiary: #8a819c;
+        --color-accent: #7c3aed;
+        --color-accent-hover: #6d28d9;
+        --color-accent-dim: rgba(124, 58, 237, 0.1);
+        --color-green: #059669;
+        --color-green-dim: rgba(5, 150, 105, 0.1);
+        --color-blue: #2563eb;
+        --color-blue-dim: rgba(37, 99, 235, 0.1);
+        --color-amber: #d97706;
+        --color-amber-dim: rgba(217, 119, 6, 0.1);
+        --border-subtle: rgba(0, 0, 0, 0.06);
+        --border-default: rgba(0, 0, 0, 0.12);
+        --border-accent: rgba(124, 58, 237, 0.25);
+      }
 
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; transition-duration: 1ms !important; }
@@ -299,6 +324,55 @@
       <span class="dot"></span>
       <span class="version-label"></span>
     </div>
+
+    <div class="section-label"><span data-i18n="changelogReleaseHeading">What's new in</span> 1.4.0</div>
+    <ul class="change-list">
+      <li class="change-item">
+        <div class="change-icon feature">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title" data-i18n="changelog140Title1">Keep this tab awake</div>
+          <div class="change-desc" data-i18n="changelog140Desc1">Hold a single tab awake without whitelisting the whole site. Drowzy won't sleep it until you press Allow sleep or close the tab. The hold clears when you restart your browser.</div>
+        </div>
+      </li>
+      <li class="change-item">
+        <div class="change-icon fix">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M22 9 16 15"/><path d="m16 9 6 6"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title" data-i18n="changelog140Title2">Protect audio tabs now works both ways</div>
+          <div class="change-desc" data-i18n="changelog140Desc2">Turning off Protect audio tabs really does let background video and music tabs sleep now. Before, they were refused even with the setting off. With it on, nothing changes.</div>
+        </div>
+      </li>
+      <li class="change-item">
+        <div class="change-icon feature">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title" data-i18n="changelog140Title3">Drowzy tells you why a tab won't sleep</div>
+          <div class="change-desc" data-i18n="changelog140Desc3">Suspend this tab no longer disappears without explanation. When a tab can't sleep, you get the reason, and a shortcut straight to the setting that would change it.</div>
+        </div>
+      </li>
+      <li class="change-item">
+        <div class="change-icon feature">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title" data-i18n="changelog140Title4">Site icons that actually show up</div>
+          <div class="change-desc" data-i18n="changelog140Desc4">Tab icons now come from your browser's own cache, so sites that used to fall back to a grey letter show their real icon, including while they are asleep. Icons that would vanish against the theme you are using are adjusted so you can still see them.</div>
+        </div>
+      </li>
+      <li class="change-item">
+        <div class="change-icon meta">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title" data-i18n="changelog140Title5">Calmer, and counts you can trust</div>
+          <div class="change-desc" data-i18n="changelog140Desc5">Suspending tabs no longer makes the whole list bounce. This page and the welcome page now follow the light or dark theme you picked in Drowzy. And re-sleeping the same tab over and over no longer inflates your lifetime stats.</div>
+        </div>
+      </li>
+    </ul>
 
     <div class="section-label"><span data-i18n="changelogReleaseHeading">What's new in</span> 1.3.8</div>
     <ul class="change-list">

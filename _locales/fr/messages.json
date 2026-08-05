@@ -39,7 +39,7 @@
     "message": "Site en liste blanche (cliquer pour retirer)"
   },
   "activeWontSuspend": {
-    "message": "Actif – ne sera pas suspendu"
+    "message": "Actif - ne sera pas suspendu"
   },
   "loading": {
     "message": "Chargement..."
@@ -181,22 +181,19 @@
     "message": "Aucun onglet suspendu à réveiller"
   },
   "pinnedWontSuspend": {
-    "message": "Épinglé — ne sera pas suspendu"
+    "message": "Épinglé - ne sera pas suspendu"
   },
   "audioWontSuspend": {
-    "message": "Audio en cours — ne sera pas suspendu"
+    "message": "Audio en cours - ne sera pas suspendu"
   },
   "whitelistedWontSuspend": {
-    "message": "Sur liste blanche — ne sera pas suspendu"
+    "message": "Sur liste blanche - ne sera pas suspendu"
   },
   "systemPageCantSuspend": {
-    "message": "Page système — ne peut pas être suspendue"
+    "message": "Page système - ne peut pas être suspendue"
   },
   "clickToDismiss": {
     "message": "Cliquez pour fermer"
-  },
-  "keepAwakeBtn": {
-    "message": "Garder actif"
   },
   "suspendTimerHint": {
     "message": "Les onglets quittés sont suspendus après ce délai. Augmentez-le si vous revenez aux onglets après de longues pauses."
@@ -394,7 +391,7 @@
     "message": "Aucun onglet restaurable dans cette session."
   },
   "sessionDefaultName": {
-    "message": "Session – $DATE$",
+    "message": "Session - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Bienvenue sur Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy économise de la mémoire en mettant en veille les onglets inactifs. Vos onglets sont toujours en sécurité – nous utilisons l'API native de suppression de Chrome, ils survivent même si vous désinstallez Drowzy."
+    "message": "Drowzy économise de la mémoire en mettant en veille les onglets inactifs. Vos onglets sont toujours en sécurité - nous utilisons l'API native de suppression de Chrome, ils survivent même si vous désinstallez Drowzy."
   },
   "howItWorks": {
     "message": "Comment ça marche"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Les onglets endormis affichent désormais une astuce « cliquer pour réveiller », et la page de bienvenue explique comment Drowzy fonctionne aux côtés de l'économiseur de mémoire intégré de votre navigateur."
+  },
+  "keepThisTabAwake": {
+    "message": "Garder cet onglet éveillé"
+  },
+  "allowSleep": {
+    "message": "Autoriser la mise en veille"
+  },
+  "keptAwakeHint": {
+    "message": "Empêche cet onglet de se mettre en veille jusqu'à ce que vous le désactiviez ou fermiez l'onglet"
+  },
+  "allowSleepHint": {
+    "message": "Laisser cet onglet se mettre en veille normalement"
+  },
+  "keptAwakeToast": {
+    "message": "Cet onglet restera éveillé"
+  },
+  "allowSleepToast": {
+    "message": "Cet onglet peut se remettre en veille"
+  },
+  "badgeAwake": {
+    "message": "Éveillé"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Gardé éveillé - ne sera pas suspendu"
+  },
+  "cantSuspendPinned": {
+    "message": "Les onglets épinglés sont protégés. Désactivez \"Protéger les onglets épinglés\" pour suspendre celui-ci."
+  },
+  "cantSuspendAudio": {
+    "message": "Les onglets qui jouent du son sont protégés. Désactivez \"Protéger les onglets audio\" pour suspendre celui-ci."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Ce site figure dans votre liste \"ne jamais suspendre\". Retirez-le pour suspendre cet onglet."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Il faut un autre onglet ouvert vers lequel basculer. Chrome ne peut pas suspendre l'onglet que vous regardez."
+  },
+  "openSettingsAction": {
+    "message": "Ouvrir les paramètres"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome n'a pas voulu suspendre cet onglet"
+  },
+  "suspendFailedLoading": {
+    "message": "Chargement en cours - réessayez dans un instant"
+  },
+  "suspendFailedForm": {
+    "message": "Non suspendu - cet onglet contient une saisie non enregistrée"
+  },
+  "bannerNotNow": {
+    "message": "Pas maintenant"
+  },
+  "changelog140Title1": {
+    "message": "Garder cet onglet éveillé"
+  },
+  "changelog140Desc1": {
+    "message": "Gardez un seul onglet éveillé sans mettre tout le site en liste blanche. Drowzy ne le suspendra pas tant que vous n'aurez pas appuyé sur \"Autoriser la mise en veille\" ou fermé l'onglet. Le maintien disparaît au redémarrage du navigateur."
+  },
+  "changelog140Title2": {
+    "message": "\"Protéger les onglets audio\" fonctionne maintenant dans les deux sens"
+  },
+  "changelog140Desc2": {
+    "message": "Désactiver \"Protéger les onglets audio\" permet vraiment aux onglets vidéo et musique en arrière-plan de se mettre en veille. Avant, ils étaient refusés même avec l'option désactivée. Avec l'option activée, rien ne change."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy vous dit pourquoi un onglet ne se met pas en veille"
+  },
+  "changelog140Desc3": {
+    "message": "\"Suspendre cet onglet\" ne disparaît plus sans explication. Quand un onglet ne peut pas se mettre en veille, vous obtenez la raison et un raccourci direct vers le paramètre qui changerait cela."
+  },
+  "changelog140Title4": {
+    "message": "Des icônes de sites qui s'affichent vraiment"
+  },
+  "changelog140Desc4": {
+    "message": "Les icônes des onglets viennent maintenant du cache de votre navigateur : les sites qui n'affichaient qu'une lettre grise montrent leur vraie icône, même en veille. Les icônes qui disparaîtraient sur le thème utilisé sont ajustées pour rester visibles."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Compte environ 150 Mo pour chaque onglet que Drowzy a suspendu. C'est un cumul dans le temps, pas de la mémoire libre actuellement."
+  },
+  "privacyPermFavicon": {
+    "message": "Lecture du cache de favicons local de Chrome pour que les icônes des sites s'affichent correctement dans la liste des onglets. Cela lit un cache déjà présent sur votre ordinateur et n'effectue aucune requête réseau."
+  },
+  "changelog140Title5": {
+    "message": "Plus calme, et des chiffres fiables"
+  },
+  "changelog140Desc5": {
+    "message": "Mettre des onglets en veille ne fait plus sautiller toute la liste. Cette page et la page d'accueil suivent désormais le thème clair ou sombre choisi dans Drowzy. Et remettre le même onglet en veille en boucle ne gonfle plus vos statistiques."
   }
 }

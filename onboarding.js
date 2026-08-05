@@ -1,3 +1,14 @@
+// Honour the theme chosen with the popup's toggle. Without this the page
+// follows the OS only, so a user on a dark OS who switched Drowzy to light
+// gets a dark page - and 1.4.0 opens this kind of page automatically on
+// update, so it would have been the first thing they saw.
+try {
+  chrome.storage.local.get('theme', function(res) {
+    var t = res && res.theme;
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  });
+} catch (e) {}
+
 document.addEventListener('DOMContentLoaded', function() {
   var uiLang = chrome.i18n.getUILanguage();
   document.documentElement.lang = uiLang;

@@ -39,7 +39,7 @@
     "message": "Stranica je na popisu dopuštenih (kliknite za uklanjanje)"
   },
   "activeWontSuspend": {
-    "message": "Aktivna – neće biti suspendirana"
+    "message": "Aktivna - neće biti suspendirana"
   },
   "loading": {
     "message": "Učitavanje..."
@@ -181,22 +181,19 @@
     "message": "Nema suspendiranih kartica za buđenje"
   },
   "pinnedWontSuspend": {
-    "message": "Prikvačeno — neće biti suspendirano"
+    "message": "Prikvačeno - neće biti suspendirano"
   },
   "audioWontSuspend": {
-    "message": "Reproducira zvuk — neće biti suspendirano"
+    "message": "Reproducira zvuk - neće biti suspendirano"
   },
   "whitelistedWontSuspend": {
-    "message": "Na bijeloj listi — neće biti suspendirano"
+    "message": "Na bijeloj listi - neće biti suspendirano"
   },
   "systemPageCantSuspend": {
-    "message": "Sistemska stranica — ne može se suspendirati"
+    "message": "Sistemska stranica - ne može se suspendirati"
   },
   "clickToDismiss": {
     "message": "Kliknite za zatvaranje"
-  },
-  "keepAwakeBtn": {
-    "message": "Drži budnim"
   },
   "suspendTimerHint": {
     "message": "Kartice s kojih ste prebacili obustavljaju se nakon ovog vremena. Povećajte ga ako se vraćate na kartice nakon dugih stanki."
@@ -394,7 +391,7 @@
     "message": "Nema kartica za vraćanje u ovoj sesiji."
   },
   "sessionDefaultName": {
-    "message": "Sesija – $DATE$",
+    "message": "Sesija - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Dobrodošli u Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy štedi memoriju uspavljivanjem neaktivnih kartica. Vaše kartice su uvijek sigurne – koristimo Chromeov izvorni discard API, pa preživljavaju čak i ako deinstalirate Drowzy."
+    "message": "Drowzy štedi memoriju uspavljivanjem neaktivnih kartica. Vaše kartice su uvijek sigurne - koristimo Chromeov izvorni discard API, pa preživljavaju čak i ako deinstalirate Drowzy."
   },
   "howItWorks": {
     "message": "Kako funkcionira"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Uspavane kartice sada prikazuju savjet kliknite za buđenje, a stranica dobrodošlice objašnjava kako Drowzy radi uz ugrađenu štednju memorije preglednika."
+  },
+  "keepThisTabAwake": {
+    "message": "Drži ovu karticu budnom"
+  },
+  "allowSleep": {
+    "message": "Dopusti mirovanje"
+  },
+  "keptAwakeHint": {
+    "message": "Sprječava ovu karticu da zaspi dok to ne isključiš ili ne zatvoriš karticu"
+  },
+  "allowSleepHint": {
+    "message": "Neka ova kartica opet normalno zaspi"
+  },
+  "keptAwakeToast": {
+    "message": "Ova kartica ostat će budna"
+  },
+  "allowSleepToast": {
+    "message": "Ova kartica opet može zaspati"
+  },
+  "badgeAwake": {
+    "message": "Budna"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Drži se budnom - neće biti uspavana"
+  },
+  "cantSuspendPinned": {
+    "message": "Prikvačene kartice su zaštićene. Isključi \"Zaštiti prikvačene kartice\" da uspavaš ovu."
+  },
+  "cantSuspendAudio": {
+    "message": "Kartice koje reproduciraju zvuk su zaštićene. Isključi \"Zaštiti kartice sa zvukom\" da uspavaš ovu."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Ova stranica je na tvom popisu nikad ne uspavljuj. Ukloni je da uspavaš ovu karticu."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Potrebna je druga otvorena kartica na koju se može prebaciti. Chrome ne može uspavati karticu koju gledaš."
+  },
+  "openSettingsAction": {
+    "message": "Otvori postavke"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome nije uspavao ovu karticu"
+  },
+  "suspendFailedLoading": {
+    "message": "Još se učitava - pokušaj za trenutak"
+  },
+  "suspendFailedForm": {
+    "message": "Nije uspavano - kartica ima nespremljeni unos"
+  },
+  "bannerNotNow": {
+    "message": "Ne sada"
+  },
+  "changelog140Title1": {
+    "message": "Drži ovu karticu budnom"
+  },
+  "changelog140Desc1": {
+    "message": "Drži jednu karticu budnom bez stavljanja cijele stranice na bijelu listu. Drowzy je neće uspavati dok ne pritisneš \"Dopusti mirovanje\" ili je ne zatvoriš. Ponovnim pokretanjem preglednika se briše."
+  },
+  "changelog140Title2": {
+    "message": "\"Zaštiti kartice sa zvukom\" sada radi u oba smjera"
+  },
+  "changelog140Desc2": {
+    "message": "Isključivanjem \"Zaštiti kartice sa zvukom\" pozadinske kartice s videom i glazbom sada stvarno mogu zaspati. Prije su bile odbijene i kad je postavka bila isključena. S uključenom se ništa ne mijenja."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy ti kaže zašto kartica ne spava"
+  },
+  "changelog140Desc3": {
+    "message": "\"Uspavaj ovu karticu\" više ne nestaje bez objašnjenja. Kad kartica ne može zaspati, dobiješ razlog i prečac ravno do postavke koja bi to promijenila."
+  },
+  "changelog140Title4": {
+    "message": "Ikone stranica koje se stvarno vide"
+  },
+  "changelog140Desc4": {
+    "message": "Ikone kartica sada dolaze iz predmemorije preglednika, pa stranice koje su prije prikazivale samo sivo slovo pokazuju svoju pravu ikonu, i dok spavaju. Ikone koje bi nestale u temi koju koristiš prilagođavaju se da ostanu vidljive."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Broji oko 150 MB za svaku karticu koju je Drowzy uspavao. To je zbroj koji raste s vremenom, a ne memorija slobodna upravo sada."
+  },
+  "privacyPermFavicon": {
+    "message": "Čitanje Chromeove lokalne predmemorije ikona kako bi se ikone stranica ispravno prikazivale na popisu kartica. Čita predmemoriju koja je već na tvom računalu i ne šalje nikakav mrežni zahtjev."
+  },
+  "changelog140Title5": {
+    "message": "Mirnije, i brojke kojima se može vjerovati"
+  },
+  "changelog140Desc5": {
+    "message": "Uspavljivanje kartica više ne tjera cijeli popis da poskakuje. Ova stranica i stranica dobrodošlice sada prate svijetlu ili tamnu temu koju si odabrao u Drowzyju. A ponovno uspavljivanje iste kartice više ne napuhuje tvoju statistiku."
   }
 }

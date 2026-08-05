@@ -39,7 +39,7 @@
     "message": "Vietne ir baltajā sarakstā (noklikšķiniet, lai noņemtu)"
   },
   "activeWontSuspend": {
-    "message": "Aktīva – netiks apturēta"
+    "message": "Aktīva - netiks apturēta"
   },
   "loading": {
     "message": "Ielādē..."
@@ -181,22 +181,19 @@
     "message": "Nav apturētu ciļņu, ko pamodināt"
   },
   "pinnedWontSuspend": {
-    "message": "Piesprausta — netiks apturēta"
+    "message": "Piesprausta - netiks apturēta"
   },
   "audioWontSuspend": {
-    "message": "Atskaņo audio — netiks apturēta"
+    "message": "Atskaņo audio - netiks apturēta"
   },
   "whitelistedWontSuspend": {
-    "message": "Baltajā sarakstā — netiks apturēta"
+    "message": "Baltajā sarakstā - netiks apturēta"
   },
   "systemPageCantSuspend": {
-    "message": "Sistēmas lapa — nevar apturēt"
+    "message": "Sistēmas lapa - nevar apturēt"
   },
   "clickToDismiss": {
     "message": "Noklikšķiniet, lai aizvērtu"
-  },
-  "keepAwakeBtn": {
-    "message": "Turēt aktīvu"
   },
   "suspendTimerHint": {
     "message": "Cilnes, no kurām pārslēdzāties, tiek pārtrauktas pēc šī laika. Palieliniet to, ja atgriežaties pie cilnēm pēc ilgiem pārtraukumiem."
@@ -382,7 +379,7 @@
     "message": "Nekad neapturēt šo vietni"
   },
   "maxSessionsReached": {
-    "message": "Sasniegts maksimums – 20 sesijas. Dzēsiet vienu, lai saglabātu jaunu."
+    "message": "Sasniegts maksimums - 20 sesijas. Dzēsiet vienu, lai saglabātu jaunu."
   },
   "noSaveableTabs": {
     "message": "Šajā logā nav saglabājamu ciļņu."
@@ -394,7 +391,7 @@
     "message": "Šajā sesijā nav atjaunojamu ciļņu."
   },
   "sessionDefaultName": {
-    "message": "Sesija – $DATE$",
+    "message": "Sesija - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Laipni lūdzam Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy taupa atmiņu, iemidzinot neaktīvās cilnes. Jūsu cilnes vienmēr ir drošībā – mēs izmantojam Chrome iebūvēto atmetiena API, tāpēc tās saglabājas pat tad, ja atinstalējat Drowzy."
+    "message": "Drowzy taupa atmiņu, iemidzinot neaktīvās cilnes. Jūsu cilnes vienmēr ir drošībā - mēs izmantojam Chrome iebūvēto atmetiena API, tāpēc tās saglabājas pat tad, ja atinstalējat Drowzy."
   },
   "howItWorks": {
     "message": "Kā tas darbojas"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Guļošās cilnes tagad rāda norādi noklikšķiniet, lai pamodinātu, un sveiciena lapa skaidro, kā Drowzy darbojas kopā ar pārlūka iebūvēto atmiņas taupīšanu."
+  },
+  "keepThisTabAwake": {
+    "message": "Paturēt šo cilni nomodā"
+  },
+  "allowSleep": {
+    "message": "Atļaut aizmigt"
+  },
+  "keptAwakeHint": {
+    "message": "Neļauj šai cilnei aizmigt, līdz to izslēdz vai aizver cilni"
+  },
+  "allowSleepHint": {
+    "message": "Ļauj šai cilnei atkal parasti aizmigt"
+  },
+  "keptAwakeToast": {
+    "message": "Šī cilne paliks nomodā"
+  },
+  "allowSleepToast": {
+    "message": "Šī cilne atkal var aizmigt"
+  },
+  "badgeAwake": {
+    "message": "Nomodā"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Tiek turēta nomodā - netiks iemidzināta"
+  },
+  "cantSuspendPinned": {
+    "message": "Piespraustās cilnes ir aizsargātas. Izslēdz \"Aizsargāt piespraustās cilnes\", lai iemidzinātu šo."
+  },
+  "cantSuspendAudio": {
+    "message": "Cilnes, kas atskaņo skaņu, ir aizsargātas. Izslēdz \"Aizsargāt cilnes ar skaņu\", lai iemidzinātu šo."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "Šī vietne ir tavā nekad neiemidzināt sarakstā. Noņem to, lai iemidzinātu šo cilni."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Vispirms vajadzīga cita atvērta cilne, uz kuru pārslēgties. Chrome nevar iemidzināt cilni, kuru tu skaties."
+  },
+  "openSettingsAction": {
+    "message": "Atvērt iestatījumus"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome neiemidzināja šo cilni"
+  },
+  "suspendFailedLoading": {
+    "message": "Vēl ielādējas - pamēģini pēc brīža"
+  },
+  "suspendFailedForm": {
+    "message": "Nav iemidzināts - cilnē ir nesaglabāts ievads"
+  },
+  "bannerNotNow": {
+    "message": "Ne tagad"
+  },
+  "changelog140Title1": {
+    "message": "Paturēt šo cilni nomodā"
+  },
+  "changelog140Desc1": {
+    "message": "Paturi vienu cilni nomodā, neievietojot visu vietni baltajā sarakstā. Drowzy to neiemidzinās, kamēr nenospiedīsi \"Atļaut aizmigt\" vai neaizvērsi cilni. Pārstartējot pārlūku, tas tiek notīrīts."
+  },
+  "changelog140Title2": {
+    "message": "\"Aizsargāt cilnes ar skaņu\" tagad darbojas abos virzienos"
+  },
+  "changelog140Desc2": {
+    "message": "Izslēdzot \"Aizsargāt cilnes ar skaņu\", fona video un mūzikas cilnes tagad tiešām var aizmigt. Agrāk tās tika atteiktas pat ar izslēgtu iestatījumu. Ar ieslēgtu nekas nemainās."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy pasaka, kāpēc cilne neaizmieg"
+  },
+  "changelog140Desc3": {
+    "message": "\"Iemidzināt šo cilni\" vairs nepazūd bez paskaidrojuma. Kad cilne nevar aizmigt, tu saņem iemeslu un saīsni tieši uz iestatījumu, kas to mainītu."
+  },
+  "changelog140Title4": {
+    "message": "Vietņu ikonas, kas tiešām parādās"
+  },
+  "changelog140Desc4": {
+    "message": "Cilņu ikonas tagad nāk no pārlūka kešatmiņas, tāpēc vietnes, kas agrāk rādīja tikai pelēku burtu, rāda savu īsto ikonu, arī guļot. Ikonas, kas izmantotajā tēmā pazustu, tiek pielāgotas, lai paliktu redzamas."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Skaita aptuveni 150 MB par katru cilni, ko Drowzy jebkad iemidzinājis. Tā ir laika gaitā uzkrāta summa, nevis šobrīd brīva atmiņa."
+  },
+  "privacyPermFavicon": {
+    "message": "Lasīt Chrome vietējo vietņu ikonu kešatmiņu, lai ikonas cilņu sarakstā tiktu rādītas pareizi. Tiek lasīta kešatmiņa, kas jau ir tavā datorā, un netiek veikts neviens tīkla pieprasījums."
+  },
+  "changelog140Title5": {
+    "message": "Mierīgāk un skaitļi, kuriem var uzticēties"
+  },
+  "changelog140Desc5": {
+    "message": "Cilņu iemidzināšana vairs neliek visam sarakstam lēkāt. Šī lapa un sveiciena lapa tagad seko Drowzy izvēlētajai gaišajai vai tumšajai tēmai. Un tās pašas cilnes atkārtota iemidzināšana vairs neuzpūš tavu statistiku."
   }
 }

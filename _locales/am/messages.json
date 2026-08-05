@@ -39,7 +39,7 @@
     "message": "ጣቢያው በነጭ ዝርዝር ውስጥ ነው (ለማስወገድ ጠቅ ያድርጉ)"
   },
   "activeWontSuspend": {
-    "message": "ንቁ – አይቋረጥም"
+    "message": "ንቁ - አይቋረጥም"
   },
   "loading": {
     "message": "በመጫን ላይ..."
@@ -181,22 +181,19 @@
     "message": "ለመቀስቀስ የታገዱ ትሮች የሉም"
   },
   "pinnedWontSuspend": {
-    "message": "ተሰክቷል — አይታገድም"
+    "message": "ተሰክቷል - አይታገድም"
   },
   "audioWontSuspend": {
-    "message": "ድምጽ እየተጫወተ — አይታገድም"
+    "message": "ድምጽ እየተጫወተ - አይታገድም"
   },
   "whitelistedWontSuspend": {
-    "message": "በነጭ ዝርዝር ላይ — አይታገድም"
+    "message": "በነጭ ዝርዝር ላይ - አይታገድም"
   },
   "systemPageCantSuspend": {
-    "message": "የስርዓት ገጽ — ሊታገድ አይችልም"
+    "message": "የስርዓት ገጽ - ሊታገድ አይችልም"
   },
   "clickToDismiss": {
     "message": "ለማጥፋት ጠቅ ያድርጉ"
-  },
-  "keepAwakeBtn": {
-    "message": "ንቁ አድርግ"
   },
   "suspendTimerHint": {
     "message": "የተቀየሩ ትሮች ከዚህ በኋላ ይታገዳሉ። ከረጅም ክፍተት በኋላ ወደ ትሮች ብትመለሱ ጊዜውን ጨምሩ።"
@@ -394,7 +391,7 @@
     "message": "በዚህ ክፍለ ጊዜ ውስጥ ሊመለሱ የሚችሉ ትሮች የሉም።"
   },
   "sessionDefaultName": {
-    "message": "ክፍለ ጊዜ – $DATE$",
+    "message": "ክፍለ ጊዜ - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "እንኳን ወደ Drowzy በደህና መጡ"
   },
   "onboardingIntro": {
-    "message": "Drowzy ንቁ ያልሆኑ ትሮችን በማስተኛት ማህደረ ትውስታ ይቆጥባል። ትሮችዎ ሁልጊዜ ደህና ናቸው – የChrome ቤተኛ የማቋረጥ API እንጠቀማለን፣ ስለዚህ Drowzyን ቢያስወግዱም እንኳ ይቆያሉ።"
+    "message": "Drowzy ንቁ ያልሆኑ ትሮችን በማስተኛት ማህደረ ትውስታ ይቆጥባል። ትሮችዎ ሁልጊዜ ደህና ናቸው - የChrome ቤተኛ የማቋረጥ API እንጠቀማለን፣ ስለዚህ Drowzyን ቢያስወግዱም እንኳ ይቆያሉ።"
   },
   "howItWorks": {
     "message": "እንዴት እንደሚሰራ"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "የተኙ ትሮች አሁን «ለመቀስቀስ ጠቅ ያድርጉ» ፍንጭ ያሳያሉ፣ እና የእንኳን ደህና መጡ ገጽ Drowzy ከአሳሽዎ አብሮ የተሰራ Memory Saver ጋር እንዴት እንደሚሰራ ያብራራል።"
+  },
+  "keepThisTabAwake": {
+    "message": "ይህን ትር ንቁ አድርገህ አቆይ"
+  },
+  "allowSleep": {
+    "message": "እንዲተኛ ፍቀድ"
+  },
+  "keptAwakeHint": {
+    "message": "እስክታጠፋው ወይም ትሩን እስክትዘጋው ድረስ ይህ ትር እንዳይተኛ ይከለክላል"
+  },
+  "allowSleepHint": {
+    "message": "ይህ ትር እንደገና በመደበኛው እንዲተኛ ፍቀድ"
+  },
+  "keptAwakeToast": {
+    "message": "ይህ ትር ንቁ ሆኖ ይቆያል"
+  },
+  "allowSleepToast": {
+    "message": "ይህ ትር እንደገና መተኛት ይችላል"
+  },
+  "badgeAwake": {
+    "message": "ንቁ"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "ንቁ ሆኖ ተይዟል - አይታገድም"
+  },
+  "cantSuspendPinned": {
+    "message": "የተሰኩ ትሮች የተጠበቁ ናቸው። ይህን ለማስተኛት \"የተሰኩ ትሮችን ጠብቅ\" አጥፋ።"
+  },
+  "cantSuspendAudio": {
+    "message": "ድምፅ የሚያጫውቱ ትሮች የተጠበቁ ናቸው። ይህን ለማስተኛት \"የድምፅ ትሮችን ጠብቅ\" አጥፋ።"
+  },
+  "cantSuspendWhitelisted": {
+    "message": "ይህ ጣቢያ በፍጹም አታስተኛ ዝርዝርህ ውስጥ ነው። ይህን ትር ለማስተኛት አስወግደው።"
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "መጀመሪያ የሚቀየርበት ሌላ ክፍት ትር ያስፈልጋል። Chrome እየተመለከትከው ያለውን ትር ማስተኛት አይችልም።"
+  },
+  "openSettingsAction": {
+    "message": "ቅንብሮችን ክፈት"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome ይህን ትር አላስተኛውም"
+  },
+  "suspendFailedLoading": {
+    "message": "አሁንም እየጫነ ነው - ትንሽ ቆይተህ እንደገና ሞክር"
+  },
+  "suspendFailedForm": {
+    "message": "አልታገደም - ይህ ትር ያልተቀመጠ ጽሑፍ አለው"
+  },
+  "bannerNotNow": {
+    "message": "አሁን አይደለም"
+  },
+  "changelog140Title1": {
+    "message": "ይህን ትር ንቁ አድርገህ አቆይ"
+  },
+  "changelog140Desc1": {
+    "message": "ጣቢያውን በሙሉ ወደ ነጭ ዝርዝር ሳታስገባ አንድ ትር ብቻ ንቁ አድርገህ አቆይ። \"እንዲተኛ ፍቀድ\" እስክትጫን ወይም ትሩን እስክትዘጋው ድረስ Drowzy አያስተኛውም። አሳሹን እንደገና ስታስጀምር ይጠፋል።"
+  },
+  "changelog140Title2": {
+    "message": "\"የድምፅ ትሮችን ጠብቅ\" አሁን በሁለቱም አቅጣጫ ይሠራል"
+  },
+  "changelog140Desc2": {
+    "message": "\"የድምፅ ትሮችን ጠብቅ\" ካጠፋህ አሁን በእርግጥ የበስተጀርባ ቪዲዮና ሙዚቃ ትሮች መተኛት ይችላሉ። ከዚህ በፊት ቅንብሩ ጠፍቶም እንኳ ይከለከሉ ነበር። ከበራ ምንም አይለወጥም።"
+  },
+  "changelog140Title3": {
+    "message": "Drowzy ትር ለምን እንደማይተኛ ይነግርሃል"
+  },
+  "changelog140Desc3": {
+    "message": "\"ይህን ትር አግድ\" ከእንግዲህ ያለ ማብራሪያ አይጠፋም። አንድ ትር መተኛት ሳይችል ሲቀር ምክንያቱን እና ያንን የሚቀይረውን ቅንብር በቀጥታ የሚያደርስ አቋራጭ ታገኛለህ።"
+  },
+  "changelog140Title4": {
+    "message": "በእውነት የሚታዩ የጣቢያ አዶዎች"
+  },
+  "changelog140Desc4": {
+    "message": "የትር አዶዎች አሁን ከአሳሽህ የራሱ መሸጎጫ ይመጣሉ፣ ስለዚህ ቀደም ሲል ግራጫ ፊደል ብቻ ያሳዩ የነበሩ ጣቢያዎች እውነተኛ አዶቸውን ያሳያሉ፣ ተኝተው ሳሉም ጭምር። አሁን በምትጠቀመው ገጽታ ውስጥ የሚጠፉ አዶዎች እንዲታዩ ይስተካከላሉ።"
+  },
+  "ramLifetimeTooltip": {
+    "message": "Drowzy እስካሁን ካስተኛቸው እያንዳንዱ ትር በግምት 150 ሜባ ይቆጥራል። ይህ በጊዜ ሂደት የተጠራቀመ ድምር እንጂ አሁን ነጻ የሆነ ማህደረ ትውስታ አይደለም።"
+  },
+  "privacyPermFavicon": {
+    "message": "በትር ዝርዝር ውስጥ የጣቢያ አዶዎች በትክክል እንዲታዩ የChrome አካባቢያዊ የፋቪኮን መሸጎጫ ማንበብ። ይህ አስቀድሞ በኮምፒውተርህ ላይ ያለውን መሸጎጫ ያነባል፣ ምንም የአውታረ መረብ ጥያቄ አያደርግም።"
+  },
+  "changelog140Title5": {
+    "message": "ጸጥ ያለ፣ እና የሚታመኑ ቁጥሮች"
+  },
+  "changelog140Desc5": {
+    "message": "ትሮችን ማስተኛት ከእንግዲህ ዝርዝሩን በሙሉ አያዘልም። ይህ ገጽ እና የእንኳን ደህና መጡ ገጽ አሁን በDrowzy ውስጥ የመረጥከውን ብሩህ ወይም ጨለማ ገጽታ ይከተላሉ። እንዲሁም ተመሳሳዩን ትር ደጋግሞ ማስተኛት አጠቃላይ ስታቲስቲክህን አያናፋም።"
   }
 }

@@ -27,6 +27,8 @@ Where things live and what owns what:
 | File | Owns |
 |---|---|
 | `background.js` | Service worker. The suspension pipeline (`checkAndSuspendTabs` -> `shouldSuspend` -> `suspendTab`), `DEFAULT_SETTINGS` and `getSettings()`, sessions (`drowzy_sessions`), stats (`drowzy_stats`), whitelist matching, context menus, keyboard commands, and the `handleMessage` dispatcher |
+| `chrome.storage.session` state | Four in-memory-mirrored sets, all cleared by Chrome on browser restart: `tabTimestamps` (idle clocks), `restoredTabIds` and `activatedTabIds` (the 1.3.8 startup catch-up sweep), and `keptAwakeTabIds` ("Keep this tab awake"). Each memoizes the **in-flight promise**, not the resolved value, so concurrent callers share one Set - caching the value lets a second caller's read clobber the first's mutation. Add new per-tab session state by copying that pattern |
+| `scripts/validate.js` | Pre-release checks: locale parity and placeholders, no em/en dashes in any locale, every `data-i18n*` and `t()` reference resolves, manifest `__MSG_*` keys, permission list unchanged, popup/side panel id drift, HTML tag balance, and that every referenced asset exists and is in the packaging list. Run it before opening a PR; CI runs it before building a release |
 | `popup.js` / `popup.html` / `popup.css` | All popup UI. Talks to the background only through `chrome.runtime.sendMessage({ action: ... })` |
 | `sidepanel.html` | The side panel shell. It loads the same `popup.js` and `popup.css`, so UI markup changes usually need the same edit in both `popup.html` and `sidepanel.html` |
 | `formcheck.js` | Content script, injected on demand. Form-data detection, the suspend-warning banner, and the `[zzz]` title prefix |
@@ -103,16 +105,18 @@ If you add user-facing strings:
 (For maintainers.)
 
 1. Land all the fixes for the release as small, focused commits on `main`
-2. Bump `manifest.json` version
-3. Add a section to `CHANGELOG.md` describing what's in the release
-4. Commit: `chore: release vX.Y.Z`
-5. Tag and push:
+2. Run `node scripts/validate.js` and fix anything it reports (CI runs it too, but finding out at tag-push time is worse)
+3. Bump `manifest.json` version
+4. Add a section to `CHANGELOG.md` describing what's in the release
+5. Update the in-app What's New (`changelog.html`). It only auto-opens on major bumps, plus any version explicitly listed in `SHOW_CHANGELOG_VERSIONS` in `background.js` - keep that list short
+6. Commit: `chore: release vX.Y.Z`
+7. Tag and push:
    ```
    git tag vX.Y.Z
    git push origin main vX.Y.Z
    ```
-6. The `.github/workflows/release.yml` action picks up the tag, builds the zip via `scripts/package.sh`, and creates the GitHub Release with the zip + SHA-256 attached
-7. Upload the same zip to the Chrome Web Store
+8. The `.github/workflows/release.yml` action picks up the tag, builds the zip via `scripts/package.sh`, and creates the GitHub Release with the zip + SHA-256 attached
+9. Upload the same zip to the Chrome Web Store
 
 The CI-built zip and the manually-uploaded Web Store zip should byte-match. If a contributor wants to verify, they can re-run the workflow on a fork and compare hashes.
 

@@ -39,7 +39,7 @@
     "message": "Stran je na belem seznamu (klikni za odstranitev)"
   },
   "activeWontSuspend": {
-    "message": "Aktiven – ne bo zamrznjen"
+    "message": "Aktiven - ne bo zamrznjen"
   },
   "loading": {
     "message": "Nalaganje..."
@@ -181,22 +181,19 @@
     "message": "Ni začasno ustavljenih zavihkov za zbujanje"
   },
   "pinnedWontSuspend": {
-    "message": "Pripeto — ne bo začasno ustavljeno"
+    "message": "Pripeto - ne bo začasno ustavljeno"
   },
   "audioWontSuspend": {
-    "message": "Predvaja zvok — ne bo začasno ustavljeno"
+    "message": "Predvaja zvok - ne bo začasno ustavljeno"
   },
   "whitelistedWontSuspend": {
-    "message": "Na belem seznamu — ne bo začasno ustavljeno"
+    "message": "Na belem seznamu - ne bo začasno ustavljeno"
   },
   "systemPageCantSuspend": {
-    "message": "Sistemska stran — ni mogoče začasno ustaviti"
+    "message": "Sistemska stran - ni mogoče začasno ustaviti"
   },
   "clickToDismiss": {
     "message": "Kliknite za zaprtje"
-  },
-  "keepAwakeBtn": {
-    "message": "Ostani aktiven"
   },
   "suspendTimerHint": {
     "message": "Zavihki, s katerih ste preklopili, se ustavijo po tem času. Povečajte ga, če se vračate na zavihke po dolgih premorih."
@@ -394,7 +391,7 @@
     "message": "V tej seji ni zavihkov za obnovitev."
   },
   "sessionDefaultName": {
-    "message": "Seja – $DATE$",
+    "message": "Seja - $DATE$",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -438,7 +435,7 @@
     "message": "Dobrodošli v Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy varčuje s pomnilnikom tako, da neaktivne zavihke uspava. Vaši zavihki so vedno varni – uporabljamo Chromov izvorni API za zavrženje, zato preživijo tudi, če Drowzy odstranite."
+    "message": "Drowzy varčuje s pomnilnikom tako, da neaktivne zavihke uspava. Vaši zavihki so vedno varni - uporabljamo Chromov izvorni API za zavrženje, zato preživijo tudi, če Drowzy odstranite."
   },
   "howItWorks": {
     "message": "Kako deluje"
@@ -748,5 +745,92 @@
   },
   "changelog138Desc3": {
     "message": "Speči zavihki zdaj prikazujejo namig klikni za prebujanje, stran dobrodošlice pa pojasnjuje, kako Drowzy deluje ob vgrajenem varčevalniku pomnilnika brskalnika."
+  },
+  "keepThisTabAwake": {
+    "message": "Ohrani ta zavihek buden"
+  },
+  "allowSleep": {
+    "message": "Dovoli spanje"
+  },
+  "keptAwakeHint": {
+    "message": "Prepreči, da bi ta zavihek zaspal, dokler tega ne izklopiš ali zavihka ne zapreš"
+  },
+  "allowSleepHint": {
+    "message": "Naj ta zavihek spet normalno zaspi"
+  },
+  "keptAwakeToast": {
+    "message": "Ta zavihek bo ostal buden"
+  },
+  "allowSleepToast": {
+    "message": "Ta zavihek lahko spet zaspi"
+  },
+  "badgeAwake": {
+    "message": "Buden"
+  },
+  "keptAwakeWontSuspend": {
+    "message": "Ohranjen buden - ne bo uspavan"
+  },
+  "cantSuspendPinned": {
+    "message": "Pripeti zavihki so zaščiteni. Izklopi \"Zaščiti pripete zavihke\", da uspavaš tega."
+  },
+  "cantSuspendAudio": {
+    "message": "Zavihki, ki predvajajo zvok, so zaščiteni. Izklopi \"Zaščiti zavihke z zvokom\", da uspavaš tega."
+  },
+  "cantSuspendWhitelisted": {
+    "message": "To mesto je na tvojem seznamu nikoli ne uspavaj. Odstrani ga, da uspavaš ta zavihek."
+  },
+  "cantSuspendNoOtherTab": {
+    "message": "Potreben je drug odprt zavihek, na katerega lahko preklopiš. Chrome ne more uspavati zavihka, ki ga gledaš."
+  },
+  "openSettingsAction": {
+    "message": "Odpri nastavitve"
+  },
+  "suspendFailedGeneric": {
+    "message": "Chrome ni uspaval tega zavihka"
+  },
+  "suspendFailedLoading": {
+    "message": "Še se nalaga - poskusi čez trenutek"
+  },
+  "suspendFailedForm": {
+    "message": "Ni uspavano - zavihek ima neshranjen vnos"
+  },
+  "bannerNotNow": {
+    "message": "Ne zdaj"
+  },
+  "changelog140Title1": {
+    "message": "Ohrani ta zavihek buden"
+  },
+  "changelog140Desc1": {
+    "message": "Ohrani en sam zavihek buden, ne da bi na beli seznam dal celotno mesto. Drowzy ga ne bo uspaval, dokler ne pritisneš \"Dovoli spanje\" ali ga ne zapreš. Ob ponovnem zagonu brskalnika se počisti."
+  },
+  "changelog140Title2": {
+    "message": "\"Zaščiti zavihke z zvokom\" zdaj deluje v obe smeri"
+  },
+  "changelog140Desc2": {
+    "message": "Če izklopiš \"Zaščiti zavihke z zvokom\", lahko zavihki z videom in glasbo v ozadju zdaj res zaspijo. Prej so bili zavrnjeni tudi z izklopljeno nastavitvijo. Z vklopljeno se nič ne spremeni."
+  },
+  "changelog140Title3": {
+    "message": "Drowzy ti pove, zakaj zavihek ne zaspi"
+  },
+  "changelog140Desc3": {
+    "message": "\"Uspavaj ta zavihek\" ne izgine več brez pojasnila. Ko zavihek ne more zaspati, dobiš razlog in bližnjico naravnost do nastavitve, ki bi to spremenila."
+  },
+  "changelog140Title4": {
+    "message": "Ikone spletnih mest, ki se res pokažejo"
+  },
+  "changelog140Desc4": {
+    "message": "Ikone zavihkov zdaj prihajajo iz predpomnilnika brskalnika, zato mesta, ki so prej kazala le sivo črko, pokažejo svojo pravo ikono, tudi ko spijo. Ikone, ki bi v uporabljeni temi izginile, se prilagodijo, da ostanejo vidne."
+  },
+  "ramLifetimeTooltip": {
+    "message": "Šteje okoli 150 MB za vsak zavihek, ki ga je Drowzy kdaj uspaval. To je vsota, ki raste s časom, ne pomnilnik, ki je prost prav zdaj."
+  },
+  "privacyPermFavicon": {
+    "message": "Branje Chromovega lokalnega predpomnilnika ikon, da se ikone spletnih mest pravilno prikažejo na seznamu zavihkov. Bere predpomnilnik, ki je že na tvojem računalniku, in ne pošlje nobene omrežne zahteve."
+  },
+  "changelog140Title5": {
+    "message": "Mirneje in številke, ki jim lahko zaupaš"
+  },
+  "changelog140Desc5": {
+    "message": "Uspavanje zavihkov ne povzroči več poskakovanja celotnega seznama. Ta stran in pozdravna stran zdaj sledita svetli ali temni temi, izbrani v Drowzyju. In ponovno uspavanje istega zavihka ne napihuje več tvoje statistike."
   }
 }
