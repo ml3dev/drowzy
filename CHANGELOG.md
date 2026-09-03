@@ -4,7 +4,7 @@ All notable changes to Drowzy are documented here.
 
 ## [1.5.0] - 2026-09-02
 
-Speed and honesty for people with a lot of tabs. This release comes out of a three-star review and a GitHub issue: Drowzy was safe, but with forty-odd tabs opened at once the popup took too long to appear, Suspend Others crawled through them one at a time and said nothing about the ones it skipped, the shortest timer was five minutes, and nobody could find where to free a keyboard shortcut. No new permissions, no telemetry, and the native `chrome.tabs.discard` approach is unchanged. The 1.3.8 startup catch-up sweep is untouched.
+Speed fixes for people with a lot of tabs, based on a store review and a GitHub issue. The popup opens right away with many tabs open, Suspend Others runs several tabs at a time and reports what it skipped, the timer can be set to 1 minute, and the Keyboard shortcuts row points to where Chrome lets you change them. No new permissions, no telemetry, and the native `chrome.tabs.discard` approach is unchanged. The 1.3.8 startup catch-up sweep is untouched.
 
 ### Fixed
 - **Whitelist entries saved by older versions are brought up to the new form once, on update.** Entries used to be stored as typed (`https://Site.com/`, `WWW.site.com`, the same site twice in different case) and 1.5.0 matches and removes by the normalised form, so `normalizeStoredWhitelist` runs in `onInstalled` for updates: it normalises each entry, drops blanks and exact duplicates, keeps anything it does not recognise as it was, and writes only if something changed.
