@@ -4,17 +4,48 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<title>Drowzy · The open-source tab suspender for Chrome</title>
-<meta name="description" content="Drowzy puts the tabs you are not using to sleep and frees the memory they were taking up. Save up to 80% of Chrome's memory. No tracking, open source.">
+<meta name="theme-color" content="#0c0817">
+<title>Drowzy · Free open-source tab suspender for Chrome</title>
+<meta name="description" content="Drowzy puts inactive tabs to sleep with Chrome's own discard system. Tabs stay normal tabs and reload when you click them. Free, open source, no tracking.">
 <link rel="canonical" href="https://ml3dev.github.io/drowzy/">
-<link rel="icon" href="icon-128.png">
+<link rel="icon" href="icon-128.png" sizes="128x128" type="image/png">
+<link rel="apple-touch-icon" href="icon-512.png">
 
 <!-- social -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Drowzy · The open-source tab suspender for Chrome">
-<meta property="og:description" content="Put idle tabs to sleep and get your memory back. Save up to 80% of Chrome's memory. No tracking, open source.">
+<meta property="og:site_name" content="Drowzy">
+<meta property="og:title" content="Drowzy · Free open-source tab suspender for Chrome">
+<meta property="og:description" content="Put idle tabs to sleep with Chrome's own discard system. No tracking, no accounts, no fake suspended pages. Free and open source.">
 <meta property="og:url" content="https://ml3dev.github.io/drowzy/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://ml3dev.github.io/drowzy/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drowzy logo and wordmark: free open-source tab suspender for Chrome">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Drowzy · Free open-source tab suspender for Chrome">
+<meta name="twitter:description" content="Put idle tabs to sleep with Chrome's own discard system. No tracking, no accounts, no fake suspended pages. Free and open source.">
+<meta name="twitter:image" content="https://ml3dev.github.io/drowzy/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Drowzy",
+  "alternateName": "Drowzy - Tab Suspender & Memory Saver",
+  "description": "Free, open-source tab suspender for Chrome. Puts inactive tabs to sleep using Chrome's native discard system, with no tracking and no placeholder pages.",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Google Chrome",
+  "url": "https://ml3dev.github.io/drowzy/",
+  "image": "https://ml3dev.github.io/drowzy/og-image.png",
+  "installUrl": "https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa",
+  "downloadUrl": "https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa",
+  "license": "https://github.com/ml3dev/drowzy/blob/main/LICENSE",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "ml3dev", "url": "https://github.com/ml3dev" },
+  "sameAs": ["https://github.com/ml3dev/drowzy"]
+}
+</script>
 
 <style>
 :root{
@@ -93,6 +124,8 @@ h2{font-weight:700;font-size:clamp(27px,4.2vw,44px);line-height:1.1;
   letter-spacing:-.025em;margin-bottom:18px}
 h2 em{font-style:normal;color:var(--accent-bright)}
 .lead{color:var(--text-dim);font-size:clamp(15.5px,1.7vw,18px);max-width:60ch}
+.lead a,.mem-note a,.faq a,.vs-foot a{color:var(--accent-bright);text-decoration:none;border-bottom:1px solid rgba(196,181,253,.35)}
+.lead a:hover,.mem-note a:hover,.faq a:hover,.vs-foot a:hover{border-bottom-color:var(--accent-bright)}
 
 /* logo image -------------------------------------------------------------- */
 .logo{display:block;flex:none;object-fit:contain}
@@ -133,7 +166,7 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(12,8,23,.78)}
 .hero h1 .soft{display:block;color:var(--accent-bright)}
 .hero p.sub{font-size:clamp(16px,1.9vw,19px);color:var(--text-dim);max-width:46ch;margin-bottom:34px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.hero-note{margin-top:20px;font-size:13.5px;color:var(--text-faint);display:flex;align-items:center;gap:8px}
+.hero-note{margin-top:20px;font-size:13.5px;color:var(--text-faint);max-width:46ch}
 .hero-note b{color:var(--text-dim);font-weight:600}
 
 /* device: the REAL popup in an iframe (kept static + layer-promoted) ------ */
@@ -156,6 +189,29 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(12,8,23,.78)}
 /* section spacing --------------------------------------------------------- */
 .band{padding:90px 0}
 
+/* how it works ------------------------------------------------------------ */
+.how{text-align:center}
+.how .lead{margin:0 auto}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:980px;margin:46px auto 0;text-align:left}
+.step{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
+  border:1px solid var(--border);border-radius:var(--r);padding:26px 24px}
+.step .num{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.step .num b{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--text-faint)}
+.step .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.2);color:var(--accent)}
+.step .ic svg{width:20px;height:20px}
+.step.asleep .ic{background:rgba(110,231,183,.1);border-color:rgba(110,231,183,.22);color:var(--green)}
+.step h3{font-size:16px;font-weight:600;margin-bottom:7px;letter-spacing:-.01em}
+.step p{font-size:14px;color:var(--text-dim);line-height:1.55}
+.mem-note{max-width:820px;margin:24px auto 0;padding:20px 24px;border-radius:14px;text-align:left;
+  border:1px solid var(--border);background:rgba(255,255,255,.02);display:flex;gap:14px;align-items:flex-start}
+.mem-note .ic{flex:none;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+  background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.22);color:var(--amber)}
+.mem-note .ic svg{width:16px;height:16px}
+.mem-note p{font-size:14.5px;color:var(--text-dim);line-height:1.6}
+.mem-note b{color:var(--text);font-weight:600}
+@media(max-width:880px){.steps{grid-template-columns:1fr}}
+
 /* why / discard ----------------------------------------------------------- */
 .why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:54px;align-items:center}
 .why-card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));
@@ -170,30 +226,27 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(12,8,23,.78)}
 .diff h4{font-size:15.5px;font-weight:600;margin-bottom:3px;letter-spacing:-.01em}
 .diff p{font-size:14px;color:var(--text-dim);line-height:1.55}
 .callout{font-size:clamp(15.5px,1.7vw,18px);color:var(--text-dim);max-width:60ch;margin-top:16px}
-.callout code{font-family:var(--mono);font-size:.85em;color:var(--accent-bright);
+.callout code,.faq code{font-family:var(--mono);font-size:.85em;color:var(--accent-bright);
   background:rgba(167,139,250,.12);padding:2px 7px;border-radius:6px}
 
-/* memory meter ------------------------------------------------------------ */
-.mem{text-align:center}
-.mem .lead{margin:0 auto}
-.meter{max-width:720px;margin:46px auto 0;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
-  border:1px solid var(--border);border-radius:22px;padding:32px 34px}
-.meter-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;font-size:13.5px;color:var(--text-faint)}
-.meter-top b{color:var(--text);font-weight:600}
-.bar{margin-bottom:22px;text-align:left}
-.bar-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
-.bar-head .name{font-size:13.5px;font-weight:500;color:var(--text-dim)}
-.bar-head .val{font-family:var(--mono);font-weight:600;font-size:16px}
-.track{height:16px;border-radius:999px;background:rgba(255,255,255,.05);overflow:hidden;position:relative}
-.fill{height:100%;border-radius:999px;transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
-.fill.bad{background:linear-gradient(90deg,#e8675d,#dd5249)}
-.fill.good{background:linear-gradient(90deg,#6ee7b7,#34d399)}
-.in-view .fill.bad{transform:scaleX(1)}
-.in-view .fill.good{transform:scaleX(.262)}
-.saved-tag{display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-size:15px;font-weight:600;color:var(--green);
-  background:rgba(110,231,183,.1);border:1px solid rgba(110,231,183,.25);padding:9px 18px;border-radius:999px}
-.saved-tag svg{width:18px;height:18px}
-.mem-note{margin-top:18px;font-size:13px;color:var(--text-faint)}
+/* built-in memory saving vs the control layer ----------------------------- */
+.vs .feat-head{margin-bottom:44px}
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:980px;margin:0 auto}
+.vs-card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));
+  border:1px solid var(--border);border-radius:var(--r);padding:28px 26px}
+.vs-card.drowzy{border-color:rgba(167,139,250,.32);
+  background:linear-gradient(180deg,rgba(167,139,250,.09),rgba(255,255,255,.012));
+  box-shadow:0 34px 80px -44px rgba(139,92,246,.6)}
+.vs-card .tag{font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-faint);margin-bottom:10px}
+.vs-card h3{font-size:18px;font-weight:600;letter-spacing:-.01em;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.vs-card h3 .logo{width:22px;height:22px}
+.vs-card>p{font-size:14.5px;color:var(--text-dim);line-height:1.6}
+.vs-card ul{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:10px}
+.vs-card li{display:flex;gap:10px;font-size:14.5px;color:var(--text-dim);line-height:1.5}
+.vs-card li svg{width:16px;height:16px;flex:none;margin-top:3px;color:var(--accent)}
+.vs-card li b{color:var(--text);font-weight:600}
+.vs-foot{max-width:980px;margin:22px auto 0;text-align:center;font-size:14.5px;color:var(--text-faint)}
+@media(max-width:760px){.vs-grid{grid-template-columns:1fr}}
 
 /* features ---------------------------------------------------------------- */
 .feat-head{text-align:center;margin-bottom:50px}
@@ -261,13 +314,34 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(12,8,23,.78)}
 .vault .row .lk{margin-left:auto;color:var(--green);display:flex}
 .vault .row .lk svg{width:15px;height:15px}
 
-/* open source ------------------------------------------------------------- */
+/* open source + support --------------------------------------------------- */
 .os-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
   border:1px solid var(--border);border-radius:24px;padding:50px;text-align:center;position:relative;overflow:hidden}
 .os-card::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 100% at 50% 0%,rgba(139,92,246,.14),transparent 60%);pointer-events:none}
 .os-meta{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center;margin-top:26px;color:var(--text-faint);font-size:13.5px;font-family:var(--mono)}
 .os-meta span{display:inline-flex;align-items:center;gap:8px}
 .os-meta svg{width:15px;height:15px;color:var(--accent)}
+.os-links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px;position:relative}
+.os-links .btn{padding:12px 20px;font-size:14.5px}
+
+/* faq --------------------------------------------------------------------- */
+.faq{max-width:820px;margin:0 auto}
+.faq details{border:1px solid var(--border);border-radius:14px;margin-bottom:10px;overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));transition:border-color .2s}
+.faq details[open]{border-color:var(--border-strong)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:600;font-size:16px;letter-spacing:-.01em;
+  display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{width:18px;height:18px;flex:none;color:var(--accent);transition:transform .25s}
+.faq details[open] summary svg{transform:rotate(180deg)}
+.faq .a{padding:0 22px 20px;color:var(--text-dim);font-size:15px;line-height:1.62}
+.faq .a p+p{margin-top:10px}
+.faq .a b{color:var(--text);font-weight:600}
+.copy-line{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+.copy-line code{font-size:14px;padding:7px 12px;border-radius:8px;user-select:all;-webkit-user-select:all}
+.copy-btn{font:inherit;font-size:13px;font-weight:600;color:var(--text);background:rgba(255,255,255,.04);
+  border:1px solid var(--border-strong);border-radius:8px;padding:7px 13px;cursor:pointer;transition:border-color .2s,background .2s}
+.copy-btn:hover{border-color:var(--accent);background:rgba(167,139,250,.08)}
 
 /* final cta --------------------------------------------------------------- */
 .final{text-align:center;padding:96px 0}
@@ -280,10 +354,11 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
 .foot-in{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
 .foot-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);font-size:16px;text-decoration:none}
 .foot-brand .logo{width:26px;height:26px}
-.foot-links{display:flex;flex-wrap:wrap;gap:24px}
+.foot-links{display:flex;flex-wrap:wrap;gap:12px 24px}
 .foot-links a{color:var(--text-dim);text-decoration:none;font-size:14px;transition:color .2s}
 .foot-links a:hover{color:var(--accent-bright)}
 .foot-note{width:100%;font-size:13px;color:var(--text-faint);margin-top:10px}
+.foot-note a{color:var(--text-dim)}
 
 /* reveal (transform + opacity only = compositor friendly) ----------------- */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .42s ease,transform .42s ease}
@@ -299,11 +374,12 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
   .popup-frame,.shot-frame{zoom:.82}
   .shell{padding:0 18px}
   .os-card{padding:36px 22px}
+  .faq summary{padding:16px 18px;font-size:15px}
+  .faq .a{padding:0 18px 18px}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none !important;scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
-  .fill{transition:none;transform:scaleX(var(--rm,1))}
 }
 </style>
 </head>
@@ -332,8 +408,8 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
     <div class="nav-links">
       <a href="#why">Why Drowzy</a>
       <a href="#features">Features</a>
-      <a href="#screens">Screens</a>
       <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
       <a href="https://github.com/ml3dev/drowzy">GitHub</a>
       <a class="nav-cta" href="https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa">Add to Chrome</a>
     </div>
@@ -346,7 +422,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
     <div>
       <span class="hero-pill reveal"><span class="dot"></span>Free · Open source · No tracking</span>
       <h1 class="reveal">Put idle tabs to sleep and <span class="soft">get your memory back.</span></h1>
-      <p class="sub reveal">Drowzy puts the tabs you are not using to sleep and frees the memory they were taking up. They stay in your tab bar and wake the moment you click them.</p>
+      <p class="sub reveal">Drowzy is a free, open-source tab suspender for Chrome. It uses Chrome's own discard system, so sleeping tabs stay normal tabs in your tab bar and reload the moment you click them. No tracking, no accounts, no fake suspended pages.</p>
       <div class="hero-cta reveal">
         <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" x2="12" y1="8" y2="8"/><line x1="3.95" x2="8.54" y1="6.06" y2="14"/><line x1="10.88" x2="15.46" y1="21.94" y2="8"/></svg>
@@ -357,7 +433,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
           View on GitHub
         </a>
       </div>
-      <p class="hero-note reveal"><b>Works in Chrome 120 and up.</b> Free, and open source under MIT.</p>
+      <p class="hero-note reveal"><b>Free and open source</b> under the MIT license. Made for Chrome.</p>
     </div>
 
     <!-- the REAL Drowzy popup, rendered live from popup.css + icons.js -->
@@ -371,10 +447,45 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
 <!-- trust strip ------------------------------------------------------------->
 <section class="trust shell reveal">
   <div class="trust-row">
-    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Built on Chrome's native discard API</span>
-    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Zero data collected</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>Featured on the Chrome Web Store</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Highly rated</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Open source</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No tracking</span>
     <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>50+ languages</span>
-    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>MIT licensed</span>
+  </div>
+</section>
+
+<!-- how it works ------------------------------------------------------------>
+<section class="band how" id="how">
+  <div class="shell">
+    <div class="reveal">
+      <span class="eyebrow" style="justify-content:center">How it works</span>
+      <h2>Sleeping tabs <em>stop running</em>.</h2>
+      <p class="lead">Every open tab keeps its page loaded and its scripts running, whether you looked at it a minute ago or last week. Chrome gets heavier as the day goes on, and closing tabs means losing your place. Drowzy notices the tabs you have stopped using and puts them to sleep with Chrome's built-in discard system.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/></svg></span><b>01 · ACTIVE</b></div>
+        <h3>You are using it</h3>
+        <p>The tab you are looking at, and anything you recently switched away from, is left alone. Drowzy only counts time since a tab was last active.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><b>02 · IDLE</b></div>
+        <h3>It sits past your timer</h3>
+        <p>You pick the wait, from a few minutes to a few hours, or manual only. Pinned tabs, tabs playing audio, whitelisted sites and tabs you have kept awake are skipped according to your settings.</p>
+      </div>
+      <div class="step asleep reveal">
+        <div class="num"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><b>03 · ASLEEP</b></div>
+        <h3>Chrome unloads it</h3>
+        <p>The page stops running and hands its memory back to Chrome. The tab keeps its place, title and icon in your tab bar. Click it and it reloads.</p>
+      </div>
+    </div>
+
+    <div class="mem-note reveal">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
+      <p><b>About memory savings.</b> How much a sleeping tab frees depends on what it was: a heavy web app can hold a lot on its own, a plain article far less, so the total varies with how many tabs you have and what they are. The savings figure in Drowzy's stats panel is a running estimate, not a measurement. The dependable part is simpler: a sleeping tab stops running until you wake it.</p>
+    </div>
   </div>
 </section>
 
@@ -383,59 +494,69 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
   <div class="shell why-grid">
     <div class="reveal">
       <span class="eyebrow">Why Drowzy</span>
-      <h2>Most suspenders <em>gamble</em> with your tabs.</h2>
-      <p class="lead">They swap each tab for a placeholder page of their own. If that extension breaks, gets pulled from the store, or you remove it, those tabs can disappear right along with it.</p>
-      <p class="callout">Instead, Drowzy uses the <code>chrome.tabs.discard()</code> API that Chrome relies on to free memory itself.</p>
+      <h2>No placeholder pages. <em>Tabs stay tabs.</em></h2>
+      <p class="lead">Older tab suspenders swap each sleeping tab for a page the extension owns, and rewrite your real address into a chrome-extension:// one. If that extension breaks, gets pulled from the store, or is removed, those tabs can be hard to get back.</p>
+      <p class="callout">Drowzy uses <code>chrome.tabs.discard()</code>, the same mechanism Chrome relies on to free memory itself. Nothing is rewritten and nothing is swapped in.</p>
     </div>
 
     <div class="why-card reveal">
       <ul class="diff">
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
-          <div><h4>Chrome owns the sleeping tab</h4><p>Drowzy hands suspension to Chrome's own engine, so a tab survives restarts, crashes, and even removing the extension.</p></div>
+          <div><h4>A sleeping tab is still a Chrome tab</h4><p>Chrome does the unloading, so the tab never depends on Drowzy to come back. It is there after a browser restart, and if you ever remove Drowzy, your tabs are untouched.</p></div>
         </li>
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg></span>
-          <div><h4>Everything stays intact</h4><p>Full history, scroll position, and anything typed into a form is exactly where you left it when the tab wakes.</p></div>
+          <div><h4>Your real address stays put</h4><p>The tab keeps its title, icon, URL and back/forward history. Waking it reloads the page from the site, like pressing refresh, so anything a site had not saved on its own may need to be redone.</p></div>
         </li>
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
-          <div><h4>No placeholder pages</h4><p>No redirects, no fake "this tab is suspended" screens, and no chrome-extension URLs cluttering your tab bar.</p></div>
+          <div><h4>No fake suspended screens</h4><p>No redirects, no "this tab is suspended" page, and no chrome-extension:// URLs in your tab bar. Bookmark or copy a sleeping tab and you get the real address.</p></div>
         </li>
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></span>
-          <div><h4>Instant to wake</h4><p>Click the tab and Chrome reloads it on the spot. No extra step, no in-between page to click through.</p></div>
+          <div><h4>Wakes with a click</h4><p>Click the tab and Chrome reloads the page right there. No in-between page, no extra button to press.</p></div>
         </li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- memory ------------------------------------------------------------------>
-<section class="band mem" id="memory">
-  <div class="shell reveal">
-    <span class="eyebrow" style="justify-content:center">The whole point</span>
-    <h2>Up to <em>80% less memory</em>, automatically.</h2>
-    <p class="lead">Open tabs you forgot about quietly eat RAM. Drowzy puts them to sleep and gives Chrome that memory back, so the tabs you are actually using stay fast.</p>
-
-    <div class="meter" id="meter">
-      <div class="meter-top"><span><b>47 tabs</b> open, a typical afternoon</span><span>Chrome memory in use</span></div>
-      <div class="bar">
-        <div class="bar-head"><span class="name">Without Drowzy</span><span class="val" style="color:#e8675d">4.2 GB</span></div>
-        <div class="track"><div class="fill bad"></div></div>
-      </div>
-      <div class="bar">
-        <div class="bar-head"><span class="name">With Drowzy</span><span class="val" style="color:var(--green)">1.1 GB</span></div>
-        <div class="track"><div class="fill good"></div></div>
-      </div>
-      <div style="text-align:center">
-        <span class="saved-tag">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-          about 74% lighter
-        </span>
-      </div>
-      <p class="mem-note">Figures vary with what you have open. Drowzy estimates roughly 150 MB freed per suspended tab.</p>
+<!-- built-in memory saving vs Drowzy ---------------------------------------->
+<section class="band vs" id="memory-saver">
+  <div class="shell">
+    <div class="feat-head reveal">
+      <span class="eyebrow" style="justify-content:center">Already have Memory Saver?</span>
+      <h2>Your browser saves memory on its own. <em>Drowzy adds the controls.</em></h2>
+      <p class="lead">Chrome and Brave can already unload tabs by themselves, and Drowzy uses the same underlying mechanism. The difference is who decides. Built-in memory saving is automatic and mostly invisible. Drowzy is the control layer on top of it.</p>
     </div>
+
+    <div class="vs-grid">
+      <div class="vs-card reveal">
+        <div class="tag">Built into the browser</div>
+        <h3>Memory Saver</h3>
+        <p>The browser decides when a tab is unloaded, using its own rules and a few global settings. It runs quietly in the background and asks nothing of you.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Automatic, no setup</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Timing chosen by the browser</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Site exceptions live in the browser's own settings</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Worth keeping on</span></li>
+        </ul>
+      </div>
+      <div class="vs-card drowzy reveal">
+        <div class="tag">The control layer</div>
+        <h3><img class="logo" src="icon-512.png" alt="" width="22" height="22">Drowzy</h3>
+        <p>Everything the browser does on its own, plus the decisions handed back to you: when tabs sleep, which ones never do, and a plain answer whenever one will not.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Your own timer</b>, or manual only</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Suspend this tab, Suspend Others, Wake All</b> from the popup, a shortcut or the right-click menu</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Keep this tab awake</b> for one tab, or a <b>whitelist</b> for a whole site</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Clear reasons</b> when a tab is protected, with a link to the setting</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Side panel, sessions and stats</b> so you can see what is sleeping and why</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="vs-foot reveal">You can run both. Drowzy does not switch off your browser's memory saving, and it does not need to.</p>
   </div>
 </section>
 
@@ -451,47 +572,62 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="10" x2="10" y1="15" y2="9"/><line x1="14" x2="14" y1="15" y2="9"/></svg></span>
         <h3>Auto-suspend</h3>
-        <p>Puts inactive tabs to sleep after a timer you choose, anywhere from 5 minutes to 4 hours, or manual only.</p>
+        <p>Tabs you stop using go to sleep after a timer you pick, from a few minutes to a few hours. Or turn the timer off and sleep tabs only by hand.</p>
       </div>
       <div class="card reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
-        <h3>Smart protection</h3>
-        <p>Pinned tabs, tabs playing audio, and tabs with unsaved form text are never touched.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 9 5 12 1.8-5.2L21 14Z"/><path d="M7.2 2.2 8 5.1"/><path d="m5.1 8-2.9-.8"/><path d="M14 4.1 12 6"/><path d="m6 12-1.9 2"/></svg></span>
+        <h3>Manual control</h3>
+        <p>Suspend Others sleeps every other tab in the window with one click. Suspend this tab puts a single tab back to sleep. Wake All brings everything back.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <h3>Keep this tab awake</h3>
+        <p>Hold one tab awake for now without whitelisting the whole site. The hold lasts until you allow sleep again, close the tab, or restart the browser.</p>
       </div>
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
         <h3>Whitelist</h3>
-        <p>Keep any site awake with simple wildcard patterns like github.com/ml3dev/*.</p>
+        <p>Sites that should never sleep, with simple wildcard patterns like github.com/ml3dev/*. Import and export the list as plain text.</p>
       </div>
       <div class="card reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg></span>
-        <h3>Sessions</h3>
-        <p>Save a whole window and reopen it later, with tab groups, names, and colors preserved.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <h3>Protected tabs</h3>
+        <p>Pinned tabs and tabs playing audio are protected by default, and each protection is a toggle you control. Optional form protection also skips tabs with unsaved input.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
+        <h3>It tells you why</h3>
+        <p>When a tab will not sleep, Drowzy says which protection is holding it and links straight to the setting that would change it. No silently missing buttons.</p>
       </div>
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg></span>
-        <h3>Side panel</h3>
-        <p>Pin Drowzy to Chrome's side panel for a persistent, full-height view of everything.</p>
+        <h3>Popup and side panel</h3>
+        <p>A quick look from the toolbar, or pin Drowzy to Chrome's side panel for a full-height view that stays open. Search your open tabs from either one.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg></span>
+        <h3>Sessions and stats</h3>
+        <p>Save a window's tabs and bring them back later, tab groups included. Stats count how many tabs have slept today and over time.</p>
+      </div>
+      <div class="card reveal">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></span>
+        <h3>Close duplicate tabs</h3>
+        <p>One click finds tabs open at the same address and closes the extras.</p>
       </div>
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></svg></span>
-        <h3>Keyboard and menu</h3>
-        <p>Suspend or wake with a keystroke, or right-click any page for quick actions.</p>
-      </div>
-      <div class="card reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v1"/><path d="M12 20v1"/><path d="M3 12h1"/><path d="M20 12h1"/><path d="m18.364 5.636-.707.707"/><path d="m6.343 17.657-.707.707"/><path d="m5.636 5.636.707.707"/><path d="m17.657 17.657.707.707"/></svg></span>
-        <h3>Dark and light</h3>
-        <p>Toggle the theme from the header. Your preference is remembered next time.</p>
+        <h3>Shortcuts and right-click</h3>
+        <p>Suspend or wake with a keystroke, or right-click any page for quick actions. Shortcuts can be changed in Chrome's own extension shortcuts settings.</p>
       </div>
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
         <h3>50+ languages</h3>
-        <p>The entire interface follows your browser language, automatically.</p>
+        <p>The entire interface follows your browser language automatically, including right-to-left layouts.</p>
       </div>
       <div class="card reveal">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
-        <h3>Stats dashboard</h3>
-        <p>See how many tabs you have suspended and how much memory Drowzy has saved you.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v1"/><path d="M12 20v1"/><path d="M3 12h1"/><path d="M20 12h1"/><path d="m18.364 5.636-.707.707"/><path d="m6.343 17.657-.707.707"/><path d="m5.636 5.636.707.707"/><path d="m17.657 17.657.707.707"/></svg></span>
+        <h3>Dark and light</h3>
+        <p>Follows your system theme, or pick one from the header. Your choice is remembered.</p>
       </div>
     </div>
   </div>
@@ -503,7 +639,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
     <div class="feat-head reveal">
       <span class="eyebrow" style="justify-content:center">See it in action</span>
       <h2>Every screen, <em>clean and out of the way</em>.</h2>
-      <p class="lead">The same popup opens to settings you tune once, sessions you can bring back, and stats that show exactly what Drowzy has saved you. This is the real interface, not a mockup.</p>
+      <p class="lead">The same popup opens to settings you tune once, sessions you can bring back, and stats that keep count of what has slept. This is the real interface rendered live, not a mockup.</p>
     </div>
     <div class="shots">
       <figure class="shot reveal">
@@ -532,7 +668,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
         </div>
         <figcaption>
           <span class="chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
-          <span>Stats<small>Tabs suspended and memory reclaimed</small></span>
+          <span>Stats<small>Tabs slept, plus an estimated total</small></span>
         </figcaption>
       </figure>
     </div>
@@ -545,12 +681,13 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
     <div class="reveal">
       <span class="eyebrow">Private by design</span>
       <h2>Drowzy never sends <em>your data</em> anywhere.</h2>
-      <p class="lead">Drowzy has no servers, no accounts, and no third-party tracking. Your settings, sessions, and stats are all counted and kept on your own machine, and none of it is ever uploaded anywhere, not even to us. The stats you see are simply your own numbers, shown back to you.</p>
-      <p class="lead" style="margin-top:16px">Tab suspenders have a history of being quietly sold and turned into trackers. Drowzy is built so that cannot happen in the dark: the code is public, and there is no server for it to send anything to.</p>
+      <p class="lead">The extension has no servers, no accounts, no analytics and no crash reporting. Your settings, sessions and stats live in your browser's own storage and are never uploaded, not even to us. The stats you see are your own numbers, shown back to you.</p>
+      <p class="lead" style="margin-top:16px">Tab suspenders have a history of being quietly sold and turned into trackers. Drowzy is built so that cannot happen in the dark: the code is public, every release is built in the open, and there is no server for it to send anything to.</p>
       <div class="priv-chips">
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No servers</span>
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No tracking</span>
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No accounts</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No telemetry</span>
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>On-device only</span>
       </div>
     </div>
@@ -586,24 +723,94 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
   </div>
 </section>
 
-<!-- open source ------------------------------------------------------------->
+<!-- open source + support --------------------------------------------------->
 <section class="band" id="open-source">
   <div class="shell">
     <div class="os-card reveal">
       <span class="eyebrow" style="justify-content:center">Open source</span>
       <h2>See exactly <em>what it does</em>.</h2>
-      <p class="lead" style="margin:0 auto">Vanilla JavaScript with no build step, no dependencies, and no node_modules. Every release on GitHub ships the exact zip uploaded to the Web Store, with a SHA-256 you can check yourself.</p>
+      <p class="lead" style="margin:0 auto">Vanilla JavaScript with no build step, no dependencies, and no node_modules. Every release is built by CI from the tagged commit and published on GitHub with its SHA-256, so you can check that what is on the Web Store matches the source. Bugs and ideas go to the public issue tracker.</p>
       <div class="os-meta">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>MIT licensed</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>No build, no deps</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>SHA-256 verified releases</span>
       </div>
-      <div style="margin-top:30px">
+      <div class="os-links">
         <a class="btn btn-ghost" href="https://github.com/ml3dev/drowzy">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.4 22.9c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
           Read the source
         </a>
+        <a class="btn btn-ghost" href="https://github.com/ml3dev/drowzy/releases">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+          Releases and changelog
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/ml3dev/drowzy/issues">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></svg>
+          Report a bug
+        </a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- faq --------------------------------------------------------------------->
+<section class="band" id="faq">
+  <div class="shell">
+    <div class="feat-head reveal">
+      <span class="eyebrow" style="justify-content:center">Questions</span>
+      <h2>Things people <em>ask first</em>.</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Does Drowzy track me?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="a">
+          <p>No. Drowzy has no analytics, no telemetry, no crash reporting and no servers to send anything to. There is no account to create. Your settings can follow your Chrome profile through Chrome's own sync, which never passes through Drowzy. The code is public if you want to check for yourself, and the <a href="privacy-policy.html">privacy policy</a> lists every permission and what it is for.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Will Drowzy lose my tabs?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="a">
+          <p>Sleeping tabs are normal Chrome tabs that Chrome has unloaded, not pages Drowzy owns. They keep their address, title and history, and they reload when you click them. If Drowzy is ever removed, they are still just tabs.</p>
+          <p>One honest caveat: waking a tab is a page reload. Anything a site had not saved on its own, like text typed into a form, may need to be entered again. Drowzy's optional form protection skips tabs with unsaved input, and <b>Keep this tab awake</b> holds any tab you are in the middle of.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How is this different from Chrome's Memory Saver?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="a">
+          <p>They use the same underlying mechanism, and you can run both. Memory Saver is automatic and decides for you. Drowzy adds the controls: your own timer, manual suspend and wake, Keep this tab awake, a whitelist with wildcards, sessions, stats, a side panel, and a plain-language reason whenever a tab will not sleep. Drowzy does not turn Memory Saver off.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Why did a tab not suspend?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="a">
+          <p>Usually because a protection is holding it: the tab is pinned, playing audio, on your whitelist, kept awake, still loading, or has unsaved form input while form protection is on. Chrome also cannot unload the tab you are currently looking at. Drowzy shows the reason next to the button and links to the setting that would change it.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Can I keep one tab awake?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="a">
+          <p>Yes. Choose <b>Keep this tab awake</b> in the popup and nothing in Drowzy will sleep that tab until you press <b>Allow sleep</b>, close the tab, or restart the browser. For a whole site, add it to the whitelist instead.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Can I customize the keyboard shortcuts?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="a">
+          <p>Yes. Chrome manages extension shortcuts on its own settings page, which websites are not allowed to link to. Paste this into the address bar, or press <b>Customize</b> under Keyboard shortcuts in the Drowzy popup to get there in one click:</p>
+          <div class="copy-line"><code>chrome://extensions/shortcuts</code><button class="copy-btn" type="button" data-copy="chrome://extensions/shortcuts">Copy</button></div>
+        </div>
+      </details>
+      <details>
+        <summary>Does Drowzy work after a browser restart?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="a">
+          <p>Yes. Your settings, whitelist, sessions and stats are saved in Chrome's storage and come back with the browser. When Chrome restores a window, tabs it reopened in the background that you have not looked at are put back to sleep shortly after they appear, so a big restored session does not sit awake all day. Keep this tab awake holds are cleared on restart on purpose, since they are meant as a "not right now" decision rather than a setting.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Is Drowzy really free?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="a">
+          <p>Yes. Drowzy is free and open source under the MIT license, with no paid tier and no upsell. If it is useful to you, a review on the Web Store or a star on GitHub is the best way to say so.</p>
+        </div>
+      </details>
     </div>
   </div>
 </section>
@@ -612,7 +819,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
 <section class="final">
   <div class="shell reveal">
     <h2>Try Drowzy <em>for free</em>.</h2>
-    <p class="lead">Add Drowzy, set your timer once, and let your forgotten tabs rest. Free, open source, and yours.</p>
+    <p class="lead">Add Drowzy, set your timer once, and let the tabs you are not using rest. Free, open source, and yours.</p>
     <div class="final-cta">
       <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" x2="12" y1="8" y2="8"/><line x1="3.95" x2="8.54" y1="6.06" y2="14"/><line x1="10.88" x2="15.46" y1="21.94" y2="8"/></svg>
@@ -636,11 +843,13 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
     <div class="foot-links">
       <a href="https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa">Chrome Web Store</a>
       <a href="https://github.com/ml3dev/drowzy">GitHub</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="https://github.com/ml3dev/drowzy/releases">Releases</a>
       <a href="https://github.com/ml3dev/drowzy/blob/main/CHANGELOG.md">Changelog</a>
+      <a href="https://github.com/ml3dev/drowzy/issues">Report a bug</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
       <a href="https://github.com/ml3dev/drowzy/blob/main/LICENSE">License</a>
     </div>
-    <p class="foot-note">Drowzy is free and open source under the MIT license. Built by <a href="https://github.com/ml3dev" style="color:var(--text-dim)">ml3dev</a>.</p>
+    <p class="foot-note">Drowzy is free and open source under the MIT license. Built by <a href="https://github.com/ml3dev">ml3dev</a>.</p>
   </div>
 </footer>
 
@@ -657,7 +866,7 @@ addEventListener('message',(e)=>{
   });
 });
 
-// staggered reveal on scroll (toggles a class -> only transform/opacity animate)
+// staggered reveal on scroll (toggles a class, so only transform/opacity animate)
 const io=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
 },{threshold:.05,rootMargin:'0px 0px -2% 0px'});
@@ -668,12 +877,15 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{
 // reveal the hero immediately
 document.querySelectorAll('.hero .reveal').forEach(el=>el.classList.add('show'));
 
-// fire the memory meter when it scrolls into view
-const meter=document.getElementById('meter');
-const mio=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ meter.classList.add('in-view'); mio.disconnect(); } });
-},{threshold:.4});
-mio.observe(meter);
+// copy buttons (chrome:// pages cannot be linked from a website, so offer the text instead)
+document.querySelectorAll('.copy-btn[data-copy]').forEach((btn)=>{
+  const label=btn.textContent;
+  btn.addEventListener('click',async()=>{
+    try{ await navigator.clipboard.writeText(btn.getAttribute('data-copy')); btn.textContent='Copied'; }
+    catch(err){ btn.textContent='Select the text to copy'; }
+    setTimeout(()=>{ btn.textContent=label; },1600);
+  });
+});
 </script>
 </body>
 </html>

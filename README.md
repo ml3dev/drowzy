@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>The open-source tab suspender for Chrome.</strong><br>
-  Auto-suspend inactive tabs. Save up to 80% memory. No tracking, no servers, no nonsense.
+  Auto-suspend inactive tabs with Chrome's own discard system. No tracking, no servers, no nonsense.
 </p>
 
 <p align="center">
@@ -44,14 +44,14 @@ Most tab suspenders replace your tabs with custom placeholder pages. If the exte
 - Suspended tabs are **managed by Chrome itself** - they survive restarts, crashes, and even uninstalling Drowzy
 - Tabs keep their **place in the tab bar and full back/forward history** - waking reloads the live page
 - **No custom pages**, no redirects, no `chrome-extension://` URLs in your tab bar
-- Waking a tab is instant - just click it
+- Waking a tab is one click - Chrome reloads it in place
 
 On top of that, Drowzy is fully open source, collects zero data, and runs entirely in your browser. No servers, no analytics, no accounts. Your tabs are yours.
 
 ## Features
 
 ### Core
-- **Auto-suspend** inactive tabs after a configurable timer (5 min - 4 hours, or manual only)
+- **Auto-suspend** inactive tabs after a configurable timer (1 min - 4 hours, or manual only)
 - **Smart protection** - pinned, audio-playing, and whitelisted tabs are skipped by default; the pinned and audio protections are toggles you can turn off if you want those tabs to sleep too. Optional form-data protection also skips tabs with unsaved input (off by default, requires granting page access)
 - **Keep this tab awake** - hold a single tab awake without whitelisting the whole site. Nothing in Drowzy will sleep it until you press "Allow sleep" or close the tab; the hold clears when you restart your browser
 - **Tells you why** - when a tab can't sleep, Drowzy says which protection is stopping it and links straight to the setting that would change it, instead of quietly hiding the button
@@ -68,7 +68,7 @@ On top of that, Drowzy is fully open source, collects zero data, and runs entire
 ### Polish
 - **Dark and light theme** - toggle in the header, preference is saved
 - **Side panel** - pin Drowzy to Chrome's side panel for a persistent full-height view
-- **57 languages** - UI automatically matches your browser language
+- **50+ languages** - UI automatically matches your browser language
 - **Suspend indicator** - optional `[zzz]` prefix on suspended tab titles (requires granting page access)
 - **Suspend warning** - optional on-page notice before a tab is auto-suspended (requires granting page access)
 - **Stats dashboard** - track how many tabs you've suspended and how much memory you've saved
@@ -81,13 +81,13 @@ Tab inactive for 15 min ──> Drowzy calls chrome.tabs.discard()
                                         │
                                         ▼
                               Chrome unloads the tab
-                              (0 MB RAM, tab stays in bar)
+                              (page unloaded, tab stays in bar)
                                         │
                                         ▼
                               User clicks tab ──> Chrome reloads it
 ```
 
-Drowzy runs a lightweight alarm every 60 seconds. It checks each tab's last-active timestamp and suspends any that exceed your chosen threshold. Protected tabs (pinned, audible, whitelisted, active, or containing forms) are always skipped. That's it - no background pages, no content scripts running on every page, no idle CPU usage.
+Drowzy runs a lightweight alarm every 60 seconds. It checks each tab's last-active timestamp and suspends any that exceed your chosen threshold. The active tab, whitelisted sites and tabs you keep awake are always skipped; pinned tabs, audio tabs and tabs with unsaved form input are skipped while those protections are on. That's it - no background pages, no content scripts running on every page, no idle CPU usage.
 
 ## Permissions
 
@@ -132,9 +132,9 @@ drowzy/
   onboarding.html/js   First-run welcome page
   changelog.html/js    What's new page
   privacy-policy.html  Privacy policy
-  _locales/            57 language translations
+  _locales/            50+ language translations
   icons/               Extension icons (16-512px)
-  scripts/             package.sh builds the release zip
+  scripts/             package.sh builds the release zip (pack.ps1 does the same on Windows)
   docs/                GitHub Pages site (landing page, uninstall feedback)
   .github/             CI: release workflow runs on every version tag
 ```

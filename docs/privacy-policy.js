@@ -1,3 +1,11 @@
+// Honour the theme chosen with the popup's toggle (see changelog.js).
+try {
+  chrome.storage.local.get('theme', function(res) {
+    var t = res && res.theme;
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  });
+} catch (e) {}
+
 try {
   document.documentElement.lang = chrome.i18n.getUILanguage();
   document.querySelectorAll('[data-i18n]').forEach(function(el) {

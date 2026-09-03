@@ -35,6 +35,15 @@
   --color-amber-dim: rgba(251, 191, 36, 0.12);
   --color-blue: #60a5fa;
   --color-blue-dim: rgba(96, 165, 250, 0.12);
+  --color-cyan: #67e8f9;
+  --color-cyan-dim: rgba(103, 232, 249, 0.12);
+  --color-cyan-border: rgba(103, 232, 249, 0.25);
+  --color-cyan-hover-dim: rgba(103, 232, 249, 0.2);
+  /* Outline used ONLY on favicons measured to blend into this theme. See
+     tuneFaviconContrast in popup.js - a plate behind every icon looked worse
+     than the problem it solved, so nothing is drawn behind them at all and
+     the few icons that would vanish get a shape-hugging edge instead. */
+  --favicon-outline: rgba(255, 255, 255, 0.55);
   --color-gold: #f59e0b;
   --color-danger: #f87171;
   --color-danger-dim: rgba(248, 113, 113, 0.12);
@@ -82,6 +91,12 @@
   --color-amber-dim: rgba(217, 119, 6, 0.1);
   --color-blue: #2563eb;
   --color-blue-dim: rgba(37, 99, 235, 0.1);
+  --color-cyan: #0891b2;
+  --color-cyan-dim: rgba(8, 145, 178, 0.1);
+  --color-cyan-border: rgba(8, 145, 178, 0.25);
+  --color-cyan-hover-dim: rgba(8, 145, 178, 0.15);
+  /* see the dark block; on light the edge is dark so a white glyph shows */
+  --favicon-outline: rgba(26, 16, 37, 0.62);
   --color-gold: #b45309;
   --color-danger: #dc2626;
   --color-danger-dim: rgba(220, 38, 38, 0.1);
@@ -268,6 +283,7 @@ body:not(.popup-ready) {
 .badge-system { color: var(--color-muted); background: var(--color-muted-dim); }
 .badge-timer { color: var(--color-muted); background: var(--color-muted-dim); }
 .badge-sleeping { color: var(--color-accent); background: var(--color-accent-dim); }
+.badge-awake { color: var(--color-cyan); background: var(--color-cyan-dim); }
 
 /* inputs */
 .input {
@@ -428,6 +444,11 @@ body:not(.popup-ready) {
   letter-spacing: -0.03em;
   color: var(--color-text);
   line-height: 1.2;
+  /* "6.4 GB" is a number and a unit; inside an RTL panel the bidi algorithm
+     reorders them to "GB 6.4". Isolating the value as LTR keeps the figure
+     readable in Arabic, Hebrew, Persian and Urdu without touching alignment. */
+  unicode-bidi: isolate;
+  direction: ltr;
   transition: color var(--transition-default);
 }
 
@@ -531,6 +552,78 @@ body:not(.popup-ready) {
   margin-top: 1px;
 }
 
+/* inline "Open settings" next to a protection reason - a link, not a button,
+   so it reads as a shortcut rather than a third competing action */
+.current-tab-fix {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 11px;
+  color: var(--color-accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.current-tab-fix:hover {
+  color: var(--color-accent-hover);
+}
+
+/* brief highlight on the setting the user was sent to */
+.setting-row-flash {
+  animation: settingFlash 1.6s ease-out;
+  border-radius: 6px;
+}
+
+@keyframes settingFlash {
+  0%, 60% { background: var(--color-accent-dim); }
+  100% { background: transparent; }
+}
+
+.btn-suspend-current {
+  width: 100%;
+  margin-bottom: 6px;
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+  border-color: var(--border-accent);
+  box-shadow: none;
+}
+
+.btn-suspend-current:hover {
+  background: var(--color-accent-hover-dim);
+  color: var(--color-accent-hover);
+  box-shadow: var(--shadow-glow-sm);
+}
+
+.btn-keep-awake {
+  width: 100%;
+  margin-bottom: 6px;
+  background: var(--color-accent-dim);
+  color: var(--color-accent);
+  border-color: var(--border-accent);
+  box-shadow: none;
+}
+
+.btn-keep-awake:hover {
+  background: var(--color-accent-hover-dim);
+  color: var(--color-accent-hover);
+  box-shadow: var(--shadow-glow-sm);
+}
+
+/* held: cyan, the one colour not already spoken for by a protection badge,
+   so "this tab is being held awake" never reads as pinned or whitelisted */
+.btn-keep-awake.is-kept-awake {
+  background: var(--color-cyan-dim);
+  color: var(--color-cyan);
+  border-color: var(--color-cyan-border);
+}
+
+.btn-keep-awake.is-kept-awake:hover {
+  background: var(--color-cyan-hover-dim);
+}
+
 .btn-whitelist {
   width: 100%;
   background: var(--color-accent-dim);
@@ -561,6 +654,24 @@ body:not(.popup-ready) {
   height: 16px;
   border-radius: 3px;
   flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* Measured as blending into the panel, and coloured - so it cannot be
+   flipped without changing its hue. drop-shadow follows the alpha channel,
+   tracing the glyph rather than boxing it: no plate, no visible background. */
+.favicon.needs-contrast {
+  filter:
+    drop-shadow(0 0 0.5px var(--favicon-outline))
+    drop-shadow(0 0 1px var(--favicon-outline));
+}
+
+/* Measured as blending AND monochrome on transparency - a mark like GitHub's,
+   which the site itself publishes in both a light and a dark version. Chrome
+   only cached one of them, so we produce the other: inverting near-black
+   gives near-white and vice versa. Hue is untouched because there isn't any. */
+.favicon.needs-invert {
+  filter: invert(1);
 }
 
 .favicon[src=""],
@@ -580,6 +691,18 @@ body:not(.popup-ready) {
   font-size: 9px;
   font-weight: 600;
   flex-shrink: 0;
+}
+
+/* icon variant (extension / system / file pages): muted, because these are
+   never suspendable and shouldn't compete with real favicons for attention */
+.favicon-fallback-icon {
+  background: var(--color-muted-dim);
+  color: var(--color-text-tertiary);
+}
+
+.favicon-fallback-icon .icon,
+.favicon-fallback-icon svg {
+  display: block;
 }
 
 .tab-list-header {
@@ -886,7 +1009,8 @@ body:not(.popup-ready) {
 }
 
 .session-card.is-new {
-  animation: sessionCardEnter 380ms cubic-bezier(0.2, 0.9, 0.3, 1.15);
+  /* plain ease-out: the old curve ended at 1.15, which overshoots and springs */
+  animation: sessionCardEnter 320ms ease-out;
 }
 
 .session-card.is-removing {
@@ -905,7 +1029,11 @@ body:not(.popup-ready) {
   border-radius: 2px;
   border: 1.5px solid var(--bg-surface);
   margin-left: -4px;
+  object-fit: contain;
 }
+
+/* no per-surface duplicates: stacked session icons carry .favicon too, so the
+   .favicon.needs-contrast / .needs-invert rules above already apply */
 
 .session-favicon-stack img:first-child {
   margin-left: 0;
@@ -987,6 +1115,9 @@ body:not(.popup-ready) {
   letter-spacing: -0.02em;
   color: var(--color-text);
   line-height: 1.2;
+  /* same number-and-unit isolation as .strip-stat-value */
+  unicode-bidi: isolate;
+  direction: ltr;
 }
 
 .stat-hero-label {
@@ -1340,7 +1471,16 @@ body:not(.popup-ready) {
   pointer-events: none;
   transition: opacity var(--transition-default), transform var(--transition-default);
   z-index: 100;
-  white-space: nowrap;
+  /* Wraps instead of widening past the popup: a fixed, centred box with nowrap
+     clips both ends of any message longer than the panel, which the 90-char
+     "needs another open tab" reason already did. Short toasts still sit on
+     one line because the box only grows to fit its text. */
+  white-space: normal;
+  /* max-content, not shrink-to-fit: with left at 50% the box would otherwise
+     only get the right half of the panel to size itself in */
+  width: max-content;
+  max-width: calc(100% - 24px);
+  text-align: center;
   box-shadow: var(--shadow-md);
 }
 
@@ -1360,9 +1500,9 @@ body:not(.popup-ready) {
 }
 
 @keyframes sessionCardEnter {
-  0%   { opacity: 0; transform: translateY(-8px) scale(0.98); background: var(--bg-hover-accent); }
-  60%  { opacity: 1; transform: translateY(0) scale(1.01); background: var(--bg-hover-accent); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0%   { opacity: 0; transform: translateY(-6px); background: var(--bg-hover-accent); }
+  60%  { opacity: 1; transform: translateY(0); background: var(--bg-hover-accent); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes sessionCardLeave {
@@ -1375,14 +1515,16 @@ body:not(.popup-ready) {
   50%      { box-shadow: 0 0 0 5px rgba(248, 113, 113, 0); }
 }
 
+/* Fade, don't bounce. Suspend Others re-renders every row at once, and a
+   scale-up on each badge plus the stat numbers read as cartoony rather than
+   responsive. Opacity alone still shows something changed. */
 @keyframes badgePop {
-  from { opacity: 0; transform: scale(0.8); }
+  from { opacity: 0; }
 }
 
 @keyframes statPulse {
-  0% { transform: scale(1); }
-  40% { transform: scale(1.08); }
-  100% { transform: scale(1); }
+  0% { opacity: 0.55; }
+  100% { opacity: 1; }
 }
 
 @keyframes themeIconSpin {
