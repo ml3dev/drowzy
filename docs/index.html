@@ -461,7 +461,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
     <div class="reveal">
       <span class="eyebrow" style="justify-content:center">How it works</span>
       <h2>Sleeping tabs <em>stop running</em>.</h2>
-      <p class="lead">Every open tab keeps its page loaded and its scripts running, whether you looked at it a minute ago or last week. Chrome gets heavier as the day goes on, and closing tabs means losing your place. Drowzy notices the tabs you have stopped using and puts them to sleep with Chrome's built-in discard system.</p>
+      <p class="lead">Every open tab keeps its page loaded and its scripts running, even one you last looked at a week ago. Chrome gets heavier as the day goes on, and closing tabs means losing your place. Drowzy puts the tabs you have stopped using to sleep, using Chrome's own discard system.</p>
     </div>
 
     <div class="steps">
@@ -473,7 +473,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
       <div class="step reveal">
         <div class="num"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><b>02 · IDLE</b></div>
         <h3>It sits past your timer</h3>
-        <p>You pick the wait, from one minute to a few hours, or manual only. Pinned tabs, tabs playing audio, whitelisted sites and tabs you have kept awake are skipped according to your settings.</p>
+        <p>You pick the wait, from one minute to a few hours, or turn the timer off and do it by hand. Pinned tabs, tabs playing audio, whitelisted sites and tabs you keep awake are skipped.</p>
       </div>
       <div class="step asleep reveal">
         <div class="num"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span><b>03 · ASLEEP</b></div>
@@ -484,7 +484,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
 
     <div class="mem-note reveal">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
-      <p><b>About memory savings.</b> How much a sleeping tab frees depends on what it was: a heavy web app can hold a lot on its own, a plain article far less, so the total varies with how many tabs you have and what they are. The savings figure in Drowzy's stats panel is a running estimate, not a measurement. The dependable part is simpler: a sleeping tab stops running until you wake it.</p>
+      <p><b>About memory savings.</b> How much a sleeping tab frees depends on the tab. A heavy web app can hold a lot, a plain article far less, so the total depends on what you have open. The savings figure in Drowzy's stats panel is an estimate, not a measurement. What you can count on: a sleeping tab stops running until you wake it.</p>
     </div>
   </div>
 </section>
@@ -507,7 +507,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
         </li>
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg></span>
-          <div><h4>Your real address stays put</h4><p>The tab keeps its title, icon, URL and back/forward history. Waking it reloads the page from the site, like pressing refresh, so anything a site had not saved on its own may need to be redone.</p></div>
+          <div><h4>Your real address stays put</h4><p>The tab keeps its title, icon, URL and back/forward history. Waking it reloads the page, like pressing refresh, so anything the site had not saved yet may need to be typed again.</p></div>
         </li>
         <li>
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
@@ -546,12 +546,12 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
       <div class="vs-card drowzy reveal">
         <div class="tag">The control layer</div>
         <h3><img class="logo" src="icon-512.png" alt="" width="22" height="22">Drowzy</h3>
-        <p>Everything the browser does on its own, plus the decisions handed back to you: when tabs sleep, which ones never do, and a plain answer whenever one will not.</p>
+        <p>The same unloading, except you decide when tabs sleep and which ones never do, and Drowzy tells you why when one stays awake.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Your own timer</b>, or manual only</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Suspend this tab, Suspend Others, Wake All</b> from the popup, a shortcut or the right-click menu</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Keep this tab awake</b> for one tab, or a <b>whitelist</b> for a whole site</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Clear reasons</b> when a tab is protected, with a link to the setting</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>The reason</b> when a tab is protected, with a link to the setting</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Side panel, sessions and stats</b> so you can see what is sleeping and why</span></li>
         </ul>
       </div>
@@ -565,8 +565,8 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
   <div class="shell">
     <div class="feat-head reveal">
       <span class="eyebrow" style="justify-content:center">Features</span>
-      <h2>Everything you need, <em>nothing in your way</em>.</h2>
-      <p class="lead">Set your timer once and let it run, or take over by hand whenever you like. Every control is a switch or a button in the popup, not a setting you have to dig for.</p>
+      <h2>Everything you can do <em>from the popup</em>.</h2>
+      <p class="lead">Set your timer once and let it run, or take over by hand whenever you like. Everything below is a switch or a button in the popup.</p>
     </div>
     <div class="grid">
       <div class="card reveal">
@@ -597,7 +597,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
         <h3>It tells you why</h3>
-        <p>When a tab will not sleep, Drowzy says which protection is holding it and links straight to the setting that would change it. No buttons that quietly disappear.</p>
+        <p>When a tab will not sleep, Drowzy says which protection is holding it and links to the setting that would change it.</p>
       </div>
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M15 3v18"/></svg></span>
@@ -617,7 +617,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></svg></span>
         <h3>Shortcuts and right-click</h3>
-        <p>Suspend or wake with a keystroke, or right-click any page for quick actions. Change the keys on Chrome's shortcuts page. The popup takes you straight there.</p>
+        <p>Suspend or wake with a keystroke, or right-click any page. The keys can be changed on Chrome's shortcuts page, and the popup links straight to it.</p>
       </div>
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
@@ -658,7 +658,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
         </div>
         <figcaption>
           <span class="chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg></span>
-          <span>Sessions<small>Save a window, reopen it whole later</small></span>
+          <span>Sessions<small>Save a window, reopen it later</small></span>
         </figcaption>
       </figure>
 
@@ -668,7 +668,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
         </div>
         <figcaption>
           <span class="chip-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
-          <span>Stats<small>Tabs slept, plus an estimated total</small></span>
+          <span>Stats<small>Tabs slept, with an estimated total</small></span>
         </figcaption>
       </figure>
     </div>
@@ -681,7 +681,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
     <div class="reveal">
       <span class="eyebrow">Private by design</span>
       <h2>Drowzy never sends <em>your data</em> anywhere.</h2>
-      <p class="lead">The extension has no servers, no accounts, no analytics and no crash reporting. Your settings, sessions and stats live in your browser's own storage and are never uploaded, not even to us. The stats you see are your own numbers, shown back to you.</p>
+      <p class="lead">The extension has no servers, no accounts, no analytics and no crash reporting. Your settings, sessions and stats live in your browser's own storage and are never uploaded, not even to us.</p>
       <p class="lead" style="margin-top:16px">Tab suspenders have a history of being quietly sold and turned into trackers. With Drowzy you can check for yourself: the code is public, every release is built in the open, and there is no server for it to talk to.</p>
       <div class="priv-chips">
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>No servers</span>
@@ -770,14 +770,14 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
       <details>
         <summary>Will Drowzy lose my tabs?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
         <div class="a">
-          <p>Sleeping tabs are normal Chrome tabs that Chrome has unloaded, not pages Drowzy owns. They keep their address, title and history, and they reload when you click them. If Drowzy is ever removed, they are still just tabs.</p>
-          <p>One thing to know: waking a tab is a page reload. Anything a site had not saved on its own, like text typed into a form, may need to be entered again. Drowzy's optional form protection skips tabs with unsaved input, and <b>Keep this tab awake</b> holds any tab you are in the middle of.</p>
+          <p>No. Sleeping tabs are normal Chrome tabs that Chrome has unloaded, not pages Drowzy owns. They keep their address, title and history, and they reload when you click them. If you ever remove Drowzy, they are still just tabs.</p>
+          <p>Waking a tab reloads the page, like pressing refresh. If you were halfway through typing something the site had not saved, you may need to type it again. Turn on form protection and Drowzy skips tabs with unsaved input, or use <b>Keep this tab awake</b> for the tab you are working in.</p>
         </div>
       </details>
       <details>
         <summary>How is this different from Chrome's Memory Saver?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
         <div class="a">
-          <p>They use the same underlying mechanism, and you can run both. Memory Saver is automatic and decides for you. Drowzy adds the controls: your own timer, manual suspend and wake, Keep this tab awake, a whitelist with wildcards, sessions, stats, a side panel, and a plain-language reason whenever a tab will not sleep. Drowzy does not turn Memory Saver off.</p>
+          <p>They use the same mechanism, and you can run both. Memory Saver is automatic and decides for you. Drowzy gives you the controls: your own timer, manual suspend and wake, Keep this tab awake, a whitelist, sessions, stats, a side panel, and the reason whenever a tab will not sleep. Drowzy does not turn Memory Saver off.</p>
         </div>
       </details>
       <details>
@@ -802,7 +802,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
       <details>
         <summary>Does Drowzy work after a browser restart?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
         <div class="a">
-          <p>Yes. Your settings, whitelist, sessions and stats are saved in Chrome's storage and come back with the browser. When Chrome restores a window, tabs it reopened in the background that you have not looked at are put back to sleep shortly after they appear, so a big restored session does not sit awake all day. Keep this tab awake holds are cleared on restart on purpose, since they are meant as a "not right now" decision rather than a setting.</p>
+          <p>Yes. Your settings, whitelist, sessions and stats are saved in Chrome's storage and come back with the browser. When Chrome restores a window, the tabs you have not looked at yet are put back to sleep shortly after they appear, so a big restored session does not sit awake all day. Keep this tab awake is cleared on restart, since it is meant for right now rather than forever.</p>
         </div>
       </details>
       <details>
@@ -819,7 +819,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
 <section class="final">
   <div class="shell reveal">
     <h2>Try Drowzy <em>for free</em>.</h2>
-    <p class="lead">Add it to Chrome, pick a timer, and let the tabs you are not using rest. Free, open source, and yours.</p>
+    <p class="lead">Add it to Chrome, pick a timer, and let the tabs you are not using rest. Free and open source.</p>
     <div class="final-cta">
       <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="21.17" x2="12" y1="8" y2="8"/><line x1="3.95" x2="8.54" y1="6.06" y2="14"/><line x1="10.88" x2="15.46" y1="21.94" y2="8"/></svg>
