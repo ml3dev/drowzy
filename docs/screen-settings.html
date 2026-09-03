@@ -21,15 +21,21 @@
               <div class="setting-row">
                 <label for="suspendTimer">Auto-suspend after</label>
                 <select id="suspendTimer" class="select">
+                  <option value="1">1 minute</option>
                   <option value="5">5 minutes</option>
+                  <option value="10">10 minutes</option>
                   <option value="15" selected>15 minutes</option>
                   <option value="30">30 minutes</option>
                   <option value="60">1 hour</option>
+                  <option value="120">2 hours</option>
+                  <option value="240">4 hours</option>
+                  <option value="0">Never</option>
                 </select>
               </div>
               <div class="setting-row"><label for="togglePinned">Protect pinned tabs</label><label class="switch"><input type="checkbox" id="togglePinned" checked><span class="slider"></span></label></div>
               <div class="setting-row"><label for="toggleAudio">Protect audio tabs</label><label class="switch"><input type="checkbox" id="toggleAudio" checked><span class="slider"></span></label></div>
               <div class="setting-row"><label for="toggleForms">Protect tabs with forms</label><label class="switch"><input type="checkbox" id="toggleForms" checked><span class="slider"></span></label></div>
+              <div class="setting-row"><label for="toggleStartup">Suspend tabs on startup</label><label class="switch"><input type="checkbox" id="toggleStartup" checked><span class="slider"></span></label></div>
               <div class="setting-row"><label for="toggleAutoSuspend">Enable auto-suspend</label><label class="switch"><input type="checkbox" id="toggleAutoSuspend" checked><span class="slider"></span></label></div>
               <div class="setting-row"><label for="toggleMarkSuspended">Mark suspended tabs</label><label class="switch"><input type="checkbox" id="toggleMarkSuspended" checked><span class="slider"></span></label></div>
               <div class="setting-row setting-row-block">
@@ -43,6 +49,18 @@
                   <li class="whitelist-item"><span class="whitelist-domain">figma.com</span><button type="button" class="whitelist-remove"><span class="whitelist-remove-text">Remove</span><span class="whitelist-remove-x" aria-hidden="true">×</span></button></li>
                   <li class="whitelist-item"><span class="whitelist-domain">notion.so</span><button type="button" class="whitelist-remove"><span class="whitelist-remove-text">Remove</span><span class="whitelist-remove-x" aria-hidden="true">×</span></button></li>
                 </ul>
+                <div class="whitelist-io">
+                  <button class="btn btn-sm" title="Copy whitelist"><span data-icon="clipboard"></span><span>Export</span></button>
+                  <button class="btn btn-sm" title="Import whitelist from clipboard"><span data-icon="download"></span><span>Import</span></button>
+                </div>
+              </div>
+              <div class="setting-row" title="Chrome manages these. Customize opens chrome://extensions/shortcuts, where you can change or clear each shortcut.">
+                <label>Keyboard shortcuts</label>
+                <span class="shortcuts-row-right"><span class="shortcuts-status">2 of 3 set</span><a class="settings-link" href="#">Customize</a></span>
+              </div>
+              <div class="setting-row">
+                <a class="settings-link" href="#">What's new in v1.5.0</a>
+                <a class="settings-link" href="#">Report a bug</a>
               </div>
             </div>
           </div>
