@@ -36,6 +36,7 @@ Where things live and what owns what:
 | `onboarding.*`, `changelog.*`, `privacy-policy.*` | Standalone extension pages |
 | `_locales/` | 57 locales. `en/messages.json` is the source of truth; every other locale must have exactly the same keys |
 | `scripts/package.sh` | Builds the release zip (used locally and by CI) |
+| `scripts/pack.ps1` | The same zip from PowerShell on Windows, same file list |
 | `.github/workflows/release.yml` | Creates the GitHub Release when a `vX.Y.Z` tag is pushed |
 
 ## Common recipes

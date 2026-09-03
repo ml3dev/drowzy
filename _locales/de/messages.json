@@ -3,7 +3,7 @@
     "message": "Drowzy - Tab-Suspender & Speichersparer"
   },
   "extDescription": {
-    "message": "Inaktive Tabs automatisch suspendieren und bis zu 80 % RAM sparen. Leichtgewichtig, privat, kein Tracking. Tabs gehen nie verloren."
+    "message": "Legt Tabs schlafen, die du gerade nicht brauchst, damit Chrome schnell bleibt. Leicht, privat, kein Tracking, Open Source."
   },
   "commandSuspendCurrent": {
     "message": "Aktuellen Tab suspendieren"
@@ -435,7 +435,7 @@
     "message": "Willkommen bei Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy spart Arbeitsspeicher, indem inaktive Tabs in den Schlafmodus versetzt werden. Ihre Tabs sind immer sicher - wir verwenden Chromes native Discard-API, sodass sie auch nach der Deinstallation von Drowzy erhalten bleiben."
+    "message": "Drowzy spart Arbeitsspeicher, indem inaktive Tabs in den Schlafmodus versetzt werden. Ihre Tabs bleiben normale Chrome-Tabs - wir verwenden Chromes native Discard-API, sodass sie auch nach der Deinstallation von Drowzy erhalten bleiben."
   },
   "howItWorks": {
     "message": "So funktioniert es"
@@ -447,10 +447,10 @@
     "message": "<strong>Suspendierte Tabs verwenden null RAM</strong>, bleiben aber in Ihrer Tab-Leiste"
   },
   "featureClickToWake": {
-    "message": "<strong>Klicken Sie auf einen suspendierten Tab</strong>, um ihn sofort aufzuwecken"
+    "message": "<strong>Klicken Sie auf einen suspendierten Tab</strong>, um ihn aufzuwecken"
   },
   "featureProtected": {
-    "message": "<strong>Aktive, angepinnte und Audio-Tabs</strong> werden nie angetastet"
+    "message": "<strong>Aktive, angepinnte und Audio-Tabs</strong> sind standardmäßig geschützt"
   },
   "quickActions": {
     "message": "Schnellaktionen"
@@ -678,7 +678,12 @@
     "message": "Der Hinweis „Gefällt dir Drowzy?“ erscheint jetzt erst, nachdem du Drowzy eine Weile genutzt hast, nie bei der Installation oder direkt nach einem Update. Die Schaltflächen sind „Bewertung schreiben“, „Vielleicht später“ und „Nicht mehr fragen“. Es wird nie nach einer bestimmten Sternebewertung gefragt und nie eine Belohnung angeboten."
   },
   "changelogReleaseHeading": {
-    "message": "Neu in"
+    "message": "Neu in $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Schnelleres, intelligenteres Suspendieren"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Beim Schlafenlegen hüpft nicht mehr die ganze Liste. Diese Seite und die Willkommensseite folgen jetzt dem hellen oder dunklen Design, das du in Drowzy gewählt hast. Und denselben Tab immer wieder schlafen zu legen bläht deine Gesamtstatistik nicht mehr auf."
+  },
+  "timer1min": {
+    "message": "1 Minute"
+  },
+  "shortcutsHint": {
+    "message": "Chrome verwaltet diese Kürzel. Anpassen öffnet chrome://extensions/shortcuts, wo du jedes Kürzel ändern oder löschen kannst."
+  },
+  "shortcutUnset": {
+    "message": "Nicht belegt"
+  },
+  "changelog150Title1": {
+    "message": "Öffnet sich sofort, auch mit 100 Tabs"
+  },
+  "changelog150Desc1": {
+    "message": "Das Popup lässt dich nicht mehr warten. Es öffnet sich sofort, egal wie viele Tabs du offen hast."
+  },
+  "changelog150Title2": {
+    "message": "Andere suspendieren ist schneller und zeigt, was es tut"
+  },
+  "changelog150Desc2": {
+    "message": "Es legt mehrere Tabs gleichzeitig schlafen, und du siehst die Zahl steigen. Wenn ein paar Tabs nicht schlafen konnten, sagt es dir wie viele, statt zu behaupten, alles hätte geklappt."
+  },
+  "changelog150Title3": {
+    "message": "Ein 1-Minuten-Timer"
+  },
+  "changelog150Desc3": {
+    "message": "Einen Haufen Tabs aus einer Suche geöffnet? Stell den Timer auf 1 Minute, und sie schlafen kurz nachdem du sie verlässt."
+  },
+  "changelog150Title4": {
+    "message": "Kürzel lassen sich jetzt leicht ändern"
+  },
+  "changelog150Desc4": {
+    "message": "Willst du eine andere Taste für Diesen Tab suspendieren, oder gar keine? Die Zeile Tastenkürzel in den Einstellungen bringt dich jetzt direkt an die richtige Stelle."
+  },
+  "changelog150Title5": {
+    "message": "Und die kleinen Dinge"
+  },
+  "changelog150Desc5": {
+    "message": "Füg eine komplette Webadresse in die Whitelist ein, und es funktioniert einfach. Diesen Tab suspendieren holt dich nicht mehr von einer Seite weg, auf der du gerade tippst. Meldungen sind klarer und werden nie abgeschnitten."
+  },
+  "suspendedOneToast": {
+    "message": "Tab suspendiert · ~$RAM$ freigegeben",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ Tab(s) übersprungen",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Die Whitelist ist für die Chrome-Synchronisierung voll. Entferne ein paar Seiten und versuche es erneut."
   }
 }

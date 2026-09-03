@@ -3,7 +3,7 @@
     "message": "Drowzy - 分頁休眠與記憶體節省"
   },
   "extDescription": {
-    "message": "自動休眠不活躍的分頁，最多可節省 80% RAM。輕量、隱私、無追蹤。分頁絕不會遺失。"
+    "message": "讓你不在用的分頁休眠，Chrome 保持流暢。輕量、私密、無追蹤、開源。"
   },
   "commandSuspendCurrent": {
     "message": "休眠目前分頁"
@@ -435,7 +435,7 @@
     "message": "歡迎使用 Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy 透過將不活躍的分頁置於休眠狀態來節省記憶體。您的分頁始終安全，我們使用 Chrome 的原生捨棄 API，因此即使您解除安裝 Drowzy，分頁也不會遺失。"
+    "message": "Drowzy 透過將不活躍的分頁置於休眠狀態來節省記憶體。您的分頁仍是普通的 Chrome 分頁，我們使用 Chrome 的原生捨棄 API，因此即使您解除安裝 Drowzy，分頁也不會遺失。"
   },
   "howItWorks": {
     "message": "運作方式"
@@ -447,10 +447,10 @@
     "message": "<strong>已休眠的分頁不佔用 RAM</strong>，但仍保留在分頁列中"
   },
   "featureClickToWake": {
-    "message": "<strong>點擊任何已休眠的分頁</strong>即可立即喚醒"
+    "message": "<strong>點擊任何已休眠的分頁</strong>即可喚醒"
   },
   "featureProtected": {
-    "message": "<strong>使用中、已釘選和有音訊的分頁</strong>永遠不會被觸碰"
+    "message": "<strong>使用中、已釘選和有音訊的分頁</strong>預設受到保護"
   },
   "quickActions": {
     "message": "快捷操作"
@@ -678,7 +678,12 @@
     "message": "「喜歡 Drowzy 嗎？」橫幅現在只會在你使用 Drowzy 一段時間後才出現，絕不會在安裝時或更新後立即彈出。按鈕為「撰寫評論」「稍後再說」和「不再詢問」。它從不索取特定星級，也從不提供獎勵。"
   },
   "changelogReleaseHeading": {
-    "message": "的新功能"
+    "message": "$VERSION$ 的新功能",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "暫停更快、更聰明"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "休眠分頁時整個清單不再跳動。本頁和歡迎頁現在會跟隨你在 Drowzy 中選擇的淺色或深色主題。反覆休眠同一個分頁也不會再虛增累計統計。"
+  },
+  "timer1min": {
+    "message": "1 分鐘"
+  },
+  "shortcutsHint": {
+    "message": "這些快速鍵由 Chrome 管理。點選「自訂」會開啟 chrome://extensions/shortcuts，你可以在那裡變更或清除每個快速鍵。"
+  },
+  "shortcutUnset": {
+    "message": "未設定"
+  },
+  "changelog150Title1": {
+    "message": "開了 100 個分頁也能秒開"
+  },
+  "changelog150Desc1": {
+    "message": "彈出視窗不再讓你等。無論開了多少分頁，它都會立刻打開。"
+  },
+  "changelog150Title2": {
+    "message": "「休眠其他分頁」更快了，還能看到進度"
+  },
+  "changelog150Desc2": {
+    "message": "它一次讓多個分頁休眠，你能看到數字不斷上升。如果有些分頁沒能休眠，它會告訴你有幾個，而不是宣稱全部完成。"
+  },
+  "changelog150Title3": {
+    "message": "1 分鐘計時器"
+  },
+  "changelog150Desc3": {
+    "message": "從搜尋結果一口氣開了一堆分頁？把計時器設為 1 分鐘，離開後它們很快就會休眠。"
+  },
+  "changelog150Title4": {
+    "message": "快速鍵現在很容易改"
+  },
+  "changelog150Desc4": {
+    "message": "想給「休眠此分頁」換個按鍵，或者乾脆不要？設定裡的「鍵盤快速鍵」一列現在會直接帶你到該去的地方。"
+  },
+  "changelog150Title5": {
+    "message": "還有一些小事"
+  },
+  "changelog150Desc5": {
+    "message": "把完整網址貼進白名單，直接就能用。「休眠此分頁」不會把你從正在輸入的頁面帶走。提示更清楚，也不會再被截斷。"
+  },
+  "suspendedOneToast": {
+    "message": "分頁已休眠 · 釋放約 $RAM$",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "已略過 $COUNT$ 個分頁",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "白名單已達到 Chrome 同步的容量上限。請移除幾個網站後再試一次。"
   }
 }

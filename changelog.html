@@ -96,6 +96,10 @@
     }
 
     .section-label {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -104,6 +108,15 @@
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border-subtle);
       font-weight: 600;
+    }
+    /* the month a release shipped, so the page reads as a timeline. Written in
+       the markup as an ISO date and formatted by changelog.js in the reader's
+       own language, so there is nothing to translate. */
+    .section-date {
+      font-weight: 500;
+      letter-spacing: 1px;
+      opacity: 0.8;
+      white-space: nowrap;
     }
 
     .section-label:first-of-type {
@@ -179,6 +192,62 @@
       font-size: 13px;
       color: var(--color-text-secondary);
       line-height: 1.5;
+    }
+
+    /* Earlier releases: one title row each, open to read more. The details
+       stay on the page for anyone curious, but the page reads as a timeline
+       first and the current release gets the room. */
+    .change-item.past {
+      display: block;
+      padding: 0;
+    }
+
+    .change-item.past summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 14px;
+      cursor: pointer;
+      list-style: none;
+      border-radius: var(--radius-md);
+    }
+
+    .change-item.past summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .change-item.past summary:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: -2px;
+    }
+
+    .change-item.past .change-icon {
+      width: 24px;
+      height: 24px;
+      margin-top: 0;
+    }
+
+    .change-item.past .change-title {
+      flex: 1;
+      min-width: 0;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .change-item.past .chevron {
+      flex-shrink: 0;
+      color: var(--color-text-tertiary);
+      transition: transform 0.22s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    /* turns the moment a row starts to close, not when the slide ends */
+    .change-item.past details[open]:not(.closing) .chevron {
+      transform: rotate(180deg);
+    }
+
+    .change-item.past .change-desc {
+      padding: 0 14px 12px;
+      padding-inline-start: 50px;
     }
 
     .cta-section {
@@ -325,139 +394,33 @@
       <span class="version-label"></span>
     </div>
 
-    <div class="section-label"><span data-i18n="changelogReleaseHeading">What's new in</span> 1.4.0</div>
+    <div class="section-label"><span class="section-title" data-i18n="changelogReleaseHeading" data-i18n-version="1.5.0">What's new in 1.5.0</span><span class="section-date" data-date="2026-09-02">September 2026</span></div>
     <ul class="change-list">
       <li class="change-item">
         <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog140Title1">Keep this tab awake</div>
-          <div class="change-desc" data-i18n="changelog140Desc1">Hold a single tab awake without whitelisting the whole site. Drowzy won't sleep it until you press Allow sleep or close the tab. The hold clears when you restart your browser.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon fix">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M22 9 16 15"/><path d="m16 9 6 6"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog140Title2">Protect audio tabs now works both ways</div>
-          <div class="change-desc" data-i18n="changelog140Desc2">Turning off Protect audio tabs really does let background video and music tabs sleep now. Before, they were refused even with the setting off. With it on, nothing changes.</div>
+          <div class="change-title" data-i18n="changelog150Title1">Opens instantly, even with 100 tabs</div>
+          <div class="change-desc" data-i18n="changelog150Desc1">The popup no longer keeps you waiting. It opens right away, however many tabs you have open.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog140Title3">Drowzy tells you why a tab won't sleep</div>
-          <div class="change-desc" data-i18n="changelog140Desc3">Suspend this tab no longer disappears without explanation. When a tab can't sleep, you get the reason, and a shortcut straight to the setting that would change it.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog140Title4">Site icons that actually show up</div>
-          <div class="change-desc" data-i18n="changelog140Desc4">Tab icons now come from your browser's own cache, so sites that used to fall back to a grey letter show their real icon, including while they are asleep. Icons that would vanish against the theme you are using are adjusted so you can still see them.</div>
+          <div class="change-title" data-i18n="changelog150Title2">Suspend Others is faster and shows its work</div>
+          <div class="change-desc" data-i18n="changelog150Desc2">It puts tabs to sleep several at a time, and you can watch the count climb. If some tabs could not be put to sleep, it tells you how many instead of claiming it worked.</div>
         </div>
       </li>
       <li class="change-item">
         <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog140Title5">Calmer, and counts you can trust</div>
-          <div class="change-desc" data-i18n="changelog140Desc5">Suspending tabs no longer makes the whole list bounce. This page and the welcome page now follow the light or dark theme you picked in Drowzy. And re-sleeping the same tab over and over no longer inflates your lifetime stats.</div>
-        </div>
-      </li>
-    </ul>
-
-    <div class="section-label"><span data-i18n="changelogReleaseHeading">What's new in</span> 1.3.8</div>
-    <ul class="change-list">
-      <li class="change-item">
-        <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog138Title1">Restored tabs go back to sleep sooner</div>
-          <div class="change-desc" data-i18n="changelog138Desc1">After a browser restart, Drowzy now keeps watching for tabs your browser restores late and puts them back to sleep within about a minute. Tabs you've viewed are left alone.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon fix">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog138Title2">Report a bug from Settings</div>
-          <div class="change-desc" data-i18n="changelog138Desc2">A new Report a bug link in Settings opens Drowzy's public issue tracker in a new tab. Nothing is ever sent automatically.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog138Title3">Small clarity touches</div>
-          <div class="change-desc" data-i18n="changelog138Desc3">Sleeping tabs now show a click-to-wake hint, and the welcome page explains how Drowzy works alongside your browser's built-in Memory Saver.</div>
-        </div>
-      </li>
-    </ul>
-
-    <div class="section-label"><span data-i18n="changelogReleaseHeading">What's new in</span> 1.3.7</div>
-    <ul class="change-list">
-      <li class="change-item">
-        <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog137Title1">Put a single tab back to sleep</div>
-          <div class="change-desc" data-i18n="changelog137Desc1">After you wake a sleeping tab to look at it, the new Suspend this tab button in the popup and side panel sends just that tab back to sleep. It switches you to another tab first, because the tab you're viewing can't be suspended.</div>
-        </div>
-      </li>
-    </ul>
-
-    <div class="section-label"><span data-i18n="changelogReleaseHeading">What's new in</span> 1.3.6</div>
-    <ul class="change-list">
-      <li class="change-item">
-        <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog136Title1">Every language is now fully translated</div>
-          <div class="change-desc" data-i18n="changelog136Desc1">A few strings (whitelist toasts, the Keyboard Shortcuts row, and the Share Stats text) were still showing in English in other languages. They are now translated across all 57 languages, and right-to-left languages like Arabic and Hebrew lay out correctly too.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog136Title2">A gentler review prompt</div>
-          <div class="change-desc" data-i18n="changelog136Desc2">The "Enjoying Drowzy?" banner now appears only after you've used Drowzy for a while, never on install or right after an update. The buttons are Leave a review, Maybe later, and Don't ask again. It never asks for a specific star rating and never offers a reward.</div>
-        </div>
-      </li>
-    </ul>
-
-        <div class="section-label"><span data-i18n="changelogReleaseHeading">What's new in</span> 1.3.5</div>
-    <ul class="change-list">
-      <li class="change-item">
-        <div class="change-icon feature">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog135Title1">Faster, smarter suspending</div>
-          <div class="change-desc" data-i18n="changelog135Desc1">The default timer is now 15 minutes so you notice the memory savings sooner, and suspending other tabs and closing duplicates are more reliable.</div>
-        </div>
-      </li>
-      <li class="change-item">
-        <div class="change-icon fix">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog135Title2">Whitelist is easier to manage</div>
-          <div class="change-desc" data-i18n="changelog135Desc2">Clearer remove buttons, confirmation messages, and a site count, plus it now works for localhost and IP addresses.</div>
+          <div class="change-title" data-i18n="changelog150Title3">A 1 minute timer</div>
+          <div class="change-desc" data-i18n="changelog150Desc3">Opened a pile of tabs from a search? Set the timer to 1 minute and they go to sleep soon after you leave them.</div>
         </div>
       </li>
       <li class="change-item">
@@ -465,27 +428,230 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"/></svg>
         </div>
         <div class="change-content">
-          <div class="change-title" data-i18n="changelog135Title3">Keyboard shortcuts in Settings</div>
+          <div class="change-title" data-i18n="changelog150Title4">Shortcuts are easy to change now</div>
+          <div class="change-desc" data-i18n="changelog150Desc4">Want a different key for Suspend this tab, or none at all? The Keyboard shortcuts row in Settings now takes you straight to the right place.</div>
+        </div>
+      </li>
+      <li class="change-item">
+        <div class="change-icon fix">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="change-content">
+          <div class="change-title" data-i18n="changelog150Title5">And the small stuff</div>
+          <div class="change-desc" data-i18n="changelog150Desc5">Paste a full web address into the whitelist and it just works. Suspend this tab will not move you off a page you are typing on. Messages are clearer and never get cut off.</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="section-label"><span class="section-title" data-i18n="changelogReleaseHeading" data-i18n-version="1.4.0">What's new in 1.4.0</span><span class="section-date" data-date="2026-08-05">August 2026</span></div>
+    <ul class="change-list">
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog140Title1">Keep this tab awake</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog140Desc1">Hold a single tab awake without whitelisting the whole site. Drowzy won't sleep it until you press Allow sleep or close the tab. The hold clears when you restart your browser.</div>
+        </details>
+      </li>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon fix">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M22 9 16 15"/><path d="m16 9 6 6"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog140Title2">Protect audio tabs now works both ways</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog140Desc2">Turning off Protect audio tabs really does let background video and music tabs sleep now. Before, they were refused even with the setting off. With it on, nothing changes.</div>
+        </details>
+      </li>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog140Title3">Drowzy tells you why a tab won't sleep</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog140Desc3">Suspend this tab no longer disappears without explanation. When a tab can't sleep, you get the reason, and a shortcut straight to the setting that would change it.</div>
+        </details>
+      </li>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog140Title4">Site icons that actually show up</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog140Desc4">Tab icons now come from your browser's own cache, so sites that used to fall back to a grey letter show their real icon, including while they are asleep. Icons that would vanish against the theme you are using are adjusted so you can still see them.</div>
+        </details>
+      </li>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon meta">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog140Title5">Calmer, and counts you can trust</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog140Desc5">Suspending tabs no longer makes the whole list bounce. This page and the welcome page now follow the light or dark theme you picked in Drowzy. And re-sleeping the same tab over and over no longer inflates your lifetime stats.</div>
+        </details>
+      </li>
+    </ul>
+
+    <div class="section-label"><span class="section-title" data-i18n="changelogReleaseHeading" data-i18n-version="1.3.8">What's new in 1.3.8</span><span class="section-date" data-date="2026-07-02">July 2026</span></div>
+    <ul class="change-list">
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog138Title1">Restored tabs go back to sleep sooner</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog138Desc1">After a browser restart, Drowzy now keeps watching for tabs your browser restores late and puts them back to sleep within about a minute. Tabs you've viewed are left alone.</div>
+        </details>
+      </li>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon fix">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog138Title2">Report a bug from Settings</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog138Desc2">A new Report a bug link in Settings opens Drowzy's public issue tracker in a new tab. Nothing is ever sent automatically.</div>
+        </details>
+      </li>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon meta">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog138Title3">Small clarity touches</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog138Desc3">Sleeping tabs now show a click-to-wake hint, and the welcome page explains how Drowzy works alongside your browser's built-in Memory Saver.</div>
+        </details>
+      </li>
+    </ul>
+
+    <div class="section-label"><span class="section-title" data-i18n="changelogReleaseHeading" data-i18n-version="1.3.7">What's new in 1.3.7</span><span class="section-date" data-date="2026-06-07">June 2026</span></div>
+    <ul class="change-list">
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog137Title1">Put a single tab back to sleep</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog137Desc1">After you wake a sleeping tab to look at it, the new Suspend this tab button in the popup and side panel sends just that tab back to sleep. It switches you to another tab first, because the tab you're viewing can't be suspended.</div>
+        </details>
+      </li>
+    </ul>
+
+    <div class="section-label"><span class="section-title" data-i18n="changelogReleaseHeading" data-i18n-version="1.3.6">What's new in 1.3.6</span><span class="section-date" data-date="2026-05-29">May 2026</span></div>
+    <ul class="change-list">
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog136Title1">Every language is now fully translated</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog136Desc1">A few strings (whitelist toasts, the Keyboard Shortcuts row, and the Share Stats text) were still showing in English in other languages. They are now translated across all 57 languages, and right-to-left languages like Arabic and Hebrew lay out correctly too.</div>
+        </details>
+      </li>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon meta">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog136Title2">A gentler review prompt</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog136Desc2">The "Enjoying Drowzy?" banner now appears only after you've used Drowzy for a while, never on install or right after an update. The buttons are Leave a review, Maybe later, and Don't ask again. It never asks for a specific star rating and never offers a reward.</div>
+        </details>
+      </li>
+    </ul>
+
+    <div class="section-label"><span class="section-title" data-i18n="changelogReleaseHeading" data-i18n-version="1.3.5">What's new in 1.3.5</span><span class="section-date" data-date="2026-05-15">May 2026</span></div>
+    <ul class="change-list">
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog135Title1">Faster, smarter suspending</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog135Desc1">The default timer is now 15 minutes so you notice the memory savings sooner, and suspending other tabs and closing duplicates are more reliable.</div>
+        </details>
+      </li>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon fix">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog135Title2">Whitelist is easier to manage</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="change-desc" data-i18n="changelog135Desc2">Clearer remove buttons, confirmation messages, and a site count, plus it now works for localhost and IP addresses.</div>
+        </details>
+      </li>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon feature">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog135Title3">Keyboard shortcuts in Settings</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
           <div class="change-desc" data-i18n="changelog135Desc3">A new Settings row shows your shortcut status and links straight to where you can customize them.</div>
-        </div>
+        </details>
       </li>
-      <li class="change-item">
-        <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog135Title4">Stats and sharing improvements</div>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon meta">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog135Title4">Stats and sharing improvements</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
           <div class="change-desc" data-i18n="changelog135Desc4">Share Stats now appears in your language, and memory totals read cleanly, for example 2 GB instead of 2.0 GB.</div>
-        </div>
+        </details>
       </li>
-      <li class="change-item">
-        <div class="change-icon meta">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
-        </div>
-        <div class="change-content">
-          <div class="change-title" data-i18n="changelog135Title5">Polish and accessibility</div>
+      <li class="change-item past">
+        <details>
+          <summary>
+            <span class="change-icon meta">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3z"/></svg>
+            </span>
+            <span class="change-title" data-i18n="changelog135Title5">Polish and accessibility</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
           <div class="change-desc" data-i18n="changelog135Desc5">Clearer icons, a brand-matched toolbar badge, better screen-reader labels, and a tidier popup.</div>
-        </div>
+        </details>
       </li>
     </ul>
 

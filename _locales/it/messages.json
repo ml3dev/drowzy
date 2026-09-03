@@ -3,7 +3,7 @@
     "message": "Drowzy - Sospensione schede e risparmio memoria"
   },
   "extDescription": {
-    "message": "Sospendi automaticamente le schede inattive per risparmiare fino all'80% di RAM. Leggero, privato, nessun tracciamento. Le schede non vanno mai perse."
+    "message": "Addormenta le schede che non usi così Chrome resta veloce. Leggero, privato, senza tracciamento, open source."
   },
   "commandSuspendCurrent": {
     "message": "Sospendi la scheda corrente"
@@ -435,7 +435,7 @@
     "message": "Benvenuto in Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy risparmia memoria mettendo a riposo le schede inattive. Le tue schede sono sempre al sicuro - utilizziamo l'API discard nativa di Chrome, quindi sopravvivono anche se disinstalli Drowzy."
+    "message": "Drowzy risparmia memoria mettendo a riposo le schede inattive. Le tue schede restano normali schede di Chrome - utilizziamo l'API discard nativa di Chrome, quindi sopravvivono anche se disinstalli Drowzy."
   },
   "howItWorks": {
     "message": "Come funziona"
@@ -447,10 +447,10 @@
     "message": "<strong>Le schede sospese usano zero RAM</strong> ma restano nella barra delle schede"
   },
   "featureClickToWake": {
-    "message": "<strong>Clicca su qualsiasi scheda sospesa</strong> per riattivarla istantaneamente"
+    "message": "<strong>Clicca su qualsiasi scheda sospesa</strong> per riattivarla"
   },
   "featureProtected": {
-    "message": "<strong>Le schede attive, fissate e con audio</strong> non vengono mai toccate"
+    "message": "<strong>Le schede attive, fissate e con audio</strong> sono protette per impostazione predefinita"
   },
   "quickActions": {
     "message": "Azioni rapide"
@@ -678,7 +678,12 @@
     "message": "Il banner «Ti piace Drowzy?» ora compare solo dopo aver usato Drowzy per un po', mai all'installazione né subito dopo un aggiornamento. I pulsanti sono «Lascia una recensione», «Forse più tardi» e «Non chiedere più». Non chiede mai un punteggio specifico e non offre mai ricompense."
   },
   "changelogReleaseHeading": {
-    "message": "Novità di"
+    "message": "Novità di $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Sospensione più rapida e intelligente"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Sospendere le schede non fa più sobbalzare tutta la lista. Questa pagina e quella di benvenuto seguono ora il tema chiaro o scuro scelto in Drowzy. E rimettere a dormire la stessa scheda di continuo non gonfia più le statistiche."
+  },
+  "timer1min": {
+    "message": "1 minuto"
+  },
+  "shortcutsHint": {
+    "message": "Le gestisce Chrome. Personalizza apre chrome://extensions/shortcuts, dove puoi cambiare o cancellare ogni scorciatoia."
+  },
+  "shortcutUnset": {
+    "message": "Non impostata"
+  },
+  "changelog150Title1": {
+    "message": "Si apre all'istante, anche con 100 schede"
+  },
+  "changelog150Desc1": {
+    "message": "Il popup non ti fa più aspettare. Si apre subito, con qualunque numero di schede aperte."
+  },
+  "changelog150Title2": {
+    "message": "Sospendi altre è più veloce e mostra cosa fa"
+  },
+  "changelog150Desc2": {
+    "message": "Addormenta più schede alla volta, e vedi il contatore salire. Se qualche scheda non è riuscita a dormire, ti dice quante invece di far finta che sia andato tutto bene."
+  },
+  "changelog150Title3": {
+    "message": "Un timer da 1 minuto"
+  },
+  "changelog150Desc3": {
+    "message": "Hai aperto una pila di schede da una ricerca? Metti il timer a 1 minuto e si addormentano poco dopo che le lasci."
+  },
+  "changelog150Title4": {
+    "message": "Le scorciatoie ora si cambiano facilmente"
+  },
+  "changelog150Desc4": {
+    "message": "Vuoi un altro tasto per Sospendi questa scheda, o nessuno? La riga Scorciatoie da tastiera nelle Impostazioni ora ti porta dritto al posto giusto."
+  },
+  "changelog150Title5": {
+    "message": "E le piccole cose"
+  },
+  "changelog150Desc5": {
+    "message": "Incolla un indirizzo web completo nella whitelist e funziona e basta. Sospendi questa scheda non ti porta più via da una pagina in cui stai scrivendo. I messaggi sono più chiari e non vengono mai tagliati."
+  },
+  "suspendedOneToast": {
+    "message": "Scheda sospesa · ~$RAM$ liberati",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ schede saltate",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "La whitelist è piena per la sincronizzazione di Chrome. Rimuovi qualche sito e riprova."
   }
 }

@@ -3,7 +3,7 @@
     "message": "Drowzy - タブサスペンダー＆メモリセーバー"
   },
   "extDescription": {
-    "message": "非アクティブなタブを自動サスペンドしてRAMを最大80%節約。軽量、プライベート、トラッキングなし。タブは決して失われません。"
+    "message": "使っていないタブを眠らせて、Chrome を軽いままに。軽量、プライベート、追跡なし、オープンソース。"
   },
   "commandSuspendCurrent": {
     "message": "現在のタブをサスペンド"
@@ -435,7 +435,7 @@
     "message": "Drowzyへようこそ"
   },
   "onboardingIntro": {
-    "message": "Drowzyは非アクティブなタブをスリープさせてメモリを節約します。タブは常に安全です。ChromeのネイティブなディスカードAPIを使用するため、Drowzyをアンインストールしてもタブは失われません。"
+    "message": "Drowzyは非アクティブなタブをスリープさせてメモリを節約します。タブは通常の Chrome のタブのままです。ChromeのネイティブなディスカードAPIを使用するため、Drowzyをアンインストールしてもタブは失われません。"
   },
   "howItWorks": {
     "message": "仕組み"
@@ -447,10 +447,10 @@
     "message": "<strong>サスペンド中のタブはRAMを使用しません</strong>が、タブバーに残ります"
   },
   "featureClickToWake": {
-    "message": "<strong>サスペンド中のタブをクリック</strong>すると即座に復帰します"
+    "message": "<strong>サスペンド中のタブをクリック</strong>すると復帰します"
   },
   "featureProtected": {
-    "message": "<strong>アクティブ、ピン留め、オーディオ再生中のタブ</strong>には影響しません"
+    "message": "<strong>アクティブ、ピン留め、オーディオ再生中のタブ</strong>は初期設定で保護されます"
   },
   "quickActions": {
     "message": "クイック操作"
@@ -678,7 +678,12 @@
     "message": "「Drowzy は気に入りましたか?」のバナーは、Drowzy をしばらく使った後にのみ表示されるようになり、インストール時や更新直後には表示されません。ボタンは「レビューを書く」「後で」「今後表示しない」です。特定の星評価を求めることはなく、報酬を提供することもありません。"
   },
   "changelogReleaseHeading": {
-    "message": "の新機能"
+    "message": "$VERSION$ の新機能",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "より速く、より賢いサスペンド"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "スリープさせてもリスト全体が跳ねなくなりました。このページとようこそページも、Drowzy で選んだライト／ダークのテーマに従います。また、同じタブを何度もスリープさせても累計の統計が水増しされなくなりました。"
+  },
+  "timer1min": {
+    "message": "1分"
+  },
+  "shortcutsHint": {
+    "message": "これらは Chrome が管理しています。「カスタマイズ」を押すと chrome://extensions/shortcuts が開き、各ショートカットの変更や解除ができます。"
+  },
+  "shortcutUnset": {
+    "message": "未設定"
+  },
+  "changelog150Title1": {
+    "message": "タブが 100 個あっても一瞬で開く"
+  },
+  "changelog150Desc1": {
+    "message": "ポップアップはもう待たせません。タブがいくつ開いていても、すぐに表示されます。"
+  },
+  "changelog150Title2": {
+    "message": "「他をサスペンド」が速くなり、進み具合も見える"
+  },
+  "changelog150Desc2": {
+    "message": "複数のタブを同時に眠らせ、数が増えていくのが見えます。眠らせられなかったタブがあれば、うまくいったと言い張らずに、その数を伝えます。"
+  },
+  "changelog150Title3": {
+    "message": "1 分タイマー"
+  },
+  "changelog150Desc3": {
+    "message": "検索結果からタブを大量に開いたときは、タイマーを 1 分にすれば、離れてすぐに眠ります。"
+  },
+  "changelog150Title4": {
+    "message": "ショートカットの変更が簡単に"
+  },
+  "changelog150Desc4": {
+    "message": "「このタブをサスペンド」に別のキーを割り当てたい、または割り当てを外したいときは、「設定」の「キーボードショートカット」の行から、そのままその場所へ移動できます。"
+  },
+  "changelog150Title5": {
+    "message": "それから、細かいこと"
+  },
+  "changelog150Desc5": {
+    "message": "ホワイトリストに URL をまるごと貼り付けても、そのまま使えます。「このタブをサスペンド」は、入力中のページからあなたを引き離しません。メッセージは分かりやすくなり、途中で切れることもありません。"
+  },
+  "suspendedOneToast": {
+    "message": "タブをサスペンドしました · 約$RAM$解放",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ 個のタブをスキップしました",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Chrome 同期用のホワイトリストがいっぱいです。いくつかサイトを削除してからもう一度お試しください。"
   }
 }

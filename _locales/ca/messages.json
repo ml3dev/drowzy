@@ -3,7 +3,7 @@
     "message": "Drowzy - Suspensió de pestanyes i estalvi de memòria"
   },
   "extDescription": {
-    "message": "Suspèn automàticament les pestanyes inactives per estalviar fins al 80% de RAM. Lleuger, privat, sense seguiment. Les pestanyes no es perden mai."
+    "message": "Adorm les pestanyes que no fas servir perquè Chrome es mantingui ràpid. Lleuger, privat, sense seguiment, codi obert."
   },
   "commandSuspendCurrent": {
     "message": "Suspèn la pestanya actual"
@@ -435,7 +435,7 @@
     "message": "Benvingut a Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy estalvia memòria posant les pestanyes inactives a dormir. Les teves pestanyes sempre estan segures - utilitzem l'API nativa de descart de Chrome, de manera que sobreviuen fins i tot si desinstal·leu Drowzy."
+    "message": "Drowzy estalvia memòria posant les pestanyes inactives a dormir. Les teves pestanyes continuen sent pestanyes normals de Chrome - utilitzem l'API nativa de descart de Chrome, de manera que sobreviuen fins i tot si desinstal·leu Drowzy."
   },
   "howItWorks": {
     "message": "Com funciona"
@@ -447,10 +447,10 @@
     "message": "<strong>Les pestanyes suspeses no utilitzen RAM</strong> però es mantenen a la barra de pestanyes"
   },
   "featureClickToWake": {
-    "message": "<strong>Feu clic en qualsevol pestanya suspesa</strong> per despertar-la a l'instant"
+    "message": "<strong>Feu clic en qualsevol pestanya suspesa</strong> per despertar-la"
   },
   "featureProtected": {
-    "message": "<strong>Les pestanyes actives, fixades i amb àudio</strong> no es toquen mai"
+    "message": "<strong>Les pestanyes actives, fixades i amb àudio</strong> estan protegides per defecte"
   },
   "quickActions": {
     "message": "Accions ràpides"
@@ -678,7 +678,12 @@
     "message": "El bàner «T'agrada Drowzy?» ara només apareix després d'haver fet servir Drowzy una estona, mai en instal·lar-lo ni just després d'una actualització. Els botons són «Deixa una ressenya», «Potser més tard» i «No ho tornis a preguntar». Mai no demana una puntuació concreta ni ofereix cap recompensa."
   },
   "changelogReleaseHeading": {
-    "message": "Novetats de"
+    "message": "Novetats de $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Suspensió més ràpida i intel·ligent"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Adormir pestanyes ja no fa saltar tota la llista. Aquesta pàgina i la de benvinguda segueixen ara el tema clar o fosc que has triat a Drowzy. I tornar a adormir la mateixa pestanya un cop i un altre ja no infla les teves estadístiques."
+  },
+  "timer1min": {
+    "message": "1 minut"
+  },
+  "shortcutsHint": {
+    "message": "Chrome gestiona aquestes dreceres. Personalitza obre chrome://extensions/shortcuts, on pots canviar o esborrar cada drecera."
+  },
+  "shortcutUnset": {
+    "message": "Sense assignar"
+  },
+  "changelog150Title1": {
+    "message": "S'obre a l'instant, fins i tot amb 100 pestanyes"
+  },
+  "changelog150Desc1": {
+    "message": "La finestra ja no et fa esperar. S'obre de seguida, tinguis les pestanyes que tinguis obertes."
+  },
+  "changelog150Title2": {
+    "message": "Suspèn les altres és més ràpid i mostra què fa"
+  },
+  "changelog150Desc2": {
+    "message": "Adorm diverses pestanyes alhora, i veus pujar el comptador. Si alguna pestanya no s'ha pogut adormir, et diu quantes en lloc de dir que tot ha anat bé."
+  },
+  "changelog150Title3": {
+    "message": "Un temporitzador d'1 minut"
+  },
+  "changelog150Desc3": {
+    "message": "Has obert una pila de pestanyes des d'una cerca? Posa el temporitzador a 1 minut i s'adormen poc després que les deixis."
+  },
+  "changelog150Title4": {
+    "message": "Les dreceres ara són fàcils de canviar"
+  },
+  "changelog150Desc4": {
+    "message": "Vols una altra tecla per a Suspèn aquesta pestanya, o cap? La fila Dreceres de teclat de Configuració ara et porta directament al lloc correcte."
+  },
+  "changelog150Title5": {
+    "message": "I les coses petites"
+  },
+  "changelog150Desc5": {
+    "message": "Enganxa una adreça web completa a la llista blanca i simplement funciona. Suspèn aquesta pestanya no et treu d'una pàgina on estàs escrivint. Els missatges són més clars i mai es tallen."
+  },
+  "suspendedOneToast": {
+    "message": "Pestanya suspesa · ~$RAM$ alliberats",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "S'han omès $COUNT$ pestanyes",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "La llista blanca és plena per a la sincronització de Chrome. Elimina alguns llocs i torna-ho a provar."
   }
 }

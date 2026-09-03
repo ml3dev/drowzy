@@ -3,7 +3,7 @@
     "message": "Drowzy - Uspávání karet a úspora paměti"
   },
   "extDescription": {
-    "message": "Automatické uspávání neaktivních karet pro úsporu až 80 % RAM. Lehký, soukromý, bez sledování. Karty se nikdy neztratí."
+    "message": "Uspává karty, které nepoužíváte, aby Chrome zůstal rychlý. Lehký, soukromý, bez sledování, open source."
   },
   "commandSuspendCurrent": {
     "message": "Uspat aktuální kartu"
@@ -435,7 +435,7 @@
     "message": "Vítejte v Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy šetří paměť uspáváním neaktivních karet. Vaše karty jsou vždy v bezpečí - používáme nativní API pro zahození karet v Chrome, takže přežijí i odinstalaci Drowzy."
+    "message": "Drowzy šetří paměť uspáváním neaktivních karet. Vaše karty zůstávají běžnými kartami Chromu - používáme nativní API pro zahození karet v Chrome, takže přežijí i odinstalaci Drowzy."
   },
   "howItWorks": {
     "message": "Jak to funguje"
@@ -447,10 +447,10 @@
     "message": "<strong>Uspané karty nepoužívají RAM</strong>, ale zůstávají na liště karet"
   },
   "featureClickToWake": {
-    "message": "<strong>Klikněte na jakoukoli uspanou kartu</strong> pro okamžité probuzení"
+    "message": "<strong>Klikněte na jakoukoli uspanou kartu</strong> pro probuzení"
   },
   "featureProtected": {
-    "message": "<strong>Aktivní, připnuté a zvukové karty</strong> se nikdy neuspávají"
+    "message": "<strong>Aktivní, připnuté a zvukové karty</strong> jsou ve výchozím nastavení chráněné"
   },
   "quickActions": {
     "message": "Rychlé akce"
@@ -678,7 +678,12 @@
     "message": "Banner „Líbí se vám Drowzy?“ se nyní zobrazí až poté, co Drowzy chvíli používáte, nikdy při instalaci ani hned po aktualizaci. Tlačítka jsou „Napsat recenzi“, „Možná později“ a „Už se neptat“. Nikdy nežádá o konkrétní hodnocení hvězdičkami ani nenabízí odměnu."
   },
   "changelogReleaseHeading": {
-    "message": "Co je nového ve verzi"
+    "message": "Co je nového ve verzi $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Rychlejší a chytřejší uspávání"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Uspávání karet už nerozhoupe celý seznam. Tato stránka i uvítací stránka teď respektují světlý nebo tmavý motiv zvolený v Drowzy. A opakované uspávání téže karty už nenafukuje vaše celkové statistiky."
+  },
+  "timer1min": {
+    "message": "1 minutě"
+  },
+  "shortcutsHint": {
+    "message": "Spravuje je Chrome. Přizpůsobit otevře chrome://extensions/shortcuts, kde můžete každou zkratku změnit nebo vymazat."
+  },
+  "shortcutUnset": {
+    "message": "Nenastaveno"
+  },
+  "changelog150Title1": {
+    "message": "Otevře se hned, i se 100 kartami"
+  },
+  "changelog150Desc1": {
+    "message": "Okno vás už nenechá čekat. Otevře se okamžitě, ať máte otevřených karet kolik chcete."
+  },
+  "changelog150Title2": {
+    "message": "Uspat ostatní je rychlejší a ukazuje, co dělá"
+  },
+  "changelog150Desc2": {
+    "message": "Uspává několik karet najednou a vy vidíte, jak počítadlo roste. Pokud některé karty uspat nešlo, řekne kolik, místo aby tvrdil, že vše vyšlo."
+  },
+  "changelog150Title3": {
+    "message": "Minutový časovač"
+  },
+  "changelog150Desc3": {
+    "message": "Otevřeli jste hromadu karet z vyhledávání? Nastavte časovač na 1 minutu a usnou chvíli poté, co je opustíte."
+  },
+  "changelog150Title4": {
+    "message": "Zkratky jdou teď snadno změnit"
+  },
+  "changelog150Desc4": {
+    "message": "Chcete jinou klávesu pro Uspat tuto kartu, nebo žádnou? Řádek Klávesové zkratky v Nastavení vás teď zavede rovnou na správné místo."
+  },
+  "changelog150Title5": {
+    "message": "A ty drobnosti"
+  },
+  "changelog150Desc5": {
+    "message": "Vložte na bílou listinu celou webovou adresu a prostě to funguje. Uspat tuto kartu vás neodvede ze stránky, na které zrovna píšete. Zprávy jsou jasnější a nikdy se neořezávají."
+  },
+  "suspendedOneToast": {
+    "message": "Karta uspána · ~$RAM$ uvolněno",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ karet přeskočeno",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Bílá listina je pro synchronizaci Chrome plná. Odeberte pár webů a zkuste to znovu."
   }
 }

@@ -3,7 +3,7 @@
     "message": "Drowzy - Suspensor de separadores e poupança de memória"
   },
   "extDescription": {
-    "message": "Suspenda automaticamente separadores inativos para poupar até 80% de RAM. Leve, privado, sem rastreio. Os separadores nunca se perdem."
+    "message": "Adormece os separadores que não está a usar para o Chrome se manter rápido. Leve, privado, sem rastreio, código aberto."
   },
   "commandSuspendCurrent": {
     "message": "Suspender separador atual"
@@ -435,7 +435,7 @@
     "message": "Bem-vindo ao Drowzy"
   },
   "onboardingIntro": {
-    "message": "O Drowzy poupa memória ao adormecer separadores inativos. Os seus separadores estão sempre seguros - utilizamos a API nativa de descarte do Chrome, pelo que sobrevivem mesmo que desinstale o Drowzy."
+    "message": "O Drowzy poupa memória ao adormecer separadores inativos. Os seus separadores continuam a ser separadores normais do Chrome - utilizamos a API nativa de descarte do Chrome, pelo que sobrevivem mesmo que desinstale o Drowzy."
   },
   "howItWorks": {
     "message": "Como funciona"
@@ -447,10 +447,10 @@
     "message": "<strong>Separadores suspensos usam zero RAM</strong>, mas permanecem na barra de separadores"
   },
   "featureClickToWake": {
-    "message": "<strong>Clique em qualquer separador suspenso</strong> para o acordar instantaneamente"
+    "message": "<strong>Clique em qualquer separador suspenso</strong> para o acordar"
   },
   "featureProtected": {
-    "message": "<strong>Separadores ativos, fixados e com áudio</strong> nunca são tocados"
+    "message": "<strong>Separadores ativos, fixados e com áudio</strong> estão protegidos por predefinição"
   },
   "quickActions": {
     "message": "Ações rápidas"
@@ -678,7 +678,12 @@
     "message": "O aviso \"A gostar do Drowzy?\" agora só aparece depois de usar o Drowzy durante algum tempo, nunca na instalação nem logo após uma atualização. Os botões são \"Deixar uma avaliação\", \"Talvez mais tarde\" e \"Não perguntar novamente\". Nunca pede uma classificação específica nem oferece recompensas."
   },
   "changelogReleaseHeading": {
-    "message": "Novidades da"
+    "message": "Novidades da $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Suspensão mais rápida e inteligente"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Suspender separadores já não faz saltar a lista inteira. Esta página e a de boas-vindas seguem agora o tema claro ou escuro que escolheu no Drowzy. E adormecer o mesmo separador repetidamente já não inflaciona as suas estatísticas."
+  },
+  "timer1min": {
+    "message": "1 minuto"
+  },
+  "shortcutsHint": {
+    "message": "O Chrome gere estes atalhos. Personalizar abre chrome://extensions/shortcuts, onde pode alterar ou limpar cada atalho."
+  },
+  "shortcutUnset": {
+    "message": "Não definido"
+  },
+  "changelog150Title1": {
+    "message": "Abre de imediato, mesmo com 100 separadores"
+  },
+  "changelog150Desc1": {
+    "message": "O popup já não o deixa à espera. Abre logo, seja qual for o número de separadores abertos."
+  },
+  "changelog150Title2": {
+    "message": "Suspender outros está mais rápido e mostra o que faz"
+  },
+  "changelog150Desc2": {
+    "message": "Adormece vários separadores de uma vez, e vê o contador a subir. Se alguns não puderam adormecer, diz-lhe quantos em vez de fingir que correu tudo bem."
+  },
+  "changelog150Title3": {
+    "message": "Um temporizador de 1 minuto"
+  },
+  "changelog150Desc3": {
+    "message": "Abriu uma pilha de separadores a partir de uma pesquisa? Ponha o temporizador em 1 minuto e adormecem pouco depois de os deixar."
+  },
+  "changelog150Title4": {
+    "message": "Os atalhos são agora fáceis de mudar"
+  },
+  "changelog150Desc4": {
+    "message": "Quer outra tecla para Suspender este separador, ou nenhuma? A linha Atalhos de teclado em Definições leva-o agora diretamente ao sítio certo."
+  },
+  "changelog150Title5": {
+    "message": "E as pequenas coisas"
+  },
+  "changelog150Desc5": {
+    "message": "Cole um endereço web completo na lista branca e simplesmente funciona. Suspender este separador não o tira de uma página onde está a escrever. As mensagens são mais claras e nunca ficam cortadas."
+  },
+  "suspendedOneToast": {
+    "message": "Separador suspenso · ~$RAM$ libertados",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ separador(es) ignorado(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "A lista branca está cheia para a sincronização do Chrome. Remova alguns sites e tente novamente."
   }
 }

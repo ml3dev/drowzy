@@ -3,7 +3,7 @@
     "message": "Drowzy - Tab Suspender & Memory Saver"
   },
   "extDescription": {
-    "message": "Auto-suspend inactive tabs to save up to 80% RAM. Lightweight, private, no tracking, and open source."
+    "message": "Puts tabs you are not using to sleep so Chrome stays fast. Light, private, no tracking, open source."
   },
   "commandSuspendCurrent": {
     "message": "Suspend current tab"
@@ -435,7 +435,7 @@
     "message": "Welcome to Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy saves memory by putting inactive tabs to sleep. Your tabs are always safe - we use Chrome's native discard API, so they survive even if you uninstall Drowzy."
+    "message": "Drowzy saves memory by putting inactive tabs to sleep. Your tabs stay normal Chrome tabs - we use Chrome's native discard API, so they survive even if you uninstall Drowzy."
   },
   "howItWorks": {
     "message": "How it works"
@@ -447,10 +447,10 @@
     "message": "<strong>Suspended tabs use zero RAM</strong> but stay in your tab bar"
   },
   "featureClickToWake": {
-    "message": "<strong>Click any suspended tab</strong> to instantly wake it up"
+    "message": "<strong>Click any suspended tab</strong> to wake it up"
   },
   "featureProtected": {
-    "message": "<strong>Active, pinned, and audio tabs</strong> are never touched"
+    "message": "<strong>Active, pinned, and audio tabs</strong> are protected by default"
   },
   "quickActions": {
     "message": "Quick actions"
@@ -678,7 +678,12 @@
     "message": "The \"Enjoying Drowzy?\" banner now appears only after you've used Drowzy for a while, never on install or right after an update. The buttons are Leave a review, Maybe later, and Don't ask again. It never asks for a specific star rating and never offers a reward."
   },
   "changelogReleaseHeading": {
-    "message": "What's new in"
+    "message": "What's new in $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Faster, smarter suspending"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Suspending tabs no longer makes the whole list bounce. This page and the welcome page now follow the light or dark theme you picked in Drowzy. And re-sleeping the same tab over and over no longer inflates your lifetime stats."
+  },
+  "timer1min": {
+    "message": "1 minute"
+  },
+  "shortcutsHint": {
+    "message": "Chrome manages these. Customize opens chrome://extensions/shortcuts, where you can change or clear each shortcut."
+  },
+  "shortcutUnset": {
+    "message": "Not set"
+  },
+  "changelog150Title1": {
+    "message": "Opens instantly, even with 100 tabs"
+  },
+  "changelog150Desc1": {
+    "message": "The popup no longer keeps you waiting. It opens right away, however many tabs you have open."
+  },
+  "changelog150Title2": {
+    "message": "Suspend Others is faster and shows its work"
+  },
+  "changelog150Desc2": {
+    "message": "It puts tabs to sleep several at a time, and you can watch the count climb. If some tabs could not be put to sleep, it tells you how many instead of claiming it worked."
+  },
+  "changelog150Title3": {
+    "message": "A 1 minute timer"
+  },
+  "changelog150Desc3": {
+    "message": "Opened a pile of tabs from a search? Set the timer to 1 minute and they go to sleep soon after you leave them."
+  },
+  "changelog150Title4": {
+    "message": "Shortcuts are easy to change now"
+  },
+  "changelog150Desc4": {
+    "message": "Want a different key for Suspend this tab, or none at all? The Keyboard shortcuts row in Settings now takes you straight to the right place."
+  },
+  "changelog150Title5": {
+    "message": "And the small stuff"
+  },
+  "changelog150Desc5": {
+    "message": "Paste a full web address into the whitelist and it just works. Suspend this tab will not move you off a page you are typing on. Messages are clearer and never get cut off."
+  },
+  "suspendedOneToast": {
+    "message": "Tab suspended · ~$RAM$ freed",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ tab(s) skipped",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "The whitelist is full for Chrome sync. Remove a few sites and try again."
   }
 }

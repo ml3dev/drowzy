@@ -21,19 +21,64 @@ async function hasHostPermission() {
   } catch { return false; }
 }
 
+// How long a content-script injection or a message to a tab may take before
+// a suspend stops waiting on it. executeScript does not resolve until the
+// page reaches document_idle, and a tab still loading behind forty others can
+// sit there for a long time; sequential suspends used to stall on exactly that.
+const INJECT_TIMEOUT_MS = 1500;
+const TAB_MESSAGE_TIMEOUT_MS = 500;
+
+// Resolves to undefined once `ms` has passed, whatever the promise is doing.
+// A rejection still rejects, so callers keep their existing catch paths.
+function withTimeout(promise, ms) {
+  return Promise.race([
+    promise,
+    new Promise(resolve => setTimeout(() => resolve(undefined), ms))
+  ]);
+}
+
+// Resolves to 'ok' when formcheck.js is in the tab, 'skipped' without host
+// permission, 'timeout' when the page has not reached document_idle in time,
+// and 'failed' when Chrome refused the injection (store pages and the like).
+// Injections still in flight, by tab. A caller that arrives while one is
+// pending waits on that same promise instead of trusting the marker: the
+// marker is set the moment an injection starts, and reporting 'ok' off it
+// while the script has not landed yet sent the form check to a page with no
+// listener, which then read as "clean".
+let _injecting = new Map();
+
 async function injectFormCheck(tabId) {
-  if (_injectedTabs.has(tabId)) return;
-  if (!(await hasHostPermission())) return;
+  let pending = _injecting.get(tabId);
+  if (pending) return (await withTimeout(pending, INJECT_TIMEOUT_MS)) || 'timeout';
+  if (_injectedTabs.has(tabId)) return 'ok';
+  if (!(await hasHostPermission())) return 'skipped';
   // Add optimistically before await to prevent concurrent callers from double-injecting
   _injectedTabs.add(tabId);
+  let injection = chrome.scripting.executeScript({
+    target: { tabId },
+    files: ['formcheck.js']
+  }).then(() => 'ok', () => { _injectedTabs.delete(tabId); return 'failed'; });
+  _injecting.set(tabId, injection);
+  injection.then(() => { if (_injecting.get(tabId) === injection) _injecting.delete(tabId); });
+  // A timeout leaves the marker set: the script still lands when the page
+  // settles, and the rejection path above clears it if it never does.
+  return (await withTimeout(injection, INJECT_TIMEOUT_MS)) || 'timeout';
+}
+
+// Form protection's verdict for one tab: 'dirty' when it has unsaved input,
+// 'unverified' when that could not be established in time (the script has not
+// landed yet, or the page did not answer), false when it is clean. A page
+// Chrome will not inject into at all comes back clean, as it always has.
+// Every path that honours Protect tabs with forms asks this one function.
+async function formCheckBlocks(tabId) {
+  let injected = await injectFormCheck(tabId);
+  if (injected === 'timeout') return 'unverified';
   try {
-    await chrome.scripting.executeScript({
-      target: { tabId },
-      files: ['formcheck.js']
-    });
-  } catch {
-    _injectedTabs.delete(tabId);
-  }
+    let resp = await withTimeout(chrome.tabs.sendMessage(tabId, { action: 'checkFormData' }), TAB_MESSAGE_TIMEOUT_MS);
+    if (resp && resp.hasFormData) return 'dirty';
+    if (resp === undefined && _injectedTabs.has(tabId)) return 'unverified';
+  } catch {}
+  return false;
 }
 
 const ALARM_NAME = 'check-tabs';
@@ -43,7 +88,7 @@ const MAX_SESSIONS = 20;
 const UNINSTALL_URL = 'https://ml3dev.github.io/drowzy/uninstall.html';
 // Versions that open What's New on update despite not being a major bump.
 // See onInstalled for why this exists and why it should stay short.
-const SHOW_CHANGELOG_VERSIONS = ['1.4.0'];
+const SHOW_CHANGELOG_VERSIONS = ['1.4.0', '1.5.0'];
 
 let badgeTimer = null;
 
@@ -118,6 +163,7 @@ async function onInstalled(details) {
     // the pass survives MV3 service-worker termination during the wait.
     try { chrome.alarms.create('first-run-suspend', { delayInMinutes: 0.5 }); } catch {}
   } else if (details.reason === 'update') {
+    await normalizeStoredWhitelist();
     let version = chrome.runtime.getManifest().version;
     let data = await chrome.storage.local.get('drowzy_lastChangelogVersion');
     let lastVer = data.drowzy_lastChangelogVersion || '';
@@ -127,9 +173,11 @@ async function onInstalled(details) {
     // SHOW_CHANGELOG_VERSIONS is a narrow opt-in for releases where the whole
     // point is telling people what changed. 1.4.0 adds a per-tab hold and
     // explains why tabs are protected, both of which are invisible unless you
-    // go looking. Keep this list short - a What's New tab that opens for every
-    // release is just noise, which is why the major-bump rule is still the
-    // default for everything not listed here.
+    // go looking. 1.5.0 answers a review about speed with many tabs; its page
+    // covers the 1 minute timer and where shortcuts live, neither of which
+    // anyone finds on their own. Keep this list short - a What's New tab that
+    // opens for every release is just noise, which is why the major-bump rule
+    // is still the default for everything not listed here.
     let curMajor = version.split('.')[0];
     let lastMajor = lastVer.split('.')[0];
     let forced = SHOW_CHANGELOG_VERSIONS.includes(version) && lastVer !== version;
@@ -530,19 +578,25 @@ async function explainSuspendFailure(tabId, cachedSettings) {
     if (settings.protectPinned && tab.pinned) return 'pinnedWontSuspend';
     if (settings.protectAudio && tab.audible) return 'audioWontSuspend';
     if (isWhitelisted(tab.url, settings.whitelist)) return 'whitelistedWontSuspend';
-    if (tab.active) return 'cantSuspendNoOtherTab';
-    if (tab.status === 'loading') return 'suspendFailedLoading';
-    // form data is the only remaining reason we can still ask about, and only
-    // when the setting that would have blocked it is actually on
+    // Form input is asked about before "no other tab": handleSuspendCurrent
+    // checks for it before switching, so a tab refused for it is still the
+    // active one. A check that got no answer in time is reported as still
+    // loading, which is what a page too busy to answer looks like.
     if (settings.protectForms) {
-      try {
-        let resp = await Promise.race([
-          chrome.tabs.sendMessage(tabId, { action: 'checkFormData' }),
-          new Promise(resolve => setTimeout(() => resolve(null), 500))
-        ]);
-        if (resp && resp.hasFormData) return 'suspendFailedForm';
-      } catch {}
+      let verdict = await formCheckBlocks(tabId);
+      if (verdict === 'dirty') return 'suspendFailedForm';
+      if (verdict === 'unverified') return 'suspendFailedLoading';
     }
+    if (tab.active) {
+      // "Needs another open tab" only when that is actually the case. With a
+      // neighbour available, an active tab is refused for something passing
+      // (a check that timed out, a discard Chrome declined), and the honest
+      // advice is the same as for a loading tab: try again in a moment.
+      let others = await chrome.tabs.query({ windowId: tab.windowId });
+      let hasTarget = others.some(o => o.id !== tab.id && !o.discarded && !isInternalUrl(o.url));
+      return hasTarget ? 'suspendFailedLoading' : 'cantSuspendNoOtherTab';
+    }
+    if (tab.status === 'loading') return 'suspendFailedLoading';
     return null;
   } catch { return null; }
 }
@@ -550,6 +604,18 @@ async function explainSuspendFailure(tabId, cachedSettings) {
 let _timestamps = {};
 let _tsDirty = false;
 let _tsFlushTimer = null;
+
+// One reload at a time. getTabList kicks this off without waiting on it; the
+// per-minute check awaits it, and both must share a single run rather than
+// each seeding and flushing over the other.
+let _initTimestampsPromise = null;
+
+function ensureTimestamps() {
+  if (!_initTimestampsPromise) {
+    _initTimestampsPromise = initTimestamps().finally(() => { _initTimestampsPromise = null; });
+  }
+  return _initTimestampsPromise;
+}
 
 async function initTimestamps() {
   try {
@@ -700,8 +766,20 @@ function countsAsNewSuspension(tabId) {
   return true;
 }
 
+// A stats update is a read-modify-write on storage.local, so two in flight at
+// once would both read the same number and one increment would be lost. The
+// writes are queued: each waits for the previous one to finish before it reads.
+// Sequential suspends hid this; suspends now run a few at a time.
+let _statsQueue = Promise.resolve();
+
 async function recordSuspension(tabId) {
   if (typeof tabId === 'number' && !countsAsNewSuspension(tabId)) return;
+  let job = _statsQueue.then(writeSuspension);
+  _statsQueue = job.catch(() => {});
+  return job;
+}
+
+async function writeSuspension() {
   try {
     let data = await chrome.storage.local.get('drowzy_stats');
     let stats = data.drowzy_stats || _defaultStats();
@@ -806,6 +884,7 @@ async function onTabCreated(tab) {
 
 async function onTabRemoved(tabId) {
   _injectedTabs.delete(tabId);
+  _injecting.delete(tabId);
   await untagRestored(tabId);
   await unmarkActivated(tabId);
   // a hold dies with its tab - ids get recycled, and inheriting a stranger's
@@ -875,7 +954,7 @@ async function checkAndSuspendTabs() {
   try {
     // Lazy-reload timestamps if service worker restarted mid-session
     if (Object.keys(_timestamps).length === 0) {
-      await initTimestamps();
+      await ensureTimestamps();
     }
 
     let settings = await getSettings();
@@ -916,16 +995,14 @@ async function checkAndSuspendTabs() {
     if (_tsDirty) scheduleFlush();
 
     if (toSuspend.length) {
-      for (let tabId of toSuspend) {
+      await runLimited(toSuspend, async (tabId) => {
         await injectFormCheck(tabId);
-        try { await chrome.tabs.sendMessage(tabId, { action: 'suspendWarning' }); } catch {}
-      }
+        try { await withTimeout(chrome.tabs.sendMessage(tabId, { action: 'suspendWarning' }), TAB_MESSAGE_TIMEOUT_MS); } catch {}
+      }, SUSPEND_CONCURRENCY);
       await new Promise(r => setTimeout(r, 2500));
-      for (let tabId of toSuspend) {
-        // auto:true so suspendTab respects a Keep awake / refocus that landed
-        // during the warning window. Manual suspends bypass this check.
-        await suspendTab(tabId, settings, { auto: true });
-      }
+      // auto:true so suspendTab respects a Keep awake / refocus that landed
+      // during the warning window. Manual suspends bypass this check.
+      await suspendMany(toSuspend, settings, { auto: true });
     }
   } finally { _suspending = false; }
 }
@@ -959,21 +1036,60 @@ function isInternalUrl(url) {
   } catch { return true; }
 }
 
-function isWhitelisted(url, whitelist) {
-  if (!url || !whitelist || !whitelist.length) return false;
+// A hostname the way the whitelist compares it: lowercase, no www., no IPv6
+// brackets, and an internationalised name in the punycode form Chrome reports
+// in tab.url, so "münchen.de" typed by the user still matches the tab.
+function canonicalHost(host) {
+  let h = String(host || '').toLowerCase().replace(/^www\./, '').replace(/^\[|\]$/g, '');
+  try { h = new URL('http://' + h).hostname.replace(/^\[|\]$/g, ''); } catch {}
+  return h;
+}
+
+// Path patterns compiled once per entry. A whitelist of a few hundred paths
+// matched against a couple of hundred tabs on every popup poll would otherwise
+// build tens of thousands of RegExps a minute.
+let _patternCache = new Map();
+
+function whitelistPattern(entry) {
+  let re = _patternCache.get(entry);
+  if (re === undefined) {
+    let slash = entry.indexOf('/');
+    let host = canonicalHost(entry.slice(0, slash));
+    let escaped = (host + entry.slice(slash)).replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\\\*/g, '.*');
+    try { re = new RegExp('^' + escaped + '(/.*)?$'); } catch { re = null; }
+    _patternCache.set(entry, re);
+  }
+  return re;
+}
+
+// The stored entry that covers this url, or null. An entry is either a host
+// ("site.com" covers it and every subdomain; "*.site.com", which people type
+// expecting exactly that, is read the same way) or a path pattern such as
+// "site.com/docs/*". Returning the entry lets the popup remove what is
+// actually stored rather than guess a bare domain that was never in the list.
+function whitelistMatch(url, whitelist) {
+  if (!url || !whitelist || !whitelist.length) return null;
   try {
     let parsed = new URL(url);
-    let hostname = parsed.hostname.toLowerCase().replace(/^www\./, '');
-    let fullUrl = (parsed.hostname + parsed.pathname).toLowerCase().replace(/^www\./, '');
-    return whitelist.some(d => {
-      d = d.toLowerCase().replace(/^www\./, '');
+    let hostname = canonicalHost(parsed.hostname);
+    let fullUrl = (hostname + parsed.pathname).toLowerCase();
+    for (let entry of whitelist) {
+      let d = String(entry).toLowerCase().replace(/^www\./, '');
       if (d.includes('/')) {
-        let escaped = d.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\\\*/g, '.*');
-        try { return new RegExp('^' + escaped + '(/.*)?$').test(fullUrl); } catch { return false; }
+        let re = whitelistPattern(d);
+        if (re && re.test(fullUrl)) return entry;
+        continue;
       }
-      return hostname === d || hostname.endsWith('.' + d);
-    });
-  } catch { return false; }
+      if (d.startsWith('*.')) d = d.slice(2);
+      d = canonicalHost(d);
+      if (d && (hostname === d || hostname.endsWith('.' + d))) return entry;
+    }
+  } catch {}
+  return null;
+}
+
+function isWhitelisted(url, whitelist) {
+  return whitelistMatch(url, whitelist) !== null;
 }
 
 async function suspendTab(tabId, cachedSettings, opts) {
@@ -994,22 +1110,21 @@ async function suspendTab(tabId, cachedSettings, opts) {
     // suspend that will not happen.
     if (await isKeptAwake(tabId)) return false;
 
-    if (settings.protectForms || settings.markSuspendedTabs) {
+    if (settings.protectForms) {
+      // Refuses both unsaved input and a page that could not be checked in
+      // time: discarding on a guess is exactly what form protection exists to
+      // prevent. The per-minute check retries it; a manual run reports it.
+      if (await formCheckBlocks(tabId)) return false;
+    } else if (settings.markSuspendedTabs) {
+      // Only the title marking needs the script here, and it is cosmetic, so a
+      // slow page does not hold anything up.
       await injectFormCheck(tabId);
     }
 
-    if (settings.protectForms) {
-      try {
-        let resp = await Promise.race([
-          chrome.tabs.sendMessage(tabId, { action: 'checkFormData' }),
-          new Promise(resolve => setTimeout(() => resolve(null), 500))
-        ]);
-        if (resp && resp.hasFormData) return false;
-      } catch {}
-    }
-
     if (settings.markSuspendedTabs) {
-      try { await chrome.tabs.sendMessage(tabId, { action: 'markSuspended' }); } catch {}
+      // Bounded: the marking is cosmetic, and a page too busy to answer must
+      // not delay its own suspend.
+      try { await withTimeout(chrome.tabs.sendMessage(tabId, { action: 'markSuspended' }), TAB_MESSAGE_TIMEOUT_MS); } catch {}
     }
 
     // Final recheck immediately before discard - user may have switched to
@@ -1145,6 +1260,10 @@ async function handleSuspendCurrent(activeTab) {
   if (settings.protectPinned && activeTab.pinned) return;
   if (settings.protectAudio && activeTab.audible) return;
   if (isWhitelisted(activeTab.url, settings.whitelist)) return;
+  // Unsaved input is checked BEFORE switching tabs. suspendTab would refuse
+  // it anyway, but only after the user had been moved to a neighbour for
+  // nothing, with the popup gone and no toast to say why.
+  if (settings.protectForms && await formCheckBlocks(activeTab.id)) return;
 
   let allTabs = await chrome.tabs.query({ windowId: activeTab.windowId });
   // chrome.tabs.query returns tabs ordered by index. Prefer the next tab by
@@ -1167,19 +1286,99 @@ async function handleSuspendCurrent(activeTab) {
   } catch {}
 }
 
+// Runs fn over items with at most `limit` in flight, in list order.
+async function runLimited(items, fn, limit) {
+  let queue = items.slice();
+  let workers = [];
+  for (let i = 0; i < Math.min(limit, queue.length); i++) {
+    workers.push((async () => {
+      while (queue.length) {
+        await fn(queue.shift());
+      }
+    })());
+  }
+  await Promise.all(workers);
+}
+
+// A few discards in flight at once is plenty: each one is a browser-process
+// round trip, and it is the waiting in single file that made forty tabs take
+// a minute, not the discards themselves.
+const SUSPEND_CONCURRENCY = 4;
+
+// Suspends a batch through suspendTab, a few at a time, so every protection
+// and the pre-discard recheck still apply per tab. Returns which ids went to
+// sleep and which were refused, so a manual run can say what it did not do.
+async function suspendMany(tabIds, settings, opts) {
+  let suspended = [];
+  let refused = [];
+  await runLimited(tabIds, async (tabId) => {
+    if (await suspendTab(tabId, settings, opts)) suspended.push(tabId);
+    else refused.push(tabId);
+  }, SUSPEND_CONCURRENCY);
+  return { suspended, refused };
+}
+
+// Chrome refuses to discard a tab whose navigation has not committed yet, which
+// is exactly the state a batch of freshly opened tabs is in. Those are retried
+// a couple of times, a moment apart, before being reported as still loading.
+const LOADING_RETRY_PASSES = 2;
+const LOADING_RETRY_DELAY_MS = 2000;
+
+// Sorts refused ids into what they are now: still mid-load (worth another
+// try, or worth naming in the result), asleep after all (the per-minute pass
+// or Chrome itself got there first, so the user has what they asked for and
+// it counts), or refused for a reason of its own that stays refused. Closed
+// tabs simply drop out.
+async function sortRefused(tabIds) {
+  let loading = [], asleep = [], other = [];
+  for (let id of tabIds) {
+    try {
+      let tab = await chrome.tabs.get(id);
+      if (tab.discarded) asleep.push(id);
+      else if (tab.status === 'loading' && !tab.active) loading.push(id);
+      else other.push(id);
+    } catch {}
+  }
+  return { loading, asleep, other };
+}
+
 async function suspendAllOthers(windowId) {
   let settings = await getSettings();
+  await loadKeptAwake();
   let tabs = await chrome.tabs.query(windowId ? { windowId } : {});
 
-  let count = 0;
+  // Same chain as getStatus's eligible count, so the total a caller reports
+  // is the set the strip already showed as available.
+  let targets = [];
   for (let tab of tabs) {
     if (tab.active || tab.discarded || isInternalUrl(tab.url)) continue;
+    if (_keptAwake.has(tab.id)) continue;
     if (settings.protectPinned && tab.pinned) continue;
     if (settings.protectAudio && tab.audible) continue;
     if (isWhitelisted(tab.url, settings.whitelist)) continue;
-    if (await suspendTab(tab.id, settings)) count++;
+    targets.push(tab.id);
   }
-  return count;
+
+  let { suspended, refused } = await suspendMany(targets, settings);
+  for (let pass = 0; pass < LOADING_RETRY_PASSES && refused.length; pass++) {
+    let { loading } = await sortRefused(refused);
+    if (!loading.length) break;
+    await new Promise(r => setTimeout(r, LOADING_RETRY_DELAY_MS));
+    let again = await suspendMany(loading, settings);
+    suspended = suspended.concat(again.suspended);
+    // Refusals that were never about loading keep their place
+    refused = refused.filter(id => !loading.includes(id)).concat(again.refused);
+  }
+  let left = await sortRefused(refused);
+
+  // Only tabs Chrome itself confirms as discarded are counted. Attempts are
+  // not successes, and the popup's toast and progress are built from this.
+  return {
+    count: suspended.length + left.asleep.length,
+    total: targets.length,
+    refused: left.loading.length + left.other.length,
+    stillLoading: left.loading.length
+  };
 }
 
 async function unsuspendAll(windowId) {
@@ -1197,35 +1396,104 @@ async function unsuspendAll(windowId) {
   return count;
 }
 
-async function addWhitelist(domain) {
-  if (!domain || typeof domain !== 'string') return { added: false, error: t('invalidDomain') };
-  // trim() before the www-strip so a leading-whitespace input like "  www.x.com"
-  // still gets normalized (regex anchors to ^, so the leading space would
-  // otherwise prevent the www. strip).
-  let d = domain.trim().toLowerCase().replace(/^www\./, '');
-  if (!d) return { added: false, error: t('invalidDomain') };
-  // Strip port from domain part before validation
-  let domainPart = d.split('/')[0].replace(/:\d+$/, '');
-  let isLocal = domainPart === 'localhost' || /^\d{1,3}(\.\d{1,3}){3}$/.test(domainPart) || domainPart === '::1';
-  if (!isLocal && (!domainPart.includes('.') || domainPart.startsWith('.') || domainPart.endsWith('.'))) {
-    return { added: false, error: t('invalidDomain') };
+// The one normaliser for everything that enters the whitelist: the input box,
+// the current-site button, the context menu and clipboard import. It accepts
+// what people actually paste (a full address with scheme, query, fragment,
+// trailing slash, port or IPv6 brackets) and stores the plain form the
+// matcher expects. Returns null when nothing usable is left.
+function normalizeWhitelistEntry(raw) {
+  if (!raw || typeof raw !== 'string') return null;
+  let d = raw.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '');
+  d = d.replace(/[?#].*$/, '');   // query and fragment never take part in matching
+  d = d.replace(/\/+$/, '');      // "site.com/" is the whole site, "a/b/" is "a/b"
+  if (!d) return null;
+  let slash = d.indexOf('/');
+  let host = slash === -1 ? d : d.slice(0, slash);
+  let path = slash === -1 ? '' : d.slice(slash);
+  if (/^\[/.test(host)) {
+    // bracketed IPv6, with or without a port
+    host = host.replace(/^\[([^\]]*)\].*$/, '$1');
+  } else if ((host.match(/:/g) || []).length === 1) {
+    host = host.replace(/:\d+$/, '');
   }
-  // Also strip port from stored value so it matches hostname-based lookups
-  d = d.replace(/^([^/:]+):\d+/, '$1');
-  let settings = await getSettings();
-  if (!settings.whitelist.includes(d)) {
-    settings.whitelist.push(d);
+  let bare = host.replace(/^\*\./, '');
+  let isLocal = bare === 'localhost' || bare === '::1' || /^\d{1,3}(\.\d{1,3}){3}$/.test(bare);
+  if (!isLocal && (!bare.includes('.') || bare.startsWith('.') || bare.endsWith('.') || /\s/.test(bare))) return null;
+  return host + path;
+}
+
+// Entries saved by older versions sit in storage as they were typed:
+// "https://Site.com/", "WWW.site.com", the same site twice in different
+// case. 1.5.0 matches and removes by the normalised form, so bring the stored
+// list up to it once on update. Anything the normaliser does not recognise
+// is kept as it was rather than dropped; only exact duplicates and blanks go.
+async function normalizeStoredWhitelist() {
+  try {
+    let settings = await getSettings();
+    let list = Array.isArray(settings.whitelist) ? settings.whitelist : [];
+    let seen = new Set(), out = [];
+    for (let raw of list) {
+      let entry = normalizeWhitelistEntry(raw) || (typeof raw === 'string' ? raw.trim() : '');
+      if (!entry || seen.has(entry)) continue;
+      seen.add(entry);
+      out.push(entry);
+    }
+    if (out.length !== list.length || out.some((e, i) => e !== list[i])) {
+      settings.whitelist = out;
+      await chrome.storage.sync.set({ settings });
+      _patternCache.clear();
+    }
+  } catch {}
+}
+
+// storage.sync caps a single item at 8 KB, and a whitelist of a few hundred
+// paths gets there. Say so in plain words instead of surfacing Chrome's quota
+// string, and leave the stored list exactly as it was.
+async function saveWhitelist(settings, result) {
+  try {
     await chrome.storage.sync.set({ settings });
-    return { added: true };
+    return result;
+  } catch {
+    return { added: false, error: t('whitelistFull') };
   }
-  return { added: false };
+}
+
+async function addWhitelist(domain) {
+  let d = normalizeWhitelistEntry(domain);
+  if (!d) return { added: false, error: t('invalidDomain') };
+  let settings = await getSettings();
+  if (settings.whitelist.includes(d)) return { added: false, entry: d };
+  settings.whitelist.push(d);
+  return await saveWhitelist(settings, { added: true, entry: d });
+}
+
+// Clipboard import in one write. Adding sites one at a time cost a sync write
+// each, and Chrome allows only so many sync writes a minute, so a long list
+// used to stop part way through with no word about it.
+async function importWhitelist(list) {
+  if (!Array.isArray(list)) return { added: 0, invalid: 0, error: t('noValidDomains') };
+  let settings = await getSettings();
+  let added = 0, invalid = 0;
+  for (let raw of list) {
+    let d = normalizeWhitelistEntry(typeof raw === 'string' ? raw : '');
+    if (!d) { invalid++; continue; }
+    if (settings.whitelist.includes(d)) continue;
+    settings.whitelist.push(d);
+    added++;
+  }
+  if (!added) return { added: 0, invalid };
+  let saved = await saveWhitelist(settings, { added, invalid });
+  return saved.error ? { added: 0, invalid, error: saved.error } : saved;
 }
 
 async function removeWhitelist(domain) {
   if (!domain || typeof domain !== 'string') return;
   let settings = await getSettings();
+  // the popup passes the stored entry that matched, so it is compared as is;
+  // the normalised form is taken out too for callers that pass a bare site
   let d = domain.toLowerCase().replace(/^www\./, '');
-  settings.whitelist = settings.whitelist.filter(w => w !== d);
+  let n = normalizeWhitelistEntry(domain);
+  settings.whitelist = settings.whitelist.filter(w => w !== d && w !== n);
   await chrome.storage.sync.set({ settings });
 }
 
@@ -1359,8 +1627,11 @@ async function restoreSession(id, mode) {
 }
 
 async function getTabList(windowId) {
-  // Lazy-reload timestamps if service worker restarted
-  if (Object.keys(_timestamps).length === 0) await initTimestamps();
+  // A cold worker has no timestamps yet. Start the reload but do not wait
+  // for it: the list falls back to Chrome's own tab.lastAccessed below, which
+  // is the same value initTimestamps seeds from, so the first draw is right
+  // either way and the popup is not held behind another query and two writes.
+  if (Object.keys(_timestamps).length === 0) ensureTimestamps();
   let settings = await getSettings();
   let held = await loadKeptAwake();
   let icons = await loadFavicons();
@@ -1373,6 +1644,9 @@ async function getTabList(windowId) {
     let protectReason = null;
     let timeLeft = null;
     let keptAwake = held.has(tab.id);
+    // the entry that covers this tab, handed to the popup so the current-site
+    // button can remove exactly what is stored
+    let whitelistEntry = whitelistMatch(tab.url, settings.whitelist);
 
     // The active tab keeps status 'active' even when held - the popup finds it
     // by that status, and it renders the hold from the keptAwake field below.
@@ -1393,7 +1667,7 @@ async function getTabList(windowId) {
     } else if (settings.protectAudio && tab.audible) {
       status = 'protected';
       protectReason = 'Audio';
-    } else if (isWhitelisted(tab.url, settings.whitelist)) {
+    } else if (whitelistEntry) {
       status = 'protected';
       protectReason = 'Whitelisted';
     } else if (settings.enableAutoSuspend && threshold > 0) {
@@ -1415,7 +1689,7 @@ async function getTabList(windowId) {
       url: tab.url || '',
       // fall back to the icon we saw before Chrome dropped it on discard
       favIconUrl: tab.favIconUrl || icons[tab.id] || '',
-      status, protectReason, timeLeft, keptAwake,
+      status, protectReason, timeLeft, keptAwake, whitelistEntry,
       pinned: tab.pinned,
       audible: tab.audible
     };
@@ -1535,8 +1809,15 @@ async function handleMessage(msg) {
     }
     case 'suspendOthers': {
       let [at] = await chrome.tabs.query({ active: true, currentWindow: true });
-      let count = await suspendAllOthers(at?.windowId);
-      return { success: true, count, mbFreed: count * MB_PER_TAB };
+      let result = await suspendAllOthers(at?.windowId);
+      return {
+        success: true,
+        count: result.count,
+        total: result.total,
+        refused: result.refused,
+        stillLoading: result.stillLoading,
+        mbFreed: result.count * MB_PER_TAB
+      };
     }
     case 'unsuspendAll': {
       let [at] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -1548,6 +1829,7 @@ async function handleMessage(msg) {
       return { success: result.added, ...result };
     }
     case 'removeWhitelist': await removeWhitelist(msg.domain); return { success: true };
+    case 'importWhitelist': return await importWhitelist(msg.domains);
     case 'getTabList': {
       let [active] = await chrome.tabs.query({ active: true, currentWindow: true });
       return await getTabList(active?.windowId);

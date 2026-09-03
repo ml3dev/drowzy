@@ -3,7 +3,7 @@
     "message": "Drowzy - Suspensión de pestañas y ahorro de memoria"
   },
   "extDescription": {
-    "message": "Suspende automáticamente las pestañas inactivas para ahorrar hasta un 80% de RAM. Ligero, privado, sin rastreo. Las pestañas nunca se pierden."
+    "message": "Duerme las pestañas que no usas para que Chrome siga rápido. Ligero, privado, sin rastreo y de código abierto."
   },
   "commandSuspendCurrent": {
     "message": "Suspender la pestaña actual"
@@ -435,7 +435,7 @@
     "message": "Bienvenido a Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy ahorra memoria poniendo a dormir las pestañas inactivas. Tus pestañas siempre están seguras: usamos la API nativa de descarte de Chrome, así que sobreviven aunque desinstales Drowzy."
+    "message": "Drowzy ahorra memoria poniendo a dormir las pestañas inactivas. Tus pestañas siguen siendo pestañas normales de Chrome: usamos la API nativa de descarte de Chrome, así que sobreviven aunque desinstales Drowzy."
   },
   "howItWorks": {
     "message": "Cómo funciona"
@@ -447,10 +447,10 @@
     "message": "<strong>Las pestañas suspendidas no usan RAM</strong> pero permanecen en la barra de pestañas"
   },
   "featureClickToWake": {
-    "message": "<strong>Haz clic en cualquier pestaña suspendida</strong> para despertarla al instante"
+    "message": "<strong>Haz clic en cualquier pestaña suspendida</strong> para despertarla"
   },
   "featureProtected": {
-    "message": "<strong>Las pestañas activas, fijadas y con audio</strong> nunca se tocan"
+    "message": "<strong>Las pestañas activas, fijadas y con audio</strong> están protegidas de forma predeterminada"
   },
   "quickActions": {
     "message": "Acciones rápidas"
@@ -678,7 +678,12 @@
     "message": "El aviso «¿Te gusta Drowzy?» ahora solo aparece después de usar Drowzy un tiempo, nunca al instalarlo ni justo después de una actualización. Los botones son «Dejar una reseña», «Quizás más tarde» y «No volver a preguntar». Nunca pide una puntuación concreta ni ofrece recompensas."
   },
   "changelogReleaseHeading": {
-    "message": "Novedades de"
+    "message": "Novedades de $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Suspensión más rápida e inteligente"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Dormir pestañas ya no hace saltar toda la lista. Esta página y la de bienvenida siguen ahora el tema claro u oscuro que elegiste en Drowzy. Y volver a dormir la misma pestaña una y otra vez ya no infla tus estadísticas."
+  },
+  "timer1min": {
+    "message": "1 minuto"
+  },
+  "shortcutsHint": {
+    "message": "Chrome gestiona estos atajos. Personalizar abre chrome://extensions/shortcuts, donde puedes cambiar o borrar cada atajo."
+  },
+  "shortcutUnset": {
+    "message": "Sin asignar"
+  },
+  "changelog150Title1": {
+    "message": "Se abre al instante, incluso con 100 pestañas"
+  },
+  "changelog150Desc1": {
+    "message": "La ventana ya no te hace esperar. Se abre de inmediato, tengas las pestañas que tengas."
+  },
+  "changelog150Title2": {
+    "message": "Suspender otras es más rápido y muestra lo que hace"
+  },
+  "changelog150Desc2": {
+    "message": "Duerme varias pestañas a la vez y ves subir el contador. Si algunas no se pudieron dormir, te dice cuántas en lugar de decir que todo salió bien."
+  },
+  "changelog150Title3": {
+    "message": "Un temporizador de 1 minuto"
+  },
+  "changelog150Desc3": {
+    "message": "¿Abriste un montón de pestañas desde una búsqueda? Pon el temporizador en 1 minuto y se dormirán poco después de que las dejes."
+  },
+  "changelog150Title4": {
+    "message": "Los atajos ahora son fáciles de cambiar"
+  },
+  "changelog150Desc4": {
+    "message": "¿Quieres otra tecla para Suspender esta pestaña, o ninguna? La fila Atajos de teclado de Ajustes ahora te lleva directo al lugar correcto."
+  },
+  "changelog150Title5": {
+    "message": "Y las cosas pequeñas"
+  },
+  "changelog150Desc5": {
+    "message": "Pega una dirección web completa en la lista blanca y simplemente funciona. Suspender esta pestaña no te sacará de una página en la que estés escribiendo. Los mensajes son más claros y nunca se cortan."
+  },
+  "suspendedOneToast": {
+    "message": "Pestaña suspendida · ~$RAM$ liberados",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ pestaña(s) omitida(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "La lista blanca está llena para la sincronización de Chrome. Quita algunos sitios e inténtalo de nuevo."
   }
 }

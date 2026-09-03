@@ -3,7 +3,7 @@
     "message": "Drowzy - Lapfelfüggesztő és memóriatakarékos"
   },
   "extDescription": {
-    "message": "Inaktív lapok automatikus felfüggesztése akár 80% RAM megtakarításával. Könnyű, privát, nyomkövetés nélkül. A lapok soha nem vesznek el."
+    "message": "Elaltatja a nem használt lapokat, hogy a Chrome gyors maradjon. Könnyű, privát, nincs követés, nyílt forráskódú."
   },
   "commandSuspendCurrent": {
     "message": "Jelenlegi lap felfüggesztése"
@@ -435,7 +435,7 @@
     "message": "Üdvözöl a Drowzy"
   },
   "onboardingIntro": {
-    "message": "A Drowzy memóriát takarít meg az inaktív lapok elaltatásával. A lapjaid mindig biztonságban vannak - a Chrome natív discard API-ját használjuk, így még a Drowzy eltávolítása után is megmaradnak."
+    "message": "A Drowzy memóriát takarít meg az inaktív lapok elaltatásával. A lapjaid normál Chrome-lapok maradnak - a Chrome natív discard API-ját használjuk, így még a Drowzy eltávolítása után is megmaradnak."
   },
   "howItWorks": {
     "message": "Hogyan működik"
@@ -447,10 +447,10 @@
     "message": "<strong>A felfüggesztett lapok nulla RAM-ot használnak</strong>, de megmaradnak a lapsávban"
   },
   "featureClickToWake": {
-    "message": "<strong>Kattints bármelyik felfüggesztett lapra</strong> az azonnali felébresztéshez"
+    "message": "<strong>Kattints bármelyik felfüggesztett lapra</strong> a felébresztéshez"
   },
   "featureProtected": {
-    "message": "<strong>Az aktív, rögzített és hangot lejátszó lapokat</strong> soha nem érinti"
+    "message": "<strong>Az aktív, rögzített és hangot lejátszó lapok</strong> alapértelmezés szerint védettek"
   },
   "quickActions": {
     "message": "Gyorsműveletek"
@@ -678,7 +678,12 @@
     "message": "A „Tetszik a Drowzy?” sáv mostantól csak akkor jelenik meg, ha már egy ideje használod a Drowzyt, soha nem a telepítéskor vagy közvetlenül egy frissítés után. A gombok: „Értékelés írása”, „Talán később” és „Ne kérdezd újra”. Soha nem kér meghatározott csillagos értékelést, és soha nem kínál jutalmat."
   },
   "changelogReleaseHeading": {
-    "message": "Újdonságok a"
+    "message": "Újdonságok a $VERSION$ verzióban",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Gyorsabb, okosabb felfüggesztés"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "A lapok elaltatása már nem ugráltatja meg az egész listát. Ez az oldal és az üdvözlő oldal mostantól a Drowzyban választott világos vagy sötét témát követi. És ugyanannak a lapnak az ismételt elaltatása már nem fújja fel a statisztikáidat."
+  },
+  "timer1min": {
+    "message": "1 perc"
+  },
+  "shortcutsHint": {
+    "message": "Ezeket a Chrome kezeli. A Testreszabás megnyitja a chrome://extensions/shortcuts oldalt, ahol minden billentyűparancsot módosíthatsz vagy törölhetsz."
+  },
+  "shortcutUnset": {
+    "message": "Nincs beállítva"
+  },
+  "changelog150Title1": {
+    "message": "Azonnal megnyílik, akár 100 lappal is"
+  },
+  "changelog150Desc1": {
+    "message": "A felugró ablak többé nem váratt meg. Azonnal megnyílik, akárhány lap van nyitva."
+  },
+  "changelog150Title2": {
+    "message": "A Többi felfüggesztése gyorsabb, és mutatja, mit csinál"
+  },
+  "changelog150Desc2": {
+    "message": "Egyszerre több lapot altat el, és látod, ahogy a számláló nő. Ha néhány lapot nem lehetett elaltatni, megmondja, hányat, ahelyett hogy azt állítaná, minden sikerült."
+  },
+  "changelog150Title3": {
+    "message": "Egyperces időzítő"
+  },
+  "changelog150Desc3": {
+    "message": "Egy keresésből nyitottál meg egy halom lapot? Állítsd az időzítőt 1 percre, és nem sokkal azután elalszanak, hogy otthagytad őket."
+  },
+  "changelog150Title4": {
+    "message": "A billentyűparancsok most már könnyen módosíthatók"
+  },
+  "changelog150Desc4": {
+    "message": "Más billentyűt szeretnél a Lap felfüggesztése funkcióhoz, vagy egyáltalán semmilyet? A Beállítások Billentyűparancsok sora most egyenesen a megfelelő helyre visz."
+  },
+  "changelog150Title5": {
+    "message": "És az apróságok"
+  },
+  "changelog150Desc5": {
+    "message": "Illessz be egy teljes webcímet a fehérlistába, és egyszerűen működik. A Lap felfüggesztése nem visz el arról az oldalról, amelyen éppen gépelsz. Az üzenetek érthetőbbek, és soha nem vágódnak le."
+  },
+  "suspendedOneToast": {
+    "message": "Lap felfüggesztve · ~$RAM$ felszabadítva",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ lap kihagyva",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "A fehérlista megtelt a Chrome-szinkronizáláshoz. Távolíts el néhány oldalt, és próbáld újra."
   }
 }

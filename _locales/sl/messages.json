@@ -3,7 +3,7 @@
     "message": "Drowzy - Zamrzovalec zavihkov in varčevalec pomnilnika"
   },
   "extDescription": {
-    "message": "Samodejno zamrzni neaktivne zavihke in prihrani do 80 % RAM. Lahek, zaseben, brez sledenja. Zavihki se nikoli ne izgubijo."
+    "message": "Uspava zavihke, ki jih ne uporabljaš, da Chrome ostane hiter. Lahek, zaseben, brez sledenja, odprtokoden."
   },
   "commandSuspendCurrent": {
     "message": "Zamrzni trenutni zavihek"
@@ -435,7 +435,7 @@
     "message": "Dobrodošli v Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy varčuje s pomnilnikom tako, da neaktivne zavihke uspava. Vaši zavihki so vedno varni - uporabljamo Chromov izvorni API za zavrženje, zato preživijo tudi, če Drowzy odstranite."
+    "message": "Drowzy varčuje s pomnilnikom tako, da neaktivne zavihke uspava. Vaši zavihki ostanejo običajni Chromovi zavihki - uporabljamo Chromov izvorni API za zavrženje, zato preživijo tudi, če Drowzy odstranite."
   },
   "howItWorks": {
     "message": "Kako deluje"
@@ -447,10 +447,10 @@
     "message": "<strong>Zamrznjeni zavihki ne porabljajo RAM</strong>, a ostanejo v vrstici zavihkov"
   },
   "featureClickToWake": {
-    "message": "<strong>Klikni na katerikoli zamrznjen zavihek</strong> za takojšnje prebujanje"
+    "message": "<strong>Klikni na katerikoli zamrznjen zavihek</strong> za prebujanje"
   },
   "featureProtected": {
-    "message": "<strong>Aktivni, pripeti in zvočni zavihki</strong> se nikoli ne dotaknejo"
+    "message": "<strong>Aktivni, pripeti in zvočni zavihki</strong> so privzeto zaščiteni"
   },
   "quickActions": {
     "message": "Hitre akcije"
@@ -678,7 +678,12 @@
     "message": "Pasica »Vam je Drowzy všeč?« se zdaj prikaže šele, ko Drowzy nekaj časa uporabljate, nikoli ob namestitvi ali takoj po posodobitvi. Gumbi so »Pustite oceno«, »Morda pozneje« in »Ne sprašuj več«. Nikoli ne zahteva določene ocene in nikoli ne ponuja nagrade."
   },
   "changelogReleaseHeading": {
-    "message": "Kaj je novega v"
+    "message": "Kaj je novega v $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Hitrejše in pametnejše zamrzovanje"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Uspavanje zavihkov ne povzroči več poskakovanja celotnega seznama. Ta stran in pozdravna stran zdaj sledita svetli ali temni temi, izbrani v Drowzyju. In ponovno uspavanje istega zavihka ne napihuje več tvoje statistike."
+  },
+  "timer1min": {
+    "message": "1 minuti"
+  },
+  "shortcutsHint": {
+    "message": "Te upravlja Chrome. Prilagodi odpre chrome://extensions/shortcuts, kjer lahko vsako bližnjico spremeniš ali počistiš."
+  },
+  "shortcutUnset": {
+    "message": "Ni nastavljeno"
+  },
+  "changelog150Title1": {
+    "message": "Odpre se takoj, tudi s 100 zavihki"
+  },
+  "changelog150Desc1": {
+    "message": "Okno te ne pusti več čakati. Odpre se takoj, ne glede na to, koliko zavihkov imaš odprtih."
+  },
+  "changelog150Title2": {
+    "message": "Zamrzni ostale je hitrejše in pokaže, kaj dela"
+  },
+  "changelog150Desc2": {
+    "message": "Uspava več zavihkov hkrati, ti pa vidiš, kako števec raste. Če nekaterih zavihkov ni bilo mogoče uspavati, ti pove koliko, namesto da bi trdilo, da je vse uspelo."
+  },
+  "changelog150Title3": {
+    "message": "Enominutni časovnik"
+  },
+  "changelog150Desc3": {
+    "message": "Si iz iskanja odprl kup zavihkov? Nastavi časovnik na 1 minuto in zaspali bodo kmalu po tem, ko jih zapustiš."
+  },
+  "changelog150Title4": {
+    "message": "Bližnjice zdaj zlahka spremeniš"
+  },
+  "changelog150Desc4": {
+    "message": "Želiš drugo tipko za Zamrzni ta zavihek ali sploh nobene? Vrstica Bližnjice na tipkovnici v Nastavitve te zdaj pelje naravnost na pravo mesto."
+  },
+  "changelog150Title5": {
+    "message": "In malenkosti"
+  },
+  "changelog150Desc5": {
+    "message": "Prilepi celoten spletni naslov na beli seznam in preprosto deluje. Zamrzni ta zavihek te ne odpelje s strani, na kateri tipkaš. Sporočila so jasnejša in se nikoli ne odrežejo."
+  },
+  "suspendedOneToast": {
+    "message": "Zavihek zamrznjen · ~$RAM$ sproščeno",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "Preskočenih zavihkov: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Beli seznam je poln za sinhronizacijo Chroma. Odstrani nekaj mest in poskusi znova."
   }
 }

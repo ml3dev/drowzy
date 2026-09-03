@@ -3,7 +3,7 @@
     "message": "Drowzy - Suspenzija kartica i ušteda memorije"
   },
   "extDescription": {
-    "message": "Automatski suspendirajte neaktivne kartice i uštedite do 80% RAM-a. Lagano, privatno, bez praćenja. Kartice se nikad ne gube."
+    "message": "Uspavljuje kartice koje ne koristiš kako bi Chrome ostao brz. Lagan, privatan, bez praćenja, otvorenog koda."
   },
   "commandSuspendCurrent": {
     "message": "Suspendiraj trenutnu karticu"
@@ -435,7 +435,7 @@
     "message": "Dobrodošli u Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy štedi memoriju uspavljivanjem neaktivnih kartica. Vaše kartice su uvijek sigurne - koristimo Chromeov izvorni discard API, pa preživljavaju čak i ako deinstalirate Drowzy."
+    "message": "Drowzy štedi memoriju uspavljivanjem neaktivnih kartica. Vaše kartice ostaju obične Chrome kartice - koristimo Chromeov izvorni discard API, pa preživljavaju čak i ako deinstalirate Drowzy."
   },
   "howItWorks": {
     "message": "Kako funkcionira"
@@ -447,10 +447,10 @@
     "message": "<strong>Suspendirane kartice koriste nula RAM-a</strong> ali ostaju na traci kartica"
   },
   "featureClickToWake": {
-    "message": "<strong>Kliknite na bilo koju suspendiranu karticu</strong> da je odmah probudite"
+    "message": "<strong>Kliknite na bilo koju suspendiranu karticu</strong> da je probudite"
   },
   "featureProtected": {
-    "message": "<strong>Aktivne, prikvačene i kartice sa zvukom</strong> se nikad ne diraju"
+    "message": "<strong>Aktivne, prikvačene i kartice sa zvukom</strong> zaštićene su prema zadanim postavkama"
   },
   "quickActions": {
     "message": "Brze radnje"
@@ -678,7 +678,12 @@
     "message": "Natpis „Sviđa li vam se Drowzy?“ sada se prikazuje tek nakon što neko vrijeme koristite Drowzy, nikada pri instalaciji ni odmah nakon ažuriranja. Gumbi su „Ostavi recenziju“, „Možda kasnije“ i „Ne pitaj ponovno“. Nikada ne traži određenu ocjenu niti nudi nagradu."
   },
   "changelogReleaseHeading": {
-    "message": "Novosti u"
+    "message": "Novosti u $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Brže i pametnije suspendiranje"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Uspavljivanje kartica više ne tjera cijeli popis da poskakuje. Ova stranica i stranica dobrodošlice sada prate svijetlu ili tamnu temu koju si odabrao u Drowzyju. A ponovno uspavljivanje iste kartice više ne napuhuje tvoju statistiku."
+  },
+  "timer1min": {
+    "message": "1 minuta"
+  },
+  "shortcutsHint": {
+    "message": "Njima upravlja Chrome. Prilagodi otvara chrome://extensions/shortcuts, gdje možeš promijeniti ili obrisati svaki prečac."
+  },
+  "shortcutUnset": {
+    "message": "Nije postavljeno"
+  },
+  "changelog150Title1": {
+    "message": "Otvara se odmah, čak i sa 100 kartica"
+  },
+  "changelog150Desc1": {
+    "message": "Prozor te više ne tjera da čekaš. Otvara se odmah, koliko god kartica imao otvoreno."
+  },
+  "changelog150Title2": {
+    "message": "Suspendiraj ostale je brže i pokazuje što radi"
+  },
+  "changelog150Desc2": {
+    "message": "Uspavljuje više kartica odjednom, a ti vidiš kako brojač raste. Ako neke kartice nisu mogle zaspati, kaže koliko, umjesto da tvrdi da je sve uspjelo."
+  },
+  "changelog150Title3": {
+    "message": "Timer od 1 minute"
+  },
+  "changelog150Desc3": {
+    "message": "Otvorio si hrpu kartica iz pretrage? Postavi timer na 1 minutu i zaspat će ubrzo nakon što ih napustiš."
+  },
+  "changelog150Title4": {
+    "message": "Prečaci se sada lako mijenjaju"
+  },
+  "changelog150Desc4": {
+    "message": "Želiš drugu tipku za Suspendiraj ovu karticu, ili nijednu? Redak Tipkovni prečaci u Postavke sada te vodi ravno na pravo mjesto."
+  },
+  "changelog150Title5": {
+    "message": "I sitnice"
+  },
+  "changelog150Desc5": {
+    "message": "Zalijepi cijelu web adresu na bijelu listu i jednostavno radi. Suspendiraj ovu karticu te neće odvesti sa stranice na kojoj tipkaš. Poruke su jasnije i nikad se ne režu."
+  },
+  "suspendedOneToast": {
+    "message": "Kartica suspendirana · ~$RAM$ oslobođeno",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "Preskočeno kartica: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Bijela lista je puna za Chrome sinkronizaciju. Ukloni nekoliko stranica i pokušaj ponovno."
   }
 }

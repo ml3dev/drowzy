@@ -3,7 +3,7 @@
     "message": "Drowzy - Penangguh Tab & Penghemat Memori"
   },
   "extDescription": {
-    "message": "Tangguhkan tab tidak aktif secara otomatis untuk menghemat hingga 80% RAM. Ringan, privat, tanpa pelacakan. Tab tidak pernah hilang."
+    "message": "Menidurkan tab yang tidak kamu pakai agar Chrome tetap cepat. Ringan, privat, tanpa pelacakan, open source."
   },
   "commandSuspendCurrent": {
     "message": "Tangguhkan tab saat ini"
@@ -435,7 +435,7 @@
     "message": "Selamat datang di Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy menghemat memori dengan menidurkan tab tidak aktif. Tab Anda selalu aman - kami menggunakan API discard bawaan Chrome, sehingga tab tetap ada meskipun Anda mencopot Drowzy."
+    "message": "Drowzy menghemat memori dengan menidurkan tab tidak aktif. Tab Anda tetap menjadi tab Chrome biasa - kami menggunakan API discard bawaan Chrome, sehingga tab tetap ada meskipun Anda mencopot Drowzy."
   },
   "howItWorks": {
     "message": "Cara kerjanya"
@@ -447,10 +447,10 @@
     "message": "<strong>Tab yang ditangguhkan menggunakan nol RAM</strong> tetapi tetap ada di bilah tab Anda"
   },
   "featureClickToWake": {
-    "message": "<strong>Klik tab yang ditangguhkan</strong> untuk langsung membangunkannya"
+    "message": "<strong>Klik tab yang ditangguhkan</strong> untuk membangunkannya"
   },
   "featureProtected": {
-    "message": "<strong>Tab aktif, disematkan, dan audio</strong> tidak pernah disentuh"
+    "message": "<strong>Tab aktif, disematkan, dan audio</strong> dilindungi secara default"
   },
   "quickActions": {
     "message": "Aksi cepat"
@@ -678,7 +678,12 @@
     "message": "Banner \"Menyukai Drowzy?\" kini hanya muncul setelah Anda menggunakan Drowzy beberapa waktu, tidak pernah saat pemasangan atau tepat setelah pembaruan. Tombolnya adalah \"Beri ulasan\", \"Mungkin nanti\", dan \"Jangan tanya lagi\". Ini tidak pernah meminta rating bintang tertentu dan tidak pernah menawarkan hadiah."
   },
   "changelogReleaseHeading": {
-    "message": "Yang baru di"
+    "message": "Yang baru di $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Penangguhan lebih cepat dan cerdas"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Menidurkan tab tidak lagi membuat seluruh daftar memantul. Halaman ini dan halaman selamat datang kini mengikuti tema terang atau gelap yang kamu pilih di Drowzy. Dan menidurkan tab yang sama berulang kali tidak lagi menggelembungkan statistikmu."
+  },
+  "timer1min": {
+    "message": "1 menit"
+  },
+  "shortcutsHint": {
+    "message": "Chrome yang mengelola pintasan ini. Sesuaikan membuka chrome://extensions/shortcuts, tempat kamu bisa mengubah atau menghapus setiap pintasan."
+  },
+  "shortcutUnset": {
+    "message": "Belum diatur"
+  },
+  "changelog150Title1": {
+    "message": "Langsung terbuka, bahkan dengan 100 tab"
+  },
+  "changelog150Desc1": {
+    "message": "Popup tidak lagi membuatmu menunggu. Ia langsung terbuka, berapa pun tab yang kamu buka."
+  },
+  "changelog150Title2": {
+    "message": "Tangguhkan Lainnya lebih cepat dan memperlihatkan prosesnya"
+  },
+  "changelog150Desc2": {
+    "message": "Ia menidurkan beberapa tab sekaligus, dan kamu bisa melihat angkanya naik. Kalau ada tab yang belum bisa tidur, ia memberi tahu berapa jumlahnya, bukan mengaku semuanya berhasil."
+  },
+  "changelog150Title3": {
+    "message": "Timer 1 menit"
+  },
+  "changelog150Desc3": {
+    "message": "Membuka setumpuk tab dari hasil pencarian? Setel timer ke 1 menit dan tab-tab itu tidur tak lama setelah kamu tinggalkan."
+  },
+  "changelog150Title4": {
+    "message": "Pintasan kini mudah diubah"
+  },
+  "changelog150Desc4": {
+    "message": "Ingin tombol lain untuk Tangguhkan tab ini, atau tidak sama sekali? Baris Pintasan keyboard di Pengaturan kini membawamu langsung ke tempat yang tepat."
+  },
+  "changelog150Title5": {
+    "message": "Dan hal-hal kecil"
+  },
+  "changelog150Desc5": {
+    "message": "Tempel alamat web lengkap ke daftar putih dan langsung jalan. Tangguhkan tab ini tidak akan memindahkanmu dari halaman yang sedang kamu ketik. Pesan lebih jelas dan tidak pernah terpotong."
+  },
+  "suspendedOneToast": {
+    "message": "Tab ditangguhkan · ~$RAM$ dibebaskan",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ tab dilewati",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Daftar putih sudah penuh untuk sinkronisasi Chrome. Hapus beberapa situs lalu coba lagi."
   }
 }

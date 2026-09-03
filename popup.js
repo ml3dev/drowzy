@@ -12,6 +12,17 @@ var _tabListSig = '';
 var _sessionListSig = '';
 var _renderedSessionIds = null;
 var _pollTimer = null;
+// Set while a loadAll is in flight. The 5s poll skips its tick when one is
+// still running, so a slow answer from the worker (40+ tabs loading at once)
+// cannot stack a second full round of messages on top of the first.
+var _loadInFlight = false;
+// The last status the strip drew. Suspend Others uses it for the "12/47"
+// progress label: eligibleCount is exactly the set the worker is about to
+// try, and suspendedCount is the baseline the live count is measured from.
+var _lastStatus = null;
+// Set while Suspend Others is running, so a poll landing mid-way cannot
+// re-enable the button and let a second run start on top of the first.
+var _suspendingOthers = false;
 // loadAll restores scrollTop after every render so the 5s poll doesn't jump
 // the list under you. That fights any deliberate programmatic scroll, so
 // "Open settings" sets a short window during which the restore is skipped.
@@ -38,16 +49,26 @@ async function init() {
     // from closed to open when localStorage restore lands mid-init.
     restoreSectionStates();
     localizeHtml();
-    await initTheme();
+    // initTheme applies the mirrored theme synchronously before its first
+    // await, so the reveal below never shows the wrong theme for a frame.
+    var themeReady = initTheme();
     injectIcons();
-    await loadAll();
+    // Wire the buttons before any data arrives: the shell is on screen from
+    // here on, and a button that is visible but dead reads as broken.
     attachListeners();
+    // Reveal the shell now, with the list showing "Loading tabs...". This
+    // used to wait for every worker message to answer first, which with 40+
+    // tabs loading at once meant a blank popup for as long as the worker
+    // took, and the CSS fallback only uncovered it after 500ms regardless.
+    document.body.classList.add('popup-ready');
+    await themeReady;
+    await loadAll();
     await checkReviewPrompt();
 
     // Poll for tab changes instead of registering persistent chrome.tabs listeners
     // (popup context is short-lived; persistent listeners leak across reopens)
     if (_pollTimer) clearInterval(_pollTimer);
-    _pollTimer = setInterval(function() { loadAll(); }, 5000);
+    _pollTimer = setInterval(pollTick, 5000);
 
     // Pause polling when sidepanel is hidden, resume when visible
     document.addEventListener('visibilitychange', function() {
@@ -55,13 +76,22 @@ async function init() {
         clearInterval(_pollTimer);
         _pollTimer = null;
       } else if (document.visibilityState === 'visible' && !_pollTimer) {
-        loadAll();
-        _pollTimer = setInterval(function() { loadAll(); }, 5000);
+        // through the guard: a load that was already in flight when the panel
+        // was hidden finishes on its own, and a second one on top would only
+        // double the messages to a worker that is possibly still busy
+        pollTick();
+        _pollTimer = setInterval(pollTick, 5000);
       }
     });
   } finally {
     document.body.classList.add('popup-ready');
   }
+}
+
+// One poll tick. Skipped while the previous loadAll is still waiting on the
+// worker; the next tick picks up whatever it missed.
+function pollTick() {
+  if (!_loadInFlight) loadAll();
 }
 
 function filterTabs(tabs) {
@@ -107,22 +137,48 @@ function localizeHtml() {
   document.documentElement.dir = RTL_LANGS.indexOf(base) !== -1 ? 'rtl' : 'ltr';
 }
 
+// The chosen theme lives in chrome.storage (the changelog and welcome pages
+// read it from there too), but that read is asynchronous and the popup is now
+// revealed before it answers. A copy in the popup's own localStorage can be
+// read synchronously, so the first frame is already the right theme; the
+// storage value stays the authority and corrects the mirror if they differ.
+var THEME_HINT_KEY = 'drowzy_theme';
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+}
+
+function rememberThemeHint(theme) {
+  try { localStorage.setItem(THEME_HINT_KEY, theme); } catch {}
+}
+
 async function initTheme() {
-  var res = await chrome.storage.local.get('theme');
-  if (res.theme) {
-    document.documentElement.setAttribute('data-theme', res.theme);
-  } else {
-    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-  }
+  var hint = null;
+  try { hint = localStorage.getItem(THEME_HINT_KEY); } catch {}
+  var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var first = (hint === 'dark' || hint === 'light') ? hint : (dark ? 'dark' : 'light');
+  applyTheme(first);
   updateThemeIcon();
+
+  var res = await chrome.storage.local.get('theme');
+  var stored = (res.theme === 'dark' || res.theme === 'light') ? res.theme : null;
+  var wanted = stored || (dark ? 'dark' : 'light');
+  if (stored) rememberThemeHint(stored);
+  else { try { localStorage.removeItem(THEME_HINT_KEY); } catch {} }
+  if (wanted !== first) {
+    applyTheme(wanted);
+    updateThemeIcon();
+    // Any favicon drawn so far was measured against the first theme
+    retuneAllFavicons();
+  }
 }
 
 function toggleTheme() {
   var cur = document.documentElement.getAttribute('data-theme');
   var next = cur === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', next);
+  applyTheme(next);
   chrome.storage.local.set({ theme: next });
+  rememberThemeHint(next);
   updateThemeIcon();
   // which favicons blend depends on the panel background, so the verdicts
   // have to be recomputed against the theme we just switched to
@@ -152,33 +208,50 @@ function injectIcons() {
 }
 
 async function loadAll() {
+  _loadInFlight = true;
   try {
-    var [status, tabList, settings, sessions, stats] = await Promise.all([
-      msg({ action: 'getStatus' }),
-      msg({ action: 'getTabList' }),
-      msg({ action: 'getSettings' }),
-      msg({ action: 'getSessions' }),
-      msg({ action: 'getStats' })
-    ]);
-    _allTabs = tabList;
+    // All five requests go out at once, but each is rendered as it lands
+    // rather than after the slowest one. The tab list is the heaviest answer
+    // and the thing the popup was opened for, so it is drawn first; sessions
+    // and stats are cheap local reads that follow.
+    var pStatus = msg({ action: 'getStatus' });
+    var pTabs = msg({ action: 'getTabList' });
+    var pSettings = msg({ action: 'getSettings' });
+    var pSessions = msg({ action: 'getSessions' });
+    var pStats = msg({ action: 'getStats' });
+
     var scrollEl = document.querySelector('.main-content');
     // In sidepanel, .main-content doesn't scroll (body does) - detect correct container
     if (!scrollEl || scrollEl.scrollHeight <= scrollEl.clientHeight) {
       scrollEl = document.documentElement;
     }
     var savedScroll = scrollEl.scrollTop;
-    renderStatsStrip(status);
+
+    var tabList = await pTabs;
+    // msg() swallows a dead or unreachable worker into null. Rendering that as
+    // an empty list would read "No tabs found", which is a lie; the catch below
+    // draws the honest "could not load" state instead, and the poll retries.
+    if (!Array.isArray(tabList)) throw new Error('no answer from the worker');
+    _allTabs = tabList;
     renderTabList(filterTabs(tabList));
+    var settings = await pSettings;
     renderCurrentTab(tabList, settings);
     renderSettings(settings);
+    var status = await pStatus;
+    renderStatsStrip(status);
+    // Skip the restore while a deliberate scroll is in flight, otherwise a
+    // poll landing mid-animation snaps the user back where they started.
+    if (scrollEl && Date.now() > _scrollLockUntil) scrollEl.scrollTop = savedScroll;
+
+    var sessions = await pSessions;
+    var stats = await pStats;
+    savedScroll = scrollEl.scrollTop;
     renderSessions(sessions);
     renderLifetimeStats(stats);
     // Re-poll shortcut bindings - user may have edited them in
     // chrome://extensions/shortcuts via the Customize link without closing
     // the popup. Cheap call; runs on the same 5s cadence as everything else.
     renderShortcutsStatus();
-    // Skip the restore while a deliberate scroll is in flight, otherwise a
-    // poll landing mid-animation snaps the user back where they started.
     if (scrollEl && Date.now() > _scrollLockUntil) scrollEl.scrollTop = savedScroll;
     _loaded = true;
   } catch (e) {
@@ -186,6 +259,8 @@ async function loadAll() {
     if (list) list.innerHTML = '<div class="tab-list-empty"><span class="empty-icon">' + icon('x', 22) + '</span><span>' + esc(t('failedToLoad')) + '</span></div>';
     // Reset sig so a successful recovery render is not skipped by dedupe
     _tabListSig = '';
+  } finally {
+    _loadInFlight = false;
   }
 }
 
@@ -208,6 +283,7 @@ function animateStat(el, val) {
 
 function renderStatsStrip(status) {
   if (!status) return;
+  _lastStatus = status;
   animateStat(document.getElementById('statSleepingValue'), status.suspendedCount);
   animateStat(document.getElementById('statProtectedValue'), status.protectedCount);
 
@@ -243,7 +319,7 @@ function renderStatsStrip(status) {
   var btnSusp = document.getElementById('btnSuspendOthers');
   if (btnSusp) {
     var noEligible = !status.eligibleCount;
-    btnSusp.disabled = noEligible;
+    btnSusp.disabled = noEligible || _suspendingOthers;
     btnSusp.title = noEligible ? t('noOthersToSuspend') : '';
   }
   var btnWake = document.getElementById('btnWakeAll');
@@ -551,24 +627,18 @@ function renderCurrentTab(tabList, settings) {
   if (!active) return;
 
   var domain = '\u2014';
-  var whitelisted = false;
+  // The worker's verdict, and the exact stored entry behind it, so the button
+  // below removes what is actually in the list (a path pattern, say) instead
+  // of a bare domain that was never there. One matcher, not two copies.
+  var whitelistEntry = active.whitelistEntry || '';
+  var whitelisted = !!whitelistEntry;
   var urlObj = null;
   try {
     urlObj = new URL(active.url);
-    domain = urlObj.hostname;
+    domain = urlObj.hostname.replace(/^\[|\]$/g, '');
     if (urlObj.protocol === 'chrome-extension:') {
       domain = active.title || t('extensionPage');
     }
-    var clean = domain.replace(/^www\./, '').toLowerCase();
-    var fullUrl = (urlObj.hostname + urlObj.pathname).toLowerCase().replace(/^www\./, '');
-    whitelisted = (settings.whitelist || []).some(function(w) {
-      w = w.toLowerCase();
-      if (w.includes('/')) {
-        var escaped = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\\\*/g, '.*');
-        try { return new RegExp('^' + escaped + '(/.*)?$').test(fullUrl); } catch { return false; }
-      }
-      return clean === w || clean.endsWith('.' + w);
-    });
   } catch {}
 
   var isInternal = true;
@@ -628,7 +698,7 @@ function renderCurrentTab(tabList, settings) {
   // dataset, and two tabs on the same URL produce an otherwise identical
   // signature - without the id the dedupe would skip the re-render and leave
   // the button pointed at the tab the user just switched away from.
-  var sig = active.id + '|' + (active.url || '') + '|' + (active.favIconUrl || '') + '|' + domain + '|' + (whitelisted ? 1 : 0) + '|' + (isInternal ? 1 : 0) + '|' + statusKey + '|' + (showSuspendCurrent ? 1 : 0) + '|' + (keptAwake ? 1 : 0) + '|' + (suspendBlockedKey || '') + '|' + (fixKey || '');
+  var sig = active.id + '|' + (active.url || '') + '|' + (active.favIconUrl || '') + '|' + domain + '|' + whitelistEntry + '|' + (isInternal ? 1 : 0) + '|' + statusKey + '|' + (showSuspendCurrent ? 1 : 0) + '|' + (keptAwake ? 1 : 0) + '|' + (suspendBlockedKey || '') + '|' + (fixKey || '');
   if (section && section.dataset.sig === sig) return;
   if (section) section.dataset.sig = sig;
 
@@ -718,6 +788,7 @@ function renderCurrentTab(tabList, settings) {
   }
   btn.dataset.domain = domain.replace(/^www\./, '').toLowerCase();
   btn.dataset.whitelisted = whitelisted ? '1' : '0';
+  btn.dataset.entry = whitelistEntry;
 }
 
 function sessionListSignature(sessions) {
@@ -962,20 +1033,61 @@ function attachListeners() {
   document.getElementById('themeToggle').addEventListener('click', toggleTheme);
 
   document.getElementById('btnSuspendOthers').addEventListener('click', async function() {
-    if (this.disabled) return;
-    var text = this.querySelector('.btn-text');
+    if (this.disabled || _suspendingOthers) return;
+    var btn = this;
+    var text = btn.querySelector('.btn-text');
     var origLabel = t('suspendOthers');
     text.textContent = t('suspending');
-    this.disabled = true;
+    btn.disabled = true;
+    _suspendingOthers = true;
+
+    // Live progress while the worker works through the window. The numbers
+    // come from Chrome's own discarded count, not from what was attempted, so
+    // the label can only ever show tabs that are really asleep. The total is
+    // the eligible count the strip last drew, which is the same set the
+    // worker is about to try.
+    var total = _lastStatus ? (_lastStatus.eligibleCount || 0) : 0;
+    var baseline = _lastStatus ? (_lastStatus.suspendedCount || 0) : 0;
+    var running = true;
+    var polling = false;
+    var progressTimer = setInterval(async function() {
+      // One status request at a time: a slow worker is the very case this
+      // label exists for, and stacking requests on it would only slow it more
+      if (polling) return;
+      polling = true;
+      var s = await msg({ action: 'getStatus' });
+      polling = false;
+      if (!running || !s) return;
+      var done = Math.max(0, (s.suspendedCount || 0) - baseline);
+      if (total > 0) text.textContent = t('suspending') + ' ' + Math.min(done, total) + '/' + total;
+    }, 700);
+
     var res = await msg({ action: 'suspendOthers' });
+    running = false;
+    clearInterval(progressTimer);
+    _suspendingOthers = false;
+
     var count = (res && res.count) || 0;
+    var stillLoading = (res && res.stillLoading) || 0;
+    // refused for a reason of their own (unsaved input, switched to mid-run):
+    // not loading, so "try again" would be wrong advice, but not nothing either
+    var skipped = Math.max(0, ((res && res.refused) || 0) - stillLoading);
     if (count > 0) {
-      showToast(t('suspendedToast', [String(count), fmtRam(res.mbFreed || count * MB_PER_TAB)]));
+      var toast = t('suspendedToast', [String(count), bidiIsolate(fmtRam(res.mbFreed || count * MB_PER_TAB))]);
+      // A count that stops short of the total must say why, rather than pass
+      // for the whole job; the toast stays up a little longer to be read.
+      if (stillLoading > 0) toast += ' \u00B7 ' + t('suspendFailedLoading');
+      else if (skipped > 0) toast += ' \u00B7 ' + t('skippedTabsToast', [String(skipped)]);
+      showToast(toast, (stillLoading > 0 || skipped > 0) ? 4000 : undefined);
+    } else if (stillLoading > 0) {
+      showToast(t('suspendFailedLoading'));
+    } else if (skipped > 0) {
+      showToast(t('skippedTabsToast', [String(skipped)]));
     } else {
       showToast(t('noOthersToSuspend'));
     }
     text.textContent = origLabel;
-    this.disabled = false;
+    btn.disabled = false;
     await loadAll();
   });
 
@@ -1007,7 +1119,7 @@ function attachListeners() {
       // toast + refresh are visible.
       var res = await msg({ action: 'suspendCurrent' });
       if (res && res.success) {
-        showToast(t('suspendedToast', [String(1), fmtRam(res.mbFreed || MB_PER_TAB)]));
+        showToast(t('suspendedOneToast', [bidiIsolate(fmtRam(res.mbFreed || MB_PER_TAB))]));
       } else {
         // never fail silently - "I clicked it and nothing happened" was a
         // recurring uninstall note
@@ -1091,16 +1203,20 @@ function attachListeners() {
     if (this.disabled) return;
     var d = this.dataset.domain;
     if (!d || d === '\u2014') return;
+    var wasWhitelisted = this.dataset.whitelisted === '1';
+    // Removing takes out the stored entry that actually matched this page,
+    // which may be a path pattern like site.com/docs/* the bare domain would
+    // never have found. Adding always adds the bare site.
+    var target = wasWhitelisted ? (this.dataset.entry || d) : d;
     // Match background.addWhitelist's accept set: registrable domains, plus
     // localhost and bare IP literals (IPv4 + IPv6 loopback). Without this the
     // toggle silently no-ops on http://[::1]/ and similar local-dev URLs even
     // though the background would have whitelisted them.
     var isLocal = d === 'localhost' || d === '::1' || /^\d{1,3}(\.\d{1,3}){3}$/.test(d);
-    if (!isLocal && !d.includes('.')) {
+    if (!wasWhitelisted && !isLocal && !d.includes('.')) {
       showToast(t('invalidDomain'));
       return;
     }
-    var wasWhitelisted = this.dataset.whitelisted === '1';
     // Optimistic flip \u2014 switch the button label/state immediately so the
     // click feels instant. The renderCurrentTab signature dedupe could
     // otherwise let a polling-timer render run first and leave a stale sig
@@ -1123,11 +1239,25 @@ function attachListeners() {
     var section = document.getElementById('currentTabSection');
     if (section) section.dataset.sig = '';
     this.disabled = true;
+    var res = null;
     try {
-      await msg({ action: wasWhitelisted ? 'removeWhitelist' : 'addWhitelist', domain: d });
-      showToast(wasWhitelisted ? t('removedFromWhitelist', [d]) : t('addedToWhitelist', [d]));
+      res = await msg({ action: wasWhitelisted ? 'removeWhitelist' : 'addWhitelist', domain: target });
     } finally {
       this.disabled = false;
+    }
+    // Only say it happened if the worker says it did. On a refusal the refresh
+    // below puts the button back to the truth, and the toast carries the
+    // worker's reason when it gave one (a full sync quota, for instance).
+    if (!res) {
+      showToast(t('failedToSave'));
+    } else if (res.error) {
+      showToast(res.error);
+    } else if (wasWhitelisted) {
+      showToast(t('removedFromWhitelist', [target]));
+    } else if (res.added) {
+      showToast(t('addedToWhitelist', [res.entry || target]));
+    } else {
+      showToast(t('alreadyWhitelisted', [res.entry || target]));
     }
     await loadAll();
   });
@@ -1246,26 +1376,20 @@ function attachListeners() {
   });
 
   document.getElementById('btnImportWhitelist').addEventListener('click', async function() {
-    try {
-      var text = await navigator.clipboard.readText();
-      var domains = text.split(/[\n,;]+/).map(function(d) {
-        var clean = d.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '');
-        if (!clean.includes('/')) clean = clean.replace(/[/:?#].*$/, '');
-        return clean;
-      }).filter(function(d) { return d && d.split('/')[0].includes('.') && !d.startsWith('.') && !d.split('/')[0].endsWith('.'); });
-      if (!domains.length) { showToast(t('noValidDomains')); return; }
-      var settings = await msg({ action: 'getSettings' });
-      if (!settings) return;
-      var added = 0;
-      for (var i = 0; i < domains.length; i++) {
-        if (!settings.whitelist.includes(domains[i])) {
-          await msg({ action: 'addWhitelist', domain: domains[i] });
-          added++;
-        }
-      }
-      if (added) await loadAll();
-      showToast(t('importedSites', [String(added)]));
-    } catch { showToast(t('clipboardReadFailed')); }
+    var text;
+    try { text = await navigator.clipboard.readText(); }
+    catch { showToast(t('clipboardReadFailed')); return; }
+    var lines = text.split(/[\n,;]+/).map(function(d) { return d.trim(); }).filter(Boolean);
+    if (!lines.length) { showToast(t('noValidDomains')); return; }
+    // One message and one storage write for the whole list. Adding sites one
+    // by one cost a sync write each, and Chrome allows only so many sync
+    // writes a minute, so a long import used to stop part way through.
+    var res = await msg({ action: 'importWhitelist', domains: lines });
+    if (!res) { showToast(t('failedToSave')); return; }
+    if (res.error) { showToast(res.error); return; }
+    if (!res.added && res.invalid === lines.length) { showToast(t('noValidDomains')); return; }
+    if (res.added) await loadAll();
+    showToast(t('importedSites', [String(res.added || 0)]));
   });
 
   document.getElementById('btnShareStats').addEventListener('click', async function() {
@@ -1302,7 +1426,15 @@ function attachListeners() {
   if (customizeBtn) {
     customizeBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
+      // Extensions may open chrome:// pages this way, which a normal link
+      // cannot. Should a browser refuse, the hint carries the address to type.
+      var opened = null;
+      try { opened = chrome.tabs.create({ url: 'chrome://extensions/shortcuts' }); } catch (err) {}
+      if (opened && opened.catch) {
+        opened.catch(function() { showToast(t('shortcutsHint'), 5000); });
+      } else if (!opened) {
+        showToast(t('shortcutsHint'), 5000);
+      }
     });
   }
   renderShortcutsStatus();
@@ -1427,38 +1559,26 @@ async function addFromInput() {
   if (!raw) return;
   _addingWhitelist = true;
   input.disabled = true;
-  var domain = raw.toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '');
-  if (!domain.includes('/')) domain = domain.replace(/[/:?#].*$/, '');
-  var domainPart = domain.split('/')[0];
-  if (!domainPart || !domainPart.includes('.') || domainPart.startsWith('.') || domainPart.endsWith('.')) {
-    showToast(t('invalidDomain'));
+  // The worker normalises and validates (scheme, www, port, query, trailing
+  // slash, IPv6 brackets), so a pasted address is stored as the entry the
+  // matcher expects and the popup does not keep a second copy of the rules.
+  var res = await msg({ action: 'addWhitelist', domain: raw });
+  input.disabled = false;
+  _addingWhitelist = false;
+  if (!res || res.error) {
+    showToast(res && res.error ? res.error : t('failedToSave'));
     input.classList.add('input-error');
     setTimeout(function() { input.classList.remove('input-error'); }, 1500);
-    input.disabled = false;
-    _addingWhitelist = false;
-    return;
-  }
-  var res = await msg({ action: 'addWhitelist', domain: domain });
-  if (res && res.error) {
-    showToast(res.error);
-    input.classList.add('input-error');
-    setTimeout(function() { input.classList.remove('input-error'); }, 1500);
-    input.disabled = false;
-    _addingWhitelist = false;
     return;
   }
   // Clear any lingering error state from a previous failed attempt
   input.classList.remove('input-error');
   input.value = '';
-  input.disabled = false;
-  _addingWhitelist = false;
   // Match the toggle button's confirmation toast for consistency. `res.added`
-  // is false when the domain was already in the whitelist - in that case the
+  // is false when the site was already in the whitelist - in that case the
   // user typed a duplicate; tell them rather than silently doing nothing.
-  // Skip the toast entirely if the message round-trip failed (res is null).
-  if (res) {
-    showToast(res.added ? t('addedToWhitelist', [domain]) : t('alreadyWhitelisted', [domain]));
-  }
+  var entry = res.entry || raw;
+  showToast(res.added ? t('addedToWhitelist', [entry]) : t('alreadyWhitelisted', [entry]));
   await loadAll();
 }
 
@@ -1485,11 +1605,29 @@ function renderShortcutsStatus() {
     } else {
       el.textContent = t('shortcutsSomeUnset', [String(bound), String(total)]);
     }
+    // The bindings themselves, one per line, as the status text's tooltip.
+    // Somebody who needs a key back for another app (the GitHub report was
+    // Option+W) can see here which command holds it before opening Chrome's
+    // page. Descriptions come from the manifest, so they are already in the
+    // UI language.
+    var lines = commands.map(function(c) {
+      return (c.description || c.name) + ': ' + (c.shortcut || t('shortcutUnset'));
+    });
+    el.title = lines.join('\n');
   });
 }
 
 function trimZero(s) {
   return s.endsWith('.0') ? s.slice(0, -2) : s;
+}
+
+// A figure like "6.4 GB" dropped into right-to-left text comes out as "GB 6.4":
+// the digits and the Latin unit are separate bidi runs and the paragraph
+// direction reorders them. Wrapping the figure in an LTR isolate keeps it
+// reading the right way round wherever it is spliced into a sentence. Used
+// for toasts only; the Share Stats clipboard text stays plain characters.
+function bidiIsolate(s) {
+  return '⁦' + s + '⁩';
 }
 
 function fmtRam(mb) {

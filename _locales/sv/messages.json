@@ -3,7 +3,7 @@
     "message": "Drowzy - Fliksuspendering och minnesbesparare"
   },
   "extDescription": {
-    "message": "Suspendera inaktiva flikar automatiskt och spara upp till 80 % RAM. Lättviktigt, privat, ingen spårning. Flikar går aldrig förlorade."
+    "message": "Söver flikar du inte använder så att Chrome förblir snabb. Lätt, privat, ingen spårning, öppen källkod."
   },
   "commandSuspendCurrent": {
     "message": "Suspendera aktuell flik"
@@ -435,7 +435,7 @@
     "message": "Välkommen till Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy sparar minne genom att lägga inaktiva flikar i viloläge. Dina flikar är alltid säkra - vi använder Chromes inbyggda API för att kassera flikar, så de överlever även om du avinstallerar Drowzy."
+    "message": "Drowzy sparar minne genom att lägga inaktiva flikar i viloläge. Dina flikar förblir vanliga Chrome-flikar - vi använder Chromes inbyggda API för att kassera flikar, så de överlever även om du avinstallerar Drowzy."
   },
   "howItWorks": {
     "message": "Så fungerar det"
@@ -447,10 +447,10 @@
     "message": "<strong>Suspenderade flikar använder noll RAM</strong> men finns kvar i flikfältet"
   },
   "featureClickToWake": {
-    "message": "<strong>Klicka på valfri suspenderad flik</strong> för att omedelbart väcka den"
+    "message": "<strong>Klicka på valfri suspenderad flik</strong> för att väcka den"
   },
   "featureProtected": {
-    "message": "<strong>Aktiva, fästa och flikar med ljud</strong> påverkas aldrig"
+    "message": "<strong>Aktiva, fästa och flikar med ljud</strong> är skyddade som standard"
   },
   "quickActions": {
     "message": "Snabbåtgärder"
@@ -678,7 +678,12 @@
     "message": "Rutan \"Gillar du Drowzy?\" visas nu först efter att du använt Drowzy ett tag, aldrig vid installation eller direkt efter en uppdatering. Knapparna är \"Lämna ett omdöme\", \"Kanske senare\" och \"Fråga inte igen\". Den ber aldrig om ett visst betyg och erbjuder aldrig någon belöning."
   },
   "changelogReleaseHeading": {
-    "message": "Nyheter i"
+    "message": "Nyheter i $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Snabbare, smartare pausning"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Att låta flikar vila får inte längre hela listan att studsa. Den här sidan och välkomstsidan följer nu det ljusa eller mörka temat du valde i Drowzy. Och att låta samma flik vila om och om igen blåser inte längre upp din statistik."
+  },
+  "timer1min": {
+    "message": "1 minut"
+  },
+  "shortcutsHint": {
+    "message": "Chrome hanterar de här. Anpassa öppnar chrome://extensions/shortcuts, där du kan ändra eller rensa varje kortkommando."
+  },
+  "shortcutUnset": {
+    "message": "Inte inställt"
+  },
+  "changelog150Title1": {
+    "message": "Öppnas direkt, även med 100 flikar"
+  },
+  "changelog150Desc1": {
+    "message": "Popupen låter dig inte vänta längre. Den öppnas på en gång, hur många flikar du än har öppna."
+  },
+  "changelog150Title2": {
+    "message": "Suspendera andra är snabbare och visar vad det gör"
+  },
+  "changelog150Desc2": {
+    "message": "Det söver flera flikar åt gången, och du ser räknaren stiga. Om några flikar inte kunde sövas säger det hur många i stället för att påstå att allt gick bra."
+  },
+  "changelog150Title3": {
+    "message": "En timer på 1 minut"
+  },
+  "changelog150Desc3": {
+    "message": "Öppnade du en hög flikar från en sökning? Ställ timern på 1 minut så somnar de strax efter att du lämnat dem."
+  },
+  "changelog150Title4": {
+    "message": "Kortkommandon är lätta att ändra nu"
+  },
+  "changelog150Desc4": {
+    "message": "Vill du ha en annan tangent för Suspendera denna flik, eller ingen alls? Raden Kortkommandon under Inställningar tar dig nu direkt till rätt ställe."
+  },
+  "changelog150Title5": {
+    "message": "Och det lilla"
+  },
+  "changelog150Desc5": {
+    "message": "Klistra in en hel webbadress i vitlistan så fungerar det bara. Suspendera denna flik flyttar dig inte från en sida där du håller på att skriva. Meddelanden är tydligare och klipps aldrig av."
+  },
+  "suspendedOneToast": {
+    "message": "Flik suspenderad · ~$RAM$ frigjort",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ flik(ar) hoppades över",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Vitlistan är full för Chrome-synkronisering. Ta bort några webbplatser och försök igen."
   }
 }

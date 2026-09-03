@@ -3,7 +3,7 @@
     "message": "Drowzy - Suspension d'onglets et économiseur de mémoire"
   },
   "extDescription": {
-    "message": "Suspendez automatiquement les onglets inactifs pour économiser jusqu'à 80 % de RAM. Léger, privé, sans pistage. Vos onglets ne sont jamais perdus."
+    "message": "Endort les onglets que vous n'utilisez pas pour que Chrome reste rapide. Léger, privé, sans pistage, open source."
   },
   "commandSuspendCurrent": {
     "message": "Suspendre l'onglet actif"
@@ -435,7 +435,7 @@
     "message": "Bienvenue sur Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy économise de la mémoire en mettant en veille les onglets inactifs. Vos onglets sont toujours en sécurité - nous utilisons l'API native de suppression de Chrome, ils survivent même si vous désinstallez Drowzy."
+    "message": "Drowzy économise de la mémoire en mettant en veille les onglets inactifs. Vos onglets restent des onglets Chrome normaux - nous utilisons l'API native de suppression de Chrome, ils survivent même si vous désinstallez Drowzy."
   },
   "howItWorks": {
     "message": "Comment ça marche"
@@ -447,10 +447,10 @@
     "message": "<strong>Les onglets suspendus n'utilisent aucune RAM</strong> mais restent dans votre barre d'onglets"
   },
   "featureClickToWake": {
-    "message": "<strong>Cliquez sur n'importe quel onglet suspendu</strong> pour le réveiller instantanément"
+    "message": "<strong>Cliquez sur n'importe quel onglet suspendu</strong> pour le réveiller"
   },
   "featureProtected": {
-    "message": "<strong>Les onglets actifs, épinglés et avec audio</strong> ne sont jamais touchés"
+    "message": "<strong>Les onglets actifs, épinglés et avec audio</strong> sont protégés par défaut"
   },
   "quickActions": {
     "message": "Actions rapides"
@@ -678,7 +678,12 @@
     "message": "La bannière « Vous aimez Drowzy ? » n'apparaît plus qu'après un certain temps d'utilisation, jamais à l'installation ni juste après une mise à jour. Les boutons sont « Laisser un avis », « Plus tard » et « Ne plus demander ». Elle ne demande jamais une note précise et n'offre jamais de récompense."
   },
   "changelogReleaseHeading": {
-    "message": "Nouveautés de"
+    "message": "Nouveautés de $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Suspension plus rapide et plus intelligente"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Mettre des onglets en veille ne fait plus sautiller toute la liste. Cette page et la page d'accueil suivent désormais le thème clair ou sombre choisi dans Drowzy. Et remettre le même onglet en veille en boucle ne gonfle plus vos statistiques."
+  },
+  "timer1min": {
+    "message": "1 minute"
+  },
+  "shortcutsHint": {
+    "message": "Chrome gère ces raccourcis. Personnaliser ouvre chrome://extensions/shortcuts, où vous pouvez modifier ou effacer chaque raccourci."
+  },
+  "shortcutUnset": {
+    "message": "Non défini"
+  },
+  "changelog150Title1": {
+    "message": "S'ouvre instantanément, même avec 100 onglets"
+  },
+  "changelog150Desc1": {
+    "message": "La fenêtre ne vous fait plus attendre. Elle s'ouvre tout de suite, quel que soit le nombre d'onglets ouverts."
+  },
+  "changelog150Title2": {
+    "message": "Suspendre les autres est plus rapide et montre ce qu'il fait"
+  },
+  "changelog150Desc2": {
+    "message": "Il endort plusieurs onglets à la fois, et vous voyez le compteur monter. Si certains onglets n'ont pas pu être endormis, il vous dit combien au lieu de prétendre que tout a marché."
+  },
+  "changelog150Title3": {
+    "message": "Un minuteur d'une minute"
+  },
+  "changelog150Desc3": {
+    "message": "Vous avez ouvert une pile d'onglets depuis une recherche ? Réglez le minuteur sur 1 minute et ils s'endorment peu après que vous les quittez."
+  },
+  "changelog150Title4": {
+    "message": "Les raccourcis sont faciles à changer"
+  },
+  "changelog150Desc4": {
+    "message": "Vous voulez une autre touche pour Suspendre cet onglet, ou aucune ? La ligne Raccourcis clavier des Paramètres vous emmène maintenant directement au bon endroit."
+  },
+  "changelog150Title5": {
+    "message": "Et les petites choses"
+  },
+  "changelog150Desc5": {
+    "message": "Collez une adresse web complète dans la liste blanche et ça marche, tout simplement. Suspendre cet onglet ne vous éloigne plus d'une page où vous êtes en train d'écrire. Les messages sont plus clairs et ne sont jamais coupés."
+  },
+  "suspendedOneToast": {
+    "message": "Onglet suspendu · ~$RAM$ libérés",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ onglet(s) ignoré(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "La liste blanche est pleine pour la synchronisation Chrome. Retirez quelques sites et réessayez."
   }
 }

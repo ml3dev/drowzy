@@ -3,7 +3,7 @@
     "message": "Drowzy - Faneblad-suspender og hukommelsesbesparelse"
   },
   "extDescription": {
-    "message": "Suspendér automatisk inaktive faner for at spare op til 80 % RAM. Letvægtig, privat, ingen sporing. Faner går aldrig tabt."
+    "message": "Lægger faneblade, du ikke bruger, i søvn, så Chrome forbliver hurtig. Let, privat, ingen sporing, open source."
   },
   "commandSuspendCurrent": {
     "message": "Suspendér det aktuelle faneblad"
@@ -435,7 +435,7 @@
     "message": "Velkommen til Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy sparer hukommelse ved at sætte inaktive faneblade i dvale. Dine faneblade er altid sikre - vi bruger Chromes native discard-API, så de overlever selv hvis du afinstallerer Drowzy."
+    "message": "Drowzy sparer hukommelse ved at sætte inaktive faneblade i dvale. Dine faneblade forbliver almindelige Chrome-faneblade - vi bruger Chromes native discard-API, så de overlever selv hvis du afinstallerer Drowzy."
   },
   "howItWorks": {
     "message": "Sådan fungerer det"
@@ -447,10 +447,10 @@
     "message": "<strong>Suspenderede faneblade bruger nul RAM</strong>, men forbliver i din fanebjælke"
   },
   "featureClickToWake": {
-    "message": "<strong>Klik på et suspenderet faneblad</strong> for at vække det øjeblikkeligt"
+    "message": "<strong>Klik på et suspenderet faneblad</strong> for at vække det"
   },
   "featureProtected": {
-    "message": "<strong>Aktive, fastgjorte og lydfaneblade</strong> røres aldrig"
+    "message": "<strong>Aktive, fastgjorte og lydfaneblade</strong> er beskyttet som standard"
   },
   "quickActions": {
     "message": "Hurtige handlinger"
@@ -678,7 +678,12 @@
     "message": "Banneret \"Kan du lide Drowzy?\" vises nu først, når du har brugt Drowzy et stykke tid, aldrig ved installation eller lige efter en opdatering. Knapperne er \"Skriv en anmeldelse\", \"Måske senere\" og \"Spørg ikke igen\". Den beder aldrig om en bestemt bedømmelse og tilbyder aldrig en belønning."
   },
   "changelogReleaseHeading": {
-    "message": "Nyt i"
+    "message": "Nyt i $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Hurtigere, smartere suspendering"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "At sætte faner i dvale får ikke længere hele listen til at hoppe. Denne side og velkomstsiden følger nu det lyse eller mørke tema du valgte i Drowzy. Og at sætte den samme fane i dvale igen og igen oppuster ikke længere dine statistikker."
+  },
+  "timer1min": {
+    "message": "1 minut"
+  },
+  "shortcutsHint": {
+    "message": "Chrome styrer disse genveje. Tilpas åbner chrome://extensions/shortcuts, hvor du kan ændre eller rydde hver genvej."
+  },
+  "shortcutUnset": {
+    "message": "Ikke angivet"
+  },
+  "changelog150Title1": {
+    "message": "Åbner med det samme, selv med 100 faneblade"
+  },
+  "changelog150Desc1": {
+    "message": "Popuppen lader dig ikke vente længere. Den åbner straks, uanset hvor mange faneblade du har åbne."
+  },
+  "changelog150Title2": {
+    "message": "Suspendér andre er hurtigere og viser, hvad det gør"
+  },
+  "changelog150Desc2": {
+    "message": "Det lægger flere faneblade i søvn ad gangen, og du kan se tælleren stige. Hvis nogle faneblade ikke kunne sove, fortæller det hvor mange i stedet for at påstå, at alt gik godt."
+  },
+  "changelog150Title3": {
+    "message": "En timer på 1 minut"
+  },
+  "changelog150Desc3": {
+    "message": "Åbnede du en bunke faneblade fra en søgning? Sæt timeren til 1 minut, så sover de kort efter, du forlader dem."
+  },
+  "changelog150Title4": {
+    "message": "Genveje er nemme at ændre nu"
+  },
+  "changelog150Desc4": {
+    "message": "Vil du have en anden tast til Suspendér dette faneblad, eller slet ingen? Rækken Tastaturgenveje under Indstillinger fører dig nu direkte til det rigtige sted."
+  },
+  "changelog150Title5": {
+    "message": "Og de små ting"
+  },
+  "changelog150Desc5": {
+    "message": "Indsæt en hel webadresse i hvidlisten, og det virker bare. Suspendér dette faneblad flytter dig ikke væk fra en side, du er ved at skrive på. Beskeder er tydeligere og bliver aldrig klippet af."
+  },
+  "suspendedOneToast": {
+    "message": "Faneblad suspenderet · ~$RAM$ frigjort",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ faneblad(e) sprunget over",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Hvidlisten er fuld for Chrome-synkronisering. Fjern et par websteder og prøv igen."
   }
 }

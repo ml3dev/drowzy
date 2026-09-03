@@ -444,6 +444,11 @@ body:not(.popup-ready) {
   letter-spacing: -0.03em;
   color: var(--color-text);
   line-height: 1.2;
+  /* "6.4 GB" is a number and a unit; inside an RTL panel the bidi algorithm
+     reorders them to "GB 6.4". Isolating the value as LTR keeps the figure
+     readable in Arabic, Hebrew, Persian and Urdu without touching alignment. */
+  unicode-bidi: isolate;
+  direction: ltr;
   transition: color var(--transition-default);
 }
 
@@ -1110,6 +1115,9 @@ body:not(.popup-ready) {
   letter-spacing: -0.02em;
   color: var(--color-text);
   line-height: 1.2;
+  /* same number-and-unit isolation as .strip-stat-value */
+  unicode-bidi: isolate;
+  direction: ltr;
 }
 
 .stat-hero-label {
@@ -1463,7 +1471,16 @@ body:not(.popup-ready) {
   pointer-events: none;
   transition: opacity var(--transition-default), transform var(--transition-default);
   z-index: 100;
-  white-space: nowrap;
+  /* Wraps instead of widening past the popup: a fixed, centred box with nowrap
+     clips both ends of any message longer than the panel, which the 90-char
+     "needs another open tab" reason already did. Short toasts still sit on
+     one line because the box only grows to fit its text. */
+  white-space: normal;
+  /* max-content, not shrink-to-fit: with left at 50% the box would otherwise
+     only get the right half of the panel to size itself in */
+  width: max-content;
+  max-width: calc(100% - 24px);
+  text-align: center;
   box-shadow: var(--shadow-md);
 }
 

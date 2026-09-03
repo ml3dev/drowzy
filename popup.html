@@ -194,6 +194,7 @@
               <div class="setting-row" data-i18n-title="suspendTimerHint" title="Tabs you switched away from are suspended after this long. Increase if you find yourself coming back to tabs after long gaps.">
                 <label for="suspendTimer" data-i18n="autoSuspendAfter">Auto-suspend after</label>
                 <select id="suspendTimer" class="select">
+                  <option value="1" data-i18n="timer1min">1 minute</option>
                   <option value="5" data-i18n="timer5min">5 minutes</option>
                   <option value="10" data-i18n="timer10min">10 minutes</option>
                   <option value="15" data-i18n="timer15min">15 minutes</option>
@@ -249,7 +250,7 @@
                   </button>
                 </div>
               </div>
-              <div class="setting-row">
+              <div class="setting-row" data-i18n-title="shortcutsHint" title="Chrome manages these. Customize opens chrome://extensions/shortcuts, where you can change or clear each shortcut.">
                 <label data-i18n="keyboardShortcuts">Keyboard shortcuts</label>
                 <span class="shortcuts-row-right">
                   <span class="shortcuts-status" id="shortcutsStatus"></span>

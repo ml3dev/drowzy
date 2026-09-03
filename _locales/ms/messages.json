@@ -3,7 +3,7 @@
     "message": "Drowzy - Penggantung Tab & Penjimat Memori"
   },
   "extDescription": {
-    "message": "Gantung tab tidak aktif secara automatik untuk menjimatkan sehingga 80% RAM. Ringan, peribadi, tiada penjejakan. Tab tidak akan hilang."
+    "message": "Menidurkan tab yang tidak anda gunakan supaya Chrome kekal pantas. Ringan, peribadi, tiada penjejakan, sumber terbuka."
   },
   "commandSuspendCurrent": {
     "message": "Gantung tab semasa"
@@ -435,7 +435,7 @@
     "message": "Selamat datang ke Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy menjimatkan memori dengan menidurkan tab yang tidak aktif. Tab anda sentiasa selamat - kami menggunakan API buang asli Chrome, jadi ia kekal walaupun anda menyahpasang Drowzy."
+    "message": "Drowzy menjimatkan memori dengan menidurkan tab yang tidak aktif. Tab anda kekal sebagai tab Chrome biasa - kami menggunakan API buang asli Chrome, jadi ia kekal walaupun anda menyahpasang Drowzy."
   },
   "howItWorks": {
     "message": "Cara ia berfungsi"
@@ -447,10 +447,10 @@
     "message": "<strong>Tab yang digantung menggunakan sifar RAM</strong> tetapi kekal dalam bar tab anda"
   },
   "featureClickToWake": {
-    "message": "<strong>Klik mana-mana tab yang digantung</strong> untuk membangunkannya serta-merta"
+    "message": "<strong>Klik mana-mana tab yang digantung</strong> untuk membangunkannya"
   },
   "featureProtected": {
-    "message": "<strong>Tab aktif, disemat dan audio</strong> tidak akan disentuh"
+    "message": "<strong>Tab aktif, disemat dan audio</strong> dilindungi secara lalai"
   },
   "quickActions": {
     "message": "Tindakan pantas"
@@ -678,7 +678,12 @@
     "message": "Sepanduk \"Menyukai Drowzy?\" kini hanya muncul selepas anda menggunakan Drowzy seketika, tidak pernah semasa pemasangan atau sebaik selepas kemas kini. Butangnya ialah \"Tinggalkan ulasan\", \"Mungkin nanti\" dan \"Jangan tanya lagi\". Ia tidak pernah meminta penilaian bintang tertentu dan tidak pernah menawarkan ganjaran."
   },
   "changelogReleaseHeading": {
-    "message": "Yang baharu dalam"
+    "message": "Yang baharu dalam $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Penggantungan lebih pantas dan bijak"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Menidurkan tab tidak lagi membuat seluruh senarai melantun. Halaman ini dan halaman aluan kini mengikut tema cerah atau gelap yang anda pilih dalam Drowzy. Dan menidurkan tab yang sama berulang kali tidak lagi membesarkan statistik anda."
+  },
+  "timer1min": {
+    "message": "1 minit"
+  },
+  "shortcutsHint": {
+    "message": "Chrome yang mengurus pintasan ini. Sesuaikan membuka chrome://extensions/shortcuts, tempat anda boleh menukar atau mengosongkan setiap pintasan."
+  },
+  "shortcutUnset": {
+    "message": "Tidak ditetapkan"
+  },
+  "changelog150Title1": {
+    "message": "Terbuka serta-merta, walaupun dengan 100 tab"
+  },
+  "changelog150Desc1": {
+    "message": "Pop timbul tidak lagi membuat anda menunggu. Ia terbuka serta-merta, berapa pun tab yang anda buka."
+  },
+  "changelog150Title2": {
+    "message": "Gantung Lain-lain lebih pantas dan menunjukkan prosesnya"
+  },
+  "changelog150Desc2": {
+    "message": "Ia menidurkan beberapa tab serentak, dan anda nampak kiraan naik. Jika ada tab yang tidak dapat ditidurkan, ia memberitahu berapa banyak, bukannya mendakwa semuanya berjaya."
+  },
+  "changelog150Title3": {
+    "message": "Pemasa 1 minit"
+  },
+  "changelog150Desc3": {
+    "message": "Membuka setimbun tab daripada carian? Tetapkan pemasa kepada 1 minit dan tab itu tidur tidak lama selepas anda meninggalkannya."
+  },
+  "changelog150Title4": {
+    "message": "Pintasan kini mudah ditukar"
+  },
+  "changelog150Desc4": {
+    "message": "Mahu kekunci lain untuk Gantung tab ini, atau tiada langsung? Baris Pintasan papan kekunci dalam Tetapan kini membawa anda terus ke tempat yang betul."
+  },
+  "changelog150Title5": {
+    "message": "Dan perkara kecil"
+  },
+  "changelog150Desc5": {
+    "message": "Tampal alamat web penuh ke dalam senarai putih dan ia terus berfungsi. Gantung tab ini tidak akan membawa anda keluar dari halaman yang sedang anda taip. Mesej lebih jelas dan tidak pernah terpotong."
+  },
+  "suspendedOneToast": {
+    "message": "Tab digantung · ~$RAM$ dibebaskan",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ tab dilangkau",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Senarai putih sudah penuh untuk penyegerakan Chrome. Buang beberapa laman dan cuba lagi."
   }
 }

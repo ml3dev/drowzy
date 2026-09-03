@@ -3,7 +3,7 @@
     "message": "Drowzy - Tab Suspender at Memory Saver"
   },
   "extDescription": {
-    "message": "Awtomatikong i-suspend ang mga hindi aktibong tab para makatipid ng hanggang 80% ng RAM. Magaan, pribado, walang tracking. Hindi kailanman mawawala ang mga tab."
+    "message": "Pinatutulog ang mga tab na hindi mo ginagamit para manatiling mabilis ang Chrome. Magaan, pribado, walang tracking, open source."
   },
   "commandSuspendCurrent": {
     "message": "I-suspend ang kasalukuyang tab"
@@ -435,7 +435,7 @@
     "message": "Maligayang pagdating sa Drowzy"
   },
   "onboardingIntro": {
-    "message": "Nakakatipid ng memory ang Drowzy sa pamamagitan ng pagpapatulog ng mga hindi aktibong tab. Palaging ligtas ang iyong mga tab - ginagamit namin ang native na discard API ng Chrome, kaya mananatili ang mga ito kahit i-uninstall mo ang Drowzy."
+    "message": "Nakakatipid ng memory ang Drowzy sa pamamagitan ng pagpapatulog ng mga hindi aktibong tab. Nananatiling normal na Chrome tab ang iyong mga tab - ginagamit namin ang native na discard API ng Chrome, kaya mananatili ang mga ito kahit i-uninstall mo ang Drowzy."
   },
   "howItWorks": {
     "message": "Paano ito gumagana"
@@ -447,10 +447,10 @@
     "message": "<strong>Ang mga naka-suspend na tab ay walang ginagamit na RAM</strong> ngunit nananatili sa iyong tab bar"
   },
   "featureClickToWake": {
-    "message": "<strong>I-click ang anumang naka-suspend na tab</strong> para agad itong gisingin"
+    "message": "<strong>I-click ang anumang naka-suspend na tab</strong> para gisingin ito"
   },
   "featureProtected": {
-    "message": "<strong>Ang mga aktibo, naka-pin, at may audio na tab</strong> ay hindi kailanman ginagalaw"
+    "message": "<strong>Ang mga aktibo, naka-pin, at may audio na tab</strong> ay protektado bilang default"
   },
   "quickActions": {
     "message": "Mga mabilisang aksyon"
@@ -678,7 +678,12 @@
     "message": "Ang banner na \"Nagustuhan ang Drowzy?\" ay lalabas na lamang pagkatapos mong magamit ang Drowzy nang ilang panahon, hindi kailanman sa pag-install o kaagad pagkatapos ng update. Ang mga button ay \"Mag-iwan ng review\", \"Sa susunod na lang\", at \"Huwag nang magtanong\". Hindi ito kailanman humihingi ng partikular na star rating at hindi nag-aalok ng gantimpala."
   },
   "changelogReleaseHeading": {
-    "message": "Bago sa"
+    "message": "Bago sa $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Mas mabilis, mas matalinong pag-suspend"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Hindi na tumatalbog ang buong listahan kapag nagpatulog ka ng mga tab. Ang page na ito at ang welcome page ay sumusunod na sa light o dark theme na pinili mo sa Drowzy. At ang paulit-ulit na pagpapatulog sa parehong tab ay hindi na nagpapalobo ng stats mo."
+  },
+  "timer1min": {
+    "message": "1 minuto"
+  },
+  "shortcutsHint": {
+    "message": "Chrome ang humahawak sa mga ito. Binubuksan ng I-customize ang chrome://extensions/shortcuts, kung saan puwede mong baguhin o alisin ang bawat shortcut."
+  },
+  "shortcutUnset": {
+    "message": "Hindi nakatakda"
+  },
+  "changelog150Title1": {
+    "message": "Agad na bumubukas, kahit may 100 tab"
+  },
+  "changelog150Desc1": {
+    "message": "Hindi ka na pinaghihintay ng popup. Agad itong bumubukas, kahit ilang tab pa ang bukas mo."
+  },
+  "changelog150Title2": {
+    "message": "Mas mabilis na ang I-suspend ang Iba at ipinapakita nito ang ginagawa nito"
+  },
+  "changelog150Desc2": {
+    "message": "Sabay-sabay nitong pinatutulog ang ilang tab, at nakikita mong tumataas ang bilang. Kung may mga tab na hindi napatulog, sinasabi nito kung ilan sa halip na sabihing gumana ang lahat."
+  },
+  "changelog150Title3": {
+    "message": "Timer na 1 minuto"
+  },
+  "changelog150Desc3": {
+    "message": "Nagbukas ng tumpok ng tab mula sa isang search? Itakda ang timer sa 1 minuto at matutulog ang mga ito ilang sandali matapos mong iwan."
+  },
+  "changelog150Title4": {
+    "message": "Madali nang baguhin ang mga shortcut"
+  },
+  "changelog150Desc4": {
+    "message": "Gusto mo ng ibang key para sa I-suspend ang tab na ito, o wala na lang? Dinadala ka na ngayon ng row na Mga keyboard shortcut sa Mga Setting diretso sa tamang lugar."
+  },
+  "changelog150Title5": {
+    "message": "At ang maliliit na bagay"
+  },
+  "changelog150Desc5": {
+    "message": "Idikit ang buong web address sa whitelist at gagana na lang ito. Hindi ka ilalayo ng I-suspend ang tab na ito sa pahinang tinatype-an mo. Mas malinaw ang mga mensahe at hindi na napuputol kailanman."
+  },
+  "suspendedOneToast": {
+    "message": "Na-suspend ang tab · ~$RAM$ ang na-free",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ tab ang nilaktawan",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Puno na ang whitelist para sa Chrome sync. Mag-alis ng ilang site at subukan ulit."
   }
 }

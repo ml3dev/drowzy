@@ -3,7 +3,7 @@
     "message": "Drowzy - Tabbladen opschorten & geheugen besparen"
   },
   "extDescription": {
-    "message": "Schort inactieve tabbladen automatisch op om tot 80% RAM te besparen. Lichtgewicht, privé, geen tracking. Tabbladen gaan nooit verloren."
+    "message": "Laat tabbladen die je niet gebruikt slapen zodat Chrome snel blijft. Licht, privé, geen tracking, open source."
   },
   "commandSuspendCurrent": {
     "message": "Huidig tabblad opschorten"
@@ -435,7 +435,7 @@
     "message": "Welkom bij Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy bespaart geheugen door inactieve tabbladen in slaapstand te zetten. Je tabbladen zijn altijd veilig - we gebruiken Chrome's native discard-API, dus ze blijven behouden, zelfs als je Drowzy verwijdert."
+    "message": "Drowzy bespaart geheugen door inactieve tabbladen in slaapstand te zetten. Je tabbladen blijven gewone Chrome-tabbladen - we gebruiken Chrome's native discard-API, dus ze blijven behouden, zelfs als je Drowzy verwijdert."
   },
   "howItWorks": {
     "message": "Hoe het werkt"
@@ -447,10 +447,10 @@
     "message": "<strong>Opgeschorte tabbladen gebruiken geen RAM</strong> maar blijven in je tabbladbalk"
   },
   "featureClickToWake": {
-    "message": "<strong>Klik op een opgeschort tabblad</strong> om het direct te activeren"
+    "message": "<strong>Klik op een opgeschort tabblad</strong> om het te activeren"
   },
   "featureProtected": {
-    "message": "<strong>Actieve, vastgemaakte en audiotabbladen</strong> worden nooit aangeraakt"
+    "message": "<strong>Actieve, vastgemaakte en audiotabbladen</strong> zijn standaard beschermd"
   },
   "quickActions": {
     "message": "Snelle acties"
@@ -678,7 +678,12 @@
     "message": "De melding \"Vind je Drowzy leuk?\" verschijnt nu pas nadat je Drowzy een tijdje hebt gebruikt, nooit bij de installatie of vlak na een update. De knoppen zijn \"Een review achterlaten\", \"Misschien later\" en \"Niet meer vragen\". Er wordt nooit om een specifiek aantal sterren gevraagd en nooit een beloning aangeboden."
   },
   "changelogReleaseHeading": {
-    "message": "Nieuw in"
+    "message": "Nieuw in $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Sneller, slimmer opschorten"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Tabbladen laten slapen laat niet meer de hele lijst stuiteren. Deze pagina en de welkomstpagina volgen nu het lichte of donkere thema dat je in Drowzy koos. En hetzelfde tabblad steeds opnieuw laten slapen blaast je statistieken niet meer op."
+  },
+  "timer1min": {
+    "message": "1 minuut"
+  },
+  "shortcutsHint": {
+    "message": "Chrome beheert deze sneltoetsen. Aanpassen opent chrome://extensions/shortcuts, waar je elke sneltoets kunt wijzigen of wissen."
+  },
+  "shortcutUnset": {
+    "message": "Niet ingesteld"
+  },
+  "changelog150Title1": {
+    "message": "Opent meteen, ook met 100 tabbladen"
+  },
+  "changelog150Desc1": {
+    "message": "De pop-up laat je niet meer wachten. Hij opent direct, hoeveel tabbladen je ook open hebt."
+  },
+  "changelog150Title2": {
+    "message": "Overige opschorten is sneller en laat zien wat het doet"
+  },
+  "changelog150Desc2": {
+    "message": "Het laat meerdere tabbladen tegelijk slapen, en je ziet de teller oplopen. Als een paar tabbladen niet konden slapen, zegt het hoeveel in plaats van te doen alsof alles lukte."
+  },
+  "changelog150Title3": {
+    "message": "Een timer van 1 minuut"
+  },
+  "changelog150Desc3": {
+    "message": "Een stapel tabbladen geopend vanuit een zoekopdracht? Zet de timer op 1 minuut en ze gaan slapen kort nadat je ze verlaat."
+  },
+  "changelog150Title4": {
+    "message": "Sneltoetsen zijn nu makkelijk te veranderen"
+  },
+  "changelog150Desc4": {
+    "message": "Wil je een andere toets voor Dit tabblad opschorten, of helemaal geen? De rij Sneltoetsen in Instellingen brengt je nu meteen naar de juiste plek."
+  },
+  "changelog150Title5": {
+    "message": "En de kleine dingen"
+  },
+  "changelog150Desc5": {
+    "message": "Plak een volledig webadres in de witte lijst en het werkt gewoon. Dit tabblad opschorten haalt je niet weg van een pagina waar je aan het typen bent. Meldingen zijn duidelijker en worden nooit afgekapt."
+  },
+  "suspendedOneToast": {
+    "message": "Tabblad opgeschort · ~$RAM$ vrijgemaakt",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ tabblad(en) overgeslagen",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "De witte lijst is vol voor Chrome-synchronisatie. Verwijder een paar sites en probeer het opnieuw."
   }
 }

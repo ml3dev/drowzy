@@ -3,7 +3,7 @@
     "message": "Drowzy - Sekme Askıya Alma ve Bellek Tasarrufu"
   },
   "extDescription": {
-    "message": "Etkin olmayan sekmeleri otomatik olarak askıya alarak %80'e kadar RAM tasarrufu sağlayın. Hafif, gizli, izleme yok. Sekmeler asla kaybolmaz."
+    "message": "Kullanmadığın sekmeleri uyutur, Chrome hızlı kalır. Hafif, gizli, izleme yok, açık kaynak."
   },
   "commandSuspendCurrent": {
     "message": "Geçerli sekmeyi askıya al"
@@ -435,7 +435,7 @@
     "message": "Drowzy'ye Hoş Geldiniz"
   },
   "onboardingIntro": {
-    "message": "Drowzy, etkin olmayan sekmeleri uyku moduna alarak bellek tasarrufu sağlar. Sekmeleriniz her zaman güvendedir - Chrome'un yerel discard API'sini kullanırız, böylece Drowzy'yi kaldırsanız bile sekmeler kaybolmaz."
+    "message": "Drowzy, etkin olmayan sekmeleri uyku moduna alarak bellek tasarrufu sağlar. Sekmeleriniz normal Chrome sekmeleri olarak kalır - Chrome'un yerel discard API'sini kullanırız, böylece Drowzy'yi kaldırsanız bile sekmeler kaybolmaz."
   },
   "howItWorks": {
     "message": "Nasıl çalışır"
@@ -447,10 +447,10 @@
     "message": "<strong>Askıya alınan sekmeler sıfır RAM kullanır</strong> ancak sekme çubuğunuzda kalır"
   },
   "featureClickToWake": {
-    "message": "<strong>Askıya alınan herhangi bir sekmeye tıklayın</strong> anında uyandırmak için"
+    "message": "<strong>Askıya alınan herhangi bir sekmeye tıklayın</strong> uyandırmak için"
   },
   "featureProtected": {
-    "message": "<strong>Etkin, sabitlenmiş ve sesli sekmeler</strong> asla dokunulmaz"
+    "message": "<strong>Etkin, sabitlenmiş ve sesli sekmeler</strong> varsayılan olarak korunur"
   },
   "quickActions": {
     "message": "Hızlı işlemler"
@@ -678,7 +678,12 @@
     "message": "\"Drowzy'yi beğendiniz mi?\" bandı artık yalnızca Drowzy'yi bir süre kullandıktan sonra görünüyor; asla kurulumda veya bir güncellemenin hemen ardından çıkmıyor. Düğmeler \"Değerlendirme bırak\", \"Belki sonra\" ve \"Bir daha sorma\". Asla belirli bir yıldız puanı istemiyor ve asla ödül sunmuyor."
   },
   "changelogReleaseHeading": {
-    "message": "Yenilikler:"
+    "message": "Yenilikler: $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Daha hızlı, daha akıllı askıya alma"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Sekmeleri uyutmak artık tüm listeyi zıplatmıyor. Bu sayfa ve karşılama sayfası artık Drowzy'de seçtiğin açık veya koyu temayı izliyor. Ayrıca aynı sekmeyi tekrar tekrar uyutmak toplam istatistiklerini şişirmiyor."
+  },
+  "timer1min": {
+    "message": "1 dakika"
+  },
+  "shortcutsHint": {
+    "message": "Bunları Chrome yönetir. Özelleştir chrome://extensions/shortcuts sayfasını açar; orada her kısayolu değiştirebilir veya temizleyebilirsin."
+  },
+  "shortcutUnset": {
+    "message": "Ayarlanmadı"
+  },
+  "changelog150Title1": {
+    "message": "100 sekmeyle bile anında açılır"
+  },
+  "changelog150Desc1": {
+    "message": "Açılır pencere artık seni bekletmiyor. Kaç sekme açık olursa olsun hemen açılıyor."
+  },
+  "changelog150Title2": {
+    "message": "Diğerlerini Askıya Al daha hızlı ve ne yaptığını gösteriyor"
+  },
+  "changelog150Desc2": {
+    "message": "Sekmeleri birkaçı bir arada uyutuyor ve sayacın yükselişini izleyebiliyorsun. Bazı sekmeler uyutulamadıysa her şey yolunda gitmiş gibi yapmak yerine kaç tane olduğunu söylüyor."
+  },
+  "changelog150Title3": {
+    "message": "1 dakikalık zamanlayıcı"
+  },
+  "changelog150Desc3": {
+    "message": "Bir aramadan bir yığın sekme mi açtın? Zamanlayıcıyı 1 dakikaya ayarla, onlardan ayrıldıktan kısa süre sonra uyusunlar."
+  },
+  "changelog150Title4": {
+    "message": "Kısayolları değiştirmek artık kolay"
+  },
+  "changelog150Desc4": {
+    "message": "Bu sekmeyi askıya al için başka bir tuş mu istiyorsun, ya da hiç istemiyor musun? Ayarlar içindeki Klavye kısayolları satırı artık seni doğrudan doğru yere götürüyor."
+  },
+  "changelog150Title5": {
+    "message": "Ve küçük şeyler"
+  },
+  "changelog150Desc5": {
+    "message": "Beyaz listeye tam bir web adresi yapıştır, çalışsın. Bu sekmeyi askıya al seni yazı yazdığın sayfadan alıp götürmüyor. Mesajlar daha net ve asla kesilmiyor."
+  },
+  "suspendedOneToast": {
+    "message": "Sekme askıya alındı · ~$RAM$ boşaltıldı",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ sekme atlandı",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Beyaz liste Chrome eşitlemesi için dolu. Birkaç siteyi kaldırıp tekrar dene."
   }
 }

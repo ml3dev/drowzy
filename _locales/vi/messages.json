@@ -3,7 +3,7 @@
     "message": "Drowzy - Tạm ngưng tab và tiết kiệm bộ nhớ"
   },
   "extDescription": {
-    "message": "Tự động tạm ngưng các tab không hoạt động để tiết kiệm tới 80% RAM. Nhẹ, riêng tư, không theo dõi. Tab không bao giờ bị mất."
+    "message": "Cho các thẻ bạn không dùng đi ngủ để Chrome luôn nhanh. Nhẹ, riêng tư, không theo dõi, mã nguồn mở."
   },
   "commandSuspendCurrent": {
     "message": "Tạm ngưng tab hiện tại"
@@ -435,7 +435,7 @@
     "message": "Chào mừng đến với Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy tiết kiệm bộ nhớ bằng cách đưa các tab không hoạt động vào chế độ ngủ. Tab của bạn luôn an toàn - chúng tôi sử dụng API loại bỏ gốc của Chrome, vì vậy chúng vẫn tồn tại ngay cả khi bạn gỡ cài đặt Drowzy."
+    "message": "Drowzy tiết kiệm bộ nhớ bằng cách đưa các tab không hoạt động vào chế độ ngủ. Tab của bạn vẫn là tab Chrome bình thường - chúng tôi sử dụng API loại bỏ gốc của Chrome, vì vậy chúng vẫn tồn tại ngay cả khi bạn gỡ cài đặt Drowzy."
   },
   "howItWorks": {
     "message": "Cách hoạt động"
@@ -447,10 +447,10 @@
     "message": "<strong>Các tab đã tạm ngưng không sử dụng RAM</strong> nhưng vẫn hiển thị trên thanh tab"
   },
   "featureClickToWake": {
-    "message": "<strong>Nhấp vào bất kỳ tab đã tạm ngưng nào</strong> để đánh thức ngay lập tức"
+    "message": "<strong>Nhấp vào bất kỳ tab đã tạm ngưng nào</strong> để đánh thức"
   },
   "featureProtected": {
-    "message": "<strong>Tab đang hoạt động, đã ghim và có âm thanh</strong> không bao giờ bị ảnh hưởng"
+    "message": "<strong>Tab đang hoạt động, đã ghim và có âm thanh</strong> được bảo vệ theo mặc định"
   },
   "quickActions": {
     "message": "Thao tác nhanh"
@@ -678,7 +678,12 @@
     "message": "Biểu ngữ \"Bạn thích Drowzy chứ?\" giờ chỉ xuất hiện sau khi bạn đã dùng Drowzy một thời gian, không bao giờ khi cài đặt hay ngay sau khi cập nhật. Các nút là \"Để lại đánh giá\", \"Có thể để sau\" và \"Đừng hỏi lại\". Nó không bao giờ yêu cầu một mức sao cụ thể và không bao giờ tặng phần thưởng."
   },
   "changelogReleaseHeading": {
-    "message": "Có gì mới trong"
+    "message": "Có gì mới trong $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Tạm ngưng nhanh hơn, thông minh hơn"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Cho thẻ ngủ không còn làm cả danh sách nảy lên. Trang này và trang chào mừng giờ theo giao diện sáng hoặc tối bạn chọn trong Drowzy. Và cho cùng một thẻ ngủ đi ngủ lại không còn thổi phồng thống kê của bạn."
+  },
+  "timer1min": {
+    "message": "1 phút"
+  },
+  "shortcutsHint": {
+    "message": "Chrome quản lý các phím tắt này. Tùy chỉnh mở chrome://extensions/shortcuts, nơi bạn có thể đổi hoặc xóa từng phím tắt."
+  },
+  "shortcutUnset": {
+    "message": "Chưa đặt"
+  },
+  "changelog150Title1": {
+    "message": "Mở ngay lập tức, kể cả với 100 thẻ"
+  },
+  "changelog150Desc1": {
+    "message": "Cửa sổ bật lên không bắt bạn chờ nữa. Nó mở ngay, dù bạn đang mở bao nhiêu thẻ."
+  },
+  "changelog150Title2": {
+    "message": "Tạm ngưng tab khác nhanh hơn và cho thấy tiến độ"
+  },
+  "changelog150Desc2": {
+    "message": "Nó cho nhiều thẻ đi ngủ cùng lúc, và bạn thấy con số tăng dần. Nếu vài thẻ chưa ngủ được, nó nói rõ là bao nhiêu thay vì bảo là xong hết."
+  },
+  "changelog150Title3": {
+    "message": "Hẹn giờ 1 phút"
+  },
+  "changelog150Desc3": {
+    "message": "Vừa mở cả đống thẻ từ một lượt tìm kiếm? Đặt hẹn giờ 1 phút, chúng sẽ đi ngủ ngay sau khi bạn rời đi."
+  },
+  "changelog150Title4": {
+    "message": "Đổi phím tắt giờ rất dễ"
+  },
+  "changelog150Desc4": {
+    "message": "Muốn phím khác cho Tạm ngưng tab này, hay không cần phím nào? Hàng Phím tắt trong Cài đặt giờ đưa bạn thẳng đến đúng chỗ."
+  },
+  "changelog150Title5": {
+    "message": "Và mấy thứ nhỏ"
+  },
+  "changelog150Desc5": {
+    "message": "Dán nguyên một địa chỉ web vào danh sách trắng là dùng được. Tạm ngưng tab này sẽ không kéo bạn khỏi trang đang gõ dở. Thông báo rõ hơn và không bao giờ bị cắt."
+  },
+  "suspendedOneToast": {
+    "message": "Đã tạm ngưng thẻ · giải phóng ~$RAM$",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "Đã bỏ qua $COUNT$ thẻ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Danh sách trắng đã đầy đối với đồng bộ Chrome. Hãy xóa vài trang rồi thử lại."
   }
 }

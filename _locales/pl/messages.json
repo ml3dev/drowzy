@@ -3,7 +3,7 @@
     "message": "Drowzy - Usypianie kart i oszczędzanie pamięci"
   },
   "extDescription": {
-    "message": "Automatycznie usypiaj nieaktywne karty, aby zaoszczędzić do 80% RAM. Lekki, prywatny, bez śledzenia. Karty nigdy nie giną."
+    "message": "Usypia karty, których nie używasz, żeby Chrome pozostał szybki. Lekki, prywatny, bez śledzenia, open source."
   },
   "commandSuspendCurrent": {
     "message": "Uśpij bieżącą kartę"
@@ -435,7 +435,7 @@
     "message": "Witaj w Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy oszczędza pamięć, usypiając nieaktywne karty. Twoje karty są zawsze bezpieczne - używamy natywnego API odrzucania Chrome, więc przetrwają nawet po odinstalowaniu Drowzy."
+    "message": "Drowzy oszczędza pamięć, usypiając nieaktywne karty. Twoje karty pozostają zwykłymi kartami Chrome - używamy natywnego API odrzucania Chrome, więc przetrwają nawet po odinstalowaniu Drowzy."
   },
   "howItWorks": {
     "message": "Jak to działa"
@@ -447,10 +447,10 @@
     "message": "<strong>Uśpione karty nie zużywają RAM</strong>, ale pozostają na pasku kart"
   },
   "featureClickToWake": {
-    "message": "<strong>Kliknij dowolną uśpioną kartę</strong>, aby ją natychmiast obudzić"
+    "message": "<strong>Kliknij dowolną uśpioną kartę</strong>, aby ją obudzić"
   },
   "featureProtected": {
-    "message": "<strong>Aktywne, przypięte i karty z dźwiękiem</strong> nigdy nie są usypiane"
+    "message": "<strong>Aktywne, przypięte i karty z dźwiękiem</strong> są domyślnie chronione"
   },
   "quickActions": {
     "message": "Szybkie akcje"
@@ -678,7 +678,12 @@
     "message": "Baner „Podoba Ci się Drowzy?” pojawia się teraz dopiero po pewnym czasie korzystania z Drowzy, nigdy przy instalacji ani zaraz po aktualizacji. Przyciski to „Napisz opinię”, „Może później” i „Nie pytaj ponownie”. Nigdy nie prosi o konkretną ocenę w gwiazdkach ani nie oferuje nagrody."
   },
   "changelogReleaseHeading": {
-    "message": "Co nowego w"
+    "message": "Co nowego w $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Szybsze, inteligentniejsze usypianie"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Usypianie kart nie sprawia już, że cała lista podskakuje. Ta strona i strona powitalna podążają teraz za jasnym lub ciemnym motywem wybranym w Drowzy. A ponowne usypianie tej samej karty w kółko nie zawyża już statystyk."
+  },
+  "timer1min": {
+    "message": "1 minucie"
+  },
+  "shortcutsHint": {
+    "message": "Zarządza nimi Chrome. Dostosuj otwiera chrome://extensions/shortcuts, gdzie możesz zmienić lub wyczyścić każdy skrót."
+  },
+  "shortcutUnset": {
+    "message": "Nie ustawiono"
+  },
+  "changelog150Title1": {
+    "message": "Otwiera się od razu, nawet przy 100 kartach"
+  },
+  "changelog150Desc1": {
+    "message": "Okienko już nie każe ci czekać. Otwiera się natychmiast, niezależnie od liczby otwartych kart."
+  },
+  "changelog150Title2": {
+    "message": "Uśpij pozostałe jest szybsze i pokazuje, co robi"
+  },
+  "changelog150Desc2": {
+    "message": "Usypia kilka kart naraz, a ty widzisz, jak licznik rośnie. Jeśli jakichś kart nie dało się uśpić, mówi ile, zamiast twierdzić, że wszystko się udało."
+  },
+  "changelog150Title3": {
+    "message": "Minutowy timer"
+  },
+  "changelog150Desc3": {
+    "message": "Otworzyłeś stertę kart z wyszukiwania? Ustaw timer na 1 minutę, a zasną chwilę po tym, jak je opuścisz."
+  },
+  "changelog150Title4": {
+    "message": "Skróty łatwo teraz zmienić"
+  },
+  "changelog150Desc4": {
+    "message": "Chcesz inny klawisz dla Uśpij tę kartę albo żadnego? Wiersz Skróty klawiszowe w Ustawienia prowadzi cię teraz prosto we właściwe miejsce."
+  },
+  "changelog150Title5": {
+    "message": "I te drobne rzeczy"
+  },
+  "changelog150Desc5": {
+    "message": "Wklej pełny adres strony na białą listę i po prostu działa. Uśpij tę kartę nie zabierze cię ze strony, na której właśnie piszesz. Komunikaty są jaśniejsze i nigdy nie są ucinane."
+  },
+  "suspendedOneToast": {
+    "message": "Karta uśpiona · ~$RAM$ zwolnione",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "Pominięto $COUNT$ kart(y)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Biała lista jest pełna dla synchronizacji Chrome. Usuń kilka witryn i spróbuj ponownie."
   }
 }

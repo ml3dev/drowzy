@@ -3,7 +3,7 @@
     "message": "Drowzy - Suspendare file și economisire memorie"
   },
   "extDescription": {
-    "message": "Suspendă automat filele inactive pentru a economisi până la 80% RAM. Ușor, privat, fără urmărire. Filele nu se pierd niciodată."
+    "message": "Adoarme filele pe care nu le folosești, ca să rămână Chrome rapid. Ușor, privat, fără urmărire, open source."
   },
   "commandSuspendCurrent": {
     "message": "Suspendă fila curentă"
@@ -435,7 +435,7 @@
     "message": "Bun venit la Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy economisește memorie punând filele inactive în repaus. Filele tale sunt mereu în siguranță - folosim API-ul nativ de renunțare al Chrome, astfel că supraviețuiesc chiar dacă dezinstalezi Drowzy."
+    "message": "Drowzy economisește memorie punând filele inactive în repaus. Filele tale rămân file Chrome obișnuite - folosim API-ul nativ de renunțare al Chrome, astfel că supraviețuiesc chiar dacă dezinstalezi Drowzy."
   },
   "howItWorks": {
     "message": "Cum funcționează"
@@ -447,10 +447,10 @@
     "message": "<strong>Filele suspendate nu folosesc RAM</strong> dar rămân în bara de file"
   },
   "featureClickToWake": {
-    "message": "<strong>Click pe orice filă suspendată</strong> pentru a o trezi instant"
+    "message": "<strong>Click pe orice filă suspendată</strong> pentru a o trezi"
   },
   "featureProtected": {
-    "message": "<strong>Filele active, fixate și cu audio</strong> nu sunt niciodată atinse"
+    "message": "<strong>Filele active, fixate și cu audio</strong> sunt protejate implicit"
   },
   "quickActions": {
     "message": "Acțiuni rapide"
@@ -678,7 +678,12 @@
     "message": "Bannerul „Îți place Drowzy?” apare acum doar după ce folosești Drowzy o vreme, niciodată la instalare sau imediat după o actualizare. Butoanele sunt „Lasă o recenzie”, „Poate mai târziu” și „Nu mai întreba”. Nu cere niciodată un anumit număr de stele și nu oferă recompense."
   },
   "changelogReleaseHeading": {
-    "message": "Noutăți în"
+    "message": "Noutăți în $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Suspendare mai rapidă și mai inteligentă"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Adormirea filelor nu mai face toată lista să sară. Această pagină și cea de bun venit urmează acum tema deschisă sau întunecată aleasă în Drowzy. Iar readormirea aceleiași file la nesfârșit nu mai umflă statisticile."
+  },
+  "timer1min": {
+    "message": "1 minut"
+  },
+  "shortcutsHint": {
+    "message": "Chrome le gestionează. Personalizează deschide chrome://extensions/shortcuts, unde poți schimba sau șterge fiecare scurtătură."
+  },
+  "shortcutUnset": {
+    "message": "Nesetat"
+  },
+  "changelog150Title1": {
+    "message": "Se deschide instant, chiar și cu 100 de file"
+  },
+  "changelog150Desc1": {
+    "message": "Fereastra nu te mai lasă să aștepți. Se deschide imediat, oricâte file ai avea deschise."
+  },
+  "changelog150Title2": {
+    "message": "Suspendă celelalte este mai rapid și îți arată ce face"
+  },
+  "changelog150Desc2": {
+    "message": "Adoarme mai multe file deodată, iar tu vezi contorul crescând. Dacă unele file nu au putut fi adormite, îți spune câte, în loc să pretindă că totul a mers."
+  },
+  "changelog150Title3": {
+    "message": "Un cronometru de 1 minut"
+  },
+  "changelog150Desc3": {
+    "message": "Ai deschis un teanc de file dintr-o căutare? Setează cronometrul la 1 minut și adorm la scurt timp după ce le părăsești."
+  },
+  "changelog150Title4": {
+    "message": "Scurtăturile se schimbă ușor acum"
+  },
+  "changelog150Desc4": {
+    "message": "Vrei altă tastă pentru Suspendă această filă, sau niciuna? Rândul Comenzi rapide de la tastatură din Setări te duce acum direct la locul potrivit."
+  },
+  "changelog150Title5": {
+    "message": "Și lucrurile mărunte"
+  },
+  "changelog150Desc5": {
+    "message": "Lipește o adresă web completă în lista albă și pur și simplu merge. Suspendă această filă nu te mai ia de pe o pagină în care scrii. Mesajele sunt mai clare și nu se mai taie niciodată."
+  },
+  "suspendedOneToast": {
+    "message": "Filă suspendată · ~$RAM$ eliberați",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ file omise",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Lista albă este plină pentru sincronizarea Chrome. Elimină câteva site-uri și încearcă din nou."
   }
 }

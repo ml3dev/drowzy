@@ -3,7 +3,7 @@
     "message": "Drowzy - Suspensor de abas e economizador de memória"
   },
   "extDescription": {
-    "message": "Suspenda automaticamente abas inativas para economizar até 80% de RAM. Leve, privado, sem rastreamento. As abas nunca são perdidas."
+    "message": "Faz as abas que você não está usando dormirem para o Chrome continuar rápido. Leve, privado, sem rastreamento, código aberto."
   },
   "commandSuspendCurrent": {
     "message": "Suspender aba atual"
@@ -435,7 +435,7 @@
     "message": "Bem-vindo ao Drowzy"
   },
   "onboardingIntro": {
-    "message": "O Drowzy economiza memória colocando abas inativas para dormir. Suas abas estão sempre seguras - usamos a API nativa de descarte do Chrome, então elas sobrevivem mesmo se você desinstalar o Drowzy."
+    "message": "O Drowzy economiza memória colocando abas inativas para dormir. Suas abas continuam sendo abas normais do Chrome - usamos a API nativa de descarte do Chrome, então elas sobrevivem mesmo se você desinstalar o Drowzy."
   },
   "howItWorks": {
     "message": "Como funciona"
@@ -447,10 +447,10 @@
     "message": "<strong>Abas suspensas usam zero RAM</strong>, mas permanecem na barra de abas"
   },
   "featureClickToWake": {
-    "message": "<strong>Clique em qualquer aba suspensa</strong> para despertá-la instantaneamente"
+    "message": "<strong>Clique em qualquer aba suspensa</strong> para despertá-la"
   },
   "featureProtected": {
-    "message": "<strong>Abas ativas, fixadas e com áudio</strong> nunca são tocadas"
+    "message": "<strong>Abas ativas, fixadas e com áudio</strong> são protegidas por padrão"
   },
   "quickActions": {
     "message": "Ações rápidas"
@@ -678,7 +678,12 @@
     "message": "O aviso \"Curtindo o Drowzy?\" agora só aparece depois de você usar o Drowzy por um tempo, nunca na instalação nem logo após uma atualização. Os botões são \"Avaliar a extensão\", \"Talvez depois\" e \"Não perguntar de novo\". Ele nunca pede uma nota específica nem oferece recompensa."
   },
   "changelogReleaseHeading": {
-    "message": "Novidades da"
+    "message": "Novidades da $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Suspensão mais rápida e inteligente"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Suspender abas não faz mais a lista inteira pular. Esta página e a de boas-vindas agora seguem o tema claro ou escuro que você escolheu no Drowzy. E dormir a mesma aba repetidamente não infla mais suas estatísticas."
+  },
+  "timer1min": {
+    "message": "1 minuto"
+  },
+  "shortcutsHint": {
+    "message": "O Chrome gerencia esses atalhos. Personalizar abre chrome://extensions/shortcuts, onde você pode alterar ou remover cada atalho."
+  },
+  "shortcutUnset": {
+    "message": "Não definido"
+  },
+  "changelog150Title1": {
+    "message": "Abre na hora, mesmo com 100 abas"
+  },
+  "changelog150Desc1": {
+    "message": "O popup não deixa mais você esperando. Ele abre de imediato, não importa quantas abas estejam abertas."
+  },
+  "changelog150Title2": {
+    "message": "Suspender outras está mais rápido e mostra o que faz"
+  },
+  "changelog150Desc2": {
+    "message": "Ele faz várias abas dormirem ao mesmo tempo, e você vê o contador subir. Se algumas abas não puderam dormir, ele diz quantas em vez de fingir que deu tudo certo."
+  },
+  "changelog150Title3": {
+    "message": "Um timer de 1 minuto"
+  },
+  "changelog150Desc3": {
+    "message": "Abriu uma pilha de abas a partir de uma busca? Coloque o timer em 1 minuto e elas dormem logo depois que você sai delas."
+  },
+  "changelog150Title4": {
+    "message": "Atalhos fáceis de mudar"
+  },
+  "changelog150Desc4": {
+    "message": "Quer outra tecla para Suspender esta aba, ou nenhuma? A linha Atalhos de teclado em Configurações agora leva você direto ao lugar certo."
+  },
+  "changelog150Title5": {
+    "message": "E as coisas pequenas"
+  },
+  "changelog150Desc5": {
+    "message": "Cole um endereço completo na lista branca e simplesmente funciona. Suspender esta aba não tira você de uma página em que está digitando. As mensagens estão mais claras e nunca são cortadas."
+  },
+  "suspendedOneToast": {
+    "message": "Aba suspensa · ~$RAM$ liberados",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ aba(s) ignorada(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "A lista branca está cheia para a sincronização do Chrome. Remova alguns sites e tente de novo."
   }
 }

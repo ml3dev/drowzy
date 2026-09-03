@@ -3,7 +3,7 @@
     "message": "Drowzy - 标签页休眠与内存节省"
   },
   "extDescription": {
-    "message": "自动休眠不活跃的标签页，最多可节省 80% RAM。轻量、隐私、无追踪。标签页绝不会丢失。"
+    "message": "让你不在用的标签页休眠，Chrome 保持流畅。轻量、私密、无跟踪、开源。"
   },
   "commandSuspendCurrent": {
     "message": "休眠当前标签页"
@@ -435,7 +435,7 @@
     "message": "欢迎使用 Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy 通过将不活跃的标签页置于休眠状态来节省内存。您的标签页始终安全，我们使用 Chrome 的原生丢弃 API，因此即使您卸载 Drowzy，标签页也不会丢失。"
+    "message": "Drowzy 通过将不活跃的标签页置于休眠状态来节省内存。您的标签页仍是普通的 Chrome 标签页，我们使用 Chrome 的原生丢弃 API，因此即使您卸载 Drowzy，标签页也不会丢失。"
   },
   "howItWorks": {
     "message": "工作原理"
@@ -447,10 +447,10 @@
     "message": "<strong>已休眠的标签页不占用 RAM</strong>，但仍保留在标签栏中"
   },
   "featureClickToWake": {
-    "message": "<strong>点击任何已休眠的标签页</strong>即可立即唤醒"
+    "message": "<strong>点击任何已休眠的标签页</strong>即可唤醒"
   },
   "featureProtected": {
-    "message": "<strong>活跃、已固定和有音频的标签页</strong>永远不会被触碰"
+    "message": "<strong>活跃、已固定和有音频的标签页</strong>默认受到保护"
   },
   "quickActions": {
     "message": "快捷操作"
@@ -678,7 +678,12 @@
     "message": "“喜欢 Drowzy 吗？”横幅现在只会在你使用 Drowzy 一段时间后才出现，绝不会在安装时或更新后立即弹出。按钮为“写评价”“以后再说”和“不再询问”。它从不索要特定星级，也从不提供奖励。"
   },
   "changelogReleaseHeading": {
-    "message": "的新功能"
+    "message": "$VERSION$ 的新功能",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "暂停更快、更智能"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "休眠标签页时整个列表不再跳动。本页和欢迎页现在会跟随你在 Drowzy 中选择的浅色或深色主题。反复休眠同一个标签页也不会再虚增累计统计。"
+  },
+  "timer1min": {
+    "message": "1 分钟"
+  },
+  "shortcutsHint": {
+    "message": "这些快捷键由 Chrome 管理。点击“自定义”会打开 chrome://extensions/shortcuts，你可以在那里更改或清除每个快捷键。"
+  },
+  "shortcutUnset": {
+    "message": "未设置"
+  },
+  "changelog150Title1": {
+    "message": "开了 100 个标签页也能秒开"
+  },
+  "changelog150Desc1": {
+    "message": "弹出窗口不再让你等。无论开了多少标签页，它都会立刻打开。"
+  },
+  "changelog150Title2": {
+    "message": "“休眠其他标签页”更快了，还能看到进度"
+  },
+  "changelog150Desc2": {
+    "message": "它一次让多个标签页休眠，你能看到数字不断上涨。如果有些标签页没能休眠，它会告诉你有几个，而不是宣称全部完成。"
+  },
+  "changelog150Title3": {
+    "message": "1 分钟计时器"
+  },
+  "changelog150Desc3": {
+    "message": "从搜索结果一口气开了一堆标签页？把计时器设为 1 分钟，离开后它们很快就会休眠。"
+  },
+  "changelog150Title4": {
+    "message": "快捷键现在很容易改"
+  },
+  "changelog150Desc4": {
+    "message": "想给“休眠此标签页”换个按键，或者干脆不要？设置里的“键盘快捷键”一行现在会直接带你到该去的地方。"
+  },
+  "changelog150Title5": {
+    "message": "还有一些小事"
+  },
+  "changelog150Desc5": {
+    "message": "把完整网址粘贴进白名单，直接就能用。“休眠此标签页”不会把你从正在输入的页面上带走。提示更清楚，也不会再被截断。"
+  },
+  "suspendedOneToast": {
+    "message": "标签页已休眠 · 释放约 $RAM$",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "已跳过 $COUNT$ 个标签页",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "白名单已达到 Chrome 同步的容量上限。请删除几个网站后重试。"
   }
 }

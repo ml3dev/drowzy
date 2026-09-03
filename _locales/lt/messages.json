@@ -3,7 +3,7 @@
     "message": "Drowzy - Kortelių sustabdytojas ir atminties taupytojas"
   },
   "extDescription": {
-    "message": "Automatiškai sustabdykite neaktyvias korteles ir sutaupykite iki 80% RAM. Lengvas, privatus, be sekimo. Kortelės niekada neprarandamos."
+    "message": "Užmigdo korteles, kurių nenaudoji, kad Chrome liktų greitas. Lengvas, privatus, be sekimo, atviro kodo."
   },
   "commandSuspendCurrent": {
     "message": "Sustabdyti dabartinę kortelę"
@@ -435,7 +435,7 @@
     "message": "Sveiki atvykę į Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy taupo atmintį užmigdydamas neaktyvias korteles. Jūsų kortelės visada saugios - naudojame Chrome integruotą atmetimo API, todėl jos išlieka net pašalinus Drowzy."
+    "message": "Drowzy taupo atmintį užmigdydamas neaktyvias korteles. Jūsų kortelės lieka įprastomis Chrome kortelėmis - naudojame Chrome integruotą atmetimo API, todėl jos išlieka net pašalinus Drowzy."
   },
   "howItWorks": {
     "message": "Kaip tai veikia"
@@ -447,10 +447,10 @@
     "message": "<strong>Sustabdytos kortelės nenaudoja RAM</strong>, bet lieka kortelių juostoje"
   },
   "featureClickToWake": {
-    "message": "<strong>Spustelėkite bet kurią sustabdytą kortelę</strong>, kad ją akimirksniu pažadintumėte"
+    "message": "<strong>Spustelėkite bet kurią sustabdytą kortelę</strong>, kad ją pažadintumėte"
   },
   "featureProtected": {
-    "message": "<strong>Aktyvios, prisegtos ir garso kortelės</strong> niekada neliečiamos"
+    "message": "<strong>Aktyvios, prisegtos ir garso kortelės</strong> pagal numatytuosius nustatymus yra apsaugotos"
   },
   "quickActions": {
     "message": "Spartieji veiksmai"
@@ -678,7 +678,12 @@
     "message": "Juosta „Ar jums patinka Drowzy?“ dabar pasirodo tik kurį laiką panaudojus Drowzy, niekada diegimo metu ar iškart po naujinimo. Mygtukai yra „Palikti atsiliepimą“, „Galbūt vėliau“ ir „Daugiau neklausti“. Ji niekada neprašo konkretaus įvertinimo ir nesiūlo atlygio."
   },
   "changelogReleaseHeading": {
-    "message": "Kas naujo versijoje"
+    "message": "Kas naujo versijoje $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Greitesnis ir išmanesnis stabdymas"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Kortelių užmigdymas nebeverčia viso sąrašo šokinėti. Šis puslapis ir pasisveikinimo puslapis dabar seka Drowzy pasirinktą šviesią ar tamsią temą. O tos pačios kortelės užmigdymas vėl ir vėl nebepučia tavo statistikos."
+  },
+  "timer1min": {
+    "message": "1 minutės"
+  },
+  "shortcutsHint": {
+    "message": "Jas tvarko Chrome. Tinkinti atveria chrome://extensions/shortcuts, kur gali pakeisti arba išvalyti kiekvieną spartųjį klavišą."
+  },
+  "shortcutUnset": {
+    "message": "Nenustatyta"
+  },
+  "changelog150Title1": {
+    "message": "Atsidaro iš karto, net su 100 kortelių"
+  },
+  "changelog150Desc1": {
+    "message": "Iššokantis langas nebeverčia laukti. Jis atsidaro iš karto, kad ir kiek kortelių atidaryta."
+  },
+  "changelog150Title2": {
+    "message": "Sustabdyti kitas greitesnis ir rodo, ką daro"
+  },
+  "changelog150Desc2": {
+    "message": "Jis užmigdo kelias korteles iš karto, o tu matai, kaip skaičius auga. Jei kai kurių kortelių užmigdyti nepavyko, jis pasako kiek, o ne tvirtina, kad viskas pavyko."
+  },
+  "changelog150Title3": {
+    "message": "Vienos minutės laikmatis"
+  },
+  "changelog150Desc3": {
+    "message": "Iš paieškos atsidarei krūvą kortelių? Nustatyk laikmatį 1 minutei ir jos užmigs netrukus po to, kai jas paliksi."
+  },
+  "changelog150Title4": {
+    "message": "Sparčiuosius klavišus dabar lengva keisti"
+  },
+  "changelog150Desc4": {
+    "message": "Nori kito klavišo veiksmui Sustabdyti šią kortelę arba jokio? Eilutė Spartieji klavišai skiltyje Nustatymai dabar nuveda tiesiai į reikiamą vietą."
+  },
+  "changelog150Title5": {
+    "message": "Ir smulkmenos"
+  },
+  "changelog150Desc5": {
+    "message": "Įklijuok į baltąjį sąrašą visą žiniatinklio adresą ir tai tiesiog veikia. Sustabdyti šią kortelę nenuves tavęs nuo puslapio, kuriame rašai. Pranešimai aiškesni ir niekada nenukerpami."
+  },
+  "suspendedOneToast": {
+    "message": "Kortelė sustabdyta · atlaisvinta ~$RAM$",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "Praleista kortelių: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Baltasis sąrašas Chrome sinchronizavimui pilnas. Pašalink kelias svetaines ir bandyk dar kartą."
   }
 }

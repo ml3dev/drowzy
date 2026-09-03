@@ -3,7 +3,7 @@
     "message": "Drowzy - ትር ማቋረጫ እና ማህደረ ትውስታ ቆጣቢ"
   },
   "extDescription": {
-    "message": "ንቁ ያልሆኑ ትሮችን በራስ-ሰር በማቋረጥ እስከ 80% RAM ይቆጥቡ። ቀላል፣ የግል፣ ምንም ክትትል የለም። ትሮች ፈጽሞ አይጠፉም።"
+    "message": "የማትጠቀምባቸውን ትሮች ያስተኛል፣ Chrome ፈጣን ሆኖ ይቆያል። ቀላል፣ የግል፣ ክትትል የለም፣ ክፍት ምንጭ።"
   },
   "commandSuspendCurrent": {
     "message": "የአሁኑን ትር አቋርጥ"
@@ -435,7 +435,7 @@
     "message": "እንኳን ወደ Drowzy በደህና መጡ"
   },
   "onboardingIntro": {
-    "message": "Drowzy ንቁ ያልሆኑ ትሮችን በማስተኛት ማህደረ ትውስታ ይቆጥባል። ትሮችዎ ሁልጊዜ ደህና ናቸው - የChrome ቤተኛ የማቋረጥ API እንጠቀማለን፣ ስለዚህ Drowzyን ቢያስወግዱም እንኳ ይቆያሉ።"
+    "message": "Drowzy ንቁ ያልሆኑ ትሮችን በማስተኛት ማህደረ ትውስታ ይቆጥባል። ትሮችዎ መደበኛ የChrome ትሮች ሆነው ይቆያሉ - የChrome ቤተኛ የማቋረጥ API እንጠቀማለን፣ ስለዚህ Drowzyን ቢያስወግዱም እንኳ ይቆያሉ።"
   },
   "howItWorks": {
     "message": "እንዴት እንደሚሰራ"
@@ -447,10 +447,10 @@
     "message": "<strong>የተቋረጡ ትሮች ዜሮ RAM ይጠቀማሉ</strong> ግን በትር አሞሌዎ ውስጥ ይቆያሉ"
   },
   "featureClickToWake": {
-    "message": "<strong>ማንኛውንም የተቋረጠ ትር ጠቅ ያድርጉ</strong> ወዲያውኑ ለመቀስቀስ"
+    "message": "<strong>ማንኛውንም የተቋረጠ ትር ጠቅ ያድርጉ</strong> ለመቀስቀስ"
   },
   "featureProtected": {
-    "message": "<strong>ንቁ፣ የተሰኩ እና የድምጽ ትሮች</strong> ፈጽሞ አይነኩም"
+    "message": "<strong>ንቁ፣ የተሰኩ እና የድምጽ ትሮች</strong> በነባሪነት የተጠበቁ ናቸው"
   },
   "quickActions": {
     "message": "ፈጣን ድርጊቶች"
@@ -678,7 +678,12 @@
     "message": "«Drowzy ያስደስትዎታል?» የሚለው ባነር አሁን Drowzy ለተወሰነ ጊዜ ከተጠቀሙ በኋላ ብቻ ይታያል፣ በመጫን ጊዜ ወይም ወዲያው ከዝማኔ በኋላ ፈጽሞ አይታይም። አዝራሮቹ «ግምገማ ይተዉ»፣ «ምናልባት በኋላ» እና «ዳግመኛ አትጠይቅ» ናቸው። ፈጽሞ የተወሰነ የኮከብ ደረጃ አይጠይቅም ሽልማትም አያቀርብም።"
   },
   "changelogReleaseHeading": {
-    "message": "አዲስ ነገር በ"
+    "message": "አዲስ ነገር በ $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "ፈጣን እና ብልጥ ማቋረጥ"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "ትሮችን ማስተኛት ከእንግዲህ ዝርዝሩን በሙሉ አያዘልም። ይህ ገጽ እና የእንኳን ደህና መጡ ገጽ አሁን በDrowzy ውስጥ የመረጥከውን ብሩህ ወይም ጨለማ ገጽታ ይከተላሉ። እንዲሁም ተመሳሳዩን ትር ደጋግሞ ማስተኛት አጠቃላይ ስታቲስቲክህን አያናፋም።"
+  },
+  "timer1min": {
+    "message": "1 ደቂቃ"
+  },
+  "shortcutsHint": {
+    "message": "እነዚህን Chrome ያስተዳድራል። አብጅ chrome://extensions/shortcuts ይከፍታል፣ እዚያ እያንዳንዱን አቋራጭ መቀየር ወይም ማጥፋት ትችላለህ።"
+  },
+  "shortcutUnset": {
+    "message": "አልተቀናበረም"
+  },
+  "changelog150Title1": {
+    "message": "100 ትሮች ቢኖሩም ወዲያውኑ ይከፈታል"
+  },
+  "changelog150Desc1": {
+    "message": "ብቅ ባዩ ከእንግዲህ አያስጠብቅህም። ስንት ትሮች ቢከፈቱም ወዲያውኑ ይከፈታል።"
+  },
+  "changelog150Title2": {
+    "message": "ሌሎችን አቋርጥ ፈጣን ሆኗል፣ የሚሠራውንም ያሳያል"
+  },
+  "changelog150Desc2": {
+    "message": "ብዙ ትሮችን በአንድ ጊዜ ያስተኛል፣ ቁጥሩም ሲጨምር ታያለህ። አንዳንድ ትሮች መተኛት ካልቻሉ ሁሉም እንደተሳካ ከማለት ይልቅ ስንት እንደሆኑ ይነግርሃል።"
+  },
+  "changelog150Title3": {
+    "message": "የ1 ደቂቃ ሰዓት ቆጣሪ"
+  },
+  "changelog150Desc3": {
+    "message": "ከፍለጋ ብዙ ትሮች ከፍተሃል? ሰዓት ቆጣሪውን በ1 ደቂቃ አስቀምጥ፣ ከተውካቸው ብዙም ሳይቆይ ይተኛሉ።"
+  },
+  "changelog150Title4": {
+    "message": "አቋራጮችን መቀየር አሁን ቀላል ነው"
+  },
+  "changelog150Desc4": {
+    "message": "ለይህን ትር አቋርጥ ሌላ ቁልፍ ትፈልጋለህ፣ ወይም ምንም? በቅንብሮች ውስጥ ያለው የየቁልፍ ሰሌዳ አቋራጮች ረድፍ አሁን በቀጥታ ወደ ትክክለኛው ቦታ ይወስድሃል።"
+  },
+  "changelog150Title5": {
+    "message": "እና ትናንሽ ነገሮች"
+  },
+  "changelog150Desc5": {
+    "message": "ሙሉ የድር አድራሻ ወደ ነጭ ዝርዝሩ ለጥፍ፣ ዝም ብሎ ይሠራል። ይህን ትር አቋርጥ እየተየብክበት ካለው ገጽ አያርቅህም። መልዕክቶች ይበልጥ ግልጽ ናቸው፣ በጭራሽም አይቆረጡም።"
+  },
+  "suspendedOneToast": {
+    "message": "ትሩ ታግዷል · ~$RAM$ ተለቋል",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ ትሮች ተዘለዋል",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "ነጭ ዝርዝሩ ለChrome ማመሳሰል ሞልቷል። ጥቂት ጣቢያዎችን አስወግደህ እንደገና ሞክር።"
   }
 }

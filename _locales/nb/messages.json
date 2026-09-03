@@ -3,7 +3,7 @@
     "message": "Drowzy - Fane-suspenderer og minnesparer"
   },
   "extDescription": {
-    "message": "Suspender inaktive faner automatisk for å spare opptil 80% RAM. Lettvektig, privat, ingen sporing. Faner går aldri tapt."
+    "message": "Legger faner du ikke bruker i søvn så Chrome holder seg rask. Lett, privat, ingen sporing, åpen kildekode."
   },
   "commandSuspendCurrent": {
     "message": "Suspender gjeldende fane"
@@ -435,7 +435,7 @@
     "message": "Velkommen til Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy sparer minne ved å sette inaktive faner i dvale. Fanene dine er alltid trygge - vi bruker Chrome sin innebygde forkastings-API, så de overlever selv om du avinstallerer Drowzy."
+    "message": "Drowzy sparer minne ved å sette inaktive faner i dvale. Fanene dine forblir vanlige Chrome-faner - vi bruker Chrome sin innebygde forkastings-API, så de overlever selv om du avinstallerer Drowzy."
   },
   "howItWorks": {
     "message": "Slik fungerer det"
@@ -447,10 +447,10 @@
     "message": "<strong>Suspenderte faner bruker null RAM</strong> men forblir i fanelinjen"
   },
   "featureClickToWake": {
-    "message": "<strong>Klikk på en suspendert fane</strong> for å vekke den umiddelbart"
+    "message": "<strong>Klikk på en suspendert fane</strong> for å vekke den"
   },
   "featureProtected": {
-    "message": "<strong>Aktive, festede og lydfaner</strong> blir aldri berørt"
+    "message": "<strong>Aktive, festede og lydfaner</strong> er beskyttet som standard"
   },
   "quickActions": {
     "message": "Hurtighandlinger"
@@ -678,7 +678,12 @@
     "message": "Banneret \"Liker du Drowzy?\" vises nå først etter at du har brukt Drowzy en stund, aldri ved installasjon eller rett etter en oppdatering. Knappene er \"Legg igjen en vurdering\", \"Kanskje senere\" og \"Ikke spør igjen\". Den ber aldri om en bestemt vurdering og tilbyr aldri en belønning."
   },
   "changelogReleaseHeading": {
-    "message": "Nytt i"
+    "message": "Nytt i $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Raskere, smartere suspendering"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Å sette faner i dvale får ikke lenger hele listen til å hoppe. Denne siden og velkomstsiden følger nå det lyse eller mørke temaet du valgte i Drowzy. Og å sette samme fane i dvale om og om igjen blåser ikke lenger opp statistikken din."
+  },
+  "timer1min": {
+    "message": "1 minutt"
+  },
+  "shortcutsHint": {
+    "message": "Chrome styrer disse snarveiene. Tilpass åpner chrome://extensions/shortcuts, der du kan endre eller fjerne hver snarvei."
+  },
+  "shortcutUnset": {
+    "message": "Ikke angitt"
+  },
+  "changelog150Title1": {
+    "message": "Åpner med en gang, selv med 100 faner"
+  },
+  "changelog150Desc1": {
+    "message": "Popupen lar deg ikke vente lenger. Den åpner straks, uansett hvor mange faner du har åpne."
+  },
+  "changelog150Title2": {
+    "message": "Suspender andre er raskere og viser hva det gjør"
+  },
+  "changelog150Desc2": {
+    "message": "Det legger flere faner i søvn om gangen, og du ser telleren stige. Hvis noen faner ikke kunne sove, sier det hvor mange i stedet for å påstå at alt gikk bra."
+  },
+  "changelog150Title3": {
+    "message": "En timer på 1 minutt"
+  },
+  "changelog150Desc3": {
+    "message": "Åpnet du en bunke faner fra et søk? Sett timeren til 1 minutt, så sovner de kort tid etter at du forlater dem."
+  },
+  "changelog150Title4": {
+    "message": "Snarveier er enkle å endre nå"
+  },
+  "changelog150Desc4": {
+    "message": "Vil du ha en annen tast for Suspender denne fanen, eller ingen i det hele tatt? Raden Hurtigtaster under Innstillinger tar deg nå rett til riktig sted."
+  },
+  "changelog150Title5": {
+    "message": "Og de små tingene"
+  },
+  "changelog150Desc5": {
+    "message": "Lim inn en hel nettadresse i hvitlisten, så bare fungerer det. Suspender denne fanen flytter deg ikke bort fra en side du holder på å skrive på. Meldinger er tydeligere og blir aldri klippet av."
+  },
+  "suspendedOneToast": {
+    "message": "Fane suspendert · ~$RAM$ frigjort",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ fane(r) hoppet over",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Hvitlisten er full for Chrome-synkronisering. Fjern noen nettsteder og prøv igjen."
   }
 }

@@ -3,7 +3,7 @@
     "message": "Drowzy - Välilehtien keskeyttäjä ja muistinsäästäjä"
   },
   "extDescription": {
-    "message": "Keskeytä käyttämättömät välilehdet automaattisesti ja säästä jopa 80 % RAM-muistia. Kevyt, yksityinen, ei seurantaa. Välilehdet eivät koskaan katoa."
+    "message": "Nukuttaa välilehdet, joita et käytä, jotta Chrome pysyy nopeana. Kevyt, yksityinen, ei seurantaa, avoin lähdekoodi."
   },
   "commandSuspendCurrent": {
     "message": "Keskeytä nykyinen välilehti"
@@ -435,7 +435,7 @@
     "message": "Tervetuloa Drowzyyn"
   },
   "onboardingIntro": {
-    "message": "Drowzy säästää muistia laittamalla käyttämättömät välilehdet nukkumaan. Välilehtesi ovat aina turvassa - käytämme Chromen natiivihylkäys-API:a, joten ne säilyvät vaikka poistaisit Drowzyn."
+    "message": "Drowzy säästää muistia laittamalla käyttämättömät välilehdet nukkumaan. Välilehtesi pysyvät tavallisina Chromen välilehtinä - käytämme Chromen natiivihylkäys-API:a, joten ne säilyvät vaikka poistaisit Drowzyn."
   },
   "howItWorks": {
     "message": "Miten se toimii"
@@ -447,10 +447,10 @@
     "message": "<strong>Keskeytetyt välilehdet eivät käytä RAM-muistia</strong> mutta pysyvät välilehtipalkissa"
   },
   "featureClickToWake": {
-    "message": "<strong>Napsauta mitä tahansa keskeytettyä välilehteä</strong> herättääksesi sen heti"
+    "message": "<strong>Napsauta mitä tahansa keskeytettyä välilehteä</strong> herättääksesi sen"
   },
   "featureProtected": {
-    "message": "<strong>Aktiivisia, kiinnitettyjä ja ääntä toistavia välilehtiä</strong> ei kosketa koskaan"
+    "message": "<strong>Aktiivisia, kiinnitettyjä ja ääntä toistavia välilehtiä</strong> on suojattu oletuksena"
   },
   "quickActions": {
     "message": "Pikatoiminnot"
@@ -678,7 +678,12 @@
     "message": "Palkki \"Pidätkö Drowzysta?\" näkyy nyt vasta, kun olet käyttänyt Drowzya jonkin aikaa, ei koskaan asennuksen yhteydessä tai heti päivityksen jälkeen. Painikkeet ovat \"Jätä arvostelu\", \"Ehkä myöhemmin\" ja \"Älä kysy uudelleen\". Se ei koskaan pyydä tiettyä tähtiarviota eikä tarjoa palkkiota."
   },
   "changelogReleaseHeading": {
-    "message": "Mitä uutta versiossa"
+    "message": "Mitä uutta versiossa $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Nopeampi, älykkäämpi keskeytys"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Välilehtien nukuttaminen ei enää saa koko listaa pomppimaan. Tämä sivu ja tervetulosivu noudattavat nyt Drowzyssa valitsemaasi vaaleaa tai tummaa teemaa. Eikä saman välilehden toistuva nukuttaminen enää paisuta tilastojasi."
+  },
+  "timer1min": {
+    "message": "1 minuutti"
+  },
+  "shortcutsHint": {
+    "message": "Chrome hallitsee näitä. Mukauta avaa sivun chrome://extensions/shortcuts, jossa voit muuttaa tai poistaa jokaisen pikanäppäimen."
+  },
+  "shortcutUnset": {
+    "message": "Ei asetettu"
+  },
+  "changelog150Title1": {
+    "message": "Avautuu heti, vaikka välilehtiä olisi 100"
+  },
+  "changelog150Desc1": {
+    "message": "Ponnahdusikkuna ei enää odotuta. Se avautuu heti, olipa välilehtiä auki kuinka monta tahansa."
+  },
+  "changelog150Title2": {
+    "message": "Keskeytä muut on nopeampi ja näyttää, mitä se tekee"
+  },
+  "changelog150Desc2": {
+    "message": "Se nukuttaa useita välilehtiä kerralla, ja näet laskurin nousevan. Jos joitakin välilehtiä ei voitu nukuttaa, se kertoo montako sen sijaan, että väittäisi kaiken onnistuneen."
+  },
+  "changelog150Title3": {
+    "message": "Minuutin ajastin"
+  },
+  "changelog150Desc3": {
+    "message": "Avasitko kasan välilehtiä hausta? Aseta ajastin 1 minuuttiin, niin ne nukahtavat pian sen jälkeen, kun poistut niistä."
+  },
+  "changelog150Title4": {
+    "message": "Pikanäppäimiä on nyt helppo muuttaa"
+  },
+  "changelog150Desc4": {
+    "message": "Haluatko toisen näppäimen toiminnolle Keskeytä tämä välilehti, tai ei näppäintä lainkaan? Rivi Pikanäppäimet kohdassa Asetukset vie sinut nyt suoraan oikeaan paikkaan."
+  },
+  "changelog150Title5": {
+    "message": "Ja pienet asiat"
+  },
+  "changelog150Desc5": {
+    "message": "Liitä koko verkko-osoite sallittujen listalle, ja se vain toimii. Keskeytä tämä välilehti ei siirrä sinua pois sivulta, jolle olet kirjoittamassa. Viestit ovat selkeämpiä eivätkä koskaan katkea."
+  },
+  "suspendedOneToast": {
+    "message": "Välilehti keskeytetty · ~$RAM$ vapautettu",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$ välilehteä ohitettiin",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Sallittujen lista on täynnä Chrome-synkronointia varten. Poista muutama sivusto ja yritä uudelleen."
   }
 }

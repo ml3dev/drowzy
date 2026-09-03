@@ -3,7 +3,7 @@
     "message": "Drowzy - Kisimamishaji cha tabo na kiokoa kumbukumbu"
   },
   "extDescription": {
-    "message": "Simamisha tabo zisizotumika kiotomatiki ili kuokoa hadi 80% ya RAM. Nyepesi, binafsi, bila ufuatiliaji. Tabo hazipotei kamwe."
+    "message": "Hulaza vichupo usivyotumia ili Chrome ibaki haraka. Nyepesi, ya faragha, hakuna ufuatiliaji, chanzo huria."
   },
   "commandSuspendCurrent": {
     "message": "Simamisha tabo ya sasa"
@@ -435,7 +435,7 @@
     "message": "Karibu kwenye Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy inaokoa kumbukumbu kwa kulaza tabo zisizotumika. Tabo zako ni salama kila wakati - tunatumia API asilia ya Chrome ya kutupa, hivyo zinaendelea hata ukiondoa Drowzy."
+    "message": "Drowzy inaokoa kumbukumbu kwa kulaza tabo zisizotumika. Tabo zako zinabaki kuwa tabo za kawaida za Chrome - tunatumia API asilia ya Chrome ya kutupa, hivyo zinaendelea hata ukiondoa Drowzy."
   },
   "howItWorks": {
     "message": "Jinsi inavyofanya kazi"
@@ -447,10 +447,10 @@
     "message": "<strong>Tabo zilizosimamishwa hazitumii RAM</strong> lakini zinabaki kwenye upau wa tabo"
   },
   "featureClickToWake": {
-    "message": "<strong>Bofya tabo yoyote iliyosimamishwa</strong> kuiamsha mara moja"
+    "message": "<strong>Bofya tabo yoyote iliyosimamishwa</strong> kuiamsha"
   },
   "featureProtected": {
-    "message": "<strong>Tabo zinazotumika, zilizobandikwa, na zenye sauti</strong> haziguswi kamwe"
+    "message": "<strong>Tabo zinazotumika, zilizobandikwa, na zenye sauti</strong> zinalindwa kwa chaguomsingi"
   },
   "quickActions": {
     "message": "Vitendo vya haraka"
@@ -678,7 +678,12 @@
     "message": "Bango la \"Unafurahia Drowzy?\" sasa linaonekana tu baada ya kutumia Drowzy kwa muda, kamwe wakati wa kusakinisha au mara tu baada ya sasisho. Vitufe ni \"Acha ukaguzi\", \"Labda baadaye\", na \"Usiulize tena\". Kamwe haliombi ukadiriaji maalum wa nyota wala halitoi zawadi."
   },
   "changelogReleaseHeading": {
-    "message": "Mpya katika"
+    "message": "Mpya katika $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Kusimamisha kwa kasi na werevu zaidi"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Kulaza vichupo hakufanyi tena orodha nzima iruke. Ukurasa huu na ukurasa wa karibu sasa hufuata mandhari nyepesi au nyeusi uliyochagua katika Drowzy. Na kulaza kichupo kilekile mara kwa mara hakuvimbishi tena takwimu zako."
+  },
+  "timer1min": {
+    "message": "Dakika 1"
+  },
+  "shortcutsHint": {
+    "message": "Chrome ndiyo inayosimamia hizi. Badilisha hufungua chrome://extensions/shortcuts, ambapo unaweza kubadilisha au kufuta kila njia ya mkato."
+  },
+  "shortcutUnset": {
+    "message": "Haijawekwa"
+  },
+  "changelog150Title1": {
+    "message": "Hufunguka mara moja, hata ukiwa na vichupo 100"
+  },
+  "changelog150Desc1": {
+    "message": "Dirisha ibukizi halikusubirishi tena. Hufunguka mara moja, bila kujali una vichupo vingapi wazi."
+  },
+  "changelog150Title2": {
+    "message": "Simamisha nyingine ni haraka zaidi na inaonyesha inachofanya"
+  },
+  "changelog150Desc2": {
+    "message": "Inalaza vichupo kadhaa kwa pamoja, na unaona hesabu ikipanda. Kama vichupo vingine havikuweza kulala, inakuambia vingapi badala ya kudai kila kitu kimefanikiwa."
+  },
+  "changelog150Title3": {
+    "message": "Kipima muda cha dakika 1"
+  },
+  "changelog150Desc3": {
+    "message": "Umefungua rundo la vichupo kutoka kwenye utafutaji? Weka kipima muda kwenye dakika 1 na vitalala muda mfupi baada ya kuviacha."
+  },
+  "changelog150Title4": {
+    "message": "Njia za mkato sasa ni rahisi kubadilisha"
+  },
+  "changelog150Desc4": {
+    "message": "Unataka kitufe kingine cha Simamisha tabo hii, au hakuna kabisa? Safu ya Njia za mkato za kibodi katika Mipangilio sasa inakupeleka moja kwa moja mahali sahihi."
+  },
+  "changelog150Title5": {
+    "message": "Na mambo madogo"
+  },
+  "changelog150Desc5": {
+    "message": "Bandika anwani kamili ya wavuti kwenye orodha nyeupe na inafanya kazi tu. Simamisha tabo hii haitakuondoa kwenye ukurasa unaoandika. Ujumbe uko wazi zaidi na haukatwi kamwe."
+  },
+  "suspendedOneToast": {
+    "message": "Kichupo kimesimamishwa · ~$RAM$ zimeachiwa",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "Vichupo $COUNT$ vimerukwa",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Orodha nyeupe imejaa kwa usawazishaji wa Chrome. Ondoa tovuti chache kisha ujaribu tena."
   }
 }

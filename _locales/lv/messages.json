@@ -3,7 +3,7 @@
     "message": "Drowzy - Ciļņu apturētājs un atmiņas taupītājs"
   },
   "extDescription": {
-    "message": "Automātiski apturiet neaktīvās cilnes, lai ietaupītu līdz 80% RAM. Viegls, privāts, bez izsekošanas. Cilnes nekad netiek zaudētas."
+    "message": "Iemidzina cilnes, ko neizmanto, lai Chrome paliktu ātrs. Viegls, privāts, bez izsekošanas, atvērtā koda."
   },
   "commandSuspendCurrent": {
     "message": "Apturēt pašreizējo cilni"
@@ -435,7 +435,7 @@
     "message": "Laipni lūdzam Drowzy"
   },
   "onboardingIntro": {
-    "message": "Drowzy taupa atmiņu, iemidzinot neaktīvās cilnes. Jūsu cilnes vienmēr ir drošībā - mēs izmantojam Chrome iebūvēto atmetiena API, tāpēc tās saglabājas pat tad, ja atinstalējat Drowzy."
+    "message": "Drowzy taupa atmiņu, iemidzinot neaktīvās cilnes. Jūsu cilnes paliek parastas Chrome cilnes - mēs izmantojam Chrome iebūvēto atmetiena API, tāpēc tās saglabājas pat tad, ja atinstalējat Drowzy."
   },
   "howItWorks": {
     "message": "Kā tas darbojas"
@@ -447,10 +447,10 @@
     "message": "<strong>Apturētās cilnes neizmanto RAM,</strong> bet paliek ciļņu joslā"
   },
   "featureClickToWake": {
-    "message": "<strong>Noklikšķiniet uz jebkuras apturētas cilnes,</strong> lai to uzreiz pamodinātu"
+    "message": "<strong>Noklikšķiniet uz jebkuras apturētas cilnes,</strong> lai to pamodinātu"
   },
   "featureProtected": {
-    "message": "<strong>Aktīvās, piespraustās un audio cilnes</strong> nekad netiek aizskartas"
+    "message": "<strong>Aktīvās, piespraustās un audio cilnes</strong> pēc noklusējuma ir aizsargātas"
   },
   "quickActions": {
     "message": "Ātrās darbības"
@@ -678,7 +678,12 @@
     "message": "Josla “Vai jums patīk Drowzy?” tagad parādās tikai pēc tam, kad esat kādu laiku lietojis Drowzy, nekad instalēšanas laikā vai tūlīt pēc atjaunināšanas. Pogas ir “Atstāt atsauksmi”, “Varbūt vēlāk” un “Vairs nejautāt”. Tā nekad neprasa konkrētu vērtējumu un nepiedāvā atlīdzību."
   },
   "changelogReleaseHeading": {
-    "message": "Kas jauns versijā"
+    "message": "Kas jauns versijā $VERSION$",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "Ātrāka un viedāka apturēšana"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "Cilņu iemidzināšana vairs neliek visam sarakstam lēkāt. Šī lapa un sveiciena lapa tagad seko Drowzy izvēlētajai gaišajai vai tumšajai tēmai. Un tās pašas cilnes atkārtota iemidzināšana vairs neuzpūš tavu statistiku."
+  },
+  "timer1min": {
+    "message": "1 minūtes"
+  },
+  "shortcutsHint": {
+    "message": "Tās pārvalda Chrome. Pielāgot atver chrome://extensions/shortcuts, kur vari mainīt vai notīrīt katru saīsni."
+  },
+  "shortcutUnset": {
+    "message": "Nav iestatīts"
+  },
+  "changelog150Title1": {
+    "message": "Atveras uzreiz, pat ar 100 cilnēm"
+  },
+  "changelog150Desc1": {
+    "message": "Uznirstošais logs vairs neliek gaidīt. Tas atveras uzreiz, lai cik ciļņu būtu atvērtas."
+  },
+  "changelog150Title2": {
+    "message": "Apturēt pārējās ir ātrāks un rāda, ko dara"
+  },
+  "changelog150Desc2": {
+    "message": "Tas iemidzina vairākas cilnes uzreiz, un tu redzi, kā skaitlis aug. Ja dažas cilnes nevarēja iemidzināt, tas pasaka, cik, nevis apgalvo, ka viss izdevās."
+  },
+  "changelog150Title3": {
+    "message": "Vienas minūtes taimeris"
+  },
+  "changelog150Desc3": {
+    "message": "Atvēri kaudzi ciļņu no meklēšanas? Iestati taimeri uz 1 minūti, un tās aizmigs drīz pēc tam, kad tās pametīsi."
+  },
+  "changelog150Title4": {
+    "message": "Saīsnes tagad ir viegli mainīt"
+  },
+  "changelog150Desc4": {
+    "message": "Gribi citu taustiņu darbībai Apturēt šo cilni vai nevienu? Rinda Tastatūras saīsnes sadaļā Iestatījumi tagad aizved tieši uz pareizo vietu."
+  },
+  "changelog150Title5": {
+    "message": "Un sīkumi"
+  },
+  "changelog150Desc5": {
+    "message": "Ielīmē baltajā sarakstā pilnu tīmekļa adresi, un tas vienkārši strādā. Apturēt šo cilni neaizvedīs tevi no lapas, kurā tu raksti. Ziņojumi ir skaidrāki un nekad netiek nogriezti."
+  },
+  "suspendedOneToast": {
+    "message": "Cilne apturēta · atbrīvoti ~$RAM$",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "Izlaistas cilnes: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Baltais saraksts Chrome sinhronizācijai ir pilns. Noņem dažas vietnes un mēģini vēlreiz."
   }
 }

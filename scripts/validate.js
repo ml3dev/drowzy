@@ -101,7 +101,7 @@ if (!base) {
     'badgeZzz',              // onomatopoeia, universal
     'badgeAudio', 'badgeSystem', 'changelogVersionLabel', 'privacyContactTitle',
     'sessions', 'sessionDefaultName', 'importWhitelist',
-    'timer5min', 'timer10min', 'timer15min', 'timer30min'
+    'timer1min', 'timer5min', 'timer10min', 'timer15min', 'timer30min'
   ]);
   const untranslated = [];
   for (const loc of locales) {

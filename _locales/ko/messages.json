@@ -3,7 +3,7 @@
     "message": "Drowzy - 탭 일시중지 및 메모리 절약"
   },
   "extDescription": {
-    "message": "비활성 탭을 자동으로 일시중지하여 RAM을 최대 80% 절약하세요. 가볍고, 프라이빗하며, 추적 없음. 탭은 절대 사라지지 않습니다."
+    "message": "쓰지 않는 탭을 재워 Chrome을 빠르게 유지합니다. 가볍고, 비공개이며, 추적 없음, 오픈 소스."
   },
   "commandSuspendCurrent": {
     "message": "현재 탭 일시중지"
@@ -435,7 +435,7 @@
     "message": "Drowzy에 오신 것을 환영합니다"
   },
   "onboardingIntro": {
-    "message": "Drowzy는 비활성 탭을 수면 상태로 전환하여 메모리를 절약합니다. 탭은 항상 안전합니다. Chrome의 기본 디스카드 API를 사용하므로 Drowzy를 제거해도 탭이 유지됩니다."
+    "message": "Drowzy는 비활성 탭을 수면 상태로 전환하여 메모리를 절약합니다. 탭은 일반 Chrome 탭 그대로 유지됩니다. Chrome의 기본 디스카드 API를 사용하므로 Drowzy를 제거해도 탭이 유지됩니다."
   },
   "howItWorks": {
     "message": "작동 방식"
@@ -447,10 +447,10 @@
     "message": "<strong>일시중지된 탭은 RAM을 사용하지 않지만</strong> 탭 바에 그대로 유지됩니다"
   },
   "featureClickToWake": {
-    "message": "<strong>일시중지된 탭을 클릭</strong>하면 즉시 깨어납니다"
+    "message": "<strong>일시중지된 탭을 클릭</strong>하면 깨어납니다"
   },
   "featureProtected": {
-    "message": "<strong>활성, 고정 및 오디오 탭</strong>은 절대 건드리지 않습니다"
+    "message": "<strong>활성, 고정 및 오디오 탭</strong>은 기본적으로 보호됩니다"
   },
   "quickActions": {
     "message": "빠른 실행"
@@ -678,7 +678,12 @@
     "message": "\"Drowzy가 마음에 드시나요?\" 배너는 이제 Drowzy를 한동안 사용한 후에만 표시되며, 설치 시나 업데이트 직후에는 표시되지 않습니다. 버튼은 \"리뷰 남기기\", \"나중에\", \"다시 묻지 않기\"입니다. 특정 별점을 요구하지 않으며 보상을 제공하지도 않습니다."
   },
   "changelogReleaseHeading": {
-    "message": "의 새로운 기능"
+    "message": "$VERSION$의 새로운 기능",
+    "placeholders": {
+      "version": {
+        "content": "$1"
+      }
+    }
   },
   "changelog135Title1": {
     "message": "더 빠르고 똑똑해진 일시중지"
@@ -832,5 +837,63 @@
   },
   "changelog140Desc5": {
     "message": "탭을 절전해도 목록 전체가 튀지 않습니다. 이 페이지와 시작 페이지도 Drowzy에서 고른 밝은/어두운 테마를 따릅니다. 또한 같은 탭을 반복해서 절전해도 누적 통계가 부풀지 않습니다."
+  },
+  "timer1min": {
+    "message": "1분"
+  },
+  "shortcutsHint": {
+    "message": "이 단축키는 Chrome이 관리합니다. 사용자 지정을 누르면 chrome://extensions/shortcuts가 열리고, 거기서 각 단축키를 바꾸거나 지울 수 있습니다."
+  },
+  "shortcutUnset": {
+    "message": "설정 안 됨"
+  },
+  "changelog150Title1": {
+    "message": "탭이 100개여도 바로 열립니다"
+  },
+  "changelog150Desc1": {
+    "message": "팝업이 더 이상 기다리게 하지 않습니다. 탭이 몇 개 열려 있든 바로 열립니다."
+  },
+  "changelog150Title2": {
+    "message": "나머지 일시중지가 빨라지고, 진행 상황이 보입니다"
+  },
+  "changelog150Desc2": {
+    "message": "여러 탭을 한꺼번에 재우고, 숫자가 올라가는 것이 보입니다. 재우지 못한 탭이 있으면 다 됐다고 하지 않고 몇 개인지 알려 줍니다."
+  },
+  "changelog150Title3": {
+    "message": "1분 타이머"
+  },
+  "changelog150Desc3": {
+    "message": "검색 결과에서 탭을 잔뜩 열었나요? 타이머를 1분으로 맞추면 탭을 떠난 직후에 잠듭니다."
+  },
+  "changelog150Title4": {
+    "message": "단축키 바꾸기가 쉬워졌습니다"
+  },
+  "changelog150Desc4": {
+    "message": "이 탭 일시중지에 다른 키를 쓰고 싶거나 아예 없애고 싶다면, 설정의 키보드 단축키 행에서 바로 그 자리로 갈 수 있습니다."
+  },
+  "changelog150Title5": {
+    "message": "그리고 소소한 것들"
+  },
+  "changelog150Desc5": {
+    "message": "예외 목록에 전체 웹 주소를 붙여 넣어도 그냥 됩니다. 이 탭 일시중지는 입력 중인 페이지에서 당신을 옮기지 않습니다. 메시지는 더 알기 쉽고 잘리지 않습니다."
+  },
+  "suspendedOneToast": {
+    "message": "탭을 일시중지했습니다 · ~$RAM$ 확보",
+    "placeholders": {
+      "ram": {
+        "content": "$1"
+      }
+    }
+  },
+  "skippedTabsToast": {
+    "message": "$COUNT$개 탭 건너뜀",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "whitelistFull": {
+    "message": "Chrome 동기화용 예외 목록이 가득 찼습니다. 사이트 몇 개를 제거한 뒤 다시 시도하세요."
   }
 }
