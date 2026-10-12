@@ -147,7 +147,7 @@
     "message": "Celkovo"
   },
   "statLifetimeRam": {
-    "message": "Celková ušetrená pamäť RAM"
+    "message": "Pamäť uvoľnená v priebehu času (odhad)"
   },
   "ramEstimateTooltip": {
     "message": "Odhadované použitím ~150 MB na pozastavenú kartu. Skutočné úspory sa líšia podľa stránky."
@@ -444,7 +444,7 @@
     "message": "<strong>Karty neaktívne 15 minút</strong> sú automaticky pozastavené"
   },
   "featureZeroRam": {
-    "message": "<strong>Pozastavené karty nepoužívajú RAM</strong>, ale zostávajú na lište kariet"
+    "message": "<strong>Pozastavené karty uvoľnia väčšinu svojej pamäte</strong>, ale zostávajú na lište kariet"
   },
   "featureClickToWake": {
     "message": "<strong>Kliknite na akúkoľvek pozastavenú kartu</strong> pre prebudenie"
@@ -785,13 +785,13 @@
     "message": "Táto stránka je vo vašom zozname nikdy neuspávať. Odstráňte ju, aby ste uspali túto kartu."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Je potrebná iná otvorená karta, na ktorú sa dá prepnúť. Chrome nemôže uspať kartu, na ktorú sa práve pozeráte."
+    "message": "Je potrebná iná otvorená karta, na ktorú sa dá prepnúť. Prehliadač nemôže uspať kartu, na ktorú sa práve pozeráte."
   },
   "openSettingsAction": {
     "message": "Otvoriť nastavenia"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome túto kartu neuspal"
+    "message": "Prehliadač túto kartu neuspal"
   },
   "suspendFailedLoading": {
     "message": "Ešte sa načítava - skúste to o chvíľu"
@@ -842,7 +842,7 @@
     "message": "1 minúta"
   },
   "shortcutsHint": {
-    "message": "Spravuje ich Chrome. Prispôsobiť otvorí chrome://extensions/shortcuts, kde môžete každú skratku zmeniť alebo vymazať."
+    "message": "Spravuje ich prehliadač. Prispôsobiť otvorí chrome://extensions/shortcuts, kde môžete každú skratku zmeniť alebo vymazať."
   },
   "shortcutUnset": {
     "message": "Nenastavené"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Biely zoznam je pre synchronizáciu Chrome plný. Odstráňte pár stránok a skúste to znova."
+    "message": "Biely zoznam je pre synchronizáciu prehliadača plný. Odstráňte pár stránok a skúste to znova."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Všetky tieto stránky už sú na bielom zozname"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ nerozpoznaných",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Neuložené"
+  },
+  "badgeStillLoading": {
+    "message": "Načítava sa"
+  },
+  "badgeNotLoaded": {
+    "message": "Nenačítaná"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Táto karta má neuložené údaje, preto ju Drowzy necháva bdieť. Zmeniť to môžete voľbou Chrániť karty s formulármi v Nastaveniach."
+  },
+  "waitStillLoadingHint": {
+    "message": "Táto karta sa stále načítava. Drowzy to skúsi znova o minútu."
+  },
+  "waitNotLoadedHint": {
+    "message": "Táto karta sa ešte nenačítala, takže nepoužíva pamäť. Drowzy ju necháva tak."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automatické pozastavenie je vypnuté, takže karty zaspia len na váš pokyn."
+  },
+  "restoredSomeTabs": {
+    "message": "Obnovených $COUNT$ z $TOTAL$ kariet",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Kliknutím znova nahradíte karty v tomto okne"
+  },
+  "importSessionsTitle": {
+    "message": "Importovať relácie zo schránky"
+  },
+  "importedSessions": {
+    "message": "Importovaných relácií: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "V schránke sa nenašli žiadne relácie Drowzy"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Tieto relácie už sú uložené"
+  },
+  "openSidePanel": {
+    "message": "Otvoriť v bočnom paneli"
+  },
+  "sidePanelUnavailable": {
+    "message": "Bočný panel sa nepodarilo otvoriť"
+  },
+  "changelog160Title1": {
+    "message": "Bdieť znamená bdieť"
+  },
+  "changelog160Desc1": {
+    "message": "Karta, ktorú necháte bdieť, je teraz chránená aj pred vlastným šetrením pamäte prehliadača, nielen pred Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Pozrite sa, prečo karta ešte bdie"
+  },
+  "changelog160Desc2": {
+    "message": "Karta, ktorá už mala zaspať, ale bránia tomu neuložené údaje alebo pomalé načítanie, teraz v zozname ukazuje dôvod. Keď je automatické pozastavenie vypnuté, povie vám to riadok nad zoznamom."
+  },
+  "changelog160Title3": {
+    "message": "Zatváranie duplicitných kariet je opatrnejšie"
+  },
+  "changelog160Desc3": {
+    "message": "Teraz zatvára len karty s presne rovnakou adresou. Rôzne e-maily alebo stránky tej istej aplikácie zostanú otvorené a karta, ktorá prehráva zvuk, sa nikdy nezatvorí."
+  },
+  "changelog160Title4": {
+    "message": "Šetrnejší v Opere a Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "V Opere teraz Drowzy po spustení prehliadača niekoľko minút počká, než začne uspávať karty, a potom ich uspáva po jednej."
+  },
+  "changelog160Title5": {
+    "message": "A tie drobnosti"
+  },
+  "changelog160Desc5": {
+    "message": "Importujte uložené relácie zo schránky, otvorte bočný panel z vyskakovacieho okna a Nahradiť teraz pred zatvorením kariet žiada druhé kliknutie. Import bieleho zoznamu prijíma stránky oddelené medzerami a časovač v zozname kariet aj uvítacia stránka sa správne zobrazujú vo všetkých jazykoch."
   }
 }

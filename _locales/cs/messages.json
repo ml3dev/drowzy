@@ -147,7 +147,7 @@
     "message": "Celkem"
   },
   "statLifetimeRam": {
-    "message": "Celková ušetřená RAM"
+    "message": "Uvolněná paměť v průběhu času (odhad)"
   },
   "ramEstimateTooltip": {
     "message": "Odhadováno pomocí ~150 MB na pozastavenou kartu. Skutečné úspory se liší podle stránky."
@@ -444,7 +444,7 @@
     "message": "<strong>Karty neaktivní 15 minut</strong> jsou automaticky uspány"
   },
   "featureZeroRam": {
-    "message": "<strong>Uspané karty nepoužívají RAM</strong>, ale zůstávají na liště karet"
+    "message": "<strong>Uspané karty uvolní většinu své paměti</strong>, ale zůstávají na liště karet"
   },
   "featureClickToWake": {
     "message": "<strong>Klikněte na jakoukoli uspanou kartu</strong> pro probuzení"
@@ -785,13 +785,13 @@
     "message": "Tento web je na vašem seznamu nikdy neuspávat. Odeberte ho, abyste tuto kartu uspali."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Je potřeba jiná otevřená karta, na kterou se dá přepnout. Chrome nemůže uspat kartu, na kterou se právě díváte."
+    "message": "Je potřeba jiná otevřená karta, na kterou se dá přepnout. Prohlížeč nemůže uspat kartu, na kterou se právě díváte."
   },
   "openSettingsAction": {
     "message": "Otevřít nastavení"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome tuto kartu neuspal"
+    "message": "Prohlížeč tuto kartu neuspal"
   },
   "suspendFailedLoading": {
     "message": "Ještě se načítá - zkuste to za chvíli"
@@ -842,7 +842,7 @@
     "message": "1 minutě"
   },
   "shortcutsHint": {
-    "message": "Spravuje je Chrome. Přizpůsobit otevře chrome://extensions/shortcuts, kde můžete každou zkratku změnit nebo vymazat."
+    "message": "Spravuje je prohlížeč. Přizpůsobit otevře chrome://extensions/shortcuts, kde můžete každou zkratku změnit nebo vymazat."
   },
   "shortcutUnset": {
     "message": "Nenastaveno"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Bílá listina je pro synchronizaci Chrome plná. Odeberte pár webů a zkuste to znovu."
+    "message": "Bílá listina je pro synchronizaci prohlížeče plná. Odeberte pár webů a zkuste to znovu."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Všechny tyto stránky už na seznamu povolených jsou"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ nerozpoznáno",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Neuloženo"
+  },
+  "badgeStillLoading": {
+    "message": "Načítá se"
+  },
+  "badgeNotLoaded": {
+    "message": "Nenačteno"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Tato karta obsahuje neuložená data, proto ji Drowzy nechává vzhůru. Změnit to můžete volbou Chránit karty s formuláři v Nastavení."
+  },
+  "waitStillLoadingHint": {
+    "message": "Tato karta se stále načítá. Drowzy to zkusí znovu za minutu."
+  },
+  "waitNotLoadedHint": {
+    "message": "Tato karta se ještě nenačetla, takže nepoužívá paměť. Drowzy ji nechává být."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automatické uspávání je vypnuté, takže karty usnou jen na váš pokyn."
+  },
+  "restoredSomeTabs": {
+    "message": "Obnoveno $COUNT$ z $TOTAL$ karet",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Kliknutím znovu nahradíte karty v tomto okně"
+  },
+  "importSessionsTitle": {
+    "message": "Importovat relace ze schránky"
+  },
+  "importedSessions": {
+    "message": "Importováno relací: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Ve schránce nebyly nalezeny žádné relace Drowzy"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Tyto relace už jsou uložené"
+  },
+  "openSidePanel": {
+    "message": "Otevřít v postranním panelu"
+  },
+  "sidePanelUnavailable": {
+    "message": "Postranní panel se nepodařilo otevřít"
+  },
+  "changelog160Title1": {
+    "message": "Vzhůru znamená vzhůru"
+  },
+  "changelog160Desc1": {
+    "message": "Karta, kterou necháte vzhůru, je teď chráněná i před vlastním šetřením paměti prohlížeče, nejen před Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Podívejte se, proč karta ještě neusnula"
+  },
+  "changelog160Desc2": {
+    "message": "Karta, která už měla usnout, ale brání tomu neuložená data nebo pomalé načítání, teď v seznamu ukazuje důvod. Když je automatické uspávání vypnuté, řekne vám to řádek nad seznamem."
+  },
+  "changelog160Title3": {
+    "message": "Zavírání duplicitních karet je opatrnější"
+  },
+  "changelog160Desc3": {
+    "message": "Nyní zavírá jen karty s přesně stejnou adresou. Různé e-maily nebo stránky téže aplikace zůstanou otevřené a karta, která přehrává zvuk, se nikdy nezavře."
+  },
+  "changelog160Title4": {
+    "message": "Šetrnější v Opeře a Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "V Opeře teď Drowzy po spuštění prohlížeče několik minut počká, než začne uspávat karty, a pak je uspává po jedné."
+  },
+  "changelog160Title5": {
+    "message": "A ty drobnosti"
+  },
+  "changelog160Desc5": {
+    "message": "Importujte uložené relace ze schránky, otevřete postranní panel z vyskakovacího okna a Nahradit teď před zavřením karet chce druhé kliknutí. Import bílé listiny přijímá weby oddělené mezerami a časovač v seznamu karet i uvítací stránka se správně zobrazují ve všech jazycích."
   }
 }

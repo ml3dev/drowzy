@@ -147,7 +147,7 @@
     "message": "Jumla"
   },
   "statLifetimeRam": {
-    "message": "Jumla ya RAM iliyohifadhiwa"
+    "message": "Kumbukumbu iliyoachiliwa kwa muda (makadirio)"
   },
   "ramEstimateTooltip": {
     "message": "Imekadiriwa kutumia ~150 MB kwa kila kichupo kilichositishwa. Akiba halisi inatofautiana kwa ukurasa."
@@ -444,7 +444,7 @@
     "message": "<strong>Tabo zisizotumika kwa dakika 15</strong> zinasimamishwa kiotomatiki"
   },
   "featureZeroRam": {
-    "message": "<strong>Tabo zilizosimamishwa hazitumii RAM</strong> lakini zinabaki kwenye upau wa tabo"
+    "message": "<strong>Tabo zilizosimamishwa huachilia sehemu kubwa ya kumbukumbu yao</strong> lakini zinabaki kwenye upau wa tabo"
   },
   "featureClickToWake": {
     "message": "<strong>Bofya tabo yoyote iliyosimamishwa</strong> kuiamsha"
@@ -785,13 +785,13 @@
     "message": "Tovuti hii iko kwenye orodha yako ya kutolaza kamwe. Iondoe ili kulaza kichupo hiki."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Kunahitajika kichupo kingine kilicho wazi cha kubadilishia kwanza. Chrome haiwezi kulaza kichupo unachokitazama."
+    "message": "Kunahitajika kichupo kingine kilicho wazi cha kubadilishia kwanza. Kivinjari hakiwezi kulaza kichupo unachokitazama."
   },
   "openSettingsAction": {
     "message": "Fungua mipangilio"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome haikulaza kichupo hiki"
+    "message": "Kivinjari hakikulaza kichupo hiki"
   },
   "suspendFailedLoading": {
     "message": "Bado kinapakia - jaribu tena baada ya muda kidogo"
@@ -842,7 +842,7 @@
     "message": "Dakika 1"
   },
   "shortcutsHint": {
-    "message": "Chrome ndiyo inayosimamia hizi. Badilisha hufungua chrome://extensions/shortcuts, ambapo unaweza kubadilisha au kufuta kila njia ya mkato."
+    "message": "Kivinjari ndicho kinachosimamia hizi. Badilisha hufungua chrome://extensions/shortcuts, ambapo unaweza kubadilisha au kufuta kila njia ya mkato."
   },
   "shortcutUnset": {
     "message": "Haijawekwa"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Orodha nyeupe imejaa kwa usawazishaji wa Chrome. Ondoa tovuti chache kisha ujaribu tena."
+    "message": "Orodha nyeupe imejaa kwa usawazishaji wa kivinjari. Ondoa tovuti chache kisha ujaribu tena."
+  },
+  "minutesLeftShort": {
+    "message": "dak $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Tovuti hizi zote tayari ziko kwenye orodha yako nyeupe"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ hazikutambuliwa",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Haijahifadhiwa"
+  },
+  "badgeStillLoading": {
+    "message": "Inapakia"
+  },
+  "badgeNotLoaded": {
+    "message": "Haijapakiwa"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Kichupo hiki kina maandishi ambayo hayajahifadhiwa, kwa hivyo Drowzy hukiacha macho. Unaweza kubadilisha hili kwa Linda tabo zenye fomu katika Mipangilio."
+  },
+  "waitStillLoadingHint": {
+    "message": "Kichupo hiki bado kinapakia. Drowzy itajaribu tena baada ya dakika moja."
+  },
+  "waitNotLoadedHint": {
+    "message": "Kichupo hiki bado hakijapakiwa, kwa hivyo hakitumii kumbukumbu. Drowzy hukiacha."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Kusimamisha kiotomatiki kumezimwa, kwa hivyo vichupo hulala tu unapoomba."
+  },
+  "restoredSomeTabs": {
+    "message": "Tabo $COUNT$ kati ya $TOTAL$ zimerejeshwa",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Bonyeza tena ili kubadilisha vichupo vya dirisha hili"
+  },
+  "importSessionsTitle": {
+    "message": "Ingiza vikao kutoka kwenye ubao wa kunakili"
+  },
+  "importedSessions": {
+    "message": "Vikao $COUNT$ vimeingizwa",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Hakuna vikao vya Drowzy kwenye ubao wa kunakili"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Vikao hivi tayari vimehifadhiwa"
+  },
+  "openSidePanel": {
+    "message": "Fungua kwenye paneli ya pembeni"
+  },
+  "sidePanelUnavailable": {
+    "message": "Paneli ya pembeni haikuweza kufunguliwa"
+  },
+  "changelog160Title1": {
+    "message": "Macho maana yake macho"
+  },
+  "changelog160Desc1": {
+    "message": "Kichupo unachokiweka macho sasa kiko salama pia dhidi ya uokoaji wa kumbukumbu wa kivinjari chenyewe, si kutoka kwa Drowzy pekee."
+  },
+  "changelog160Title2": {
+    "message": "Ona kwa nini kichupo bado kiko macho"
+  },
+  "changelog160Desc2": {
+    "message": "Kichupo kinachopaswa kulala lakini kimezuiwa na maandishi ambayo hayajahifadhiwa au upakiaji wa polepole sasa kinaeleza sababu kwenye orodha. Kusimamisha kiotomatiki kukiwa kumezimwa, mstari ulio juu ya orodha hukuambia."
+  },
+  "changelog160Title3": {
+    "message": "Kufunga vichupo vya nakala sasa ni kwa uangalifu zaidi"
+  },
+  "changelog160Desc3": {
+    "message": "Sasa hufunga tu vichupo vyenye anwani ileile kabisa. Barua pepe tofauti au kurasa tofauti za programu moja hubaki wazi, na kichupo kinachocheza sauti hakifungwi kamwe."
+  },
+  "changelog160Title4": {
+    "message": "Laini zaidi kwenye Opera na Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "Kwenye Opera, sasa Drowzy husubiri dakika chache baada ya kivinjari kuanza kabla ya kulaza vichupo, kisha hufanya hivyo kimoja kimoja."
+  },
+  "changelog160Title5": {
+    "message": "Na mambo madogo"
+  },
+  "changelog160Desc5": {
+    "message": "Ingiza vikao vilivyohifadhiwa kutoka kwenye ubao wa kunakili, fungua paneli ya pembeni kutoka kwenye dirisha ibukizi, na Badilisha sasa huomba kubofya mara ya pili kabla ya kufunga vichupo vyako. Kuingiza orodha nyeupe hukubali tovuti zilizotenganishwa kwa nafasi, na kipima muda cha orodha ya vichupo na ukurasa wa kukaribisha vinaonekana sawa katika kila lugha."
   }
 }

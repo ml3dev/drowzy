@@ -147,7 +147,7 @@
     "message": "Din totdeauna"
   },
   "statLifetimeRam": {
-    "message": "Total RAM economisit"
+    "message": "Memorie eliberată în timp (estimare)"
   },
   "ramEstimateTooltip": {
     "message": "Estimat folosind ~150 MB pe filă suspendată. Economiile reale variază în funcție de pagină."
@@ -444,7 +444,7 @@
     "message": "<strong>Filele inactive timp de 15 de minute</strong> sunt suspendate automat"
   },
   "featureZeroRam": {
-    "message": "<strong>Filele suspendate nu folosesc RAM</strong> dar rămân în bara de file"
+    "message": "<strong>Filele suspendate eliberează cea mai mare parte din memorie</strong> dar rămân în bara de file"
   },
   "featureClickToWake": {
     "message": "<strong>Click pe orice filă suspendată</strong> pentru a o trezi"
@@ -785,13 +785,13 @@
     "message": "Site-ul ăsta e pe lista ta de nesuspendat niciodată. Scoate-l ca să suspenzi fila."
   },
   "cantSuspendNoOtherTab": {
-    "message": "E nevoie de altă filă deschisă la care să comuți întâi. Chrome nu poate suspenda fila la care te uiți."
+    "message": "E nevoie de altă filă deschisă la care să comuți întâi. Browserul nu poate suspenda fila la care te uiți."
   },
   "openSettingsAction": {
     "message": "Deschide setările"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome nu a suspendat fila asta"
+    "message": "Browserul nu a suspendat fila asta"
   },
   "suspendFailedLoading": {
     "message": "Încă se încarcă - încearcă din nou peste puțin"
@@ -842,7 +842,7 @@
     "message": "1 minut"
   },
   "shortcutsHint": {
-    "message": "Chrome le gestionează. Personalizează deschide chrome://extensions/shortcuts, unde poți schimba sau șterge fiecare scurtătură."
+    "message": "Browserul le gestionează. Personalizează deschide chrome://extensions/shortcuts, unde poți schimba sau șterge fiecare scurtătură."
   },
   "shortcutUnset": {
     "message": "Nesetat"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Lista albă este plină pentru sincronizarea Chrome. Elimină câteva site-uri și încearcă din nou."
+    "message": "Lista albă este plină pentru sincronizarea browserului. Elimină câteva site-uri și încearcă din nou."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Toate aceste site-uri sunt deja în lista albă"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ nerecunoscute",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Nesalvat"
+  },
+  "badgeStillLoading": {
+    "message": "Se încarcă"
+  },
+  "badgeNotLoaded": {
+    "message": "Neîncărcată"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Fila asta are date nesalvate, așa că Drowzy o ține trează. Poți schimba asta cu Protejează filele cu formulare din Setări."
+  },
+  "waitStillLoadingHint": {
+    "message": "Fila asta încă se încarcă. Drowzy va încerca din nou peste un minut."
+  },
+  "waitNotLoadedHint": {
+    "message": "Fila asta nu s-a încărcat încă, deci nu folosește memorie. Drowzy o lasă în pace."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Suspendarea automată este oprită, deci filele adorm doar când ceri tu."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ din $TOTAL$ file restaurate",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Fă clic din nou pentru a înlocui filele din această fereastră"
+  },
+  "importSessionsTitle": {
+    "message": "Importă sesiuni din clipboard"
+  },
+  "importedSessions": {
+    "message": "Sesiuni importate: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Nu s-au găsit sesiuni Drowzy în clipboard"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Aceste sesiuni sunt deja salvate"
+  },
+  "openSidePanel": {
+    "message": "Deschide în panoul lateral"
+  },
+  "sidePanelUnavailable": {
+    "message": "Panoul lateral nu a putut fi deschis"
+  },
+  "changelog160Title1": {
+    "message": "Trează înseamnă trează"
+  },
+  "changelog160Desc1": {
+    "message": "O filă pe care o ții trează este acum ferită și de economisirea de memorie a browserului însuși, nu doar de Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Vezi de ce o filă e încă trează"
+  },
+  "changelog160Desc2": {
+    "message": "O filă care ar trebui să adoarmă, dar e reținută de date nesalvate sau de o încărcare lentă, arată acum motivul în listă. Când suspendarea automată e oprită, îți spune asta un rând de deasupra listei."
+  },
+  "changelog160Title3": {
+    "message": "Închiderea filelor duplicate este mai atentă"
+  },
+  "changelog160Desc3": {
+    "message": "Acum închide doar filele cu exact aceeași adresă. E-mailurile diferite sau paginile diferite ale aceleiași aplicații rămân deschise, iar o filă care redă sunet nu este închisă niciodată."
+  },
+  "changelog160Title4": {
+    "message": "Mai blând în Opera și Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "În Opera, Drowzy așteaptă acum câteva minute după pornirea browserului înainte să adoarmă file, apoi o face pe rând, câte una."
+  },
+  "changelog160Title5": {
+    "message": "Și lucrurile mărunte"
+  },
+  "changelog160Desc5": {
+    "message": "Importă sesiuni salvate din clipboard, deschide panoul lateral din fereastra pop-up, iar Înlocuiește cere acum un al doilea clic înainte să-ți închidă filele. Importul listei albe acceptă site-uri separate prin spații, iar cronometrul din lista de file și pagina de bun venit apar corect în orice limbă."
   }
 }

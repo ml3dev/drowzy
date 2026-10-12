@@ -147,7 +147,7 @@
     "message": "ሁል ጊዜ"
   },
   "statLifetimeRam": {
-    "message": "የእድሜ ልክ RAM ቁጠባ"
+    "message": "በጊዜ ሂደት የተለቀቀ ማህደረ ትውስታ (ግምት)"
   },
   "ramEstimateTooltip": {
     "message": "በግምት 150 ሜባ በታገደ ትር በመጠቀም የተሰላ። ትክክለኛ ቁጠባ በገጽ ይለያያል።"
@@ -444,7 +444,7 @@
     "message": "<strong>ለ15 ደቂቃዎች ስራ-ፈት የሆኑ ትሮች</strong> በራስ-ሰር ይቋረጣሉ"
   },
   "featureZeroRam": {
-    "message": "<strong>የተቋረጡ ትሮች ዜሮ RAM ይጠቀማሉ</strong> ግን በትር አሞሌዎ ውስጥ ይቆያሉ"
+    "message": "<strong>የተቋረጡ ትሮች አብዛኛውን ማህደረ ትውስታቸውን ይለቃሉ</strong> ግን በትር አሞሌዎ ውስጥ ይቆያሉ"
   },
   "featureClickToWake": {
     "message": "<strong>ማንኛውንም የተቋረጠ ትር ጠቅ ያድርጉ</strong> ለመቀስቀስ"
@@ -785,13 +785,13 @@
     "message": "ይህ ጣቢያ በፍጹም አታስተኛ ዝርዝርህ ውስጥ ነው። ይህን ትር ለማስተኛት አስወግደው።"
   },
   "cantSuspendNoOtherTab": {
-    "message": "መጀመሪያ የሚቀየርበት ሌላ ክፍት ትር ያስፈልጋል። Chrome እየተመለከትከው ያለውን ትር ማስተኛት አይችልም።"
+    "message": "መጀመሪያ የሚቀየርበት ሌላ ክፍት ትር ያስፈልጋል። አሳሹ እየተመለከትከው ያለውን ትር ማስተኛት አይችልም።"
   },
   "openSettingsAction": {
     "message": "ቅንብሮችን ክፈት"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome ይህን ትር አላስተኛውም"
+    "message": "አሳሽዎ ይህን ትር አላስተኛውም"
   },
   "suspendFailedLoading": {
     "message": "አሁንም እየጫነ ነው - ትንሽ ቆይተህ እንደገና ሞክር"
@@ -842,7 +842,7 @@
     "message": "1 ደቂቃ"
   },
   "shortcutsHint": {
-    "message": "እነዚህን Chrome ያስተዳድራል። አብጅ chrome://extensions/shortcuts ይከፍታል፣ እዚያ እያንዳንዱን አቋራጭ መቀየር ወይም ማጥፋት ትችላለህ።"
+    "message": "እነዚህን አሳሽዎ ያስተዳድራል። አብጅ chrome://extensions/shortcuts ይከፍታል፣ እዚያ እያንዳንዱን አቋራጭ መቀየር ወይም ማጥፋት ትችላለህ።"
   },
   "shortcutUnset": {
     "message": "አልተቀናበረም"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "ነጭ ዝርዝሩ ለChrome ማመሳሰል ሞልቷል። ጥቂት ጣቢያዎችን አስወግደህ እንደገና ሞክር።"
+    "message": "ነጭ ዝርዝሩ ለአሳሽ ማመሳሰል ሞልቷል። ጥቂት ጣቢያዎችን አስወግደህ እንደገና ሞክር።"
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ ደ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "እነዚህ ሁሉ ድረ-ገጾች ቀድሞውኑ በነጭ ዝርዝርዎ ውስጥ አሉ"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ አልታወቁም",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "ያልተቀመጠ"
+  },
+  "badgeStillLoading": {
+    "message": "በመጫን ላይ"
+  },
+  "badgeNotLoaded": {
+    "message": "አልተጫነም"
+  },
+  "waitUnsavedInputHint": {
+    "message": "ይህ ትር ያልተቀመጠ ግብዓት አለው፣ ስለዚህ Drowzy ንቁ ያቆየዋል። ይህን በቅንብሮች ውስጥ ባለው ቅጾች ያላቸውን ትሮች ጠብቅ መቀየር ትችላለህ።"
+  },
+  "waitStillLoadingHint": {
+    "message": "ይህ ትር ገና በመጫን ላይ ነው። Drowzy በአንድ ደቂቃ ውስጥ እንደገና ይሞክራል።"
+  },
+  "waitNotLoadedHint": {
+    "message": "ይህ ትር ገና አልተጫነም፣ ስለዚህ ማህደረ ትውስታ እየተጠቀመ አይደለም። Drowzy አይነካውም።"
+  },
+  "autoSuspendOffNotice": {
+    "message": "በራስ-ሰር ማቋረጥ ጠፍቷል፣ ስለዚህ ትሮች የሚተኙት ስትጠይቅ ብቻ ነው።"
+  },
+  "restoredSomeTabs": {
+    "message": "ከ$TOTAL$ ትሮች $COUNT$ ተመልሰዋል",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "የዚህን መስኮት ትሮች ለመተካት እንደገና ጠቅ ያድርጉ"
+  },
+  "importSessionsTitle": {
+    "message": "ክፍለ ጊዜዎችን ከቅንጥብ ሰሌዳ አስገባ"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ ክፍለ ጊዜ(ዎች) ገብተዋል",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "በቅንጥብ ሰሌዳው ውስጥ የDrowzy ክፍለ ጊዜዎች አልተገኙም"
+  },
+  "sessionsAlreadySaved": {
+    "message": "እነዚህ ክፍለ ጊዜዎች አስቀድመው ተቀምጠዋል"
+  },
+  "openSidePanel": {
+    "message": "በጎን ፓነል ክፈት"
+  },
+  "sidePanelUnavailable": {
+    "message": "የጎን ፓነሉ ሊከፈት አልቻለም"
+  },
+  "changelog160Title1": {
+    "message": "ንቁ አቆይ ማለት ንቁ ማለት ነው"
+  },
+  "changelog160Desc1": {
+    "message": "ንቁ የምታቆየው ትር አሁን ከDrowzy ብቻ ሳይሆን ከአሳሽዎ የራሱ ማህደረ ትውስታ ቁጠባም ይጠበቃል።"
+  },
+  "changelog160Title2": {
+    "message": "አንድ ትር ለምን ንቁ እንደሆነ ይመልከቱ"
+  },
+  "changelog160Desc2": {
+    "message": "መተኛት የነበረበት ነገር ግን ባልተቀመጠ ግብዓት ወይም በዝግ ጭነት የተያዘ ትር አሁን በዝርዝሩ ውስጥ ምክንያቱን ይናገራል። በራስ-ሰር ማቋረጥ ሲጠፋ ከዝርዝሩ በላይ ያለ መስመር ይነግርዎታል።"
+  },
+  "changelog160Title3": {
+    "message": "ድግግሞሽ ታቦችን መዝጋት የበለጠ ጥንቃቄ ያደርጋል"
+  },
+  "changelog160Desc3": {
+    "message": "አሁን ትክክለኛ ተመሳሳይ አድራሻ ያላቸውን ታቦች ብቻ ይዘጋል። የተለያዩ ኢሜይሎች ወይም የአንድ መተግበሪያ ገጾች ክፍት ይቆያሉ፣ ድምፅ የሚያጫውት ታብም በጭራሽ አይዘጋም።"
+  },
+  "changelog160Title4": {
+    "message": "በOpera እና Opera GX ላይ የበለጠ ለስላሳ"
+  },
+  "changelog160Desc4": {
+    "message": "በOpera ውስጥ Drowzy አሳሹ ከጀመረ በኋላ ታቦችን ከማስተኛቱ በፊት ጥቂት ደቂቃዎች ይጠብቃል፣ ከዚያም አንድ በአንድ ያስተኛል።"
+  },
+  "changelog160Title5": {
+    "message": "እና ትናንሽ ነገሮች"
+  },
+  "changelog160Desc5": {
+    "message": "የተቀመጡ ክፍለ ጊዜዎችን ከቅንጥብ ሰሌዳ አስገባ፣ የጎን ፓነሉን ከብቅ-ባዩ ክፈት፣ ተካ ደግሞ ትሮችህን ከመዝጋቱ በፊት ሁለተኛ ጠቅታ ይጠይቃል። የነጭ ዝርዝር ማስመጣት በክፍተት የተለዩ ጣቢያዎችን ይቀበላል፣ የትር ዝርዝሩ ሰዓት ቆጣሪ እና የእንኳን ደህና መጡ ገጹ በሁሉም ቋንቋዎች በትክክል ይነበባሉ።"
   }
 }

@@ -147,7 +147,7 @@
     "message": "Skupaj"
   },
   "statLifetimeRam": {
-    "message": "Skupaj prihranjenega RAM-a"
+    "message": "Sčasoma sproščen pomnilnik (ocena)"
   },
   "ramEstimateTooltip": {
     "message": "Ocenjeno z uporabo ~150 MB na zaustavljen zavihek. Dejanski prihranki se razlikujejo glede na stran."
@@ -444,7 +444,7 @@
     "message": "<strong>Zavihki, neaktivni 15 minut</strong>, se samodejno zamrznejo"
   },
   "featureZeroRam": {
-    "message": "<strong>Zamrznjeni zavihki ne porabljajo RAM</strong>, a ostanejo v vrstici zavihkov"
+    "message": "<strong>Zamrznjeni zavihki sprostijo večino svojega pomnilnika</strong>, a ostanejo v vrstici zavihkov"
   },
   "featureClickToWake": {
     "message": "<strong>Klikni na katerikoli zamrznjen zavihek</strong> za prebujanje"
@@ -785,13 +785,13 @@
     "message": "To mesto je na tvojem seznamu nikoli ne uspavaj. Odstrani ga, da uspavaš ta zavihek."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Potreben je drug odprt zavihek, na katerega lahko preklopiš. Chrome ne more uspavati zavihka, ki ga gledaš."
+    "message": "Potreben je drug odprt zavihek, na katerega lahko preklopiš. Brskalnik ne more uspavati zavihka, ki ga gledaš."
   },
   "openSettingsAction": {
     "message": "Odpri nastavitve"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome ni uspaval tega zavihka"
+    "message": "Brskalnik ni uspaval tega zavihka"
   },
   "suspendFailedLoading": {
     "message": "Še se nalaga - poskusi čez trenutek"
@@ -842,7 +842,7 @@
     "message": "1 minuti"
   },
   "shortcutsHint": {
-    "message": "Te upravlja Chrome. Prilagodi odpre chrome://extensions/shortcuts, kjer lahko vsako bližnjico spremeniš ali počistiš."
+    "message": "Te upravlja brskalnik. Prilagodi odpre chrome://extensions/shortcuts, kjer lahko vsako bližnjico spremeniš ali počistiš."
   },
   "shortcutUnset": {
     "message": "Ni nastavljeno"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Beli seznam je poln za sinhronizacijo Chroma. Odstrani nekaj mest in poskusi znova."
+    "message": "Beli seznam je poln za sinhronizacijo brskalnika. Odstrani nekaj mest in poskusi znova."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Vsa ta spletna mesta so že na vašem belem seznamu"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ neprepoznanih",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Neshranjeno"
+  },
+  "badgeStillLoading": {
+    "message": "Nalaganje"
+  },
+  "badgeNotLoaded": {
+    "message": "Ni naložen"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Ta zavihek ima neshranjen vnos, zato ga Drowzy pusti budnega. To lahko spremeniš z možnostjo Zaščiti zavihke z obrazci v Nastavitvah."
+  },
+  "waitStillLoadingHint": {
+    "message": "Ta zavihek se še nalaga. Drowzy bo poskusil znova čez minuto."
+  },
+  "waitNotLoadedHint": {
+    "message": "Ta zavihek še ni naložen, zato ne porablja pomnilnika. Drowzy ga pusti pri miru."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Samodejna zamrznitev je izklopljena, zato zavihki zaspijo le, ko to zahtevaš."
+  },
+  "restoredSomeTabs": {
+    "message": "Obnovljenih $COUNT$ od $TOTAL$ zavihkov",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Znova klikni, da zamenjaš zavihke v tem oknu"
+  },
+  "importSessionsTitle": {
+    "message": "Uvozi seje iz odložišča"
+  },
+  "importedSessions": {
+    "message": "Uvoženih sej: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "V odložišču ni sej Drowzy"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Te seje so že shranjene"
+  },
+  "openSidePanel": {
+    "message": "Odpri v stranski plošči"
+  },
+  "sidePanelUnavailable": {
+    "message": "Stranske plošče ni bilo mogoče odpreti"
+  },
+  "changelog160Title1": {
+    "message": "Buden pomeni buden"
+  },
+  "changelog160Desc1": {
+    "message": "Zavihek, ki ga ohranjaš budnega, je zdaj zaščiten tudi pred varčevanjem pomnilnika samega brskalnika, ne le pred Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Poglej, zakaj je zavihek še buden"
+  },
+  "changelog160Desc2": {
+    "message": "Zavihek, ki bi moral zaspati, a ga zadržuje neshranjen vnos ali počasno nalaganje, zdaj na seznamu navede razlog. Ko je samodejna zamrznitev izklopljena, ti to pove vrstica nad seznamom."
+  },
+  "changelog160Title3": {
+    "message": "Zapiranje podvojenih zavihkov je bolj previdno"
+  },
+  "changelog160Desc3": {
+    "message": "Zdaj zapira le zavihke s povsem enakim naslovom. Različna e-poštna sporočila ali strani iste aplikacije ostanejo odprte, zavihek, ki predvaja zvok, pa se nikoli ne zapre."
+  },
+  "changelog160Title4": {
+    "message": "Nežnejši v Operi in Operi GX"
+  },
+  "changelog160Desc4": {
+    "message": "V Operi Drowzy zdaj po zagonu brskalnika počaka nekaj minut, preden uspava zavihke, nato pa to počne enega za drugim."
+  },
+  "changelog160Title5": {
+    "message": "In malenkosti"
+  },
+  "changelog160Desc5": {
+    "message": "Uvozi shranjene seje iz odložišča, odpri stransko ploščo iz pojavnega okna, Zamenjaj pa zdaj pred zapiranjem zavihkov zahteva drugi klik. Uvoz belega seznama sprejme mesta, ločena s presledki, časovnik na seznamu zavihkov in pozdravna stran pa se pravilno prikažeta v vseh jezikih."
   }
 }

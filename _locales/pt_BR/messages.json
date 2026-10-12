@@ -147,7 +147,7 @@
     "message": "Total"
   },
   "statLifetimeRam": {
-    "message": "RAM total economizada"
+    "message": "Memória liberada ao longo do tempo (est.)"
   },
   "ramEstimateTooltip": {
     "message": "Estimado usando ~150 MB por aba suspensa. A economia real varia por página."
@@ -444,7 +444,7 @@
     "message": "<strong>Abas inativas por 15 minutos</strong> são suspensas automaticamente"
   },
   "featureZeroRam": {
-    "message": "<strong>Abas suspensas usam zero RAM</strong>, mas permanecem na barra de abas"
+    "message": "<strong>Abas suspensas liberam a maior parte da memória</strong>, mas permanecem na barra de abas"
   },
   "featureClickToWake": {
     "message": "<strong>Clique em qualquer aba suspensa</strong> para despertá-la"
@@ -785,13 +785,13 @@
     "message": "Este site está na sua lista de nunca suspender. Remova-o para suspender esta aba."
   },
   "cantSuspendNoOtherTab": {
-    "message": "É preciso outra aba aberta para trocar antes. O Chrome não consegue suspender a aba que você está vendo."
+    "message": "É preciso outra aba aberta para trocar antes. O navegador não consegue suspender a aba que você está vendo."
   },
   "openSettingsAction": {
     "message": "Abrir configurações"
   },
   "suspendFailedGeneric": {
-    "message": "O Chrome não quis suspender esta aba"
+    "message": "O navegador não quis suspender esta aba"
   },
   "suspendFailedLoading": {
     "message": "Ainda carregando - tente de novo daqui a pouco"
@@ -842,7 +842,7 @@
     "message": "1 minuto"
   },
   "shortcutsHint": {
-    "message": "O Chrome gerencia esses atalhos. Personalizar abre chrome://extensions/shortcuts, onde você pode alterar ou remover cada atalho."
+    "message": "O navegador gerencia esses atalhos. Personalizar abre chrome://extensions/shortcuts, onde você pode alterar ou remover cada atalho."
   },
   "shortcutUnset": {
     "message": "Não definido"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "A lista branca está cheia para a sincronização do Chrome. Remova alguns sites e tente de novo."
+    "message": "A lista branca está cheia para a sincronização do navegador. Remova alguns sites e tente de novo."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Todos esses sites já estão na sua lista de permissões"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ não reconhecido(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Não salvo"
+  },
+  "badgeStillLoading": {
+    "message": "Carregando"
+  },
+  "badgeNotLoaded": {
+    "message": "Não carregada"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Esta aba tem dados não salvos, então o Drowzy a mantém acordada. Você pode mudar isso em Proteger abas com formulários nas Configurações."
+  },
+  "waitStillLoadingHint": {
+    "message": "Esta aba ainda está carregando. O Drowzy vai tentar de novo em um minuto."
+  },
+  "waitNotLoadedHint": {
+    "message": "Esta aba ainda não carregou, então não está usando memória. O Drowzy não mexe nela."
+  },
+  "autoSuspendOffNotice": {
+    "message": "A suspensão automática está desligada, então as abas só dormem quando você pede."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ de $TOTAL$ abas restauradas",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Clique de novo para substituir as abas desta janela"
+  },
+  "importSessionsTitle": {
+    "message": "Importar sessões da área de transferência"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ sessão(ões) importada(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Nenhuma sessão do Drowzy encontrada na área de transferência"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Essas sessões já estão salvas"
+  },
+  "openSidePanel": {
+    "message": "Abrir no painel lateral"
+  },
+  "sidePanelUnavailable": {
+    "message": "Não foi possível abrir o painel lateral"
+  },
+  "changelog160Title1": {
+    "message": "Acordada quer dizer acordada"
+  },
+  "changelog160Desc1": {
+    "message": "Uma aba que você mantém acordada agora também fica a salvo da economia de memória do próprio navegador, não só do Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Veja por que uma aba ainda está acordada"
+  },
+  "changelog160Desc2": {
+    "message": "Uma aba que já deveria dormir, mas está presa por dados não salvos ou por um carregamento lento, agora mostra o motivo na lista. Quando a suspensão automática está desligada, uma linha acima da lista avisa você."
+  },
+  "changelog160Title3": {
+    "message": "Fechar abas duplicadas ficou mais cuidadoso"
+  },
+  "changelog160Desc3": {
+    "message": "Agora fecha só abas com exatamente o mesmo endereço. E-mails diferentes ou páginas diferentes do mesmo app continuam abertos, e uma aba tocando som nunca é fechada."
+  },
+  "changelog160Title4": {
+    "message": "Mais suave no Opera e no Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "No Opera, o Drowzy agora espera alguns minutos depois que o navegador abre antes de pôr abas para dormir, e depois faz isso uma aba de cada vez."
+  },
+  "changelog160Title5": {
+    "message": "E as coisas pequenas"
+  },
+  "changelog160Desc5": {
+    "message": "Importe sessões salvas da área de transferência, abra o painel lateral pelo pop-up, e Substituir agora pede um segundo clique antes de fechar suas abas. A importação da lista de permissões aceita sites separados por espaços, e o timer da lista de abas e a página de boas-vindas aparecem corretamente em todos os idiomas."
   }
 }

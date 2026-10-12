@@ -147,7 +147,7 @@
     "message": "Totalt"
   },
   "statLifetimeRam": {
-    "message": "Totalt sparat RAM"
+    "message": "Minne frigjort över tid (uppsk.)"
   },
   "ramEstimateTooltip": {
     "message": "Uppskattat med ~150 MB per suspenderad flik. Faktiska besparingar varierar per sida."
@@ -444,7 +444,7 @@
     "message": "<strong>Flikar inaktiva i 15 minuter</strong> suspenderas automatiskt"
   },
   "featureZeroRam": {
-    "message": "<strong>Suspenderade flikar använder noll RAM</strong> men finns kvar i flikfältet"
+    "message": "<strong>Suspenderade flikar frigör det mesta av sitt minne</strong> men finns kvar i flikfältet"
   },
   "featureClickToWake": {
     "message": "<strong>Klicka på valfri suspenderad flik</strong> för att väcka den"
@@ -785,13 +785,13 @@
     "message": "Den här webbplatsen finns på din aldrig-vila-lista. Ta bort den för att låta fliken vila."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Det behövs en annan öppen flik att växla till först. Chrome kan inte låta fliken du tittar på vila."
+    "message": "Det behövs en annan öppen flik att växla till först. Webbläsaren kan inte låta fliken du tittar på vila."
   },
   "openSettingsAction": {
     "message": "Öppna inställningar"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome ville inte låta den här fliken vila"
+    "message": "Webbläsaren ville inte låta den här fliken vila"
   },
   "suspendFailedLoading": {
     "message": "Läser fortfarande in - försök igen om en stund"
@@ -842,7 +842,7 @@
     "message": "1 minut"
   },
   "shortcutsHint": {
-    "message": "Chrome hanterar de här. Anpassa öppnar chrome://extensions/shortcuts, där du kan ändra eller rensa varje kortkommando."
+    "message": "Webbläsaren hanterar de här. Anpassa öppnar chrome://extensions/shortcuts, där du kan ändra eller rensa varje kortkommando."
   },
   "shortcutUnset": {
     "message": "Inte inställt"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Vitlistan är full för Chrome-synkronisering. Ta bort några webbplatser och försök igen."
+    "message": "Vitlistan är full för webbläsarens synkronisering. Ta bort några webbplatser och försök igen."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Alla dessa webbplatser finns redan på din vitlista"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ känns inte igen",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Ej sparat"
+  },
+  "badgeStillLoading": {
+    "message": "Läser in"
+  },
+  "badgeNotLoaded": {
+    "message": "Ej inläst"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Den här fliken har osparad inmatning, så Drowzy håller den vaken. Du kan ändra det med Skydda flikar med formulär i Inställningar."
+  },
+  "waitStillLoadingHint": {
+    "message": "Den här fliken läses fortfarande in. Drowzy försöker igen om en minut."
+  },
+  "waitNotLoadedHint": {
+    "message": "Den här fliken har inte lästs in än, så den använder inget minne. Drowzy låter den vara."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Autosuspendering är avstängd, så flikar vilar bara när du ber om det."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ av $TOTAL$ flikar återställda",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Klicka igen för att ersätta flikarna i det här fönstret"
+  },
+  "importSessionsTitle": {
+    "message": "Importera sessioner från urklipp"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ session(er) importerade",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Inga Drowzy-sessioner hittades i urklipp"
+  },
+  "sessionsAlreadySaved": {
+    "message": "De här sessionerna är redan sparade"
+  },
+  "openSidePanel": {
+    "message": "Öppna i sidopanelen"
+  },
+  "sidePanelUnavailable": {
+    "message": "Sidopanelen kunde inte öppnas"
+  },
+  "changelog160Title1": {
+    "message": "Vaken betyder vaken"
+  },
+  "changelog160Desc1": {
+    "message": "En flik du håller vaken är nu också skyddad mot webbläsarens egen minnesbesparing, inte bara mot Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Se varför en flik fortfarande är vaken"
+  },
+  "changelog160Desc2": {
+    "message": "En flik som borde vila men hålls tillbaka av osparad inmatning eller en långsam inläsning visar nu orsaken i listan. När autosuspendering är avstängd säger en rad ovanför listan det."
+  },
+  "changelog160Title3": {
+    "message": "Stäng dubblettflikar är försiktigare"
+  },
+  "changelog160Desc3": {
+    "message": "Den stänger nu bara flikar med exakt samma adress. Olika mejl eller sidor i samma app förblir öppna, och en flik som spelar ljud stängs aldrig."
+  },
+  "changelog160Title4": {
+    "message": "Skonsammare i Opera och Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "I Opera väntar Drowzy nu några minuter efter att webbläsaren startat innan flikar läggs i viloläge, och gör det sedan en flik i taget."
+  },
+  "changelog160Title5": {
+    "message": "Och det lilla"
+  },
+  "changelog160Desc5": {
+    "message": "Importera sparade sessioner från urklipp, öppna sidopanelen från popup-fönstret, och Ersätt ber nu om ett andra klick innan dina flikar stängs. Import till vitlistan tar emot webbplatser åtskilda med mellanslag, och timern i fliklistan och välkomstsidan visas rätt på alla språk."
   }
 }

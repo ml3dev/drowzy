@@ -147,7 +147,7 @@
     "message": "Total"
   },
   "statLifetimeRam": {
-    "message": "RAM total poupada"
+    "message": "Memória libertada ao longo do tempo (est.)"
   },
   "ramEstimateTooltip": {
     "message": "Estimado usando ~150 MB por separador suspenso. A poupança real varia por página."
@@ -444,7 +444,7 @@
     "message": "<strong>Separadores inativos durante 15 minutos</strong> são automaticamente suspensos"
   },
   "featureZeroRam": {
-    "message": "<strong>Separadores suspensos usam zero RAM</strong>, mas permanecem na barra de separadores"
+    "message": "<strong>Separadores suspensos libertam a maior parte da memória</strong>, mas permanecem na barra de separadores"
   },
   "featureClickToWake": {
     "message": "<strong>Clique em qualquer separador suspenso</strong> para o acordar"
@@ -785,13 +785,13 @@
     "message": "Este site está na sua lista de nunca suspender. Remova-o para suspender este separador."
   },
   "cantSuspendNoOtherTab": {
-    "message": "É preciso outro separador aberto para onde mudar. O Chrome não consegue suspender o separador que está a ver."
+    "message": "É preciso outro separador aberto para onde mudar. O navegador não consegue suspender o separador que está a ver."
   },
   "openSettingsAction": {
     "message": "Abrir definições"
   },
   "suspendFailedGeneric": {
-    "message": "O Chrome não quis suspender este separador"
+    "message": "O navegador não quis suspender este separador"
   },
   "suspendFailedLoading": {
     "message": "Ainda a carregar - tente novamente daqui a pouco"
@@ -842,7 +842,7 @@
     "message": "1 minuto"
   },
   "shortcutsHint": {
-    "message": "O Chrome gere estes atalhos. Personalizar abre chrome://extensions/shortcuts, onde pode alterar ou limpar cada atalho."
+    "message": "O navegador gere estes atalhos. Personalizar abre chrome://extensions/shortcuts, onde pode alterar ou limpar cada atalho."
   },
   "shortcutUnset": {
     "message": "Não definido"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "A lista branca está cheia para a sincronização do Chrome. Remova alguns sites e tente novamente."
+    "message": "A lista branca está cheia para a sincronização do navegador. Remova alguns sites e tente novamente."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Todos estes sites já estão na sua lista branca"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ não reconhecido(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Não guardado"
+  },
+  "badgeStillLoading": {
+    "message": "A carregar"
+  },
+  "badgeNotLoaded": {
+    "message": "Não carregado"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Este separador tem dados não guardados, por isso o Drowzy mantém-no acordado. Pode alterar isto em Proteger separadores com formulários nas Definições."
+  },
+  "waitStillLoadingHint": {
+    "message": "Este separador ainda está a carregar. O Drowzy volta a tentar daqui a um minuto."
+  },
+  "waitNotLoadedHint": {
+    "message": "Este separador ainda não carregou, por isso não está a usar memória. O Drowzy não lhe toca."
+  },
+  "autoSuspendOffNotice": {
+    "message": "A suspensão automática está desligada, por isso os separadores só adormecem quando pedir."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ de $TOTAL$ separadores restaurados",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Clique novamente para substituir os separadores desta janela"
+  },
+  "importSessionsTitle": {
+    "message": "Importar sessões da área de transferência"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ sessão(ões) importada(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Nenhuma sessão do Drowzy encontrada na área de transferência"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Estas sessões já estão guardadas"
+  },
+  "openSidePanel": {
+    "message": "Abrir no painel lateral"
+  },
+  "sidePanelUnavailable": {
+    "message": "Não foi possível abrir o painel lateral"
+  },
+  "changelog160Title1": {
+    "message": "Acordado quer dizer acordado"
+  },
+  "changelog160Desc1": {
+    "message": "Um separador que mantém acordado fica agora também a salvo da poupança de memória do próprio navegador, e não só do Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Veja porque é que um separador continua acordado"
+  },
+  "changelog160Desc2": {
+    "message": "Um separador que já devia adormecer, mas está retido por dados não guardados ou por um carregamento lento, mostra agora o motivo na lista. Quando a suspensão automática está desligada, uma linha acima da lista indica-o."
+  },
+  "changelog160Title3": {
+    "message": "Fechar separadores duplicados ficou mais cuidadoso"
+  },
+  "changelog160Desc3": {
+    "message": "Agora fecha apenas separadores com exatamente o mesmo endereço. E-mails diferentes ou páginas diferentes da mesma aplicação ficam abertos, e um separador a reproduzir som nunca é fechado."
+  },
+  "changelog160Title4": {
+    "message": "Mais suave no Opera e no Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "No Opera, o Drowzy espera agora alguns minutos depois de o navegador iniciar antes de pôr separadores a dormir, e depois fá-lo um separador de cada vez."
+  },
+  "changelog160Title5": {
+    "message": "E as pequenas coisas"
+  },
+  "changelog160Desc5": {
+    "message": "Importe sessões guardadas da área de transferência, abra o painel lateral a partir do pop-up, e Substituir pede agora um segundo clique antes de fechar os seus separadores. A importação da lista branca aceita sites separados por espaços, e o temporizador da lista de separadores e a página de boas-vindas aparecem corretamente em todos os idiomas."
   }
 }

@@ -147,7 +147,7 @@
     "message": "Iš viso"
   },
   "statLifetimeRam": {
-    "message": "Iš viso išsaugota RAM"
+    "message": "Per laiką atlaisvinta atmintis (apytiksliai)"
   },
   "ramEstimateTooltip": {
     "message": "Apskaičiuota naudojant ~150 MB sustabdytam skirtukui. Tikrasis taupymas skiriasi pagal puslapį."
@@ -444,7 +444,7 @@
     "message": "<strong>15 minučių neaktyvios kortelės</strong> automatiškai sustabdomos"
   },
   "featureZeroRam": {
-    "message": "<strong>Sustabdytos kortelės nenaudoja RAM</strong>, bet lieka kortelių juostoje"
+    "message": "<strong>Sustabdytos kortelės atlaisvina didžiąją dalį savo atminties</strong>, bet lieka kortelių juostoje"
   },
   "featureClickToWake": {
     "message": "<strong>Spustelėkite bet kurią sustabdytą kortelę</strong>, kad ją pažadintumėte"
@@ -785,13 +785,13 @@
     "message": "Ši svetainė yra tavo niekada neužmigdyti sąraše. Pašalink ją, kad ši kortelė užmigtų."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Reikia kitos atidarytos kortelės, į kurią būtų galima pereiti. Chrome negali užmigdyti kortelės, kurią žiūri."
+    "message": "Reikia kitos atidarytos kortelės, į kurią būtų galima pereiti. Naršyklė negali užmigdyti kortelės, kurią žiūri."
   },
   "openSettingsAction": {
     "message": "Atidaryti nustatymus"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome neužmigdė šios kortelės"
+    "message": "Naršyklė neužmigdė šios kortelės"
   },
   "suspendFailedLoading": {
     "message": "Vis dar kraunasi - pabandyk po akimirkos"
@@ -842,7 +842,7 @@
     "message": "1 minutės"
   },
   "shortcutsHint": {
-    "message": "Jas tvarko Chrome. Tinkinti atveria chrome://extensions/shortcuts, kur gali pakeisti arba išvalyti kiekvieną spartųjį klavišą."
+    "message": "Jas tvarko naršyklė. Tinkinti atveria chrome://extensions/shortcuts, kur gali pakeisti arba išvalyti kiekvieną spartųjį klavišą."
   },
   "shortcutUnset": {
     "message": "Nenustatyta"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Baltasis sąrašas Chrome sinchronizavimui pilnas. Pašalink kelias svetaines ir bandyk dar kartą."
+    "message": "Baltasis sąrašas naršyklės sinchronizavimui pilnas. Pašalink kelias svetaines ir bandyk dar kartą."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Visos šios svetainės jau yra jūsų baltajame sąraše"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ neatpažinta",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Neišsaugota"
+  },
+  "badgeStillLoading": {
+    "message": "Įkeliama"
+  },
+  "badgeNotLoaded": {
+    "message": "Neįkelta"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Šioje kortelėje yra neišsaugotų duomenų, todėl Drowzy jos nemigdo. Tai gali pakeisti nustatymu Apsaugoti korteles su formomis skiltyje Nustatymai."
+  },
+  "waitStillLoadingHint": {
+    "message": "Ši kortelė dar įkeliama. Drowzy bandys dar kartą po minutės."
+  },
+  "waitNotLoadedHint": {
+    "message": "Ši kortelė dar neįkelta, todėl nenaudoja atminties. Drowzy jos neliečia."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automatinis sustabdymas išjungtas, todėl kortelės užmiega tik tada, kai paprašai."
+  },
+  "restoredSomeTabs": {
+    "message": "Atkurta $COUNT$ iš $TOTAL$ kortelių",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Spustelėk dar kartą, kad pakeistum šio lango korteles"
+  },
+  "importSessionsTitle": {
+    "message": "Importuoti sesijas iš iškarpinės"
+  },
+  "importedSessions": {
+    "message": "Importuota sesijų: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Iškarpinėje nerasta Drowzy sesijų"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Šios sesijos jau išsaugotos"
+  },
+  "openSidePanel": {
+    "message": "Atidaryti šoniniame skydelyje"
+  },
+  "sidePanelUnavailable": {
+    "message": "Nepavyko atidaryti šoninio skydelio"
+  },
+  "changelog160Title1": {
+    "message": "Pabudusi reiškia pabudusi"
+  },
+  "changelog160Desc1": {
+    "message": "Kortelė, kurią laikai pabudusią, dabar apsaugota ir nuo pačios naršyklės atminties taupymo, o ne tik nuo Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Sužinok, kodėl kortelė dar nemiega"
+  },
+  "changelog160Desc2": {
+    "message": "Kortelė, kuri jau turėtų užmigti, bet ją sulaiko neišsaugoti duomenys ar lėtas įkėlimas, dabar sąraše nurodo priežastį. Kai automatinis sustabdymas išjungtas, tai pasako eilutė virš sąrašo."
+  },
+  "changelog160Title3": {
+    "message": "Pasikartojančių skirtukų uždarymas atsargesnis"
+  },
+  "changelog160Desc3": {
+    "message": "Dabar uždaromi tik skirtukai su lygiai tokiu pačiu adresu. Skirtingi el. laiškai ar tos pačios programos puslapiai lieka atviri, o garsą leidžiantis skirtukas niekada neuždaromas."
+  },
+  "changelog160Title4": {
+    "message": "Švelnesnis Opera ir Opera GX naršyklėse"
+  },
+  "changelog160Desc4": {
+    "message": "Operoje Drowzy dabar po naršyklės paleidimo palaukia kelias minutes ir tik tada migdo skirtukus, po vieną."
+  },
+  "changelog160Title5": {
+    "message": "Ir smulkmenos"
+  },
+  "changelog160Desc5": {
+    "message": "Importuok išsaugotas sesijas iš iškarpinės, atidaryk šoninį skydelį iš iššokančio lango, o Pakeisti dabar prašo antro spustelėjimo prieš uždarant korteles. Baltojo sąrašo importas priima tarpais atskirtas svetaines, o kortelių sąrašo laikmatis ir pasveikinimo puslapis teisingai rodomi visomis kalbomis."
   }
 }

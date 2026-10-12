@@ -147,7 +147,7 @@
     "message": "Insgesamt"
   },
   "statLifetimeRam": {
-    "message": "Gesamter RAM gespart"
+    "message": "Über die Zeit freigegebener Speicher (geschätzt)"
   },
   "ramEstimateTooltip": {
     "message": "Geschätzt mit ~150 MB pro suspendiertem Tab. Tatsächliche Einsparungen variieren je nach Seite."
@@ -444,7 +444,7 @@
     "message": "<strong>Tabs, die 15 Minuten inaktiv sind</strong>, werden automatisch suspendiert"
   },
   "featureZeroRam": {
-    "message": "<strong>Suspendierte Tabs verwenden null RAM</strong>, bleiben aber in Ihrer Tab-Leiste"
+    "message": "<strong>Suspendierte Tabs geben den Großteil ihres Speichers frei</strong>, bleiben aber in Ihrer Tab-Leiste"
   },
   "featureClickToWake": {
     "message": "<strong>Klicken Sie auf einen suspendierten Tab</strong>, um ihn aufzuwecken"
@@ -785,13 +785,13 @@
     "message": "Diese Seite steht auf deiner Nie-schlafen-Liste. Entferne sie, um den Tab schlafen zu legen."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Es muss ein anderer Tab offen sein, zu dem gewechselt werden kann. Chrome kann den Tab, den du gerade ansiehst, nicht schlafen legen."
+    "message": "Es muss ein anderer Tab offen sein, zu dem gewechselt werden kann. Der Browser kann den Tab, den du gerade ansiehst, nicht schlafen legen."
   },
   "openSettingsAction": {
     "message": "Einstellungen öffnen"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome konnte diesen Tab nicht schlafen legen"
+    "message": "Der Browser konnte diesen Tab nicht schlafen legen"
   },
   "suspendFailedLoading": {
     "message": "Lädt noch - versuche es gleich noch einmal"
@@ -842,7 +842,7 @@
     "message": "1 Minute"
   },
   "shortcutsHint": {
-    "message": "Chrome verwaltet diese Kürzel. Anpassen öffnet chrome://extensions/shortcuts, wo du jedes Kürzel ändern oder löschen kannst."
+    "message": "Der Browser verwaltet diese Kürzel. Anpassen öffnet chrome://extensions/shortcuts, wo du jedes Kürzel ändern oder löschen kannst."
   },
   "shortcutUnset": {
     "message": "Nicht belegt"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Die Whitelist ist für die Chrome-Synchronisierung voll. Entferne ein paar Seiten und versuche es erneut."
+    "message": "Die Whitelist ist für die Browser-Synchronisierung voll. Entferne ein paar Seiten und versuche es erneut."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ Min.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Alle diese Seiten sind bereits auf Ihrer Whitelist"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ nicht erkannt",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Ungespeichert"
+  },
+  "badgeStillLoading": {
+    "message": "Lädt"
+  },
+  "badgeNotLoaded": {
+    "message": "Nicht geladen"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Dieser Tab enthält ungespeicherte Eingaben, deshalb lässt Drowzy ihn wach. Das lässt sich mit Tabs mit Formularen schützen in den Einstellungen ändern."
+  },
+  "waitStillLoadingHint": {
+    "message": "Dieser Tab lädt noch. Drowzy versucht es in einer Minute erneut."
+  },
+  "waitNotLoadedHint": {
+    "message": "Dieser Tab ist noch nicht geladen und belegt daher keinen Speicher. Drowzy lässt ihn in Ruhe."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automatisches Suspendieren ist aus, Tabs schlafen also nur, wenn du es willst."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ von $TOTAL$ Tabs wiederhergestellt",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Erneut klicken, um die Tabs dieses Fensters zu ersetzen"
+  },
+  "importSessionsTitle": {
+    "message": "Sitzungen aus der Zwischenablage importieren"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ Sitzung(en) importiert",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Keine Drowzy-Sitzungen in der Zwischenablage gefunden"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Diese Sitzungen sind bereits gespeichert"
+  },
+  "openSidePanel": {
+    "message": "In der Seitenleiste öffnen"
+  },
+  "sidePanelUnavailable": {
+    "message": "Die Seitenleiste konnte nicht geöffnet werden"
+  },
+  "changelog160Title1": {
+    "message": "Wach heißt wach"
+  },
+  "changelog160Desc1": {
+    "message": "Ein Tab, den du wach hältst, ist jetzt auch vor dem eigenen Speichersparen des Browsers geschützt, nicht nur vor Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Sieh, warum ein Tab noch wach ist"
+  },
+  "changelog160Desc2": {
+    "message": "Ein Tab, der schlafen sollte, aber durch ungespeicherte Eingaben oder langsames Laden aufgehalten wird, zeigt den Grund jetzt in der Liste. Ist automatisches Suspendieren aus, sagt dir das eine Zeile über der Liste."
+  },
+  "changelog160Title3": {
+    "message": "Doppelte Tabs schließen ist vorsichtiger"
+  },
+  "changelog160Desc3": {
+    "message": "Es schließt jetzt nur Tabs mit exakt derselben Adresse. Verschiedene E-Mails oder Seiten derselben App bleiben offen, und ein Tab, der Ton abspielt, wird nie geschlossen."
+  },
+  "changelog160Title4": {
+    "message": "Schonender in Opera und Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "In Opera wartet Drowzy nach dem Browserstart jetzt einige Minuten, bevor Tabs schlafen gelegt werden, und macht das dann Tab für Tab."
+  },
+  "changelog160Title5": {
+    "message": "Und die kleinen Dinge"
+  },
+  "changelog160Desc5": {
+    "message": "Gespeicherte Sitzungen aus der Zwischenablage importieren, die Seitenleiste direkt aus dem Popup öffnen, und Ersetzen fragt jetzt mit einem zweiten Klick nach, bevor es deine Tabs schließt. Der Whitelist-Import akzeptiert durch Leerzeichen getrennte Seiten, und der Timer in der Tab-Liste sowie die Willkommensseite werden in jeder Sprache korrekt angezeigt."
   }
 }

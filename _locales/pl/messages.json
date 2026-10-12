@@ -147,7 +147,7 @@
     "message": "Łącznie"
   },
   "statLifetimeRam": {
-    "message": "Łącznie zaoszczędzona pamięć RAM"
+    "message": "Pamięć zwolniona z czasem (szac.)"
   },
   "ramEstimateTooltip": {
     "message": "Oszacowane przy użyciu ~150 MB na zawieszoną kartę. Rzeczywiste oszczędności różnią się w zależności od strony."
@@ -444,7 +444,7 @@
     "message": "<strong>Karty nieaktywne przez 15 minut</strong> są automatycznie usypiane"
   },
   "featureZeroRam": {
-    "message": "<strong>Uśpione karty nie zużywają RAM</strong>, ale pozostają na pasku kart"
+    "message": "<strong>Uśpione karty zwalniają większość swojej pamięci</strong>, ale pozostają na pasku kart"
   },
   "featureClickToWake": {
     "message": "<strong>Kliknij dowolną uśpioną kartę</strong>, aby ją obudzić"
@@ -785,13 +785,13 @@
     "message": "Ta witryna jest na liście \"nigdy nie usypiaj\". Usuń ją, aby uśpić tę kartę."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Potrzebna jest inna otwarta karta, na którą można przełączyć. Chrome nie może uśpić karty, którą właśnie oglądasz."
+    "message": "Potrzebna jest inna otwarta karta, na którą można przełączyć. Przeglądarka nie może uśpić karty, którą właśnie oglądasz."
   },
   "openSettingsAction": {
     "message": "Otwórz ustawienia"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome nie uśpił tej karty"
+    "message": "Przeglądarka nie uśpiła tej karty"
   },
   "suspendFailedLoading": {
     "message": "Wciąż się wczytuje - spróbuj za chwilę"
@@ -842,7 +842,7 @@
     "message": "1 minucie"
   },
   "shortcutsHint": {
-    "message": "Zarządza nimi Chrome. Dostosuj otwiera chrome://extensions/shortcuts, gdzie możesz zmienić lub wyczyścić każdy skrót."
+    "message": "Zarządza nimi przeglądarka. Dostosuj otwiera chrome://extensions/shortcuts, gdzie możesz zmienić lub wyczyścić każdy skrót."
   },
   "shortcutUnset": {
     "message": "Nie ustawiono"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Biała lista jest pełna dla synchronizacji Chrome. Usuń kilka witryn i spróbuj ponownie."
+    "message": "Biała lista jest pełna dla synchronizacji przeglądarki. Usuń kilka witryn i spróbuj ponownie."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Wszystkie te strony są już na Twojej białej liście"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ nierozpoznanych",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Niezapisane"
+  },
+  "badgeStillLoading": {
+    "message": "Ładowanie"
+  },
+  "badgeNotLoaded": {
+    "message": "Niezaładowana"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Ta karta ma niezapisane dane, więc Drowzy jej nie usypia. Możesz to zmienić opcją Chroń karty z formularzami w Ustawieniach."
+  },
+  "waitStillLoadingHint": {
+    "message": "Ta karta wciąż się ładuje. Drowzy spróbuje ponownie za minutę."
+  },
+  "waitNotLoadedHint": {
+    "message": "Ta karta nie została jeszcze załadowana, więc nie zajmuje pamięci. Drowzy jej nie rusza."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automatyczne usypianie jest wyłączone, więc karty zasypiają tylko na Twoje polecenie."
+  },
+  "restoredSomeTabs": {
+    "message": "Przywrócono $COUNT$ z $TOTAL$ kart",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Kliknij ponownie, aby zastąpić karty w tym oknie"
+  },
+  "importSessionsTitle": {
+    "message": "Importuj sesje ze schowka"
+  },
+  "importedSessions": {
+    "message": "Zaimportowano sesji: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "W schowku nie znaleziono sesji Drowzy"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Te sesje są już zapisane"
+  },
+  "openSidePanel": {
+    "message": "Otwórz w panelu bocznym"
+  },
+  "sidePanelUnavailable": {
+    "message": "Nie udało się otworzyć panelu bocznego"
+  },
+  "changelog160Title1": {
+    "message": "Nie usypiaj znaczy nie usypiaj"
+  },
+  "changelog160Desc1": {
+    "message": "Karta, której nie pozwalasz uśpić, jest teraz chroniona także przed oszczędzaniem pamięci samej przeglądarki, a nie tylko przed Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Zobacz, dlaczego karta jeszcze nie śpi"
+  },
+  "changelog160Desc2": {
+    "message": "Karta, która powinna już zasnąć, ale wstrzymują ją niezapisane dane lub wolne ładowanie, pokazuje teraz powód na liście. Gdy automatyczne usypianie jest wyłączone, informuje o tym wiersz nad listą."
+  },
+  "changelog160Title3": {
+    "message": "Zamykanie zduplikowanych kart jest ostrożniejsze"
+  },
+  "changelog160Desc3": {
+    "message": "Teraz zamyka tylko karty z dokładnie tym samym adresem. Różne e-maile lub strony tej samej aplikacji zostają otwarte, a karta odtwarzająca dźwięk nigdy nie jest zamykana."
+  },
+  "changelog160Title4": {
+    "message": "Łagodniej w Operze i Operze GX"
+  },
+  "changelog160Desc4": {
+    "message": "W Operze Drowzy czeka teraz kilka minut po uruchomieniu przeglądarki, zanim zacznie usypiać karty, a potem robi to po jednej."
+  },
+  "changelog160Title5": {
+    "message": "I te drobne rzeczy"
+  },
+  "changelog160Desc5": {
+    "message": "Importuj zapisane sesje ze schowka, otwieraj panel boczny z okienka, a Zastąp prosi teraz o drugie kliknięcie, zanim zamknie Twoje karty. Import białej listy przyjmuje strony oddzielone spacjami, a licznik czasu na liście kart i strona powitalna wyświetlają się poprawnie w każdym języku."
   }
 }

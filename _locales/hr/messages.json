@@ -147,7 +147,7 @@
     "message": "Ukupno"
   },
   "statLifetimeRam": {
-    "message": "Ukupno ušteđenog RAM-a"
+    "message": "Memorija oslobođena tijekom vremena (procjena)"
   },
   "ramEstimateTooltip": {
     "message": "Procijenjeno koristeći ~150 MB po obustavljenoj kartici. Stvarne uštede variraju ovisno o stranici."
@@ -444,7 +444,7 @@
     "message": "<strong>Kartice neaktivne 15 minuta</strong> automatski se suspendiraju"
   },
   "featureZeroRam": {
-    "message": "<strong>Suspendirane kartice koriste nula RAM-a</strong> ali ostaju na traci kartica"
+    "message": "<strong>Suspendirane kartice oslobađaju većinu svoje memorije</strong> ali ostaju na traci kartica"
   },
   "featureClickToWake": {
     "message": "<strong>Kliknite na bilo koju suspendiranu karticu</strong> da je probudite"
@@ -785,13 +785,13 @@
     "message": "Ova stranica je na tvom popisu nikad ne uspavljuj. Ukloni je da uspavaš ovu karticu."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Potrebna je druga otvorena kartica na koju se može prebaciti. Chrome ne može uspavati karticu koju gledaš."
+    "message": "Potrebna je druga otvorena kartica na koju se može prebaciti. Preglednik ne može uspavati karticu koju gledaš."
   },
   "openSettingsAction": {
     "message": "Otvori postavke"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome nije uspavao ovu karticu"
+    "message": "Preglednik nije uspavao ovu karticu"
   },
   "suspendFailedLoading": {
     "message": "Još se učitava - pokušaj za trenutak"
@@ -842,7 +842,7 @@
     "message": "1 minuta"
   },
   "shortcutsHint": {
-    "message": "Njima upravlja Chrome. Prilagodi otvara chrome://extensions/shortcuts, gdje možeš promijeniti ili obrisati svaki prečac."
+    "message": "Njima upravlja preglednik. Prilagodi otvara chrome://extensions/shortcuts, gdje možeš promijeniti ili obrisati svaki prečac."
   },
   "shortcutUnset": {
     "message": "Nije postavljeno"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Bijela lista je puna za Chrome sinkronizaciju. Ukloni nekoliko stranica i pokušaj ponovno."
+    "message": "Bijela lista je puna za sinkronizaciju preglednika. Ukloni nekoliko stranica i pokušaj ponovno."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Sve ove stranice već su na vašem popisu dopuštenih"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ nije prepoznato",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Nespremljeno"
+  },
+  "badgeStillLoading": {
+    "message": "Učitava se"
+  },
+  "badgeNotLoaded": {
+    "message": "Nije učitana"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Ova kartica ima nespremljen unos pa je Drowzy drži budnom. To možeš promijeniti opcijom Zaštiti kartice s obrascima u Postavkama."
+  },
+  "waitStillLoadingHint": {
+    "message": "Ova kartica se još učitava. Drowzy će pokušati ponovno za minutu."
+  },
+  "waitNotLoadedHint": {
+    "message": "Ova kartica još nije učitana pa ne koristi memoriju. Drowzy je ostavlja na miru."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automatska suspenzija je isključena, pa kartice spavaju samo kad ti to zatražiš."
+  },
+  "restoredSomeTabs": {
+    "message": "Vraćeno $COUNT$ od $TOTAL$ kartica",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Klikni ponovno za zamjenu kartica u ovom prozoru"
+  },
+  "importSessionsTitle": {
+    "message": "Uvezi sesije iz međuspremnika"
+  },
+  "importedSessions": {
+    "message": "Uvezeno sesija: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "U međuspremniku nema Drowzy sesija"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Ove sesije su već spremljene"
+  },
+  "openSidePanel": {
+    "message": "Otvori na bočnoj ploči"
+  },
+  "sidePanelUnavailable": {
+    "message": "Bočnu ploču nije moguće otvoriti"
+  },
+  "changelog160Title1": {
+    "message": "Budna znači budna"
+  },
+  "changelog160Desc1": {
+    "message": "Kartica koju držiš budnom sada je zaštićena i od vlastite uštede memorije preglednika, a ne samo od Drowzyja."
+  },
+  "changelog160Title2": {
+    "message": "Pogledaj zašto je kartica još budna"
+  },
+  "changelog160Desc2": {
+    "message": "Kartica koja bi trebala zaspati, ali je zadržava nespremljen unos ili sporo učitavanje, sada na popisu navodi razlog. Kad je automatska suspenzija isključena, to ti kaže redak iznad popisa."
+  },
+  "changelog160Title3": {
+    "message": "Zatvaranje duplikata kartica je opreznije"
+  },
+  "changelog160Desc3": {
+    "message": "Sada zatvara samo kartice s potpuno istom adresom. Različiti e-mailovi ili stranice iste aplikacije ostaju otvoreni, a kartica koja reproducira zvuk nikad se ne zatvara."
+  },
+  "changelog160Title4": {
+    "message": "Nježniji u Operi i Operi GX"
+  },
+  "changelog160Desc4": {
+    "message": "U Operi Drowzy sada nakon pokretanja preglednika pričeka nekoliko minuta prije nego što uspava kartice, a zatim ih uspavljuje jednu po jednu."
+  },
+  "changelog160Title5": {
+    "message": "I sitnice"
+  },
+  "changelog160Desc5": {
+    "message": "Uvezi spremljene sesije iz međuspremnika, otvori bočnu ploču iz skočnog prozora, a Zamijeni sada traži drugi klik prije nego što zatvori tvoje kartice. Uvoz bijele liste prihvaća stranice odvojene razmacima, a mjerač vremena na popisu kartica i stranica dobrodošlice ispravno se prikazuju na svakom jeziku."
   }
 }

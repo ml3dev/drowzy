@@ -147,7 +147,7 @@
     "message": "所有時間"
   },
   "statLifetimeRam": {
-    "message": "總共節省的 RAM"
+    "message": "累計釋放的記憶體（估算）"
   },
   "ramEstimateTooltip": {
     "message": "估計每個暫停分頁使用約 150 MB。實際節省因頁面而異。"
@@ -444,7 +444,7 @@
     "message": "<strong>閒置 15 分鐘的分頁</strong>將自動被休眠"
   },
   "featureZeroRam": {
-    "message": "<strong>已休眠的分頁不佔用 RAM</strong>，但仍保留在分頁列中"
+    "message": "<strong>已休眠的分頁會釋放大部分記憶體</strong>，但仍保留在分頁列中"
   },
   "featureClickToWake": {
     "message": "<strong>點擊任何已休眠的分頁</strong>即可喚醒"
@@ -785,13 +785,13 @@
     "message": "該網站在你的永不休眠清單中。移除後即可休眠此分頁。"
   },
   "cantSuspendNoOtherTab": {
-    "message": "需要另一個開啟的分頁可供切換。Chrome 無法休眠你正在檢視的分頁。"
+    "message": "需要另一個開啟的分頁可供切換。瀏覽器無法休眠你正在檢視的分頁。"
   },
   "openSettingsAction": {
     "message": "開啟設定"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome 未能休眠此分頁"
+    "message": "瀏覽器未能休眠此分頁"
   },
   "suspendFailedLoading": {
     "message": "仍在載入，請稍後再試"
@@ -842,7 +842,7 @@
     "message": "1 分鐘"
   },
   "shortcutsHint": {
-    "message": "這些快速鍵由 Chrome 管理。點選「自訂」會開啟 chrome://extensions/shortcuts，你可以在那裡變更或清除每個快速鍵。"
+    "message": "這些快速鍵由瀏覽器管理。點選「自訂」會開啟 chrome://extensions/shortcuts，你可以在那裡變更或清除每個快速鍵。"
   },
   "shortcutUnset": {
     "message": "未設定"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "白名單已達到 Chrome 同步的容量上限。請移除幾個網站後再試一次。"
+    "message": "白名單已達到瀏覽器同步的容量上限。請移除幾個網站後再試一次。"
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ 分鐘",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "這些網站都已在你的白名單中"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ 個無法辨識",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "未儲存"
+  },
+  "badgeStillLoading": {
+    "message": "載入中"
+  },
+  "badgeNotLoaded": {
+    "message": "未載入"
+  },
+  "waitUnsavedInputHint": {
+    "message": "此分頁有未儲存的輸入，所以 Drowzy 讓它保持喚醒。你可以在設定中的「保護含表單的分頁」變更這項設定。"
+  },
+  "waitStillLoadingHint": {
+    "message": "此分頁仍在載入。Drowzy 會在一分鐘後重試。"
+  },
+  "waitNotLoadedHint": {
+    "message": "此分頁尚未載入，因此不佔用記憶體。Drowzy 不會動它。"
+  },
+  "autoSuspendOffNotice": {
+    "message": "自動休眠已關閉，分頁只會在你要求時休眠。"
+  },
+  "restoredSomeTabs": {
+    "message": "已恢復 $COUNT$/$TOTAL$ 個分頁",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "再次點擊以替換此視窗的分頁"
+  },
+  "importSessionsTitle": {
+    "message": "從剪貼簿匯入工作階段"
+  },
+  "importedSessions": {
+    "message": "已匯入 $COUNT$ 個工作階段",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "剪貼簿中找不到 Drowzy 工作階段"
+  },
+  "sessionsAlreadySaved": {
+    "message": "這些工作階段已經儲存過了"
+  },
+  "openSidePanel": {
+    "message": "在側邊面板中開啟"
+  },
+  "sidePanelUnavailable": {
+    "message": "無法開啟側邊面板"
+  },
+  "changelog160Title1": {
+    "message": "保持喚醒就是真的喚醒"
+  },
+  "changelog160Desc1": {
+    "message": "你保持喚醒的分頁現在也不會被瀏覽器內建的記憶體節省功能休眠，而不只是 Drowzy。"
+  },
+  "changelog160Title2": {
+    "message": "看清分頁為何仍未休眠"
+  },
+  "changelog160Desc2": {
+    "message": "已到休眠時間、但因未儲存的輸入或載入緩慢而未休眠的分頁，現在會在清單中顯示原因。自動休眠關閉時，清單上方會有一行提示。"
+  },
+  "changelog160Title3": {
+    "message": "關閉重複分頁更謹慎了"
+  },
+  "changelog160Desc3": {
+    "message": "現在只會關閉網址完全相同的分頁。不同的郵件或同一應用程式的不同頁面會保持開啟，正在播放聲音的分頁也絕不會被關閉。"
+  },
+  "changelog160Title4": {
+    "message": "在 Opera 和 Opera GX 中更溫和"
+  },
+  "changelog160Desc4": {
+    "message": "在 Opera 中，Drowzy 現在會在瀏覽器啟動後等幾分鐘再讓分頁休眠，而且一次只處理一個。"
+  },
+  "changelog160Title5": {
+    "message": "還有一些小事"
+  },
+  "changelog160Desc5": {
+    "message": "可以從剪貼簿匯入已儲存的工作階段，從彈出視窗直接開啟側邊面板，「替換」現在會在關閉你的分頁前要求再點一次。白名單匯入支援以空格分隔的網站，分頁清單中的計時器和歡迎頁面在所有語言中都能正確顯示。"
   }
 }

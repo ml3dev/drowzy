@@ -147,7 +147,7 @@
     "message": "Desde siempre"
   },
   "statLifetimeRam": {
-    "message": "RAM total ahorrada"
+    "message": "Memoria liberada con el tiempo (aprox.)"
   },
   "ramEstimateTooltip": {
     "message": "Estimado usando ~150 MB por pestaña suspendida. El ahorro real varía según la página."
@@ -444,7 +444,7 @@
     "message": "<strong>Las pestañas inactivas durante 15 minutos</strong> se suspenden automáticamente"
   },
   "featureZeroRam": {
-    "message": "<strong>Las pestañas suspendidas no usan RAM</strong> pero permanecen en la barra de pestañas"
+    "message": "<strong>Las pestañas suspendidas liberan la mayor parte de su memoria</strong> pero permanecen en la barra de pestañas"
   },
   "featureClickToWake": {
     "message": "<strong>Haz clic en cualquier pestaña suspendida</strong> para despertarla"
@@ -785,13 +785,13 @@
     "message": "Este sitio está en tu lista de nunca suspender. Quítalo para suspender esta pestaña."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Hace falta otra pestaña abierta a la que cambiar. Chrome no puede suspender la pestaña que estás viendo."
+    "message": "Hace falta otra pestaña abierta a la que cambiar. El navegador no puede suspender la pestaña que estás viendo."
   },
   "openSettingsAction": {
     "message": "Abrir ajustes"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome no ha querido suspender esta pestaña"
+    "message": "El navegador no ha querido suspender esta pestaña"
   },
   "suspendFailedLoading": {
     "message": "Todavía se está cargando - inténtalo en un momento"
@@ -842,7 +842,7 @@
     "message": "1 minuto"
   },
   "shortcutsHint": {
-    "message": "Chrome gestiona estos atajos. Personalizar abre chrome://extensions/shortcuts, donde puedes cambiar o borrar cada atajo."
+    "message": "El navegador gestiona estos atajos. Personalizar abre chrome://extensions/shortcuts, donde puedes cambiar o borrar cada atajo."
   },
   "shortcutUnset": {
     "message": "Sin asignar"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "La lista blanca está llena para la sincronización de Chrome. Quita algunos sitios e inténtalo de nuevo."
+    "message": "La lista blanca está llena para la sincronización del navegador. Quita algunos sitios e inténtalo de nuevo."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Todos estos sitios ya están en tu lista blanca"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ no reconocidos",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Sin guardar"
+  },
+  "badgeStillLoading": {
+    "message": "Cargando"
+  },
+  "badgeNotLoaded": {
+    "message": "Sin cargar"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Esta pestaña tiene datos sin guardar, así que Drowzy la mantiene despierta. Puedes cambiarlo con Proteger pestañas con formularios en Ajustes."
+  },
+  "waitStillLoadingHint": {
+    "message": "Esta pestaña aún está cargando. Drowzy lo volverá a intentar en un minuto."
+  },
+  "waitNotLoadedHint": {
+    "message": "Esta pestaña aún no se ha cargado, así que no usa memoria. Drowzy la deja tranquila."
+  },
+  "autoSuspendOffNotice": {
+    "message": "La suspensión automática está desactivada, así que las pestañas solo se duermen cuando tú lo pides."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ de $TOTAL$ pestañas restauradas",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Haz clic de nuevo para reemplazar las pestañas de esta ventana"
+  },
+  "importSessionsTitle": {
+    "message": "Importar sesiones desde el portapapeles"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ sesión(es) importada(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "No se encontraron sesiones de Drowzy en el portapapeles"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Estas sesiones ya están guardadas"
+  },
+  "openSidePanel": {
+    "message": "Abrir en el panel lateral"
+  },
+  "sidePanelUnavailable": {
+    "message": "No se pudo abrir el panel lateral"
+  },
+  "changelog160Title1": {
+    "message": "Despierta significa despierta"
+  },
+  "changelog160Desc1": {
+    "message": "Una pestaña que mantienes despierta ahora también está a salvo del ahorro de memoria del propio navegador, no solo de Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Mira por qué una pestaña sigue despierta"
+  },
+  "changelog160Desc2": {
+    "message": "Una pestaña que ya debería dormirse pero que retienen datos sin guardar o una carga lenta ahora dice el motivo en la lista. Cuando la suspensión automática está desactivada, una línea sobre la lista te lo indica."
+  },
+  "changelog160Title3": {
+    "message": "Cerrar pestañas duplicadas es más cuidadoso"
+  },
+  "changelog160Desc3": {
+    "message": "Ahora solo cierra pestañas con exactamente la misma dirección. Correos distintos o páginas distintas de la misma app se quedan abiertos, y nunca se cierra una pestaña que esté reproduciendo sonido."
+  },
+  "changelog160Title4": {
+    "message": "Más suave en Opera y Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "En Opera, Drowzy ahora espera unos minutos después de que se inicie el navegador antes de dormir pestañas, y luego lo hace de una en una."
+  },
+  "changelog160Title5": {
+    "message": "Y las cosas pequeñas"
+  },
+  "changelog160Desc5": {
+    "message": "Importa sesiones guardadas desde el portapapeles, abre el panel lateral desde la ventana emergente, y Reemplazar ahora pide un segundo clic antes de cerrar tus pestañas. La importación de la lista blanca acepta sitios separados por espacios, y el temporizador de la lista de pestañas y la página de bienvenida se leen bien en todos los idiomas."
   }
 }

@@ -147,7 +147,7 @@
     "message": "Tất cả thời gian"
   },
   "statLifetimeRam": {
-    "message": "Tổng RAM đã tiết kiệm"
+    "message": "Bộ nhớ đã giải phóng theo thời gian (ước tính)"
   },
   "ramEstimateTooltip": {
     "message": "Ước tính sử dụng ~150 MB cho mỗi tab tạm ngưng. Mức tiết kiệm thực tế thay đổi theo trang."
@@ -444,7 +444,7 @@
     "message": "<strong>Các tab không hoạt động trong 15 phút</strong> sẽ tự động bị tạm ngưng"
   },
   "featureZeroRam": {
-    "message": "<strong>Các tab đã tạm ngưng không sử dụng RAM</strong> nhưng vẫn hiển thị trên thanh tab"
+    "message": "<strong>Các tab đã tạm ngưng giải phóng phần lớn bộ nhớ</strong> nhưng vẫn hiển thị trên thanh tab"
   },
   "featureClickToWake": {
     "message": "<strong>Nhấp vào bất kỳ tab đã tạm ngưng nào</strong> để đánh thức"
@@ -785,13 +785,13 @@
     "message": "Trang này nằm trong danh sách không bao giờ tạm dừng của bạn. Xóa nó đi để cho thẻ này ngủ."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Cần một thẻ đang mở khác để chuyển sang trước. Chrome không thể cho thẻ bạn đang xem ngủ."
+    "message": "Cần một thẻ đang mở khác để chuyển sang trước. Trình duyệt không thể cho thẻ bạn đang xem ngủ."
   },
   "openSettingsAction": {
     "message": "Mở cài đặt"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome đã không cho thẻ này ngủ"
+    "message": "Trình duyệt đã không cho thẻ này ngủ"
   },
   "suspendFailedLoading": {
     "message": "Vẫn đang tải - thử lại sau giây lát"
@@ -842,7 +842,7 @@
     "message": "1 phút"
   },
   "shortcutsHint": {
-    "message": "Chrome quản lý các phím tắt này. Tùy chỉnh mở chrome://extensions/shortcuts, nơi bạn có thể đổi hoặc xóa từng phím tắt."
+    "message": "Trình duyệt quản lý các phím tắt này. Tùy chỉnh mở chrome://extensions/shortcuts, nơi bạn có thể đổi hoặc xóa từng phím tắt."
   },
   "shortcutUnset": {
     "message": "Chưa đặt"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Danh sách trắng đã đầy đối với đồng bộ Chrome. Hãy xóa vài trang rồi thử lại."
+    "message": "Danh sách trắng đã đầy đối với đồng bộ trình duyệt. Hãy xóa vài trang rồi thử lại."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ phút",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Tất cả các trang này đã có trong danh sách trắng của bạn"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ không nhận ra",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Chưa lưu"
+  },
+  "badgeStillLoading": {
+    "message": "Đang tải"
+  },
+  "badgeNotLoaded": {
+    "message": "Chưa tải"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Thẻ này có nội dung chưa lưu nên Drowzy để nó thức. Bạn có thể đổi điều này bằng Bảo vệ tab có biểu mẫu trong Cài đặt."
+  },
+  "waitStillLoadingHint": {
+    "message": "Thẻ này vẫn đang tải. Drowzy sẽ thử lại sau một phút."
+  },
+  "waitNotLoadedHint": {
+    "message": "Thẻ này chưa được tải nên không dùng bộ nhớ. Drowzy để yên nó."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Tự động tạm ngưng đang tắt, nên các thẻ chỉ ngủ khi bạn yêu cầu."
+  },
+  "restoredSomeTabs": {
+    "message": "Đã khôi phục $COUNT$ trên $TOTAL$ tab",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Nhấp lại để thay thế các tab trong cửa sổ này"
+  },
+  "importSessionsTitle": {
+    "message": "Nhập phiên từ bộ nhớ tạm"
+  },
+  "importedSessions": {
+    "message": "Đã nhập $COUNT$ phiên",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Không tìm thấy phiên Drowzy nào trong bộ nhớ tạm"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Các phiên này đã được lưu"
+  },
+  "openSidePanel": {
+    "message": "Mở trong bảng bên"
+  },
+  "sidePanelUnavailable": {
+    "message": "Không thể mở bảng bên"
+  },
+  "changelog160Title1": {
+    "message": "Giữ thức là thức thật"
+  },
+  "changelog160Desc1": {
+    "message": "Thẻ bạn giữ thức giờ cũng an toàn trước tính năng tiết kiệm bộ nhớ của chính trình duyệt, không chỉ trước Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Xem vì sao một thẻ vẫn thức"
+  },
+  "changelog160Desc2": {
+    "message": "Thẻ đã đến lúc ngủ nhưng bị giữ lại vì nội dung chưa lưu hoặc tải chậm giờ sẽ nêu lý do trong danh sách. Khi tự động tạm ngưng tắt, một dòng phía trên danh sách sẽ báo cho bạn."
+  },
+  "changelog160Title3": {
+    "message": "Đóng thẻ trùng lặp giờ cẩn thận hơn"
+  },
+  "changelog160Desc3": {
+    "message": "Giờ chỉ đóng các thẻ có địa chỉ giống hệt nhau. Các email khác nhau hoặc các trang khác nhau của cùng một ứng dụng vẫn mở, và thẻ đang phát âm thanh sẽ không bao giờ bị đóng."
+  },
+  "changelog160Title4": {
+    "message": "Nhẹ nhàng hơn trên Opera và Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "Trên Opera, Drowzy giờ đợi vài phút sau khi trình duyệt khởi động rồi mới cho thẻ ngủ, và làm lần lượt từng thẻ một."
+  },
+  "changelog160Title5": {
+    "message": "Và mấy thứ nhỏ"
+  },
+  "changelog160Desc5": {
+    "message": "Nhập các phiên đã lưu từ bộ nhớ tạm, mở bảng bên ngay từ cửa sổ bật lên, và Thay thế giờ sẽ hỏi lần nhấp thứ hai trước khi đóng các tab của bạn. Nhập danh sách trắng chấp nhận các trang cách nhau bằng dấu cách, và bộ đếm giờ trong danh sách thẻ cùng trang chào mừng hiển thị đúng ở mọi ngôn ngữ."
   }
 }

@@ -147,7 +147,7 @@
     "message": "Összesen"
   },
   "statLifetimeRam": {
-    "message": "Összesen megtakarított RAM"
+    "message": "Idővel felszabadított memória (becslés)"
   },
   "ramEstimateTooltip": {
     "message": "Becsülve felfüggesztett fülenként ~150 MB-tal. A tényleges megtakarítás oldalanként eltérő."
@@ -444,7 +444,7 @@
     "message": "<strong>A 15 perce inaktív lapok</strong> automatikusan felfüggesztésre kerülnek"
   },
   "featureZeroRam": {
-    "message": "<strong>A felfüggesztett lapok nulla RAM-ot használnak</strong>, de megmaradnak a lapsávban"
+    "message": "<strong>A felfüggesztett lapok memóriájuk nagy részét felszabadítják</strong>, de megmaradnak a lapsávban"
   },
   "featureClickToWake": {
     "message": "<strong>Kattints bármelyik felfüggesztett lapra</strong> a felébresztéshez"
@@ -785,13 +785,13 @@
     "message": "Ez az oldal a soha ne függessze fel listádon van. Távolítsd el, hogy ez a lap elaludhasson."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Szükség van egy másik nyitott lapra, amelyre át lehet váltani. A Chrome nem tudja felfüggeszteni azt a lapot, amelyet éppen nézel."
+    "message": "Szükség van egy másik nyitott lapra, amelyre át lehet váltani. A böngésző nem tudja felfüggeszteni azt a lapot, amelyet éppen nézel."
   },
   "openSettingsAction": {
     "message": "Beállítások megnyitása"
   },
   "suspendFailedGeneric": {
-    "message": "A Chrome nem függesztette fel ezt a lapot"
+    "message": "A böngésző nem függesztette fel ezt a lapot"
   },
   "suspendFailedLoading": {
     "message": "Még tölt - próbáld újra egy pillanat múlva"
@@ -842,7 +842,7 @@
     "message": "1 perc"
   },
   "shortcutsHint": {
-    "message": "Ezeket a Chrome kezeli. A Testreszabás megnyitja a chrome://extensions/shortcuts oldalt, ahol minden billentyűparancsot módosíthatsz vagy törölhetsz."
+    "message": "Ezeket a böngésző kezeli. A Testreszabás megnyitja a chrome://extensions/shortcuts oldalt, ahol minden billentyűparancsot módosíthatsz vagy törölhetsz."
   },
   "shortcutUnset": {
     "message": "Nincs beállítva"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "A fehérlista megtelt a Chrome-szinkronizáláshoz. Távolíts el néhány oldalt, és próbáld újra."
+    "message": "A fehérlista megtelt a böngésző szinkronizálásához. Távolíts el néhány oldalt, és próbáld újra."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ p",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Ezek a webhelyek már mind szerepelnek az engedélyezési listán"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ nem felismerhető",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Nincs mentve"
+  },
+  "badgeStillLoading": {
+    "message": "Betöltés"
+  },
+  "badgeNotLoaded": {
+    "message": "Nincs betöltve"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Ezen a lapon mentetlen bevitel van, ezért a Drowzy ébren tartja. Ezt a Beállítások Űrlapokat tartalmazó lapok védelme lehetőségével módosíthatod."
+  },
+  "waitStillLoadingHint": {
+    "message": "Ez a lap még töltődik. A Drowzy egy perc múlva újra próbálkozik."
+  },
+  "waitNotLoadedHint": {
+    "message": "Ez a lap még nem töltődött be, ezért nem használ memóriát. A Drowzy nem nyúl hozzá."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Az automatikus felfüggesztés ki van kapcsolva, így a lapok csak akkor alszanak el, ha kéred."
+  },
+  "restoredSomeTabs": {
+    "message": "$TOTAL$ lapból $COUNT$ visszaállítva",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Kattints újra az ablak lapjainak cseréjéhez"
+  },
+  "importSessionsTitle": {
+    "message": "Munkamenetek importálása a vágólapról"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ munkamenet importálva",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Nem található Drowzy-munkamenet a vágólapon"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Ezek a munkamenetek már mentve vannak"
+  },
+  "openSidePanel": {
+    "message": "Megnyitás az oldalpanelen"
+  },
+  "sidePanelUnavailable": {
+    "message": "Az oldalpanelt nem sikerült megnyitni"
+  },
+  "changelog160Title1": {
+    "message": "Ébren az ébren"
+  },
+  "changelog160Desc1": {
+    "message": "Az ébren tartott lap most már a böngésző saját memóriatakarékosságától is védve van, nem csak a Drowzytól."
+  },
+  "changelog160Title2": {
+    "message": "Nézd meg, miért ébren még egy lap"
+  },
+  "changelog160Desc2": {
+    "message": "Az a lap, amelynek már aludnia kellene, de mentetlen bevitel vagy lassú betöltés tartja vissza, most a listában megmutatja az okát. Ha az automatikus felfüggesztés ki van kapcsolva, a lista feletti sor jelzi ezt."
+  },
+  "changelog160Title3": {
+    "message": "A duplikált lapok bezárása óvatosabb"
+  },
+  "changelog160Desc3": {
+    "message": "Most már csak a pontosan azonos című lapokat zárja be. A különböző e-mailek vagy ugyanannak az alkalmazásnak a különböző oldalai nyitva maradnak, és a hangot lejátszó lapot soha nem zárja be."
+  },
+  "changelog160Title4": {
+    "message": "Kíméletesebb az Operában és az Opera GX-ben"
+  },
+  "changelog160Desc4": {
+    "message": "Az Operában a Drowzy mostantól a böngésző indulása után néhány percet vár, mielőtt altatni kezdené a lapokat, majd egyenként teszi."
+  },
+  "changelog160Title5": {
+    "message": "És az apróságok"
+  },
+  "changelog160Desc5": {
+    "message": "Importálj mentett munkameneteket a vágólapról, nyisd meg az oldalpanelt a felugró ablakból, a Csere pedig most egy második kattintást kér, mielőtt bezárná a lapjaidat. Az engedélyezési lista importálása elfogadja a szóközzel elválasztott webhelyeket, a laplista időzítője és az üdvözlőoldal pedig minden nyelven helyesen jelenik meg."
   }
 }

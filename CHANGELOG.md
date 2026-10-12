@@ -2,6 +2,48 @@
 
 All notable changes to Drowzy are documented here.
 
+## [1.6.0] - 2026-10-12
+
+Stability, compatibility and clarity. Keep this tab awake now also holds off the browser's own Memory Saver, the tab list says why an overdue tab is still awake, Opera and Opera GX get a gentler startup after a crash report, Close duplicate tabs stops closing tabs that are not duplicates, sessions can be imported and Replace asks before closing a window, and an old memory claim is gone from 56 translations. No new permissions, no telemetry, and the native `chrome.tabs.discard` approach is unchanged. In Chrome and every non-Opera browser, which tabs get suspended and when is exactly what it was in 1.5.0.
+
+### Fixed
+- **Close duplicate tabs closed tabs that were not duplicates.** It lowercased the whole address and dropped the fragment before comparing, so two Gmail messages (`#inbox` vs `#inbox/abc`), two pages of a hash-routed app, or two case-sensitive ids counted as one page and all but one were closed, with no undo in Drowzy. A new `duplicateKey` compares the address as is, with only the scheme and host case-insensitive and a bare trailing slash ignored. A tab playing sound is never closed now, alongside pinned tabs.
+- **Form protection could miss unsaved input right after an update.** `formcheck.js` guarded against double injection with a plain `window._drowzyFormcheckLoaded = true`. If a copy left behind by the previous version still holds that flag, the new copy exits early, the old one can no longer answer, and the check came back as "clean" until the tab reloaded. The guard is now keyed to the extension version.
+- **One bad whitelist value could stop everything.** `getSettings` called `toLowerCase()` on every stored entry, so a single non-string in synced storage threw on every suspend path, the popup and the startup sweep. Non-string entries are now skipped.
+- **Restoring a session in Replace mode could show Chrome's raw English error.** The failure toast now uses the translated "Failed to restore".
+
+### Added
+- **Keep this tab awake also holds off the browser's own discarding.** Chrome's Memory Saver (and Opera's tab snoozing) could still sleep a held tab under memory pressure, which reads as Drowzy ignoring the hold. Holding a tab now sets `autoDiscardable: false` on it (`setBrowserAutoDiscard`), Allow sleep sets it back to `true`, and the flag is re-applied when a held tab's id is swapped (`onReplaced`). The flag only affects the browser's automatic discards, not `chrome.tabs.discard`, the page or its address, and the browser resets it when the tab closes or the browser restarts, the same lifetime as the hold.
+- **Why an overdue tab is still awake.** The per-minute pass now remembers, in memory, why it last left a due tab awake (`_autoRefusals`: unsaved input, or still loading), and `getTabList` returns it as `waitReason`. The list shows an "Unsaved" or "Loading" badge with an explanation in place of a "soon" that never ended. Entries expire after 3 minutes and are cleared on activation, close and a successful suspend. Reporting only: nothing here feeds back into whether a tab is suspended.
+- **"Auto-suspend is off" line** above the tab list when the timer is on Never or auto-suspend is switched off, with a link to the timer setting.
+- **Session import.** A new button next to "Copy all sessions" reads that JSON back from the clipboard. `importSessions` rebuilds every session field by field: only http and https tabs are kept, names and titles are capped strings, group colours must be ones Chrome knows, stored favicon URLs are dropped (icons come from the browser's cache), sessions already saved (same id or same list of addresses) are skipped, and the 20-session limit still applies.
+- **Open in side panel** button in the popup header, shown only where `chrome.sidePanel.open` exists.
+
+### Changed
+- **Opera and Opera GX: gentler automatic suspending.** Issue #3 reports Opera GX crashing within about a minute of opening with Drowzy enabled (around 20 tabs, 15 minute timer) and not crashing without it. We could not reproduce it, and the cause is not confirmed. The one heavy thing Drowzy does in that window is `chrome.tabs.discard`: the startup catch-up sweep works through every restored tab the user has not looked at, some never loaded, and the first per-minute pass can follow with a batch four at a time, because restored tabs keep their old last-used times. In Opera only (`IS_OPERA`, from `navigator.userAgentData` brands or `OPR/` in the user agent):
+  - no automatic discards for the first 3 minutes after the browser starts (`OPERA_STARTUP_GRACE_MS`, counted from `onStartup` via `browserStartedAt` in session storage); restore tags are kept and the per-minute tick sweeps them afterwards
+  - one discard at a time (`SUSPEND_CONCURRENCY` is 1) with a 400 ms pause after each (`OPERA_DISCARD_GAP_MS`), in the per-minute pass, the startup sweep and Suspend Others
+  - tabs that have never loaded (`status: 'unloaded'`) are skipped by the automatic paths, since they hold no page in memory; manual Suspend Others is unchanged apart from the pacing
+- **Whitelist import reads space-separated lists** (a column pasted from a spreadsheet, `a.com b.com`), says "All of these sites are already in your whitelist" instead of "Imported 0 new site(s)", and appends how many lines were not recognized.
+- **Opera: never-loaded tabs show "Not loaded"** in the list instead of a countdown, since the automatic paths now leave them alone.
+- **Replace asks for a second click.** It closes every tab in the window, pinned ones included, and a single stray click was enough. It now confirms the way Delete does.
+- **Session restore says when it fell short.** Open mode reports "Restored 8 of 10 tabs" when some pages could not be opened, and a restore that opened nothing reports a failure instead of "Restored 0 tabs".
+- **The lifetime memory stat is labelled as an estimate.** "Lifetime RAM saved" multiplied every suspend ever by 150 MB, so a tab slept a hundred times counted a hundred times; it now reads "Memory freed over time (est.)", next to the existing tooltip that explains the running total.
+- **The review banner stops after a second "Maybe later".** It used to come back every 14 days for good.
+- **System pages in Opera and Vivaldi** (`opera://`, `vivaldi://`) get the lock icon in the tab list instead of a letter.
+
+### i18n
+- `featureZeroRam` on the welcome page still said suspended tabs use "zero RAM" (or "no RAM") in 56 of 57 locales, including `en_GB` and `en_US`, which most English users actually see; only `en` had been corrected. The bold part now says they release most of their memory, with the rest of each sentence untouched.
+- The idle timer in the tab list used a hardcoded `m` (`12m`). It now uses `minutesLeftShort` with each language's own abbreviation.
+- New keys across all 57 locales: `minutesLeftShort`, `importAllExisting`, `importSkippedInvalid`, `changelog160Title1` to `changelog160Title3`, `changelog160Desc1` to `changelog160Desc3`. `changelog160Title5` reuses each locale's existing `changelog150Title5`.
+- Four messages no longer say "Chrome" to people using another browser: `suspendFailedGeneric`, `cantSuspendNoOtherTab`, `shortcutsHint` and `whitelistFull` now say "your browser" (or the browser), in all 57 locales.
+- New keys across all 57 locales: `badgeUnsavedInput`, `badgeStillLoading`, `badgeNotLoaded`, `waitUnsavedInputHint`, `waitStillLoadingHint`, `waitNotLoadedHint`, `autoSuspendOffNotice`, `restoredSomeTabs`, `confirmReplaceTitle`, `importSessionsTitle`, `importedSessions`, `noSessionsToImport`, `sessionsAlreadySaved`, `openSidePanel`, `sidePanelUnavailable`, and `changelog160Title4`, `changelog160Desc4`, `changelog160Title5`, `changelog160Desc5`. Labels quoted inside the new strings (Protect tabs with forms, Settings, Replace) use each locale's own existing translation.
+- What's New gets a five-item 1.6.0 section and 1.5.0 collapses like the releases before it. 1.6.0 is not in `SHOW_CHANGELOG_VERSIONS`, so the page does not open by itself after this update.
+
+### Docs
+- Website: canonical, Open Graph, sitemap and 404 links point at drowzyextension.com (the old address already redirects there); the FAQ says Keep this tab awake also holds off Memory Saver and gains a browser support answer; the sessions and Close duplicate tabs cards match the new behaviour. `UNINSTALL_URL` stays on github.io, which redirects.
+- README: browser support section, and keyboard shortcuts list the real per-platform defaults (Windows is `Alt+Shift+P` / `Alt+Shift+O`, not `Alt+S` / `Alt+W`), Close duplicate tabs describes the new rule, and "no idle CPU usage" is replaced with what is actually true.
+
 ## [1.5.0] - 2026-09-02
 
 Speed fixes for people with a lot of tabs, based on a store review and a GitHub issue. The popup opens right away with many tabs open, Suspend Others runs several tabs at a time and reports what it skipped, the timer can be set to 1 minute, and the Keyboard shortcuts row points to where Chrome lets you change them. No new permissions, no telemetry, and the native `chrome.tabs.discard` approach is unchanged.

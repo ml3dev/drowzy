@@ -147,7 +147,7 @@
     "message": "전체"
   },
   "statLifetimeRam": {
-    "message": "누적 RAM 절약"
+    "message": "지금까지 확보한 메모리(추정)"
   },
   "ramEstimateTooltip": {
     "message": "일시 중단된 탭당 ~150MB 사용으로 추정됩니다. 실제 절약량은 페이지에 따라 다릅니다."
@@ -444,7 +444,7 @@
     "message": "<strong>15분 동안 비활성인 탭</strong>은 자동으로 일시중지됩니다"
   },
   "featureZeroRam": {
-    "message": "<strong>일시중지된 탭은 RAM을 사용하지 않지만</strong> 탭 바에 그대로 유지됩니다"
+    "message": "<strong>일시중지된 탭은 메모리 대부분을 반환하지만</strong> 탭 바에 그대로 유지됩니다"
   },
   "featureClickToWake": {
     "message": "<strong>일시중지된 탭을 클릭</strong>하면 깨어납니다"
@@ -785,13 +785,13 @@
     "message": "이 사이트는 절전 제외 목록에 있습니다. 목록에서 제거하면 절전할 수 있습니다."
   },
   "cantSuspendNoOtherTab": {
-    "message": "먼저 전환할 다른 탭이 필요합니다. Chrome은 보고 있는 탭을 절전할 수 없습니다."
+    "message": "먼저 전환할 다른 탭이 필요합니다. 브라우저는 보고 있는 탭을 절전할 수 없습니다."
   },
   "openSettingsAction": {
     "message": "설정 열기"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome이 이 탭을 절전하지 못했습니다"
+    "message": "브라우저가 이 탭을 절전하지 못했습니다"
   },
   "suspendFailedLoading": {
     "message": "아직 로딩 중입니다. 잠시 후 다시 시도하세요"
@@ -842,7 +842,7 @@
     "message": "1분"
   },
   "shortcutsHint": {
-    "message": "이 단축키는 Chrome이 관리합니다. 사용자 지정을 누르면 chrome://extensions/shortcuts가 열리고, 거기서 각 단축키를 바꾸거나 지울 수 있습니다."
+    "message": "이 단축키는 브라우저가 관리합니다. 사용자 지정을 누르면 chrome://extensions/shortcuts가 열리고, 거기서 각 단축키를 바꾸거나 지울 수 있습니다."
   },
   "shortcutUnset": {
     "message": "설정 안 됨"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Chrome 동기화용 예외 목록이 가득 찼습니다. 사이트 몇 개를 제거한 뒤 다시 시도하세요."
+    "message": "브라우저 동기화용 예외 목록이 가득 찼습니다. 사이트 몇 개를 제거한 뒤 다시 시도하세요."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$분",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "이 사이트들은 모두 이미 화이트리스트에 있습니다"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$개 인식 불가",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "저장 안 됨"
+  },
+  "badgeStillLoading": {
+    "message": "로드 중"
+  },
+  "badgeNotLoaded": {
+    "message": "로드 안 됨"
+  },
+  "waitUnsavedInputHint": {
+    "message": "이 탭에 저장하지 않은 입력이 있어 Drowzy가 깨워 둡니다. 설정의 양식이 있는 탭 보호에서 바꿀 수 있습니다."
+  },
+  "waitStillLoadingHint": {
+    "message": "이 탭은 아직 로드 중입니다. Drowzy가 1분 뒤에 다시 시도합니다."
+  },
+  "waitNotLoadedHint": {
+    "message": "이 탭은 아직 로드되지 않아 메모리를 쓰지 않습니다. Drowzy는 그대로 둡니다."
+  },
+  "autoSuspendOffNotice": {
+    "message": "자동 일시중지가 꺼져 있어 요청할 때만 탭이 잠듭니다."
+  },
+  "restoredSomeTabs": {
+    "message": "탭 $TOTAL$개 중 $COUNT$개 복원됨",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "이 창의 탭을 교체하려면 다시 클릭하세요"
+  },
+  "importSessionsTitle": {
+    "message": "클립보드에서 세션 가져오기"
+  },
+  "importedSessions": {
+    "message": "세션 $COUNT$개를 가져왔습니다",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "클립보드에서 Drowzy 세션을 찾을 수 없습니다"
+  },
+  "sessionsAlreadySaved": {
+    "message": "이 세션들은 이미 저장되어 있습니다"
+  },
+  "openSidePanel": {
+    "message": "사이드 패널에서 열기"
+  },
+  "sidePanelUnavailable": {
+    "message": "사이드 패널을 열 수 없습니다"
+  },
+  "changelog160Title1": {
+    "message": "깨워 두면 정말 깨어 있습니다"
+  },
+  "changelog160Desc1": {
+    "message": "깨워 둔 탭은 이제 Drowzy뿐 아니라 브라우저 자체의 메모리 절약 기능으로부터도 보호됩니다."
+  },
+  "changelog160Title2": {
+    "message": "탭이 아직 깨어 있는 이유 보기"
+  },
+  "changelog160Desc2": {
+    "message": "잠들 때가 됐지만 저장하지 않은 입력이나 느린 로드 때문에 남아 있는 탭은 이제 목록에 그 이유를 표시합니다. 자동 일시중지가 꺼져 있으면 목록 위의 한 줄이 알려 줍니다."
+  },
+  "changelog160Title3": {
+    "message": "중복 탭 닫기가 더 신중해졌습니다"
+  },
+  "changelog160Desc3": {
+    "message": "이제 주소가 완전히 같은 탭만 닫습니다. 서로 다른 메일이나 같은 앱의 다른 페이지는 그대로 열려 있고, 소리를 재생 중인 탭은 절대 닫지 않습니다."
+  },
+  "changelog160Title4": {
+    "message": "Opera와 Opera GX에서 더 부드럽게"
+  },
+  "changelog160Desc4": {
+    "message": "Opera에서는 이제 브라우저가 시작된 뒤 몇 분 기다렸다가 탭을 재우고, 그다음 한 번에 한 탭씩 처리합니다."
+  },
+  "changelog160Title5": {
+    "message": "그리고 소소한 것들"
+  },
+  "changelog160Desc5": {
+    "message": "저장한 세션을 클립보드에서 가져오고, 팝업에서 사이드 패널을 열 수 있으며, 교체는 이제 탭을 닫기 전에 한 번 더 클릭을 요청합니다. 화이트리스트 가져오기는 공백으로 구분된 사이트를 받아들이고, 탭 목록 타이머와 시작 페이지는 모든 언어에서 올바르게 표시됩니다."
   }
 }

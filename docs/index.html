@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#0c0817">
 <title>Drowzy · Free open-source tab suspender for Chrome</title>
 <meta name="description" content="Drowzy puts inactive tabs to sleep with Chrome's own discard system. Tabs stay normal tabs and reload when you click them. Free, open source, no tracking.">
-<link rel="canonical" href="https://ml3dev.github.io/drowzy/">
+<link rel="canonical" href="https://drowzyextension.com/">
 <link rel="icon" href="icon-128.png" sizes="128x128" type="image/png">
 <link rel="apple-touch-icon" href="icon-512.png">
 
@@ -16,15 +16,15 @@
 <meta property="og:site_name" content="Drowzy">
 <meta property="og:title" content="Drowzy · Free open-source tab suspender for Chrome">
 <meta property="og:description" content="Put idle tabs to sleep with Chrome's own discard system. No tracking, no accounts, no fake suspended pages. Free and open source.">
-<meta property="og:url" content="https://ml3dev.github.io/drowzy/">
-<meta property="og:image" content="https://ml3dev.github.io/drowzy/og-image.png">
+<meta property="og:url" content="https://drowzyextension.com/">
+<meta property="og:image" content="https://drowzyextension.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Drowzy logo and wordmark: free open-source tab suspender for Chrome">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Drowzy · Free open-source tab suspender for Chrome">
 <meta name="twitter:description" content="Put idle tabs to sleep with Chrome's own discard system. No tracking, no accounts, no fake suspended pages. Free and open source.">
-<meta name="twitter:image" content="https://ml3dev.github.io/drowzy/og-image.png">
+<meta name="twitter:image" content="https://drowzyextension.com/og-image.png">
 
 <script type="application/ld+json">
 {
@@ -35,8 +35,8 @@
   "description": "Free, open-source tab suspender for Chrome. Puts inactive tabs to sleep using Chrome's native discard system, with no tracking and no placeholder pages.",
   "applicationCategory": "BrowserApplication",
   "operatingSystem": "Google Chrome",
-  "url": "https://ml3dev.github.io/drowzy/",
-  "image": "https://ml3dev.github.io/drowzy/og-image.png",
+  "url": "https://drowzyextension.com/",
+  "image": "https://drowzyextension.com/og-image.png",
   "installUrl": "https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa",
   "downloadUrl": "https://chromewebstore.google.com/detail/drowzy-tab-suspender-memo/oijfnkaakdamnijjgehjpfmclhigmapa",
   "license": "https://github.com/ml3dev/drowzy/blob/main/LICENSE",
@@ -607,12 +607,12 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg></span>
         <h3>Sessions and stats</h3>
-        <p>Save a window's tabs and bring them back later, tab groups included. Stats count how many tabs have slept today and over time.</p>
+        <p>Save a window's tabs and bring them back later, tab groups included, and copy them to another computer as plain text. Stats count how many tabs have slept today and over time.</p>
       </div>
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></span>
         <h3>Close duplicate tabs</h3>
-        <p>One click finds tabs open at the same address and closes the extras.</p>
+        <p>One click finds tabs open at exactly the same address and closes the extras. Pinned tabs and tabs playing sound are kept.</p>
       </div>
       <div class="card reveal">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M6 8h.01"/><path d="M10 8h.01"/><path d="M14 8h.01"/><path d="M18 8h.01"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/><path d="M7 16h10"/></svg></span>
@@ -789,7 +789,7 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
       <details>
         <summary>Can I keep one tab awake?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
         <div class="a">
-          <p>Yes. Choose <b>Keep this tab awake</b> in the popup and nothing in Drowzy will sleep that tab until you press <b>Allow sleep</b>, close the tab, or restart the browser. For a whole site, add it to the whitelist instead.</p>
+          <p>Yes. Choose <b>Keep this tab awake</b> in the popup and that tab stays awake until you press <b>Allow sleep</b>, close the tab, or restart the browser. The hold also tells Chrome's own Memory Saver to leave the tab alone, so it is not just Drowzy holding off. For a whole site, add it to the whitelist instead.</p>
         </div>
       </details>
       <details>
@@ -803,6 +803,12 @@ footer{border-top:1px solid var(--border);padding:46px 0 56px;color:var(--text-f
         <summary>Does Drowzy work after a browser restart?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
         <div class="a">
           <p>Yes. Your settings, whitelist, sessions and stats are saved in Chrome's storage and come back with the browser. When Chrome restores a window, the tabs you have not looked at yet are put back to sleep shortly after they appear, so a big restored session does not sit awake all day. Keep this tab awake is cleared on restart, since it is meant for right now rather than forever.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Does Drowzy work in Edge, Brave, Opera or Vivaldi?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="a">
+          <p>Drowzy is built and tested for Chrome. Other browsers built on Chromium run it from the Chrome Web Store, and the basics work the same way, though each one adds its own tab features on top. In Opera and Opera GX, Drowzy waits a few minutes after the browser starts before putting tabs to sleep, then does one tab at a time, so it does not compete with Opera's own tab snoozing while a session is still restoring. The side panel is a Chrome feature, so browsers without it simply do not show the button.</p>
         </div>
       </details>
       <details>

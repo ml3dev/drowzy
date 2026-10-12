@@ -53,26 +53,30 @@ On top of that, Drowzy is fully open source, collects zero data, and runs entire
 ### Core
 - **Auto-suspend** inactive tabs after a configurable timer (1 min - 4 hours, or manual only)
 - **Smart protection** - pinned, audio-playing, and whitelisted tabs are skipped by default; the pinned and audio protections are toggles you can turn off if you want those tabs to sleep too. Optional form-data protection also skips tabs with unsaved input (off by default, requires granting page access)
-- **Keep this tab awake** - hold a single tab awake without whitelisting the whole site. Nothing in Drowzy will sleep it until you press "Allow sleep" or close the tab; the hold clears when you restart your browser
-- **Tells you why** - when a tab can't sleep, Drowzy says which protection is stopping it and links straight to the setting that would change it, instead of quietly hiding the button
+- **Keep this tab awake** - hold a single tab awake without whitelisting the whole site. Nothing in Drowzy will sleep it until you press "Allow sleep" or close the tab, and the hold also tells Chrome's own Memory Saver to leave it alone; the hold clears when you restart your browser
+- **Tells you why** - when a tab can't sleep, Drowzy says which protection is stopping it and links straight to the setting that would change it, instead of quietly hiding the button. Tabs that are due but held back by unsaved input or a slow load say so in the list, and a line above the list says when auto-suspend is off
 - **Whitelist** sites with pattern matching and wildcards (e.g., `github.com/ml3dev/*`)
-- **Keyboard shortcuts** - `Alt+S` suspend current, `Alt+Shift+S` suspend others, `Alt+W` wake all
+- **Keyboard shortcuts** - suspend current, suspend others and wake all. Defaults are `Alt+Shift+P`, `Alt+Shift+S` and `Alt+Shift+O` on Windows, `Alt+S`, `Alt+Shift+S` and `Alt+W` elsewhere; change or clear them at `chrome://extensions/shortcuts`
 - **Context menu** - right-click any page for quick suspend options
 
 ### Sessions & Organization
 - **Save and restore sessions** - bookmark your entire window state and reopen it later
-- **Close duplicate tabs** - one click to deduplicate your window
+- **Close duplicate tabs** - one click closes tabs with exactly the same address; pinned tabs and tabs playing sound are kept
 - **Tab search** - filter your tab list by title or URL
-- **Export** - copy your tab list or sessions as JSON for backup
+- **Export and import** - copy your tab list, or copy sessions as JSON and paste them back on another computer; Replace asks for a second click before it closes the current window's tabs
 
 ### Polish
 - **Dark and light theme** - toggle in the header, preference is saved
-- **Side panel** - pin Drowzy to Chrome's side panel for a persistent full-height view
+- **Side panel** - open Drowzy in Chrome's side panel from the popup header for a persistent full-height view
 - **50+ languages** - UI automatically matches your browser language
 - **Suspend indicator** - optional `[zzz]` prefix on suspended tab titles (requires granting page access)
 - **Suspend warning** - optional on-page notice before a tab is auto-suspended (requires granting page access)
-- **Stats dashboard** - track how many tabs you've suspended and how much memory you've saved
-- **Review prompt** - a gentle, dismissable nudge that only appears after about a week of real use, with "Maybe later" and "Don't ask again" options (never on install, never pushy)
+- **Stats dashboard** - track how many tabs you've suspended and an estimate of the memory freed over time
+- **Review prompt** - a gentle, dismissable nudge that only appears after about a week of real use, with "Maybe later" and "Don't ask again" options (never on install, and a second "Maybe later" is taken as a no)
+
+## Browser support
+
+Drowzy is built and tested for Chrome (version 120 or later). Other Chromium browsers such as Edge, Brave, Opera and Vivaldi can install it from the Chrome Web Store and the basics work the same way, though each adds its own tab features on top. In Opera and Opera GX, the automatic paths are gentler: nothing is suspended for the first 3 minutes after the browser starts, tabs are suspended one at a time, and tabs that were restored but never loaded are left to the browser. The side panel button only appears in browsers that support Chrome's side panel.
 
 ## How It Works
 
@@ -87,7 +91,7 @@ Tab inactive for 15 min ──> Drowzy calls chrome.tabs.discard()
                               User clicks tab ──> Chrome reloads it
 ```
 
-Drowzy runs a lightweight alarm every 60 seconds. It checks each tab's last-active timestamp and suspends any that exceed your chosen threshold. The active tab, whitelisted sites and tabs you keep awake are always skipped; pinned tabs, audio tabs and tabs with unsaved form input are skipped while those protections are on. That's it - no background pages, no content scripts running on every page, no idle CPU usage.
+Drowzy runs a lightweight alarm every 60 seconds. It checks each tab's last-active timestamp and suspends any that exceed your chosen threshold. The active tab, whitelisted sites and tabs you keep awake are always skipped; pinned tabs, audio tabs and tabs with unsaved form input are skipped while those protections are on. That's it - no background pages and no content scripts running on every page; between checks Drowzy does nothing.
 
 ## Permissions
 

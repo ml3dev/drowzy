@@ -90,6 +90,48 @@ const UNINSTALL_URL = 'https://ml3dev.github.io/drowzy/uninstall.html';
 // See onInstalled for why this exists and why it should stay short.
 const SHOW_CHANGELOG_VERSIONS = ['1.4.0', '1.5.0'];
 
+// Opera and Opera GX. A GitHub report (#3) has Opera GX crashing within about
+// a minute of opening with Drowzy enabled and around 20 tabs, on a 15 minute
+// timer, and not crashing with Drowzy disabled. The only heavy thing Drowzy
+// does in that first minute is discarding: the startup catch-up sweep goes
+// through every restored tab the user has not looked at, some of which have
+// never loaded at all, and the first per-minute pass can follow with a batch
+// of four at a time, since restored tabs carry their old last-used times.
+// Opera ships its own tab snoozing and RAM limiter on top of
+// Chromium, and we cannot reproduce the crash here, so in Opera only the
+// automatic paths are made gentler:
+//   1. nothing is discarded automatically for the first few minutes after the
+//      browser starts, so restore finishes before Drowzy touches anything
+//   2. one discard at a time, with a short pause between them
+//   3. tabs that have never loaded are left for the browser to handle; they
+//      hold no page in memory, so there is nothing to free by discarding them
+// Chrome and every other Chromium browser keep the exact behaviour they had.
+const IS_OPERA = (function() {
+  try {
+    let brands = (navigator.userAgentData && navigator.userAgentData.brands) || [];
+    if (brands.some(b => /opera/i.test(b.brand || ''))) return true;
+    return /\bOPR\//.test(navigator.userAgent || '');
+  } catch { return false; }
+})();
+const OPERA_STARTUP_GRACE_MS = 3 * 60 * 1000;
+const OPERA_DISCARD_GAP_MS = 400;
+
+// True while Opera is inside the post-startup quiet period. The start time
+// lives in session storage, so a worker restart inside the window keeps it.
+async function inOperaStartupGrace() {
+  if (!IS_OPERA) return false;
+  try {
+    let data = await chrome.storage.session.get('browserStartedAt');
+    let at = data.browserStartedAt;
+    return typeof at === 'number' && Date.now() - at < OPERA_STARTUP_GRACE_MS;
+  } catch { return false; }
+}
+
+// A tab restored but never loaded. Only consulted in Opera (see above).
+function isNeverLoaded(tab) {
+  return IS_OPERA && tab.status === 'unloaded';
+}
+
 let badgeTimer = null;
 
 function t(key, subs) {
@@ -191,6 +233,8 @@ async function onInstalled(details) {
 }
 
 async function onStartup() {
+  // first, before any await: the Opera startup quiet period counts from here
+  try { chrome.storage.session.set({ browserStartedAt: Date.now() }); } catch {}
   await createAlarm();
   // Rebuild context menus on every startup. They're created once at install in
   // the then-current UI language and don't otherwise refresh, so a user who
@@ -258,6 +302,7 @@ async function firstRunQuickSuspend() {
       if (_keptAwake.has(tab.id)) continue;
       if (typeof tab.lastAccessed !== 'number') continue;
       if (tab.lastAccessed > staleBefore) continue;
+      if (isNeverLoaded(tab)) continue;
       if (isInternalUrl(tab.url)) continue;
       if (settings.protectPinned && tab.pinned) continue;
       if (settings.protectAudio && tab.audible) continue;
@@ -386,6 +431,9 @@ async function restoredCatchupSweep(settings) {
         pending.delete(id); dirty = true; continue;
       }
       if (tab.status === 'loading') continue;
+      // Opera only: a never-loaded tab stays tagged and is picked up if the
+      // browser loads it later without the user looking at it
+      if (isNeverLoaded(tab)) continue;
       seedTimestamp(tab, now);
       // untag BEFORE the discard: a discard swaps the tab id via onReplaced,
       // and the tag must not outlive the suspend - a tab Drowzy just put to
@@ -398,6 +446,7 @@ async function restoredCatchupSweep(settings) {
       // requirement - the idle rule for this sweep is the activated-set guard
       if (shouldSuspend(tab, settings, _timestamps, now, 0)) {
         let suspended = await suspendTab(tab.id, settings, { skipLoading: true });
+        if (suspended && IS_OPERA) await new Promise(r => setTimeout(r, OPERA_DISCARD_GAP_MS));
         if (!suspended) {
           // suspendTab's fresh recheck may have refused because a load
           // started after our snapshot - re-tag that one case so it retries
@@ -506,6 +555,17 @@ async function setKeptAwake(tabId, on) {
     await persistKeptAwake();
     return on;
   } catch { return false; }
+}
+
+// A held tab is also taken out of the browser's own automatic discarding
+// (Chrome's Memory Saver, Opera's tab snoozing). Without this, "Keep this tab
+// awake" only stopped Drowzy, and the browser could still sleep the tab under
+// memory pressure, which reads to the user as Drowzy ignoring the hold. The
+// flag only affects the browser's automatic discards, it changes nothing about
+// the page or its address, and the browser resets it when the tab closes or
+// the browser restarts, the same lifetime as the hold itself.
+async function setBrowserAutoDiscard(tabId, allowed) {
+  try { await chrome.tabs.update(tabId, { autoDiscardable: allowed }); } catch {}
 }
 
 async function isKeptAwake(tabId) {
@@ -709,7 +769,12 @@ async function getSettings() {
   if (!stored.settings) return { ...DEFAULT_SETTINGS };
   let merged = { ...DEFAULT_SETTINGS, ...stored.settings };
   if (!Array.isArray(merged.whitelist)) merged.whitelist = [];
-  merged.whitelist = merged.whitelist.map(w => w.toLowerCase().replace(/^www\./, ''));
+  // Every suspend path starts here, so one non-string entry in synced storage
+  // (a hand-edited or corrupted value) must not throw and take auto-suspend,
+  // the popup and the startup sweep down with it. Such entries are skipped.
+  merged.whitelist = merged.whitelist
+    .filter(w => typeof w === 'string' && w)
+    .map(w => w.toLowerCase().replace(/^www\./, ''));
   return merged;
 }
 
@@ -823,6 +888,9 @@ async function onAlarm(alarm) {
     // early. (Before 1.3.8 this pass was a raw discard-everything loop that
     // ignored viewed and mid-load tabs; the sweep keeps its speed but adds
     // those protections.)
+    // Opera: still inside the startup quiet period. The tags stay, and the
+    // per-minute tick runs the sweep once the period is over.
+    if (await inOperaStartupGrace()) return;
     let settings = await getSettings();
     // warm the Keep-awake mirror here too, so "loaded before any shouldSuspend
     // call" holds on every path rather than only on the per-minute tick. At
@@ -836,6 +904,7 @@ async function onAlarm(alarm) {
 async function onTabActivated(activeInfo) {
   await touchTab(activeInfo.tabId);
   await markActivated(activeInfo.tabId);
+  _autoRefusals.delete(activeInfo.tabId);
   // the user is looking at it now - it is no longer the startup sweep's business
   await untagRestored(activeInfo.tabId);
   // Flush immediately on activation since worker is alive during this event
@@ -892,6 +961,7 @@ async function onTabRemoved(tabId) {
   await setKeptAwake(tabId, false);
   if (tabId in _favicons) { delete _favicons[tabId]; _favDirty = true; }
   _lastCounted.delete(tabId);
+  _autoRefusals.delete(tabId);
   // Only mark dirty if we actually removed a tracked timestamp - avoids
   // flushing session storage when the tab wasn't being tracked.
   if (tabId in _timestamps) {
@@ -937,7 +1007,11 @@ async function onTabReplaced(addedTabId, removedTabId) {
       held.delete(removedTabId);
       held.add(addedTabId);
       await persistKeptAwake();
+      // the swapped-in tab is a new tab object to the browser, so the
+      // auto-discard opt-out has to be set on it again
+      await setBrowserAutoDiscard(addedTabId, false);
     }
+    if (_autoRefusals.has(removedTabId)) _autoRefusals.delete(removedTabId);
   } catch {}
 }
 
@@ -956,6 +1030,10 @@ async function checkAndSuspendTabs() {
     if (Object.keys(_timestamps).length === 0) {
       await ensureTimestamps();
     }
+
+    // Opera: nothing automatic during the startup quiet period. Timestamps
+    // above are already loaded, so the first tick after it starts clean.
+    if (await inOperaStartupGrace()) return;
 
     let settings = await getSettings();
     // warm the Keep-awake mirror before anything calls shouldSuspend, which
@@ -987,6 +1065,7 @@ async function checkAndSuspendTabs() {
     let toSuspend = [];
     for (let tab of tabs) {
       seedTimestamp(tab, now);
+      if (isNeverLoaded(tab)) continue;
       if (shouldSuspend(tab, settings, _timestamps, now, threshold)) {
         toSuspend.push(tab.id);
       }
@@ -1092,6 +1171,28 @@ function isWhitelisted(url, whitelist) {
   return whitelistMatch(url, whitelist) !== null;
 }
 
+// Why the per-minute pass last left a due tab awake, for the popup. Without it
+// a tab refused for unsaved input or a load that never settles sat in the list
+// reading "soon" forever. Reporting only: nothing here feeds back into whether
+// a tab is suspended. In memory, and an entry older than a few minutes is
+// ignored, since the pass retries every minute and refreshes it while it holds.
+const AUTO_REFUSAL_TTL_MS = 3 * 60 * 1000;
+let _autoRefusals = new Map();
+
+function noteAutoRefusal(tabId, opts, reason) {
+  if (opts && opts.auto) _autoRefusals.set(tabId, { reason, at: Date.now() });
+}
+
+function autoRefusalFor(tabId) {
+  let r = _autoRefusals.get(tabId);
+  if (!r) return null;
+  if (Date.now() - r.at > AUTO_REFUSAL_TTL_MS) {
+    _autoRefusals.delete(tabId);
+    return null;
+  }
+  return r.reason;
+}
+
 async function suspendTab(tabId, cachedSettings, opts) {
   try {
     let tab = await chrome.tabs.get(tabId);
@@ -1114,7 +1215,11 @@ async function suspendTab(tabId, cachedSettings, opts) {
       // Refuses both unsaved input and a page that could not be checked in
       // time: discarding on a guess is exactly what form protection exists to
       // prevent. The per-minute check retries it; a manual run reports it.
-      if (await formCheckBlocks(tabId)) return false;
+      let verdict = await formCheckBlocks(tabId);
+      if (verdict) {
+        noteAutoRefusal(tabId, opts, verdict === 'dirty' ? 'form' : 'loading');
+        return false;
+      }
     } else if (settings.markSuspendedTabs) {
       // Only the title marking needs the script here, and it is cosmetic, so a
       // slow page does not hold anything up.
@@ -1150,7 +1255,11 @@ async function suspendTab(tabId, cachedSettings, opts) {
       // automatic (so it must not discard an uncommitted navigation) but
       // sweeps tabs that are by definition younger than the idle threshold.
       if (opts && (opts.auto || opts.skipLoading)) {
-        if (fresh.status === 'loading') return false;
+        if (fresh.status === 'loading') {
+          noteAutoRefusal(tabId, opts, 'loading');
+          return false;
+        }
+        if (isNeverLoaded(fresh)) return false;
       }
       if (opts && opts.auto) {
         let now = Date.now();
@@ -1165,6 +1274,7 @@ async function suspendTab(tabId, cachedSettings, opts) {
 
     let result = await chrome.tabs.discard(tabId);
     if (result) {
+      _autoRefusals.delete(tabId);
       debouncedBadgeUpdate();
       await recordSuspension(tabId);
       return true;
@@ -1302,8 +1412,9 @@ async function runLimited(items, fn, limit) {
 
 // A few discards in flight at once is plenty: each one is a browser-process
 // round trip, and it is the waiting in single file that made forty tabs take
-// a minute, not the discards themselves.
-const SUSPEND_CONCURRENCY = 4;
+// a minute, not the discards themselves. Opera gets one at a time (see
+// IS_OPERA); slower there, on purpose.
+const SUSPEND_CONCURRENCY = IS_OPERA ? 1 : 4;
 
 // Suspends a batch through suspendTab, a few at a time, so every protection
 // and the pre-discard recheck still apply per tab. Returns which ids went to
@@ -1312,8 +1423,12 @@ async function suspendMany(tabIds, settings, opts) {
   let suspended = [];
   let refused = [];
   await runLimited(tabIds, async (tabId) => {
-    if (await suspendTab(tabId, settings, opts)) suspended.push(tabId);
-    else refused.push(tabId);
+    if (await suspendTab(tabId, settings, opts)) {
+      suspended.push(tabId);
+      if (IS_OPERA) await new Promise(r => setTimeout(r, OPERA_DISCARD_GAP_MS));
+    } else {
+      refused.push(tabId);
+    }
   }, SUSPEND_CONCURRENCY);
   return { suspended, refused };
 }
@@ -1590,8 +1705,10 @@ async function restoreSession(id, mode) {
       }
       let oldIds = currentTabs.map(tab => tab.id).filter(id => !createdTabs.some(ct => ct.tabId === id));
       if (oldIds.length) await chrome.tabs.remove(oldIds);
-    } catch (e) {
-      return { success: false, error: e.message };
+    } catch {
+      // Chrome's own error text is English-only and technical; the popup
+      // shows this string as is, so give it the translated one
+      return { success: false, error: t('failedToRestore') };
     }
   } else {
     for (let tab of restorable) {
@@ -1623,7 +1740,78 @@ async function restoreSession(id, mode) {
     }
   }
 
-  return { success: true, count: createdTabs.length };
+  // total lets the popup say "8 of 10" when some tabs could not be opened,
+  // instead of a count that reads as the whole session
+  return { success: createdTabs.length > 0, count: createdTabs.length, total: restorable.length,
+    error: createdTabs.length ? undefined : t('failedToRestore') };
+}
+
+// Clipboard import for the JSON that "Copy all sessions" produces. Everything
+// is rebuilt field by field from what the popup pasted, never stored as is:
+// only http and https pages are kept, names and titles are plain strings with
+// a length cap, and group colours must be ones Chrome knows. Sessions already
+// saved here (same id) are skipped, and the 20-session limit still applies.
+const SESSION_GROUP_COLORS = ['grey', 'blue', 'red', 'yellow', 'green', 'pink', 'purple', 'cyan', 'orange'];
+
+function sanitizeSession(raw, index) {
+  if (!raw || typeof raw !== 'object' || !Array.isArray(raw.tabs)) return null;
+  let tabs = [];
+  for (let tab of raw.tabs) {
+    if (!tab || typeof tab.url !== 'string' || isInternalUrl(tab.url)) continue;
+    tabs.push({
+      url: tab.url,
+      title: typeof tab.title === 'string' && tab.title ? tab.title.slice(0, 500) : t('tabUntitled'),
+      favIconUrl: '',
+      pinned: tab.pinned === true,
+      groupId: Number.isInteger(tab.groupId) ? tab.groupId : -1
+    });
+  }
+  if (!tabs.length) return null;
+  let groups = {};
+  if (raw.groups && typeof raw.groups === 'object') {
+    for (let id in raw.groups) {
+      let g = raw.groups[id] || {};
+      groups[id] = {
+        title: typeof g.title === 'string' ? g.title.slice(0, 100) : '',
+        color: SESSION_GROUP_COLORS.includes(g.color) ? g.color : 'grey'
+      };
+    }
+  }
+  let createdAt = Number(raw.createdAt);
+  return {
+    id: typeof raw.id === 'string' && /^session_[\w-]{1,40}$/.test(raw.id) ? raw.id : 'session_' + Date.now() + '_' + index,
+    name: typeof raw.name === 'string' && raw.name.trim() ? raw.name.trim().slice(0, 100) : _formatSessionName(),
+    createdAt: Number.isFinite(createdAt) && createdAt > 0 ? createdAt : Date.now(),
+    groups,
+    tabs
+  };
+}
+
+async function importSessions(list) {
+  if (!Array.isArray(list)) return { added: 0, duplicates: 0, full: 0, invalid: 0 };
+  let sessions = await getSessions();
+  let ids = new Set(sessions.map(s => s.id));
+  // a session pasted twice is the same session even when its id had to be
+  // regenerated (a hand-edited file), so the same list of addresses counts too
+  let sig = s => (s.tabs || []).map(tab => tab.url).join('\u0001');
+  let sigs = new Set(sessions.map(sig));
+  let added = 0, duplicates = 0, full = 0, invalid = 0, fresh = [];
+  for (let i = 0; i < list.length; i++) {
+    let s = sanitizeSession(list[i], i);
+    if (!s) { invalid++; continue; }
+    if (ids.has(s.id) || sigs.has(sig(s))) { duplicates++; continue; }
+    if (sessions.length + fresh.length >= MAX_SESSIONS) { full++; continue; }
+    ids.add(s.id);
+    sigs.add(sig(s));
+    fresh.push(s);
+    added++;
+  }
+  if (fresh.length) {
+    // newest first, the same order the list is kept in
+    let merged = sessions.concat(fresh).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+    await chrome.storage.local.set({ drowzy_sessions: merged });
+  }
+  return { added, duplicates, full, invalid };
 }
 
 async function getTabList(windowId) {
@@ -1644,6 +1832,7 @@ async function getTabList(windowId) {
     let protectReason = null;
     let timeLeft = null;
     let keptAwake = held.has(tab.id);
+    let waitReason = null;
     // the entry that covers this tab, handed to the popup so the current-site
     // button can remove exactly what is stored
     let whitelistEntry = whitelistMatch(tab.url, settings.whitelist);
@@ -1670,6 +1859,10 @@ async function getTabList(windowId) {
     } else if (whitelistEntry) {
       status = 'protected';
       protectReason = 'Whitelisted';
+    } else if (isNeverLoaded(tab)) {
+      // Opera only: the automatic paths leave these alone, so a countdown
+      // here would promise a sleep that is not going to happen
+      waitReason = 'notLoaded';
     } else if (settings.enableAutoSuspend && threshold > 0) {
       // mirror shouldSuspend's logic so the displayed timer matches what
       // actually happens - max of our timestamp and Chrome's lastAccessed
@@ -1681,6 +1874,8 @@ async function getTabList(windowId) {
         let remaining = threshold - (now - lastActive);
         timeLeft = Math.max(0, Math.ceil(remaining / 60000));
       }
+      // overdue and still awake: say why, when the last pass knows
+      if (timeLeft === 0) waitReason = autoRefusalFor(tab.id);
     }
 
     return {
@@ -1689,11 +1884,27 @@ async function getTabList(windowId) {
       url: tab.url || '',
       // fall back to the icon we saw before Chrome dropped it on discard
       favIconUrl: tab.favIconUrl || icons[tab.id] || '',
-      status, protectReason, timeLeft, keptAwake, whitelistEntry,
+      status, protectReason, timeLeft, keptAwake, whitelistEntry, waitReason,
       pinned: tab.pinned,
       audible: tab.audible
     };
   });
+}
+
+// What makes two tabs "the same page" for Close Duplicates. Only the scheme
+// and host are case-insensitive; paths, queries and fragments are compared
+// as they are. Before 1.6.0 the whole address was lowercased and the
+// fragment dropped, so two Gmail messages (#inbox vs #inbox/abc), two pages
+// of a hash-routed app, or two case-sensitive ids counted as one page and
+// all but one were closed. Closing is not undoable from Drowzy, so this
+// errs toward leaving a near-duplicate open. A bare trailing slash is still
+// ignored: "site.com" and "site.com/" are the same page.
+function duplicateKey(url) {
+  try {
+    let u = new URL(url);
+    let path = u.pathname.length > 1 ? u.pathname.replace(/\/$/, '') : '';
+    return u.protocol + '//' + u.host + path + u.search + u.hash;
+  } catch { return null; }
 }
 
 function onMessage(msg, sender, sendResponse) {
@@ -1784,6 +1995,7 @@ async function handleMessage(msg) {
         if (!tab || isInternalUrl(tab.url)) return { success: false };
       }
       await setKeptAwake(tabId, on);
+      await setBrowserAutoDiscard(tabId, !on);
       // Releasing restarts the idle clock. Without this a tab held for longer
       // than the threshold is already overdue the moment it is released and
       // vanishes on the next tick - "Allow sleep" means back to normal, not
@@ -1848,6 +2060,7 @@ async function handleMessage(msg) {
     case 'saveSession': return await saveSession(msg.name);
     case 'deleteSession': return await deleteSession(msg.id);
     case 'restoreSession': return await restoreSession(msg.id, msg.mode);
+    case 'importSessions': return await importSessions(msg.sessions);
     case 'getStats': return await getStats();
 
     case 'closeDuplicates': {
@@ -1856,8 +2069,8 @@ async function handleMessage(msg) {
       let closed = 0;
       for (let tab of tabs) {
         if (!tab.url || isInternalUrl(tab.url)) continue;
-        // Normalize: lowercase, strip fragment, strip trailing slash before query or end
-        let url = tab.url.toLowerCase().replace(/#.*$/, '').replace(/\/(\?|$)/, '$1');
+        let url = duplicateKey(tab.url);
+        if (!url) continue;
         if (!groups[url]) groups[url] = [];
         groups[url].push(tab);
       }
@@ -1874,8 +2087,10 @@ async function handleMessage(msg) {
           || groups[url].find(tab => !tab.discarded)
           || groups[url][0];
         for (let tab of groups[url]) {
-          // Never close pinned tabs (even if not the chosen "keep")
-          if (tab.id !== keep.id && !tab.pinned) {
+          // Never close pinned tabs (even if not the chosen "keep"), and never
+          // close one that is playing sound: closing it would cut off whatever
+          // the user is listening to, which no duplicate is worth
+          if (tab.id !== keep.id && !tab.pinned && !tab.audible) {
             try { await chrome.tabs.remove(tab.id); closed++; } catch {}
           }
         }

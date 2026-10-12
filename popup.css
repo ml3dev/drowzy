@@ -282,6 +282,7 @@ body:not(.popup-ready) {
 .badge-starred { color: var(--color-gold); background: var(--color-amber-dim); }
 .badge-system { color: var(--color-muted); background: var(--color-muted-dim); }
 .badge-timer { color: var(--color-muted); background: var(--color-muted-dim); }
+.badge-wait { color: var(--color-amber); background: var(--color-amber-dim); }
 .badge-sleeping { color: var(--color-accent); background: var(--color-accent-dim); }
 .badge-awake { color: var(--color-cyan); background: var(--color-cyan-dim); }
 
@@ -1084,6 +1085,36 @@ body:not(.popup-ready) {
   background: var(--color-danger);
   border-color: var(--color-danger);
 }
+
+/* Replace's second-click state: amber, not red - it closes tabs, but they
+   are the window's current tabs, not data that is gone for good */
+.btn.confirming:not(.btn-ghost-danger),
+.btn.confirming:not(.btn-ghost-danger):hover {
+  color: var(--color-amber);
+  background: var(--color-amber-dim);
+  border-color: var(--color-amber);
+}
+
+/* the hidden attribute has to win over display rules on the button classes */
+.btn-icon-only[hidden] { display: none; }
+
+/* one line above the tab list while auto-suspend is off */
+.auto-off-notice {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin: 0 14px 6px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  background: var(--color-muted-dim);
+}
+
+.auto-off-notice[hidden] { display: none; }
+
+.auto-off-notice .current-tab-fix { margin-top: 0; }
 
 .stat-hero {
   display: flex;

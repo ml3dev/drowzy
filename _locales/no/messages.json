@@ -147,7 +147,7 @@
     "message": "Totalt"
   },
   "statLifetimeRam": {
-    "message": "Total RAM spart"
+    "message": "Minne frigjort over tid (anslått)"
   },
   "ramEstimateTooltip": {
     "message": "Estimert ved bruk av ~150 MB per suspendert fane. Faktiske besparelser varierer per side."
@@ -444,7 +444,7 @@
     "message": "<strong>Faner som er inaktive i 15 minutter</strong> suspenderes automatisk"
   },
   "featureZeroRam": {
-    "message": "<strong>Suspenderte faner bruker null RAM</strong> men forblir i fanelinjen"
+    "message": "<strong>Suspenderte faner frigjør det meste av minnet sitt</strong> men forblir i fanelinjen"
   },
   "featureClickToWake": {
     "message": "<strong>Klikk på en suspendert fane</strong> for å vekke den"
@@ -785,13 +785,13 @@
     "message": "Dette nettstedet står på aldri-dvale-listen din. Fjern det for å sette denne fanen i dvale."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Det trengs en annen åpen fane å bytte til først. Chrome kan ikke sette fanen du ser på i dvale."
+    "message": "Det trengs en annen åpen fane å bytte til først. Nettleseren kan ikke sette fanen du ser på i dvale."
   },
   "openSettingsAction": {
     "message": "Åpne innstillinger"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome ville ikke sette denne fanen i dvale"
+    "message": "Nettleseren ville ikke sette denne fanen i dvale"
   },
   "suspendFailedLoading": {
     "message": "Laster fortsatt - prøv igjen om et øyeblikk"
@@ -842,7 +842,7 @@
     "message": "1 minutt"
   },
   "shortcutsHint": {
-    "message": "Chrome styrer disse snarveiene. Tilpass åpner chrome://extensions/shortcuts, der du kan endre eller fjerne hver snarvei."
+    "message": "Nettleseren styrer disse snarveiene. Tilpass åpner chrome://extensions/shortcuts, der du kan endre eller fjerne hver snarvei."
   },
   "shortcutUnset": {
     "message": "Ikke angitt"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Hvitlisten er full for Chrome-synkronisering. Fjern noen nettsteder og prøv igjen."
+    "message": "Hvitlisten er full for nettlesersynkronisering. Fjern noen nettsteder og prøv igjen."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Alle disse nettstedene er allerede på hvitelisten din"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ ikke gjenkjent",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Ikke lagret"
+  },
+  "badgeStillLoading": {
+    "message": "Laster"
+  },
+  "badgeNotLoaded": {
+    "message": "Ikke lastet"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Denne fanen har inndata som ikke er lagret, så Drowzy holder den våken. Du kan endre dette med Beskytt faner med skjemaer i Innstillinger."
+  },
+  "waitStillLoadingHint": {
+    "message": "Denne fanen laster fortsatt. Drowzy prøver igjen om et minutt."
+  },
+  "waitNotLoadedHint": {
+    "message": "Denne fanen er ikke lastet ennå, så den bruker ikke minne. Drowzy lar den være."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Auto-suspendering er slått av, så faner sover bare når du ber om det."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ av $TOTAL$ faner gjenopprettet",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Klikk igjen for å erstatte fanene i dette vinduet"
+  },
+  "importSessionsTitle": {
+    "message": "Importer økter fra utklippstavlen"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ økt(er) importert",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Fant ingen Drowzy-økter på utklippstavlen"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Disse øktene er allerede lagret"
+  },
+  "openSidePanel": {
+    "message": "Åpne i sidepanelet"
+  },
+  "sidePanelUnavailable": {
+    "message": "Sidepanelet kunne ikke åpnes"
+  },
+  "changelog160Title1": {
+    "message": "Våken betyr våken"
+  },
+  "changelog160Desc1": {
+    "message": "En fane du holder våken, er nå også beskyttet mot nettleserens egen minnesparing, ikke bare mot Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Se hvorfor en fane fortsatt er våken"
+  },
+  "changelog160Desc2": {
+    "message": "En fane som skulle sovnet, men som holdes tilbake av inndata som ikke er lagret eller treg lasting, viser nå årsaken i listen. Når auto-suspendering er slått av, forteller en linje over listen deg det."
+  },
+  "changelog160Title3": {
+    "message": "Lukk dupliserte faner er mer forsiktig"
+  },
+  "changelog160Desc3": {
+    "message": "Den lukker nå bare faner med nøyaktig samme adresse. Ulike e-poster eller sider i samme app forblir åpne, og en fane som spiller av lyd, lukkes aldri."
+  },
+  "changelog160Title4": {
+    "message": "Skånsommere i Opera og Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "I Opera venter Drowzy nå noen minutter etter at nettleseren starter før faner legges i dvale, og gjør det deretter én fane om gangen."
+  },
+  "changelog160Title5": {
+    "message": "Og de små tingene"
+  },
+  "changelog160Desc5": {
+    "message": "Importer lagrede økter fra utklippstavlen, åpne sidepanelet fra popup-vinduet, og Erstatt ber nå om et ekstra klikk før fanene dine lukkes. Import til hvitelisten godtar nettsteder skilt med mellomrom, og tidtakeren i fanelisten og velkomstsiden vises riktig på alle språk."
   }
 }

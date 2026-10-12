@@ -147,7 +147,7 @@
     "message": "מאז ומתמיד"
   },
   "statLifetimeRam": {
-    "message": "סך RAM שנחסך"
+    "message": "זיכרון ששוחרר לאורך זמן (הערכה)"
   },
   "ramEstimateTooltip": {
     "message": "מוערך באמצעות ~150 MB ללשונית מושעית. החיסכון בפועל משתנה לפי דף."
@@ -444,7 +444,7 @@
     "message": "<strong>כרטיסיות שלא היו פעילות 15 דקות</strong> מושעות אוטומטית"
   },
   "featureZeroRam": {
-    "message": "<strong>כרטיסיות מושעות לא צורכות RAM</strong> אך נשארות בסרגל הכרטיסיות"
+    "message": "<strong>כרטיסיות מושעות משחררות את רוב הזיכרון שלהן</strong> אך נשארות בסרגל הכרטיסיות"
   },
   "featureClickToWake": {
     "message": "<strong>לחץ על כל כרטיסייה מושעה</strong> כדי להעיר אותה"
@@ -785,13 +785,13 @@
     "message": "האתר הזה נמצא ברשימת \"לעולם אל תשהה\" שלך. הסר אותו כדי להשהות את הלשונית."
   },
   "cantSuspendNoOtherTab": {
-    "message": "נדרשת לשונית פתוחה אחרת לעבור אליה. Chrome לא יכול להשהות את הלשונית שאתה צופה בה."
+    "message": "נדרשת לשונית פתוחה אחרת לעבור אליה. הדפדפן לא יכול להשהות את הלשונית שאתה צופה בה."
   },
   "openSettingsAction": {
     "message": "פתח הגדרות"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome לא השהה את הלשונית הזו"
+    "message": "הדפדפן לא השהה את הלשונית הזו"
   },
   "suspendFailedLoading": {
     "message": "עדיין נטען - נסה שוב בעוד רגע"
@@ -842,7 +842,7 @@
     "message": "דקה"
   },
   "shortcutsHint": {
-    "message": "Chrome מנהל אותם. התאמה אישית פותח את chrome://extensions/shortcuts, שם אפשר לשנות או לנקות כל קיצור."
+    "message": "הדפדפן מנהל אותם. התאמה אישית פותח את chrome://extensions/shortcuts, שם אפשר לשנות או לנקות כל קיצור."
   },
   "shortcutUnset": {
     "message": "לא הוגדר"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "הרשימה הלבנה מלאה עבור סנכרון Chrome. הסר כמה אתרים ונסה שוב."
+    "message": "הרשימה הלבנה מלאה עבור סנכרון הדפדפן. הסר כמה אתרים ונסה שוב."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ דק׳",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "כל האתרים האלה כבר נמצאים ברשימה הלבנה שלך"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ לא זוהו",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "לא נשמר"
+  },
+  "badgeStillLoading": {
+    "message": "בטעינה"
+  },
+  "badgeNotLoaded": {
+    "message": "לא נטען"
+  },
+  "waitUnsavedInputHint": {
+    "message": "בלשונית הזו יש קלט שלא נשמר, ולכן Drowzy משאיר אותה ערה. אפשר לשנות זאת עם הגן על כרטיסיות עם טפסים בהגדרות."
+  },
+  "waitStillLoadingHint": {
+    "message": "הלשונית הזו עדיין בטעינה. Drowzy ינסה שוב בעוד דקה."
+  },
+  "waitNotLoadedHint": {
+    "message": "הלשונית הזו עוד לא נטענה, ולכן היא לא צורכת זיכרון. Drowzy לא נוגע בה."
+  },
+  "autoSuspendOffNotice": {
+    "message": "ההשעיה האוטומטית כבויה, ולכן לשוניות נרדמות רק כשאתה מבקש."
+  },
+  "restoredSomeTabs": {
+    "message": "שוחזרו $COUNT$ מתוך $TOTAL$ כרטיסיות",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "לחץ שוב כדי להחליף את הכרטיסיות בחלון הזה"
+  },
+  "importSessionsTitle": {
+    "message": "ייבוא הפעלות מהלוח"
+  },
+  "importedSessions": {
+    "message": "יובאו $COUNT$ הפעלות",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "לא נמצאו הפעלות של Drowzy בלוח"
+  },
+  "sessionsAlreadySaved": {
+    "message": "ההפעלות האלה כבר שמורות"
+  },
+  "openSidePanel": {
+    "message": "פתח בחלונית הצד"
+  },
+  "sidePanelUnavailable": {
+    "message": "לא ניתן היה לפתוח את חלונית הצד"
+  },
+  "changelog160Title1": {
+    "message": "ערה זה ערה"
+  },
+  "changelog160Desc1": {
+    "message": "לשונית שאתה משאיר ערה מוגנת עכשיו גם מחיסכון הזיכרון של הדפדפן עצמו, ולא רק מ־Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "ראה למה לשונית עדיין ערה"
+  },
+  "changelog160Desc2": {
+    "message": "לשונית שהגיע זמנה להירדם אבל קלט שלא נשמר או טעינה איטית מעכבים אותה מציגה עכשיו את הסיבה ברשימה. כשההשעיה האוטומטית כבויה, שורה מעל הרשימה אומרת לך את זה."
+  },
+  "changelog160Title3": {
+    "message": "סגירת כרטיסיות כפולות זהירה יותר"
+  },
+  "changelog160Desc3": {
+    "message": "עכשיו נסגרות רק כרטיסיות עם אותה כתובת בדיוק. הודעות דוא״ל שונות או דפים שונים של אותה אפליקציה נשארים פתוחים, וכרטיסייה שמשמיעה צליל לעולם לא נסגרת."
+  },
+  "changelog160Title4": {
+    "message": "עדין יותר ב־Opera וב־Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "ב־Opera, Drowzy ממתין עכשיו כמה דקות אחרי שהדפדפן עולה לפני שהוא מרדים כרטיסיות, ואז עושה זאת אחת אחת."
+  },
+  "changelog160Title5": {
+    "message": "והדברים הקטנים"
+  },
+  "changelog160Desc5": {
+    "message": "ייבא הפעלות שמורות מהלוח, פתח את חלונית הצד מהחלון הקופץ, והחלף מבקש עכשיו לחיצה שנייה לפני שהוא סוגר את הכרטיסיות שלך. ייבוא הרשימה הלבנה מקבל אתרים מופרדים ברווחים, והטיימר ברשימת הכרטיסיות ודף הפתיחה מוצגים נכון בכל שפה."
   }
 }

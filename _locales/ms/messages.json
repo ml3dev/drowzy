@@ -147,7 +147,7 @@
     "message": "Sepanjang masa"
   },
   "statLifetimeRam": {
-    "message": "Jumlah RAM disimpan"
+    "message": "Memori yang dibebaskan dari masa ke masa (anggaran)"
   },
   "ramEstimateTooltip": {
     "message": "Dianggarkan menggunakan ~150 MB setiap tab yang digantung. Penjimatan sebenar berbeza mengikut halaman."
@@ -444,7 +444,7 @@
     "message": "<strong>Tab yang tidak aktif selama 15 minit</strong> digantung secara automatik"
   },
   "featureZeroRam": {
-    "message": "<strong>Tab yang digantung menggunakan sifar RAM</strong> tetapi kekal dalam bar tab anda"
+    "message": "<strong>Tab yang digantung melepaskan kebanyakan memorinya</strong> tetapi kekal dalam bar tab anda"
   },
   "featureClickToWake": {
     "message": "<strong>Klik mana-mana tab yang digantung</strong> untuk membangunkannya"
@@ -785,13 +785,13 @@
     "message": "Laman ini ada dalam senarai jangan sesekali tidurkan anda. Buang ia untuk menidurkan tab ini."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Perlukan tab lain yang terbuka untuk bertukar dahulu. Chrome tidak boleh menidurkan tab yang sedang anda lihat."
+    "message": "Perlukan tab lain yang terbuka untuk bertukar dahulu. Pelayar tidak boleh menidurkan tab yang sedang anda lihat."
   },
   "openSettingsAction": {
     "message": "Buka tetapan"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome tidak menidurkan tab ini"
+    "message": "Pelayar tidak menidurkan tab ini"
   },
   "suspendFailedLoading": {
     "message": "Masih memuatkan - cuba lagi sebentar"
@@ -842,7 +842,7 @@
     "message": "1 minit"
   },
   "shortcutsHint": {
-    "message": "Chrome yang mengurus pintasan ini. Sesuaikan membuka chrome://extensions/shortcuts, tempat anda boleh menukar atau mengosongkan setiap pintasan."
+    "message": "Pelayar yang mengurus pintasan ini. Sesuaikan membuka chrome://extensions/shortcuts, tempat anda boleh menukar atau mengosongkan setiap pintasan."
   },
   "shortcutUnset": {
     "message": "Tidak ditetapkan"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Senarai putih sudah penuh untuk penyegerakan Chrome. Buang beberapa laman dan cuba lagi."
+    "message": "Senarai putih sudah penuh untuk penyegerakan pelayar. Buang beberapa laman dan cuba lagi."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Semua laman ini sudah ada dalam senarai putih anda"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ tidak dikenali",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Belum disimpan"
+  },
+  "badgeStillLoading": {
+    "message": "Memuatkan"
+  },
+  "badgeNotLoaded": {
+    "message": "Belum dimuatkan"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Tab ini ada input yang belum disimpan, jadi Drowzy membiarkannya terjaga. Anda boleh mengubahnya dengan Lindungi tab dengan borang dalam Tetapan."
+  },
+  "waitStillLoadingHint": {
+    "message": "Tab ini masih dimuatkan. Drowzy akan cuba lagi dalam seminit."
+  },
+  "waitNotLoadedHint": {
+    "message": "Tab ini belum dimuatkan, jadi ia tidak menggunakan memori. Drowzy membiarkannya."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Gantung automatik dimatikan, jadi tab hanya tidur apabila anda minta."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ daripada $TOTAL$ tab dipulihkan",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Klik sekali lagi untuk menggantikan tab dalam tetingkap ini"
+  },
+  "importSessionsTitle": {
+    "message": "Import sesi dari papan klip"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ sesi diimport",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Tiada sesi Drowzy ditemui dalam papan klip"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Sesi ini sudah disimpan"
+  },
+  "openSidePanel": {
+    "message": "Buka dalam panel sisi"
+  },
+  "sidePanelUnavailable": {
+    "message": "Panel sisi tidak dapat dibuka"
+  },
+  "changelog160Title1": {
+    "message": "Terjaga bermaksud terjaga"
+  },
+  "changelog160Desc1": {
+    "message": "Tab yang anda kekalkan terjaga kini turut selamat daripada penjimatan memori pelayar sendiri, bukan hanya daripada Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Lihat sebab tab masih terjaga"
+  },
+  "changelog160Desc2": {
+    "message": "Tab yang sepatutnya tidur tetapi tertahan oleh input yang belum disimpan atau pemuatan perlahan kini menyatakan sebabnya dalam senarai. Apabila gantung automatik dimatikan, satu baris di atas senarai memberitahu anda."
+  },
+  "changelog160Title3": {
+    "message": "Tutup tab pendua kini lebih berhati-hati"
+  },
+  "changelog160Desc3": {
+    "message": "Kini ia hanya menutup tab dengan alamat yang betul-betul sama. E-mel berbeza atau halaman berbeza bagi aplikasi yang sama kekal terbuka, dan tab yang sedang memainkan bunyi tidak akan ditutup."
+  },
+  "changelog160Title4": {
+    "message": "Lebih lembut dalam Opera dan Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "Dalam Opera, Drowzy kini menunggu beberapa minit selepas pelayar dimulakan sebelum menidurkan tab, kemudian melakukannya satu demi satu."
+  },
+  "changelog160Title5": {
+    "message": "Dan perkara kecil"
+  },
+  "changelog160Desc5": {
+    "message": "Import sesi yang disimpan dari papan klip, buka panel sisi dari tetingkap timbul, dan Ganti kini meminta klik kedua sebelum menutup tab anda. Import senarai putih menerima laman yang dipisahkan dengan ruang, dan pemasa senarai tab serta halaman alu-aluan dipaparkan dengan betul dalam setiap bahasa."
   }
 }

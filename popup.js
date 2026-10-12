@@ -42,6 +42,14 @@ var BADGES = {
   'Kept awake': { icon: 'coffee', type: 'awake', labelKey: 'badgeAwake' },
 };
 
+// An idle tab that is due but still awake, and why (the worker's waitReason).
+// Shown in place of "soon", which used to sit there forever on these tabs.
+var WAIT_BADGES = {
+  form: { icon: 'fileText', labelKey: 'badgeUnsavedInput', hintKey: 'waitUnsavedInputHint' },
+  loading: { icon: 'refreshCw', labelKey: 'badgeStillLoading', hintKey: 'waitStillLoadingHint' },
+  notLoaded: { icon: 'pauseCircle', labelKey: 'badgeNotLoaded', hintKey: 'waitNotLoadedHint' }
+};
+
 async function init() {
   try {
     // Apply persisted section states synchronously before any await so the
@@ -336,7 +344,7 @@ function tabListSignature(tabs) {
   for (var i = 0; i < tabs.length; i++) {
     // Don't shadow the outer `t()` i18n helper
     var tab = tabs[i];
-    parts.push(tab.id + '|' + tab.status + '|' + (tab.title || '') + '|' + (tab.timeLeft == null ? '' : tab.timeLeft) + '|' + (tab.protectReason || '') + '|' + (tab.favIconUrl || '') + '|' + (tab.keptAwake ? 1 : 0));
+    parts.push(tab.id + '|' + tab.status + '|' + (tab.title || '') + '|' + (tab.timeLeft == null ? '' : tab.timeLeft) + '|' + (tab.protectReason || '') + '|' + (tab.favIconUrl || '') + '|' + (tab.keptAwake ? 1 : 0) + '|' + (tab.waitReason || ''));
   }
   return parts.join('\u0001');
 }
@@ -392,8 +400,11 @@ function renderTabList(tabs) {
       var reason = tab.keptAwake ? 'Kept awake' : tab.protectReason;
       var info = BADGES[reason] || { icon: 'shield', type: 'system', labelKey: 'badgeProtected' };
       meta.innerHTML = '<span class="badge badge-' + info.type + '" title="' + esc(t(info.labelKey)) + '">' + icon(info.icon, 11) + ' ' + esc(t(info.labelKey)) + '</span>';
+    } else if (tab.status === 'idle' && WAIT_BADGES[tab.waitReason]) {
+      var wait = WAIT_BADGES[tab.waitReason];
+      meta.innerHTML = '<span class="badge badge-wait" title="' + esc(t(wait.hintKey)) + '">' + icon(wait.icon, 11) + ' ' + esc(t(wait.labelKey)) + '</span>';
     } else if (tab.status === 'idle' && tab.timeLeft !== null) {
-      var timeText = tab.timeLeft > 0 ? esc(String(tab.timeLeft)) + 'm' : esc(t('suspendingSoon'));
+      var timeText = tab.timeLeft > 0 ? esc(t('minutesLeftShort', [String(tab.timeLeft)])) : esc(t('suspendingSoon'));
       meta.innerHTML = '<span class="badge badge-timer">' + icon('clock', 11) + ' ' + timeText + '</span>';
     }
     if (tab.status === 'idle') {
@@ -586,7 +597,7 @@ function buildFavicon(tab) {
 // and a chrome:// page yields whatever the internal hostname starts with.
 var FALLBACK_ICONS = [
   [/^chrome-extension:|^moz-extension:/, 'puzzle'],
-  [/^chrome:|^edge:|^about:|^brave:/,    'lock'],
+  [/^chrome:|^edge:|^about:|^brave:|^opera:|^vivaldi:/, 'lock'],
   [/^file:/,                             'fileText'],
   [/^view-source:/,                      'fileText'],
   [/^data:|^blob:/,                      'globe']
@@ -879,23 +890,49 @@ function renderSessions(sessions) {
     (function(session, rBtn, rpBtn, dBtn) {
       function disableAll() { rBtn.disabled = true; rpBtn.disabled = true; dBtn.disabled = true; }
       function enableAll() { rBtn.disabled = false; rpBtn.disabled = false; dBtn.disabled = false; }
+      function restoredToast(res) {
+        if (!res || !res.success) return (res && res.error) || t('failedToRestore');
+        // some pages could not be opened: say so instead of a count that
+        // reads as the whole session
+        if (res.total && res.count < res.total) return t('restoredSomeTabs', [String(res.count), String(res.total)]);
+        return t('restoredTabs', [String(res.count)]);
+      }
       rBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
         disableAll();
         rBtn.textContent = t('loading');
         var res = await msg({ action: 'restoreSession', id: session.id, mode: 'open' });
-        if (res && res.success) showToast(t('restoredTabs', [String(res.count)]));
-        else showToast((res && res.error) || t('failedToRestore'));
+        showToast(restoredToast(res));
         enableAll();
         rBtn.innerHTML = icon('download', 12) + ' ' + esc(t('open'));
       });
+      // Replace closes every tab in the window, pinned ones included, so it
+      // takes a second click the way Delete does. One stray click used to be
+      // enough to lose a whole window.
+      var replaceTimer = null;
+      function resetReplace() {
+        rpBtn.dataset.confirming = '';
+        rpBtn.classList.remove('confirming');
+        rpBtn.innerHTML = icon('download', 12) + ' ' + esc(t('replace'));
+        rpBtn.title = t('replaceSessionTitle');
+      }
       rpBtn.addEventListener('click', async function(e) {
         e.stopPropagation();
+        if (!rpBtn.dataset.confirming) {
+          rpBtn.dataset.confirming = '1';
+          rpBtn.classList.add('confirming');
+          rpBtn.innerHTML = icon('check', 12) + ' ' + esc(t('replace'));
+          rpBtn.title = t('confirmReplaceTitle');
+          showToast(t('confirmReplaceTitle'));
+          replaceTimer = setTimeout(resetReplace, 3000);
+          return;
+        }
+        clearTimeout(replaceTimer);
+        resetReplace();
         disableAll();
         rpBtn.textContent = t('loading');
         var res = await msg({ action: 'restoreSession', id: session.id, mode: 'replace' });
-        if (res && res.success) showToast(t('restoredTabs', [String(res.count)]));
-        else showToast((res && res.error) || t('failedToRestore'));
+        showToast(restoredToast(res));
         enableAll();
         rpBtn.innerHTML = icon('download', 12) + ' ' + esc(t('replace'));
       });
@@ -971,6 +1008,10 @@ function renderSettings(settings) {
     var el = document.getElementById(toggles[i][0]);
     if (el && active !== el) el.checked = settings[toggles[i][1]];
   }
+  // With the timer on Never, idle tabs show no countdown and nothing says
+  // why; this one line above the list does
+  var autoOff = document.getElementById('autoOffNotice');
+  if (autoOff) autoOff.hidden = !!(settings.enableAutoSuspend && Number(settings.suspendAfterMinutes) > 0);
   renderWhitelist(settings.whitelist);
 }
 
@@ -1135,7 +1176,15 @@ function attachListeners() {
   // scroll the relevant toggle into view and flash it, so the user lands on
   // the exact switch instead of a wall of options they have to scan.
   document.getElementById('btnCurrentTabFix').addEventListener('click', function() {
-    var targetId = this.dataset.target;
+    revealSetting(this.dataset.target);
+  });
+
+  // "Auto-suspend is off" above the tab list: same jump, to the timer
+  document.getElementById('btnAutoOffFix').addEventListener('click', function() {
+    revealSetting('suspendTimer');
+  });
+
+  function revealSetting(targetId) {
     if (!targetId) return;
     var body = document.getElementById('settingsBody');
     var toggle = document.getElementById('settingsToggle');
@@ -1177,7 +1226,7 @@ function attachListeners() {
     }
     body.addEventListener('transitionend', finish);
     setTimeout(finish, 300);
-  });
+  }
 
   document.getElementById('btnKeepAwake').addEventListener('click', async function() {
     if (this.disabled) return;
@@ -1331,6 +1380,52 @@ function attachListeners() {
     if (e.key === 'Enter') saveSession();
   });
 
+  // Paste back what "Copy all sessions" produced, on this or another
+  // computer. The worker rebuilds every session field by field and keeps
+  // only http and https pages, so a pasted file cannot store anything else.
+  document.getElementById('btnImportSessions').addEventListener('click', async function() {
+    if (this.disabled) return;
+    var text;
+    try { text = await navigator.clipboard.readText(); }
+    catch { showToast(t('clipboardReadFailed')); return; }
+    var parsed = null;
+    try { parsed = JSON.parse(text); } catch {}
+    if (parsed && !Array.isArray(parsed)) parsed = [parsed];
+    if (!parsed || !parsed.length) { showToast(t('noSessionsToImport')); return; }
+    this.disabled = true;
+    var res = await msg({ action: 'importSessions', sessions: parsed });
+    this.disabled = false;
+    if (!res) { showToast(t('failedToSave')); return; }
+    if (res.added) {
+      var note = t('importedSessions', [String(res.added)]);
+      if (res.full) note += ' · ' + t('maxSessionsReached');
+      showToast(note, res.full ? 4000 : undefined);
+      await loadAll();
+    } else if (res.full) {
+      showToast(t('maxSessionsReached'));
+    } else if (res.duplicates) {
+      showToast(t('sessionsAlreadySaved'));
+    } else {
+      showToast(t('noSessionsToImport'));
+    }
+  });
+
+  // Side panel shortcut, popup only. chrome.sidePanel.open needs the click
+  // that is happening right now, and browsers without the API (Opera has its
+  // own sidebar) never show the button at all.
+  var sidePanelBtn = document.getElementById('btnOpenSidePanel');
+  var inSidePanel = /sidepanel\.html$/.test(location.pathname);
+  if (sidePanelBtn && !inSidePanel && chrome.sidePanel && chrome.sidePanel.open) {
+    sidePanelBtn.hidden = false;
+    sidePanelBtn.addEventListener('click', async function() {
+      try {
+        var win = await chrome.windows.getCurrent();
+        await chrome.sidePanel.open({ windowId: win.id });
+        window.close();
+      } catch { showToast(t('sidePanelUnavailable')); }
+    });
+  }
+
   document.getElementById('btnExportSessions').addEventListener('click', async function() {
     var sessions = await msg({ action: 'getSessions' });
     if (!sessions || !sessions.length) { showToast(t('noSessionsToExport')); return; }
@@ -1379,7 +1474,9 @@ function attachListeners() {
     var text;
     try { text = await navigator.clipboard.readText(); }
     catch { showToast(t('clipboardReadFailed')); return; }
-    var lines = text.split(/[\n,;]+/).map(function(d) { return d.trim(); }).filter(Boolean);
+    // whitespace splits too, so a list pasted as "a.com b.com" or copied out
+    // of a spreadsheet column is read as separate sites, not one bad entry
+    var lines = text.split(/[\s,;]+/).map(function(d) { return d.trim(); }).filter(Boolean);
     if (!lines.length) { showToast(t('noValidDomains')); return; }
     // One message and one storage write for the whole list. Adding sites one
     // by one cost a sync write each, and Chrome allows only so many sync
@@ -1388,8 +1485,15 @@ function attachListeners() {
     if (!res) { showToast(t('failedToSave')); return; }
     if (res.error) { showToast(res.error); return; }
     if (!res.added && res.invalid === lines.length) { showToast(t('noValidDomains')); return; }
+    // nothing new and nothing wrong: every site was already there, which
+    // "Imported 0 new sites" made look like a failure
+    if (!res.added && !res.invalid) { showToast(t('importAllExisting')); return; }
     if (res.added) await loadAll();
-    showToast(t('importedSites', [String(res.added || 0)]));
+    var importMsg = t('importedSites', [String(res.added || 0)]);
+    // say how many lines were not usable, so a partly bad list is not
+    // mistaken for a complete import
+    if (res.invalid) importMsg += ' · ' + t('importSkippedInvalid', [String(res.invalid)]);
+    showToast(importMsg, res.invalid ? 4000 : undefined);
   });
 
   document.getElementById('btnShareStats').addEventListener('click', async function() {
@@ -1682,7 +1786,7 @@ async function checkReviewPrompt() {
   try {
     var data = await chrome.storage.local.get([
       'drowzy_stats', 'reviewPromptCompleted', 'reviewPromptSnoozedUntil', 'reviewPromptOpenCount',
-      'reviewPromptDismissCount', 'reviewPromptLastDismissed'
+      'reviewPromptDismissCount', 'reviewPromptLastDismissed', 'reviewPromptLaterCount'
     ]);
 
     // One-time migration from the pre-1.3.6 prompt model, which used
@@ -1759,9 +1863,14 @@ async function checkReviewPrompt() {
       });
     }, { once: true });
 
-    // Maybe later: hide for a 14-day cooldown, then it may reappear.
+    // Maybe later: hide for a 14-day cooldown, then it may reappear, but only
+    // once more. A second "Maybe later" is an answer, and asking every two
+    // weeks forever is the kind of nag that ends in an uninstall.
     document.getElementById('reviewLater').addEventListener('click', function() {
-      chrome.storage.local.set({ reviewPromptSnoozedUntil: Date.now() + FOURTEEN_DAYS });
+      var laters = (data.reviewPromptLaterCount || 0) + 1;
+      chrome.storage.local.set(laters >= 2
+        ? { reviewPromptCompleted: true, reviewPromptLaterCount: laters }
+        : { reviewPromptSnoozedUntil: Date.now() + FOURTEEN_DAYS, reviewPromptLaterCount: laters });
       dismissBanner();
     }, { once: true });
 

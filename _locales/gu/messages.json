@@ -147,7 +147,7 @@
     "message": "કુલ"
   },
   "statLifetimeRam": {
-    "message": "કુલ RAM બચત"
+    "message": "સમય જતાં મુક્ત થયેલી મેમરી (અંદાજ)"
   },
   "ramEstimateTooltip": {
     "message": "સસ્પેન્ડ કરેલ ટૅબ દીઠ ~150 MB નો ઉપયોગ કરીને અંદાજિત. વાસ્તવિક બચત પૃષ્ઠ પ્રમાણે બદલાય છે."
@@ -444,7 +444,7 @@
     "message": "<strong>15 મિનિટ નિષ્ક્રિય ટેબ</strong> ઑટોમેટિકલી સસ્પેન્ડ થાય છે"
   },
   "featureZeroRam": {
-    "message": "<strong>સસ્પેન્ડ થયેલી ટેબ શૂન્ય RAM વાપરે છે</strong> પણ તમારી ટેબ બારમાં રહે છે"
+    "message": "<strong>સસ્પેન્ડ થયેલી ટેબ તેમની મોટાભાગની મેમરી છોડી દે છે</strong> પણ તમારી ટેબ બારમાં રહે છે"
   },
   "featureClickToWake": {
     "message": "<strong>કોઈપણ સસ્પેન્ડ થયેલી ટેબ પર ક્લિક કરો</strong> તેને જગાડવા"
@@ -785,13 +785,13 @@
     "message": "આ સાઇટ તમારી ક્યારેય સ્થગિત ન કરો સૂચિમાં છે. આ ટૅબ ઊંઘાડવા માટે તેને દૂર કરો."
   },
   "cantSuspendNoOtherTab": {
-    "message": "પહેલાં જવા માટે બીજું ખુલ્લું ટૅબ જોઈએ. તમે જે ટૅબ જુઓ છો તેને Chrome સ્થગિત કરી શકતું નથી."
+    "message": "પહેલાં જવા માટે બીજું ખુલ્લું ટૅબ જોઈએ. તમે જે ટૅબ જુઓ છો તેને બ્રાઉઝર ઊંઘાડી શકતું નથી."
   },
   "openSettingsAction": {
     "message": "સેટિંગ્સ ખોલો"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome એ આ ટૅબને ઊંઘાડ્યું નહીં"
+    "message": "બ્રાઉઝરે આ ટૅબને ઊંઘાડ્યું નહીં"
   },
   "suspendFailedLoading": {
     "message": "હજી લોડ થઈ રહ્યું છે - થોડી વારે ફરી પ્રયાસ કરો"
@@ -842,7 +842,7 @@
     "message": "1 મિનિટ"
   },
   "shortcutsHint": {
-    "message": "આનું સંચાલન Chrome કરે છે. કસ્ટમાઇઝ કરો chrome://extensions/shortcuts ખોલે છે, જ્યાં તમે દરેક શૉર્ટકટ બદલી કે દૂર કરી શકો છો."
+    "message": "આનું સંચાલન તમારું બ્રાઉઝર કરે છે. કસ્ટમાઇઝ કરો chrome://extensions/shortcuts ખોલે છે, જ્યાં તમે દરેક શૉર્ટકટ બદલી કે દૂર કરી શકો છો."
   },
   "shortcutUnset": {
     "message": "સેટ નથી"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Chrome સિંક માટે વ્હાઇટલિસ્ટ ભરાઈ ગઈ છે. થોડી સાઇટ્સ દૂર કરીને ફરી પ્રયાસ કરો."
+    "message": "બ્રાઉઝર સિંક માટે વ્હાઇટલિસ્ટ ભરાઈ ગઈ છે. થોડી સાઇટ્સ દૂર કરીને ફરી પ્રયાસ કરો."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ મિ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "આ બધી સાઇટ્સ પહેલેથી તમારી વ્હાઇટલિસ્ટમાં છે"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ ઓળખાઈ નહીં",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "સાચવ્યું નથી"
+  },
+  "badgeStillLoading": {
+    "message": "લોડ થાય છે"
+  },
+  "badgeNotLoaded": {
+    "message": "લોડ થયું નથી"
+  },
+  "waitUnsavedInputHint": {
+    "message": "આ ટૅબમાં સાચવ્યા વગરનું લખાણ છે, તેથી Drowzy તેને જાગતું રાખે છે. સેટિંગ્સમાં ફોર્મવાળી ટેબ સુરક્ષિત રાખો વડે તમે આ બદલી શકો છો."
+  },
+  "waitStillLoadingHint": {
+    "message": "આ ટૅબ હજી લોડ થાય છે. Drowzy એક મિનિટ પછી ફરી પ્રયાસ કરશે."
+  },
+  "waitNotLoadedHint": {
+    "message": "આ ટૅબ હજી લોડ થયું નથી, તેથી તે મેમરી વાપરતું નથી. Drowzy તેને છોડી દે છે."
+  },
+  "autoSuspendOffNotice": {
+    "message": "ઑટો-સસ્પેન્ડ બંધ છે, તેથી તમે કહો ત્યારે જ ટૅબ ઊંઘે છે."
+  },
+  "restoredSomeTabs": {
+    "message": "$TOTAL$ માંથી $COUNT$ ટેબ રિસ્ટોર થઈ",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "આ વિન્ડોની ટેબ બદલવા માટે ફરી ક્લિક કરો"
+  },
+  "importSessionsTitle": {
+    "message": "ક્લિપબોર્ડમાંથી સેશન આયાત કરો"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ સેશન આયાત થયા",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "ક્લિપબોર્ડમાં કોઈ Drowzy સેશન મળ્યા નથી"
+  },
+  "sessionsAlreadySaved": {
+    "message": "આ સેશન પહેલેથી સાચવેલા છે"
+  },
+  "openSidePanel": {
+    "message": "સાઇડ પેનલમાં ખોલો"
+  },
+  "sidePanelUnavailable": {
+    "message": "સાઇડ પેનલ ખોલી શકાઈ નહીં"
+  },
+  "changelog160Title1": {
+    "message": "જાગતું એટલે જાગતું"
+  },
+  "changelog160Desc1": {
+    "message": "તમે જે ટૅબ જાગતું રાખો છો તે હવે ફક્ત Drowzy થી નહીં, બ્રાઉઝરની પોતાની મેમરી બચતથી પણ સુરક્ષિત છે."
+  },
+  "changelog160Title2": {
+    "message": "ટૅબ હજી કેમ જાગે છે તે જુઓ"
+  },
+  "changelog160Desc2": {
+    "message": "જે ટૅબને ઊંઘવાનો સમય થયો છે પણ સાચવ્યા વગરના લખાણ કે ધીમા લોડને કારણે અટક્યું છે, તે હવે સૂચિમાં કારણ બતાવે છે. ઑટો-સસ્પેન્ડ બંધ હોય ત્યારે સૂચિની ઉપરની એક લાઇન તમને જણાવે છે."
+  },
+  "changelog160Title3": {
+    "message": "ડુપ્લિકેટ ટેબ બંધ કરવું હવે વધુ સાવચેત છે"
+  },
+  "changelog160Desc3": {
+    "message": "હવે તે ફક્ત બરાબર એક જ સરનામાં વાળા ટેબ બંધ કરે છે. જુદા ઇમેઇલ અથવા એક જ એપના જુદા પેજ ખુલ્લા રહે છે, અને અવાજ વગાડતું ટેબ ક્યારેય બંધ થતું નથી."
+  },
+  "changelog160Title4": {
+    "message": "Opera અને Opera GX માં વધુ નરમ"
+  },
+  "changelog160Desc4": {
+    "message": "Opera માં Drowzy હવે બ્રાઉઝર શરૂ થયા પછી થોડી મિનિટ રાહ જુએ છે, પછી એક એક કરીને ટેબને સુવડાવે છે."
+  },
+  "changelog160Title5": {
+    "message": "અને નાની વાતો"
+  },
+  "changelog160Desc5": {
+    "message": "ક્લિપબોર્ડમાંથી સાચવેલા સેશન આયાત કરો, પૉપઅપમાંથી સાઇડ પેનલ ખોલો, અને બદલો હવે તમારી ટેબ બંધ કરતાં પહેલાં બીજું ક્લિક માંગે છે. વ્હાઇટલિસ્ટ આયાત સ્પેસથી અલગ કરેલી સાઇટ્સ સ્વીકારે છે, અને ટેબ સૂચિનું ટાઇમર અને સ્વાગત પેજ દરેક ભાષામાં બરાબર દેખાય છે."
   }
 }

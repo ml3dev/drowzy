@@ -147,7 +147,7 @@
     "message": "All time"
   },
   "statLifetimeRam": {
-    "message": "Lifetime RAM saved"
+    "message": "Memory freed over time (est.)"
   },
   "ramEstimateTooltip": {
     "message": "Estimated using ~150 MB per suspended tab. Actual savings vary by page."
@@ -444,7 +444,7 @@
     "message": "<strong>Tabs idle for 15 minutes</strong> are automatically suspended"
   },
   "featureZeroRam": {
-    "message": "<strong>Suspended tabs use zero RAM</strong> but stay in your tab bar"
+    "message": "<strong>Suspended tabs release most of their memory</strong> but stay in your tab bar"
   },
   "featureClickToWake": {
     "message": "<strong>Click any suspended tab</strong> to wake it up"
@@ -785,13 +785,13 @@
     "message": "This site is on your never-suspend list. Remove it to sleep this tab."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Needs another open tab to switch to first. Chrome cannot sleep the tab you are looking at."
+    "message": "Needs another open tab to switch to first. Your browser cannot sleep the tab you are looking at."
   },
   "openSettingsAction": {
     "message": "Open settings"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome wouldn't put this tab to sleep"
+    "message": "Your browser wouldn't put this tab to sleep"
   },
   "suspendFailedLoading": {
     "message": "Still loading - try again in a moment"
@@ -842,7 +842,7 @@
     "message": "1 minute"
   },
   "shortcutsHint": {
-    "message": "Chrome manages these. Customize opens chrome://extensions/shortcuts, where you can change or clear each shortcut."
+    "message": "Your browser manages these. Customize opens chrome://extensions/shortcuts, where you can change or clear each shortcut."
   },
   "shortcutUnset": {
     "message": "Not set"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "The whitelist is full for Chrome sync. Remove a few sites and try again."
+    "message": "The whitelist is full for browser sync. Remove a few sites and try again."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$m",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "All of these sites are already in your whitelist"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ not recognized",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Unsaved"
+  },
+  "badgeStillLoading": {
+    "message": "Loading"
+  },
+  "badgeNotLoaded": {
+    "message": "Not loaded"
+  },
+  "waitUnsavedInputHint": {
+    "message": "This tab has unsaved input, so Drowzy leaves it awake. You can change this with Protect tabs with forms in Settings."
+  },
+  "waitStillLoadingHint": {
+    "message": "This tab is still loading. Drowzy will try again in a minute."
+  },
+  "waitNotLoadedHint": {
+    "message": "This tab has not loaded yet, so it is not using memory. Drowzy leaves it alone."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Auto-suspend is off, so tabs only sleep when you ask."
+  },
+  "restoredSomeTabs": {
+    "message": "Restored $COUNT$ of $TOTAL$ tabs",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Click again to replace this window's tabs"
+  },
+  "importSessionsTitle": {
+    "message": "Import sessions from clipboard"
+  },
+  "importedSessions": {
+    "message": "Imported $COUNT$ session(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "No Drowzy sessions found in clipboard"
+  },
+  "sessionsAlreadySaved": {
+    "message": "These sessions are already saved"
+  },
+  "openSidePanel": {
+    "message": "Open in side panel"
+  },
+  "sidePanelUnavailable": {
+    "message": "The side panel could not be opened"
+  },
+  "changelog160Title1": {
+    "message": "Keep awake means awake"
+  },
+  "changelog160Desc1": {
+    "message": "A tab you keep awake is now also safe from your browser's own memory saving, not just from Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "See why a tab is still awake"
+  },
+  "changelog160Desc2": {
+    "message": "A tab that is due to sleep but held back by unsaved input or a slow load now says why in the list. When auto-suspend is off, a line above the list tells you."
+  },
+  "changelog160Title3": {
+    "message": "Close duplicate tabs is more careful"
+  },
+  "changelog160Desc3": {
+    "message": "It now closes only tabs with exactly the same address. Different emails or pages of the same app stay open, and a tab playing sound is never closed."
+  },
+  "changelog160Title4": {
+    "message": "Gentler in Opera and Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "In Opera, Drowzy now waits a few minutes after the browser starts before putting tabs to sleep, then does it one tab at a time."
+  },
+  "changelog160Title5": {
+    "message": "And the small stuff"
+  },
+  "changelog160Desc5": {
+    "message": "Import saved sessions from the clipboard, open the side panel from the popup, and Replace now asks for a second click before it closes your tabs. Whitelist import accepts sites separated by spaces, and the tab list timer and the welcome page read correctly in every language."
   }
 }

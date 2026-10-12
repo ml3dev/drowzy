@@ -147,7 +147,7 @@
     "message": "Tot el temps"
   },
   "statLifetimeRam": {
-    "message": "RAM total estalviada"
+    "message": "Memòria alliberada amb el temps (aprox.)"
   },
   "ramEstimateTooltip": {
     "message": "Estimat utilitzant ~150 MB per pestanya suspesa. L'estalvi real varia segons la pàgina."
@@ -444,7 +444,7 @@
     "message": "<strong>Les pestanyes inactives durant 15 minuts</strong> se suspenen automàticament"
   },
   "featureZeroRam": {
-    "message": "<strong>Les pestanyes suspeses no utilitzen RAM</strong> però es mantenen a la barra de pestanyes"
+    "message": "<strong>Les pestanyes suspeses alliberen la major part de la memòria</strong> però es mantenen a la barra de pestanyes"
   },
   "featureClickToWake": {
     "message": "<strong>Feu clic en qualsevol pestanya suspesa</strong> per despertar-la"
@@ -785,13 +785,13 @@
     "message": "Aquest lloc és a la teva llista de no suspendre mai. Treu-lo per suspendre aquesta pestanya."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Cal una altra pestanya oberta a la qual canviar. Chrome no pot suspendre la pestanya que estàs mirant."
+    "message": "Cal una altra pestanya oberta a la qual canviar. El navegador no pot suspendre la pestanya que estàs mirant."
   },
   "openSettingsAction": {
     "message": "Obre la configuració"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome no ha volgut suspendre aquesta pestanya"
+    "message": "El navegador no ha volgut suspendre aquesta pestanya"
   },
   "suspendFailedLoading": {
     "message": "Encara s'està carregant - torna-ho a provar d'aquí a un moment"
@@ -842,7 +842,7 @@
     "message": "1 minut"
   },
   "shortcutsHint": {
-    "message": "Chrome gestiona aquestes dreceres. Personalitza obre chrome://extensions/shortcuts, on pots canviar o esborrar cada drecera."
+    "message": "El navegador gestiona aquestes dreceres. Personalitza obre chrome://extensions/shortcuts, on pots canviar o esborrar cada drecera."
   },
   "shortcutUnset": {
     "message": "Sense assignar"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "La llista blanca és plena per a la sincronització de Chrome. Elimina alguns llocs i torna-ho a provar."
+    "message": "La llista blanca és plena per a la sincronització del navegador. Elimina alguns llocs i torna-ho a provar."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Tots aquests llocs ja són a la llista blanca"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ no reconeguts",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Sense desar"
+  },
+  "badgeStillLoading": {
+    "message": "Carregant"
+  },
+  "badgeNotLoaded": {
+    "message": "No carregada"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Aquesta pestanya té dades sense desar, així que Drowzy la manté desperta. Ho pots canviar amb Protegeix les pestanyes amb formularis a Configuració."
+  },
+  "waitStillLoadingHint": {
+    "message": "Aquesta pestanya encara s'està carregant. Drowzy ho tornarà a provar d'aquí a un minut."
+  },
+  "waitNotLoadedHint": {
+    "message": "Aquesta pestanya encara no s'ha carregat, així que no fa servir memòria. Drowzy la deixa tranquil·la."
+  },
+  "autoSuspendOffNotice": {
+    "message": "La suspensió automàtica està desactivada, així que les pestanyes només s'adormen quan tu ho demanes."
+  },
+  "restoredSomeTabs": {
+    "message": "S'han restaurat $COUNT$ de $TOTAL$ pestanyes",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Torna a fer clic per substituir les pestanyes d'aquesta finestra"
+  },
+  "importSessionsTitle": {
+    "message": "Importa sessions des del porta-retalls"
+  },
+  "importedSessions": {
+    "message": "S'han importat $COUNT$ sessió(ns)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "No s'han trobat sessions de Drowzy al porta-retalls"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Aquestes sessions ja estan desades"
+  },
+  "openSidePanel": {
+    "message": "Obre al plafó lateral"
+  },
+  "sidePanelUnavailable": {
+    "message": "No s'ha pogut obrir el plafó lateral"
+  },
+  "changelog160Title1": {
+    "message": "Desperta vol dir desperta"
+  },
+  "changelog160Desc1": {
+    "message": "Una pestanya que mantens desperta ara també està protegida de l'estalvi de memòria del mateix navegador, no només de Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Mira per què una pestanya encara està desperta"
+  },
+  "changelog160Desc2": {
+    "message": "Una pestanya que ja s'hauria d'adormir però que es reté per dades sense desar o una càrrega lenta ara n'explica el motiu a la llista. Quan la suspensió automàtica està desactivada, una línia a sobre de la llista t'ho diu."
+  },
+  "changelog160Title3": {
+    "message": "Tancar pestanyes duplicades és més prudent"
+  },
+  "changelog160Desc3": {
+    "message": "Ara només tanca pestanyes amb exactament la mateixa adreça. Correus diferents o pàgines diferents de la mateixa aplicació es queden obertes, i una pestanya que reprodueix so no es tanca mai."
+  },
+  "changelog160Title4": {
+    "message": "Més suau a Opera i Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "A Opera, Drowzy ara espera uns minuts després que s'iniciï el navegador abans d'adormir pestanyes, i després ho fa d'una en una."
+  },
+  "changelog160Title5": {
+    "message": "I les coses petites"
+  },
+  "changelog160Desc5": {
+    "message": "Importa sessions desades des del porta-retalls, obre el plafó lateral des de la finestra emergent, i Substitueix ara demana un segon clic abans de tancar les teves pestanyes. La importació de la llista blanca accepta llocs separats per espais, i el temporitzador de la llista de pestanyes i la pàgina de benvinguda es llegeixen bé en tots els idiomes."
   }
 }

@@ -147,7 +147,7 @@
     "message": "कुल"
   },
   "statLifetimeRam": {
-    "message": "कुल RAM बचत"
+    "message": "समय के साथ खाली हुई मेमोरी (अनुमान)"
   },
   "ramEstimateTooltip": {
     "message": "प्रति निलंबित टैब ~150 MB का उपयोग करके अनुमानित। वास्तविक बचत पृष्ठ के अनुसार भिन्न होती है।"
@@ -444,7 +444,7 @@
     "message": "<strong>15 मिनट से निष्क्रिय टैब</strong> स्वचालित रूप से सस्पेंड हो जाते हैं"
   },
   "featureZeroRam": {
-    "message": "<strong>सस्पेंड किए गए टैब शून्य RAM उपयोग करते हैं</strong> लेकिन आपकी टैब बार में बने रहते हैं"
+    "message": "<strong>सस्पेंड किए गए टैब अपनी ज़्यादातर मेमोरी छोड़ देते हैं</strong> लेकिन आपकी टैब बार में बने रहते हैं"
   },
   "featureClickToWake": {
     "message": "<strong>किसी भी सस्पेंड किए गए टैब पर क्लिक करें</strong> उसे जगाने के लिए"
@@ -785,13 +785,13 @@
     "message": "यह साइट आपकी कभी न सुलाएं सूची में है। इस टैब को सुलाने के लिए इसे हटाएं।"
   },
   "cantSuspendNoOtherTab": {
-    "message": "पहले किसी और खुले टैब पर जाना ज़रूरी है। Chrome उस टैब को नहीं सुला सकता जिसे आप देख रहे हैं।"
+    "message": "पहले किसी और खुले टैब पर जाना ज़रूरी है। ब्राउज़र उस टैब को नहीं सुला सकता जिसे आप देख रहे हैं।"
   },
   "openSettingsAction": {
     "message": "सेटिंग खोलें"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome ने इस टैब को नहीं सुलाया"
+    "message": "ब्राउज़र ने इस टैब को नहीं सुलाया"
   },
   "suspendFailedLoading": {
     "message": "अभी लोड हो रहा है - थोड़ी देर बाद फिर कोशिश करें"
@@ -842,7 +842,7 @@
     "message": "1 मिनट"
   },
   "shortcutsHint": {
-    "message": "इन्हें Chrome संभालता है। कस्टमाइज़ करें chrome://extensions/shortcuts खोलता है, जहाँ आप हर शॉर्टकट बदल या हटा सकते हैं।"
+    "message": "इन्हें आपका ब्राउज़र संभालता है। कस्टमाइज़ करें chrome://extensions/shortcuts खोलता है, जहाँ आप हर शॉर्टकट बदल या हटा सकते हैं।"
   },
   "shortcutUnset": {
     "message": "सेट नहीं है"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Chrome सिंक के लिए व्हाइटलिस्ट भर गई है। कुछ साइटें हटाकर फिर कोशिश करें।"
+    "message": "ब्राउज़र सिंक के लिए व्हाइटलिस्ट भर गई है। कुछ साइटें हटाकर फिर कोशिश करें।"
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ मि",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "ये सभी साइटें पहले से आपकी व्हाइटलिस्ट में हैं"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ पहचानी नहीं गईं",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "सहेजा नहीं"
+  },
+  "badgeStillLoading": {
+    "message": "लोड हो रहा"
+  },
+  "badgeNotLoaded": {
+    "message": "लोड नहीं हुआ"
+  },
+  "waitUnsavedInputHint": {
+    "message": "इस टैब में बिना सहेजा इनपुट है, इसलिए Drowzy इसे जगाए रखता है। आप इसे सेटिंग्स में फ़ॉर्म वाले टैब की सुरक्षा करें से बदल सकते हैं।"
+  },
+  "waitStillLoadingHint": {
+    "message": "यह टैब अभी लोड हो रहा है। Drowzy एक मिनट में फिर कोशिश करेगा।"
+  },
+  "waitNotLoadedHint": {
+    "message": "यह टैब अभी लोड नहीं हुआ है, इसलिए यह मेमोरी इस्तेमाल नहीं कर रहा। Drowzy इसे नहीं छेड़ता।"
+  },
+  "autoSuspendOffNotice": {
+    "message": "स्वचालित सस्पेंड बंद है, इसलिए टैब तभी सोते हैं जब आप कहें।"
+  },
+  "restoredSomeTabs": {
+    "message": "$TOTAL$ में से $COUNT$ टैब पुनर्स्थापित किए गए",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "इस विंडो के टैब बदलने के लिए फिर से क्लिक करें"
+  },
+  "importSessionsTitle": {
+    "message": "क्लिपबोर्ड से सत्र आयात करें"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ सत्र आयात किए गए",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "क्लिपबोर्ड में कोई Drowzy सत्र नहीं मिला"
+  },
+  "sessionsAlreadySaved": {
+    "message": "ये सत्र पहले से सहेजे हुए हैं"
+  },
+  "openSidePanel": {
+    "message": "साइड पैनल में खोलें"
+  },
+  "sidePanelUnavailable": {
+    "message": "साइड पैनल नहीं खुल सका"
+  },
+  "changelog160Title1": {
+    "message": "जगाए रखना मतलब सच में जगाए रखना"
+  },
+  "changelog160Desc1": {
+    "message": "जिस टैब को आप जगाए रखते हैं, वह अब सिर्फ़ Drowzy से नहीं, ब्राउज़र की अपनी मेमोरी बचत से भी सुरक्षित है।"
+  },
+  "changelog160Title2": {
+    "message": "देखें कि कोई टैब अब भी क्यों जगा है"
+  },
+  "changelog160Desc2": {
+    "message": "जिस टैब के सोने का समय हो गया है लेकिन बिना सहेजे इनपुट या धीमी लोडिंग की वजह से रुका है, वह अब सूची में कारण बताता है। स्वचालित सस्पेंड बंद होने पर सूची के ऊपर एक लाइन आपको बताती है।"
+  },
+  "changelog160Title3": {
+    "message": "डुप्लिकेट टैब बंद करना अब ज़्यादा सावधान है"
+  },
+  "changelog160Desc3": {
+    "message": "अब यह सिर्फ़ बिल्कुल एक ही पते वाले टैब बंद करता है। अलग-अलग ईमेल या एक ही ऐप के अलग पेज खुले रहते हैं, और आवाज़ चला रहा टैब कभी बंद नहीं होता।"
+  },
+  "changelog160Title4": {
+    "message": "Opera और Opera GX में ज़्यादा नरम"
+  },
+  "changelog160Desc4": {
+    "message": "Opera में Drowzy अब ब्राउज़र शुरू होने के बाद कुछ मिनट इंतज़ार करता है, फिर एक-एक करके टैब सुलाता है।"
+  },
+  "changelog160Title5": {
+    "message": "और छोटी-छोटी बातें"
+  },
+  "changelog160Desc5": {
+    "message": "क्लिपबोर्ड से सहेजे गए सत्र आयात करें, पॉपअप से साइड पैनल खोलें, और बदलें अब आपके टैब बंद करने से पहले दूसरा क्लिक माँगता है। व्हाइटलिस्ट आयात स्पेस से अलग की गई साइटें लेता है, और टैब सूची का टाइमर और स्वागत पेज हर भाषा में सही दिखते हैं।"
   }
 }

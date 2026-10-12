@@ -1,8 +1,13 @@
 // content script -- form data check + tab title marking
 
-// Guard against double-injection (service worker restart re-injects)
-if (!window._drowzyFormcheckLoaded) {
-window._drowzyFormcheckLoaded = true;
+// Guard against double-injection (service worker restart re-injects). Keyed
+// to the version: after an update, a copy left behind by the old version can
+// no longer talk to the extension, and a plain true/false guard would let it
+// block the new copy, so the form check would get no answer and read "clean".
+var _drowzyVersion = '';
+try { _drowzyVersion = chrome.runtime.getManifest().version; } catch {}
+if (window._drowzyFormcheckLoaded !== _drowzyVersion) {
+window._drowzyFormcheckLoaded = _drowzyVersion;
 
 chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
   if (msg.action === 'checkFormData') {

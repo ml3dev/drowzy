@@ -147,7 +147,7 @@
     "message": "全部时间"
   },
   "statLifetimeRam": {
-    "message": "总共节省的 RAM"
+    "message": "累计释放的内存（估算）"
   },
   "ramEstimateTooltip": {
     "message": "估计每个挂起标签使用约 150 MB。实际节省因页面而异。"
@@ -444,7 +444,7 @@
     "message": "<strong>闲置 15 分钟的标签页</strong>将自动被休眠"
   },
   "featureZeroRam": {
-    "message": "<strong>已休眠的标签页不占用 RAM</strong>，但仍保留在标签栏中"
+    "message": "<strong>已休眠的标签页会释放大部分内存</strong>，但仍保留在标签栏中"
   },
   "featureClickToWake": {
     "message": "<strong>点击任何已休眠的标签页</strong>即可唤醒"
@@ -785,13 +785,13 @@
     "message": "该网站在你的永不休眠列表中。移除后即可休眠此标签页。"
   },
   "cantSuspendNoOtherTab": {
-    "message": "需要另一个打开的标签页可供切换。Chrome 无法休眠你正在查看的标签页。"
+    "message": "需要另一个打开的标签页可供切换。浏览器无法休眠你正在查看的标签页。"
   },
   "openSettingsAction": {
     "message": "打开设置"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome 未能休眠此标签页"
+    "message": "浏览器未能休眠此标签页"
   },
   "suspendFailedLoading": {
     "message": "仍在加载，请稍后重试"
@@ -842,7 +842,7 @@
     "message": "1 分钟"
   },
   "shortcutsHint": {
-    "message": "这些快捷键由 Chrome 管理。点击“自定义”会打开 chrome://extensions/shortcuts，你可以在那里更改或清除每个快捷键。"
+    "message": "这些快捷键由浏览器管理。点击“自定义”会打开 chrome://extensions/shortcuts，你可以在那里更改或清除每个快捷键。"
   },
   "shortcutUnset": {
     "message": "未设置"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "白名单已达到 Chrome 同步的容量上限。请删除几个网站后重试。"
+    "message": "白名单已达到浏览器同步的容量上限。请删除几个网站后重试。"
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ 分钟",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "这些网站都已在你的白名单中"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ 个无法识别",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "未保存"
+  },
+  "badgeStillLoading": {
+    "message": "加载中"
+  },
+  "badgeNotLoaded": {
+    "message": "未加载"
+  },
+  "waitUnsavedInputHint": {
+    "message": "此标签页有未保存的输入，所以 Drowzy 让它保持唤醒。你可以在设置中的“保护含表单的标签页”更改这一点。"
+  },
+  "waitStillLoadingHint": {
+    "message": "此标签页仍在加载。Drowzy 会在一分钟后重试。"
+  },
+  "waitNotLoadedHint": {
+    "message": "此标签页尚未加载，因此不占用内存。Drowzy 不会动它。"
+  },
+  "autoSuspendOffNotice": {
+    "message": "自动休眠已关闭，标签页只会在你要求时休眠。"
+  },
+  "restoredSomeTabs": {
+    "message": "已恢复 $COUNT$/$TOTAL$ 个标签页",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "再次点击以替换此窗口的标签页"
+  },
+  "importSessionsTitle": {
+    "message": "从剪贴板导入会话"
+  },
+  "importedSessions": {
+    "message": "已导入 $COUNT$ 个会话",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "剪贴板中没有找到 Drowzy 会话"
+  },
+  "sessionsAlreadySaved": {
+    "message": "这些会话已经保存过了"
+  },
+  "openSidePanel": {
+    "message": "在侧边栏中打开"
+  },
+  "sidePanelUnavailable": {
+    "message": "无法打开侧边栏"
+  },
+  "changelog160Title1": {
+    "message": "保持唤醒就是真的唤醒"
+  },
+  "changelog160Desc1": {
+    "message": "你保持唤醒的标签页现在也不会被浏览器自带的内存节省功能休眠，而不仅仅是 Drowzy。"
+  },
+  "changelog160Title2": {
+    "message": "看清标签页为何仍未休眠"
+  },
+  "changelog160Desc2": {
+    "message": "已到休眠时间、但因未保存的输入或加载缓慢而未休眠的标签页，现在会在列表中显示原因。自动休眠关闭时，列表上方会有一行提示。"
+  },
+  "changelog160Title3": {
+    "message": "关闭重复标签页更谨慎了"
+  },
+  "changelog160Desc3": {
+    "message": "现在只关闭地址完全相同的标签页。不同的邮件或同一应用的不同页面会保持打开，正在播放声音的标签页也绝不会被关闭。"
+  },
+  "changelog160Title4": {
+    "message": "在 Opera 和 Opera GX 中更温和"
+  },
+  "changelog160Desc4": {
+    "message": "在 Opera 中，Drowzy 现在会在浏览器启动后等几分钟再让标签页休眠，并且一次只处理一个。"
+  },
+  "changelog160Title5": {
+    "message": "还有一些小事"
+  },
+  "changelog160Desc5": {
+    "message": "可以从剪贴板导入已保存的会话，从弹出窗口直接打开侧边栏，“替换”现在会在关闭你的标签页前要求再点一次。白名单导入支持用空格分隔的网站，标签页列表中的计时器和欢迎页面在所有语言中都能正确显示。"
   }
 }

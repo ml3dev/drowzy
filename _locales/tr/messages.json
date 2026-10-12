@@ -147,7 +147,7 @@
     "message": "Tüm zamanlar"
   },
   "statLifetimeRam": {
-    "message": "Toplam tasarruf edilen RAM"
+    "message": "Zamanla boşaltılan bellek (tahmini)"
   },
   "ramEstimateTooltip": {
     "message": "Askıya alınmış sekme başına ~150 MB kullanılarak tahmin edildi. Gerçek tasarruflar sayfaya göre değişir."
@@ -444,7 +444,7 @@
     "message": "<strong>15 dakika boyunca etkin olmayan sekmeler</strong> otomatik olarak askıya alınır"
   },
   "featureZeroRam": {
-    "message": "<strong>Askıya alınan sekmeler sıfır RAM kullanır</strong> ancak sekme çubuğunuzda kalır"
+    "message": "<strong>Askıya alınan sekmeler belleklerinin çoğunu serbest bırakır</strong> ancak sekme çubuğunuzda kalır"
   },
   "featureClickToWake": {
     "message": "<strong>Askıya alınan herhangi bir sekmeye tıklayın</strong> uyandırmak için"
@@ -785,13 +785,13 @@
     "message": "Bu site asla askıya alma listende. Bu sekmeyi uyutmak için listeden çıkar."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Önce geçilecek başka bir açık sekme gerekiyor. Chrome baktığın sekmeyi uyutamaz."
+    "message": "Önce geçilecek başka bir açık sekme gerekiyor. Tarayıcı baktığın sekmeyi uyutamaz."
   },
   "openSettingsAction": {
     "message": "Ayarları aç"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome bu sekmeyi uyutmadı"
+    "message": "Tarayıcı bu sekmeyi uyutmadı"
   },
   "suspendFailedLoading": {
     "message": "Hâlâ yükleniyor - birazdan tekrar dene"
@@ -842,7 +842,7 @@
     "message": "1 dakika"
   },
   "shortcutsHint": {
-    "message": "Bunları Chrome yönetir. Özelleştir chrome://extensions/shortcuts sayfasını açar; orada her kısayolu değiştirebilir veya temizleyebilirsin."
+    "message": "Bunları tarayıcı yönetir. Özelleştir chrome://extensions/shortcuts sayfasını açar; orada her kısayolu değiştirebilir veya temizleyebilirsin."
   },
   "shortcutUnset": {
     "message": "Ayarlanmadı"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Beyaz liste Chrome eşitlemesi için dolu. Birkaç siteyi kaldırıp tekrar dene."
+    "message": "Beyaz liste tarayıcı eşitlemesi için dolu. Birkaç siteyi kaldırıp tekrar dene."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ dk",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Bu sitelerin hepsi zaten beyaz listenizde"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ tanınmadı",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Kaydedilmedi"
+  },
+  "badgeStillLoading": {
+    "message": "Yükleniyor"
+  },
+  "badgeNotLoaded": {
+    "message": "Yüklenmedi"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Bu sekmede kaydedilmemiş giriş var, bu yüzden Drowzy onu uyanık tutuyor. Bunu Ayarlar'daki Formlu sekmeleri koru seçeneğiyle değiştirebilirsin."
+  },
+  "waitStillLoadingHint": {
+    "message": "Bu sekme hâlâ yükleniyor. Drowzy bir dakika sonra yeniden deneyecek."
+  },
+  "waitNotLoadedHint": {
+    "message": "Bu sekme henüz yüklenmedi, bu yüzden bellek kullanmıyor. Drowzy ona dokunmuyor."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Otomatik askıya alma kapalı, bu yüzden sekmeler yalnızca sen istediğinde uyur."
+  },
+  "restoredSomeTabs": {
+    "message": "$TOTAL$ sekmeden $COUNT$ tanesi geri yüklendi",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Bu penceredeki sekmeleri değiştirmek için tekrar tıkla"
+  },
+  "importSessionsTitle": {
+    "message": "Oturumları panodan içe aktar"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ oturum içe aktarıldı",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Panoda Drowzy oturumu bulunamadı"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Bu oturumlar zaten kayıtlı"
+  },
+  "openSidePanel": {
+    "message": "Yan panelde aç"
+  },
+  "sidePanelUnavailable": {
+    "message": "Yan panel açılamadı"
+  },
+  "changelog160Title1": {
+    "message": "Uyanık demek uyanık demek"
+  },
+  "changelog160Desc1": {
+    "message": "Uyanık tuttuğun bir sekme artık yalnızca Drowzy'den değil, tarayıcının kendi bellek tasarrufundan da korunuyor."
+  },
+  "changelog160Title2": {
+    "message": "Bir sekmenin neden hâlâ uyanık olduğunu gör"
+  },
+  "changelog160Desc2": {
+    "message": "Uyuma zamanı gelmiş ama kaydedilmemiş giriş ya da yavaş yükleme yüzünden bekleyen bir sekme artık listede nedenini gösteriyor. Otomatik askıya alma kapalıyken listenin üstündeki bir satır bunu söyler."
+  },
+  "changelog160Title3": {
+    "message": "Yinelenen sekmeleri kapatma daha dikkatli"
+  },
+  "changelog160Desc3": {
+    "message": "Artık yalnızca adresi tamamen aynı olan sekmeleri kapatır. Farklı e-postalar veya aynı uygulamanın farklı sayfaları açık kalır ve ses çalan bir sekme asla kapatılmaz."
+  },
+  "changelog160Title4": {
+    "message": "Opera ve Opera GX'te daha nazik"
+  },
+  "changelog160Desc4": {
+    "message": "Opera'da Drowzy artık tarayıcı açıldıktan sonra sekmeleri uyutmadan önce birkaç dakika bekler, sonra bunu tek tek yapar."
+  },
+  "changelog160Title5": {
+    "message": "Ve küçük şeyler"
+  },
+  "changelog160Desc5": {
+    "message": "Kayıtlı oturumları panodan içe aktar, yan paneli açılır pencereden aç; Değiştir de artık sekmelerini kapatmadan önce ikinci bir tıklama istiyor. Beyaz liste içe aktarma boşlukla ayrılmış siteleri kabul ediyor, sekme listesindeki zamanlayıcı ve karşılama sayfası da her dilde doğru görünüyor."
   }
 }

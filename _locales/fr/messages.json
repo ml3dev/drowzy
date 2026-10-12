@@ -147,7 +147,7 @@
     "message": "Depuis le début"
   },
   "statLifetimeRam": {
-    "message": "RAM totale économisée"
+    "message": "Mémoire libérée au fil du temps (est.)"
   },
   "ramEstimateTooltip": {
     "message": "Estimé en utilisant ~150 Mo par onglet suspendu. Les économies réelles varient selon la page."
@@ -444,7 +444,7 @@
     "message": "<strong>Les onglets inactifs pendant 15 minutes</strong> sont automatiquement suspendus"
   },
   "featureZeroRam": {
-    "message": "<strong>Les onglets suspendus n'utilisent aucune RAM</strong> mais restent dans votre barre d'onglets"
+    "message": "<strong>Les onglets suspendus libèrent l'essentiel de leur mémoire</strong> mais restent dans votre barre d'onglets"
   },
   "featureClickToWake": {
     "message": "<strong>Cliquez sur n'importe quel onglet suspendu</strong> pour le réveiller"
@@ -785,13 +785,13 @@
     "message": "Ce site figure dans votre liste \"ne jamais suspendre\". Retirez-le pour suspendre cet onglet."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Il faut un autre onglet ouvert vers lequel basculer. Chrome ne peut pas suspendre l'onglet que vous regardez."
+    "message": "Il faut un autre onglet ouvert vers lequel basculer. Le navigateur ne peut pas suspendre l'onglet que vous regardez."
   },
   "openSettingsAction": {
     "message": "Ouvrir les paramètres"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome n'a pas voulu suspendre cet onglet"
+    "message": "Le navigateur n'a pas voulu suspendre cet onglet"
   },
   "suspendFailedLoading": {
     "message": "Chargement en cours - réessayez dans un instant"
@@ -842,7 +842,7 @@
     "message": "1 minute"
   },
   "shortcutsHint": {
-    "message": "Chrome gère ces raccourcis. Personnaliser ouvre chrome://extensions/shortcuts, où vous pouvez modifier ou effacer chaque raccourci."
+    "message": "Le navigateur gère ces raccourcis. Personnaliser ouvre chrome://extensions/shortcuts, où vous pouvez modifier ou effacer chaque raccourci."
   },
   "shortcutUnset": {
     "message": "Non défini"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "La liste blanche est pleine pour la synchronisation Chrome. Retirez quelques sites et réessayez."
+    "message": "La liste blanche est pleine pour la synchronisation du navigateur. Retirez quelques sites et réessayez."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Tous ces sites sont déjà dans votre liste blanche"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ non reconnu(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Non enregistré"
+  },
+  "badgeStillLoading": {
+    "message": "Chargement"
+  },
+  "badgeNotLoaded": {
+    "message": "Non chargé"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Cet onglet contient une saisie non enregistrée, Drowzy le laisse donc éveillé. Vous pouvez changer cela avec Protéger les onglets avec formulaires dans les Paramètres."
+  },
+  "waitStillLoadingHint": {
+    "message": "Cet onglet est encore en cours de chargement. Drowzy réessaiera dans une minute."
+  },
+  "waitNotLoadedHint": {
+    "message": "Cet onglet n'est pas encore chargé, il n'utilise donc pas de mémoire. Drowzy n'y touche pas."
+  },
+  "autoSuspendOffNotice": {
+    "message": "La suspension automatique est désactivée, les onglets ne s'endorment donc que quand vous le demandez."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ onglets restaurés sur $TOTAL$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Cliquez à nouveau pour remplacer les onglets de cette fenêtre"
+  },
+  "importSessionsTitle": {
+    "message": "Importer des sessions depuis le presse-papiers"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ session(s) importée(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Aucune session Drowzy trouvée dans le presse-papiers"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Ces sessions sont déjà enregistrées"
+  },
+  "openSidePanel": {
+    "message": "Ouvrir dans le panneau latéral"
+  },
+  "sidePanelUnavailable": {
+    "message": "Impossible d'ouvrir le panneau latéral"
+  },
+  "changelog160Title1": {
+    "message": "Éveillé veut dire éveillé"
+  },
+  "changelog160Desc1": {
+    "message": "Un onglet que vous gardez éveillé est désormais aussi protégé de l'économie de mémoire du navigateur lui-même, pas seulement de Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Voyez pourquoi un onglet reste éveillé"
+  },
+  "changelog160Desc2": {
+    "message": "Un onglet qui devrait s'endormir mais qu'une saisie non enregistrée ou un chargement lent retient en indique maintenant la raison dans la liste. Quand la suspension automatique est désactivée, une ligne au-dessus de la liste vous le signale."
+  },
+  "changelog160Title3": {
+    "message": "Fermer les onglets en double est plus prudent"
+  },
+  "changelog160Desc3": {
+    "message": "Seuls les onglets ayant exactement la même adresse sont fermés. Des e-mails différents ou des pages différentes d'une même application restent ouverts, et un onglet qui joue du son n'est jamais fermé."
+  },
+  "changelog160Title4": {
+    "message": "Plus doux dans Opera et Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "Dans Opera, Drowzy attend désormais quelques minutes après le démarrage du navigateur avant de mettre des onglets en veille, puis le fait un onglet à la fois."
+  },
+  "changelog160Title5": {
+    "message": "Et les petites choses"
+  },
+  "changelog160Desc5": {
+    "message": "Importez des sessions enregistrées depuis le presse-papiers, ouvrez le panneau latéral depuis la fenêtre contextuelle, et Remplacer demande désormais un second clic avant de fermer vos onglets. L'import de la liste blanche accepte les sites séparés par des espaces, et le minuteur de la liste des onglets ainsi que la page d'accueil s'affichent correctement dans toutes les langues."
   }
 }

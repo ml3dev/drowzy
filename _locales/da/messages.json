@@ -147,7 +147,7 @@
     "message": "Alt i alt"
   },
   "statLifetimeRam": {
-    "message": "Samlet RAM-besparelse"
+    "message": "Hukommelse frigivet over tid (anslået)"
   },
   "ramEstimateTooltip": {
     "message": "Estimeret med ~150 MB per suspenderet fane. Faktiske besparelser varierer efter side."
@@ -444,7 +444,7 @@
     "message": "<strong>Faneblade inaktive i 15 minutter</strong> suspenderes automatisk"
   },
   "featureZeroRam": {
-    "message": "<strong>Suspenderede faneblade bruger nul RAM</strong>, men forbliver i din fanebjælke"
+    "message": "<strong>Suspenderede faneblade frigiver det meste af deres hukommelse</strong>, men forbliver i din fanebjælke"
   },
   "featureClickToWake": {
     "message": "<strong>Klik på et suspenderet faneblad</strong> for at vække det"
@@ -785,13 +785,13 @@
     "message": "Dette websted står på din aldrig-dvale-liste. Fjern det for at sætte fanen i dvale."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Der skal være en anden åben fane at skifte til først. Chrome kan ikke sætte den fane du kigger på i dvale."
+    "message": "Der skal være en anden åben fane at skifte til først. Browseren kan ikke sætte den fane du kigger på i dvale."
   },
   "openSettingsAction": {
     "message": "Åbn indstillinger"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome ville ikke sætte denne fane i dvale"
+    "message": "Browseren ville ikke sætte denne fane i dvale"
   },
   "suspendFailedLoading": {
     "message": "Indlæser stadig - prøv igen om et øjeblik"
@@ -842,7 +842,7 @@
     "message": "1 minut"
   },
   "shortcutsHint": {
-    "message": "Chrome styrer disse genveje. Tilpas åbner chrome://extensions/shortcuts, hvor du kan ændre eller rydde hver genvej."
+    "message": "Browseren styrer disse genveje. Tilpas åbner chrome://extensions/shortcuts, hvor du kan ændre eller rydde hver genvej."
   },
   "shortcutUnset": {
     "message": "Ikke angivet"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Hvidlisten er fuld for Chrome-synkronisering. Fjern et par websteder og prøv igen."
+    "message": "Hvidlisten er fuld for browser-synkronisering. Fjern et par websteder og prøv igen."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Alle disse websteder er allerede på din hvidliste"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ ikke genkendt",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Ikke gemt"
+  },
+  "badgeStillLoading": {
+    "message": "Indlæser"
+  },
+  "badgeNotLoaded": {
+    "message": "Ikke indlæst"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Denne fane har input, der ikke er gemt, så Drowzy holder den vågen. Du kan ændre det med Beskyt faneblade med formularer i Indstillinger."
+  },
+  "waitStillLoadingHint": {
+    "message": "Denne fane indlæses stadig. Drowzy prøver igen om et minut."
+  },
+  "waitNotLoadedHint": {
+    "message": "Denne fane er ikke indlæst endnu, så den bruger ikke hukommelse. Drowzy lader den være."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automatisk suspendering er slået fra, så faner sover kun, når du beder om det."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ af $TOTAL$ faner gendannet",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Klik igen for at erstatte fanerne i dette vindue"
+  },
+  "importSessionsTitle": {
+    "message": "Importér sessioner fra udklipsholder"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ session(er) importeret",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Ingen Drowzy-sessioner fundet i udklipsholderen"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Disse sessioner er allerede gemt"
+  },
+  "openSidePanel": {
+    "message": "Åbn i sidepanelet"
+  },
+  "sidePanelUnavailable": {
+    "message": "Sidepanelet kunne ikke åbnes"
+  },
+  "changelog160Title1": {
+    "message": "Vågen betyder vågen"
+  },
+  "changelog160Desc1": {
+    "message": "En fane, du holder vågen, er nu også beskyttet mod browserens egen hukommelsesbesparelse, ikke kun mod Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Se hvorfor en fane stadig er vågen"
+  },
+  "changelog160Desc2": {
+    "message": "En fane, der skulle i dvale, men holdes tilbage af input, der ikke er gemt, eller en langsom indlæsning, viser nu årsagen i listen. Når automatisk suspendering er slået fra, fortæller en linje over listen dig det."
+  },
+  "changelog160Title3": {
+    "message": "Luk duplikerede faner er mere forsigtig"
+  },
+  "changelog160Desc3": {
+    "message": "Den lukker nu kun faner med præcis samme adresse. Forskellige e-mails eller sider i den samme app forbliver åbne, og en fane, der afspiller lyd, lukkes aldrig."
+  },
+  "changelog160Title4": {
+    "message": "Mere skånsom i Opera og Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "I Opera venter Drowzy nu et par minutter efter browseren starter, før faner lægges til at sove, og gør det derefter én fane ad gangen."
+  },
+  "changelog160Title5": {
+    "message": "Og de små ting"
+  },
+  "changelog160Desc5": {
+    "message": "Importér gemte sessioner fra udklipsholderen, åbn sidepanelet fra pop op-vinduet, og Erstat beder nu om et ekstra klik, før dine faner lukkes. Import til hvidlisten accepterer websteder adskilt af mellemrum, og timeren i fanelisten og velkomstsiden vises korrekt på alle sprog."
   }
 }

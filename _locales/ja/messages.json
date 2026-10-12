@@ -147,7 +147,7 @@
     "message": "累計"
   },
   "statLifetimeRam": {
-    "message": "累計RAM節約量"
+    "message": "これまでに解放したメモリ（推定）"
   },
   "ramEstimateTooltip": {
     "message": "サスペンドされたタブごとに約150MBを使用して推定。実際の節約量はページによって異なります。"
@@ -444,7 +444,7 @@
     "message": "<strong>15分間非アクティブなタブ</strong>は自動的にサスペンドされます"
   },
   "featureZeroRam": {
-    "message": "<strong>サスペンド中のタブはRAMを使用しません</strong>が、タブバーに残ります"
+    "message": "<strong>サスペンド中のタブはメモリの大部分を解放します</strong>が、タブバーに残ります"
   },
   "featureClickToWake": {
     "message": "<strong>サスペンド中のタブをクリック</strong>すると復帰します"
@@ -785,13 +785,13 @@
     "message": "このサイトはスリープ除外リストに入っています。削除するとスリープできます。"
   },
   "cantSuspendNoOtherTab": {
-    "message": "先に切り替える別のタブが必要です。Chrome は表示中のタブをスリープできません。"
+    "message": "先に切り替える別のタブが必要です。ブラウザは表示中のタブをスリープできません。"
   },
   "openSettingsAction": {
     "message": "設定を開く"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome がこのタブをスリープできませんでした"
+    "message": "ブラウザがこのタブをスリープできませんでした"
   },
   "suspendFailedLoading": {
     "message": "読み込み中です。少し待ってからもう一度お試しください"
@@ -842,7 +842,7 @@
     "message": "1分"
   },
   "shortcutsHint": {
-    "message": "これらは Chrome が管理しています。「カスタマイズ」を押すと chrome://extensions/shortcuts が開き、各ショートカットの変更や解除ができます。"
+    "message": "これらはブラウザが管理しています。「カスタマイズ」を押すと chrome://extensions/shortcuts が開き、各ショートカットの変更や解除ができます。"
   },
   "shortcutUnset": {
     "message": "未設定"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Chrome 同期用のホワイトリストがいっぱいです。いくつかサイトを削除してからもう一度お試しください。"
+    "message": "ブラウザの同期用のホワイトリストがいっぱいです。いくつかサイトを削除してからもう一度お試しください。"
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$分",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "これらのサイトはすべてホワイトリストに登録済みです"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$件は認識できません",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "未保存"
+  },
+  "badgeStillLoading": {
+    "message": "読み込み中"
+  },
+  "badgeNotLoaded": {
+    "message": "未読み込み"
+  },
+  "waitUnsavedInputHint": {
+    "message": "このタブには未保存の入力があるため、Drowzy はスリープさせません。設定の「フォームのあるタブを保護」で変更できます。"
+  },
+  "waitStillLoadingHint": {
+    "message": "このタブはまだ読み込み中です。Drowzy は 1 分後にもう一度試します。"
+  },
+  "waitNotLoadedHint": {
+    "message": "このタブはまだ読み込まれていないため、メモリを使っていません。Drowzy は何もしません。"
+  },
+  "autoSuspendOffNotice": {
+    "message": "自動サスペンドがオフのため、タブはあなたが指示したときだけスリープします。"
+  },
+  "restoredSomeTabs": {
+    "message": "$TOTAL$個中$COUNT$個のタブを復元しました",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "もう一度クリックすると、このウィンドウのタブを置き換えます"
+  },
+  "importSessionsTitle": {
+    "message": "クリップボードからセッションをインポート"
+  },
+  "importedSessions": {
+    "message": "$COUNT$件のセッションをインポートしました",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "クリップボードに Drowzy のセッションが見つかりません"
+  },
+  "sessionsAlreadySaved": {
+    "message": "これらのセッションはすでに保存されています"
+  },
+  "openSidePanel": {
+    "message": "サイドパネルで開く"
+  },
+  "sidePanelUnavailable": {
+    "message": "サイドパネルを開けませんでした"
+  },
+  "changelog160Title1": {
+    "message": "スリープさせないタブは本当にスリープしない"
+  },
+  "changelog160Desc1": {
+    "message": "スリープさせないよう指定したタブは、Drowzy だけでなくブラウザ自身のメモリ節約からも守られるようになりました。"
+  },
+  "changelog160Title2": {
+    "message": "タブがまだ起きている理由がわかる"
+  },
+  "changelog160Desc2": {
+    "message": "スリープするはずなのに未保存の入力や読み込みの遅れで止まっているタブは、一覧にその理由を表示するようになりました。自動サスペンドがオフのときは、一覧の上の 1 行で知らせます。"
+  },
+  "changelog160Title3": {
+    "message": "重複タブを閉じる機能がより慎重に"
+  },
+  "changelog160Desc3": {
+    "message": "アドレスが完全に同じタブだけを閉じるようになりました。別々のメールや同じアプリの別ページは開いたままで、音声を再生中のタブは決して閉じません。"
+  },
+  "changelog160Title4": {
+    "message": "Opera と Opera GX でより穏やかに"
+  },
+  "changelog160Desc4": {
+    "message": "Opera では、ブラウザの起動後に数分待ってからタブをスリープさせ、その後も 1 つずつ処理するようになりました。"
+  },
+  "changelog160Title5": {
+    "message": "それから、細かいこと"
+  },
+  "changelog160Desc5": {
+    "message": "保存したセッションをクリップボードからインポートでき、ポップアップからサイドパネルを開けます。「置き換え」はタブを閉じる前にもう一度クリックを求めるようになりました。ホワイトリストのインポートはスペース区切りのサイトに対応し、タブ一覧のタイマーとようこそページはどの言語でも正しく表示されます。"
   }
 }

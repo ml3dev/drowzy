@@ -147,7 +147,7 @@
     "message": "Kopā"
   },
   "statLifetimeRam": {
-    "message": "Kopā ietaupīts RAM"
+    "message": "Laika gaitā atbrīvotā atmiņa (aptuveni)"
   },
   "ramEstimateTooltip": {
     "message": "Aprēķināts, izmantojot ~150 MB uz apturēto cilni. Faktiskais ietaupījums atšķiras atkarībā no lapas."
@@ -444,7 +444,7 @@
     "message": "<strong>Cilnes, kas ir neaktīvas 15 minūtes,</strong> tiek automātiski apturētas"
   },
   "featureZeroRam": {
-    "message": "<strong>Apturētās cilnes neizmanto RAM,</strong> bet paliek ciļņu joslā"
+    "message": "<strong>Apturētās cilnes atbrīvo lielāko daļu savas atmiņas,</strong> bet paliek ciļņu joslā"
   },
   "featureClickToWake": {
     "message": "<strong>Noklikšķiniet uz jebkuras apturētas cilnes,</strong> lai to pamodinātu"
@@ -785,13 +785,13 @@
     "message": "Šī vietne ir tavā nekad neiemidzināt sarakstā. Noņem to, lai iemidzinātu šo cilni."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Vispirms vajadzīga cita atvērta cilne, uz kuru pārslēgties. Chrome nevar iemidzināt cilni, kuru tu skaties."
+    "message": "Vispirms vajadzīga cita atvērta cilne, uz kuru pārslēgties. Pārlūks nevar iemidzināt cilni, kuru tu skaties."
   },
   "openSettingsAction": {
     "message": "Atvērt iestatījumus"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome neiemidzināja šo cilni"
+    "message": "Pārlūks neiemidzināja šo cilni"
   },
   "suspendFailedLoading": {
     "message": "Vēl ielādējas - pamēģini pēc brīža"
@@ -842,7 +842,7 @@
     "message": "1 minūtes"
   },
   "shortcutsHint": {
-    "message": "Tās pārvalda Chrome. Pielāgot atver chrome://extensions/shortcuts, kur vari mainīt vai notīrīt katru saīsni."
+    "message": "Tās pārvalda pārlūks. Pielāgot atver chrome://extensions/shortcuts, kur vari mainīt vai notīrīt katru saīsni."
   },
   "shortcutUnset": {
     "message": "Nav iestatīts"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Baltais saraksts Chrome sinhronizācijai ir pilns. Noņem dažas vietnes un mēģini vēlreiz."
+    "message": "Baltais saraksts pārlūka sinhronizācijai ir pilns. Noņem dažas vietnes un mēģini vēlreiz."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Visas šīs vietnes jau ir jūsu baltajā sarakstā"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ nav atpazītas",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Nesaglabāts"
+  },
+  "badgeStillLoading": {
+    "message": "Ielādē"
+  },
+  "badgeNotLoaded": {
+    "message": "Nav ielādēta"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Šajā cilnē ir nesaglabāti dati, tāpēc Drowzy to tur nomodā. To vari mainīt ar Aizsargāt cilnes ar veidlapām sadaļā Iestatījumi."
+  },
+  "waitStillLoadingHint": {
+    "message": "Šī cilne vēl ielādējas. Drowzy mēģinās vēlreiz pēc minūtes."
+  },
+  "waitNotLoadedHint": {
+    "message": "Šī cilne vēl nav ielādēta, tāpēc neizmanto atmiņu. Drowzy to neaiztiek."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automātiskā apturēšana ir izslēgta, tāpēc cilnes aizmieg tikai tad, kad tu to lūdz."
+  },
+  "restoredSomeTabs": {
+    "message": "Atjaunotas $COUNT$ no $TOTAL$ cilnēm",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Noklikšķini vēlreiz, lai aizstātu šī loga cilnes"
+  },
+  "importSessionsTitle": {
+    "message": "Importēt sesijas no starpliktuves"
+  },
+  "importedSessions": {
+    "message": "Importētas sesijas: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Starpliktuvē nav atrastas Drowzy sesijas"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Šīs sesijas jau ir saglabātas"
+  },
+  "openSidePanel": {
+    "message": "Atvērt sānu panelī"
+  },
+  "sidePanelUnavailable": {
+    "message": "Sānu paneli neizdevās atvērt"
+  },
+  "changelog160Title1": {
+    "message": "Nomodā nozīmē nomodā"
+  },
+  "changelog160Desc1": {
+    "message": "Cilne, ko tu turi nomodā, tagad ir pasargāta arī no paša pārlūka atmiņas taupīšanas, ne tikai no Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Uzzini, kāpēc cilne vēl ir nomodā"
+  },
+  "changelog160Desc2": {
+    "message": "Cilne, kurai jau vajadzētu aizmigt, bet ko aiztur nesaglabāti dati vai lēna ielāde, tagad sarakstā rāda iemeslu. Kad automātiskā apturēšana ir izslēgta, to pasaka rinda virs saraksta."
+  },
+  "changelog160Title3": {
+    "message": "Ciļņu duplikātu aizvēršana ir piesardzīgāka"
+  },
+  "changelog160Desc3": {
+    "message": "Tagad tiek aizvērtas tikai cilnes ar tieši tādu pašu adresi. Dažādi e-pasti vai vienas lietotnes dažādas lapas paliek atvērti, un cilne, kas atskaņo skaņu, nekad netiek aizvērta."
+  },
+  "changelog160Title4": {
+    "message": "Saudzīgāks Opera un Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "Operā Drowzy tagad pēc pārlūka palaišanas dažas minūtes nogaida, pirms iemidzina cilnes, un tad dara to pa vienai."
+  },
+  "changelog160Title5": {
+    "message": "Un sīkumi"
+  },
+  "changelog160Desc5": {
+    "message": "Importē saglabātās sesijas no starpliktuves, atver sānu paneli no uznirstošā loga, un Aizvietot tagad prasa otru klikšķi, pirms aizver tavas cilnes. Baltā saraksta imports pieņem ar atstarpēm atdalītas vietnes, un ciļņu saraksta taimeris un sveiciena lapa pareizi rādās visās valodās."
   }
 }

@@ -147,7 +147,7 @@
     "message": "Kaikkien aikojen"
   },
   "statLifetimeRam": {
-    "message": "Yhteensä säästetty RAM"
+    "message": "Ajan mittaan vapautettu muisti (arvio)"
   },
   "ramEstimateTooltip": {
     "message": "Arvioitu käyttäen ~150 Mt keskeytettyä välilehteä kohti. Todelliset säästöt vaihtelevat sivun mukaan."
@@ -444,7 +444,7 @@
     "message": "<strong>15 minuuttia käyttämättömät välilehdet</strong> keskeytetään automaattisesti"
   },
   "featureZeroRam": {
-    "message": "<strong>Keskeytetyt välilehdet eivät käytä RAM-muistia</strong> mutta pysyvät välilehtipalkissa"
+    "message": "<strong>Keskeytetyt välilehdet vapauttavat suurimman osan muististaan</strong> mutta pysyvät välilehtipalkissa"
   },
   "featureClickToWake": {
     "message": "<strong>Napsauta mitä tahansa keskeytettyä välilehteä</strong> herättääksesi sen"
@@ -785,13 +785,13 @@
     "message": "Tämä sivusto on älä koskaan nukuta -listallasi. Poista se nukuttaaksesi tämän välilehden."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Tarvitaan toinen avoin välilehti, johon vaihtaa ensin. Chrome ei voi nukuttaa välilehteä, jota katsot."
+    "message": "Tarvitaan toinen avoin välilehti, johon vaihtaa ensin. Selain ei voi nukuttaa välilehteä, jota katsot."
   },
   "openSettingsAction": {
     "message": "Avaa asetukset"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome ei nukuttanut tätä välilehteä"
+    "message": "Selain ei nukuttanut tätä välilehteä"
   },
   "suspendFailedLoading": {
     "message": "Latautuu vielä - yritä hetken kuluttua uudelleen"
@@ -842,7 +842,7 @@
     "message": "1 minuutti"
   },
   "shortcutsHint": {
-    "message": "Chrome hallitsee näitä. Mukauta avaa sivun chrome://extensions/shortcuts, jossa voit muuttaa tai poistaa jokaisen pikanäppäimen."
+    "message": "Selain hallitsee näitä. Mukauta avaa sivun chrome://extensions/shortcuts, jossa voit muuttaa tai poistaa jokaisen pikanäppäimen."
   },
   "shortcutUnset": {
     "message": "Ei asetettu"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Sallittujen lista on täynnä Chrome-synkronointia varten. Poista muutama sivusto ja yritä uudelleen."
+    "message": "Sallittujen lista on täynnä selaimen synkronointia varten. Poista muutama sivusto ja yritä uudelleen."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Kaikki nämä sivustot ovat jo sallittujen listallasi"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ tunnistamatonta",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Tallentamatta"
+  },
+  "badgeStillLoading": {
+    "message": "Latautuu"
+  },
+  "badgeNotLoaded": {
+    "message": "Ei ladattu"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Tällä välilehdellä on tallentamatonta syötettä, joten Drowzy pitää sen hereillä. Voit muuttaa tätä asetuksella Suojaa lomakkeita sisältävät välilehdet kohdassa Asetukset."
+  },
+  "waitStillLoadingHint": {
+    "message": "Tämä välilehti latautuu vielä. Drowzy yrittää uudelleen minuutin päästä."
+  },
+  "waitNotLoadedHint": {
+    "message": "Tätä välilehteä ei ole vielä ladattu, joten se ei käytä muistia. Drowzy jättää sen rauhaan."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automaattinen keskeytys on pois päältä, joten välilehdet nukahtavat vain pyynnöstäsi."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$/$TOTAL$ välilehteä palautettu",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Napsauta uudelleen korvataksesi tämän ikkunan välilehdet"
+  },
+  "importSessionsTitle": {
+    "message": "Tuo istunnot leikepöydältä"
+  },
+  "importedSessions": {
+    "message": "Tuotiin $COUNT$ istuntoa",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Leikepöydältä ei löytynyt Drowzy-istuntoja"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Nämä istunnot on jo tallennettu"
+  },
+  "openSidePanel": {
+    "message": "Avaa sivupaneelissa"
+  },
+  "sidePanelUnavailable": {
+    "message": "Sivupaneelia ei voitu avata"
+  },
+  "changelog160Title1": {
+    "message": "Hereillä tarkoittaa hereillä"
+  },
+  "changelog160Desc1": {
+    "message": "Välilehti, jonka pidät hereillä, on nyt suojassa myös selaimen omalta muistinsäästöltä eikä vain Drowzylta."
+  },
+  "changelog160Title2": {
+    "message": "Näe, miksi välilehti on yhä hereillä"
+  },
+  "changelog160Desc2": {
+    "message": "Välilehti, jonka pitäisi jo nukahtaa mutta jota tallentamaton syöte tai hidas lataus pidättää, kertoo nyt syyn listassa. Kun automaattinen keskeytys on pois päältä, listan yläpuolella oleva rivi kertoo sen."
+  },
+  "changelog160Title3": {
+    "message": "Kaksoiskappaleiden sulkeminen on varovaisempaa"
+  },
+  "changelog160Desc3": {
+    "message": "Se sulkee nyt vain välilehdet, joilla on täsmälleen sama osoite. Eri sähköpostit tai saman sovelluksen eri sivut jäävät auki, eikä ääntä toistavaa välilehteä suljeta koskaan."
+  },
+  "changelog160Title4": {
+    "message": "Hellävaraisempi Operassa ja Opera GX:ssä"
+  },
+  "changelog160Desc4": {
+    "message": "Operassa Drowzy odottaa nyt selaimen käynnistyksen jälkeen muutaman minuutin ennen kuin se nukuttaa välilehtiä, ja tekee sen sitten yksi kerrallaan."
+  },
+  "changelog160Title5": {
+    "message": "Ja pienet asiat"
+  },
+  "changelog160Desc5": {
+    "message": "Tuo tallennetut istunnot leikepöydältä, avaa sivupaneeli ponnahdusikkunasta, ja Korvaa pyytää nyt toisen napsautuksen ennen kuin se sulkee välilehtesi. Sallittujen listan tuonti hyväksyy välilyönnein erotetut sivustot, ja välilehtilistan ajastin ja tervetulosivu näkyvät oikein kaikilla kielillä."
   }
 }

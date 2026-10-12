@@ -147,7 +147,7 @@
     "message": "Totale"
   },
   "statLifetimeRam": {
-    "message": "RAM totale risparmiata"
+    "message": "Memoria liberata nel tempo (stima)"
   },
   "ramEstimateTooltip": {
     "message": "Stimato utilizzando ~150 MB per scheda sospesa. I risparmi effettivi variano in base alla pagina."
@@ -444,7 +444,7 @@
     "message": "<strong>Le schede inattive da 15 minuti</strong> vengono sospese automaticamente"
   },
   "featureZeroRam": {
-    "message": "<strong>Le schede sospese usano zero RAM</strong> ma restano nella barra delle schede"
+    "message": "<strong>Le schede sospese liberano gran parte della loro memoria</strong> ma restano nella barra delle schede"
   },
   "featureClickToWake": {
     "message": "<strong>Clicca su qualsiasi scheda sospesa</strong> per riattivarla"
@@ -785,13 +785,13 @@
     "message": "Questo sito è nella tua lista \"non sospendere mai\". Rimuovilo per sospendere questa scheda."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Serve un'altra scheda aperta su cui passare. Chrome non può sospendere la scheda che stai guardando."
+    "message": "Serve un'altra scheda aperta su cui passare. Il browser non può sospendere la scheda che stai guardando."
   },
   "openSettingsAction": {
     "message": "Apri impostazioni"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome non ha voluto sospendere questa scheda"
+    "message": "Il browser non ha voluto sospendere questa scheda"
   },
   "suspendFailedLoading": {
     "message": "Ancora in caricamento - riprova tra un momento"
@@ -842,7 +842,7 @@
     "message": "1 minuto"
   },
   "shortcutsHint": {
-    "message": "Le gestisce Chrome. Personalizza apre chrome://extensions/shortcuts, dove puoi cambiare o cancellare ogni scorciatoia."
+    "message": "Le gestisce il browser. Personalizza apre chrome://extensions/shortcuts, dove puoi cambiare o cancellare ogni scorciatoia."
   },
   "shortcutUnset": {
     "message": "Non impostata"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "La whitelist è piena per la sincronizzazione di Chrome. Rimuovi qualche sito e riprova."
+    "message": "La whitelist è piena per la sincronizzazione del browser. Rimuovi qualche sito e riprova."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Tutti questi siti sono già nella tua lista bianca"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ non riconosciuti",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Non salvato"
+  },
+  "badgeStillLoading": {
+    "message": "In caricamento"
+  },
+  "badgeNotLoaded": {
+    "message": "Non caricata"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Questa scheda ha dati non salvati, quindi Drowzy la tiene sveglia. Puoi cambiarlo con Proteggi le schede con moduli nelle Impostazioni."
+  },
+  "waitStillLoadingHint": {
+    "message": "Questa scheda si sta ancora caricando. Drowzy riproverà tra un minuto."
+  },
+  "waitNotLoadedHint": {
+    "message": "Questa scheda non è ancora stata caricata, quindi non usa memoria. Drowzy la lascia stare."
+  },
+  "autoSuspendOffNotice": {
+    "message": "La sospensione automatica è disattivata, quindi le schede dormono solo quando lo chiedi tu."
+  },
+  "restoredSomeTabs": {
+    "message": "Ripristinate $COUNT$ schede su $TOTAL$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Fai clic di nuovo per sostituire le schede di questa finestra"
+  },
+  "importSessionsTitle": {
+    "message": "Importa sessioni dagli appunti"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ sessione/i importata/e",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Nessuna sessione di Drowzy negli appunti"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Queste sessioni sono già salvate"
+  },
+  "openSidePanel": {
+    "message": "Apri nel pannello laterale"
+  },
+  "sidePanelUnavailable": {
+    "message": "Impossibile aprire il pannello laterale"
+  },
+  "changelog160Title1": {
+    "message": "Sveglia vuol dire sveglia"
+  },
+  "changelog160Desc1": {
+    "message": "Una scheda che tieni sveglia ora è al sicuro anche dal risparmio di memoria del browser stesso, non solo da Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Scopri perché una scheda è ancora sveglia"
+  },
+  "changelog160Desc2": {
+    "message": "Una scheda che dovrebbe già dormire ma è trattenuta da dati non salvati o da un caricamento lento ora ne indica il motivo nell'elenco. Quando la sospensione automatica è disattivata, te lo dice una riga sopra l'elenco."
+  },
+  "changelog160Title3": {
+    "message": "Chiudi schede duplicate è più prudente"
+  },
+  "changelog160Desc3": {
+    "message": "Ora chiude solo le schede con esattamente lo stesso indirizzo. Email diverse o pagine diverse della stessa app restano aperte, e una scheda che riproduce audio non viene mai chiusa."
+  },
+  "changelog160Title4": {
+    "message": "Più delicato in Opera e Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "In Opera, Drowzy ora aspetta qualche minuto dopo l'avvio del browser prima di sospendere le schede, e poi lo fa una scheda alla volta."
+  },
+  "changelog160Title5": {
+    "message": "E le piccole cose"
+  },
+  "changelog160Desc5": {
+    "message": "Importa le sessioni salvate dagli appunti, apri il pannello laterale dal popup, e Sostituisci ora chiede un secondo clic prima di chiudere le tue schede. L'importazione della lista bianca accetta siti separati da spazi, e il timer nell'elenco delle schede e la pagina di benvenuto si leggono correttamente in ogni lingua."
   }
 }

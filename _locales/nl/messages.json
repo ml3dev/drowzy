@@ -147,7 +147,7 @@
     "message": "Totaal"
   },
   "statLifetimeRam": {
-    "message": "Totaal bespaard RAM"
+    "message": "Vrijgemaakt geheugen in de loop van de tijd (schatting)"
   },
   "ramEstimateTooltip": {
     "message": "Geschat met ongeveer 150 MB per opgeschort tabblad. Werkelijke besparingen verschillen per pagina."
@@ -444,7 +444,7 @@
     "message": "<strong>Tabbladen die 15 minuten inactief zijn</strong> worden automatisch opgeschort"
   },
   "featureZeroRam": {
-    "message": "<strong>Opgeschorte tabbladen gebruiken geen RAM</strong> maar blijven in je tabbladbalk"
+    "message": "<strong>Opgeschorte tabbladen geven het grootste deel van hun geheugen vrij</strong> maar blijven in je tabbladbalk"
   },
   "featureClickToWake": {
     "message": "<strong>Klik op een opgeschort tabblad</strong> om het te activeren"
@@ -785,13 +785,13 @@
     "message": "Deze site staat op je nooit-slapen-lijst. Verwijder hem om dit tabblad te laten slapen."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Er moet een ander tabblad open zijn om naartoe te schakelen. Chrome kan het tabblad dat je bekijkt niet laten slapen."
+    "message": "Er moet een ander tabblad open zijn om naartoe te schakelen. De browser kan het tabblad dat je bekijkt niet laten slapen."
   },
   "openSettingsAction": {
     "message": "Instellingen openen"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome wilde dit tabblad niet laten slapen"
+    "message": "De browser wilde dit tabblad niet laten slapen"
   },
   "suspendFailedLoading": {
     "message": "Nog aan het laden - probeer het zo nog eens"
@@ -842,7 +842,7 @@
     "message": "1 minuut"
   },
   "shortcutsHint": {
-    "message": "Chrome beheert deze sneltoetsen. Aanpassen opent chrome://extensions/shortcuts, waar je elke sneltoets kunt wijzigen of wissen."
+    "message": "De browser beheert deze sneltoetsen. Aanpassen opent chrome://extensions/shortcuts, waar je elke sneltoets kunt wijzigen of wissen."
   },
   "shortcutUnset": {
     "message": "Niet ingesteld"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "De witte lijst is vol voor Chrome-synchronisatie. Verwijder een paar sites en probeer het opnieuw."
+    "message": "De witte lijst is vol voor browsersynchronisatie. Verwijder een paar sites en probeer het opnieuw."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Al deze sites staan al op je witte lijst"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ niet herkend",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Niet opgeslagen"
+  },
+  "badgeStillLoading": {
+    "message": "Laden"
+  },
+  "badgeNotLoaded": {
+    "message": "Niet geladen"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Dit tabblad heeft niet-opgeslagen invoer, dus Drowzy houdt het wakker. Je kunt dit wijzigen met Tabbladen met formulieren beschermen in Instellingen."
+  },
+  "waitStillLoadingHint": {
+    "message": "Dit tabblad laadt nog. Drowzy probeert het over een minuut opnieuw."
+  },
+  "waitNotLoadedHint": {
+    "message": "Dit tabblad is nog niet geladen en gebruikt dus geen geheugen. Drowzy laat het met rust."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automatisch opschorten staat uit, dus tabbladen slapen alleen als jij erom vraagt."
+  },
+  "restoredSomeTabs": {
+    "message": "$COUNT$ van $TOTAL$ tabbladen hersteld",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Klik nogmaals om de tabbladen in dit venster te vervangen"
+  },
+  "importSessionsTitle": {
+    "message": "Sessies importeren van klembord"
+  },
+  "importedSessions": {
+    "message": "$COUNT$ sessie(s) geïmporteerd",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Geen Drowzy-sessies gevonden op het klembord"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Deze sessies zijn al opgeslagen"
+  },
+  "openSidePanel": {
+    "message": "Openen in zijpaneel"
+  },
+  "sidePanelUnavailable": {
+    "message": "Het zijpaneel kon niet worden geopend"
+  },
+  "changelog160Title1": {
+    "message": "Wakker is wakker"
+  },
+  "changelog160Desc1": {
+    "message": "Een tabblad dat je wakker houdt, is nu ook veilig voor het eigen geheugenbesparen van de browser, niet alleen voor Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Zie waarom een tabblad nog wakker is"
+  },
+  "changelog160Desc2": {
+    "message": "Een tabblad dat zou moeten slapen maar wordt tegengehouden door niet-opgeslagen invoer of traag laden, vermeldt nu de reden in de lijst. Als automatisch opschorten uit staat, meldt een regel boven de lijst dat."
+  },
+  "changelog160Title3": {
+    "message": "Dubbele tabbladen sluiten is voorzichtiger"
+  },
+  "changelog160Desc3": {
+    "message": "Het sluit nu alleen tabbladen met precies hetzelfde adres. Verschillende e-mails of pagina's van dezelfde app blijven open, en een tabblad dat geluid afspeelt wordt nooit gesloten."
+  },
+  "changelog160Title4": {
+    "message": "Zachter in Opera en Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "In Opera wacht Drowzy nu een paar minuten na het starten van de browser voordat tabbladen gaan slapen, en doet het daarna één tabblad tegelijk."
+  },
+  "changelog160Title5": {
+    "message": "En de kleine dingen"
+  },
+  "changelog160Desc5": {
+    "message": "Importeer opgeslagen sessies van het klembord, open het zijpaneel vanuit de pop-up, en Vervangen vraagt nu om een tweede klik voordat je tabbladen worden gesloten. Import naar de witte lijst accepteert sites gescheiden door spaties, en de timer in de tabbladlijst en de welkomstpagina worden in elke taal goed weergegeven."
   }
 }

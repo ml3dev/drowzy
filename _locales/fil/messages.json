@@ -147,7 +147,7 @@
     "message": "Lahat ng panahon"
   },
   "statLifetimeRam": {
-    "message": "Kabuuang RAM na natipid"
+    "message": "Memory na napalaya sa paglipas ng panahon (tantiya)"
   },
   "ramEstimateTooltip": {
     "message": "Tinatantya gamit ang ~150 MB bawat suspended tab. Nag-iiba ang aktwal na pagtitipid bawat page."
@@ -444,7 +444,7 @@
     "message": "<strong>Mga tab na idle sa loob ng 15 minuto</strong> ay awtomatikong isu-suspend"
   },
   "featureZeroRam": {
-    "message": "<strong>Ang mga naka-suspend na tab ay walang ginagamit na RAM</strong> ngunit nananatili sa iyong tab bar"
+    "message": "<strong>Inilalabas ng mga naka-suspend na tab ang karamihan ng kanilang memory</strong> ngunit nananatili sa iyong tab bar"
   },
   "featureClickToWake": {
     "message": "<strong>I-click ang anumang naka-suspend na tab</strong> para gisingin ito"
@@ -785,13 +785,13 @@
     "message": "Nasa listahan mo ng huwag kailanman patulugin ang site na ito. Alisin ito para patulugin ang tab."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Kailangan ng ibang bukas na tab na malilipatan muna. Hindi mapapatulog ng Chrome ang tab na tinitingnan mo."
+    "message": "Kailangan ng ibang bukas na tab na malilipatan muna. Hindi mapapatulog ng browser ang tab na tinitingnan mo."
   },
   "openSettingsAction": {
     "message": "Buksan ang mga setting"
   },
   "suspendFailedGeneric": {
-    "message": "Hindi pinatulog ng Chrome ang tab na ito"
+    "message": "Hindi pinatulog ng browser ang tab na ito"
   },
   "suspendFailedLoading": {
     "message": "Naglo-load pa - subukan muli mamaya"
@@ -842,7 +842,7 @@
     "message": "1 minuto"
   },
   "shortcutsHint": {
-    "message": "Chrome ang humahawak sa mga ito. Binubuksan ng I-customize ang chrome://extensions/shortcuts, kung saan puwede mong baguhin o alisin ang bawat shortcut."
+    "message": "Ang browser ang humahawak sa mga ito. Binubuksan ng I-customize ang chrome://extensions/shortcuts, kung saan puwede mong baguhin o alisin ang bawat shortcut."
   },
   "shortcutUnset": {
     "message": "Hindi nakatakda"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Puno na ang whitelist para sa Chrome sync. Mag-alis ng ilang site at subukan ulit."
+    "message": "Puno na ang whitelist para sa browser sync. Mag-alis ng ilang site at subukan ulit."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Nasa whitelist mo na ang lahat ng site na ito"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ hindi nakilala",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Hindi naka-save"
+  },
+  "badgeStillLoading": {
+    "message": "Naglo-load"
+  },
+  "badgeNotLoaded": {
+    "message": "Hindi pa naka-load"
+  },
+  "waitUnsavedInputHint": {
+    "message": "May hindi naka-save na input ang tab na ito, kaya pinananatili itong gising ng Drowzy. Mababago mo ito gamit ang Protektahan ang mga tab na may form sa Mga Setting."
+  },
+  "waitStillLoadingHint": {
+    "message": "Naglo-load pa ang tab na ito. Susubukan ulit ng Drowzy pagkalipas ng isang minuto."
+  },
+  "waitNotLoadedHint": {
+    "message": "Hindi pa naka-load ang tab na ito, kaya hindi ito gumagamit ng memory. Hinahayaan ito ng Drowzy."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Naka-off ang auto-suspend, kaya natutulog lang ang mga tab kapag hiniling mo."
+  },
+  "restoredSomeTabs": {
+    "message": "Na-restore ang $COUNT$ sa $TOTAL$ tab",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "I-click ulit para palitan ang mga tab ng window na ito"
+  },
+  "importSessionsTitle": {
+    "message": "I-import ang mga session mula sa clipboard"
+  },
+  "importedSessions": {
+    "message": "Na-import ang $COUNT$ session",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Walang nahanap na Drowzy session sa clipboard"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Naka-save na ang mga session na ito"
+  },
+  "openSidePanel": {
+    "message": "Buksan sa side panel"
+  },
+  "sidePanelUnavailable": {
+    "message": "Hindi mabuksan ang side panel"
+  },
+  "changelog160Title1": {
+    "message": "Ang gising ay gising talaga"
+  },
+  "changelog160Desc1": {
+    "message": "Ang tab na pinananatili mong gising ay ligtas na rin ngayon sa sariling pagtitipid ng memory ng browser, hindi lang sa Drowzy."
+  },
+  "changelog160Title2": {
+    "message": "Alamin kung bakit gising pa ang isang tab"
+  },
+  "changelog160Desc2": {
+    "message": "Ang tab na dapat nang matulog pero napipigilan ng hindi naka-save na input o mabagal na pag-load ay nagsasabi na ngayon ng dahilan sa listahan. Kapag naka-off ang auto-suspend, may linya sa itaas ng listahan na nagsasabi nito."
+  },
+  "changelog160Title3": {
+    "message": "Mas maingat na ang pagsara ng mga duplicate na tab"
+  },
+  "changelog160Desc3": {
+    "message": "Isinasara na lang nito ang mga tab na may eksaktong parehong address. Nananatiling bukas ang magkakaibang email o mga page ng iisang app, at hindi kailanman isinasara ang tab na may tumutunog."
+  },
+  "changelog160Title4": {
+    "message": "Mas maingat sa Opera at Opera GX"
+  },
+  "changelog160Desc4": {
+    "message": "Sa Opera, naghihintay na ang Drowzy ng ilang minuto pagkabukas ng browser bago patulugin ang mga tab, at isa-isa na ang paggawa nito."
+  },
+  "changelog160Title5": {
+    "message": "At ang maliliit na bagay"
+  },
+  "changelog160Desc5": {
+    "message": "Mag-import ng mga naka-save na session mula sa clipboard, buksan ang side panel mula sa popup, at humihingi na ngayon ang Palitan ng pangalawang click bago nito isara ang mga tab mo. Tumatanggap ang whitelist import ng mga site na pinaghihiwalay ng space, at tama na ang pagbasa ng timer sa listahan ng tab at ng welcome page sa bawat wika."
   }
 }

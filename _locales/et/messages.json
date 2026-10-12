@@ -147,7 +147,7 @@
     "message": "Kogu aeg"
   },
   "statLifetimeRam": {
-    "message": "Kogu säästetud RAM"
+    "message": "Aja jooksul vabastatud mälu (hinnang)"
   },
   "ramEstimateTooltip": {
     "message": "Hinnatud kasutades ~150 MB peatatud vahekaardi kohta. Tegelik säästmine sõltub lehest."
@@ -444,7 +444,7 @@
     "message": "<strong>15 minutit jõude olnud vahelehed</strong> peatatakse automaatselt"
   },
   "featureZeroRam": {
-    "message": "<strong>Peatatud vahelehed ei kasuta RAM-i</strong>, kuid jäävad vahelehtede ribale"
+    "message": "<strong>Peatatud vahelehed vabastavad suurema osa oma mälust</strong>, kuid jäävad vahelehtede ribale"
   },
   "featureClickToWake": {
     "message": "<strong>Klõpsa mis tahes peatatud vahelehel</strong>, et see äratada"
@@ -785,13 +785,13 @@
     "message": "See sait on sinu mitte kunagi peatada loendis. Eemalda see, et kaart uinuks."
   },
   "cantSuspendNoOtherTab": {
-    "message": "Vaja on teist avatud kaarti, kuhu esmalt lülituda. Chrome ei saa peatada kaarti, mida sa parasjagu vaatad."
+    "message": "Vaja on teist avatud kaarti, kuhu esmalt lülituda. Brauser ei saa magama panna kaarti, mida sa parasjagu vaatad."
   },
   "openSettingsAction": {
     "message": "Ava seaded"
   },
   "suspendFailedGeneric": {
-    "message": "Chrome ei pannud seda kaarti magama"
+    "message": "Brauser ei pannud seda kaarti magama"
   },
   "suspendFailedLoading": {
     "message": "Laeb veel - proovi hetke pärast uuesti"
@@ -842,7 +842,7 @@
     "message": "1 minut"
   },
   "shortcutsHint": {
-    "message": "Neid haldab Chrome. Kohanda avab lehe chrome://extensions/shortcuts, kus saad iga otsetee muuta või tühjendada."
+    "message": "Neid haldab brauser. Kohanda avab lehe chrome://extensions/shortcuts, kus saad iga otsetee muuta või tühjendada."
   },
   "shortcutUnset": {
     "message": "Määramata"
@@ -894,6 +894,113 @@
     }
   },
   "whitelistFull": {
-    "message": "Valge nimekiri on Chrome'i sünkroonimise jaoks täis. Eemalda paar saiti ja proovi uuesti."
+    "message": "Valge nimekiri on brauseri sünkroonimise jaoks täis. Eemalda paar saiti ja proovi uuesti."
+  },
+  "minutesLeftShort": {
+    "message": "$COUNT$ min",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importAllExisting": {
+    "message": "Kõik need saidid on juba sinu lubatud loendis"
+  },
+  "importSkippedInvalid": {
+    "message": "$COUNT$ tundmatut",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeUnsavedInput": {
+    "message": "Salvestamata"
+  },
+  "badgeStillLoading": {
+    "message": "Laadib"
+  },
+  "badgeNotLoaded": {
+    "message": "Laadimata"
+  },
+  "waitUnsavedInputHint": {
+    "message": "Sellel kaardil on salvestamata sisestus, seega hoiab Drowzy selle ärkvel. Seda saad muuta valikuga Kaitse vormidega vahelehti seadetes."
+  },
+  "waitStillLoadingHint": {
+    "message": "See kaart alles laadib. Drowzy proovib minuti pärast uuesti."
+  },
+  "waitNotLoadedHint": {
+    "message": "See kaart pole veel laaditud, seega ei kasuta see mälu. Drowzy jätab selle rahule."
+  },
+  "autoSuspendOffNotice": {
+    "message": "Automaatne peatamine on väljas, seega jäävad kaardid magama ainult siis, kui sa seda palud."
+  },
+  "restoredSomeTabs": {
+    "message": "Taastatud $COUNT$ kaarti $TOTAL$-st",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "confirmReplaceTitle": {
+    "message": "Klõpsa uuesti, et selle akna kaardid asendada"
+  },
+  "importSessionsTitle": {
+    "message": "Impordi seansid lõikelaualt"
+  },
+  "importedSessions": {
+    "message": "Imporditud seansse: $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "noSessionsToImport": {
+    "message": "Lõikelaualt ei leitud Drowzy seansse"
+  },
+  "sessionsAlreadySaved": {
+    "message": "Need seansid on juba salvestatud"
+  },
+  "openSidePanel": {
+    "message": "Ava külgpaneelil"
+  },
+  "sidePanelUnavailable": {
+    "message": "Külgpaneeli ei saanud avada"
+  },
+  "changelog160Title1": {
+    "message": "Ärkvel tähendab ärkvel"
+  },
+  "changelog160Desc1": {
+    "message": "Kaart, mida hoiad ärkvel, on nüüd kaitstud ka brauseri enda mälusäästu eest, mitte ainult Drowzy eest."
+  },
+  "changelog160Title2": {
+    "message": "Vaata, miks kaart on veel ärkvel"
+  },
+  "changelog160Desc2": {
+    "message": "Kaart, mis peaks magama jääma, kuid mida hoiab tagasi salvestamata sisestus või aeglane laadimine, näitab nüüd loendis põhjust. Kui automaatne peatamine on väljas, ütleb seda loendi kohal olev rida."
+  },
+  "changelog160Title3": {
+    "message": "Duplikaat-vahekaartide sulgemine on ettevaatlikum"
+  },
+  "changelog160Desc3": {
+    "message": "See sulgeb nüüd ainult täpselt sama aadressiga vahekaarte. Erinevad e-kirjad või sama rakenduse eri lehed jäävad lahti ning heli esitavat vahekaarti ei suleta kunagi."
+  },
+  "changelog160Title4": {
+    "message": "Õrnem Operas ja Opera GX-is"
+  },
+  "changelog160Desc4": {
+    "message": "Operas ootab Drowzy nüüd pärast brauseri käivitumist mõne minuti, enne kui vahekaarte magama paneb, ja teeb seda siis ükshaaval."
+  },
+  "changelog160Title5": {
+    "message": "Ja pisiasjad"
+  },
+  "changelog160Desc5": {
+    "message": "Impordi salvestatud seansid lõikelaualt, ava külgpaneel hüpikaknast ning Asenda küsib nüüd enne kaartide sulgemist teist klõpsu. Valge nimekirja import võtab vastu tühikutega eraldatud saite ning kaartide loendi taimer ja tervitusleht kuvatakse igas keeles õigesti."
   }
 }

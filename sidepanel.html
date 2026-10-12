@@ -26,6 +26,9 @@
         <span class="header-title">Drowzy</span>
       </div>
       <div class="header-actions">
+        <button class="btn-icon-only" id="btnOpenSidePanel" data-i18n-title="openSidePanel" data-i18n-aria="openSidePanel" title="Open in side panel" aria-label="Open in side panel" hidden>
+          <span data-icon="panelRight"></span>
+        </button>
         <button class="btn-icon-only" id="themeToggle" aria-label="Toggle theme"></button>
       </div>
     </header>
@@ -108,6 +111,10 @@
       <div class="tab-search" id="tabSearchWrap" style="display:none;">
         <input type="text" id="tabSearchInput" class="input" data-i18n-placeholder="searchTabs" placeholder="Search tabs...">
       </div>
+      <div class="auto-off-notice" id="autoOffNotice" hidden>
+        <span data-i18n="autoSuspendOffNotice">Auto-suspend is off, so tabs only sleep when you ask.</span>
+        <button class="current-tab-fix" id="btnAutoOffFix" type="button" data-i18n="openSettingsAction">Open settings</button>
+      </div>
       <div class="tab-list" id="tabList">
         <div class="tab-list-empty is-loading">
           <span class="empty-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
@@ -135,6 +142,9 @@
                 <button class="btn btn-sm" id="btnExportSessions" data-i18n-title="copySessionsTitle" title="Copy all sessions as JSON">
                   <span data-icon="clipboard"></span>
                 </button>
+                <button class="btn btn-sm" id="btnImportSessions" data-i18n-title="importSessionsTitle" data-i18n-aria="importSessionsTitle" title="Import sessions from clipboard" aria-label="Import sessions from clipboard">
+                  <span data-icon="download"></span>
+                </button>
               </div>
               <div class="session-feedback" id="sessionFeedback"></div>
               <div class="session-list" id="sessionList">
@@ -161,7 +171,7 @@
                 <span class="stat-hero-icon" data-icon="zap"></span>
                 <div class="stat-hero-content">
                   <span class="stat-hero-value" id="statRamAllTime">&mdash;</span>
-                  <span class="stat-hero-label" data-i18n="statLifetimeRam">Lifetime RAM saved</span>
+                  <span class="stat-hero-label" data-i18n="statLifetimeRam">Memory freed over time (est.)</span>
                 </div>
               </div>
               <div class="stats-grid">
@@ -260,7 +270,7 @@
                   </button>
                 </div>
               </div>
-              <div class="setting-row" data-i18n-title="shortcutsHint" title="Chrome manages these. Customize opens chrome://extensions/shortcuts, where you can change or clear each shortcut.">
+              <div class="setting-row" data-i18n-title="shortcutsHint" title="Your browser manages these. Customize opens its shortcuts page (chrome://extensions/shortcuts), where you can change or clear each shortcut.">
                 <label data-i18n="keyboardShortcuts">Keyboard shortcuts</label>
                 <span class="shortcuts-row-right">
                   <span class="shortcuts-status" id="shortcutsStatus"></span>
