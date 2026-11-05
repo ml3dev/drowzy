@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "Importē saglabātās sesijas no starpliktuves, atver sānu paneli no uznirstošā loga, un Aizvietot tagad prasa otru klikšķi, pirms aizver tavas cilnes. Baltā saraksta imports pieņem ar atstarpēm atdalītas vietnes, un ciļņu saraksta taimeris un sveiciena lapa pareizi rādās visās valodās."
+  },
+  "timerCustom": {
+    "message": "Pielāgots..."
+  },
+  "customTimerLabel": {
+    "message": "Minūtes"
+  },
+  "customTimerHint": {
+    "message": "Jebkurš vesels minūšu skaits no 1 līdz 10080, kas ir viena nedēļa."
+  },
+  "markPrefixLabel": {
+    "message": "Virsraksta prefikss"
+  },
+  "markPrefixHint": {
+    "message": "Teksts pirms apturētas cilnes virsraksta, līdz 8 rakstzīmēm. Der arī emocijzīmes. Atstājiet tukšu, lai izmantotu [zzz]. Jau aizmigušās cilnes patur veco prefiksu, līdz pamostas."
+  },
+  "changelog170Title1": {
+    "message": "Jūsu pašu cilnes prefikss"
+  },
+  "changelog170Desc1": {
+    "message": "Iestatījumos ieslēdziet Atzīmēt apturētās cilnes un izvēlieties, kas būs pirms aizmigušas cilnes virsraksta, piemēram, [z] vai 😴. Ērti ar vertikālām cilnēm."
+  },
+  "changelog170Title2": {
+    "message": "Iestatiet jebkuru taimeri"
+  },
+  "changelog170Desc2": {
+    "message": "Automātiskajai apturēšanai tagad ir opcija Pielāgots: cik vien minūšu vēlaties, līdz vienai nedēļai."
+  },
+  "changelog170Desc3": {
+    "message": "Cilne, kas galu galā paliek nomodā, vairs nepatur prefiksu. Operā taimeris tagad ir arī fonā atvērtām un nekad neskatītām cilnēm, un Drowzy vairs neiemidzina cilnes uzreiz pēc instalēšanas."
+  },
+  "changelog170Title3": {
+    "message": "Un sīkumi"
   }
 }

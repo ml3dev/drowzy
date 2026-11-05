@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "Importă sesiuni salvate din clipboard, deschide panoul lateral din fereastra pop-up, iar Înlocuiește cere acum un al doilea clic înainte să-ți închidă filele. Importul listei albe acceptă site-uri separate prin spații, iar cronometrul din lista de file și pagina de bun venit apar corect în orice limbă."
+  },
+  "timerCustom": {
+    "message": "Personalizat..."
+  },
+  "customTimerLabel": {
+    "message": "Minute"
+  },
+  "customTimerHint": {
+    "message": "Orice număr întreg de minute de la 1 la 10080, adică o săptămână."
+  },
+  "markPrefixLabel": {
+    "message": "Prefix de titlu"
+  },
+  "markPrefixHint": {
+    "message": "Text afișat înaintea titlului unei file suspendate, până la 8 caractere. Merg și emoji-urile. Lăsați gol pentru [zzz]. Filele care dorm deja își păstrează vechiul prefix până se trezesc."
+  },
+  "changelog170Title1": {
+    "message": "Propriul prefix pentru file"
+  },
+  "changelog170Desc1": {
+    "message": "Activați Marchează filele suspendate în Setări și alegeți ce apare înaintea titlului unei file adormite, de exemplu [z] sau 😴. Util cu filele verticale."
+  },
+  "changelog170Title2": {
+    "message": "Setați orice temporizator"
+  },
+  "changelog170Desc2": {
+    "message": "Suspendarea automată are acum opțiunea Personalizat: câte minute doriți, până la o săptămână."
+  },
+  "changelog170Desc3": {
+    "message": "O filă care rămâne până la urmă trează nu își mai păstrează prefixul. În Opera, filele deschise în fundal și niciodată privite au acum și ele temporizator, iar Drowzy nu mai adoarme file imediat după instalare."
+  },
+  "changelog170Title3": {
+    "message": "Și lucrurile mărunte"
   }
 }

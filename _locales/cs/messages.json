@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "Importujte uložené relace ze schránky, otevřete postranní panel z vyskakovacího okna a Nahradit teď před zavřením karet chce druhé kliknutí. Import bílé listiny přijímá weby oddělené mezerami a časovač v seznamu karet i uvítací stránka se správně zobrazují ve všech jazycích."
+  },
+  "timerCustom": {
+    "message": "Vlastní..."
+  },
+  "customTimerLabel": {
+    "message": "Minuty"
+  },
+  "customTimerHint": {
+    "message": "Libovolný celý počet minut od 1 do 10080, což je jeden týden."
+  },
+  "markPrefixLabel": {
+    "message": "Předpona názvu"
+  },
+  "markPrefixHint": {
+    "message": "Text zobrazený před názvem uspané karty, nejvýše 8 znaků. Fungují i emoji. Nechte prázdné pro [zzz]. Už uspané karty si starou předponu nechají, dokud se neprobudí."
+  },
+  "changelog170Title1": {
+    "message": "Vlastní předpona karet"
+  },
+  "changelog170Desc1": {
+    "message": "V Nastavení zapněte Označit uspané karty a zvolte, co bude před názvem spící karty, třeba [z] nebo 😴. Hodí se pro svislé karty."
+  },
+  "changelog170Title2": {
+    "message": "Nastavte si libovolný časovač"
+  },
+  "changelog170Desc2": {
+    "message": "Automatické uspání má nově možnost Vlastní: libovolný počet minut, až jeden týden."
+  },
+  "changelog170Desc3": {
+    "message": "Karta, která nakonec zůstane vzhůru, si už předponu nenechá. V Opeře mají teď časovač i karty otevřené na pozadí, na které jste se nikdy nepodívali, a Drowzy už neuspává karty hned po instalaci."
+  },
+  "changelog170Title3": {
+    "message": "A ty drobnosti"
   }
 }

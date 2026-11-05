@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "Importera sparade sessioner från urklipp, öppna sidopanelen från popup-fönstret, och Ersätt ber nu om ett andra klick innan dina flikar stängs. Import till vitlistan tar emot webbplatser åtskilda med mellanslag, och timern i fliklistan och välkomstsidan visas rätt på alla språk."
+  },
+  "timerCustom": {
+    "message": "Anpassad..."
+  },
+  "customTimerLabel": {
+    "message": "Minuter"
+  },
+  "customTimerHint": {
+    "message": "Valfritt helt antal minuter från 1 till 10080, vilket är en vecka."
+  },
+  "markPrefixLabel": {
+    "message": "Titelprefix"
+  },
+  "markPrefixHint": {
+    "message": "Text som visas före titeln på en suspenderad flik, upp till 8 tecken. Emoji fungerar också. Lämna tomt för [zzz]. Flikar som redan sover behåller sitt gamla prefix tills de vaknar."
+  },
+  "changelog170Title1": {
+    "message": "Ditt eget flikprefix"
+  },
+  "changelog170Desc1": {
+    "message": "Slå på Markera suspenderade flikar i Inställningar och välj vad som ska stå före titeln på en sovande flik, till exempel [z] eller 😴. Praktiskt med vertikala flikar."
+  },
+  "changelog170Title2": {
+    "message": "Ställ in valfri timer"
+  },
+  "changelog170Desc2": {
+    "message": "Automatisk suspendering har nu alternativet Anpassad: så många minuter du vill, upp till en vecka."
+  },
+  "changelog170Desc3": {
+    "message": "En flik som till slut förblir vaken behåller inte längre sitt prefix. I Opera får nu även flikar du öppnade i bakgrunden och aldrig tittade på en timer, och Drowzy söver inte längre flikar direkt efter installationen."
+  },
+  "changelog170Title3": {
+    "message": "Och det lilla"
   }
 }

@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "可以從剪貼簿匯入已儲存的工作階段，從彈出視窗直接開啟側邊面板，「替換」現在會在關閉你的分頁前要求再點一次。白名單匯入支援以空格分隔的網站，分頁清單中的計時器和歡迎頁面在所有語言中都能正確顯示。"
+  },
+  "timerCustom": {
+    "message": "自訂..."
+  },
+  "customTimerLabel": {
+    "message": "分鐘"
+  },
+  "customTimerHint": {
+    "message": "1 到 10080 之間的任意整數分鐘,也就是最長一週。"
+  },
+  "markPrefixLabel": {
+    "message": "標題前綴"
+  },
+  "markPrefixHint": {
+    "message": "顯示在已休眠分頁標題前的文字,最多 8 個字元,也可以用表情符號。留空則使用 [zzz]。已在休眠的分頁會保留舊前綴,直到被喚醒。"
+  },
+  "changelog170Title1": {
+    "message": "你自己的分頁前綴"
+  },
+  "changelog170Desc1": {
+    "message": "在設定中開啟「標記已休眠的分頁」,然後選擇休眠分頁標題前顯示的內容,例如 [z] 或 😴。很適合垂直分頁。"
+  },
+  "changelog170Title2": {
+    "message": "想設多久就多久"
+  },
+  "changelog170Desc2": {
+    "message": "自動休眠現在有「自訂」選項:任意分鐘數,最長一週。"
+  },
+  "changelog170Desc3": {
+    "message": "最後仍然保持喚醒的分頁不會再留著前綴。在 Opera 中,在背景開啟但從未看過的分頁現在也會計時,Drowzy 也不再於安裝後立刻讓分頁休眠。"
+  },
+  "changelog170Title3": {
+    "message": "還有一些小事"
   }
 }

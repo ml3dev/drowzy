@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "Mag-import ng mga naka-save na session mula sa clipboard, buksan ang side panel mula sa popup, at humihingi na ngayon ang Palitan ng pangalawang click bago nito isara ang mga tab mo. Tumatanggap ang whitelist import ng mga site na pinaghihiwalay ng space, at tama na ang pagbasa ng timer sa listahan ng tab at ng welcome page sa bawat wika."
+  },
+  "timerCustom": {
+    "message": "Custom..."
+  },
+  "customTimerLabel": {
+    "message": "Minuto"
+  },
+  "customTimerHint": {
+    "message": "Anumang buong bilang ng minuto mula 1 hanggang 10080, na katumbas ng isang linggo."
+  },
+  "markPrefixLabel": {
+    "message": "Prefix ng pamagat"
+  },
+  "markPrefixHint": {
+    "message": "Tekstong lumalabas bago ang pamagat ng naka-suspend na tab, hanggang 8 character. Puwede rin ang emoji. Iwanang blangko para sa [zzz]. Pananatilihin ng mga tab na tulog na ang lumang prefix hanggang magising."
+  },
+  "changelog170Title1": {
+    "message": "Sarili mong prefix ng tab"
+  },
+  "changelog170Desc1": {
+    "message": "I-on ang Markahan ang mga naka-suspend na tab sa Settings at piliin kung ano ang ilalagay bago ang pamagat ng natutulog na tab, gaya ng [z] o 😴. Magagamit sa mga vertical tab."
+  },
+  "changelog170Title2": {
+    "message": "Magtakda ng kahit anong timer"
+  },
+  "changelog170Desc2": {
+    "message": "May opsyong Custom na ngayon ang auto-suspend: kahit ilang minuto, hanggang isang linggo."
+  },
+  "changelog170Desc3": {
+    "message": "Hindi na pinananatili ang prefix ng tab na nanatiling gising. Sa Opera, may timer na rin ang mga tab na binuksan mo sa background at hindi kailanman tiningnan, at hindi na pinapatulog ng Drowzy ang mga tab agad pagkatapos itong ma-install."
+  },
+  "changelog170Title3": {
+    "message": "At ang maliliit na bagay"
   }
 }

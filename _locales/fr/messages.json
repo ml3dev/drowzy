@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "Importez des sessions enregistrées depuis le presse-papiers, ouvrez le panneau latéral depuis la fenêtre contextuelle, et Remplacer demande désormais un second clic avant de fermer vos onglets. L'import de la liste blanche accepte les sites séparés par des espaces, et le minuteur de la liste des onglets ainsi que la page d'accueil s'affichent correctement dans toutes les langues."
+  },
+  "timerCustom": {
+    "message": "Personnalisé..."
+  },
+  "customTimerLabel": {
+    "message": "Minutes"
+  },
+  "customTimerHint": {
+    "message": "N'importe quel nombre entier de minutes de 1 à 10080, soit une semaine."
+  },
+  "markPrefixLabel": {
+    "message": "Préfixe du titre"
+  },
+  "markPrefixHint": {
+    "message": "Texte affiché devant le titre d'un onglet suspendu, jusqu'à 8 caractères. Les emojis fonctionnent aussi. Laissez vide pour [zzz]. Les onglets déjà endormis gardent leur ancien préfixe jusqu'à leur réveil."
+  },
+  "changelog170Title1": {
+    "message": "Votre propre préfixe d'onglet"
+  },
+  "changelog170Desc1": {
+    "message": "Activez Marquer les onglets suspendus dans les paramètres et choisissez ce qui s'affiche devant le titre d'un onglet endormi, comme [z] ou 😴. Pratique avec les onglets verticaux."
+  },
+  "changelog170Title2": {
+    "message": "Le minuteur de votre choix"
+  },
+  "changelog170Desc2": {
+    "message": "La suspension automatique propose désormais l'option Personnalisé : le nombre de minutes que vous voulez, jusqu'à une semaine."
+  },
+  "changelog170Desc3": {
+    "message": "Un onglet qui reste finalement éveillé ne garde plus son préfixe. Dans Opera, les onglets ouverts en arrière-plan et jamais consultés ont maintenant eux aussi un minuteur, et Drowzy n'endort plus d'onglets juste après son installation."
+  },
+  "changelog170Title3": {
+    "message": "Et les petites choses"
   }
 }

@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "Importe sessões guardadas da área de transferência, abra o painel lateral a partir do pop-up, e Substituir pede agora um segundo clique antes de fechar os seus separadores. A importação da lista branca aceita sites separados por espaços, e o temporizador da lista de separadores e a página de boas-vindas aparecem corretamente em todos os idiomas."
+  },
+  "timerCustom": {
+    "message": "Personalizado..."
+  },
+  "customTimerLabel": {
+    "message": "Minutos"
+  },
+  "customTimerHint": {
+    "message": "Qualquer número inteiro de minutos de 1 a 10080, ou seja, uma semana."
+  },
+  "markPrefixLabel": {
+    "message": "Prefixo do título"
+  },
+  "markPrefixHint": {
+    "message": "Texto mostrado antes do título de um separador suspenso, até 8 caracteres. Os emojis também funcionam. Deixe vazio para usar [zzz]. Os separadores que já estão a dormir mantêm o prefixo antigo até acordarem."
+  },
+  "changelog170Title1": {
+    "message": "O seu próprio prefixo de separador"
+  },
+  "changelog170Desc1": {
+    "message": "Ative Marcar separadores suspensos nas Definições e escolha o que aparece antes do título de um separador a dormir, como [z] ou 😴. Útil com separadores verticais."
+  },
+  "changelog170Title2": {
+    "message": "O temporizador que quiser"
+  },
+  "changelog170Desc2": {
+    "message": "A suspensão automática tem agora a opção Personalizado: os minutos que quiser, até uma semana."
+  },
+  "changelog170Desc3": {
+    "message": "Um separador que acaba por ficar acordado já não mantém o prefixo. No Opera, os separadores abertos em segundo plano e nunca vistos têm agora também um temporizador, e o Drowzy já não adormece separadores logo após a instalação."
+  },
+  "changelog170Title3": {
+    "message": "E as pequenas coisas"
   }
 }

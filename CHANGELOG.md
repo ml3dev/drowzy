@@ -2,6 +2,51 @@
 
 All notable changes to Drowzy are documented here.
 
+## [1.7.0] - 2026-11-04
+
+Your own tab prefix, any timer you want, and a real test of the Opera GX crash report. A prefix you choose replaces `[zzz]`, Custom sets auto-suspend to any number of minutes up to a week, a tab that ends up staying awake no longer keeps its label, and Opera gets two small fixes. No new permissions, no telemetry, and the native `chrome.tabs.discard` approach is unchanged.
+
+### Added
+- **Your own title prefix (#4).** With Mark suspended tabs on, a Title prefix box takes whatever you want in front of a sleeping tab's title: `[z]`, `s/`, an emoji. Up to 8 characters, counted as you see them, so a flag or a family emoji is one character and is never cut in half. One space is added after it. Control and text-direction characters are dropped, because an override would reverse the rest of the title everywhere the browser shows it. Leaving it empty means `[zzz]`. Tabs already asleep cannot run anything, so they keep their old prefix until they wake. Stored as `markPrefix`, sent to the page with the `markSuspended` message, and cleaned in the worker (`cleanMarkPrefix`) on every save.
+- **Custom auto-suspend timer.** The timer menu has a Custom option that opens a Minutes box: any whole number from 1 to 10080, which is one week. Nothing is saved until there is a number, an empty or unusable box puts the stored value back, a higher number is capped, and typing a number the menu already has selects it there. The worker has the final say (`cleanTimerMinutes`).
+- **Long countdowns read in hours.** Past two hours the tab list shows `17h` instead of `1000m`. The unit comes from `Intl.NumberFormat` in the reader's language, so there is no new abbreviation to translate.
+
+### Fixed
+- **A tab that stayed awake could keep its `[zzz]`.** `suspendTab` marks the title before its last checks, because a discarded page can no longer change it. If those checks then refused (you came back to the tab, it started playing sound) or the browser declined the discard, the tab stayed awake with a label saying it was asleep, until the page changed its own title or reloaded. The `unmarkSuspended` handler in `formcheck.js` existed, but nothing ever sent it. `suspendTab` now sends it on any refusal after marking. The content script remembers the title it found and the title it left, and only undoes its own mark: a page's own title is never edited, even one that starts with the same characters as the prefix, and a changed setting cannot strand the old prefix.
+- **Opera: tabs opened in the background and never looked at could go without a timer.** Opera reports `lastAccessed: 0` for a tab that was never activated, where Chrome reports a real time. `seedTimestamp` stored that 0, `shouldSuspend` read it as "no clock", and the tab never slept on the timer or in the startup sweep until something else touched it. Those tabs now start their clock when first seen.
+
+### Changed
+- **Opera and Opera GX: no first-run pass.** The pass that sleeps long-idle tabs 30 seconds after install was the one automatic path 1.6.0's gentler Opera handling did not cover. It discarded tabs in a row with no pause, and it also read `lastAccessed: 0` as long idle, so it could sleep a tab opened seconds earlier. Tabs in Opera now sleep on the normal timer after installing. This is a precaution, not a confirmed fix: see below.
+
+### Opera GX crash report (#3)
+We could not reproduce the crash, and its cause is still not known. Tested on Windows 11 Insider build 26300 with a throwaway profile:
+- Opera GX 136.0.6008.50, the current build around the date of the report, and 138.0.6044.65, the latest today. Drowzy 1.5.0 and 1.6.0, the versions in the report, and 1.7.0.
+- The reported flow: about 20 real tabs that had all been used, a restored session, a 15 minute timer, and the real `onStartup` handler. The startup sweep put 20 tabs to sleep at about 30 seconds, and again at about 6 seconds while the session was still restoring. The browser stayed up with no crash dumps every time. On 1.7.0 the same session waited out the Opera quiet period, then the 20 tabs slept one at a time, also with no crash.
+- A real install in a running browser (the reinstall in the follow-up): 19 tabs slept in the first-run pass, no crash.
+- Tab islands, live and restored: tabs in them slept normally, no crash.
+- `chrome.tabs.discard` directly against loaded, loading, just-created, pinned, muted, grouped, minimized-window, second-window, system-page and extension-page tabs, plus discard-then-activate, discard-then-close and discard-reload loops. No crash.
+- The per-minute check took a median of 0.9 ms (1.8 ms at most) with 22 tabs in GX.
+
+Not tested: GX workspaces, sidebar panels and mods, the GX RAM limiter (turned on in a test profile, but GX reset the setting, so we cannot say it was active), and the reporter's own machine and profile.
+
+### i18n
+- New keys across all 57 locales: `timerCustom`, `customTimerLabel`, `customTimerHint`, `markPrefixLabel`, `markPrefixHint`, `changelog170Title1` to `changelog170Title3`, `changelog170Desc1` to `changelog170Desc3`. Quoted labels use each locale's own existing translation, and `changelog170Title3` reuses `changelog150Title5`.
+- `timerCustom` and `customTimerLabel` added to the validator's identical-to-English exemption.
+- What's New gets a three-item 1.7.0 section and 1.6.0 collapses like the releases before it. 1.7.0 is not in `SHOW_CHANGELOG_VERSIONS`, so the page does not open by itself after this update.
+
+### Docs
+- Website: the sessions card no longer says tab groups are restored. The `tabGroups` permission was dropped long ago, and `saveSession` and `restoreSession` have skipped groups ever since. The timer copy now says one minute to a whole week, and the demo menu shows Custom.
+- README: timer range and prefix, and the Opera section mentions the first-run pass.
+
+### Audit
+- `node --check` on every touched script; `scripts/validate.js` clean with 0 warnings. No manifest permission change; `manifest.json` changed only in `version`.
+- 48 checks in real browsers, passing in both Chrome 156 and Opera GX 138: the timer box and its limits, the poll not closing the box mid-edit, reopening with a custom value, Never and back, the prefix limits including emoji and direction characters, the prefix on a really discarded tab, a refusal at the last check leaving a clean title, a second mark replacing the first, waking clearing the mark, settings saved by 1.6.0 loading and saving unchanged, the side panel having the same controls, and no page errors. The test copy had page access granted and the worker's sender check relaxed so the popup could run from a tab; the shipped files have neither change.
+- Looked over in light and dark, in English, German (which led to a shorter label) and Arabic right-to-left.
+- 83 further checks in both browsers: 14 kinds of prefix on really discarded tabs (joined emoji, flags, skin tones, keycaps, combining marks, right-to-left text), the 8 character limit never cutting one in half, real typing and Enter, page titles that start with or contain the prefix, an empty title, a page changing its own title after the mark, and changing, clearing or turning off the prefix while tabs sleep, with no reload and no stacked labels, across Suspend Others and Wake All.
+- The custom timer in real time: a 2 minute setting slept a tab after 145 seconds in both browsers, never before 2 minutes, and a one week setting left it alone.
+- All 57 locales: every new string checked for placeholders, numbers, quoted labels and writing system, and each one drawn on the popup and What's New pages with no overflow. Real `chrome.i18n` output compared in 9 browser languages.
+- The release package itself, with no test changes, loaded in both browsers and driven through the real toolbar popup.
+
 ## [1.6.0] - 2026-10-12
 
 Stability, compatibility and clarity. Keep this tab awake now also holds off the browser's own Memory Saver, the tab list says why an overdue tab is still awake, Opera and Opera GX get a gentler startup after a crash report, Close duplicate tabs stops closing tabs that are not duplicates, sessions can be imported and Replace asks before closing a window, and an old memory claim is gone from 56 translations. No new permissions, no telemetry, and the native `chrome.tabs.discard` approach is unchanged. In Chrome and every non-Opera browser, which tabs get suspended and when is exactly what it was in 1.5.0.

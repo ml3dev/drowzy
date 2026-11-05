@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "可以从剪贴板导入已保存的会话，从弹出窗口直接打开侧边栏，“替换”现在会在关闭你的标签页前要求再点一次。白名单导入支持用空格分隔的网站，标签页列表中的计时器和欢迎页面在所有语言中都能正确显示。"
+  },
+  "timerCustom": {
+    "message": "自定义..."
+  },
+  "customTimerLabel": {
+    "message": "分钟"
+  },
+  "customTimerHint": {
+    "message": "1 到 10080 之间的任意整数分钟,也就是最长一周。"
+  },
+  "markPrefixLabel": {
+    "message": "标题前缀"
+  },
+  "markPrefixHint": {
+    "message": "显示在已休眠标签页标题前的文字,最多 8 个字符,也可以用表情符号。留空则使用 [zzz]。已在休眠的标签页会保留旧前缀,直到被唤醒。"
+  },
+  "changelog170Title1": {
+    "message": "你自己的标签页前缀"
+  },
+  "changelog170Desc1": {
+    "message": "在设置中开启“标记已休眠的标签页”,然后选择休眠标签页标题前显示的内容,比如 [z] 或 😴。很适合垂直标签页。"
+  },
+  "changelog170Title2": {
+    "message": "想设多久就多久"
+  },
+  "changelog170Desc2": {
+    "message": "自动休眠现在有“自定义”选项:任意分钟数,最长一周。"
+  },
+  "changelog170Desc3": {
+    "message": "最后仍然保持唤醒的标签页不会再留着前缀。在 Opera 中,在后台打开但从未看过的标签页现在也会计时,Drowzy 也不再在安装后立刻让标签页休眠。"
+  },
+  "changelog170Title3": {
+    "message": "还有一些小事"
   }
 }

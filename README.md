@@ -51,7 +51,7 @@ On top of that, Drowzy is fully open source, collects zero data, and runs entire
 ## Features
 
 ### Core
-- **Auto-suspend** inactive tabs after a configurable timer (1 min - 4 hours, or manual only)
+- **Auto-suspend** inactive tabs after a timer you pick (1 min - 4 hours, any custom number of minutes up to a week, or manual only)
 - **Smart protection** - pinned, audio-playing, and whitelisted tabs are skipped by default; the pinned and audio protections are toggles you can turn off if you want those tabs to sleep too. Optional form-data protection also skips tabs with unsaved input (off by default, requires granting page access)
 - **Keep this tab awake** - hold a single tab awake without whitelisting the whole site. Nothing in Drowzy will sleep it until you press "Allow sleep" or close the tab, and the hold also tells Chrome's own Memory Saver to leave it alone; the hold clears when you restart your browser
 - **Tells you why** - when a tab can't sleep, Drowzy says which protection is stopping it and links straight to the setting that would change it, instead of quietly hiding the button. Tabs that are due but held back by unsaved input or a slow load say so in the list, and a line above the list says when auto-suspend is off
@@ -69,14 +69,14 @@ On top of that, Drowzy is fully open source, collects zero data, and runs entire
 - **Dark and light theme** - toggle in the header, preference is saved
 - **Side panel** - open Drowzy in Chrome's side panel from the popup header for a persistent full-height view
 - **50+ languages** - UI automatically matches your browser language
-- **Suspend indicator** - optional `[zzz]` prefix on suspended tab titles (requires granting page access)
+- **Suspend indicator** - optional prefix on suspended tab titles, `[zzz]` or your own text or emoji up to 8 characters (requires granting page access)
 - **Suspend warning** - optional on-page notice before a tab is auto-suspended (requires granting page access)
 - **Stats dashboard** - track how many tabs you've suspended and an estimate of the memory freed over time
 - **Review prompt** - a gentle, dismissable nudge that only appears after about a week of real use, with "Maybe later" and "Don't ask again" options (never on install, and a second "Maybe later" is taken as a no)
 
 ## Browser support
 
-Drowzy is built and tested for Chrome (version 120 or later). Other Chromium browsers such as Edge, Brave, Opera and Vivaldi can install it from the Chrome Web Store and the basics work the same way, though each adds its own tab features on top. In Opera and Opera GX, the automatic paths are gentler: nothing is suspended for the first 3 minutes after the browser starts, tabs are suspended one at a time, and tabs that were restored but never loaded are left to the browser. The side panel button only appears in browsers that support Chrome's side panel.
+Drowzy is built and tested for Chrome (version 120 or later). Other Chromium browsers such as Edge, Brave, Opera and Vivaldi can install it from the Chrome Web Store and the basics work the same way, though each adds its own tab features on top. In Opera and Opera GX, the automatic paths are gentler: nothing is suspended for the first 3 minutes after the browser starts, tabs are suspended one at a time, tabs that were restored but never loaded are left to the browser, and there is no quick pass right after installing. The side panel button only appears in browsers that support Chrome's side panel.
 
 ## How It Works
 

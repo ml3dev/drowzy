@@ -404,7 +404,7 @@ function renderTabList(tabs) {
       var wait = WAIT_BADGES[tab.waitReason];
       meta.innerHTML = '<span class="badge badge-wait" title="' + esc(t(wait.hintKey)) + '">' + icon(wait.icon, 11) + ' ' + esc(t(wait.labelKey)) + '</span>';
     } else if (tab.status === 'idle' && tab.timeLeft !== null) {
-      var timeText = tab.timeLeft > 0 ? esc(t('minutesLeftShort', [String(tab.timeLeft)])) : esc(t('suspendingSoon'));
+      var timeText = tab.timeLeft > 0 ? esc(formatTimeLeft(tab.timeLeft)) : esc(t('suspendingSoon'));
       meta.innerHTML = '<span class="badge badge-timer">' + icon('clock', 11) + ' ' + timeText + '</span>';
     }
     if (tab.status === 'idle') {
@@ -991,14 +991,43 @@ function renderLifetimeStats(stats) {
   }
 }
 
+// A custom timer can run to a week, and "6000m" says nothing at a glance. The
+// unit comes from the browser's own number formatting, in the reader's language,
+// so past two hours there is no extra abbreviation to translate.
+function formatTimeLeft(minutes) {
+  if (minutes > 120) {
+    try {
+      return new Intl.NumberFormat(chrome.i18n.getUILanguage(), { style: 'unit', unit: 'hour', unitDisplay: 'narrow' }).format(Math.ceil(minutes / 60));
+    } catch {}
+  }
+  return t('minutesLeftShort', [String(minutes)]);
+}
+
+function isTimerPreset(minutes) {
+  var option = document.querySelector('#suspendTimer option[value="' + Number(minutes) + '"]');
+  return !!option && Number(minutes) > 0;
+}
+
+// Set while the user has picked Custom and not finished typing. Nothing is saved
+// until they do, so the next poll would otherwise flip the menu back to the
+// preset that is still stored and hide the box they are typing in.
+var _customTimerOpen = false;
+
 function renderSettings(settings) {
   if (!settings) return;
   // Skip updating form controls when the user is actively interacting with settings
   var active = document.activeElement;
   var timer = document.getElementById('suspendTimer');
+  var customInput = document.getElementById('customTimer');
+  var showCustom = _customTimerOpen || (settings.enableAutoSuspend && !isTimerPreset(settings.suspendAfterMinutes));
   if (active !== timer) {
-    timer.value = settings.enableAutoSuspend ? String(settings.suspendAfterMinutes) : '0';
+    timer.value = showCustom ? 'custom' : (settings.enableAutoSuspend ? String(settings.suspendAfterMinutes) : '0');
   }
+  document.getElementById('customTimerRow').hidden = !showCustom;
+  if (active !== customInput) customInput.value = String(settings.suspendAfterMinutes);
+  var prefixInput = document.getElementById('markPrefix');
+  document.getElementById('markPrefixRow').hidden = !settings.markSuspendedTabs;
+  if (active !== prefixInput) prefixInput.value = settings.markPrefix || '';
   var toggles = [
     ['togglePinned', 'protectPinned'], ['toggleAudio', 'protectAudio'],
     ['toggleForms', 'protectForms'], ['toggleStartup', 'suspendOnStartup'],
@@ -1436,6 +1465,16 @@ function attachListeners() {
   });
 
   document.getElementById('suspendTimer').addEventListener('change', async function() {
+    if (this.value === 'custom') {
+      // Show the box and wait for a number. Nothing changes until there is one.
+      _customTimerOpen = true;
+      var box = document.getElementById('customTimer');
+      document.getElementById('customTimerRow').hidden = false;
+      box.focus();
+      box.select();
+      return;
+    }
+    _customTimerOpen = false;
     var val = parseInt(this.value, 10);
     var s = await msg({ action: 'getSettings' });
     if (!s) return;
@@ -1444,6 +1483,41 @@ function attachListeners() {
     await msg({ action: 'updateSettings', settings: s });
     document.getElementById('toggleAutoSuspend').checked = s.enableAutoSuspend;
     await loadAll();
+  });
+
+  document.getElementById('customTimer').addEventListener('change', async function() {
+    var minutes = Math.round(Number(this.value));
+    var s = await msg({ action: 'getSettings' });
+    if (!s) return;
+    // An empty or unusable box is not a choice. Put back what is stored.
+    if (this.value === '' || !Number.isFinite(minutes) || minutes < 1) {
+      this.value = String(s.suspendAfterMinutes);
+      return;
+    }
+    this.value = String(Math.min(minutes, 10080));
+    s.enableAutoSuspend = true;
+    s.suspendAfterMinutes = Number(this.value);
+    await msg({ action: 'updateSettings', settings: s });
+    _customTimerOpen = !isTimerPreset(s.suspendAfterMinutes);
+    document.getElementById('toggleAutoSuspend').checked = true;
+    await loadAll();
+  });
+
+  document.getElementById('markPrefix').addEventListener('change', async function() {
+    var s = await msg({ action: 'getSettings' });
+    if (!s) return;
+    s.markPrefix = this.value;
+    await msg({ action: 'updateSettings', settings: s });
+    // the worker trims it to what is really stored, so show that
+    var stored = await msg({ action: 'getSettings' });
+    if (stored) this.value = stored.markPrefix || '';
+  });
+
+  // Enter finishes the edit, the way it does in the whitelist box
+  ['customTimer', 'markPrefix'].forEach(function(id) {
+    document.getElementById(id).addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') this.blur();
+    });
   });
 
   bindToggle('togglePinned', 'protectPinned');

@@ -13,22 +13,42 @@ chrome.runtime.onMessage.addListener(function(msg, sender, sendResponse) {
   if (msg.action === 'checkFormData') {
     sendResponse({ hasFormData: hasUnsavedFormData() });
   } else if (msg.action === 'markSuspended') {
-    const pfx = chrome.i18n.getMessage('markSuspendedPrefix') || '[zzz] ';
-    if (!document.title.startsWith(pfx)) {
-      document.title = pfx + document.title;
-    }
+    markTitle(msg.prefix || chrome.i18n.getMessage('markSuspendedPrefix') || '[zzz] ');
     sendResponse({ success: true });
   } else if (msg.action === 'unmarkSuspended') {
-    const pfx = chrome.i18n.getMessage('markSuspendedPrefix') || '[zzz] ';
-    if (document.title.startsWith(pfx)) {
-      document.title = document.title.substring(pfx.length);
-    }
+    unmarkTitle();
     sendResponse({ success: true });
   } else if (msg.action === 'suspendWarning') {
     showSuspendWarning();
     sendResponse({ success: true });
   }
 });
+
+// What this copy of the script did to the title: the prefix, the title it found
+// and the title it left. Taking the mark off puts back exactly what it found, and
+// only while the title is still exactly what it left. Anything else is the page's
+// own text, even if it starts with the same characters, and is not ours to edit.
+// The title is read back after writing it because the browser collapses whitespace:
+// an empty title plus a prefix reads back without the trailing space.
+var titleMark = null;
+
+function markTitle(prefix) {
+  if (titleMark && titleMark.left === document.title) {
+    if (titleMark.prefix === prefix) return;
+    unmarkTitle();
+  }
+  titleMark = null;
+  var found = document.title;
+  // a page whose own title already starts this way does not get a second copy
+  if (found.startsWith(prefix)) return;
+  document.title = prefix + found;
+  titleMark = { prefix: prefix, found: found, left: document.title };
+}
+
+function unmarkTitle() {
+  if (titleMark && titleMark.left === document.title) document.title = titleMark.found;
+  titleMark = null;
+}
 
 function showSuspendWarning() {
   // a banner on a hidden tab is theater - the user can't see it. only render

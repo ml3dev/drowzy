@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "Impor sesi tersimpan dari papan klip, buka panel samping dari popup, dan Ganti kini meminta klik kedua sebelum menutup tab-tabmu. Impor daftar putih menerima situs yang dipisahkan spasi, dan penghitung waktu di daftar tab serta halaman sambutan tampil benar di setiap bahasa."
+  },
+  "timerCustom": {
+    "message": "Kustom..."
+  },
+  "customTimerLabel": {
+    "message": "Menit"
+  },
+  "customTimerHint": {
+    "message": "Bilangan bulat menit berapa pun dari 1 hingga 10080, yaitu satu minggu."
+  },
+  "markPrefixLabel": {
+    "message": "Awalan judul"
+  },
+  "markPrefixHint": {
+    "message": "Teks yang ditampilkan sebelum judul tab yang ditangguhkan, hingga 8 karakter. Emoji juga bisa. Biarkan kosong untuk [zzz]. Tab yang sudah tidur tetap memakai awalan lama sampai bangun."
+  },
+  "changelog170Title1": {
+    "message": "Awalan tab pilihan Anda"
+  },
+  "changelog170Desc1": {
+    "message": "Aktifkan Tandai tab yang ditangguhkan di Setelan dan pilih apa yang muncul sebelum judul tab yang tidur, seperti [z] atau 😴. Berguna untuk tab vertikal."
+  },
+  "changelog170Title2": {
+    "message": "Atur timer sesuka Anda"
+  },
+  "changelog170Desc2": {
+    "message": "Penangguhan otomatis kini punya opsi Kustom: berapa pun menit, hingga satu minggu."
+  },
+  "changelog170Desc3": {
+    "message": "Tab yang akhirnya tetap terjaga tidak lagi menyimpan awalannya. Di Opera, tab yang Anda buka di latar belakang dan belum pernah dilihat kini juga punya timer, dan Drowzy tidak lagi menidurkan tab tepat setelah dipasang."
+  },
+  "changelog170Title3": {
+    "message": "Dan hal-hal kecil"
   }
 }

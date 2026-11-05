@@ -222,8 +222,13 @@
                   <option value="60" data-i18n="timer1hour">1 hour</option>
                   <option value="120" data-i18n="timer2hours">2 hours</option>
                   <option value="240" data-i18n="timer4hours">4 hours</option>
+                  <option value="custom" data-i18n="timerCustom">Custom...</option>
                   <option value="0" data-i18n="timerNever">Never</option>
                 </select>
+              </div>
+              <div class="setting-row" id="customTimerRow" data-i18n-title="customTimerHint" title="Any whole number of minutes from 1 to 10080, which is one week." hidden>
+                <label for="customTimer" data-i18n="customTimerLabel">Minutes</label>
+                <input type="number" id="customTimer" class="input input-short" min="1" max="10080" step="1" inputmode="numeric">
               </div>
               <div class="setting-row">
                 <label for="togglePinned" data-i18n="protectPinned">Protect pinned tabs</label>
@@ -248,6 +253,10 @@
               <div class="setting-row">
                 <label for="toggleMarkSuspended" data-i18n="markSuspended">Mark suspended tabs</label>
                 <label class="switch"><input type="checkbox" id="toggleMarkSuspended"><span class="slider"></span></label>
+              </div>
+              <div class="setting-row" id="markPrefixRow" data-i18n-title="markPrefixHint" title="Text shown before the title of a suspended tab, up to 8 characters. Emoji work too. Leave it empty for [zzz]. Tabs already asleep keep their old prefix until they wake." hidden>
+                <label for="markPrefix" data-i18n="markPrefixLabel">Title prefix</label>
+                <input type="text" id="markPrefix" class="input input-short" maxlength="100" placeholder="[zzz]" spellcheck="false" autocomplete="off">
               </div>
               <div class="setting-row setting-row-block">
                 <label><span data-i18n="whitelistedSites">Whitelisted sites</span> <span class="whitelist-count" id="whitelistCount"></span></label>

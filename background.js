@@ -9,8 +9,45 @@ const DEFAULT_SETTINGS = {
   protectAudio: true,
   protectForms: false,
   suspendOnStartup: true,
-  markSuspendedTabs: false
+  markSuspendedTabs: false,
+  // empty means the default [zzz]; anything else is the user's own text
+  markPrefix: ''
 };
+
+// A custom timer takes any whole number of minutes in this range. The check
+// alarm runs once a minute, so nothing finer would mean anything, and a week is
+// already far past the point where a tab is worth keeping warm.
+const TIMER_MIN_MINUTES = 1;
+const TIMER_MAX_MINUTES = 10080;
+
+function cleanTimerMinutes(raw) {
+  let n = Math.round(Number(raw));
+  if (!Number.isFinite(n) || n < TIMER_MIN_MINUTES) return DEFAULT_SETTINGS.suspendAfterMinutes;
+  return Math.min(n, TIMER_MAX_MINUTES);
+}
+
+// What goes in front of a suspended tab's title. Counted in visible characters
+// rather than code units, so a flag or a family emoji is one character and is
+// never cut in half. Control and text-direction characters are dropped: a title
+// is shown all over the browser, and an override would reverse everything after it.
+const MARK_PREFIX_MAX = 8;
+
+function cleanMarkPrefix(raw) {
+  if (typeof raw !== 'string') return '';
+  let text = raw.replace(/[\u0000-\u001f\u007f-\u009f\u061c\u200e\u200f\u2028\u2029\u202a-\u202e\u2066-\u2069]/g, '').trim();
+  if (!text) return '';
+  let chars;
+  try {
+    chars = Array.from(new Intl.Segmenter(undefined, { granularity: 'grapheme' }).segment(text), p => p.segment);
+  } catch {
+    chars = Array.from(text);
+  }
+  return chars.slice(0, MARK_PREFIX_MAX).join('').trim();
+}
+
+function markPrefixText(settings) {
+  return (cleanMarkPrefix(settings.markPrefix) || t('markSuspendedPrefix').trim() || '[zzz]') + ' ';
+}
 
 let _injectedTabs = new Set();
 let _suspending = false;
@@ -287,7 +324,14 @@ async function firstRunQuickSuspend() {
   // Conservative first-run pass. Uses tab.lastAccessed (Chrome 121+) so we
   // only touch tabs Chrome itself confirms have been idle for a while; on
   // 120 (no lastAccessed), we skip - better to miss the boost than surprise
-  // a fresh installer with a tab they were just using.
+  // a fresh installer with a tab they were just using. Opera reports
+  // lastAccessed 0 for a tab that was never activated, which says nothing about
+  // how long it has been idle: it may have been opened a second ago.
+  //
+  // Opera skips this pass. It was the one automatic path 1.6.0's gentler Opera
+  // handling did not cover, and the follow-up on #3 reports a crash right after
+  // a reinstall, which is when it runs. Tabs there sleep on the normal timer.
+  if (IS_OPERA) return;
   try {
     let settings = await getSettings();
     if (!settings.enableAutoSuspend) return;
@@ -300,9 +344,8 @@ async function firstRunQuickSuspend() {
     for (let tab of tabs) {
       if (tab.active || tab.discarded) continue;
       if (_keptAwake.has(tab.id)) continue;
-      if (typeof tab.lastAccessed !== 'number') continue;
+      if (!tab.lastAccessed) continue;
       if (tab.lastAccessed > staleBefore) continue;
-      if (isNeverLoaded(tab)) continue;
       if (isInternalUrl(tab.url)) continue;
       if (settings.protectPinned && tab.pinned) continue;
       if (settings.protectAudio && tab.audible) continue;
@@ -727,8 +770,13 @@ function seedTimestamp(tab, now) {
   // available, so a service-worker restart with cleared session storage
   // doesn't reset the apparent idle time of long-untouched tabs to NOW -
   // that would silently grant every tab a fresh full timer on restart.
+  //
+  // Opera reports lastAccessed 0 for a tab that was never activated (Chrome gives
+  // it a real time). Seeding that would read as "no clock" in shouldSuspend, and
+  // a tab with no clock never sleeps, on the timer or in the startup sweep, until
+  // something else touches it. Those tabs start their clock now instead.
   if (tab.id in _timestamps) return;
-  _timestamps[tab.id] = (typeof tab.lastAccessed === 'number') ? tab.lastAccessed : now;
+  _timestamps[tab.id] = tab.lastAccessed > 0 ? tab.lastAccessed : now;
   _tsDirty = true;
 }
 
@@ -1226,12 +1274,29 @@ async function suspendTab(tabId, cachedSettings, opts) {
       await injectFormCheck(tabId);
     }
 
+    let marked = false;
     if (settings.markSuspendedTabs) {
       // Bounded: the marking is cosmetic, and a page too busy to answer must
       // not delay its own suspend.
-      try { await withTimeout(chrome.tabs.sendMessage(tabId, { action: 'markSuspended' }), TAB_MESSAGE_TIMEOUT_MS); } catch {}
+      try {
+        await withTimeout(chrome.tabs.sendMessage(tabId, { action: 'markSuspended', prefix: markPrefixText(settings) }), TAB_MESSAGE_TIMEOUT_MS);
+        marked = true;
+      } catch {}
     }
 
+    let slept = await discardIfStillDue(tabId, settings, opts);
+    // The title has to be marked before the discard, while the page can still
+    // change it, so it goes on ahead of the last checks. A tab those checks
+    // held back stays awake, and must not keep a label saying it is asleep.
+    if (!slept && marked) {
+      try { await withTimeout(chrome.tabs.sendMessage(tabId, { action: 'unmarkSuspended' }), TAB_MESSAGE_TIMEOUT_MS); } catch {}
+    }
+    return slept;
+  } catch { return false; }
+}
+
+async function discardIfStillDue(tabId, settings, opts) {
+  try {
     // Final recheck immediately before discard - user may have switched to
     // this tab during the preceding awaits (form check, message round-trips).
     // Discarding an active tab forces a visible reload when the user looks at it.
@@ -1966,6 +2031,9 @@ async function handleMessage(msg) {
       let currentWhitelist = (current.settings && Array.isArray(current.settings.whitelist))
         ? current.settings.whitelist : DEFAULT_SETTINGS.whitelist;
       let merged = { ...DEFAULT_SETTINGS, ...msg.settings };
+      // The popup's own limits are a courtesy; these are what gets stored
+      merged.suspendAfterMinutes = cleanTimerMinutes(merged.suspendAfterMinutes);
+      merged.markPrefix = cleanMarkPrefix(merged.markPrefix);
       // Always preserve the authoritative whitelist from storage
       // (whitelist is managed exclusively via addWhitelist/removeWhitelist)
       merged.whitelist = currentWhitelist;
@@ -2049,7 +2117,7 @@ async function handleMessage(msg) {
     case 'wakeTab':
       try {
         // Tab is discarded - can't inject scripts or send messages.
-        // Just reload; the page title resets naturally (no [zzz] prefix).
+        // Just reload; the page title resets naturally (no prefix).
         await chrome.tabs.reload(msg.tabId);
         _injectedTabs.delete(msg.tabId);
         await updateBadgeNow();

@@ -1223,6 +1223,7 @@ body:not(.popup-ready) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 8px;
   padding: 7px 0;
   border-bottom: 1px solid var(--border-subtle);
   font-size: 12px;
@@ -1232,6 +1233,14 @@ body:not(.popup-ready) {
 .setting-row:last-child { border-bottom: none; }
 
 .setting-row label:first-child { flex: 1; }
+
+.setting-row[hidden] { display: none; }
+
+.input-short { width: 84px; flex-shrink: 0; }
+
+/* the menu is as wide as its longest option, and the words for Custom run long in
+   some languages. It must not push the label out of the row. */
+.setting-row .select { max-width: 58%; flex-shrink: 0; }
 
 .setting-row-block {
   flex-direction: column;

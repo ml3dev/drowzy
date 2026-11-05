@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "Importálj mentett munkameneteket a vágólapról, nyisd meg az oldalpanelt a felugró ablakból, a Csere pedig most egy második kattintást kér, mielőtt bezárná a lapjaidat. Az engedélyezési lista importálása elfogadja a szóközzel elválasztott webhelyeket, a laplista időzítője és az üdvözlőoldal pedig minden nyelven helyesen jelenik meg."
+  },
+  "timerCustom": {
+    "message": "Egyéni..."
+  },
+  "customTimerLabel": {
+    "message": "Perc"
+  },
+  "customTimerHint": {
+    "message": "Bármilyen egész számú perc 1 és 10080 között, ami egy hét."
+  },
+  "markPrefixLabel": {
+    "message": "Cím előtagja"
+  },
+  "markPrefixHint": {
+    "message": "A felfüggesztett lap címe előtt megjelenő szöveg, legfeljebb 8 karakter. Emoji is használható. Hagyja üresen a [zzz] használatához. A már alvó lapok a régi előtagot tartják meg, amíg fel nem ébrednek."
+  },
+  "changelog170Title1": {
+    "message": "Saját lapelőtag"
+  },
+  "changelog170Desc1": {
+    "message": "Kapcsolja be a Beállításokban ezt: Felfüggesztett lapok megjelölése, és válassza ki, mi álljon az alvó lap címe előtt, például [z] vagy 😴. Függőleges lapokhoz hasznos."
+  },
+  "changelog170Title2": {
+    "message": "Állítson be bármilyen időzítőt"
+  },
+  "changelog170Desc2": {
+    "message": "Az automatikus felfüggesztésnek mostantól van Egyéni lehetősége: bármennyi perc, legfeljebb egy hét."
+  },
+  "changelog170Desc3": {
+    "message": "Az a lap, amely végül ébren marad, már nem tartja meg az előtagot. Az Operában mostantól a háttérben megnyitott, soha meg nem nézett lapok is időzítőt kapnak, és a Drowzy már nem altat el lapokat közvetlenül a telepítés után."
+  },
+  "changelog170Title3": {
+    "message": "És az apróságok"
   }
 }

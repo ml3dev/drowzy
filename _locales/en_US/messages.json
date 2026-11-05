@@ -1002,5 +1002,38 @@
   },
   "changelog160Desc5": {
     "message": "Import saved sessions from the clipboard, open the side panel from the popup, and Replace now asks for a second click before it closes your tabs. Whitelist import accepts sites separated by spaces, and the tab list timer and the welcome page read correctly in every language."
+  },
+  "timerCustom": {
+    "message": "Custom..."
+  },
+  "customTimerLabel": {
+    "message": "Minutes"
+  },
+  "customTimerHint": {
+    "message": "Any whole number of minutes from 1 to 10080, which is one week."
+  },
+  "markPrefixLabel": {
+    "message": "Title prefix"
+  },
+  "markPrefixHint": {
+    "message": "Text shown before the title of a suspended tab, up to 8 characters. Emoji work too. Leave it empty for [zzz]. Tabs already asleep keep their old prefix until they wake."
+  },
+  "changelog170Title1": {
+    "message": "Your own tab prefix"
+  },
+  "changelog170Desc1": {
+    "message": "Turn on Mark suspended tabs in Settings and choose what goes before a sleeping tab's title, like [z] or 😴. Handy with vertical tabs."
+  },
+  "changelog170Title2": {
+    "message": "Set any timer"
+  },
+  "changelog170Desc2": {
+    "message": "Auto-suspend now has a Custom option: any number of minutes, up to one week."
+  },
+  "changelog170Desc3": {
+    "message": "A tab that ends up staying awake no longer keeps its prefix. In Opera, tabs you opened in the background and never looked at now get a timer too, and Drowzy no longer puts tabs to sleep right after it is installed."
+  },
+  "changelog170Title3": {
+    "message": "And the small stuff"
   }
 }
